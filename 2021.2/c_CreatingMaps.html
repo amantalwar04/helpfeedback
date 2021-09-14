@@ -1,0 +1,210 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:whc="http://www.oxygenxml.com/webhelp/components" xml:lang="en" lang="en" whc:version="21.1">
+    <head><link rel="shortcut icon" href="favicon.ico"><!----></link><link rel="icon" href="favicon.ico"><!----></link><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="description" content="A map file consists of a hierarchical organization of &lt;topicref&gt;, &lt;mapref&gt;, and &lt;glossref&gt; elements. Each of these elements requires an @href attribute that points to an individual topic, map, or ..." /><meta charset="UTF-8" /><meta name="copyright" content="(C) Copyright 2021" /><meta name="DC.rights.owner" content="(C) Copyright 2021" /><meta name="DC.type" content="concept" /><meta name="DC.relation" scheme="URI" content="c_Maps.html" /><meta name="DC.contributor" content="I62717" /><meta name="DC.date.modified" content="2021-09-14" /><meta name="DC.format" content="HTML5" /><meta name="DC.identifier" content="concept_qly_bwm_ch" /><title>Creating Maps</title><!--  Generated with Oxygen version 21.1, build number 2019112512.  --><meta name="wh-path2root" content="" /><meta name="wh-toc-id" content="concept_qly_bwm_ch-d62e295" /><link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css" /><link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css" /><link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2019112512" /><script type="text/javascript" src="./oxygen-webhelp/lib/jquery/jquery-3.4.1.min.js"><!----></script><script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/oxygen-red.css?buildId=2019112512" /></head>
+
+    <body id="concept_qly_bwm_ch" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">Jump to main content</a>
+        <!-- EXM-36950 - Expand the args.hdr parameter here -->
+        
+        
+        
+        <header class="navbar navbar-default wh_header" whc:version="21.1">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <!--
+                            This component will be generated when the next parameters are specified in the transformation scenario:
+                            'webhelp.logo.image' and 'webhelp.logo.image.target.url'.
+                            See: http://oxygenxml.com/doc/versions/17.1/ug-editor/#topics/dita_webhelp_output.html.
+                    -->
+                    
+                    <div class=" wh_publication_title "><a href="index.html"><span class="booktitle">  <span class="ph mainbooktitle"><span class="keyword">Microchip</span> Information Model and Authoring Guidelines</span>  </span></a></div>
+                    
+                </div>
+                
+                <!-- The menu button for mobile devices is copied in the output only when the 'webhelp.show.top.menu' parameter is set to 'yes' -->
+                <button type="button" data-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-toggle="collapse" class="navbar-toggler collapsed wh_toggle_button" aria-expanded="false" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                <nav class=" wh_top_menu "><ul xmlns:xhtml="http://www.w3.org/1999/xhtml" role="menubar" aria-label="Menu"><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="InformationTypes-d62e53-mi" data-tocid="InformationTypes-d62e53" data-state="not-ready" class=" topicref " data-id="InformationTypes"><span class="title"><a href="c_InformationTypes.html">Information Types</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="StructureElements-d62e166-mi" data-tocid="StructureElements-d62e166" data-state="not-ready" class=" topicref " data-id="StructureElements"><span class="title"><a href="c_BlockElements.html">Block Elements</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="InlineElements-d62e196-mi" data-tocid="InlineElements-d62e196" data-state="not-ready" class=" topicref " data-id="InlineElements"><span class="title"><a href="c_UsingInlineElements.html">Inline Elements</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="Maps-d62e225-mi" data-tocid="Maps-d62e225" data-state="not-ready" class=" topicref " data-id="Maps"><span class="title"><a href="c_MapsAndBookmaps.html">Maps and Bookmaps</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="crossreferences-d62e310-mi" data-tocid="crossreferences-d62e310" data-state="not-ready" class=" topicref " data-id="crossreferences"><span class="title"><a href="c_LinkingStrategies.html">Linking Strategies</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="attributes-d62e339-mi" data-tocid="attributes-d62e339" data-state="not-ready" class=" topicref " data-id="attributes"><span class="title"><a href="c_Attributes.html">Attributes</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="ReuseStrategy-d62e368-mi" data-tocid="ReuseStrategy-d62e368" data-state="not-ready" class=" topicref " data-id="ReuseStrategy"><span class="title"><a href="c_ReuseStrategy.html">Reuse Strategy</a></span></span></li><li role="menuitem" aria-haspopup="true" aria-expanded="false" class="has-children"><span id="tocId-d62e425-mi" data-tocid="tocId-d62e425" data-state="not-ready" class=" topicref "><span class="title"><a href="c_NamingConvention.html">Content management</a></span></span></li></ul></nav>
+                <div class=" wh_indexterms_link "><a href="indexTerms.html" title="Index" aria-label="Go to index terms page"><span>Index</span></a></div>
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        <div class=" wh_search_input "><form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required" /><button type="submit" class="wh_search_button" aria-label="Search"><span>Search</span></button></div></form></div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md">
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol xmlns:html="http://www.w3.org/1999/xhtml" class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><span class="topicref" data-id="Maps"><span class="title"><a href="c_MapsAndBookmaps.html">Maps and Bookmaps</a></span></span></li><li><span class="topicref" data-id="Maps"><span class="title"><a href="c_Maps.html">Maps</a></span></span></li><li class="active"><span class="topicref" data-id="concept_qly_bwm_ch"><span class="title"><a href="c_CreatingMaps.html">Creating Maps</a></span></span></li></ol></div>
+
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        <div class=" wh_navigation_links "><span id="topic_navigation_links" class="navheader">
+  </span></div>
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <!-- Expand/Collapse publishing TOC 
+                             The menu button for mobile devices is copied in the output only when the publication TOC is available
+                        -->
+                        <button type="button" data-target="#wh_publication_toc" id="wh_toc_button" data-toggle="collapse" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav role="navigation" id="wh_publication_toc" class="collapse col-lg-3 col-md-3 col-sm-12 d-md-block">
+                            <div class=" wh_publication_toc " data-tooltip-position="right"><ul role="tree" aria-label="Table of Contents"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="Maps-d62e225" class="topicref" data-id="Maps" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Maps-d62e225-link" class="wh-expand-btn"></span><span class="title"><a href="c_MapsAndBookmaps.html" id="Maps-d62e225-link">Maps and Bookmaps</a></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem" aria-expanded="true"><span data-tocid="Maps-d62e239" class="topicref" data-id="Maps" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Maps-d62e239-link" class="wh-expand-btn"></span><span class="title"><a href="c_Maps.html" id="Maps-d62e239-link">Maps</a></span></span><ul role="group" class="navbar-nav nav-list"><span class="expand-button-action-labels"><span id="button-expand-action" aria-label="Expand"></span><span id="button-collapse-action" aria-label="Collapse"></span><span id="button-pending-action" aria-label="Pending"></span></span><li role="treeitem"><span data-tocid="MapStructure-d62e253" class="topicref" data-id="MapStructure" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="c_MapStructure.html" id="MapStructure-d62e253-link">Map Structure</a></span></span></li><li role="treeitem"><span data-tocid="Maps-d62e267" class="topicref" data-id="Maps" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="c_MapElements.html" id="Maps-d62e267-link">Map Elements</a></span></span></li><li role="treeitem"><span data-tocid="select-atts-d62e281" class="topicref" data-id="select-atts" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="c_MapAttributes.html" id="select-atts-d62e281-link">Map Attributes</a></span></span></li><li role="treeitem" class="active"><span data-tocid="concept_qly_bwm_ch-d62e295" class="topicref" data-id="concept_qly_bwm_ch" data-state="leaf"><span role="button" class="wh-expand-btn"></span><span class="title"><a href="c_CreatingMaps.html" id="concept_qly_bwm_ch-d62e295-link">Creating Maps</a></span></span></li></ul></li></ul></li></ul></div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+ <h1 class="title topictitle1" id="ariaid-title1">Creating Maps</h1>
+ <div class="body conbody">
+  
+  <p class="p">A map file consists of a hierarchical organization of &lt;topicref&gt;, &lt;mapref&gt;, and
+   &lt;glossref&gt; elements. Each of these elements requires an <em class="ph i">@href</em> attribute that
+   points to an individual topic, map, or glossary topic. </p>
+  <div class="p">When building a map, consider the following strategies:<ul class="ul" id="concept_qly_bwm_ch__ul_kgc_xwl_ch">
+    <li class="li">Start by adding task topics, which should be the primary focus of your documentation
+     according to minimalism principles. Consider how best to organize these tasks based on your
+     audience. For example, you might order the tasks based on workflow or the sequence in which the
+     tasks might be completed; based on frequency of use from most common to least common; or based
+     on who will be performing the tasks. Then, add concept, troubleshooting, and reference topics
+     that support the tasks. Do not add concept or reference topics that you cannot relate to at
+     least one task.</li>
+    <li class="li">You can include a topic more than once within your map. However, to maintain context for the
+     user during navigation, you should provide a unique name for each instance of the topic using
+     the <em class="ph i">@copy-to</em> attribute.</li>
+    <li class="li">Just because you have created multiple topic files doesn't mean that they need to be
+     displayed as multiple topics. Sometimes you may have created multiple topics for reuse
+     purposes, but the end user should see all the content as one comprehensive topic. Specify
+      <em class="ph i">@chunk="to-content"</em> on the parent topic to combine it with all nested children into one
+     topic on output.</li>
+    <li class="li">Rather than nest topics several levels deep, consider creating submaps that you then
+     reference with a &lt;mapref&gt;. In general, it's a good idea to create submaps whenever you are
+     nesting more than five topics to keep your maps clean and easily interpretable by others.</li>
+    <li class="li">Avoid nesting topics more than four levels deep. Although you can nest maps in maps, keep in
+     mind the levels you are creating by nesting maps in maps. </li>
+    <li class="li">A table of contents is automatically built when you process a map. To keep a topic from
+     appearing in the TOC, set the <em class="ph i">@toc </em>attribute to "no".</li>
+   </ul></div>
+  <section class="section" id="concept_qly_bwm_ch__TitlingMaps"><h2 class="title sectiontitle">Titling Maps</h2>
+   
+   <div class="p">In general, follow the same guidelines for writing map titles as for topics; see <a class="xref" href="c_TitlingTopics.html#TitlingTopics">Titling Topics</a>. In addition, however, consider the following:<ul class="ul" id="concept_qly_bwm_ch__ul_u23_2rp_xh">
+     <li class="li">In general, map titles will tend to be less specific than topic titles because they are
+      summarizing the content of all the topics nested within the map. Think about how you might
+      categorize the information in the map; often that category should be part of the map
+      title.</li>
+     <li class="li"> Ensure the title indicates the range of topics it contains. For example, if the content
+      covers both removal and replacement procedures for a board, it would be incomplete and
+      misleading to title the map "Replacing Boards."  </li>
+     <li class="li">In any single publication, the map titles will be closely tied together. Each will deal
+      with some aspect of the overall topic of the book. Therefore, be careful to make each map
+      title clearly differentiated in terms of the specific contents it contains compared to others
+      in the same publication.</li>
+     <li class="li">Avoid starting all map titles with the same words, such as a product name. Users are
+      scanning for words that help them differentiate between the maps; put those words first.</li>
+    </ul></div>
+  </section>
+  <section class="section" id="concept_qly_bwm_ch__section_rk1_1bw_kn"><h2 class="title sectiontitle">Linking Topics</h2>
+   
+   <div class="p">In addition to establishing a hierarchy among topics, the way you group topics together in
+        your map affects the manner in which you establish links among them. In DITA, parent and
+        child topics automatically receive a two-way link between each other. However, all other
+        relationships must be explicitly established through attributes or relationship tables. The
+          <em class="ph i">@collection-type</em> attribute enables you to establish links through the hierarchical
+        structure of your map, thereby saving you effort in defining those links through a
+        relationship table. You can establish two types of relationships with the
+          <em class="ph i">@collection-type</em> attribute:<dl class="dl" id="concept_qly_bwm_ch__collectiontype">
+          
+            <dt class="dt dlterm">family</dt>
+            <dd class="dd">All topics within the group are related to all other topics.</dd>
+          
+          
+            <dt class="dt dlterm">sequence</dt>
+            <dd class="dd">Topics are related to the topics immediately before and after them in the map
+              through Next and Previous links.</dd>
+          
+        </dl></div>
+   <p class="p">Specify the <em class="ph i">@collection-type</em> attribute on the parent topic of the topics you want to
+    link together.</p>
+   <pre class="pre codeblock"><code>placeholder for example</code></pre>
+   <div class="note note note_note"><span class="note__title">Note:</span> In some cases you may not want to promote one topic over another. In this case, you can first nest the related topics in a
+        &lt;topicgroup&gt; and then assign the <em class="ph i">@collection-type</em> attribute to establish the type
+        of relationship.<pre class="pre codeblock"><code>Placeholder for example</code></pre></div>
+   <p class="p">When topics are not grouped together within the hierarchy of the map, you must use a
+        relationship table to establish links among them. See <a class="xref" href="c_RelationshipTables.html#RelTableOverview">Relationship Tables</a> for instructions. </p>
+  </section>
+  <section class="section"></section>
+  <section class="section" id="concept_qly_bwm_ch__section_sb5_hjd_q4"><h2 class="title sectiontitle">Compiling a Glossary Map</h2>
+   
+   <p class="p">To compile all your glossary terms into a single glossary for a deliverable, create a &lt;map&gt;
+    file for the glossary. Insert each term in the map using a &lt;glossref&gt; element, instead of the
+    typical &lt;topicref&gt;. The &lt;glossref&gt; element requires that you provide a <em class="ph i">@keys
+    </em>attribute. In most cases, use the term or an abbreviation as the <em class="ph i">@keys</em> value. In
+    addition, if you want the glossary terms and acronyms to appear in PDF output, you also need to
+    set the <em class="ph i">@print </em>attribute to "yes".</p>
+   <div class="note note note_note"><span class="note__title">Note:</span> You may find it useful to alphabetize the glossary entries in your map. However, the
+     <span class="keyword">Microchip</span> transform will automatically alphabetize the terms for you when
+    you generate your content.</div>
+   
+   <pre class="pre codeblock"><code>Placeholder for example not related to topichead</code></pre>
+  </section>
+ </div>
+</article></main></div>
+                        
+                        
+                        
+                        <div id="oxygen-feedback-frame-container">
+    <script id="feedback-init" src="https://feedback.oxygenxml.com/app/init/init.js?deploymentToken=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJkZXBsb3ltZW50SWQiOjQ5N30.nrAJ0aKaK9zgkfOqucvBwViwsrnQnBfaU1TvhzkRK9y7WRG2UGWX1wHTmljvU3c5TlNVJly2alZ-IrhnGaTrug"><!-- --></script>
+</div>
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#concept_qly_bwm_ch__TitlingMaps" data-tocid="concept_qly_bwm_ch__TitlingMaps">Titling Maps</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_qly_bwm_ch__section_rk1_1bw_kn" data-tocid="concept_qly_bwm_ch__section_rk1_1bw_kn">Linking Topics</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_qly_bwm_ch__section_sb5_hjd_q4" data-tocid="concept_qly_bwm_ch__section_sb5_hjd_q4">Compiling a Glossary Map</a></div></li></ul></div>
+                        </nav>
+                    
+                </div>
+            </div>
+        </div> 
+        <footer class="navbar navbar-default wh_footer" whc:version="21.1">
+  <div class=" footer-container mx-auto ">
+    Copyright 2021  Microchip
+  </div>
+</footer>
+        
+        <div id="go2top">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <!-- The modal container for images -->
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="modal-img" />
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+        
+    </body>
+</html>

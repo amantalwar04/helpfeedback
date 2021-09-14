@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><toc xmlns:toc="http://www.oxygenxml.com/ns/webhelp/toc" xmlns="http://www.oxygenxml.com/ns/webhelp/toc" xmlns:xhtml="http://www.w3.org/1999/xhtml"><title><span xmlns="http://www.w3.org/1999/xhtml" class="booktitle">  <span class="ph mainbooktitle"><span class="keyword">Microchip</span> Information Model and Authoring Guidelines</span>  </span></title><topicmeta>
+		<author class="- topic/author " type="contributor">I62717</author>
+		<critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates>
+		<bookrights class="- topic/data bookmap/bookrights ">
+			<copyrfirst class="- topic/data bookmap/copyrfirst ">
+				<year class="- topic/ph bookmap/year ">2014</year>
+			</copyrfirst>
+			<bookowner class="- topic/data bookmap/bookowner ">
+				<organization class="- topic/data bookmap/organization ">Comtech Services, Inc</organization>
+			</bookowner>
+		</bookrights>
+	</topicmeta><topic href="c_InformationTypes.html" format="dita" data-id="InformationTypes" wh-toc-id="InformationTypes-d62e53"><title>Information Types</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="InformationTypes"></resourceid><navtitle class="- topic/navtitle ">Information Types</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Information Types</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_BeginningATopic.html" format="dita" data-id="AuthoringGuidelines" wh-toc-id="AuthoringGuidelines-d62e67"><title>Beginning a Topic</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="AuthoringGuidelines"></resourceid><navtitle class="- topic/navtitle ">Beginning a Topic</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Beginning a Topic</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_TitlingTopics.html" format="dita" data-id="TitlingTopics" wh-toc-id="TitlingTopics-d62e81"><title>Titling Topics</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="TitlingTopics"></resourceid><navtitle class="- topic/navtitle ">Titling Topics</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Titling Topics</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_WritingShortDescriptions.html" format="dita" data-id="ShortDescriptions" wh-toc-id="ShortDescriptions-d62e95"><title>Writing Short Descriptions</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="ShortDescriptions"></resourceid><navtitle class="- topic/navtitle ">Writing Short Descriptions</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Writing Short Descriptions</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic><topic href="c_TaskInformationType.html" format="dita" data-id="TaskInformationTypes" wh-toc-id="TaskInformationTypes-d62e109"><title>Tasks</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="TaskInformationTypes"></resourceid><navtitle class="- topic/navtitle ">Tasks</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Tasks</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_TaskStructure.html" format="dita" data-id="TaskStructure" wh-toc-id="TaskStructure-d62e123"><title>Structure</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="TaskStructure"></resourceid><navtitle class="- topic/navtitle ">Structure</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Structure</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_TaskElements.html" format="dita" data-id="TaskElements" wh-toc-id="TaskElements-d62e137"><title>Task Elements</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="TaskElements"></resourceid><navtitle class="- topic/navtitle ">Task Elements</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Task Elements</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_TaskAuthoringGuidelines.html" format="dita" data-id="AuthoringGuidelines" wh-toc-id="AuthoringGuidelines-d62e151"><title>Writing Task Topics</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="AuthoringGuidelines"></resourceid><navtitle class="- topic/navtitle ">Writing Task Topics</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Writing Task Topics</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic></topic><topic href="c_BlockElements.html" format="dita" data-id="StructureElements" wh-toc-id="StructureElements-d62e166"><title>Block Elements</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="StructureElements"></resourceid><navtitle class="- topic/navtitle ">Block Elements</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Block Elements</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_CreatingLists.html" format="dita" data-id="Lists" wh-toc-id="Lists-d62e180"><title>Creating Lists</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="Lists"></resourceid><navtitle class="- topic/navtitle ">Creating Lists</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Creating Lists</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic><topic href="c_UsingInlineElements.html" data-id="InlineElements" wh-toc-id="InlineElements-d62e196"><title>Inline Elements</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="InlineElements"></resourceid><navtitle class="- topic/navtitle ">Inline Elements</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Inline Elements</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_UserInterface.html" format="dita" data-id="InlineElements" wh-toc-id="InlineElements-d62e210"><title>User Interface Elements</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="InlineElements"></resourceid><navtitle class="- topic/navtitle ">User Interface Elements</navtitle><?ditaot gentext?><linktext class="- map/linktext ">User Interface Elements</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic><topic href="c_MapsAndBookmaps.html" data-id="Maps" wh-toc-id="Maps-d62e225"><title>Maps and Bookmaps</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="Maps"></resourceid><navtitle class="- topic/navtitle ">Maps and Bookmaps</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Maps and Bookmaps</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_Maps.html" data-id="Maps" wh-toc-id="Maps-d62e239"><title>Maps</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="Maps"></resourceid><navtitle class="- topic/navtitle ">Maps</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Maps</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_MapStructure.html" data-id="MapStructure" wh-toc-id="MapStructure-d62e253"><title>Map Structure</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="MapStructure"></resourceid><navtitle class="- topic/navtitle ">Map Structure</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Map Structure</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_MapElements.html" data-id="Maps" wh-toc-id="Maps-d62e267"><title>Map Elements</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="Maps"></resourceid><navtitle class="- topic/navtitle ">Map Elements</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Map Elements</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_MapAttributes.html" format="dita" data-id="select-atts" wh-toc-id="select-atts-d62e281"><title>Map Attributes</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="select-atts"></resourceid><navtitle class="- topic/navtitle ">Map Attributes</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Map Attributes</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_CreatingMaps.html" format="dita" data-id="concept_qly_bwm_ch" wh-toc-id="concept_qly_bwm_ch-d62e295"><title>Creating Maps</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="concept_qly_bwm_ch"></resourceid><navtitle class="- topic/navtitle ">Creating Maps</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Creating Maps</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic></topic><topic href="c_LinkingStrategies.html" data-id="crossreferences" wh-toc-id="crossreferences-d62e310"><title>Linking Strategies</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="crossreferences"></resourceid><navtitle class="- topic/navtitle ">Linking Strategies</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Linking Strategies</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_RelationshipTables.html" format="dita" data-id="RelTableOverview" wh-toc-id="RelTableOverview-d62e324"><title>Relationship Tables</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="RelTableOverview"></resourceid><navtitle class="- topic/navtitle ">Relationship Tables</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Relationship Tables</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic><topic href="c_Attributes.html" format="dita" data-id="attributes" wh-toc-id="attributes-d62e339"><title>Attributes</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="attributes"></resourceid><navtitle class="- topic/navtitle ">Attributes</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Attributes</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_DisplayAttributes.html" format="dita" data-id="select-atts" wh-toc-id="select-atts-d62e353"><title>Display Attributes</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="select-atts"></resourceid><navtitle class="- topic/navtitle ">Display Attributes</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Display Attributes</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic><topic href="c_ReuseStrategy.html" format="dita" data-id="ReuseStrategy" wh-toc-id="ReuseStrategy-d62e368"><title>Reuse Strategy</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="ReuseStrategy"></resourceid><navtitle class="- topic/navtitle ">Reuse Strategy</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Reuse Strategy</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta><topic href="c_NormalizingContent.html" format="dita" data-id="WritingForReuse" wh-toc-id="WritingForReuse-d62e382"><title>Writing for Reuse</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="WritingForReuse"></resourceid><navtitle class="- topic/navtitle ">Writing for Reuse</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Writing for Reuse</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_CommonContentOverview.html" format="dita" data-id="CommonContentOverview" wh-toc-id="CommonContentOverview-d62e396"><title>Reusing Topics and Maps</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="CommonContentOverview"></resourceid><navtitle class="- topic/navtitle ">Reusing Topics and Maps</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Reusing Topics and Maps</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic><topic href="c_CollectionFiles.html" format="dita" data-id="concept_vtz_r2q_xh" wh-toc-id="concept_vtz_r2q_xh-d62e410"><title>Reusing Elements Through Collection Files</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="concept_vtz_r2q_xh"></resourceid><navtitle class="- topic/navtitle ">Reusing Elements Through Collection Files</navtitle><?ditaot gentext?><linktext class="- map/linktext ">Reusing Elements Through Collection Files</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic><topic href="javascript:void(0)" wh-toc-id="tocId-d62e425"><title>Content management</title><topicmeta><navtitle class="- topic/navtitle ">Content management</navtitle></topicmeta><topic href="c_NamingConvention.html" format="dita" data-id="NamingConvention" wh-toc-id="NamingConvention-d62e429"><title>File Naming Convention</title><topicmeta><resourceid class="- topic/resourceid " oxy-source="topic" appid="NamingConvention"></resourceid><navtitle class="- topic/navtitle ">File Naming Convention</navtitle><?ditaot gentext?><linktext class="- map/linktext ">File Naming Convention</linktext><author class="- topic/author " type="contributor">I62717</author><critdates class="- topic/critdates ">
+			
+			<revised class="- topic/revised " modified="2021-09-14"></revised>
+		</critdates></topicmeta></topic></topic></toc>

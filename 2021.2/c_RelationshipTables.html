@@ -112,13 +112,13 @@
                         
                     
                     
-                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
                         
                         <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
     <h1 class="- topic/title title topictitle1" id="ariaid-title1">Relationship Tables</h1>
     <div class="- topic/body concept/conbody body conbody">
         <section class="- topic/section section" id="RelTableOverview__reltableintro" data-ofbid="RelTableOverview__reltableintro">
-            <p class="- topic/p p"><span class="- topic/keyword keyword">Microchip</span> uses relationship tables to define and manage links
+            <p class="- topic/p p" id="RelTableOverview__p_nls_krw_xqb" data-ofbid="RelTableOverview__p_nls_krw_xqb"><span class="- topic/keyword keyword">Microchip</span> uses relationship tables to define and manage links
                 to related topics within an online deliverable. Relationship tables free you from
                 the burden of creating and maintaining links in your individual topics. Links
                 hardcoded within individual topics are usually hard to maintain and often break when
@@ -127,7 +127,7 @@
                 eliminating broken links, and if you need to change a link, you need only make the
                 change once, in the map itself rather than in every topic affected by the
                 change.</p>
-            <p class="- topic/p p">Relationship tables are created using a table of rows and columns to define links.
+            <p class="- topic/p p" id="RelTableOverview__p_ols_krw_xqb" data-ofbid="RelTableOverview__p_ols_krw_xqb">Relationship tables are created using a table of rows and columns to define links.
                 Each column in the table typically groups together the same information type. Each
                 row in the table represents a unique relationship, which is generally rendered as a
                 link, and each cell lists participants in the relationship. Each topic or map
@@ -136,17 +136,17 @@
                 link from concepts to tasks and back again, link reference information to multiple
                 tasks, and link task information to supporting information needed to complete the
                 task. </p>
-            <p class="- topic/p p">You can include relationship tables in both DITA maps and bookmaps.</p>
+            <p class="- topic/p p" id="RelTableOverview__p_pls_krw_xqb" data-ofbid="RelTableOverview__p_pls_krw_xqb">You can include relationship tables in both DITA maps and bookmaps.</p>
         </section>
-        <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Creating a Relationship Table</h2>
+        <section class="- topic/section section" id="RelTableOverview__section_qls_krw_xqb" data-ofbid="RelTableOverview__section_qls_krw_xqb"><h2 class="- topic/title title sectiontitle">Creating a Relationship Table</h2>
             
-            <p class="- topic/p p">Use your authoring tool's relationship table tool to create a four-column
+            <p class="- topic/p p" id="RelTableOverview__p_rls_krw_xqb" data-ofbid="RelTableOverview__p_rls_krw_xqb">Use your authoring tool's relationship table tool to create a four-column
                 relationship table with each column corresponding to one of the primary information
                 types, concept, task, troubleshooting, and reference. Build the relationships
                 between topics by adding &lt;topicref&gt; elements to the appropriate rows and columns.
                 As you add the topic references, keep in mind the following rules governing
                 relationship tables:</p>
-            <ul class="- topic/ul ul">
+            <ul class="- topic/ul ul" id="RelTableOverview__ul_sls_krw_xqb" data-ofbid="RelTableOverview__ul_sls_krw_xqb">
                 <li class="- topic/li li">Each row in the table represents a separate set of relationships and links.</li>
                 <li class="- topic/li li">No relationships exist between the rows in a table.</li>
                 <li class="- topic/li li">Topic references are not needed in every cell in a row, but at least two cells
@@ -156,7 +156,7 @@
                     on creating such links.</li>
                 <li class="- topic/li li">Topic references can be repeated in multiple rows.</li>
             </ul>
-            <div class="- topic/p p">In addition, consider these best practices: <ul class="- topic/ul ul" id="RelTableOverview__ul_nhd_4pj_ch" data-ofbid="RelTableOverview__ul_nhd_4pj_ch">
+            <div class="- topic/p p" id="RelTableOverview__p_tls_krw_xqb" data-ofbid="RelTableOverview__p_tls_krw_xqb">In addition, consider these best practices: <ul class="- topic/ul ul" id="RelTableOverview__ul_nhd_4pj_ch" data-ofbid="RelTableOverview__ul_nhd_4pj_ch">
                     <li class="- topic/li li">Wherever possible, use DITA's automatic hierarchical linking to avoid the
                         need for creating relationships. For example, within a map, DITA
                         automatically creates two-way linking between parent topics and each of
@@ -175,16 +175,16 @@
                         map that references their individual maps.</li>
                 </ul></div>
         </section>
-        <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Relationship Table Elements</h2>
+        <section class="- topic/section section" id="RelTableOverview__section_uls_krw_xqb" data-ofbid="RelTableOverview__section_uls_krw_xqb"><h2 class="- topic/title title sectiontitle">Relationship Table Elements</h2>
             
-            <div class="- topic/p p">Use the following elements when creating a relationship table:<div class="- topic/note note note note_note"><span class="note__title">Note:</span> Use your tool's
+            <div class="- topic/p p" id="RelTableOverview__p_vls_krw_xqb" data-ofbid="RelTableOverview__p_vls_krw_xqb">Use the following elements when creating a relationship table:<div class="- topic/note note note note_note" id="RelTableOverview__note_wls_krw_xqb" data-ofbid="RelTableOverview__note_wls_krw_xqb"><span class="note__title">Note:</span> Use your tool's
                     relationship table commands to build a relationship table without needing to
                     hand code these elements.</div></div>
-            <dl class="- topic/dl dl">
+            <dl class="- topic/dl dl" id="RelTableOverview__dl_xls_krw_xqb" data-ofbid="RelTableOverview__dl_xls_krw_xqb">
                 
                     <dt class="- topic/dt dt dlterm" id="RelTableOverview__reltable" data-ofbid="RelTableOverview__reltable">&lt;reltable&gt; relationship table </dt>
                     <dd class="- topic/dd dd">
-                        <p class="- topic/p p">Use the
+                        <p class="- topic/p p" id="RelTableOverview__p_yls_krw_xqb" data-ofbid="RelTableOverview__p_yls_krw_xqb">Use the
                             &lt;reltable&gt; element to create the framework for the relationship
                             table. Add all elements in the relationship table between the beginning
                             and ending tags of the &lt;reltable&gt; element. The &lt;reltable&gt; element
@@ -200,7 +200,7 @@
                 
                     <dt class="- topic/dt dt dlterm" id="RelTableOverview__relcolspec" data-ofbid="RelTableOverview__relcolspec">&lt;relcolspec&gt; relationship column specification </dt>
                     <dd class="- topic/dd dd">
-                        <p class="- topic/p p">Use the &lt;relcolspec&gt; element to define
+                        <p class="- topic/p p" id="RelTableOverview__p_zls_krw_xqb" data-ofbid="RelTableOverview__p_zls_krw_xqb">Use the &lt;relcolspec&gt; element to define
                             each column in the relationship table. Each &lt;reltable&gt; should contain
                             at least two &lt;relcolspec&gt; elements to form meaningful relationships
                             among your topics. Typically, you will include four &lt;relcolspec&gt;
@@ -211,7 +211,7 @@
                 
                     <dt class="- topic/dt dt dlterm" id="RelTableOverview__relrow" data-ofbid="RelTableOverview__relrow">&lt;relrow&gt; relationship table row </dt>
                     <dd class="- topic/dd dd">
-                        <p class="- topic/p p">Use the
+                        <p class="- topic/p p" id="RelTableOverview__p_ams_krw_xqb" data-ofbid="RelTableOverview__p_ams_krw_xqb">Use the
                             &lt;relrow&gt; element to define the relationships among the topics in each
                             relationship row. Each &lt;relrow&gt; element defines a new set of
                             relationships. You can add as many &lt;relrow&gt; elements as needed to the
@@ -221,12 +221,12 @@
                 
                     <dt class="- topic/dt dt dlterm" id="RelTableOverview__relcell" data-ofbid="RelTableOverview__relcell">&lt;relcell&gt; relationship table cell </dt>
                     <dd class="- topic/dd dd">
-                        <p class="- topic/p p">Use the
+                        <p class="- topic/p p" id="RelTableOverview__p_bms_krw_xqb" data-ofbid="RelTableOverview__p_bms_krw_xqb">Use the
                             &lt;relcell&gt; element to define the topic references. These topic
                             references will be linked during processing. Nest &lt;topicref&gt; elements
                             for each topic involved in the relationship, using the <em class="+ topic/ph hi-d/i ph i">@href
                             </em>attribute to point to the appropriate topic.</p>
-                        <p class="- topic/p p">The number of &lt;relcell&gt; elements must match the number of
+                        <p class="- topic/p p" id="RelTableOverview__p_cms_krw_xqb" data-ofbid="RelTableOverview__p_cms_krw_xqb">The number of &lt;relcell&gt; elements must match the number of
                             &lt;relcolspec&gt; elements. If you do not want to include a topic
                             reference in one of the cells in a row, you must still add an empty
                             &lt;relcell&gt; element for the empty cell. </p>
@@ -236,35 +236,35 @@
         </section>
         <section class="- topic/section section" id="RelTableOverview__section_zqj_kqw_kn" data-ofbid="RelTableOverview__section_zqj_kqw_kn"><h2 class="- topic/title title sectiontitle">Linking to Topics Within the Same Cell</h2>
             
-            <p class="- topic/p p">In a relationship table, topic references in the same cell are not linked together.
+            <p class="- topic/p p" id="RelTableOverview__p_dms_krw_xqb" data-ofbid="RelTableOverview__p_dms_krw_xqb">In a relationship table, topic references in the same cell are not linked together.
                 However, there are instances when they should be linked.</p>
-            <p class="- topic/p p">To link topics in a cell together,
+            <p class="- topic/p p" id="RelTableOverview__p_ems_krw_xqb" data-ofbid="RelTableOverview__p_ems_krw_xqb">To link topics in a cell together,
                 group them with a &lt;topicgroup&gt; element and set its <em class="+ topic/ph hi-d/i ph i">@collection-type</em>
                 attribute to "family". </p>
-            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>Placeholder for example.</code></pre>
-            <div class="- topic/p p">If the topics should be viewed in a specific order, set the <em class="+ topic/ph hi-d/i ph i">@collection-type</em>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="RelTableOverview__codeblock_fms_krw_xqb" data-ofbid="RelTableOverview__codeblock_fms_krw_xqb"><code>Placeholder for example.</code></pre>
+            <div class="- topic/p p" id="RelTableOverview__p_gms_krw_xqb" data-ofbid="RelTableOverview__p_gms_krw_xqb">If the topics should be viewed in a specific order, set the <em class="+ topic/ph hi-d/i ph i">@collection-type</em>
                 attribute to "sequence" instead. Topics will be linked as Next and Previous topics
                 in the sequence the topics occur in the cell. Use this option when you have an
                 all-encompassing task that has multiple sub-task
-                    topics.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>Placeholder for example.</code></pre><div class="- topic/note note note note_note"><span class="note__title">Note:</span> If you
+                    topics.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="RelTableOverview__codeblock_hms_krw_xqb" data-ofbid="RelTableOverview__codeblock_hms_krw_xqb"><code>Placeholder for example.</code></pre><div class="- topic/note note note note_note" id="RelTableOverview__note_ims_krw_xqb" data-ofbid="RelTableOverview__note_ims_krw_xqb"><span class="note__title">Note:</span> If you
                     find you are creating sequential relationships in relationship tables,
                     reconsider the grouping of your topics within your maps. It makes sense to
                     include sequential elements next to each other in the map, which would allow you
                     to establish the relationship between the topics directly in the &lt;topicref&gt;
                     element in the map, rather than through a relationship table.</div></div>
         </section>
-        <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Creating One-Way Links</h2>
+        <section class="- topic/section section" id="RelTableOverview__section_jms_krw_xqb" data-ofbid="RelTableOverview__section_jms_krw_xqb"><h2 class="- topic/title title sectiontitle">Creating One-Way Links</h2>
             
-            <p class="- topic/p p">By default, the links in a relationship table go both ways. However, you might want
+            <p class="- topic/p p" id="RelTableOverview__p_kms_krw_xqb" data-ofbid="RelTableOverview__p_kms_krw_xqb">By default, the links in a relationship table go both ways. However, you might want
                 to make the links one way. For example, you might want to point multiple topics to a
                 glossary, but you would not want the glossary to link back to all those individual
                 topics. </p>
-            <div class="- topic/p p">To create a one-way link, set the
+            <div class="- topic/p p" id="RelTableOverview__p_lms_krw_xqb" data-ofbid="RelTableOverview__p_lms_krw_xqb">To create a one-way link, set the
                     <em class="+ topic/ph hi-d/i ph i">@linking</em> attribute in the topic reference that you do not want to link
                 back from to "targetonly". Conversely, you could also set the <em class="+ topic/ph hi-d/i ph i">@linking
                 </em>attribute in the topic reference that you do not want to link back to as
                 "sourceonly". The two rows in the example accomplish exactly the same
-                thing.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>&lt;relrow&gt;
+                thing.<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="RelTableOverview__codeblock_mms_krw_xqb" data-ofbid="RelTableOverview__codeblock_mms_krw_xqb"><code>&lt;relrow&gt;
   &lt;relcell&gt;
     &lt;topicref href="t_tasktopic.dita"/&gt;
   &lt;/relcell&gt;
@@ -295,6 +295,12 @@
 </div>
                         
                     </div>
+                    
+                        
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#RelTableOverview__section_qls_krw_xqb" data-tocid="RelTableOverview__section_qls_krw_xqb">Creating a Relationship Table</a></div></li><li class="section-item"><div class="section-title"><a href="#RelTableOverview__section_uls_krw_xqb" data-tocid="RelTableOverview__section_uls_krw_xqb">Relationship Table Elements</a></div></li><li class="section-item"><div class="section-title"><a href="#RelTableOverview__section_zqj_kqw_kn" data-tocid="RelTableOverview__section_zqj_kqw_kn">Linking to Topics Within the Same Cell</a></div></li><li class="section-item"><div class="section-title"><a href="#RelTableOverview__section_jms_krw_xqb" data-tocid="RelTableOverview__section_jms_krw_xqb">Creating One-Way Links</a></div></li></ul></div>
+                        </nav>
+                        
                     
                 </div>
             </div>

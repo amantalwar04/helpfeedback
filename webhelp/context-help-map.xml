@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="my_first_concept" path="c_wild_ducks.html"/>
+   <appContext helpID="my_first_concept" path="c_wild_duck_types.html"/>
+   <appContext helpID="my_first_concept" path="c_wild_duck_species.html"/>
+   <appContext helpID="c_habitats" path="c_habitats.html"/>
+   <appContext helpID="my_first_task" path="t_watching_wild_ducks.html"/>
+   <appContext helpID="concept_elements" path="c_domestic_ducks.html"/>
+   <appContext helpID="concept_images_tables" path="c_duckling_growth.html"/>
+   <appContext helpID="c_housing" path="c_housing.html"/>
+   <appContext helpID="concept_elements" path="c_feeding_ducklings.html"/>
+   <appContext helpID="concept_elements" path="c_duck_weight.html"/>
+   <appContext helpID="concept_unb_k4b_fv" path="c_duckdb.html"/>
+   <appContext helpID="concept_advanced" path="c_writing_about_ducks.html"/>
+   <appContext helpID="t_create_table" path="t_create_table.html"/>
+   <appContext helpID="t_creating_entry" path="t_adding_entry.html"/>
+   <appContext helpID="t_modify_entry" path="t_modify_entry.html"/>
+   <appContext helpID="t_queries" path="t_queries.html"/>
+   <appContext helpID="t_modify_table" path="t_modify_table.html"/>
+   <appContext helpID="t_deleting_entry" path="t_deleting_entry.html"/>
+   <appContext helpID="my_first_ref" path="r_tnav.html"/>
+   <appContext helpID="r_create" path="r_add.html"/>
+   <appContext helpID="r_delete" path="r_delete.html"/>
+   <appContext helpID="r_edit" path="r_edit.html"/>
+   <appContext helpID="r_modify_table" path="r_modify_table.html"/>
+   <appContext helpID="r_newtable" path="r_newtable.html"/>
+   <appContext helpID="duck" path="g_duck_glossentry.html"/>
+   <appContext helpID="duck_equipment" path="g_duck_glossgroup.html"/>
+   <appContext helpID="concept_advanced" path="c_writing_about_ducks.html"/>
+   <appContext helpID="t_creating_entry" path="t_adding_entry.html"/>
+   <appContext helpID="r_create" path="r_add.html"/>
+</map>

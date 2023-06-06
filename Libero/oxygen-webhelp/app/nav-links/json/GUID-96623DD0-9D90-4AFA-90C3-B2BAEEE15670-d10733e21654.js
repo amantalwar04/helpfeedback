@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.8.1<\/ph>\nSmartTime Tcl Commands","href":"Chunk1389381856.html#Chunk1389381856","attributes":{"data-id":"Chunk1389381856"},"menu":{"hasChildren":false},"tocID":"Chunk1389381856-d10733e21662","next":"Chunk1389381856-d10733e21662"}]});

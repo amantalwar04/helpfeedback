@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>18.1.2.1.1<\/ph>\nBFM Commands","href":"GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD.html#GUID-06BB19CA-C659-445A-A174-E981B6AEBD03","attributes":{"data-id":"GUID-06BB19CA-C659-445A-A174-E981B6AEBD03"},"menu":{"hasChildren":false},"tocID":"GUID-06BB19CA-C659-445A-A174-E981B6AEBD03-d10733e18770","topics":[]}]});

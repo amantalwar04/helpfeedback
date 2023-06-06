@@ -1,0 +1,536 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="This section describes the protocols used by SPPS. It includes device-supported protocols, such as Authorization Protocols and OTPK, and protocols created above the device level, such as the ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>13.2.7 SPPS Protocols</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10-d10733e11976"/><meta name="wh-source-relpath" content="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.xml"/><meta name="wh-out-relpath" content="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Secure Production Programming Solution (SPPS)</a><div class="wh-tooltip"><p class="shortdesc">Information about Secure Production Programming Solution (SPPS)
+				</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10"><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7</ph>
+SPPS Protocols</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10987" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10987-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10987-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+FlashPro Express</a><div class="wh-tooltip"><p class="shortdesc">Information about FlasPro Express </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e11587" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e11587-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html" id="tocId-d10733e11587-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Secure Production Programming Solution (SPPS)</a><div class="wh-tooltip"><p class="shortdesc">Information about Secure Production Programming Solution (SPPS)
+				</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5-d10733e11591" class="topicref introduction" data-id="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html" id="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5-d10733e11591-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Introduction</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EA7B31EF-B160-42AF-9ACA-44B24FED7F6E-d10733e11599" class="topicref" data-id="GUID-EA7B31EF-B160-42AF-9ACA-44B24FED7F6E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EA7B31EF-B160-42AF-9ACA-44B24FED7F6E.html" id="GUID-EA7B31EF-B160-42AF-9ACA-44B24FED7F6E-d10733e11599-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.1</ph>
+Secure Initial Key Loading</a></div></div></li><li role="treeitem"><div data-tocid="GUID-20C35216-7A61-457D-9D19-1D21DB194CF9-d10733e11607" class="topicref" data-id="GUID-20C35216-7A61-457D-9D19-1D21DB194CF9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-20C35216-7A61-457D-9D19-1D21DB194CF9.html" id="GUID-20C35216-7A61-457D-9D19-1D21DB194CF9-d10733e11607-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.2</ph>
+Preventing Overbuilding</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9AED5DDE-0BE4-4B7D-9608-C6163AD2819D-d10733e11615" class="topicref" data-id="GUID-9AED5DDE-0BE4-4B7D-9608-C6163AD2819D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9AED5DDE-0BE4-4B7D-9608-C6163AD2819D.html" id="GUID-9AED5DDE-0BE4-4B7D-9608-C6163AD2819D-d10733e11615-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.3</ph>
+Use of Hardware Security Modules</a></div></div></li><li role="treeitem"><div data-tocid="GUID-61DAB9D1-56BB-4B7E-81C3-24B1C51A505F-d10733e11623" class="topicref" data-id="GUID-61DAB9D1-56BB-4B7E-81C3-24B1C51A505F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-61DAB9D1-56BB-4B7E-81C3-24B1C51A505F.html" id="GUID-61DAB9D1-56BB-4B7E-81C3-24B1C51A505F-d10733e11623-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.4</ph>
+SPPS Functions and Services</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D1932B6F-827C-4057-8DB3-671F540EF6A7-d10733e11631" class="topicref" data-id="GUID-D1932B6F-827C-4057-8DB3-671F540EF6A7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D1932B6F-827C-4057-8DB3-671F540EF6A7.html" id="GUID-D1932B6F-827C-4057-8DB3-671F540EF6A7-d10733e11631-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.5</ph>
+SPPS Ecosystem</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-9CB51621-8842-4683-A4F7-F1AB8745CAEE-d10733e11639" class="topicref" data-id="GUID-9CB51621-8842-4683-A4F7-F1AB8745CAEE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-9CB51621-8842-4683-A4F7-F1AB8745CAEE-d10733e11639-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9CB51621-8842-4683-A4F7-F1AB8745CAEE.html" id="GUID-9CB51621-8842-4683-A4F7-F1AB8745CAEE-d10733e11639-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.6</ph>
+Programming Production</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10-d10733e11976" class="topicref" data-id="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10-d10733e11976-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10" id="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10-d10733e11976-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7</ph>
+SPPS Protocols</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0-d10733e11984" class="topicref" data-id="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0-d10733e11984-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0" id="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0-d10733e11984-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7.1</ph>
+Authorization Code Protocol</a></div></div></li><li role="treeitem"><div data-tocid="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0-d10733e12032" class="topicref" data-id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0" id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0-d10733e12032-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7.2</ph>
+Per-Device Protocol</a></div></div></li><li role="treeitem"><div data-tocid="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877-d10733e12040" class="topicref" data-id="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877" id="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877-d10733e12040-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7.3</ph>
+One Time Pass Key (OTPK) Protocol</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF-d10733e12048" class="topicref" data-id="GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF" id="GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF-d10733e12048-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7.4</ph>
+Device Certificate of Conformance (CoC)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590-d10733e12056" class="topicref" data-id="GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590" id="GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590-d10733e12056-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7.5</ph>
+Job End Certifier Protocol</a></div></div></li><li role="treeitem"><div data-tocid="GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7-d10733e12064" class="topicref" data-id="GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7" id="GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7-d10733e12064-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.7.6</ph>
+Device Authenticity Check Protocol</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8655628F-64C1-4EED-AA0C-2F15C461DFAB-d10733e12072" class="topicref" data-id="GUID-8655628F-64C1-4EED-AA0C-2F15C461DFAB" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8655628F-64C1-4EED-AA0C-2F15C461DFAB-d10733e12072-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8655628F-64C1-4EED-AA0C-2F15C461DFAB.html" id="GUID-8655628F-64C1-4EED-AA0C-2F15C461DFAB-d10733e12072-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.8</ph>
+HSM Servers</a></div></div></li><li role="treeitem"><div data-tocid="GUID-487B7790-1979-4ACB-BBB5-63B99D1BE73E-d10733e12301" class="topicref" data-id="GUID-487B7790-1979-4ACB-BBB5-63B99D1BE73E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-487B7790-1979-4ACB-BBB5-63B99D1BE73E.html" id="GUID-487B7790-1979-4ACB-BBB5-63B99D1BE73E-d10733e12301-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.9</ph>
+Referenced Documents</a></div></div></li><li role="treeitem"><div data-tocid="GUID-79C1B9B3-7383-4873-B90E-A9BD7C22CCB2-d10733e12309" class="topicref" data-id="GUID-79C1B9B3-7383-4873-B90E-A9BD7C22CCB2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-79C1B9B3-7383-4873-B90E-A9BD7C22CCB2.html" id="GUID-79C1B9B3-7383-4873-B90E-A9BD7C22CCB2-d10733e12309-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2.10</ph>
+Acronyms</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e12317" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e12317-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" id="tocId-d10733e12317-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+SmartDebug</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDebug </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e14622" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e14622-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="tocId-d10733e14622-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10__GUID-70386591-83A3-4E92-BD40-B874EBC78D2B"><article class="nested0" aria-labelledby="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10__GUID-70386591-83A3-4E92-BD40-B874EBC78D2B" id="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10"><h1 class="- topic/title title topictitle1" id="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10__GUID-70386591-83A3-4E92-BD40-B874EBC78D2B" style="display:inline-block">13.2.7 SPPS Protocols</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SPPS%20Protocols">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This section describes the protocols used by SPPS. It includes device-supported protocols, such as Authorization Protocols and OTPK, and protocols created above the device level, such as the Per-device key protocol.</p></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-537F3D29-E94F-4DF9-B048-101C35C24A26" xml:lang="en-US" lang="en-US" id="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0"><h2 class="- topic/title title topictitle2" id="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-537F3D29-E94F-4DF9-B048-101C35C24A26" style="display:inline-block">13.2.7.1 Authorization Code Protocol</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Authorization%20Code%20Protocol">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This is the main protocol used by SPPS. Authorization Code protocol support is built into
+            SmartFusion 2, IGLOO 2, PolarFire, and PolarFire SoC devices. It allows SPPS to securely
+            program initial security settings into the blank device, in an untrusted environment
+            where simple monitoring or man-in-the-middle attacks would otherwise be possible.</p><p class="- topic/p p">This protocol is used by the ​Initiater bit stream in the HSM flow (see <a class="- topic/xref xref" href="GUID-F13D5010-D949-42F1-868B-CA3A31E10EF9.html#GUID-DE642D2D-CE3B-4229-A47A-6C4F9E5E2928">Initialization of
+                ​Initiater Programming Bitstream</a>). It is also used by the UEK1/2/3 Update bit
+            stream to program devices that have per-device UEK1/2/3 keys programmed into them (see
+                <a class="- topic/xref xref" href="GUID-F13D5010-D949-42F1-868B-CA3A31E10EF9.html#GUID-036420E9-D233-46B8-8714-45CBDF1033FC">Initialization of UEK1/UEK2/UEK3 Update Bitstream</a>).</p><p class="- topic/p p">The Authorization Code protocol enables secure delivery of a randomly generated encryption key
+            (IP key, and KIP) to the device. The device can use the delivered KIP to decrypt an
+            incoming programming bit stream. KIP remains in the device only until the end of the
+            programming cycle, at which point it is erased—it is not stored in the device’s
+            nonvolatile memory.</p><p class="- topic/p p">A KIP-encrypted user bit stream can only be programmed into those devices which are “authorized”
+            to be programmed by this protocol.</p><p class="- topic/p p">KIP can only be delivered to the device if encrypted with one of the keys known to the device. In the case of a blank device, there are two such keys, depending on the type of device that is supported by SPPS.</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-D7450C60-C366-4AE2-892A-DDE617F3A28E" data-ofbid="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-D7450C60-C366-4AE2-892A-DDE617F3A28E">A per-device Factory Key (FK) that is pre-placed in the device by Microchip during its manufacture.</li><li class="- topic/li li" id="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-5B4F7E0A-31C0-4AD8-B88B-F8ADB5CD16E4" data-ofbid="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-5B4F7E0A-31C0-4AD8-B88B-F8ADB5CD16E4">A per-device Factory ECC public private key pair
+                that is available in larger SmartFusion 2, IGLOO 2 devices (M2S060, M2GL060, M2S090,
+                M2GL90, M2S150, and M2GL150), and all PolarFire and PolarFire SoC devices. The
+                Factory ECC public private key pair are pre-placed in the device by Microchip during
+                its manufacture. See <span class="- topic/ph ph"><a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/SmartFusion2_IGLOO2_FPGA_Security_Best_Practices_UG0443_V10.pdf" target="_blank" rel="external noopener">UG0443: SmartFusion2 and IGLOO2 FPGA Security and Best Practices User
+          Guide</a></span> and <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/Microchip_PolarFire_FPGA_and_PolarFire_SoC_FPGA_Security_User_Guide_VA+%282%29.pdf" target="_blank" rel="external noopener">PolarFire Family Security User Guide</a>
+      </span> for details about this key pair.</li><li class="- topic/li li" id="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-F5C78421-8F43-43C5-91F0-67788E991C7B" data-ofbid="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0__GUID-F5C78421-8F43-43C5-91F0-67788E991C7B">A per-device User ECC public private key pair
+                generated by the device internally prior to loading of the bit stream. See <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/Microchip_PolarFire_FPGA_and_PolarFire_SoC_FPGA_Security_User_Guide_VA+%282%29.pdf" target="_blank" rel="external noopener">PolarFire Family Security User Guide</a>
+      </span> for details about this key pair. The User ECC public
+                private key pair is available only for programming using the ​Initiater Programming
+                Bitstream.</li></ul><p class="- topic/p p">If user security settings have already been programmed into the device, the Factory Key modes and
+            User ECC key modes are disabled. For such a device, the user can only program FPGA,
+            eNVM, and sNVM components with the Update bit stream using one of the user keys that was
+            loaded with the ​Initiater bit stream. If the encryption key that must be used during
+            this update is a per-device key, the Update bit stream is encrypted with KIP, and KIP is
+            sent to the device through the Authorization Code protocol, which is protected by one of
+            the user keys that was loaded.</p><p class="- topic/p p">The following sections provide more information about using the Authorization Code protocol during initial key loading and update flows.</p></div><article class="- topic/topic topic nested2" aria-labelledby="GUID-E7609590-B0DF-4D1B-A739-74A4ED4756B5__GUID-F2A3B76E-E875-4484-B28D-66A4F63B2C8D" xml:lang="en-US" lang="en-US" id="GUID-E7609590-B0DF-4D1B-A739-74A4ED4756B5"><h3 class="- topic/title title topictitle3" id="GUID-E7609590-B0DF-4D1B-A739-74A4ED4756B5__GUID-F2A3B76E-E875-4484-B28D-66A4F63B2C8D" style="display:inline-block">13.2.7.1.1 Authorization Code Protocol in Initial Key Loading</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Authorization%20Code%20Protocol%20in%20Initial%20Key%20Loading">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">SPPS initial key loading through the ​Initiater bit stream is based on the Authorization Code
+                                    protocol. This protocol makes use of Diversified Factory Key
+                                    (DFK) or Factory ECC Public Key Modes, which are described in
+                                    the following sections.</p></div><article class="- topic/topic topic nested3" aria-labelledby="GUID-43F011CF-567F-4ECB-9921-06CA5EF75D4D__GUID-6BFABA30-0D2C-470B-8C44-27809C6A03C8" xml:lang="en-US" lang="en-US" id="GUID-43F011CF-567F-4ECB-9921-06CA5EF75D4D"><h4 class="- topic/title title topictitle4" id="GUID-43F011CF-567F-4ECB-9921-06CA5EF75D4D__GUID-6BFABA30-0D2C-470B-8C44-27809C6A03C8" style="display:inline-block">13.2.7.1.1.1 Diversified Factory Key (DFK) and DFK Database</h4><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Diversified%20Factory%20Key%20%28DFK%29%20and%20DFK%20Database">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Following SmartFusion 2 and IGLOO 2 devices: M2S005, M2GL005, M2S010, M2GL010, M2S025, M2GL025,
+      M2S050, M2GL050, have a unique Factory Key programmed into it. Microchip customers who use the
+      SPPS HSM-based solution are given a database (DB) of the Diversified Factory Keys (DFKs) upon
+      registering their U-HSM through the Microchip Portal. Upon registration, a UUID is assigned to
+      the user HSM. The UUID is a 32-hex symbol string identifier (40-for M-HSM). The Customer UUID
+      is used to diversify device Factory Key values to build a Diversified Factory Key Database
+      (DFK DB) for the customer. Diversification is a non-reversible cryptographic operation that
+      takes the device-unique Factory Key and Customer UUID as inputs. The resulting key is called
+      the Diversified Factory Key or DFK. The DFK value is irreversible, unique per-device and per-
+      customer, and is stored in the DFK database in encrypted form. Encryption is done using U-HSM
+      and M-HSM Public Keys, thus allowing only HSM modules to directly access plain text DFK
+      values.</p><p class="- topic/p p">Blank devices do not have knowledge of the Customer UUID, so it is passed to the device through
+                                    the authorization code. The UUID is authenticated but not
+                                    encrypted. The device then uses the value of the Factory Key and
+                                    received UUID to derive the DFK value.</p><p class="- topic/p p">The process of obtaining a DFK DB by the OE, using it for test runs, and preparing for the M-HSM
+                                    in production is described in the setup section of the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/user_hsm_ug.pdf" target="_blank" rel="external noopener">User HSM Installation and Setup User Guide</a>
+      </span>.</p></div></article><article class="- topic/topic topic nested3" aria-labelledby="GUID-2563099B-1131-4F5B-85D4-532503ACF471__GUID-C24F220D-4BC3-4F58-AA8F-0F9B888E57CA" xml:lang="en-US" lang="en-US" id="GUID-2563099B-1131-4F5B-85D4-532503ACF471">
+    <h4 class="- topic/title title topictitle4" id="GUID-2563099B-1131-4F5B-85D4-532503ACF471__GUID-C24F220D-4BC3-4F58-AA8F-0F9B888E57CA" style="display:inline-block">13.2.7.1.1.2 Factory ECC Public Key Modes</h4><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Factory%20ECC%20Public%20Key%20Modes">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <p class="- topic/p p">Larger SmartFusion 2, IGLOO 2 (M2S060, M2GL060, M2S090, M2GL90, M2S150, and M2GL150), and
+            PolarFire and PolarFire SoC devices have Elliptic Curve Cryptography (ECC) hardware IP
+            along with the SRAM-PUF, which allows these devices to have a unique-per-device factory
+            enrolled ECC public private key pair. This allows customers to use the factory ECC
+            public key instead of the Diversified Factory Key (DFK) for initial key loading</p>
+        <p class="- topic/p p">To use these key modes, the customer uses the Elliptic Curve Diffie-Hellman (ECDH)
+            protocol to securely establish a shared secret key, which is used to encrypt the
+            authorization code. The ECDH operation occurs within the security boundaries of the HSM
+            and the FPGA, and the shared secret key is not known to the outside world. Before the
+            HSM uses the Factory ECC Public Key from the device, it validates the public key by
+            verifying the signature on the device certificate using Microchip keys. This ensures
+            that the public key is valid and that it belongs to a Microchip device.</p>
+        <p class="- topic/p p">There are two available key modes:</p>
+        <ul class="- topic/ul ul">
+            <li class="- topic/li li" id="GUID-2563099B-1131-4F5B-85D4-532503ACF471__GUID-E540B484-D09C-43F8-BBDD-79378B23C0E2" data-ofbid="GUID-2563099B-1131-4F5B-85D4-532503ACF471__GUID-E540B484-D09C-43F8-BBDD-79378B23C0E2">KFP, in which the device uses the
+                certified key pair and the HSM uses a randomly generated ephemeral key pair. They
+                follow the ECDH protocol to derive the shared secret key.</li>
+            <li class="- topic/li li" id="GUID-2563099B-1131-4F5B-85D4-532503ACF471__GUID-E2F2A80E-C12E-4554-8406-2B0CB348E992" data-ofbid="GUID-2563099B-1131-4F5B-85D4-532503ACF471__GUID-E2F2A80E-C12E-4554-8406-2B0CB348E992">KFPE, in which the device uses the
+                certified key pair along with a second randomly generated ephemeral key pair, and
+                the HSM uses two randomly generated ephemeral key pairs. In this case, the ECDH
+                protocol is run twice, which results in two shared secret keys that are used in
+                another round of key derivation to generate a single shared secret key. This key
+                mode is preferred over KFP key mode, as it uses randomly generated key pairs and
+                therefore is more secure. However, this key mode takes longer, because there are two
+                ECDH operations and key generations.</li>
+        </ul>
+        <p class="- topic/p p">For more information, see <span class="- topic/ph ph"><a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/SmartFusion2_IGLOO2_FPGA_Security_Best_Practices_UG0443_V10.pdf" target="_blank" rel="external noopener">UG0443: SmartFusion2 and IGLOO2 FPGA Security and Best Practices User
+          Guide</a></span> and <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/Microchip_PolarFire_FPGA_and_PolarFire_SoC_FPGA_Security_User_Guide_VA+%282%29.pdf" target="_blank" rel="external noopener">PolarFire Family Security User Guide</a>
+      </span>.</p>
+    </div>
+</article><article class="- topic/topic topic nested3" aria-labelledby="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-28B65C21-2FC8-419A-9199-5D2E7CA91B91" xml:lang="en-US" lang="en-US" id="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE"><h4 class="- topic/title title topictitle4" id="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-28B65C21-2FC8-419A-9199-5D2E7CA91B91" style="display:inline-block">13.2.7.1.1.3 Initial Key Loading of Project Keys</h4><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Initial%20Key%20Loading%20of%20Project%20Keys">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Bitstream Initialization</span></p>
+        <p class="- topic/p p">By selecting ​Initiater bit stream in the HSM-based flow, the user instructs the bit
+            stream generation software to use the Authorization Code protocol with either DFK or
+            Factory ECC key mode. The generated bit stream has a special programing algorithm for
+            requesting the Authorization Code component from the M-HSM. The Authorization Code bit
+            stream is generated dynamically by the M-HSM during production. The Authorization Code
+            component is cryptographically linked to the programming bit stream, so it cannot be
+            used with any other bitstreams, if intercepted during programming. Additional
+            protocol-specific information is created for use by the M-HSM during generation of
+            Authorization Code component.</p>
+        <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">HSM Job Export</span></p>
+        <p class="- topic/p p">Exported programming job includes the following protocol-specific information:</p>
+        <ul class="- topic/ul ul" id="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__UL_LN1_3PR_SNB" data-ofbid="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__UL_LN1_3PR_SNB">
+            <li class="- topic/li li" id="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-19DF64E9-F5D1-4B91-9033-36F8D8F15F51" data-ofbid="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-19DF64E9-F5D1-4B91-9033-36F8D8F15F51">Instruction to use Authorization Key
+                Protocol along with the key mode (DFK, KFP, or KFPE)</li>
+            <li class="- topic/li li" id="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-28FC13F9-1FD7-42D4-8B34-572016BD198B" data-ofbid="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-28FC13F9-1FD7-42D4-8B34-572016BD198B">Header for the Authorization Code
+                component generation and its binding with the associated bit stream</li>
+            <li class="- topic/li li" id="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-74DCF23B-5205-4E7A-9ABF-772C07C2666F" data-ofbid="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-74DCF23B-5205-4E7A-9ABF-772C07C2666F">KIP value encrypted with the Ticket Key (see <a class="- topic/xref xref" href="GUID-BFB233D2-653B-4FD5-B65F-F6B4EBB72812.html#GUID-4C9B8639-6E94-402B-B71A-952EADA7DE68">Adding HSM Data to the Job through HSM Tasks</a>)</li>
+        </ul>
+        <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Job Execution</span></p>
+        <p class="- topic/p p">In the beginning of device programming, a programming algorithm reads the Device Serial
+            Number (DSN) and makes a request to FlashPro Express software to provide the
+            Authorization Code.</p>
+        <p class="- topic/p p">FlashPro Express, based on the context of the current programming action (device,
+            programming action), retrieves ticket information, encrypted KIP value, and other
+            controlling data and passes them to the M-HSM as a part of the request for the
+            Authorization Code.</p>
+        <p class="- topic/p p">If the key mode for Authorization code is DFK, the M-HSM finds the encrypted DFK value in
+            its DFK DB and passes a request to the secure execution engine (SEE machine) inside its
+            HSM module. The firmware running in the SEE machine in the HSM decrypts KIP, the bit
+            stream binding information, Authorization Code Header, and assembles the Authorization
+            Code component. As the last step, it decrypts DFK and uses it to encrypt the resulting
+            Authorization Code bit stream component.</p>
+        <p class="- topic/p p">Programming software shifts the Authorization Code component into the device and then
+            shifts in the main programming bit stream components. In the case of programming a new
+            device with a ​initiater bit stream, the device uses its pre-placed factory key (FK) and
+            the UUID from the Authorization Code header to compute DFK. It uses DFK to authenticate
+            and unwrap (decrypt) KIP from the encrypted payload of the Authorization Code. Finally,
+            it uses KIP to authenticate and decrypt the main ​initiater bit stream components (for
+            example, the security component and the optional FPGA fabric and eNVM components).</p>
+        <p class="- topic/p p">If the key mode for authorization code is KFP or KFPE, the M-HSM generates an ephemeral
+            ECC key pair and exchanges the public key with the device. It then uses the ECDH
+            protocol to securely derive the shared secret key inside the secure execution engine
+            (SEE machine). The firmware running in the SEE machine in the HSM decrypts the KIP, the
+            bit stream binding information, and Authorization Code Header, and assembles the
+            Authorization Code component. As the last step, it uses the shared secret key to encrypt
+            the resulting Authorization Code bit stream component. Programming software shifts the
+            Authorization Code component into the device and then shifts in the main programming bit
+            stream components. In the case of programming a new device with a ​initiater bit stream,
+            the device uses the shared secret key that it generated when running the ECDH operation
+            to authenticate and unwrap (decrypt) KIP from the encrypted payload of the Authorization
+            Code. Finally, it uses KIP to authenticate and decrypt the main ​initiater bit stream
+            components (for example, the security component and the optional FPGA fabric and eNVM
+            components).</p>
+        <p class="- topic/p p">In the case of updating a device using a unique-per-device user key, the device retrieves
+            the selected user key from its NVM security segment and uses it to authenticate the
+            Authorization Code and unwrap KIP from its payload. KIP is used to authenticate and
+            decrypt the main update bit stream components containing one or both of the FPGA fabric
+            and eNVM components.</p>
+        <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Initial Key Loading of Per-device Keys</span></p>
+        <p class="- topic/p p">This flow is the same as Initial Key Loading with Project keys, but with additional steps
+            as follows:</p>
+        <p class="- topic/p p">The Job Manager-generated ​Initiater bit stream does not include a complete security
+            component. This is because, the per-device key values can only be derived during
+            programming, once DSN is known. Therefore, the security component is passed to the M-HSM
+            as a pre-filled template through data structures protected by the Job Ticket. In
+            addition to the standard Authorization Code protocol data, HSM module attached to the
+            M-HSM receives the security component template along with the base key(s) (originally
+            from the KeySet file) and derives actual per-device key(s) upon programming (see
+            protocol details in <a class="- topic/xref xref" href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0">Per-Device Protocol</a>). Derived keys are inserted into the template of the
+            security component. Then the HSM module firmware links all the bit stream components
+            cryptographically and proceeds to the same steps of project keys listed in <a class="- topic/xref xref" href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE">Initial Key Loading of Project Keys</a>).</p>
+        <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Update Flow with Per-device Encryption Keys</span></p>
+        <p class="- topic/p p">This flow is also similar to SPPS Main flow that does the initial key loading of project
+            keys. The difference is that the Authorization Code is encrypted with the same
+            per-device UEK1, UEK2, or UEK3 derived by the M-HSM upon initial programming.</p>
+        <div class="- topic/p p">In this case, ticket information passed to the M-HSM includes the base key value for the
+            per-device key to be derived. This value is originally taken from the KeySet file on the
+            U-HSM side. Firmware in the HSM module attached to the M-HSM will use the received DSN
+            and the base key in the Per-device protocol (see <a class="- topic/xref xref" href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0">Per-Device Protocol</a>) to derive the actual per-device key value. That value
+            then encrypts the Authorization Code component that is sent to the device in a way
+            similar to <a class="- topic/xref xref" href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE">Initial Key Loading of Project Keys</a>. The Authorization Code is followed by
+            the bit stream components (FPGA or eNVM) that are being updated.<div class="- topic/note note notype note_notype" id="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-D6DF3D41-1C0D-436D-A239-7EF7FF300D2F" data-ofbid="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE__GUID-D6DF3D41-1C0D-436D-A239-7EF7FF300D2F"><span class="note__title">Note:</span> This flow does not require DFK DB on
+                the M-HSM side.</div></div></div></article></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-4404B071-E087-42B0-97F6-BCC9A3F7EF9B" xml:lang="en-US" lang="en-US" id="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F"><h3 class="- topic/title title topictitle3" id="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-4404B071-E087-42B0-97F6-BCC9A3F7EF9B" style="display:inline-block">13.2.7.1.2 Overbuild Protection</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Overbuild%20Protection">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The Authorization Code protocol allows the user to limit any programming action to a specific maximum number of devices.</p><p class="- topic/p p">This is possible due to following:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-935F5A95-C12E-4B62-BFF4-751338F11150" data-ofbid="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-935F5A95-C12E-4B62-BFF4-751338F11150">The target devices do not have KIP and KIP needs to be sent to every target device.</li><li class="- topic/li li" id="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-4F1C5D4E-D6BA-468C-B0D4-29A85A5DC9C0" data-ofbid="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-4F1C5D4E-D6BA-468C-B0D4-29A85A5DC9C0">KIP is not stored in the device even after being used during programming cycle.</li><li class="- topic/li li" id="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-407DD30B-5065-48AC-ABB3-8A136DB98AC6" data-ofbid="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F__GUID-407DD30B-5065-48AC-ABB3-8A136DB98AC6">KIP is delivered encrypted using a per-device encryption key (DFK, KFP, KFPE, or per-device UEK1/2/3). Therefore, the same authorization code cannot be used on other devices.</li></ul><p class="- topic/p p">The HSM hardware module owns overbuild protection counters as a part of the Ticket information and will stop generating new Authorization Codes when the maximum allowed number of Authorization Codes has been generated.</p></div></article></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-C4F9BC23-34F5-4E13-9BEA-2ED16B6E6A25" xml:lang="en-US" lang="en-US" id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0"><h2 class="- topic/title title topictitle2" id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-C4F9BC23-34F5-4E13-9BEA-2ED16B6E6A25" style="display:inline-block">13.2.7.2 Per-Device Protocol</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Per-Device%20Protocol">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The Per-device protocol is used to calculate per-device values of UPK1/UPK2/UEK1/UEK2/UEK3/DPK
+            keys. Per-device keys are built on top of standard SmartFusion 2, IGLOO 2, PolarFire,
+            and PolarFire SoC key types. They are programmed into the device as standard
+            UPK1/UPK2/UEK1/UEK2/UEK3/DPK keys. If any encryption keys are designated as per-device
+            unique keys, the passcode that protects that key from overwriting is a per-device unique
+            passcode.</p><p class="- topic/p p">The Per-device protocol derives device-specific keys from the base key and DSN. This enables programming user models in which programming operations can be authorized per certain devices based on their DSN.</p><p class="- topic/p p">Derivation of per-device key values is done using a one-way cryptographic operation that takes
+            the base key and DSN as inputs by firmware running inside the HSM module. The U-HSM
+            generated KeySet file contains base key values for UPK1/UPK2/UEK1/UEK2/UEK3/DPK key
+            types, as needed. Those values are passed to the M-HSM through Tickets under protection
+            of the Ticket key.</p><p class="- topic/p p">The per-device protocol is used by SPPS in following cases:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-49CB3FDD-E445-46A0-A0B9-A6276EC607E2" data-ofbid="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-49CB3FDD-E445-46A0-A0B9-A6276EC607E2">Initial key loading through ​Initiater bit
+                stream—to program per-device keys</li>
+            <li class="- topic/li li" id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-8B3C8BF7-D672-4B5F-B711-F3D8C550FEAB" data-ofbid="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-8B3C8BF7-D672-4B5F-B711-F3D8C550FEAB">Update bit stream, if device has
+                per-device encryption keys programmed— to generate the required Authorization
+                Codes</li>
+            <li class="- topic/li li" id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-D68EF549-961B-416F-BF8F-701A6511DB63" data-ofbid="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-D68EF549-961B-416F-BF8F-701A6511DB63">By the OTPK protocol—to unlock the
+                device if per-device pass keys are used (see <a class="- topic/xref xref" href="GUID-809EB1AF-697B-4466-8EE8-D38CDD3EBC10.html#GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877">One Time Pass Key
+                    (OTPK) Protocol</a>)</li></ul>
+        <div class="- topic/note note notype note_notype" id="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-63B3EC2E-45DE-4740-BCD5-0ED985EF9E4F" data-ofbid="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0__GUID-63B3EC2E-45DE-4740-BCD5-0ED985EF9E4F"><span class="note__title">Note:</span> UEK3 is only available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150
+            devices.</div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877__GUID-00977AFC-16EC-4741-85F1-7881E79165EA" xml:lang="en-US" lang="en-US" id="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877"><h2 class="- topic/title title topictitle2" id="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877__GUID-00977AFC-16EC-4741-85F1-7881E79165EA" style="display:inline-block">13.2.7.3 One Time Pass Key (OTPK) Protocol</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=One%20Time%20Pass%20Key%20%28OTPK%29%20Protocol">(Ask a Question)</a><div class="- topic/body body">
+                        <p class="- topic/p p">This protocol is supported by SmartFusion 2, IGLOO 2, PolarFire, and
+                                    PolarFire SoC devices and is used to unlock overwrite-protection
+                                    or no-verify security policy settings (if used) in:</p>
+                        <ul class="- topic/ul ul">
+                                    <li class="- topic/li li" id="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877__GUID-31FCDEB4-3CFA-4901-9A28-EC7394B927C4" data-ofbid="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877__GUID-31FCDEB4-3CFA-4901-9A28-EC7394B927C4">Erase/Verify
+                                                actions in ​Initiater bit stream flow</li>
+                                    <li class="- topic/li li" id="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877__GUID-C47FC992-C94E-4BA4-9BF0-A9356638D9FC" data-ofbid="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877__GUID-C47FC992-C94E-4BA4-9BF0-A9356638D9FC">Program/Erase/Verify actions in Update bit stream, if Fabric and/or eNVM/sNVM have security
+          locks.<p class="- topic/p p">This protocol is designed for temporary security unlock during programming
+          actions. Use of the HSM allows hiding of the plain text values of the pass
+          keys.</p><p class="- topic/p p">SPPS automatically uses the OTPK protocol with no user interaction
+          required.</p></li>
+                        </ul>
+            </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF__GUID-6C2FBC47-4270-46C1-B158-108419C97B1F" xml:lang="en-US" lang="en-US" id="GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF"><h2 class="- topic/title title topictitle2" id="GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF__GUID-6C2FBC47-4270-46C1-B158-108419C97B1F" style="display:inline-block">13.2.7.4 Device Certificate of Conformance (CoC)</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Device%20Certificate%20of%20Conformance%20%28CoC%29">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Upon being programming, a device can generate cryptographically signed digests for each freshly
+                                    programmed bit stream component. Component digests with
+                                    HSM-generated validators (message authentication codes) are
+                                    together called the Certificate of Conformance (CoC). The CoC
+                                    can be used as proof of device programming with a specific
+                                    design.</p><p class="- topic/p p">The validators in the CoC can be verified by the Job Manager using the U-HSM.</p><p class="- topic/p p">The device generates and returns CoC, if the customer requests it upon initializing the
+                                    programming bit stream (see <a class="- topic/xref xref" href="GUID-F13D5010-D949-42F1-868B-CA3A31E10EF9.html#GUID-DE642D2D-CE3B-4229-A47A-6C4F9E5E2928">Initialization of ​Initiater
+                                                Programming Bitstream</a> and <a class="- topic/xref xref" href="GUID-F13D5010-D949-42F1-868B-CA3A31E10EF9.html#GUID-036420E9-D233-46B8-8714-45CBDF1033FC">Initialization of UEK1/UEK2/UEK3 Update
+                                                Bitstream</a>).</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590__GUID-A6798462-978B-41C7-B78C-449CBC05D156" xml:lang="en-US" lang="en-US" id="GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590"><h2 class="- topic/title title topictitle2" id="GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590__GUID-A6798462-978B-41C7-B78C-449CBC05D156" style="display:inline-block">13.2.7.5 Job End Certifier Protocol</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Job%20End%20Certifier%20Protocol">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Upon job completion (see <a class="- topic/xref xref" href="GUID-27F23E45-47F9-403A-A8A0-E0CF2F500A66.html#GUID-CB6C2F25-C321-48A2-85D6-0224A378E43B___BOOKMARK27">Job Completion</a>), Job Tickets are removed from the HSM module. For every
+            removed ticket, the HSM module returns proof of ticket deletion. This information can be
+            validated by the Job Manager using the U-HSM. This information is cryptographically
+            protected and cannot be modified without detection.</p><p class="- topic/p p">Job end certifier is a guarantee that the programming job cannot continue and is a part of the overall overbuild protection mechanism.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7__GUID-E0E99EEF-D997-4D10-AFF1-AD6857E30BCD" xml:lang="en-US" lang="en-US" id="GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7"><h2 class="- topic/title title topictitle2" id="GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7__GUID-E0E99EEF-D997-4D10-AFF1-AD6857E30BCD" style="display:inline-block">13.2.7.6 Device Authenticity Check Protocol</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Device%20Authenticity%20Check%20Protocol">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">SmartFusion 2, IGLOO 2, PolarFire and PolarFire SoC devices have built-in device certificates
+      that allow Microchip programing software to verify device origin. This check is enforced by
+      FlashPro Express upon each programing operation, as a part of a check (certificate) chain
+      operation (see <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/flashpro_express_ug.pdf" target="_blank" rel="external noopener">FlashPro Express User Guide</a>
+      </span> for details).</p><p class="- topic/p p">For any device failing Authenticity Check, a warning is issued.</p></div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0" data-tocid="GUID-72C62D4E-2B87-407A-999D-DBC9CA5923F0">13.2.7.1 Authorization Code Protocol</a><ul><li class="topic-item"><a href="#GUID-E7609590-B0DF-4D1B-A739-74A4ED4756B5" data-tocid="GUID-E7609590-B0DF-4D1B-A739-74A4ED4756B5">13.2.7.1.1 Authorization Code Protocol in Initial Key Loading</a><ul><li class="topic-item"><a href="#GUID-43F011CF-567F-4ECB-9921-06CA5EF75D4D" data-tocid="GUID-43F011CF-567F-4ECB-9921-06CA5EF75D4D">13.2.7.1.1.1 Diversified Factory Key (DFK) and DFK Database</a></li><li class="topic-item"><a href="#GUID-2563099B-1131-4F5B-85D4-532503ACF471" data-tocid="GUID-2563099B-1131-4F5B-85D4-532503ACF471">13.2.7.1.1.2 Factory ECC Public Key Modes</a></li><li class="topic-item"><a href="#GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE" data-tocid="GUID-E7EA5723-91C5-4CD0-937E-DC8BD2A58BDE">13.2.7.1.1.3 Initial Key Loading of Project Keys</a></li></ul></li><li class="topic-item"><a href="#GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F" data-tocid="GUID-F9F897E0-96A6-4465-97AC-5E9868CFDC6F">13.2.7.1.2 Overbuild Protection</a></li></ul></li><li class="topic-item"><a href="#GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0" data-tocid="GUID-548B3BA7-8D43-4E34-A4A1-453398C41AB0">13.2.7.2 Per-Device Protocol</a></li><li class="topic-item"><a href="#GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877" data-tocid="GUID-96571A3A-3147-4711-9B47-1F9D7A9D0877">13.2.7.3 One Time Pass Key (OTPK) Protocol</a></li><li class="topic-item"><a href="#GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF" data-tocid="GUID-DFCE696D-1736-46C2-A1F5-37891EAB1FDF">13.2.7.4 Device Certificate of Conformance (CoC)</a></li><li class="topic-item"><a href="#GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590" data-tocid="GUID-62E8A095-3A4B-418F-A00D-4FA21C4DE590">13.2.7.5 Job End Certifier Protocol</a></li><li class="topic-item"><a href="#GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7" data-tocid="GUID-557E8E97-B198-4176-AF0B-FE5101E20DB7">13.2.7.6 Device Authenticity Check Protocol</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

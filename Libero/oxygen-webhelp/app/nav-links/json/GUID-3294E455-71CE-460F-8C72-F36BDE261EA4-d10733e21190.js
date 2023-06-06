@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.5.1<\/ph>\nHDL Tcl Commands","href":"Chunk1829141509.html#Chunk1829141509","attributes":{"data-id":"Chunk1829141509"},"menu":{"hasChildren":false},"tocID":"Chunk1829141509-d10733e21198","next":"Chunk1829141509-d10733e21198"}]});

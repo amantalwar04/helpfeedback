@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>3.12.1<\/ph>\nExporting SmartDebug Data","href":"GUID-99300B62-DD85-49BD-86E4-F8281EA90F74.html#GUID-D4532304-86D7-4C4C-9914-AF1270E9334A","attributes":{"data-id":"GUID-D4532304-86D7-4C4C-9914-AF1270E9334A"},"menu":{"hasChildren":false},"tocID":"GUID-D4532304-86D7-4C4C-9914-AF1270E9334A-d10733e4098","topics":[]}]});

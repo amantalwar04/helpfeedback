@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.16.1<\/ph>\nSPPS Tcl Commands","href":"Chunk1434920681.html#Chunk1434920681","attributes":{"data-id":"Chunk1434920681"},"menu":{"hasChildren":false},"tocID":"Chunk1434920681-d10733e24962","next":"Chunk1434920681-d10733e24962"}]});

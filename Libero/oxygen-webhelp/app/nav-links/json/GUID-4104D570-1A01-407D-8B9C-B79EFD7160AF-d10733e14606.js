@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>13.3.5.2.29.1<\/ph>\nData ECC2 Check: Pass","href":"GUID-6D8FE55D-13C7-4B25-806D-6C80802E000D.html#GUID-7142FB95-4E37-4B0B-999B-C6C3F4DC2852","attributes":{"data-id":"GUID-7142FB95-4E37-4B0B-999B-C6C3F4DC2852"},"menu":{"hasChildren":false},"tocID":"GUID-7142FB95-4E37-4B0B-999B-C6C3F4DC2852-d10733e14614","topics":[]}]});

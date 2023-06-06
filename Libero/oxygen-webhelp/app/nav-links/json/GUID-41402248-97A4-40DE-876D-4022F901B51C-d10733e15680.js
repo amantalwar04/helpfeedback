@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>14.1.7.1<\/ph>\nFunctionality","href":"GUID-41402248-97A4-40DE-876D-4022F901B51C.html#GUID-3179EE49-E099-4458-A87B-F95002DDA1E6","attributes":{"data-id":"GUID-3179EE49-E099-4458-A87B-F95002DDA1E6"},"menu":{"hasChildren":false},"tocID":"GUID-3179EE49-E099-4458-A87B-F95002DDA1E6-d10733e15688","topics":[]}]});

@@ -1,0 +1,692 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The following sections describe the SmartTime Timing Analyzer functions. SmartTime Timing Analyzer consists of the following components: Domain Browser: allows you to perform your timing analysis on a ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>11.6 SmartTime Timing Analyzer</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635"/><meta name="wh-source-relpath" content="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.xml"/><meta name="wh-out-relpath" content="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB"><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6</ph>
+SmartTime Timing Analyzer</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505" class="topicref introduction" data-id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513" class="topicref" data-id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE.html#GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.1</ph>
+About SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577" class="topicref" data-id="GUID-19433C68-C188-4952-B4CB-C85384DB239C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-19433C68-C188-4952-B4CB-C85384DB239C.html#GUID-19433C68-C188-4952-B4CB-C85384DB239C" id="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.2</ph>
+Design Flows with SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585" class="topicref" data-id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884.html#GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.3</ph>
+Starting and Closing SmartTime</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595" class="topicref" data-id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E.html#GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.4</ph>
+Configuring SmartTime Settings</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627" class="topicref" data-id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983.html#GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.5</ph>
+SmartTime Toolbar</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635" class="topicref" data-id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6</ph>
+SmartTime Timing Analyzer</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197-d10733e8643" class="topicref" data-id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197-d10733e8643-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.1</ph>
+SmartTime Analyzer Components</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809-d10733e8651" class="topicref" data-id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809-d10733e8651-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.2</ph>
+Analyzing Your Design</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F-d10733e8659" class="topicref" data-id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F-d10733e8659-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.3</ph>
+Maximum Delay Analysis View</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A-d10733e8669" class="topicref" data-id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A-d10733e8669-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.4</ph>
+Managing Clock Domains</a><div class="wh-tooltip"><p class="shortdesc">In SmartTime, timing paths are organized by clock domains. </p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105-d10733e8680" class="topicref" data-id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105-d10733e8680-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.5</ph>
+Managing Path Sets</a><div class="wh-tooltip"><p class="shortdesc">You can create and manage custom path sets for timing analysis and tracking         purposes.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0-d10733e8691" class="topicref" data-id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0-d10733e8691-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.6</ph>
+Displaying Path List Timing Information</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-04C97206-E4B0-4F30-8562-90FE85060640-d10733e8701" class="topicref" data-id="GUID-04C97206-E4B0-4F30-8562-90FE85060640" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-04C97206-E4B0-4F30-8562-90FE85060640" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640-d10733e8701-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.7</ph>
+Displaying Expanded Path Timing Information</a><div class="wh-tooltip"><p class="shortdesc">SmartTime displays the list of paths and path details for all parallel paths.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8-d10733e8712" class="topicref" data-id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8-d10733e8712-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6.8</ph>
+Using Filters</a><div class="wh-tooltip"><p class="shortdesc">You can use filters in SmartTime to limit the Path List content (that is, create a         filtered list on the source and sink pin names).</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723" class="topicref" data-id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723.html#GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.7</ph>
+Advanced Timing Analysis</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777" class="topicref" data-id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8</ph>
+Generating Timing Reports</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005" class="topicref" data-id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9</ph>
+Timing Concepts</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144" class="topicref" data-id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10</ph>
+SmartTime Tutorials</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280" class="topicref" data-id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81.html" id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.11</ph>
+SmartTime Dialog Boxes</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922" class="topicref" data-id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65.html#GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.12</ph>
+Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930" class="topicref" data-id="GUID-2828B133-C6FD-448F-A255-5EA58554C211" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2828B133-C6FD-448F-A255-5EA58554C211.html#GUID-2828B133-C6FD-448F-A255-5EA58554C211" id="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.13</ph>
+Glossary</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB__GUID-C3FC2B7A-7286-4F80-9BA7-7144C6444E1B"><article class="nested0" aria-labelledby="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB__GUID-C3FC2B7A-7286-4F80-9BA7-7144C6444E1B" id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB"><h1 class="- topic/title title topictitle1" id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB__GUID-C3FC2B7A-7286-4F80-9BA7-7144C6444E1B" style="display:inline-block">11.6 SmartTime Timing Analyzer</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SmartTime%20Timing%20Analyzer">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The following sections describe the SmartTime Timing Analyzer functions.</p></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-B5A15CDF-DB69-4D07-B325-21F0C6E4CD59" xml:lang="en-US" lang="en-US" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197"><h2 class="- topic/title title topictitle2" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-B5A15CDF-DB69-4D07-B325-21F0C6E4CD59" style="display:inline-block">11.6.1 SmartTime Analyzer Components</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SmartTime%20Analyzer%20Components">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">SmartTime Timing Analyzer consists of the following components:</p>
+        <ul class="- topic/ul ul">
+            <li class="- topic/li li" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-10F60E51-57ED-4921-AC33-4DDEDF660F64" data-ofbid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-10F60E51-57ED-4921-AC33-4DDEDF660F64">Domain Browser: allows you to perform
+                your timing analysis on a per domain basis.</li>
+            <li class="- topic/li li" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-B94A71C1-664A-4DC0-8E3F-4CB2D02FA4A8" data-ofbid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-B94A71C1-664A-4DC0-8E3F-4CB2D02FA4A8">Path List: shows paths in a specific
+                set within a given domain sorted by slack.</li>
+            <li class="- topic/li li" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-8EAB0880-74F2-4575-9A99-E170DBFE38F1" data-ofbid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-8EAB0880-74F2-4575-9A99-E170DBFE38F1">Path Details: shows detailed timing
+                analysis of a selected path in the paths list.</li>
+            <li class="- topic/li li" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-FC2D04CF-9005-4E19-BB3A-E69DF11C6B4F" data-ofbid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-FC2D04CF-9005-4E19-BB3A-E69DF11C6B4F">Analysis View Filter: allows you to filter the content of the paths list. </li>
+            <li class="- topic/li li" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-BF265DFF-86CD-4531-A0E9-31970D3DFCAB" data-ofbid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-BF265DFF-86CD-4531-A0E9-31970D3DFCAB">Path Slack Histogram: when a set is selected in the Domain Browser, Path Slack
+                Histogram shows a distribution of the path slacks for that set. Selecting one or
+                multiple bars in the Path Slack Histogram filters the paths shown in the Path
+                List.</li>
+        </ul>
+        <p class="- topic/p p">The following figure shows the SmartTime Timing Analyzer Components. You can copy and
+            change the resolution and number of bars of the chart from the right-click menu.</p>
+        <figure class="- topic/fig fig fignone" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__FIG_UNG_XZP_3NB" data-ofbid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__FIG_UNG_XZP_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-5. <span id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__GUID-F35A9BFB-6DD8-4446-BA38-ED547656121B" class="fig--title">SmartTime Timing Analyzer Components</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197__IMAGE_YDP_YZP_3NB" src="GUID-5FFF30CF-C2BC-49C1-A4A5-642FF6878F92-low.jpg" height="295" width="542" alt="???"/>
+        </figure>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-DAABF5CB-4499-4E1B-A90F-FEB33BC6638F" xml:lang="en-US" lang="en-US" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809"><h2 class="- topic/title title topictitle2" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-DAABF5CB-4499-4E1B-A90F-FEB33BC6638F" style="display:inline-block">11.6.2 Analyzing Your Design</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Analyzing%20Your%20Design">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The timing engine uses the following priorities when analyzing paths and calculating slack:</p><ol class="- topic/ol ol" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-025E918F-3FEC-42FA-B0F7-16D767417B89" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-025E918F-3FEC-42FA-B0F7-16D767417B89"><li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-FD9EE2FA-8D13-4E58-A4E6-045313B57416" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-FD9EE2FA-8D13-4E58-A4E6-045313B57416">False path</li><li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-368982FE-BE17-4975-9947-F58B90979EF3" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-368982FE-BE17-4975-9947-F58B90979EF3">Max/Min delay</li><li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-C12A62E2-D826-4DC9-99D0-EF1F1F45A902" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-C12A62E2-D826-4DC9-99D0-EF1F1F45A902">Multi-cycle path</li><li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-E65FB1B1-CEBD-461D-B298-61168139490F" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-E65FB1B1-CEBD-461D-B298-61168139490F">Clock</li></ol><p class="- topic/p p">If multiple constraints of the same priority apply to a path, the timing engine uses the tightest
+            constraint. </p>
+        <p class="- topic/p p">You can perform two types of timing analysis: </p>
+        <div class="- topic/p p">
+            <ul class="- topic/ul ul" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__UL_YST_XGQ_3NB" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__UL_YST_XGQ_3NB">
+                <li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-73CEC848-F598-40A7-B3F5-ED2A35837DF7" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-73CEC848-F598-40A7-B3F5-ED2A35837DF7">Maximum Delay Analysis</li>
+                <li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-D8161DA7-4326-41FF-81F8-428750F5B899" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-D8161DA7-4326-41FF-81F8-428750F5B899">Minimum Delay Analysis</li>
+            </ul>
+        </div><div class="- topic/p p">To perform the basic timing analysis, use one of the following methods to open the Timing
+            Analysis View:<ul class="- topic/ul ul" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__UL_FJC_VDQ_3NB" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__UL_FJC_VDQ_3NB">
+                <li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-D6505360-778D-4DE5-9459-2E27518C63B3" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-D6505360-778D-4DE5-9459-2E27518C63B3">From the SmartTime
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools</span> menu, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing Maximum Delay
+                        Analysis</span> or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Minimum Delay Analysis</span>.</li>
+                <li class="- topic/li li" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-03C9AE2F-7A68-47E4-B846-74478BC6761D" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-03C9AE2F-7A68-47E4-B846-74478BC6761D">From the SmartTime window, click
+                    the <img class="- topic/image image" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__IMAGE_VKS_VDQ_3NB" src="GUID-C0DA14B7-CCEB-4F39-AA1D-182F823DE16A-low.png" height="23" width="24" alt="???"/> icon for Maximum Delay
+                    Analysis or the <img class="- topic/image image" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__IMAGE_WKS_VDQ_3NB" src="GUID-4761A7B5-AD33-4AC0-A3E5-1160ABEA6432-low.png" height="23" width="24" alt="???"/> icon for Minimum
+                    Delay Analysis.</li>
+            </ul></div>
+        <div class="- topic/note note notype note_notype" id="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-F4C0AA96-8732-4FD1-8BED-EE49E0FE3949" data-ofbid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809__GUID-F4C0AA96-8732-4FD1-8BED-EE49E0FE3949"><span class="note__title">Note:</span> When you open the Timing Analyzer from Designer, the Maximum Delay Analysis window
+            appears by default.</div><p class="- topic/p p"><img class="- topic/image image" src="GUID-5FFF30CF-C2BC-49C1-A4A5-642FF6878F92-low.jpg" height="235" width="433" alt="???"/></p></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-1DB37DED-1C67-4487-8002-B378449E414D" xml:lang="en-US" lang="en-US" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F">
+<h2 class="- topic/title title topictitle2" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-1DB37DED-1C67-4487-8002-B378449E414D" style="display:inline-block">11.6.3 Maximum Delay Analysis View</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Maximum%20Delay%20Analysis%20View">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/context section context" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-6C19903D-4381-4AC2-81E3-A07FF263EDB7" data-ofbid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-6C19903D-4381-4AC2-81E3-A07FF263EDB7">To enter Maximum Delay Analysis
+            View:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-C9440424-0841-4067-B25F-53234ACC334C" data-ofbid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-C9440424-0841-4067-B25F-53234ACC334C">
+            <li class="- topic/li task/step li step" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-C47769B9-0ABF-4BAC-A11C-11AE233AC6C7" data-ofbid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-C47769B9-0ABF-4BAC-A11C-11AE233AC6C7">
+                <span class="- topic/ph task/cmd ph cmd">In the Domain Browser, select the clock domain. Clock domains with a <img class="- topic/image image" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__IMAGE_XVD_N2Q_3NB" src="GUID-03DD11C5-A621-4DB4-B085-47D2DEA5101B-low.png" height="11" width="16" alt="???"/> indicate that the timing requirements in
+                    these domains were met. Clock domains with an x indicate that there are
+                    violations within these domains. <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Paths List</span> shows the
+                    timing paths sorted by slack. The path with the lowest slack (biggest violation)
+                    is at the top of the list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-0E0122AA-C106-4AFF-9DCC-587020ED7D8B" data-ofbid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-0E0122AA-C106-4AFF-9DCC-587020ED7D8B">
+                <span class="- topic/ph task/cmd ph cmd">Select the path you want to view.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Path Details</span> below the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Paths
+                        List</span> shows detailed information about how the slack was computed
+                    by detailing the arrival time and required time calculation. If a path is
+                    violated, the slack is negative and shown in red.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-67B3A178-F727-4374-A548-3672C571A915" data-ofbid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-67B3A178-F727-4374-A548-3672C571A915">
+                <span class="- topic/ph task/cmd ph cmd">To display a separate view that includes the path details and schematic,
+                    double-click the path.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-4947841E-DB84-41AF-9767-C7BB4C47BECF" data-ofbid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-4947841E-DB84-41AF-9767-C7BB4C47BECF">
+                <span class="- topic/ph task/cmd ph cmd">Repeat this procedure as necessary.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <div class="- topic/note note notype note_notype" id="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-89D27003-86D1-48B1-AC38-2221059A79B9" data-ofbid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F__GUID-89D27003-86D1-48B1-AC38-2221059A79B9"><span class="note__title">Note:</span> If the minimum pulse width of one element on the critical path limits the
+                        maximum frequency for the clock, an icon for the clock name appears in the
+                            <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Summary List</span>. Clicking the icon displays the name
+                        of the pin that limits the clock frequency.</div>
+                </div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-7F7611F2-A08F-4405-B0BD-FEC0D90E2B1D" xml:lang="en-US" lang="en-US" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A">
+<h2 class="- topic/title title topictitle2" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-7F7611F2-A08F-4405-B0BD-FEC0D90E2B1D" style="display:inline-block">11.6.4 Managing Clock Domains</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Managing%20Clock%20Domains">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">In SmartTime, timing paths are organized by clock domains. </p>
+        <section class="- topic/section task/context section context" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-5FC89054-BF4E-47CD-A34B-E46C927D8552" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-5FC89054-BF4E-47CD-A34B-E46C927D8552">By default, SmartTime displays
+            domains with explicit clocks. Each clock domain includes at least three path sets:<ul class="- topic/ul ul" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__UL_JZ1_M3Q_3NB" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__UL_JZ1_M3Q_3NB">
+                <li class="- topic/li li" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-F480F617-5EF1-44BC-BE49-4E68E0753850" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-F480F617-5EF1-44BC-BE49-4E68E0753850">Register to Register</li>
+                <li class="- topic/li li" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-26C21A48-7853-4694-BA3B-F276C0602072" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-26C21A48-7853-4694-BA3B-F276C0602072">External Setup (in the Maximum
+                    Analysis View) or External Hold (in the Minimum Analysis View)</li>
+                <li class="- topic/li li" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-7F101089-B83D-454D-8F58-ADE926240C6C" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-7F101089-B83D-454D-8F58-ADE926240C6C">Clock to Out</li>
+            </ul><p class="- topic/p p">You must select a path set to display a list of paths in that specific
+                set.</p><p class="- topic/p p">To manage the clock domains:</p></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-13CBBE22-B06E-45D5-9F99-26FAED4663AD" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-13CBBE22-B06E-45D5-9F99-26FAED4663AD">
+            <li class="- topic/li task/step li step" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-38783739-0332-4AA6-9C20-64B1C7F3983C" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-38783739-0332-4AA6-9C20-64B1C7F3983C">
+                <span class="- topic/ph task/cmd ph cmd">Right-click anywhere in the Domain Browser and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Manage Clock
+                        Domains</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The <a class="- topic/xref xref" href="GUID-EBAC6EE2-DB87-4372-9845-ABE75A08F71F.html#GUID-EBAC6EE2-DB87-4372-9845-ABE75A08F71F">Manage Clock Domains</a> dialog box appears.<div class="- topic/note note tip note_tip" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-1027120C-51D2-4C5A-B7B9-7720147B11A3" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-1027120C-51D2-4C5A-B7B9-7720147B11A3"><span class="note__title">Tip:</span> You can click the <img class="- topic/image image" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__IMAGE_LMG_W3Q_3NB" src="GUID-6D103651-4252-4B63-B8BA-F9156E168030-low.png" height="24" width="24" alt="???"/> icon in the SmartTime window bar to
+                        display the Manage Clock Domains dialog box.</div></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-5D52E520-67E0-4D9D-B1AF-51CF417AE517" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-5D52E520-67E0-4D9D-B1AF-51CF417AE517">
+                <span class="- topic/ph task/cmd ph cmd">To add a new domain, select a clock domain from the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Available clock
+                        domains</span> list and click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>. To add a
+                    non-explicit clock domain, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">New Clock</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Choose the Clock Source Pin dialog box appears, and you can select
+                    the clock source pin. You can choose to filter the available pins and
+                        search.<figure class="- topic/fig fig fignone" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__FIG_GCN_KJQ_3NB" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__FIG_GCN_KJQ_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-6. <span id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-38591F32-FF51-4138-8A85-09B51299F8BC" class="fig--title">Choose the Clock Source Pin Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__IMAGE_CLN_KJQ_3NB" src="GUID-91D5F166-194A-4472-B3C2-A8F4B472C697-low.jpg" height="446" width="542" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-2D796538-E3E1-4620-A692-BE1E2D2841F6" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-2D796538-E3E1-4620-A692-BE1E2D2841F6">
+                <span class="- topic/ph task/cmd ph cmd">To remove a displayed domain, select a clock domain from the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show
+                        the clock domains in this order</span> list and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Remove</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-C15EC7FA-B019-4A8D-90F8-5C1B04829AB6" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-C15EC7FA-B019-4A8D-90F8-5C1B04829AB6">
+                <span class="- topic/ph task/cmd ph cmd">To change the display order in the Domain Browser, select a clock domain from
+                    the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show the clock domains in this order</span> list, and then
+                    use <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Move Up</span> or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Move Down</span> to change
+                    the order in the list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-01AC43AA-62FE-4305-9222-E3B150CA8606" data-ofbid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A__GUID-01AC43AA-62FE-4305-9222-E3B150CA8606">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">SmartTime updates the Domain Browser based on your specifications. If
+                    you added a new clock domain, it includes at least three path sets, as mentioned
+                    above.</div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-F1634279-1C3A-4FBD-92BB-1A97B20FE8BB" xml:lang="en-US" lang="en-US" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105">
+    <h2 class="- topic/title title topictitle2" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-F1634279-1C3A-4FBD-92BB-1A97B20FE8BB" style="display:inline-block">11.6.5 Managing Path Sets</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Managing%20Path%20Sets">(Ask a Question)</a>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">You can create and manage custom path sets for timing analysis and tracking
+        purposes.</p>
+        <section class="- topic/section task/context section context" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-C9635400-7B9A-4C72-A5BF-1BCCABAECA5D" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-C9635400-7B9A-4C72-A5BF-1BCCABAECA5D">Path sets appear below
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom Path Sets</span> at the bottom of the Domain Browser.<p class="- topic/p p">To
+                manage path sets:</p></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-D6798250-5AB3-4BCC-96E2-1224CC00E2F5" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-D6798250-5AB3-4BCC-96E2-1224CC00E2F5">
+            <li class="- topic/li task/step li step" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-2B1DC39F-E697-49CA-A1FD-FCC1C788CD92" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-2B1DC39F-E697-49CA-A1FD-FCC1C788CD92">
+                <span class="- topic/ph task/cmd ph cmd">Right-click anywhere in the Domain Browser and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add
+                        Set</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The <a class="- topic/xref xref" href="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81.html#GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81">Add Path Analysis Set dialog box</a> appears.<div class="- topic/note note tip note_tip" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-0874119B-C7FC-42EF-A29B-8BB943D78746" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-0874119B-C7FC-42EF-A29B-8BB943D78746"><span class="note__title">Tip:</span> You can click the <img class="- topic/image image" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__IMAGE_NTX_R4Q_3NB" src="GUID-6D103651-4252-4B63-B8BA-F9156E168030-low.png" height="24" width="24" alt="???"/> icon in the SmartTime window bar to
+                        display the Add Path Analysis Set dialog box.</div><figure class="- topic/fig fig fignone" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__FIG_WSW_W4Q_3NB" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__FIG_WSW_W4Q_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-7. <span id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-CAA1AFC0-2B1E-4768-8139-0055FA9E3593" class="fig--title">Add Path Analysis Set
+                            Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__IMAGE_SWX_W4Q_3NB" src="GUID-23CBF6FE-A1ED-48D6-9A8A-5520F3FA145A-low.jpg" height="516" width="540" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-CD159A1B-0054-48A8-AB6F-E98DD23C79AC" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-CD159A1B-0054-48A8-AB6F-E98DD23C79AC">
+                <span class="- topic/ph task/cmd ph cmd">Enter a name for the path set.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-ACAE373D-7A23-42E2-BADA-4C90D81D2763" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-ACAE373D-7A23-42E2-BADA-4C90D81D2763">
+                <span class="- topic/ph task/cmd ph cmd">Select the source and sink pins. You can use the <a class="- topic/xref xref" href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8" title="You can use filters in SmartTime to limit the Path List content (that is, create a filtered list on the source and sink pin names)."><span><span>11.6.8 </span><span>Using Filters</span></span></a> to control
+                    the type of pins displayed.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-215FB07B-1DC7-45EE-AFFD-D91939CAB63E" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-215FB07B-1DC7-45EE-AFFD-D91939CAB63E">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The new path set appears below <span class="+ topic/ph ui-d/uicontrol ph uicontrol">User Sets</span> in the
+                    Domain Browser.<figure class="- topic/fig fig fignone" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__FIG_XRW_3PQ_3NB" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__FIG_XRW_3PQ_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-8. <span id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-CE44A314-78BF-4900-83D3-38C8DEF744A7" class="fig--title">Updated Domain Browser
+                            with User Sets</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__IMAGE_BBX_3PQ_3NB" src="GUID-5C5BE823-9BBF-4E8F-B83B-46C06492D990-low.jpg" height="372" width="542" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-FF0496B5-8B0A-4066-B573-B27351F68731" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-FF0496B5-8B0A-4066-B573-B27351F68731">
+                <span class="- topic/ph task/cmd ph cmd">To rename a path:</span>
+                <ol class="- topic/ol task/substeps ol substeps" type="a" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__SUBSTEPS_KJF_GTQ_3NB" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__SUBSTEPS_KJF_GTQ_3NB">
+                    <li class="- topic/li task/substep li substep" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-0EAB77D1-F344-40F0-9FB4-A15E8A054B26" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-0EAB77D1-F344-40F0-9FB4-A15E8A054B26">
+                        <span class="- topic/ph task/cmd ph cmd">Select the path set from <span class="+ topic/ph ui-d/uicontrol ph uicontrol">User Sets</span> in the Domain
+                            Browser.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-10335FE0-B3EE-458B-B341-8E667261DD5D" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-10335FE0-B3EE-458B-B341-8E667261DD5D">
+                        <span class="- topic/ph task/cmd ph cmd">Right-click the set you want to rename, and then choose
+                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Rename Set</span> from the right click menu.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-8EE9E4A4-F9E8-4AB8-8D82-ED76C8CB6192" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-8EE9E4A4-F9E8-4AB8-8D82-ED76C8CB6192">
+                        <span class="- topic/ph task/cmd ph cmd">Edit the name directly in the Domain Browser.</span>
+                    </li>
+                </ol>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-3A9D7389-7BB9-4DFF-B5D7-239B01543081" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-3A9D7389-7BB9-4DFF-B5D7-239B01543081">
+                <span class="- topic/ph task/cmd ph cmd">To remove a path:</span>
+                <ol class="- topic/ol task/substeps ol substeps" type="a" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__SUBSTEPS_Y24_GTQ_3NB" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__SUBSTEPS_Y24_GTQ_3NB">
+                    <li class="- topic/li task/substep li substep" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-670E0D20-7354-4292-9160-AB199EBE71AA" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-670E0D20-7354-4292-9160-AB199EBE71AA">
+                        <span class="- topic/ph task/cmd ph cmd">Select the path set from <span class="+ topic/ph ui-d/uicontrol ph uicontrol">User Sets</span> in the Domain
+                            Browser.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-1A4FD22F-D61E-415C-B54D-36B63625668E" data-ofbid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105__GUID-1A4FD22F-D61E-415C-B54D-36B63625668E">
+                        <span class="- topic/ph task/cmd ph cmd">Right-click the set you want to delete, and then choose
+                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete Set</span> from the right click menu.</span>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-F5ED4F88-7FF2-4772-81E0-CD48189881AB" xml:lang="en-US" lang="en-US" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0">
+<h2 class="- topic/title title topictitle2" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-F5ED4F88-7FF2-4772-81E0-CD48189881AB" style="display:inline-block">11.6.6 Displaying Path List Timing Information</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Displaying%20Path%20List%20Timing%20Information">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/context section context" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-99C4A71A-2DF4-4C11-B691-D0BDC58C6035" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-99C4A71A-2DF4-4C11-B691-D0BDC58C6035">
+            <p class="- topic/p p">Path List in the Timing Analysis View shows the timing information required to verify
+                the timing requirements and identify violating paths. The Path List is organized in
+                a grid where each row represents a timing path with the corresponding timing
+                information displayed in columns. Timing information is customizable, allowing you
+                to add or remove columns for each type of set.</p>
+            <p class="- topic/p p">By default, each type of set displays the following subset of columns:</p>
+            <ul class="- topic/ul ul" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__UL_LKR_HVQ_3NB" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__UL_LKR_HVQ_3NB">
+                <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-C74C347C-2179-4D87-8EA2-F2332612D772" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-C74C347C-2179-4D87-8EA2-F2332612D772">Register to Register: Source Pin, Sink Pin, Delay, Slack, Arrival, Required,
+                    Setup, Minimum Period, and Skew.</li>
+                <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-00D55A9A-BFA9-4A8D-9BFF-4D5B74536C50" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-00D55A9A-BFA9-4A8D-9BFF-4D5B74536C50">External Setup: Source Pin, Sink Pin, Delay, Slack, Arrival, Required, Setup,
+                    and External Setup.</li>
+                <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-1B14FFCC-E84F-44DF-9B6F-DF86EA78B285" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-1B14FFCC-E84F-44DF-9B6F-DF86EA78B285">Clock to Out: Source Pin, Sink Pin, Delay, Slack, Arrival, Required, and Clock
+                    to Out.</li>
+                <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-9B938AA6-DAE7-4A87-BB31-F59F50B6BDA9" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-9B938AA6-DAE7-4A87-BB31-F59F50B6BDA9">Input to Output: Source Pin, Sink Pin, Delay, and Slack.</li>
+                <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-9E6D9F57-0F42-48E4-AD9C-FD7D49AE2434" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-9E6D9F57-0F42-48E4-AD9C-FD7D49AE2434">Custom Path Sets: Source Pin, Sink Pin, Delay, and Slack. You can add the
+                    following columns for each type of set:<ul class="- topic/ul ul" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__UL_NKR_HVQ_3NB" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__UL_NKR_HVQ_3NB">
+                        <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-E2C46EC6-7DBD-4052-A05A-E34A8BD0433E" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-E2C46EC6-7DBD-4052-A05A-E34A8BD0433E">Register to Register: Clock, Source Clock Edge, Destination Clock Edge,
+                            Logic Stage Count, Max Fanout, Clock Constraint, Maximum Delay
+                            Constraint, and Multicycle Constraint.</li>
+                        <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-D652871F-9903-46C0-AB20-78CE21A8277F" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-D652871F-9903-46C0-AB20-78CE21A8277F">External Setup: Clock, Destination Clock Edge, Logic Stage Count, Max
+                            Fanout, Clock Constraint, Input Delay Constraint, Required External
+                            Setup, Maximum Delay Constraint, and Multicycle Constraint.</li>
+                        <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-B7D9BDA3-409D-449E-9E5E-77F4CE6C2191" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-B7D9BDA3-409D-449E-9E5E-77F4CE6C2191">Clock to Out: Clock, Source Clock Edge, Logic Stage Count, Max Fanout,
+                            Clock Constraint, Output Delay Constraint, Required Maximum Clock to
+                            Out, Maximum Delay Constraint, and Multicycle Constraint.</li>
+                        <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-EFE5A0A1-73C8-40F2-BCDF-1ACEFC356541" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-EFE5A0A1-73C8-40F2-BCDF-1ACEFC356541">Input to Output: Arrival, Required, Setup, Hold, Logic Stage Count, and
+                            Max Fanout.</li>
+                        <li class="- topic/li li" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-948428FE-ABC8-4390-B32E-6F5BE2326E81" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-948428FE-ABC8-4390-B32E-6F5BE2326E81">Custom Path Sets</li>
+                    </ul></li>
+            </ul>
+            <p class="- topic/p p">To customize the set of timing information in the Path List:</p>
+        </section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-8A6B56F6-9C6B-4038-BC60-E9DD9708B7CA" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-8A6B56F6-9C6B-4038-BC60-E9DD9708B7CA">
+            <li class="- topic/li task/step li step" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-8038C0EB-D921-4D89-B50C-47A65BB66778" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-8038C0EB-D921-4D89-B50C-47A65BB66778">
+                <span class="- topic/ph task/cmd ph cmd">Choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Customize table</span> on the top-left corner of path
+                    list to open the <a class="- topic/xref xref" href="GUID-D8221A0E-5959-42AE-B9C8-EDF0D74E2F71.html#GUID-D8221A0E-5959-42AE-B9C8-EDF0D74E2F71">Customize Paths List Table dialog box</a>.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__FIG_XFH_WVQ_3NB" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__FIG_XFH_WVQ_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-9. <span id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-C4858296-560F-41DA-9EF1-1BD2E6C7DFBE" class="fig--title">Customize Paths List Table Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__IMAGE_IW3_WVQ_3NB" src="GUID-490B7F49-3EA8-4BAE-AB50-866241035EA1-low.jpg" height="266" width="539" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-C2735310-2EEC-4677-964A-53FB9FC1F600" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-C2735310-2EEC-4677-964A-53FB9FC1F600">
+                <span class="- topic/ph task/cmd ph cmd">To add one or more columns, select the fields to add from the
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Available fields</span> list and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-79CD069D-A117-42D1-BD6C-AA6987B0EE68" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-79CD069D-A117-42D1-BD6C-AA6987B0EE68">
+                <span class="- topic/ph task/cmd ph cmd">To remove one or more columns, select the fields to remove from the <strong class="+ topic/ph hi-d/b ph b">Show
+                        these fields in this order </strong>list, and click
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Remove</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-401B7A63-B14B-41CC-B54B-F650F31B2E52" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-401B7A63-B14B-41CC-B54B-F650F31B2E52">
+                <span class="- topic/ph task/cmd ph cmd">To change the order in which the fields appear, select fields in the
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show these fields in this order</span> list and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Move Up</span> or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Move Down</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-3F5B789E-BC40-4DC1-BEDC-1A08BC85CBFE" data-ofbid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0__GUID-3F5B789E-BC40-4DC1-BEDC-1A08BC85CBFE">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> to add or remove the selected columns. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">SmartTime updates the Timing Analysis View.</div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-229019D9-932B-4AA1-90D3-F87894DA505D" xml:lang="en-US" lang="en-US" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640">
+<h2 class="- topic/title title topictitle2" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-229019D9-932B-4AA1-90D3-F87894DA505D" style="display:inline-block">11.6.7 Displaying Expanded Path Timing Information</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Displaying%20Expanded%20Path%20Timing%20Information">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">SmartTime displays the list of paths and path details for all parallel paths.</p>
+        <section class="- topic/section task/context section context" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-8059B64A-1D18-458B-9279-E0A789C27071" data-ofbid="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-8059B64A-1D18-458B-9279-E0A789C27071">The Path Details grid displays the
+            path details for all parallel paths. The Path List displays all parallel paths in your
+                design.<figure class="- topic/fig fig fignone" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__FIG_C3Q_2ZQ_3NB" data-ofbid="GUID-04C97206-E4B0-4F30-8562-90FE85060640__FIG_C3Q_2ZQ_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-10. <span id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-6BC6E9AA-EC51-40F6-9B74-EFAACAE986C0" class="fig--title">Path List View</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__IMAGE_SYQ_2ZQ_3NB" src="GUID-5FFF30CF-C2BC-49C1-A4A5-642FF6878F92-low.jpg" height="295" width="542" alt="???"/>
+            </figure><p class="- topic/p p">To display the Expanded Path View:</p></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-8641CB53-3321-4D45-856A-1633A2BCED68" data-ofbid="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-8641CB53-3321-4D45-856A-1633A2BCED68">
+            <li class="- topic/li task/step li step" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-AC4E9A65-3FC0-4B65-9890-AFF606F513F2" data-ofbid="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-AC4E9A65-3FC0-4B65-9890-AFF606F513F2">
+                <span class="- topic/ph task/cmd ph cmd">From the Path List, double-click the path, or right-click a path and select
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">expand selected paths</span>. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-1E4E0E5B-64BF-4184-B0BA-6625FBCA1C2D" data-ofbid="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-1E4E0E5B-64BF-4184-B0BA-6625FBCA1C2D">
+                <span class="- topic/ph task/cmd ph cmd">From the Expanded Path View, double-click the path, or right-click the path and
+                    select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">expand path</span>.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__FIG_WMZ_FCR_3NB" data-ofbid="GUID-04C97206-E4B0-4F30-8562-90FE85060640__FIG_WMZ_FCR_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-11. <span id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__GUID-42F11B52-B02E-48C1-82BC-5E17AEB1111C" class="fig--title">Expanded Path View</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-04C97206-E4B0-4F30-8562-90FE85060640__IMAGE_XMZ_FCR_3NB" src="GUID-4D103552-654D-43EA-AECD-1305AD821E94-low.jpg" height="295" width="544" alt="???"/>
+                    </figure>
+                    <p class="- topic/p p">The Expanded Path Summary provides a summary of all parallel paths for the
+                        selected path. The Path Profile chart shows the percentage of time taken by
+                        cells and nets for the selected path. If no parallel path is selected in
+                        this view, the Path Profile shows the percentage for all paths. By default,
+                        SmartTime shows only one path for each Expanded Path. To change this
+                        default, use the SmartTime Options dialog box.</p>
+                    <p class="- topic/p p">The Expanded Path View includes a schematic of the path and a path profile
+                        chart for the paths selected in the Expanded Path Summary.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-330373F1-5628-4BFA-ADEA-239312B16485" xml:lang="en-US" lang="en-US" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8">
+<h2 class="- topic/title title topictitle2" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-330373F1-5628-4BFA-ADEA-239312B16485" style="display:inline-block">11.6.8 Using Filters</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Using%20Filters">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">You can use filters in SmartTime to limit the Path List content (that is, create a
+        filtered list on the source and sink pin names).</p>
+        <section class="- topic/section task/context section context" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-00D79921-DDF5-4F43-9F39-0D6E54A7B218" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-00D79921-DDF5-4F43-9F39-0D6E54A7B218">
+            <p class="- topic/p p">Filtering options appear at the top of the Timing Analysis View. You can save these
+                filters one level below the set under which they have been created.</p>
+            <p class="- topic/p p">To use the filter:</p>
+        </section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-0E71F124-150B-4170-B46E-F79987A8FC57" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-0E71F124-150B-4170-B46E-F79987A8FC57">
+            <li class="- topic/li task/step li step" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-23AF3FB5-E163-4D72-A800-787D8C71119C" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-23AF3FB5-E163-4D72-A800-787D8C71119C">
+                <span class="- topic/ph task/cmd ph cmd">Select a set in the Domain Browser to display a given number of paths,
+                    depending on your <a class="- topic/xref xref" href="GUID-0E342BFD-075D-492F-9087-E125B356879B.html#GUID-0E342BFD-075D-492F-9087-E125B356879B">SmartTime Options</a> settings (100 paths by default).</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-B78D1A84-8934-4BB3-94FA-C42765D9C9CC" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-B78D1A84-8934-4BB3-94FA-C42765D9C9CC">
+                <span class="- topic/ph task/cmd ph cmd">Enter the filter criteria in both the From and To fields, and then click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Apply Filter</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The display limits the paths to those that match your filter
+                        criteria.<figure class="- topic/fig fig fignone" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__FIG_QVS_2GR_3NB" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__FIG_QVS_2GR_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-12. <span id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-46709B09-66E1-46E0-A948-D2A196A11EDB" class="fig--title">Maximum Delay Analysis
+                            View</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__IMAGE_VHT_2GR_3NB" src="GUID-B422C7A4-1DF2-4E84-A156-41BDBFD23211-low.jpg" height="386" width="540" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-E86CF0B8-D18E-4B4E-B88C-F85E7612A519" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-E86CF0B8-D18E-4B4E-B88C-F85E7612A519">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Store Filter</span> to save your filter criteria with a
+                    special name.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Create Filter Set dialog box appears.<figure class="- topic/fig fig fignone" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__FIG_ZPY_KDR_3NB" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__FIG_ZPY_KDR_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-13. <span id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-BCBEDF7B-611C-425B-8B56-5632A6369498" class="fig--title">Create Filter Set Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__IMAGE_P51_LDR_3NB" src="GUID-6A1D4A5E-743C-4D97-B3D8-7BD810439D63-low.png" height="213" width="444" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-3CE38805-F6E3-4C69-8259-C2BB9E02197F" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-3CE38805-F6E3-4C69-8259-C2BB9E02197F">
+                <span class="- topic/ph task/cmd ph cmd">Enter a name for the filter, such as myfilter01, and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">Your new filter name appears below the set under which it was
+                        created.<figure class="- topic/fig fig fignone" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__FIG_KBR_1GR_3NB" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__FIG_KBR_1GR_3NB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-14. <span id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-135BEEC4-2E0C-491F-8C7D-1B8F6764FECC" class="fig--title">Specifying the Filter
+                            my_filter01</span></span></figcaption>
+                        
+                        <p class="- topic/p p"><img class="- topic/image image" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__IMAGE_PTS_1GR_3NB" src="GUID-E6072C48-C54F-4F7C-B7F4-93C7CA1A2A03-low.png" height="345" width="348" alt="???"/></p>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-8E365B71-CDA5-416F-BCDE-659B30DDDE33" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-8E365B71-CDA5-416F-BCDE-659B30DDDE33">
+                <span class="- topic/ph task/cmd ph cmd">Repeat this procedure to cascade as many sets as you need using the filtering
+                    mechanism.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-6AC6A897-DD3A-4F57-9AF8-CF68A863E312" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-6AC6A897-DD3A-4F57-9AF8-CF68A863E312">
+                <span class="- topic/ph task/cmd ph cmd">To edit a filter in the set:</span>
+                <ol class="- topic/ol task/substeps ol substeps" type="a" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-3E9279BD-274B-4F65-A4F0-086E86271BF3" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-3E9279BD-274B-4F65-A4F0-086E86271BF3">
+                    <li class="- topic/li task/substep li substep" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-86724430-6809-4A6C-8871-B41C03299FAE" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-86724430-6809-4A6C-8871-B41C03299FAE">
+                        <span class="- topic/ph task/cmd ph cmd">Select the filter you want to edit.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-08B8DD47-2F5C-4980-8C12-D3963B442F83" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-08B8DD47-2F5C-4980-8C12-D3963B442F83">
+                        <span class="- topic/ph task/cmd ph cmd">Right-click the filter and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Set</span> from
+                            the shortcut menu.</span>
+                    </li>
+                </ol>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-6D59BC9A-A8ED-4A52-9228-4FEA84F3F7AB" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-6D59BC9A-A8ED-4A52-9228-4FEA84F3F7AB">
+                <span class="- topic/ph task/cmd ph cmd">To rename a set created with filters:</span>
+                <ol class="- topic/ol task/substeps ol substeps" type="a" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-FB80661E-31DF-4B6D-894C-9BA975530704" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-FB80661E-31DF-4B6D-894C-9BA975530704">
+                    <li class="- topic/li task/substep li substep" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-60EE791D-5E45-4D9A-BE4B-82A396AA325F" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-60EE791D-5E45-4D9A-BE4B-82A396AA325F">
+                        <span class="- topic/ph task/cmd ph cmd">Select the set that uses filters.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-22B9950E-2BD2-4F27-9AAD-BF412BB81245" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-22B9950E-2BD2-4F27-9AAD-BF412BB81245">
+                        <span class="- topic/ph task/cmd ph cmd">Right-click the set, and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Rename Set</span> from
+                            the shortcut menu.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-1A6D3287-62DF-4DD7-B37C-4186A3E2BCFE" data-ofbid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8__GUID-1A6D3287-62DF-4DD7-B37C-4186A3E2BCFE">
+                        <span class="- topic/ph task/cmd ph cmd">Edit the name directly in the Domain Browser.</span>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197" data-tocid="GUID-5F85DF7E-3E12-4D74-BF78-1557FACD1197">11.6.1 SmartTime Analyzer Components</a></li><li class="topic-item"><a href="#GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809" data-tocid="GUID-F4A6FB88-4321-49A4-8B94-DD48F15DF809">11.6.2 Analyzing Your Design</a></li><li class="topic-item"><a href="#GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F" data-tocid="GUID-F88A01EE-5AB5-4D94-AC5B-CB7720BF745F">11.6.3 Maximum Delay Analysis View</a></li><li class="topic-item"><a href="#GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A" data-tocid="GUID-8A8F1347-1EB0-413C-A72C-3D3023EF077A">11.6.4 Managing Clock Domains</a></li><li class="topic-item"><a href="#GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105" data-tocid="GUID-F0B11DE2-BDA2-43A1-A6DC-92BB221C7105">11.6.5 Managing Path Sets</a></li><li class="topic-item"><a href="#GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0" data-tocid="GUID-52DA0AB1-6D0D-457D-9B3F-3E9B44AA4BC0">11.6.6 Displaying Path List Timing Information</a></li><li class="topic-item"><a href="#GUID-04C97206-E4B0-4F30-8562-90FE85060640" data-tocid="GUID-04C97206-E4B0-4F30-8562-90FE85060640">11.6.7 Displaying Expanded Path Timing Information</a></li><li class="topic-item"><a href="#GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8" data-tocid="GUID-FB63C2CE-0C0D-43A0-B315-0F89279FF0D8">11.6.8 Using Filters</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

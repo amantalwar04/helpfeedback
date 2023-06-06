@@ -1,0 +1,820 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The following topics describe how to implement a complete PolarFire design using Microchip Design Separation methodology. The design consists of six subsystems defined in Verilog: block1.v block2.v ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>16.2 Example</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145-d10733e18455"/><meta name="wh-source-relpath" content="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.xml"/><meta name="wh-out-relpath" content="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145"><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-D782718B-3B21-4DDE-B53E-C560B69BA145"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2</ph>
+Example</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D-d10733e18296" class="topicref introduction" data-id="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D-d10733e18296-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82-d10733e18304" class="topicref" data-id="GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82-d10733e18304-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82.html#GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82" id="GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82-d10733e18304-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.1</ph>
+Design Methodology</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145-d10733e18455" class="topicref" data-id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-D782718B-3B21-4DDE-B53E-C560B69BA145-d10733e18455-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-D782718B-3B21-4DDE-B53E-C560B69BA145" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145-d10733e18455-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2</ph>
+Example</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-80580989-808B-48FB-89E0-F94B12543483-d10733e18463" class="topicref" data-id="GUID-80580989-808B-48FB-89E0-F94B12543483" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-80580989-808B-48FB-89E0-F94B12543483" id="GUID-80580989-808B-48FB-89E0-F94B12543483-d10733e18463-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.1</ph>
+Creating HDL Subsystems</a><div class="wh-tooltip"><p class="shortdesc">The first step when implementing a complete system using Microchip Design Separation methodology is to achieve logical separation of various subsystems. Create logically separate HDL modules corresponding to the system.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D-d10733e18474" class="topicref" data-id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D-d10733e18474-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.2</ph>
+Creating Blocks</a><div class="wh-tooltip"><p class="shortdesc">The next step is to create a Block for each subsystem of this design.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2-d10733e18485" class="topicref" data-id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-7E272736-7727-4134-9899-5DC18FAF7AE2" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2-d10733e18485-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.3</ph>
+Publishing the Block</a><div class="wh-tooltip"><p class="shortdesc">After you create the module with I/Os inserted, publish the Block. Run Synthesis, and compile the subsystem (or its wrapper SmartDeisgnor HDL component). You can check for timing closure on the Block. Publish the Block without place-and-route information.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9-d10733e18496" class="topicref" data-id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9-d10733e18496-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.4</ph>
+Creating a Top-level Design</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499-d10733e18507" class="topicref" data-id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499-d10733e18507-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.5</ph>
+Floorplanning Design with Separation Regions</a><div class="wh-tooltip"><p class="shortdesc">Each Block of the design must be assigned to a separation region. You can define separation regions in Chip Planner or use a PDC file. For more information about floorplanning a design using Chip Planner, see the Libero online help.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881-d10733e18518" class="topicref" data-id="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881" id="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881-d10733e18518-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.6</ph>
+Complete Place-and-Route</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53-d10733e18529" class="topicref" data-id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-D18DD138-F5B9-43D3-B130-41E333B55D53" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53-d10733e18529-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.7</ph>
+Configure Security Settings and Generate the Programming File</a><div class="wh-tooltip"><p class="shortdesc">After you complete place-and-route, extract the design information to execute MSVT.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5-d10733e18540" class="topicref" data-id="GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145.html#GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5" id="GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5-d10733e18540-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16.2.8</ph>
+Execute MSVT</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-248335DB-6B49-4471-897A-1AB3CB7D6301"><article class="nested0" aria-labelledby="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-248335DB-6B49-4471-897A-1AB3CB7D6301" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145"><h1 class="- topic/title title topictitle1" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-248335DB-6B49-4471-897A-1AB3CB7D6301" style="display:inline-block">16.2 Example</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Example">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The following topics describe how to implement a complete PolarFire design using Microchip Design Separation methodology.</p><div class="- topic/p p">The design consists of six subsystems defined in Verilog:<ul class="- topic/ul ul" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__UL_RGY_NVK_YNB" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__UL_RGY_NVK_YNB"><li class="- topic/li li" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-14741093-8A08-4E7F-9E47-EC954E9C8237" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-14741093-8A08-4E7F-9E47-EC954E9C8237">block1.v</li><li class="- topic/li li" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-5888E097-1AC3-4E6B-A834-949DFD384E31" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-5888E097-1AC3-4E6B-A834-949DFD384E31">block2.v</li><li class="- topic/li li" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-E9F2F8A1-19AC-4B69-A719-8CFDF563C9CB" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-E9F2F8A1-19AC-4B69-A719-8CFDF563C9CB">block3.v</li><li class="- topic/li li" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-16D5AE83-D7C1-4321-8C8A-26082074B0A8" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-16D5AE83-D7C1-4321-8C8A-26082074B0A8">block4.v</li><li class="- topic/li li" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-3070C2C9-19B2-4799-B3B6-BA5DE633A02C" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-3070C2C9-19B2-4799-B3B6-BA5DE633A02C"><p class="- topic/p p">pf_smip.v</p></li><li class="- topic/li li" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-2CD0FCB5-CECF-4C72-81B3-B4BCD3C1B995" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-2CD0FCB5-CECF-4C72-81B3-B4BCD3C1B995"><p class="- topic/p p">PF_CCC_C0.v</p></li></ul>The following figure shows a top-level view of these subsystems with interconnects between them.</div><figure class="- topic/fig fig fignone" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145___REF382825172" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145___REF382825172"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-12. <span id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-1086C91A-B270-4B7B-8A4C-BBEEFE073A72" class="fig--title">Top-Level View of Example Design</span></span></figcaption><img class="- topic/image image" src="GUID-0137CBC1-8587-4965-96C4-F58BC4FCB8DA-low.jpg" height="299" width="715" alt="???"/></figure><p class="- topic/p p">This design is implemented using the design separation methodology steps defined in <a class="- topic/xref xref" href="GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82.html#GUID-21B65F0F-EED0-46BB-B199-36086762593D"><span><span>16.1.2 </span><span>Design Separation Methodology Steps</span></span></a>.</p><div class="- topic/note note notype note_notype" id="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-D72DD410-FD8C-4CEE-A323-2D8FC19DEC58" data-ofbid="GUID-D782718B-3B21-4DDE-B53E-C560B69BA145__GUID-D72DD410-FD8C-4CEE-A323-2D8FC19DEC58"><span class="note__title">Note:</span> To understand the design flow and floorplanning
+            terminology in the following topics, see the Libero SoC Design Flow and Chip Planner
+            help topics in Libero.</div></div><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-4DA31527-E08C-4986-A77F-FB4EEF415161" xml:lang="en-US" lang="en-US" id="GUID-80580989-808B-48FB-89E0-F94B12543483"><h2 class="- topic/title title topictitle2" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-4DA31527-E08C-4986-A77F-FB4EEF415161" style="display:inline-block">16.2.1 Creating HDL Subsystems</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20HDL%20Subsystems">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The first step when implementing a complete system using Microchip Design Separation methodology is to achieve logical separation of various subsystems. Create logically separate HDL modules corresponding to the system.</p><ol class="- topic/ol task/steps ol steps" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-BBC6DBD0-C366-47C4-BCF2-00B32C3B126A" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-BBC6DBD0-C366-47C4-BCF2-00B32C3B126A"><div class="- topic/li task/stepsection li stepsection" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-4F3BF0A6-95EC-464F-8594-851F61692FD6" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-4F3BF0A6-95EC-464F-8594-851F61692FD6">This example defines the following
+                    subsystems:<ul class="- topic/ul ul" id="GUID-80580989-808B-48FB-89E0-F94B12543483__UL_E4L_WMJ_YNB" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__UL_E4L_WMJ_YNB">
+                    <li class="- topic/li li" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-8D088B31-72A5-488E-9071-D2AC34117D28" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-8D088B31-72A5-488E-9071-D2AC34117D28">block1.v</li>
+                    <li class="- topic/li li" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-661F42DE-0143-44A4-9569-433538293C13" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-661F42DE-0143-44A4-9569-433538293C13">block2.v</li>
+                    <li class="- topic/li li" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-BD5B3374-9986-41CB-992B-3E56D1D9F145" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-BD5B3374-9986-41CB-992B-3E56D1D9F145">block3.v</li>
+                    <li class="- topic/li li" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-44FD968F-473F-45F8-A696-6A58BC7BB5A1" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-44FD968F-473F-45F8-A696-6A58BC7BB5A1">block4.v</li>
+                    <li class="- topic/li li" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-4544EF99-5984-4ED1-9990-80C81D0D9EDB" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-4544EF99-5984-4ED1-9990-80C81D0D9EDB">pf_smip.v</li>
+                    <li class="- topic/li li" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-9514567A-5E96-4B6A-B8EB-171068EDFAC6" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-9514567A-5E96-4B6A-B8EB-171068EDFAC6">PF_CCC_C0.v</li>
+                </ul>These subsystems are independent of each other. They communicate with each
+                other using the interconnect signals. To begin with creating the HDL subsystem,
+                follow these steps:</div><li class="- topic/li task/step li step" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-A98CB6CD-F5E0-4266-9BFD-430CAFFA5AED" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-A98CB6CD-F5E0-4266-9BFD-430CAFFA5AED"><span class="- topic/ph task/cmd ph cmd">After you identify the subsystems to be implemented using design separation, import these modules into a Libero project.</span></li><li class="- topic/li task/step li step" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-FB9A0B12-C917-44EC-AE3F-63B10156F7CF" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-FB9A0B12-C917-44EC-AE3F-63B10156F7CF">
+                <span class="- topic/ph task/cmd ph cmd">Create a new Libero project for the FPGA device chosen for the design. In this
+                    example, the design using a MPF300TS, 484 FCVG device is implemented. Import the
+                    HDL files using <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File &gt; Import &gt; HDL Source</span> file
+                    menu into the Libero Project.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-2BCBF51D-2A7E-460F-A24D-D6CFD3A0BB36" data-ofbid="GUID-80580989-808B-48FB-89E0-F94B12543483__GUID-2BCBF51D-2A7E-460F-A24D-D6CFD3A0BB36">
+                <span class="- topic/ph task/cmd ph cmd">Create a Block for each subsystem of this design.</span>
+            </li></ol></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-ED0785AF-152C-4E5F-BB18-989A1E7A133A" xml:lang="en-US" lang="en-US" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D"><h2 class="- topic/title title topictitle2" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-ED0785AF-152C-4E5F-BB18-989A1E7A133A" style="display:inline-block">16.2.2 Creating Blocks</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20Blocks">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The next step is to create a Block for each subsystem of this design.</p><ol class="- topic/ol task/steps ol steps" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-64D6C94C-8698-4FF7-ABB2-657844E61D6B" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-64D6C94C-8698-4FF7-ABB2-657844E61D6B"><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-45AB7F51-B227-49D6-8A7C-D48AB57FEF18" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-45AB7F51-B227-49D6-8A7C-D48AB57FEF18"><span class="- topic/ph task/cmd ph cmd">Select a module to be the root module. For example, select <strong class="+ topic/ph hi-d/b ph b">block4</strong> as shown in the following figure.</span><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_ALS_X4J_YNB" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_ALS_X4J_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-13. <span id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-4728AF69-1F1F-42AA-AB9C-3C57CEAF6CAE" class="fig--title">Selecting a Module as the Root of a Block</span></span></figcaption><img class="- topic/image image" src="GUID-0563084C-6649-484A-A75E-B46CC7257856-low.jpg"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-15A5CAA9-5A24-4DA6-AA17-1E0576D6B9C3" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-15A5CAA9-5A24-4DA6-AA17-1E0576D6B9C3"><span class="- topic/ph task/cmd ph cmd">Use <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Project &gt; Project Settings &gt; Design Flow &gt; Enable Block Creation</span> to enable Block flow for this module, as shown in the following figure.</span><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_NZN_NQJ_YNB" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_NZN_NQJ_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-14. <span id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-88F78428-37BA-4639-8B94-E1E1DCAC6DD4" class="fig--title"><strong class="+ topic/ph hi-d/b ph b">Project Settings</strong> for Block Creation</span></span></figcaption><img class="- topic/image image" src="GUID-11200B87-A7DD-4835-8FDE-25F92D8777B4-low.jpg"/></figure></div><div class="- topic/itemgroup task/stepresult itemgroup stepresult">The <strong class="+ topic/ph hi-d/b ph b">Publish Block</strong> option is enabled in the design flow, as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-5D37BA06-8E87-41F6-8B0F-4BE7170C2750" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-5D37BA06-8E87-41F6-8B0F-4BE7170C2750"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-15. <span id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-3086AA79-D411-43CD-A522-967AE6BF77AC" class="fig--title">Publish Block Option Enabled in the Design</span></span></figcaption></figure><img class="- topic/image image" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__IMAGE_RD2_KNW_L4B" src="GUID-8CB62C11-2C10-4CC5-9F93-205A77F87DD8-low.jpg"/><figure class="- topic/fig fig fignone" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_CC2_KNW_L4B" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_CC2_KNW_L4B"><figcaption class="- topic/desc desc figdesc"></figcaption></figure></div></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-E829C09E-60D1-4313-8AB7-2D8C7AA69E5B" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-E829C09E-60D1-4313-8AB7-2D8C7AA69E5B"><span class="- topic/ph task/cmd ph cmd">If a Block requires physical I/O resources, specify explicit instantiation of I/O resources. All logic within the Microchip Design Separation methodology must be incorporated within an isolated region. Therefore, you must associate all physical I/O resources with an isolated region. You can insert I/Os through direct instantiation or through insertion of I/O buffers using SmartDesign.</span><div class="- topic/itemgroup task/info itemgroup info">This example uses the Catalog in SmartDesign to insert I/Os to top-level signals. <span class="+ topic/ph ui-d/uicontrol ph uicontrol">block4</span> subsystem has following port list:<ul class="- topic/ul ul" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__UL_LXB_FRJ_YNB" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__UL_LXB_FRJ_YNB"><li class="- topic/li li" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-B0437CC1-D1C1-456C-8A4F-CA7ACFA2F878" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-B0437CC1-D1C1-456C-8A4F-CA7ACFA2F878">CLK , RESETN , RX, dataIn: Top-level input signals</li><li class="- topic/li li" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-5237CED9-8233-4D00-9EEF-9F9660D0FCBC" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-5237CED9-8233-4D00-9EEF-9F9660D0FCBC">DataOut: Top-level output signals</li><li class="- topic/li li" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-95C928CE-A9BC-4697-A4E0-FE836DDEB103" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-95C928CE-A9BC-4697-A4E0-FE836DDEB103">TX , Y_0: IRS signals to <strong class="+ topic/ph hi-d/b ph b">block1</strong></li><li class="- topic/li li" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-15606497-1995-43D4-8719-EB0D61393FAD" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-15606497-1995-43D4-8719-EB0D61393FAD">Y: IRS signals to <strong class="+ topic/ph hi-d/b ph b">block2</strong></li></ul></div></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-1E88FCDE-EA13-4DF2-B95B-C669406FF7E2" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-1E88FCDE-EA13-4DF2-B95B-C669406FF7E2"><span class="- topic/ph task/cmd ph cmd">Because each Block should have I/Os inserted for its top-level I/O signals, insert I/O ports to the top-level signals of this subsystem.</span></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-331D935B-55A2-4B2A-B643-50715AEEF33F" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-331D935B-55A2-4B2A-B643-50715AEEF33F"><span class="- topic/ph task/cmd ph cmd">Create a SmartDesign with the name <span class="+ topic/ph ui-d/uicontrol ph uicontrol">block4</span>. Instantiate the COREAPB3, COREGPIO, and MIV_RV32IMC components into <span class="+ topic/ph ui-d/uicontrol ph uicontrol">block4</span>.</span></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-717595EF-2B3D-47FF-B1FD-82CBE91297BC" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-717595EF-2B3D-47FF-B1FD-82CBE91297BC"><span class="- topic/ph task/cmd ph cmd">For each top-level output signal, assign an OUTBUF macro. This instantiates a single I/O port for each of the signals. The output signal DataOut has a width of 32 bits.</span><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-E6E1562C-12EB-4FA2-9BA0-1703097A45D4" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-E6E1562C-12EB-4FA2-9BA0-1703097A45D4"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-16. <span id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-D19A4362-3EE7-4FEC-8852-0F3259372897" class="fig--title">Macros in the Catalog Window</span></span>. <span class="- topic/desc desc figdesc"></span></figcaption><img class="- topic/image image" src="GUID-A1766497-72F8-41CC-9C5A-7EC31E5A4A71-low.jpg"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-7780CC5C-23B8-4DAD-8FD8-0BC0A821FA65" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-7780CC5C-23B8-4DAD-8FD8-0BC0A821FA65"><span class="- topic/ph task/cmd ph cmd">After you instantiate all required I/O macros, rename them to a unique name and connect these I/O pads to respective ports of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">block4</span> instance.</span></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-FDCEB201-AD1C-447E-889D-DFEC7AF2B420" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-FDCEB201-AD1C-447E-889D-DFEC7AF2B420"><span class="- topic/ph task/cmd ph cmd">Since DataOut, TX, Y, and Y_0 are interconnected signals, right-click the ports and promote them to the top.</span><div class="- topic/itemgroup task/info itemgroup info"><p class="- topic/p p">The following figure shows the schematics of the <strong class="+ topic/ph hi-d/b ph b">block4</strong> SmartDesign component.</p><figure class="- topic/fig fig fignone" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_E2R_RRJ_YNB" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__FIG_E2R_RRJ_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-17. <span id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-F5EE595E-FA11-445C-B9C8-5B22582571F4" class="fig--title">SmartDesign Component for block4 Subsystem along with I/Os</span></span></figcaption><img class="- topic/image image" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__IMAGE_QY1_NRQ_G4B" src="GUID-26A7E4F8-E521-4E5C-B86B-E9B4E746B3D5-low.png"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-875662CD-0683-4435-8B62-2AAD09AE3014" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-875662CD-0683-4435-8B62-2AAD09AE3014"><span class="- topic/ph task/cmd ph cmd">Generate <strong class="+ topic/ph hi-d/b ph b">block4</strong>, set this module as the root module, and enable Block creation for this module as described in the previous section.</span></li><li class="- topic/li task/step li step" id="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-0D91A675-85DA-4BD4-B9FC-8F87238AFB86" data-ofbid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D__GUID-0D91A675-85DA-4BD4-B9FC-8F87238AFB86"><span class="- topic/ph task/cmd ph cmd">Publish the Block.</span></li></ol></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-AFA0FC5F-2DF4-483B-B503-DD233DA7C65D" xml:lang="en-US" lang="en-US" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2"><h2 class="- topic/title title topictitle2" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-AFA0FC5F-2DF4-483B-B503-DD233DA7C65D" style="display:inline-block">16.2.3 Publishing the Block</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Publishing%20the%20Block">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">After you create the module with I/Os inserted, publish the Block. Run Synthesis, and compile the subsystem (or its wrapper SmartDeisgnor HDL component). You can check for timing closure on the Block. Publish the Block without place-and-route information.</p><ol class="- topic/ol task/steps ol steps" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-753C075D-93CF-471A-B4D9-7C1DE66404E9" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-753C075D-93CF-471A-B4D9-7C1DE66404E9"><li class="- topic/li task/step li step" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-9D6D7A6A-2F6E-45A0-BC5B-E808D4A5711E" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-9D6D7A6A-2F6E-45A0-BC5B-E808D4A5711E"><span class="- topic/ph task/cmd ph cmd">For <span class="+ topic/ph ui-d/uicontrol ph uicontrol">block4</span>, run Synthesis.</span></li><li class="- topic/li task/step li step" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-2AC3E547-23D2-440F-ABF4-0C8703043E25" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-2AC3E547-23D2-440F-ABF4-0C8703043E25"><span class="- topic/ph task/cmd ph cmd">Disable <strong class="+ topic/ph hi-d/b ph b">Publish Placement</strong> and <strong class="+ topic/ph hi-d/b ph b">Publish Routing</strong> information in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Publish Block &gt; Configure Options</span>, as shown in the following figure. Publish the block.<span class="+ topic/ph sidscDomain-d/instanceOffsets ph instanceOffsets"><div class="- topic/p p"><div class="- topic/note note notype note_notype" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-118759F0-7FE6-4263-8B0A-9BED3F9DDF12" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-118759F0-7FE6-4263-8B0A-9BED3F9DDF12"><span class="note__title">Note:</span>  Placement and routing information is not needed until the Block is integrated with the top-level project. Enabling these options results in a longer Compile cycle.</div></div> </span></span></li><li class="- topic/li task/step li step" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-5F44C5A7-E07F-49CF-8D64-A0BDF3C95734" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-5F44C5A7-E07F-49CF-8D64-A0BDF3C95734"><span class="- topic/ph task/cmd ph cmd"></span><br/><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__FIG_YHL_WYJ_YNB" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__FIG_YHL_WYJ_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-18. <span id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-C9D09F85-7504-41E5-A6C1-4CC0D0F0828D" class="fig--title">Publishing the Block without Placement and Routing Information</span></span></figcaption><img class="- topic/image image" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__IMAGE_ZHL_WYJ_YNB" src="GUID-EBEAA086-70CB-4C2D-A658-9A658C8C1E3D-low.jpg" height="298" width="304" alt="???"/></figure></div><div class="- topic/itemgroup task/info itemgroup info">The following figure shows the state of the completed design flow after you publish the Block.<figure class="- topic/fig fig fignone" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2___REF382825542" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2___REF382825542"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-19. <span id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-9634CD6A-9F59-473A-81A8-541AA247CDB1" class="fig--title">Completed Block Flow along with Resource Usage from Compile</span></span></figcaption><img class="- topic/image image" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__IMAGE_FGF_YYJ_YNB" src="GUID-14FE315F-9B5B-4EAE-B74F-1BF886280DA9-low.jpg" height="391" width="624" alt="???"/></figure><p class="- topic/p p">Publishing a Block creates a <code class="+ topic/ph pr-d/codeph ph codeph">&lt;block_name&gt;.cxz</code> file in the <code class="+ topic/ph pr-d/codeph ph codeph">&lt;project_path&gt;/designer/&lt;block_name&gt;/export</code> directory.</p><p class="- topic/p p">For the preceding subsystem, Libero creates the <code class="+ topic/ph pr-d/codeph ph codeph">block4.cxz</code> file in the export directory under the designer directory of the Project location, as shown in the following figure.</p><figure class="- topic/fig fig fignone" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2___REF382825677" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2___REF382825677"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-20. <span id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-6DE98665-2506-4293-83C6-8DDE9C2883A2" class="fig--title">Published Block as .cxz file in Export Directory</span></span></figcaption><img class="- topic/image image" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__IMAGE_I4G_1ZJ_YNB" src="GUID-1CB34555-7C6A-4ECF-9518-D2D8F9067BFF-low.jpg" height="407" width="323" alt="???"/></figure></div></li><div class="- topic/li task/stepsection li stepsection" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-7F39B6C0-5713-4465-87F2-8EF9C09399A8" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-7F39B6C0-5713-4465-87F2-8EF9C09399A8"></div><li class="- topic/li task/step li step" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-06C0BFAE-5143-42C0-BEB3-036D29C831A4" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-06C0BFAE-5143-42C0-BEB3-036D29C831A4"><span class="- topic/ph task/cmd ph cmd">Repeat this procedure for the other four subsystems, and then publish Blocks for each of them. Use the Block names shown in the following table.</span><div class="- topic/itemgroup task/info itemgroup info"><div class="table-container"><table class="- topic/table table frame-none" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB" data-cols="2"><caption></caption><colgroup><col style="width:44%"/><col style="width:56.00000000000001%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0 valign-middle" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__1">Subsystem</th><th class="- topic/entry entry colsep-0 rowsep-0 valign-middle" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__2">Block Name</th></tr></thead><tbody class="- topic/tbody tbody valign-top"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__1"><p class="- topic/p p">block1</p></td><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__2"><p class="- topic/p p">block1</p></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__1"><p class="- topic/p p">block2</p></td><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__2"><p class="- topic/p p">block2</p></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__1"><p class="- topic/p p">block3</p></td><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__2"><p class="- topic/p p">block3</p></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__1"><p class="- topic/p p">pf_smip</p></td><td class="- topic/entry entry colsep-0 rowsep-0 valign-middle" headers="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__TABLE_FWV_GZJ_YNB__entry__2"><p class="- topic/p p">pf_smip</p></td></tr></tbody></table></div></div></li><li class="- topic/li task/step li step" id="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-1BD43358-A099-45A2-A2A4-6EC8DC75041A" data-ofbid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2__GUID-1BD43358-A099-45A2-A2A4-6EC8DC75041A"><span class="- topic/ph task/cmd ph cmd">Create a top-level design.</span></li></ol></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-949C9080-0CB2-49C1-B14D-EE89BAAE035B" xml:lang="en-US" lang="en-US" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9"><h2 class="- topic/title title topictitle2" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-949C9080-0CB2-49C1-B14D-EE89BAAE035B" style="display:inline-block">16.2.4 Creating a Top-level Design</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20a%20Top-level%20Design">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p><section class="- topic/section task/context section context" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-6F8D48E0-F778-47DD-83C2-5A990E8FC73B" data-ofbid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-6F8D48E0-F778-47DD-83C2-5A990E8FC73B">After you published the subsystem Blocks, create a new Libero project for the top-level design. Create a SmartDesign block where you instantiate all the individual blocks and connect their IRS signals. This example writes a top-level module <code class="+ topic/ph pr-d/codeph ph codeph">SD_Top.v</code> that instantiates these Blocks along with required interconnects. The following shows an example description of the top-level SD_Top module.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>//////////////////////////////////////////////////////////////////////
+// Created by SmartDesign Sun Mar  7 15:53:21 2021
+// Version: v2021.1 2021.1.0.11
+//////////////////////////////////////////////////////////////////////
+
+`timescale 1ns / 100ps
+
+// top
+module top(
+    // Inputs
+    input DataIn0,
+    input DataIn1,
+    input DataIn10,
+    input DataIn11,
+    input DataIn12,
+    input DataIn13,
+    input DataIn14,
+    input DataIn15,
+    input DataIn16,
+    input DataIn17,
+    input DataIn18,
+    input DataIn19,
+    input DataIn2,
+    input DataIn20,
+    input DataIn21,
+    input DataIn22,
+    input DataIn23,
+    input DataIn24,
+    input DataIn25,
+    input DataIn26,
+    input DataIn27,
+    input DataIn28,
+    input DataIn29,
+    input DataIn3,
+    input DataIn30,
+    input DataIn31,
+    input DataIn4,
+    input DataIn5,
+    input DataIn6,
+    input DataIn7,
+    input DataIn8,
+    input DataIn9,
+    input REF_CLK_0,
+    input RESETN,
+    input pf_smip_reset,
+    // Outputs
+    output DataOut0,
+    output DataOut1,
+    output DataOut10,
+    output DataOut11,
+    output DataOut12,
+    output DataOut13,
+    output DataOut14,
+    output DataOut15,
+    output DataOut16,
+    output DataOut17,
+    output DataOut18,
+    output DataOut19,
+    output DataOut2,
+    output DataOut20,
+    output DataOut21,
+    output DataOut22,
+    output DataOut23,
+    output DataOut24,
+    output DataOut25,
+    output DataOut26,
+    output DataOut27,
+    output DataOut28,
+    output DataOut29,
+    output DataOut3,
+    output DataOut30,
+    output DataOut31,
+    output DataOut4,
+    output DataOut5,
+    output DataOut6,
+    output DataOut7,
+    output DataOut8,
+    output DataOut9,
+    output pf_smip_out
+);
+
+//--------------------------------------------------------------------
+// Nets
+//--------------------------------------------------------------------
+wire   [31:0] block1_0_APBmslave0_PADDR;
+wire          block1_0_APBmslave0_PENABLE;
+wire   [31:0] block1_0_APBmslave0_PRDATA;
+wire          block1_0_APBmslave0_PREADY;
+wire          block1_0_APBmslave0_PSELx;
+wire          block1_0_APBmslave0_PSLVERR;
+wire   [31:0] block1_0_APBmslave0_PWDATA;
+wire          block1_0_APBmslave0_PWRITE;
+wire   [7:0]  block1_0_dataOut;
+wire          block1_0_TX;
+wire   [31:0] block3_0_dataOut;
+wire   [7:0]  block3_0_dataOut_0;
+wire          block4_0_TX;
+wire          block4_0_Y;
+wire          block4_0_Y_0;
+wire          REF_CLK_ibuf_Y;
+wire          RESETN_ibuf_Y;
+wire          PF_CCC_C0_0_OUT0_FABCLK_0;
+
+//--------------------------------------------------------------------
+// Component instances
+//--------------------------------------------------------------------
+//--------block1
+block1 block1_0(
+        // Inputs
+        .CLK       ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
+        .HRESETN   ( block4_0_Y_0 ),
+        .PREADYS0  ( block1_0_APBmslave0_PREADY ),
+        .PSLVERRS0 ( block1_0_APBmslave0_PSLVERR ),
+        .RX        ( block4_0_TX ),
+        .PRDATAS0  ( block1_0_APBmslave0_PRDATA ),
+        .dataIn    ( block3_0_dataOut_0 ),
+        // Outputs
+        .PENABLES  ( block1_0_APBmslave0_PENABLE ),
+        .PSELS0    ( block1_0_APBmslave0_PSELx ),
+        .PWRITES   ( block1_0_APBmslave0_PWRITE ),
+        .TX        ( block1_0_TX ),
+        .PADDRS    ( block1_0_APBmslave0_PADDR ),
+        .PWDATAS   ( block1_0_APBmslave0_PWDATA ),
+        .dataOut   ( block1_0_dataOut ) 
+        );
+
+//--------block2
+block2 block2_0(
+        // Inputs
+        .PCLK       ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
+        .PENABLE_in ( block1_0_APBmslave0_PENABLE ),
+        .PRESETN    ( block4_0_Y ),
+        .PSEL_in    ( block1_0_APBmslave0_PSELx ),
+        .PWRITE_in  ( block1_0_APBmslave0_PWRITE ),
+        .PADDR_in   ( block1_0_APBmslave0_PADDR ),
+        .PWDATA_in  ( block1_0_APBmslave0_PWDATA ),
+        // Outputs
+        .PREADY_in  ( block1_0_APBmslave0_PREADY ),
+        .PSVERR_in  ( block1_0_APBmslave0_PSLVERR ),
+        .PRDATA_in  ( block1_0_APBmslave0_PRDATA ) 
+        );
+
+//--------block3
+block3 block3_0(
+        // Inputs
+        .CLK       ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
+        .DataIn0   ( DataIn0 ),
+        .DataIn1   ( DataIn1 ),
+        .DataIn2   ( DataIn2 ),
+        .DataIn3   ( DataIn3 ),
+        .DataIn4   ( DataIn4 ),
+        .DataIn5   ( DataIn5 ),
+        .DataIn6   ( DataIn6 ),
+        .DataIn7   ( DataIn7 ),
+        .DataIn8   ( DataIn8 ),
+        .DataIn9   ( DataIn9 ),
+        .DataIn10  ( DataIn10 ),
+        .DataIn11  ( DataIn11 ),
+        .DataIn12  ( DataIn12 ),
+        .DataIn13  ( DataIn13 ),
+        .DataIn14  ( DataIn14 ),
+        .DataIn15  ( DataIn15 ),
+        .DataIn16  ( DataIn16 ),
+        .DataIn17  ( DataIn17 ),
+        .DataIn18  ( DataIn18 ),
+        .DataIn19  ( DataIn19 ),
+        .DataIn20  ( DataIn20 ),
+        .DataIn21  ( DataIn21 ),
+        .DataIn22  ( DataIn22 ),
+        .DataIn23  ( DataIn23 ),
+        .DataIn24  ( DataIn24 ),
+        .DataIn25  ( DataIn25 ),
+        .DataIn26  ( DataIn26 ),
+        .DataIn27  ( DataIn27 ),
+        .DataIn28  ( DataIn28 ),
+        .DataIn29  ( DataIn29 ),
+        .DataIn30  ( DataIn30 ),
+        .DataIn31  ( DataIn31 ),
+        .RESETN    ( RESETN_ibuf_Y ),
+        .dataIn_0  ( block1_0_dataOut ),
+        // Outputs
+        .dataOut   ( block3_0_dataOut ),
+        .dataOut_0 ( block3_0_dataOut_0 ) 
+        );
+
+//--------block4
+block4 block4_0(
+        // Inputs
+        .CLK       ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
+        .RESETN    ( RESETN_ibuf_Y ),
+        .RX        ( block1_0_TX ),
+        .dataIn    ( block3_0_dataOut ),
+        // Outputs
+        .DataOut0  ( DataOut0 ),
+        .DataOut1  ( DataOut1 ),
+        .DataOut2  ( DataOut2 ),
+        .DataOut3  ( DataOut3 ),
+        .DataOut4  ( DataOut4 ),
+        .DataOut5  ( DataOut5 ),
+        .DataOut6  ( DataOut6 ),
+        .DataOut7  ( DataOut7 ),
+        .DataOut8  ( DataOut8 ),
+        .DataOut9  ( DataOut9 ),
+        .DataOut10 ( DataOut10 ),
+        .DataOut11 ( DataOut11 ),
+        .DataOut12 ( DataOut12 ),
+        .DataOut13 ( DataOut13 ),
+        .DataOut14 ( DataOut14 ),
+        .DataOut15 ( DataOut15 ),
+        .DataOut16 ( DataOut16 ),
+        .DataOut17 ( DataOut17 ),
+        .DataOut18 ( DataOut18 ),
+        .DataOut19 ( DataOut19 ),
+        .DataOut20 ( DataOut20 ),
+        .DataOut21 ( DataOut21 ),
+        .DataOut22 ( DataOut22 ),
+        .DataOut23 ( DataOut23 ),
+        .DataOut24 ( DataOut24 ),
+        .DataOut25 ( DataOut25 ),
+        .DataOut26 ( DataOut26 ),
+        .DataOut27 ( DataOut27 ),
+        .DataOut28 ( DataOut28 ),
+        .DataOut29 ( DataOut29 ),
+        .DataOut30 ( DataOut30 ),
+        .DataOut31 ( DataOut31 ),
+        .TX        ( block4_0_TX ),
+        .Y         ( block4_0_Y ),
+        .Y_0       ( block4_0_Y_0 ) 
+        );
+
+//--------INBUF
+INBUF REF_CLK_ibuf(
+        // Inputs
+        .PAD ( REF_CLK_0 ),
+        // Outputs
+        .Y   ( REF_CLK_ibuf_Y ) 
+        );
+
+//--------INBUF
+INBUF RESETN_ibuf(
+        // Inputs
+        .PAD ( RESETN ),
+        // Outputs
+        .Y   ( RESETN_ibuf_Y ) 
+        );
+
+//--------PF_CCC_C0
+PF_CCC_C0 PF_CCC_C0_0(
+        // Inputs
+        .REF_CLK_0     ( REF_CLK_ibuf_Y ),
+        // Outputs
+        .OUT0_FABCLK_0 ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
+        .PLL_LOCK_0    (  ) 
+        );
+
+//--------pf_smip
+pf_smip pf_smip_0(
+       // Inputs
+        .CLK           ( PF_CCC_C0_0_OUT0_FABCLK_0 ),
+        .pf_smip_reset ( pf_smip_reset ),
+        // Outputs
+        .pf_smip_out   ( pf_smip_out ) 
+        );
+
+
+endmodule
+</code></pre></section><ol class="- topic/ol task/steps ol steps" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-F82714F2-3571-455F-B791-79EB409A1B9F" data-ofbid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-F82714F2-3571-455F-B791-79EB409A1B9F"><li class="- topic/li task/step li step" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-28A58D56-8542-40F0-8AA7-B753EC289D5A" data-ofbid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-28A58D56-8542-40F0-8AA7-B753EC289D5A"><span class="- topic/ph task/cmd ph cmd">Set the top-level module as the root module, and import all Blocks (<code class="+ topic/ph pr-d/codeph ph codeph">&lt;block_name&gt;.cxz files</code>) using <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File &gt; Import &gt; Blocks</span> in Libero. The following figure shows Design Hierarchy of the top-level SD_Top module with all Blocks instantiated.</span><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__FIG_PRN_BBK_YNB" data-ofbid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__FIG_PRN_BBK_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-21. <span id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-18840E95-18B6-421D-B541-5FE6D97F3A9F" class="fig--title">Top-level Design Hierarchy</span></span></figcaption><img class="- topic/image image" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__IMAGE_QRN_BBK_YNB" src="GUID-3685B6C4-73CF-46E5-A724-D96877012837-low.jpg" height="221" width="280" alt="???"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-4E05B260-5B94-4601-BA8D-3E874832C83B" data-ofbid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-4E05B260-5B94-4601-BA8D-3E874832C83B"><span class="- topic/ph task/cmd ph cmd">For this module, uncheck the boxes for <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enable block creation</span> and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enable synthesis</span> (in <strong class="+ topic/ph hi-d/b ph b">Project Settings</strong>) and check <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enable Design Separation Methodology</span>, as shown in the following figure.</span><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__FIG_IS5_HBK_YNB" data-ofbid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__FIG_IS5_HBK_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-22. <span id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-FD3A51C6-774E-4140-9E9F-2B9EEBC4839B" class="fig--title"><strong class="+ topic/ph hi-d/b ph b">Project Settings</strong> for the Top-level Design</span></span></figcaption><img class="- topic/image image" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__IMAGE_JS5_HBK_YNB" src="GUID-41B596D6-4DB6-4E71-99A3-178349B6A90B-low.jpg" height="385" width="624" alt="???"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-AF08A4D7-A195-4A3F-837B-6010AAAEF014" data-ofbid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9__GUID-AF08A4D7-A195-4A3F-837B-6010AAAEF014"><span class="- topic/ph task/cmd ph cmd">Assign each Block of the design to a separation region.</span></li></ol></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-2C93792E-42C9-4E36-8664-CD6250E79071" xml:lang="en-US" lang="en-US" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499"><h2 class="- topic/title title topictitle2" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-2C93792E-42C9-4E36-8664-CD6250E79071" style="display:inline-block">16.2.5 Floorplanning Design with Separation Regions</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Floorplanning%20Design%20with%20Separation%20Regions">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Each Block of the design must be assigned to a separation region. You can define separation regions in Chip Planner or use a PDC file. For more information about floorplanning a design using Chip Planner, see the Libero online help.</p><section class="- topic/section task/context section context" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-CF127404-DE0C-4D75-B50C-65E0D3DF2C2A" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-CF127404-DE0C-4D75-B50C-65E0D3DF2C2A">This example defines a separation region using Chip Planner for instance block4_0, which corresponds to the block4 Block.</section><ol class="- topic/ol task/steps ol steps" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-2B7C042F-1358-4F34-BB3E-2B4E4B201D86" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-2B7C042F-1358-4F34-BB3E-2B4E4B201D86"><li class="- topic/li task/step li step" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-055B7D67-C4F4-469C-BBC3-8B8380DABC09" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-055B7D67-C4F4-469C-BBC3-8B8380DABC09"><span class="- topic/ph task/cmd ph cmd">Open Chip Planner from <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Manage Constraints &gt; Floor Planner &gt; Edit</span> in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Design Flow</span> window, as shown in the following figure.</span><div class="- topic/itemgroup task/stepresult itemgroup stepresult"><figure class="- topic/fig fig fignone" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__FIG_DCT_QCK_YNB" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__FIG_DCT_QCK_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-23. <span id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-C1E4D296-3025-4C15-8747-6731BB017311" class="fig--title">Opening Chip Planner</span></span></figcaption><img class="- topic/image image" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__IMAGE_ECT_QCK_YNB" src="GUID-2D2333E0-9AAA-41E4-9C11-84F933441361-low.jpg" height="392" width="356"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-FCC9910A-CE51-44E8-BE56-5FB61776A37D" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-FCC9910A-CE51-44E8-BE56-5FB61776A37D"><span class="- topic/ph task/cmd ph cmd">Create a separation region for each Block according to the estimate obtained from the resource usage reports.</span><div class="- topic/itemgroup task/info itemgroup info"><a class="- topic/xref xref" href="GUID-FDAEB233-DEC2-417A-BE54-07259F52AB82.html#GUID-7B2ACA78-8E3F-4B57-AD9D-519BD8E4E59C"><span><span>16.1.7 </span><span>FloorPlanning with Design Separation Regions</span></span></a>
+                                                  shows a sample floorplan for the design. This
+                                                  example creates an exclusive routing region
+                                                  constraint for instance block4_0, as shown in the
+                                                  following figure. You can define the region type
+                                                  to be inclusive if a top-level global instance
+                                                  needs to be placed within the same region.<figure class="- topic/fig fig fignone" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499___REF382826132" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499___REF382826132"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-24. <span id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-21F9302D-C9B7-4489-8497-B1703264C560" class="fig--title">Creating an Exclusive Routing Region</span></span></figcaption>
+                                                  
+                                                  <img class="- topic/image image" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__IMAGE_SCL_2SK_YNB" src="GUID-AB2B6F57-6350-414D-A47F-96B6291406CF-low.jpg" height="256" width="624" alt="???"/>
+                                                  </figure></div></li><li class="- topic/li task/step li step" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-7129A899-4B04-4929-90C2-D5D7139016D8" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-7129A899-4B04-4929-90C2-D5D7139016D8"><span class="- topic/ph task/cmd ph cmd">Create separation regions for all blocks of the design. Then assign Block instances to the respective separation region. For this example, the floorplan resembles the following figure.</span><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__FIG_O5W_GSK_YNB" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__FIG_O5W_GSK_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-25. <span id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-ED17C54F-466A-4690-A1F8-0F33A404832A" class="fig--title">Floorplan of Design with Separation Regions Defined</span></span></figcaption><img class="- topic/image image" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__IMAGE_P5W_GSK_YNB" src="GUID-C840C81E-C70A-4825-ADC9-47F7B4A89838-low.jpg" height="251" width="624" alt="???"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-B2E538B9-E4A5-4D76-84C8-A98372E7400A" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-B2E538B9-E4A5-4D76-84C8-A98372E7400A"><span class="- topic/ph task/cmd ph cmd">After you create separation regions corresponding to the Blocks, create IRS regions for each set of connections between the Blocks. In the example, block1_0 connects to IBR1_2 and IBR1_2 connects to block2_0. Consequently, define the remaining three sets of IRS regions.</span><div class="- topic/itemgroup task/info itemgroup info">IRS region is an inclusive routing region that is created in a similar way as the separation regions. The following figure show an example of an IRS region for instances block1_0 to IBR1_2.<figure class="- topic/fig fig fignone" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499___REF382826226" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499___REF382826226"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-26. <span id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-E1D3A5DB-20BC-49C8-B3A4-941F637D2218" class="fig--title">Creating an IRS Region Between Two Blocks</span></span></figcaption><img class="- topic/image image" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__IMAGE_YD1_NSK_YNB" src="GUID-47E634F3-93A6-4275-ABAD-2FAFCA4EF75D-low.jpg" height="358" width="624" alt="???"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-183AE8F3-2F67-4C03-ABBC-F0955438BFD5" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-183AE8F3-2F67-4C03-ABBC-F0955438BFD5"><span class="- topic/ph task/cmd ph cmd">Assign valid IRS net macros to the respective IRS regions.</span><div class="- topic/itemgroup task/info itemgroup info">A complete floorplan of the example design resembles the following figure. <figure class="- topic/fig fig fignone" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499___REF382826262" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499___REF382826262"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-27. <span id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-AF247929-E02F-4E0B-AAFD-140483F632AD" class="fig--title">Complete Floorplan of Design</span></span></figcaption><img class="- topic/image image" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__IMAGE_D3T_SSK_YNB" src="GUID-0720023B-6D47-467A-8378-F5CF166170E9-low.jpg" height="179" width="623" alt="???"/></figure>The separation between each region should be at least equal to the required number of clusters to satisfy the separation criteria.</div><div class="- topic/itemgroup task/info itemgroup info">The following shows a sample PDC file that can be used to implement the preceding floorplan.
+                                                  The regions are defined with <code class="+ topic/ph pr-d/codeph ph codeph">-route true
+                                                  </code>to constrain routing. Separation regions
+                                                  are assigned by their highest level hierarchy name
+                                                  using the <code class="+ topic/ph pr-d/codeph ph codeph">assign_region</code> command.
+                                                  IRS nets are assigned with wildcards using the
+                                                  <code class="+ topic/ph pr-d/codeph ph codeph">assign_net_macros</code>
+                                                  command.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>define_region -region_name Block1region -type exclusive -color 2143338688 -route true -push_place true -x1  456 -y1 195 -x2 1631 -y2 371
+define_region -region_name Block2region -type exclusive -color 2143338688 -route true -push_place true -x1 1752 -y1 189 -x2 2435 -y2 377
+define_region -region_name Block3region -type exclusive -color 2143338688 -route true -push_place true -x1    0 -y1   0 -x2  335 -y2  41 \
+                                                                                                         -x1    0 -y1  42 -x2 1067 -y2 161 \
+                                                                                                         -x1  804 -y1   0 -x2 1067 -y2  41       
+define_region -region_name Block4region -type exclusive -color 2143338688 -route true -push_place true -x1 1200 -y1   0 -x2 2351 -y2 158
+define_region -region_name SMIPregion   -type exclusive -color 2143338688 -route true -push_place true -x1  384 -y1   0 -x2  755 -y2  11
+define_region -region_name IBR1_2 -type inclusive -color 2147442270 -route true -push_place false -x1 1584 -y1 282 -x2 2027 -y2 362
+define_region -region_name IBR1_3 -type inclusive -color 2147442270 -route true -push_place false -x1  636 -y1 102 -x2  851 -y2 239
+define_region -region_name IBR1_4 -type inclusive -color 2143338688 -route true -push_place false -x1 1356 -y1 126 -x2 1499 -y2 245
+define_region -region_name IBR2_4 -type inclusive -color 2147442270 -route true -push_place false -x1 2148 -y1 105 -x2 2327 -y2 266
+define_region -region_name IBR3_4 -type inclusive -color 2147442270 -route true -push_place false -x1  888 -y1  45 -x2 1463 -y2  98
+assign_region -region_name Block1region -inst_name block1_0
+assign_region -region_name Block2region -inst_name block2_0
+assign_region -region_name Block3region -inst_name block3_0
+assign_region -region_name Block4region -inst_name block4_0
+assign_region -region_name Block4region -inst_name RESETN_ibuf
+assign_region -region_name SMIPregion   -inst_name pf_smip_0
+assign_net_macros -region_name IBR1_2 -net_name block1_0_APBmslave0_PENABLE     -include_driver true
+assign_net_macros -region_name IBR1_2 -net_name block1_0_APBmslave0_PSELx       -include_driver true
+assign_net_macros -region_name IBR1_2 -net_name block1_0_APBmslave0_PWRITE      -include_driver true
+assign_net_macros -region_name IBR1_2 -net_name block1_0_APBmslave0_PREADY      -include_driver true
+assign_net_macros -region_name IBR1_2 -net_name {block1_0_APBmslave0_PADDR[*]}  -include_driver true
+assign_net_macros -region_name IBR1_2 -net_name {block1_0_APBmslave0_PRDATA[*]} -include_driver true
+assign_net_macros -region_name IBR1_2 -net_name {block1_0_APBmslave0_PWDATA[*]} -include_driver true
+assign_net_macros -region_name IBR1_3 -net_name {block1_0_dataOut[*]}   -include_driver true
+assign_net_macros -region_name IBR1_3 -net_name {block3_0_dataOut_0[*]} -include_driver true
+assign_net_macros -region_name IBR1_4 -net_name block4_0_TX  -include_driver true
+assign_net_macros -region_name IBR1_4 -net_name block4_0_Y_0 -include_driver true
+assign_net_macros -region_name IBR1_4 -net_name block1_0_TX  -include_driver true
+assign_net_macros -region_name IBR2_4 -net_name block4_0_Y -include_driver true
+assign_net_macros -region_name IBR3_4 -net_name {block3_0_dataOut[*]} -include_driver true</code></pre></div></li><li class="- topic/li task/step li step" id="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-8C1CC64C-7EBD-4211-A607-9C9F69E6F9B3" data-ofbid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499__GUID-8C1CC64C-7EBD-4211-A607-9C9F69E6F9B3"><span class="- topic/ph task/cmd ph cmd">Complete place-and-route.</span></li></ol></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881__GUID-6DCED2D5-A21D-4CA3-828B-B1E89E723C3C" xml:lang="en-US" lang="en-US" id="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881"><h2 class="- topic/title title topictitle2" id="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881__GUID-6DCED2D5-A21D-4CA3-828B-B1E89E723C3C" style="display:inline-block">16.2.6 Complete Place-and-Route</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Complete%20Place-and-Route">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p><section class="- topic/section task/context section context" id="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881__GUID-E4B8E9C7-21C6-471C-9E79-B21FFF9234A8" data-ofbid="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881__GUID-E4B8E9C7-21C6-471C-9E79-B21FFF9234A8">After you complete the floorplan, edit the timing constraints and run place-and-route until you achieve timing closure on the design.</section></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-429B78AC-AE6B-4FC1-95A7-4B34C5E967FC" xml:lang="en-US" lang="en-US" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53"><h2 class="- topic/title title topictitle2" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-429B78AC-AE6B-4FC1-95A7-4B34C5E967FC" style="display:inline-block">16.2.7 Configure Security Settings and Generate the Programming File</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Configure%20Security%20Settings%20and%20Generate%20the%20Programming%20File">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">After you complete place-and-route, extract the design information to execute MSVT.</p><ol class="- topic/ol task/steps ol steps" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-0B00B481-519B-484F-AD50-CADFFE805598" data-ofbid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-0B00B481-519B-484F-AD50-CADFFE805598"><li class="- topic/li task/step li step" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-16156425-9F72-4A9B-9558-D7E0713AAECB" data-ofbid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-16156425-9F72-4A9B-9558-D7E0713AAECB"><span class="- topic/ph task/cmd ph cmd">Navigate to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configure Security &gt; Configure Options &gt; Debug Policy</span> and configure the security and programming options per system requirements, as shown in the following figure.</span><div class="- topic/itemgroup task/info itemgroup info"><figure class="- topic/fig fig fignone" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__FIG_SXV_NQK_YNB" data-ofbid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__FIG_SXV_NQK_YNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-28. <span id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-4C0ABD4A-FB2E-48F8-8DEE-218B1CC8A18E" class="fig--title">Security Settings Before Programming</span></span></figcaption><img class="- topic/image image" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__IMAGE_TXV_NQK_YNB" src="GUID-493D3ED9-BA17-485A-AD0D-A7ADAA153D8A-low.jpg" height="340" width="624" alt="???"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-845C608F-28EC-4B85-B704-C42766897224" data-ofbid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-845C608F-28EC-4B85-B704-C42766897224"><span class="- topic/ph task/cmd ph cmd">Export the programming file from <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Program Design &gt; Export FlashPro Express Job</span>.</span><div class="- topic/itemgroup task/stepresult itemgroup stepresult">A programming file and files required for the MSVT are generated. Libero exports these files into the <code class="+ topic/ph pr-d/codeph ph codeph">&lt;project_path&gt;/designer/SD_Top/SD_Top.msvt.dtf</code> directory and creates a parameter file in the <code class="+ topic/ph pr-d/codeph ph codeph">&lt;project_path&gt;/designer/SD_Top/msvt.param</code> file, as shown in the following figure. The <code class="+ topic/ph pr-d/codeph ph codeph">msvt.param</code> file contains a list of parameters that you can adjust before executing MSVT.<figure class="- topic/fig fig fignone" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53___REF382826363" data-ofbid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53___REF382826363"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 16-29. <span id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-437CA14D-8237-4A21-B3CB-0ED9F4CFE319" class="fig--title">Generated MSVT Files</span></span></figcaption><img class="- topic/image image" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__IMAGE_HD5_WQK_YNB" src="GUID-BA5A59D8-56C1-473A-98AB-71961A497CE5-low.jpg" height="309" width="283" alt="???"/></figure></div></li><li class="- topic/li task/step li step" id="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-23CAF3D3-6790-498B-85CB-A79DF8AED921" data-ofbid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53__GUID-23CAF3D3-6790-498B-85CB-A79DF8AED921"><span class="- topic/ph task/cmd ph cmd">Modify the REQUIRED_SEPARATION parameter according to your system requirements before executing MSVT.</span></li></ol></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5__GUID-0262A5D9-8395-4CDA-BFA3-6F44168C78D6" xml:lang="en-US" lang="en-US" id="GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5"><h2 class="- topic/title title topictitle2" id="GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5__GUID-0262A5D9-8395-4CDA-BFA3-6F44168C78D6" style="display:inline-block">16.2.8 Execute MSVT</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Execute%20MSVT">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">You can now run the MSVT to verify that the design adheres to the required separation criteria.</p><p class="- topic/p p">MSVT is invoked from <code class="+ topic/ph pr-d/codeph ph codeph">&lt;Libero_Path&gt;/bin64/msvt_check_pf</code>. It is executed from the command line.</p><p class="- topic/p p">To verify the design using MSVT, run the following command:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>&lt;Libero_path&gt;/bin64/msvt_check_pf –p &lt;project_path&gt;/designer/SD_Top/msvt.param –o msvt_check_pf.log</code></pre><p class="- topic/p p">This command prints an exhaustive report to <code class="+ topic/ph pr-d/codeph ph codeph">msvt_check_pf.log</code> file given with the <code class="+ topic/ph pr-d/codeph ph codeph">–o</code> argument or to <em class="+ topic/ph hi-d/i ph i">stdout</em> if <code class="+ topic/ph pr-d/codeph ph codeph">–o</code> is omitted. The argument <code class="+ topic/ph pr-d/codeph ph codeph">–p</code> is required, along with the path to the <code class="+ topic/ph pr-d/codeph ph codeph">msvt.param</code> file generated from Libero.</p><p class="- topic/p p">When this command completes successfully, the message <code class="+ topic/ph pr-d/codeph ph codeph">MSVT Check failed</code> appears
+         if the design failed to meet one or more separation criteria and the message <code class="+ topic/ph pr-d/codeph ph codeph">MSVT
+            Check succeeded</code> appears if the design met all separation criteria.</p><p class="- topic/p p">Because Microchip Design Separation methodology guidlines are followed in the example, the following output shows the conclusion of MSVT output indicating that the design was verified for the given separation criteria.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>MSVT Check
+Design: SD_Top.msvt                     Started: Fri Jan  8 16:50:41 2021
+
+
+Checking IRS connectivity against parameter file
+===================================================
+
+The following instances do not belong to any routing region:
+====================================================================
+   PF_CCC_C0_0/PF_CCC_C0_0/pll_inst_0
+   REF_CLK_0_ibuf/U_IOIN
+
+
+The following IRS nets are not constrained by any routing region:
+====================================================================
+   block4_0_TX
+   block1_0_TX
+
+Analyzing  floorplan ...
+========================
+
+   block4_0 and block2_0 : Minimal floorplan separation = 9 clusters.
+      block4_0 at cluster (144,62)
+      block2_0 at cluster (144,52)
+   block4_0 and block2_0 : Minimal placement separation = 21 clusters.
+      (2148,156) containing cell block4_0/BUFD_1/U0
+      (2148,225) containing cell block2_0/BUFD_0/U0
+
+   block4_0 and block3_0 : Minimal floorplan separation = 11 clusters.
+      block4_0 at cluster (99,27)
+      block3_0 at cluster (87,27)
+   block4_0 and block3_0 : Minimal placement separation = 11 clusters.
+      (1211,82) containing cell block4_0/CoreGPIO_C4_0/CoreGPIO_C4_0/inData_s2[6]
+      (1057,81) containing cell block3_0/APB_dp_fp_1/U0/i_post_norm_mul/s_shl2_RNIS34841[4]
+
+   block4_0 and block1_0 : Minimal floorplan separation = 11 clusters.
+      block4_0 at cluster (99,64)
+      block1_0 at cluster (99,52)
+   block4_0 and block1_0 : Minimal placement separation = 13 clusters.
+      (1368,156) containing cell block4_0/BUFD_0/U0
+      (1368,201) containing cell block1_0/BUFD_0/U0
+
+   block4_0 and pf_smip_0 : Minimal floorplan separation = 37 clusters.
+      block4_0 at cluster (99,0)
+      pf_smip_0 at cluster (61,0)
+   block4_0 and pf_smip_0 : Minimal placement separation = 38 clusters.
+      (1219,2) containing cell block4_0/block4_IO_0/OUTBUF_31/U_IOTRI
+      (746,2) containing cell pf_smip_0/PF_IO_C1_0/PF_IO_C1_0/I_IOD_0
+
+   block4_0 and 'others' : Minimal floorplan separation =  overlapping.
+      block4_0 at cluster (99,0)
+      'others' at cluster (99,0)
+   block4_0 and 'others' : Minimal placement separation = 0 clusters.
+      (1219,2) containing cell block4_0/block4_IO_0/OUTBUF_31/U_IOTRI
+      (1202,2) containing cell RESETN_ibuf/U_IOIN
+
+   block2_0 and block3_0 : Minimal floorplan separation =  diagonal.
+   block2_0 and block3_0 : Minimal placement separation =  diagonal.
+
+   block2_0 and block1_0 : Minimal floorplan separation = 9 clusters.
+      block2_0 at cluster (144,93)
+      block1_0 at cluster (134,93)
+   block2_0 and block1_0 : Minimal placement separation = 9 clusters.
+      (1743,282) containing cell block2_0/BUFD_53/U0
+      (1620,282) containing cell block1_0/BUFD_87/U0
+
+   block2_0 and pf_smip_0 : Minimal floorplan separation =  diagonal.
+   block2_0 and pf_smip_0 : Minimal placement separation =  diagonal.
+
+   block2_0 and 'others' : Minimal floorplan separation = 9 clusters.
+      block2_0 at cluster (144,62)
+      'others' at cluster (144,52)
+   block2_0 and 'others' : Minimal placement separation =  diagonal.
+
+   block3_0 and block1_0 : Minimal floorplan separation = 10 clusters.
+      block3_0 at cluster (38,64)
+      block1_0 at cluster (38,53)
+   block3_0 and block1_0 : Minimal placement separation = 22 clusters.
+      (842,124) containing cell block3_0/CoreGPIO_C2_0/CoreGPIO_C2_0/dataOut[7]
+      (842,196) containing cell block1_0/CoreGPIO_C0_0/CoreGPIO_C0_0/inData_s1[7]
+
+   block3_0 and pf_smip_0 : Minimal floorplan separation = 4 clusters.
+      block3_0 at cluster (66,0)
+      pf_smip_0 at cluster (61,0)
+   block3_0 and pf_smip_0 : Minimal placement separation = 4 clusters.
+      (811,2) containing cell block3_0/Block3_IO_0/INBUF_17/U_IOIN
+      (746,2) containing cell pf_smip_0/PF_IO_C1_0/PF_IO_C1_0/I_IOD_0
+
+   block3_0 and 'others' : Minimal floorplan separation = 11 clusters.
+      block3_0 at cluster (99,0)
+      'others' at cluster (87,0)
+   block3_0 and 'others' : Minimal placement separation = 15 clusters.
+      (1010,2) containing cell block3_0/Block3_IO_0/INBUF_19/U_IOIN
+      (1202,2) containing cell RESETN_ibuf/U_IOIN
+
+   block1_0 and pf_smip_0 : Minimal floorplan separation = 60 clusters.
+      block1_0 at cluster (38,64)
+      pf_smip_0 at cluster (38,3)
+   block1_0 and pf_smip_0 : Minimal placement separation =  diagonal.
+
+   block1_0 and 'others' : Minimal floorplan separation = 11 clusters.
+      block1_0 at cluster (99,64)
+      'others' at cluster (99,52)
+   block1_0 and 'others' : Minimal placement separation = 66 clusters.
+      (1204,204) containing cell block1_0/MIV_RV32IMC_C0_0/MIV_RV32IMC_C0_0/u_opsrv_0/u_core_0/u_lsu_0/un1_lsu_expipe_req_op_2
+      (1202,2) containing cell RESETN_ibuf/U_IOIN
+
+   pf_smip_0 and 'others' : Minimal floorplan separation = 37 clusters.
+      pf_smip_0 at cluster (61,0)
+      'others' at cluster (99,0)
+   pf_smip_0 and 'others' : Minimal placement separation = 37 clusters.
+      (746,2) containing cell pf_smip_0/PF_IO_C1_0/PF_IO_C1_0/I_IOD_0
+      (1202,2) containing cell RESETN_ibuf/U_IOIN
+
+
+Checking internal nets for block block4_0 ...
+====================================================================
+
+Checking IRS nets for block block4_0 ...
+====================================================================
+
+Propagating IRS nets outgoing from block4_0 to block2_0
+====================================================================
+
+Propagating IRS nets outgoing from block4_0 to block1_0
+====================================================================
+
+Checking internal nets for block block2_0 ...
+====================================================================
+
+Checking IRS nets for block block2_0 ...
+====================================================================
+
+Propagating IRS nets outgoing from block2_0 to block1_0
+====================================================================
+
+Checking internal nets for block block3_0 ...
+====================================================================
+
+Checking IRS nets for block block3_0 ...
+====================================================================
+
+Propagating IRS nets outgoing from block3_0 to block4_0
+====================================================================
+
+Propagating IRS nets outgoing from block3_0 to block1_0
+====================================================================
+
+Checking internal nets for block block1_0 ...
+====================================================================
+
+Checking IRS nets for block block1_0 ...
+====================================================================
+
+Propagating IRS nets outgoing from block1_0 to block4_0
+====================================================================
+
+Propagating IRS nets outgoing from block1_0 to block2_0
+====================================================================
+
+Propagating IRS nets outgoing from block1_0 to block3_0
+====================================================================
+
+Checking internal nets for block pf_smip_0 ...
+====================================================================
+
+Checking IRS nets for block pf_smip_0 ...
+====================================================================
+
+
+Design has met 2 switches separation requirement
+
+
+MSVT Check succeeded.
+Number of errors: 0
+</code></pre></div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-80580989-808B-48FB-89E0-F94B12543483" data-tocid="GUID-80580989-808B-48FB-89E0-F94B12543483">16.2.1 Creating HDL Subsystems</a></li><li class="topic-item"><a href="#GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D" data-tocid="GUID-A7EB5E2A-A375-4B88-9B5B-B211BF26395D">16.2.2 Creating Blocks</a></li><li class="topic-item"><a href="#GUID-7E272736-7727-4134-9899-5DC18FAF7AE2" data-tocid="GUID-7E272736-7727-4134-9899-5DC18FAF7AE2">16.2.3 Publishing the Block</a></li><li class="topic-item"><a href="#GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9" data-tocid="GUID-FCDE16A2-1AE6-4787-97B3-20924F4E57B9">16.2.4 Creating a Top-level Design</a></li><li class="topic-item"><a href="#GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499" data-tocid="GUID-BFB045A9-F414-4E2A-B970-FF5B9803C499">16.2.5 Floorplanning Design with Separation Regions</a></li><li class="topic-item"><a href="#GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881" data-tocid="GUID-5DEFF714-0EFB-4B84-8D2A-0D3AB5410881">16.2.6 Complete Place-and-Route</a></li><li class="topic-item"><a href="#GUID-D18DD138-F5B9-43D3-B130-41E333B55D53" data-tocid="GUID-D18DD138-F5B9-43D3-B130-41E333B55D53">16.2.7 Configure Security Settings and Generate the Programming File</a></li><li class="topic-item"><a href="#GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5" data-tocid="GUID-83CDEEB1-9C23-44B7-A74F-C7F513474DD5">16.2.8 Execute MSVT</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

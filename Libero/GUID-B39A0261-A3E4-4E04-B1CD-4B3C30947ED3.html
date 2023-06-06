@@ -1,0 +1,1216 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="This Floorplanning (FDC) commands are used to create and edit user regions and to assign/unassign logic to these regions. PDC command; constrains a set of macros to a specified region. assign_region ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>8.2.5 Floorplanning FDC Commands</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3-d10733e7176"/><meta name="wh-source-relpath" content="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.xml"/><meta name="wh-out-relpath" content="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+PDC Commands for SmartFusion2 and IGLOO2</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for SmartFusion2 and IGLOO2</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3"><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5</ph>
+Floorplanning FDC Commands</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6745" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6745-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6745-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+PDC Commands for PolarFire</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6981" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6981-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" id="tocId-d10733e6981-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+PDC Commands for SmartFusion2 and IGLOO2</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for SmartFusion2 and IGLOO2</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E-d10733e6986" class="topicref introduction" data-id="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E-d10733e6986-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" id="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E-d10733e6986-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469-d10733e7003" class="topicref" data-id="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BCD56451-DA80-4F00-8388-DB8FA617E469-d10733e7003-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469.html#GUID-BCD56451-DA80-4F00-8388-DB8FA617E469" id="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469-d10733e7003-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.1</ph>
+PDC Syntax Conventions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719-d10733e7044" class="topicref" data-id="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719-d10733e7044-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719.html#GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719" id="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719-d10733e7044-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.2</ph>
+PDC Naming Conventions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C-d10733e7077" class="topicref" data-id="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C-d10733e7077-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C.html#GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C" id="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C-d10733e7077-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.3</ph>
+I/O PDC Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5-d10733e7142" class="topicref" data-id="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5-d10733e7142-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.html#GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5" id="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5-d10733e7142-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.4</ph>
+Netlist Attributes NDC Commands</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3-d10733e7176" class="topicref" data-id="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3-d10733e7176-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3" id="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3-d10733e7176-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5</ph>
+Floorplanning FDC Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7-d10733e7184" class="topicref" data-id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7-d10733e7184-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.1</ph>
+assign_region</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B-d10733e7192" class="topicref" data-id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B-d10733e7192-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.2</ph>
+assign_net_macros</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A-d10733e7200" class="topicref" data-id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-A8084857-B546-43DD-A880-B1B4D74C106A" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A-d10733e7200-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.3</ph>
+define_region</a></div></div></li><li role="treeitem"><div data-tocid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F-d10733e7208" class="topicref" data-id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F-d10733e7208-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.4</ph>
+undefine_region</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53-d10733e7216" class="topicref" data-id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53-d10733e7216-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.5</ph>
+move_region</a></div></div></li><li role="treeitem"><div data-tocid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D-d10733e7224" class="topicref" data-id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D-d10733e7224-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.6</ph>
+unassign_net_macros</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97-d10733e7232" class="topicref" data-id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97-d10733e7232-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.7</ph>
+unassign_macro_from_region</a></div></div></li><li role="treeitem"><div data-tocid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E-d10733e7240" class="topicref" data-id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E-d10733e7240-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.8</ph>
+set_location</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0-d10733e7248" class="topicref" data-id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0-d10733e7248-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.9</ph>
+move_block</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13-d10733e7256" class="topicref" data-id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13-d10733e7256-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.10</ph>
+set_port_block</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD-d10733e7265" class="topicref" data-id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD-d10733e7265-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5.11</ph>
+set_block_options</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e7273" class="topicref" data-id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e7273-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762_2.html#GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e7273-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.6</ph>
+Post Layout Edit PDC Commands</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3__GUID-B5E9DA00-EBBD-4F47-9400-34AEC7E17BF4"><article class="nested0" aria-labelledby="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3__GUID-B5E9DA00-EBBD-4F47-9400-34AEC7E17BF4" id="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3"><h1 class="- topic/title title topictitle1" id="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3__GUID-B5E9DA00-EBBD-4F47-9400-34AEC7E17BF4" style="display:inline-block">8.2.5 Floorplanning FDC Commands</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Floorplanning%20FDC%20Commands">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This Floorplanning (FDC) commands are used to create and edit user regions and to assign/unassign
+                                    logic to these regions.</p></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-FFE31C28-3CDF-4C21-91BD-C3277F8321BC" xml:lang="en-US" lang="en-US" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7"><h2 class="- topic/title title topictitle2" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-FFE31C28-3CDF-4C21-91BD-C3277F8321BC" style="display:inline-block">8.2.5.1 assign_region</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=assign_region">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">PDC command; constrains a set of macros to a specified region.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>assign_region region_name [ macro_name]+</code></pre>
+        </div>
+        <section class="- topic/section section" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_GD5_JJG_GRB" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_GD5_JJG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">assign_region</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-ED53170B-F2D7-4E2A-B72F-02E89F01BB29" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-ED53170B-F2D7-4E2A-B72F-02E89F01BB29">region_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the region to which the macros are assigned. The macros are
+                            constrained to this region. Because the define_region command returns a
+                            region object, you can write a simpler command such as
+                                <code class="+ topic/ph pr-d/codeph ph codeph">assign_region [define_region]+ [macro_name]+</code>.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-21D06489-11F7-4BD3-8764-A4DE7352AA00" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-21D06489-11F7-4BD3-8764-A4DE7352AA00">macro_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the macro(s) to assign to the region. You must specify at least
+                            one macro name. You can use the following wild card characters in macro
+                            names.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-84. </span></span><span class="table--title" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-83ADE298-0442-4241-9426-1FF2DE24BF3E">Wild Card
+                                Characters in Macro Names</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__1">Wild Card</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__2">What it Does</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__1">\</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__2">Interprets the next character as a non-special
+                                            character</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__1">?</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__2">Matches any single character</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__1">*</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-06351A80-A49E-4C29-BA3C-1A60AD7EEA3D__entry__2">Matches any string</td>
+                                    </tr>
+                                </tbody></table></div>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_MQ5_P21_Q4B" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_MQ5_P21_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__UL_M1V_Q21_Q4B" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__UL_M1V_Q21_Q4B">
+                <li class="- topic/li li" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-C272AF50-0CBD-480C-81B0-0677164EEF9E" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-C272AF50-0CBD-480C-81B0-0677164EEF9E">The region must be created before
+                    you can assign macros to it. If the region creation PDC command and the macro
+                    assignment command are in different PDC files, the order of the PDC files is
+                    important.</li>
+                <li class="- topic/li li" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-9BC4C560-A4E9-44A5-81B5-15E3F0C0E162" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-9BC4C560-A4E9-44A5-81B5-15E3F0C0E162">You can assign only hard macros
+                    or their instances to a region. You cannot assign a group name. A hard macro is
+                    a logic cell consisting of one or more silicon modules with locked relative
+                    placement.</li>
+                <li class="- topic/li li" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-7BDB5CE5-3B96-4F62-9D21-2E9A42989FFA" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-7BDB5CE5-3B96-4F62-9D21-2E9A42989FFA">You can assign a collection of
+                    macros by providing a prefix to their names.</li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_NZY_S21_Q4B" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_NZY_S21_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <p class="- topic/p p">In the following example, two macros are assigned to a region:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>assign_region cluster_region1 des01/G_2722_0_and2 des01/data1_53/U0</code></pre>
+            <p class="- topic/p p">In the following example, all macros whose names have the prefix des01/Counter_1 (or
+                all macros whose names match the expression des01/Counter_1/*) are assigned to a
+                region:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>assign_region User_region2 des01/Counter_1/*</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_Y5Z_CF1_Q4B" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_Y5Z_CF1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__UL_DRD_J5L_TNB" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__UL_DRD_J5L_TNB">
+                <li class="- topic/li li" id="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-9AECCC3C-9495-455A-80E6-FAC5D4B87A11" data-ofbid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__GUID-9AECCC3C-9495-455A-80E6-FAC5D4B87A11"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97">"unassign_macro_from_region"</a></li>
+            </ul>
+        </section>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-19394860-2F40-43BB-AA15-AE27351FAF86" xml:lang="en-US" lang="en-US" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B"><h2 class="- topic/title title topictitle2" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-19394860-2F40-43BB-AA15-AE27351FAF86" style="display:inline-block">8.2.5.2 assign_net_macros</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=assign_net_macros">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This PDC command assigns to a user-defined region all the macros that are connected to a net.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>assign_net_macros region_name [net1]+ [-include_driver value]</code></pre>
+        </div>
+        <section class="- topic/section section" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_JDN_XJG_GRB" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_JDN_XJG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">assign_net_macros</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-F348984B-E602-4D2D-B9BA-7459747BC1BC" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-F348984B-E602-4D2D-B9BA-7459747BC1BC">region_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the region to which you are assigning macros. The
+                            region must exist before you use this command. See define_region
+                            (rectangular) or define_region (rectilinear). Because the define_region
+                            command returns a region object, you can write a simple command such as
+                                <code class="+ topic/ph pr-d/codeph ph codeph">assign_net_macros [define_region]+ [net]+</code>.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-DC456213-FBE9-42F3-897F-F3455477090F" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-DC456213-FBE9-42F3-897F-F3455477090F">net1</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">You must specify at least one net name. Net names are AFL-level
+                            (flattened netlist) names. These names match your netlist names most of
+                            the time. When they do not, you must export AFL and use the AFL names.
+                            Net names are case insensitive. Hierarchical net names from ADL are not
+                            allowed. You can use the following wild card characters in net
+                            names:net1.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-85. </span></span><span class="table--title" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-A84C2A65-ACC2-4FC1-8F34-9C3375B4F8D2">net1</span></caption><colgroup><col style="width:46.08294930875576%"/><col style="width:53.91705069124424%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__1">Wild Card</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__2">What it Does</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__1">\</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__2">Interprets the next character as a non-special
+                                            character</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__1">?</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__2">Matches any single character</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__1">*</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-4A78E44E-FF39-4CE2-B9D3-BB315882EE6C__entry__2">Matches any string</td>
+                                    </tr>
+                                </tbody></table></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-68401ADD-DD57-4BBC-A7CB-5C2F3F4F8B1E" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-68401ADD-DD57-4BBC-A7CB-5C2F3F4F8B1E">-include_driver</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies whether to add the driver of the net(s) to the region. You can
+                            enter one of the following values.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-86. </span></span><span class="table--title" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-B76F4CCD-0498-4E94-910E-23B82E6AB3B7">-include_driver
+                                Value</span></caption><colgroup><col style="width:16%"/><col style="width:84%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838__entry__1">Value</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838__entry__2">Descriptions</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838__entry__1">Yes</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838__entry__2">Include the driver in the list of macros assigned to
+                                            the region (default).</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838__entry__1">No</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-D8D843BD-0653-4E4B-A329-31106D8A9838__entry__2">Do not assign the driver to the region.</td>
+                                    </tr>
+                                </tbody></table></div>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_FDB_GG1_Q4B" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_FDB_GG1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__UL_PTB_3G1_Q4B" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__UL_PTB_3G1_Q4B">
+                <li class="- topic/li li" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-AC20F403-F1EF-4329-BC71-93EBAD537A56" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-AC20F403-F1EF-4329-BC71-93EBAD537A56">Placed macros (not connected to
+                    the net) that are inside the area occupied by the net region are automatically
+                    unplaced.</li>
+                <li class="- topic/li li" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-ABB6BAB0-40AE-41AA-9C4D-CF9762E89701" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-ABB6BAB0-40AE-41AA-9C4D-CF9762E89701">Net region constraints are
+                    internally converted into constraints on macros. PDC export results as a series
+                    of assign_region &lt;region_name&gt; macro1 statements for all the connected
+                    macros.</li>
+                <li class="- topic/li li" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-2670EFA2-8240-45EC-A66B-BD74DC01875B" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-2670EFA2-8240-45EC-A66B-BD74DC01875B">If the region does not have
+                    enough space for all of the macros, or if the region constraint is impossible,
+                    the constraint is rejected and a warning message appears in the Log window.</li>
+                <li class="- topic/li li" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-DC47B8BA-1F55-41A7-AF39-99643CDE2571" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-DC47B8BA-1F55-41A7-AF39-99643CDE2571">For overlapping regions, the intersection must be at least as big as the
+                    overlapping macro count.</li>
+                <li class="- topic/li li" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-B8FCA6D5-F31D-4006-B664-2A27B27C9E1D" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-B8FCA6D5-F31D-4006-B664-2A27B27C9E1D">If a macro on the net cannot legally be placed in the region, it is not placed
+                    and a warning message appears in the Log window.</li>
+                <li class="- topic/li li" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-BCB724D2-667E-4332-AF9E-8D0A527072B5" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-BCB724D2-667E-4332-AF9E-8D0A527072B5">Net region constraints may result in a single macro being assigned to multiple
+                    regions. These net region constraints result in constraining the macro to the
+                    intersection of all the regions affected by the constraint.</li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_YMF_RG1_Q4B" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_YMF_RG1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>assign_net_macros cluster_region1 keyin1intZ0Z_62 -include_driver no</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_F3G_TG1_Q4B" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_F3G_TG1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__UL_QFR_CVL_TNB" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__UL_QFR_CVL_TNB">
+                <li class="- topic/li li" id="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-354AE067-C2C7-4AFD-A475-55BA995AF7FA" data-ofbid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__GUID-354AE067-C2C7-4AFD-A475-55BA995AF7FA"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D">"unassign_net_macros"</a></li>
+            </ul>
+        </section></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-FB2166CB-9993-4CF8-A3CF-CC16ECCC4644" xml:lang="en-US" lang="en-US" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A"><h2 class="- topic/title title topictitle2" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-FB2166CB-9993-4CF8-A3CF-CC16ECCC4644" style="display:inline-block">8.2.5.3 define_region</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=define_region">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This PDC command defines either a rectangular region or a rectilinear region.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>define_region [-name region_name ] -type region_type [x1 y1 x2 y2]+ [-color value]\ [-route value] [-push_place value]</code></pre>
+        </div>
+        <section class="- topic/section section" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_WYF_HKG_GRB" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_WYF_HKG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">define_region</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-67399DBC-C9D3-4B4F-8321-5246A7CE49C5" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-67399DBC-C9D3-4B4F-8321-5246A7CE49C5">-name region_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the region name. The name must be unique. Do not use reserved
+                            names such as "bank0" and "bank&lt;N&gt;" for region names. If the
+                            region cannot be created, the name is empty. A default name is generated
+                            if a name is not specified in this argument.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-97B82F31-7B8B-4237-BA28-92CB0FDAF98F" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-97B82F31-7B8B-4237-BA28-92CB0FDAF98F">-type region_type</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the region type. The default is inclusive. The following table
+                            shows the acceptable values for this argument.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-87. </span></span><span class="table--title" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-6925ACFE-C3CE-48C6-AFAD-695DB3993882">-type
+                                region_type</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__1">Region Type</th>
+                                        <th class="- topic/entry entry align-center colsep-0 rowsep-1" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__2">Description</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__1">Empty</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__2">Empty regions cannot contain macros.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__1">Exclusive</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__2">Only contains macros assigned to the region.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__1">Inclusive</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-EC5B722D-FA2B-4FAB-9E4B-AE471F27DF19__entry__2">Can contain macros both assigned and unassigned to
+                                            the region.</td>
+                                    </tr>
+                                </tbody></table></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-95DD144A-EE7C-47F2-B617-B1C843531269" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-95DD144A-EE7C-47F2-B617-B1C843531269">x1, y1, x2, and y2</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the series of coordinate pairs that constitute the region.
+                            These rectangles may or may not overlap. They are given as x1, y1, x2,
+                            and y2 where x1, y1 is the lower left and x2, y2 is the upper right
+                            corner in row/column coordinates. You must specify at least one set of
+                            coordinates.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-04480937-8B94-45D5-98D7-4A2865FE9FF4" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-04480937-8B94-45D5-98D7-4A2865FE9FF4">-color Value</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the color of the region.</p>
+                        <div class="- topic/note note notype note_notype" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-B07A4696-9A19-4FE6-904D-CC7E7C12DD85" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-B07A4696-9A19-4FE6-904D-CC7E7C12DD85"><span class="note__title">Note:</span> This option is
+                            deprecated. </div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-53479161-4902-4DE8-9592-38F189B6B799" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-53479161-4902-4DE8-9592-38F189B6B799">-route Value</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies whether to direct the routing of all nets internal to a region
+                            to be constrained within that region. A net is internal to a region if
+                            its source and destination pins are assigned to the region. You can
+                            enter one of the following values.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-88. </span></span><span class="table--title" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-D231F6F0-4D17-46C5-B788-7694F9416A64">route
+                                Value</span></caption><colgroup><col style="width:28.000000000000004%"/><col style="width:72%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539__entry__1">Constrain Routing Value</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539__entry__2">Description</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539__entry__1">Yes</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539__entry__2">Constrain the routing of nets within the region as
+                                            well as the placement.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539__entry__1">No</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-123F0490-5391-49E8-939A-793D3A371539__entry__2">Do not constrain the routing of nets within the
+                                            region. Only constrain the placement. This is the
+                                            default value.</td>
+                                    </tr>
+                                </tbody></table></div>
+                        <div class="- topic/note note notype note_notype" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-7974C959-E498-4609-9380-69A6321A0D90" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-7974C959-E498-4609-9380-69A6321A0D90"><span class="note__title">Note:</span> Local clocks and global
+                            clocks are excluded from the -route option. Also, interface nets are
+                            excluded from the -route option because they cross region
+                            boundaries.</div>
+                        <p class="- topic/p p">An empty routing region is an empty placement region. If -route is "yes",
+                            then no routing is allowed inside the empty region. However, local
+                            clocks and globals can cross empty regions. An exclusive routing region
+                            is an exclusive placement region (rectilinear area with assigned macros)
+                            along with the following additional constraints:</p>
+                        <ul class="- topic/ul ul" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__UL_URN_H31_Q4B" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__UL_URN_H31_Q4B">
+                            <li class="- topic/li li" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-B3BDACB3-C3DB-4FCE-814C-53840BE8F5EE" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-B3BDACB3-C3DB-4FCE-814C-53840BE8F5EE">For all nets internal
+                                to the region (the source and all destinations belong to the
+                                region), routing must be inside the region (that is, such nets
+                                cannot be assigned any routing resource which is outside the region
+                                or crosses the region boundaries).</li>
+                            <li class="- topic/li li" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-486FAC00-D65E-47A0-BF1C-626E5E91C776" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-486FAC00-D65E-47A0-BF1C-626E5E91C776">Nets without pins
+                                inside the region cannot be assigned any routing resource which is
+                                inside the region or crosses any region boundaries.</li>
+                        </ul>
+                        <p class="- topic/p p">An inclusive routing region is an inclusive placement region (rectilinear
+                            area with assigned macros) along with the following additional
+                            constraints:</p>
+                        <ul class="- topic/ul ul" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__UL_PCK_331_Q4B" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__UL_PCK_331_Q4B">
+                            <li class="- topic/li li" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-9B551CE9-6302-4A9D-8DD0-6789B35BD4FC" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-9B551CE9-6302-4A9D-8DD0-6789B35BD4FC">For all nets internal
+                                to the region (the source and all destinations belong to the
+                                region), routing must be inside the region (that is, such nets
+                                cannot be assigned any routing resource which is outside the region
+                                or crosses the region boundaries).</li>
+                            <li class="- topic/li li" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-FE46DBCC-A254-4092-8F94-1D7E07FB49B7" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-FE46DBCC-A254-4092-8F94-1D7E07FB49B7">Nets not internal to
+                                the region can be assigned routing resources within the region.</li>
+                        </ul>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_FWF_L31_Q4B" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_FWF_L31_Q4B"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">Unlocked macros in empty or exclusive regions are unassigned from that region. You
+                cannot create empty regions in areas that contain locked macros. Use inclusive or
+                exclusive region constraints, if you intend to assign logic to a region. An
+                inclusive region constraint with no macros assigned to it has no effect. An
+                exclusive region constraint with no macros assigned to it is equivalent to an empty
+                region.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_QMR_M31_Q4B" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_QMR_M31_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <p class="- topic/p p">If macros assigned to a region exceed the area's capacity, the region’s
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Properties</span> window displays the overbooked resources (over
+                100 percent resource usage) in red.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_TVC_431_Q4B" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_TVC_431_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <p class="- topic/p p">The following example defines an empty rectangular region.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>define_region -name cluster_region1 -type empty 100 46 102 46</code></pre>
+            <p class="- topic/p p">The following example defines a rectilinear region with the name RecRegion. This
+                region contains two rectangular areas.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>define_region -name RecRegion -type Exclusive 0 40 3 42 0 77 7 79</code></pre>
+            <p class="- topic/p p">The following examples define three regions with three different colors:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>define_region -name UserRegion0 -color 128 50 19 60 25
+define_region -name UserRegion1 -color 16711935 11 2 55 29
+define_region -name UserRegion2 -color 8388736 61 6 69 19</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_VKJ_531_Q4B" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_VKJ_531_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__UL_ALM_NDM_TNB" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__UL_ALM_NDM_TNB">
+                <li class="- topic/li li" id="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-5C2603C2-718A-49B3-B226-7D560AD81E96" data-ofbid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__GUID-5C2603C2-718A-49B3-B226-7D560AD81E96"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7">"assign_region"</a></li>
+            </ul>
+        </section></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__GUID-FFA3743A-E273-43B7-816E-85C51C036C72" xml:lang="en-US" lang="en-US" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F"><h2 class="- topic/title title topictitle2" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__GUID-FFA3743A-E273-43B7-816E-85C51C036C72" style="display:inline-block">8.2.5.4 undefine_region</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=undefine_region">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This PDC command removes the specified region. All macros assigned to the region are
+            unassigned.</p><div class="- topic/p p">
+                                    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>undefine_region region_name</code></pre>
+                        </div>
+                        <section class="- topic/section section" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_R5S_TKG_GRB" data-ofbid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_R5S_TKG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+                                    
+                                    <p class="- topic/p p">The following sections describe
+                                                  <code class="+ topic/ph pr-d/codeph ph codeph">undefine_region</code> arguments.</p>
+                                    <dl class="- topic/dl dl">
+                                                
+                                                  <dt class="- topic/dt dt dlterm" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__GUID-E1A7F84D-03BC-4498-9CC8-92E7D3C56DB7" data-ofbid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__GUID-E1A7F84D-03BC-4498-9CC8-92E7D3C56DB7">region_name</dt>
+                                                  <dd class="- topic/dd dd">
+                                                  <p class="- topic/p p">Specifies the region to be removed.</p>
+                                                  </dd>
+                                                
+                                    </dl>
+                        </section>
+                        <section class="- topic/section section" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_ODX_GJ1_Q4B" data-ofbid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_ODX_GJ1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+                                    
+                                    <p class="- topic/p p">To use this command, the region must be previously
+                                                defined.</p>
+                        </section>
+                        <section class="- topic/section section" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_PBG_JJ1_Q4B" data-ofbid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_PBG_JJ1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+                                    
+                                    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>undefine_region cluster_region1</code></pre>
+                        </section>
+                        <section class="- topic/section section" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_DBG_KJ1_Q4B" data-ofbid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_DBG_KJ1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+                                    
+                                    <ul class="- topic/ul ul" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__UL_L3R_YDM_TNB" data-ofbid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__UL_L3R_YDM_TNB">
+                                                <li class="- topic/li li" id="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__GUID-8508A3A7-5B93-4B8B-AD4A-2002FA716D21" data-ofbid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__GUID-8508A3A7-5B93-4B8B-AD4A-2002FA716D21"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-A8084857-B546-43DD-A880-B1B4D74C106A">"define_region"</a></li>
+                                    </ul>
+                        </section></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-2B3FEED5-14F2-4066-82AF-4180802121A8" xml:lang="en-US" lang="en-US" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53"><h2 class="- topic/title title topictitle2" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-2B3FEED5-14F2-4066-82AF-4180802121A8" style="display:inline-block">8.2.5.5 move_region</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=move_region">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">This PDC command moves the named region to the coordinates specified.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>move_region region_name [x1 y1 x2 y2]+</code></pre>
+        </div>
+        <section class="- topic/section section" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_YPL_1LG_GRB" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_YPL_1LG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">move_region</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-A228BFB9-AB40-482F-84A9-01F305F34371" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-A228BFB9-AB40-482F-84A9-01F305F34371">region_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the region to move. This name must be unique.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-5A7D2D45-3436-4874-B537-52AC0A4EB8AB" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-5A7D2D45-3436-4874-B537-52AC0A4EB8AB">x1 y1 x2 y2</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the series of coordinate pairs representing the location in
+                            which to move the named region. These rectangles can overlap. They are
+                            given as x1 y1 x2 y2, where x1, y1 represents the lower-left corner of
+                            the rectangle and x2 y2 represents the upper-right corner. You must
+                            specify at least one set of coordinates.</p>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_IQ2_WJ1_Q4B" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_IQ2_WJ1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <p class="- topic/p p">None.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_A2Q_XJ1_Q4B" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_A2Q_XJ1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <p class="- topic/p p">This example moves the region named RecRegion to a new region which is made up of two
+                rectangular areas:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>move_region RecRegion 0 40 3 42 0 77 7 79</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_SRJ_1K1_Q4B" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_SRJ_1K1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__UL_N54_J2M_TNB" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__UL_N54_J2M_TNB">
+                <li class="- topic/li li" id="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-18C56D17-4D34-4AE0-8258-511061B2F352" data-ofbid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__GUID-18C56D17-4D34-4AE0-8258-511061B2F352"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53">"move_region"</a></li>
+            </ul>
+        </section>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-DCADD05A-E96D-42B1-9453-16343977B93A" xml:lang="en-US" lang="en-US" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D"><h2 class="- topic/title title topictitle2" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-DCADD05A-E96D-42B1-9453-16343977B93A" style="display:inline-block">8.2.5.6 unassign_net_macros</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=unassign_net_macros">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">This PDC command unassigns macros connected to a specified net.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>unassign_net_macros region_name [net1]+</code></pre>
+        </div>
+        <section class="- topic/section section" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_DQY_PMG_GRB" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_DQY_PMG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">unassign_net_macros</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-B7841231-BE84-43AB-80D8-9C4593D715FD" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-B7841231-BE84-43AB-80D8-9C4593D715FD">region_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the region containing the macros in the net(s) to
+                            unassign.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-C525827A-76BE-4B65-8416-10A3AD4024D3" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-C525827A-76BE-4B65-8416-10A3AD4024D3">net1</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the net(s) that contain the macros to unassign from
+                            the specified region. You must specify at least one net name.
+                            Optionally, you can specify additional nets to unassign.</p>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_NZC_WK1_Q4B" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_NZC_WK1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <p class="- topic/p p">If the region is currently not assigned, an error message appears in the Log window,
+                if you try to unassign it.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_C4B_YK1_Q4B" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_C4B_YK1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>unassign_net_macros cluster_region1 keyin1intZ0Z_62</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_EFK_1L1_Q4B" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_EFK_1L1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__UL_JVQ_V2M_TNB" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__UL_JVQ_V2M_TNB">
+                <li class="- topic/li li" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-4649D457-EEE2-469D-9E0B-CEE39B32F258" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-4649D457-EEE2-469D-9E0B-CEE39B32F258"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97">"unassign_macro_from_region"</a>
+                </li>
+                <li class="- topic/li li" id="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-47D44E62-5E70-4CFC-828E-819A27CAA834" data-ofbid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__GUID-47D44E62-5E70-4CFC-828E-819A27CAA834"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B">"assign_net_macros"</a></li>
+            </ul>
+        </section>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-CDD5BC3F-2EE0-4279-AF51-6909FE07D2A4" xml:lang="en-US" lang="en-US" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97"><h2 class="- topic/title title topictitle2" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-CDD5BC3F-2EE0-4279-AF51-6909FE07D2A4" style="display:inline-block">8.2.5.7 unassign_macro_from_region</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=unassign_macro_from_region">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p">This PDC command specifies the name of the macro to be
+            unassigned.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>unassign_macro_from_region [region_name] macro_name</code></pre></div>
+        <section class="- topic/section section" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_TPX_VMG_GRB" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_TPX_VMG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">unassign_macro_from_region</code>
+                arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-BA3B7F4C-2D15-45E9-9049-EE75AA9A977C" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-BA3B7F4C-2D15-45E9-9049-EE75AA9A977C">region_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the region where the macro or macros are to be removed.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-A79D8518-C0B9-488E-89B8-0DD19A73AEE1" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-A79D8518-C0B9-488E-89B8-0DD19A73AEE1">macro_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the macro to be unassigned from the region. Macro names are
+                            case sensitive. You can unassign a collection of macros by assigning a
+                            prefix to their names. You cannot use hierarchical net names from ADL.
+                            However, you can use the following wild card characters in macro
+                            names.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-89. </span></span><span class="table--title" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-3D4AA474-0053-4102-BDCE-C97B993D315D">Wild Card
+                                Characters in Macro Names</span></caption><colgroup><col style="width:43%"/><col style="width:56.99999999999999%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__1">Wild card</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__2">What It Does</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__1">\</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__2">Interprets the next character as a non-special
+                                            character</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__1">?</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__2">Matches any single character</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__1">*</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-6BB53422-645B-47E0-A0DD-EF52C7433DE0__entry__2">Matches any string</td>
+                                    </tr>
+                                </tbody></table></div>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_NB5_NL1_Q4B" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_NB5_NL1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <p class="- topic/p p">If the macro was not previously assigned, an error message is generated.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_T4H_PL1_Q4B" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_T4H_PL1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>unassign_macro_from_region macro21</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_KZV_QL1_Q4B" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_KZV_QL1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__UL_CMR_NFM_TNB" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__UL_CMR_NFM_TNB">
+                <li class="- topic/li li" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-8622895F-D1D7-4DC5-BB4D-3D42B8FE97CF" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-8622895F-D1D7-4DC5-BB4D-3D42B8FE97CF"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97">"unassign_macro_from_region"</a></li>
+                <li class="- topic/li li" id="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-E451A856-07F7-4FC6-AD23-A5BA45DBA28F" data-ofbid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__GUID-E451A856-07F7-4FC6-AD23-A5BA45DBA28F">
+                    <a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B">"assign_net_macros"</a></li>
+            </ul>
+        </section></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-93FFF08F-B6FF-441A-9578-FA5F500EE945" xml:lang="en-US" lang="en-US" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E"><h2 class="- topic/title title topictitle2" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-93FFF08F-B6FF-441A-9578-FA5F500EE945" style="display:inline-block">8.2.5.8 set_location</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_location">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">This PDC command assigns the specified macro to a particular location on the chip.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location macro_name -fixed value x y</code></pre>
+        </div>
+        <div class="- topic/note note notype note_notype" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-A73ED5DE-E078-4805-BFC7-AF19F8C1C5F2" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-A73ED5DE-E078-4805-BFC7-AF19F8C1C5F2"><span class="note__title">Note:</span> This command may not honour placing
+            globals to physical locations on the die. Instead of placing globals on die locations,
+            let the Libero Design Suite decide where to place the global buffers.</div>
+        <section class="- topic/section section" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_O2W_BNG_GRB" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_O2W_BNG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">set_location</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-91B2744F-82BB-47E2-8646-B555F692935B" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-91B2744F-82BB-47E2-8646-B555F692935B">macro_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the macro in the netlist to assign to a particular
+                            location on the chip.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-F3B735CB-3FD1-4F84-9CF5-2E80E85B0BEF" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-F3B735CB-3FD1-4F84-9CF5-2E80E85B0BEF">-fixed Value</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Sets whether the location of this instance is fixed (that is, locked).
+                            Locked instances are not moved during layout. The default is yes. The
+                            following table shows the acceptable values for this argument.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-90. </span></span><span class="table--title" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-1D5C5B0A-8A04-46B2-84FC-4FAF958CFDCF">-fixed
+                                Value</span></caption><colgroup><col style="width:26%"/><col style="width:74%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3__entry__1">Value</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3__entry__2">Description</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3__entry__1">yes</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3__entry__2">The location of this instance is locked.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3__entry__1">no</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-2ACD6BE0-F3E3-452E-9416-C1C8126CA0D3__entry__2">The location of this instance is unlocked.</td>
+                                    </tr>
+                                </tbody></table></div>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-45561D2A-515C-4F48-9D76-AC121F8E7066" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__GUID-45561D2A-515C-4F48-9D76-AC121F8E7066">x y</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">The x and y coordinates specify where to place the macro on the chip. Use
+                            the Chip Planner tool to determine the x and y coordinates of the
+                            location.</p>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_V4J_3M1_Q4B" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_V4J_3M1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <p class="- topic/p p">None.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_EMS_JM1_Q4B" data-ofbid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_EMS_JM1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <p class="- topic/p p">This example assigns and locks the macro with the name
+                    "<code class="+ topic/ph pr-d/codeph ph codeph">mem_data_in\[57\]</code>" at the location x=7, y=2:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location mem_data_in\[57\] -fixed yes 7 2</code></pre>
+        </section>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-8DBBF360-C5E6-4ABC-A1A3-50E03130C071" xml:lang="en-US" lang="en-US" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0"><h2 class="- topic/title title topictitle2" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-8DBBF360-C5E6-4ABC-A1A3-50E03130C071" style="display:inline-block">8.2.5.9 move_block</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=move_block">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This PDC command moves a Block from its original, locked placement by preserving the relative
+            placement between the instances. You can move the Block to the left, right, up, or
+            down.</p>
+        <div class="- topic/note note notype note_notype" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-8E42DA2B-476A-42E0-8483-16F934CD6D16" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-8E42DA2B-476A-42E0-8483-16F934CD6D16"><span class="note__title">Note:</span> If possible, routing is preserved when you move the blocks.</div>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>move_block -inst_name instance_name -up y -down y -left x -right x -non_logic value</code></pre>
+        <section class="- topic/section section" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_M4Q_5SG_GRB" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_M4Q_5SG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">move_block</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-A1662DA6-452F-4DB3-A18B-25430EEA8D0F" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-A1662DA6-452F-4DB3-A18B-25430EEA8D0F">-inst_name instance_name</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the instance to move. Refer to the Logical Veiw of
+                            Chip Planner for the instance name to use.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-5C7CF668-8918-488B-91EA-BA8790F799BC" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-5C7CF668-8918-488B-91EA-BA8790F799BC">-up y</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Moves the block up the specified number of rows. The value must be a
+                            positive integer.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-1ABD941E-5143-49E5-A16A-4DED0DB3D524" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-1ABD941E-5143-49E5-A16A-4DED0DB3D524">-down y</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Moves the block down the specified number of rows. The value must be a
+                            positive integer.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-633CD84C-D4CC-4BFC-BEE0-D792E3EE697D" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-633CD84C-D4CC-4BFC-BEE0-D792E3EE697D">-left x</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Moves the block left the specified number of columns. The value must be a
+                            positive integer.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-9E3572CB-5992-48A5-B0E7-D3E485D9F501" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-9E3572CB-5992-48A5-B0E7-D3E485D9F501">-right x</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Moves the block right the specified number of columns. The value must be
+                            a positive integer.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-C6CA8806-AFCF-4D53-B582-E331BD98043F" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-C6CA8806-AFCF-4D53-B582-E331BD98043F">-non_logic Value</dt>
+                    <dd class="- topic/dd dd">
+                        <div class="- topic/p p">Specifies what to do with the non-logic part of the block, if one exists.
+                            The following table shows the acceptable values for this argument.<div class="table-container"><table class="- topic/table table frame-all" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-91. </span></span><span class="table--title" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-32344D04-6911-48FA-9CD7-65EBF41825EF">-non_logic
+                                    Value</span></caption><colgroup><col style="width:43%"/><col style="width:56.99999999999999%"/></colgroup><thead class="- topic/thead thead">
+                                        <tr class="- topic/row">
+                                            <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__1">Value</th>
+                                            <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__2">Description</th>
+                                        </tr>
+                                    </thead><tbody class="- topic/tbody tbody valign-top">
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__1">move</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__2">Move the entire block.</td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__1">keep</td>
+                                            <td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__2">Move only the logic portion of the
+                                                block (COMB/SEQ) and keep the rest locked in the
+                                                same previous location, if there is no conflict with
+                                                other blocks.</td>
+                                        </tr>
+                                        <tr class="- topic/row">
+                                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__1">unplace</td>
+                                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-CADB75FB-62A3-4321-B8A9-637E043A5CE3__entry__2">Move only the logic portion of the block
+                                                (COMB/SEQ) and unplace the rest of it, such as I/Os
+                                                and RAM.</td>
+                                        </tr>
+                                    </tbody></table></div></div>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_MS5_YQ1_Q4B" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_MS5_YQ1_Q4B"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This command moves a block from its original, locked position to a new position. You
+                can move the entire block or just the logic part of it. You must use the -non_logic
+                argument to specify what to do with the non-logic part of the block.</p>
+            <p class="- topic/p p">The -up, -down, -left, and -right arguments enable you to specify how to move the
+                block from its original placement. You cannot rotate the block, but the relative
+                placement of macros within the block will be preserved and the placement will be
+                locked. However, routing will be lost. You can either use the Chip Planner tool or
+                run a Block report to determine the location of the block.</p>
+            <p class="- topic/p p">The -non_logic argument enables you to move a block that includes non-logic
+                instances, such as RAM or I/Os that are difficult to move. Once you have moved a
+                part of a block, you can unplace the remaining parts of the block and then place
+                them manually as necessary.</p>
+            <div class="- topic/note note notype note_notype" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-9A25BEE9-9C0F-4EE3-8600-0467DC03314B" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-9A25BEE9-9C0F-4EE3-8600-0467DC03314B"><span class="note__title">Note:</span> Microchip recommends that you move
+                the block left or right by increments of 12. If not, placement may fail because it
+                violates clustering constraints. Also, Microchip recommends that you move the block
+                up or down by increments of three.</div>
+        </section>
+        <section class="- topic/section section" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_CTZ_CR1_Q4B" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_CTZ_CR1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__UL_PQC_2R1_Q4B" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__UL_PQC_2R1_Q4B">
+                <li class="- topic/li li" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-822F31B8-614C-4E62-A77F-2A6D6E67FCC2" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-822F31B8-614C-4E62-A77F-2A6D6E67FCC2">You must associate this PDC
+                    constraint file to Place and Route.</li>
+                <li class="- topic/li li" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-F6A30511-FE31-48CD-B213-F9BC0C75D855" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-F6A30511-FE31-48CD-B213-F9BC0C75D855">You must use this PDC command if
+                    you want to preserve the relative placement and routing (if possible) of a block
+                    you are instantiating many times in your design. Only one instance will be
+                    preserved by default. To preserve other instances, you must move them using this
+                    command.</li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_XNX_FR1_Q4B" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_XNX_FR1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <p class="- topic/p p">The following example moves the entire block (instance name instA) 12 columns to the
+                right and 3 rows up:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>move_block -inst_name instA -right 12 -up 3 -non_logic move</code></pre>
+            <p class="- topic/p p">The following example moves only the logic portion of the block and unplaces the rest
+                by 24 columns to the right and 6 rows up.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>move_block -inst_name instA -right 24 -up 6 -non_logic unplace</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_LWF_JR1_Q4B" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_LWF_JR1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+            
+            <ul class="- topic/ul ul" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__UL_XGQ_KR1_Q4B" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__UL_XGQ_KR1_Q4B">
+                <li class="- topic/li li" id="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-A6DD0839-6444-4540-B283-89AABB085B68" data-ofbid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__GUID-A6DD0839-6444-4540-B283-89AABB085B68"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD">"set_block_options"</a></li>
+            </ul>
+        </section></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-5A48BEF6-0A37-4D7D-B3BF-5518A75EE750" xml:lang="en-US" lang="en-US" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13"><h2 class="- topic/title title topictitle2" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-5A48BEF6-0A37-4D7D-B3BF-5518A75EE750" style="display:inline-block">8.2.5.10 set_port_block</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_port_block">(Ask a Question)</a><div class="- topic/body body">
+    <p class="- topic/p p">This PDC command sets properties on a port in the block flow. This PDC command applies to
+      only one I/O.</p>
+    <div class="- topic/p p">
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_port_block -name portName -remove_ios value -add_interface value</code></pre>
+    </div>
+    <section class="- topic/section section" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_DYS_FTG_GRB" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_DYS_FTG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+      
+      <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">set_port_block</code> arguments.</p>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-A0DF42AA-3DCE-40B1-AD1D-38B06BBF352B" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-A0DF42AA-3DCE-40B1-AD1D-38B06BBF352B">-name portName</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Specify the name of the port.</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-C3B36984-A853-40A5-AEA4-7AC80025CA94" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-C3B36984-A853-40A5-AEA4-7AC80025CA94">-remove_ios Value</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets whether or not to remove I/Os connected to the specified port from the netlist.
+              The following table shows the acceptable values for this argument.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-92. </span></span><span class="table--title" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-0737F1C6-2952-4565-A77B-69ADF8A44A93">-remove_ios Value</span></caption><colgroup><col style="width:26%"/><col style="width:74%"/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F__entry__1">Value</th>
+                    <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F__entry__2">Description</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody valign-top">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F__entry__1">yes</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F__entry__2">Remove I/Os connected to the specified port from the netlist.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F__entry__1">no</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-CA8BE59B-9132-4137-89F0-74938412806F__entry__2">Do not remove I/Os connected to the specified port from the
+                      netlist.</td>
+                  </tr>
+                </tbody></table></div>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-72F52F23-6DBA-4B31-96BE-E1ADF2D04DE9" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-72F52F23-6DBA-4B31-96BE-E1ADF2D04DE9">-add_interface Value</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Adds an interface macro each time the fanout of the net connected to the port is
+              greater than the value specified. The value must be a positive integer.</p>
+          </dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_GV4_BS1_Q4B" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_GV4_BS1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+      
+      <ul class="- topic/ul ul" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__UL_U2B_CS1_Q4B" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__UL_U2B_CS1_Q4B">
+        <li class="- topic/li li" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-26A28022-3FC6-47AE-8596-A34B6A81D62C" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-26A28022-3FC6-47AE-8596-A34B6A81D62C">You must import this PDC command as a
+          constraint file.</li>
+        <li class="- topic/li li" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-EA43AB45-BBFE-46DD-8FE3-D7A378EECDF6" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-EA43AB45-BBFE-46DD-8FE3-D7A378EECDF6">TRIBUFF and BIBUF macros cannot be
+          removed even if you specify "-remove_ios yes".</li>
+        <li class="- topic/li li" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-2E427CC9-9703-4420-B3C5-2705E8764205" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__GUID-2E427CC9-9703-4420-B3C5-2705E8764205">You must enable the block flow before
+          calling this command. To enable the block flow, either select the "Enable block creation"
+          option in the New Project wizard, or use the -block argument in the new_design Tcl command
+          to enable block mode.</li>
+      </ul>
+    </section>
+    <section class="- topic/section section" id="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_YRT_CS1_Q4B" data-ofbid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_YRT_CS1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+      
+      <p class="- topic/p p">This example removes any I/Os connected to portA, excluding TRIBUFF and BIBUF I/Os.</p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_port_block -name portA -remove_ios yes</code></pre>
+    </section>
+  </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-F9BFA12A-734D-4F4E-912D-785712214648" xml:lang="en-US" lang="en-US" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD"><h2 class="- topic/title title topictitle2" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-F9BFA12A-734D-4F4E-912D-785712214648" style="display:inline-block">8.2.5.11 set_block_options</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_block_options">(Ask a Question)</a><div class="- topic/body body">
+    <p class="- topic/p p">This PDC command overrides the compile option for placement or routing conflicts for an
+      instance of a block.</p>
+    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_block_options -inst_name instance_name -placement_conflicts value \
+-routing_conflicts value</code></pre>
+    <section class="- topic/section section" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_LLJ_4TG_GRB" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_LLJ_4TG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+      
+      <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">set_block_options</code> arguments.</p>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B0AB1205-72A2-4656-8343-2918705B7989" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B0AB1205-72A2-4656-8343-2918705B7989">-inst_name instance_name</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Specifies the block instance name. If you do not know the name of the instance, run a
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Block Report</span> (<span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Design </span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Reports</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Blocks</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Interface</span></span>) or look at the names shown in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Block View</span>
+              tab of the Chip Planner.</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-479BD5E1-6F51-4F49-8464-A2DFCFF00B95" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-479BD5E1-6F51-4F49-8464-A2DFCFF00B95">-placement_conflicts Value</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Specifies what to do when the software encounters a placement conflict. The following
+              table shows the acceptable values for this argument.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-93. </span></span><span class="table--title" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-0569EA29-7BD4-40F9-BA5C-4F5EE950A005">-placement_conflicts
+                Value</span></caption><colgroup><col style="width:14.000000000000002%"/><col style="width:86%"/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__1">Value</th>
+                    <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__2">Description</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody valign-top">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__1">error</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__2">Compile errors out if any instance from a Designer block becomes unplaced
+                      or its routing is deleted. This is the default compile option.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__1">resolve</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__2">If some instances get unplaced for any reason, the non-conflicting
+                      elements remaining are also unplaced. Basically, if there are any conflicts,
+                      nothing from the block is kept.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__1">keep</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__2">If some instances get unplaced for any reason, the non-conflicting
+                      elements remaining are preserved but not locked. Therefore, the placer can
+                      move them into another location if necessary.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__1">lock</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__2">If some instances get unplaced for any reason, the non-conflicting
+                      elements remaining are preserved and locked.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__1">discard</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-B7711DE7-CC5A-4139-8429-C9AD40698076__entry__2">Discards any placement from the block, even if there are no
+                      conflicts.</td>
+                  </tr>
+                </tbody></table></div>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-0910C821-86F0-475E-9C86-1A033375FE8D" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-0910C821-86F0-475E-9C86-1A033375FE8D">-routing_conflicts Value</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Specifies what to do when the software encounters a routing conflict. The following
+              table shows the acceptable values for this argument.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-94. </span></span><span class="table--title" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-4BBFB796-0F6F-43EC-AC75-5C62A719C66C">-routing_conflicts Value</span></caption><colgroup><col style="width:26%"/><col style="width:74%"/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__1">Value</th>
+                    <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__2">Description</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody valign-top">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__1">error</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__2">Compile errors out if any route in any preserved net from a Designer
+                      block is deleted.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__1">resolve</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__2">If a route is removed from a net for any reason, the routing for the non-
+                      conflicting nets is also deleted. Basically, if there are any conflicts, no
+                      routes from the block are kept.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__1">keep</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__2">If a route is removed from a net for any reason, the routing for the non-
+                      conflicting nets is kept unlocked. Therefore, the router can re-route these
+                      nets.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__1">lock</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__2">If routing is removed from a net for any reason, the routing for the non-
+                      conflicting nets is kept as locked, and the router will not change them. This
+                      is the default compile option.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__1">discard</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D59179BD-101B-4D73-A759-FB7087940D5F__entry__2">Discards any routing from the block, even if there are no
+                      conflicts.</td>
+                  </tr>
+                </tbody></table></div>
+          </dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_TQP_DT1_Q4B" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_TQP_DT1_Q4B"><h3 class="- topic/title title sectiontitle">Description</h3>
+      
+      <p class="- topic/p p">This command enables you to override the compile option for placement or routing conflicts
+        for an instance of a block.</p>
+    </section>
+    <section class="- topic/section section" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_F4C_FT1_Q4B" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_F4C_FT1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+      
+      <p class="- topic/p p">You must put this PDC command in a constraint PDC file and associate it to Place and Route.
+        If placement is discarded, the routing is automatically discarded too.</p>
+    </section>
+    <section class="- topic/section section" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_S2K_GT1_Q4B" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_S2K_GT1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+      
+      <p class="- topic/p p">This example makes the Libero Soc software display an error if any instance from a block
+        becomes unplaced or the routing is deleted:</p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_block_options -inst_name instA -placement_conflicts ERROR -routing_conflicts ERROR</code></pre>
+    </section>
+    <section class="- topic/section section" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_BSN_3T1_Q4B" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_BSN_3T1_Q4B"><h3 class="- topic/title title sectiontitle">See Also</h3>
+      
+      <ul class="- topic/ul ul" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__UL_JYY_Z3M_TNB" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__UL_JYY_Z3M_TNB">
+        <li class="- topic/li li" id="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D72CE5D1-4E30-40E7-BD3D-C7DE159F351F" data-ofbid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__GUID-D72CE5D1-4E30-40E7-BD3D-C7DE159F351F"><a class="- topic/xref xref" href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0">"move_block"</a></li>
+      </ul>
+    </section>
+  </div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7" data-tocid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7">8.2.5.1 assign_region</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_GD5_JJG_GRB" data-tocid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_GD5_JJG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_MQ5_P21_Q4B" data-tocid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_MQ5_P21_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_NZY_S21_Q4B" data-tocid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_NZY_S21_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_Y5Z_CF1_Q4B" data-tocid="GUID-3F2A2726-6BC8-4DA8-A9C2-C2564D131FC7__SECTION_Y5Z_CF1_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B" data-tocid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B">8.2.5.2 assign_net_macros</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_JDN_XJG_GRB" data-tocid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_JDN_XJG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_FDB_GG1_Q4B" data-tocid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_FDB_GG1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_YMF_RG1_Q4B" data-tocid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_YMF_RG1_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_F3G_TG1_Q4B" data-tocid="GUID-C640ADE7-531C-4199-92C0-F8FAFE42EC2B__SECTION_F3G_TG1_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-A8084857-B546-43DD-A880-B1B4D74C106A" data-tocid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A">8.2.5.3 define_region</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_WYF_HKG_GRB" data-tocid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_WYF_HKG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_FWF_L31_Q4B" data-tocid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_FWF_L31_Q4B">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_QMR_M31_Q4B" data-tocid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_QMR_M31_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_TVC_431_Q4B" data-tocid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_TVC_431_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_VKJ_531_Q4B" data-tocid="GUID-A8084857-B546-43DD-A880-B1B4D74C106A__SECTION_VKJ_531_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F" data-tocid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F">8.2.5.4 undefine_region</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_R5S_TKG_GRB" data-tocid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_R5S_TKG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_ODX_GJ1_Q4B" data-tocid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_ODX_GJ1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_PBG_JJ1_Q4B" data-tocid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_PBG_JJ1_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_DBG_KJ1_Q4B" data-tocid="GUID-79B9326A-1E0C-41B0-B680-E4CEBC9C105F__SECTION_DBG_KJ1_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53" data-tocid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53">8.2.5.5 move_region</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_YPL_1LG_GRB" data-tocid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_YPL_1LG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_IQ2_WJ1_Q4B" data-tocid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_IQ2_WJ1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_A2Q_XJ1_Q4B" data-tocid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_A2Q_XJ1_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_SRJ_1K1_Q4B" data-tocid="GUID-FF62A52C-C9AA-415F-AFA8-1BA35E50CB53__SECTION_SRJ_1K1_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D" data-tocid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D">8.2.5.6 unassign_net_macros</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_DQY_PMG_GRB" data-tocid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_DQY_PMG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_NZC_WK1_Q4B" data-tocid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_NZC_WK1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_C4B_YK1_Q4B" data-tocid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_C4B_YK1_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_EFK_1L1_Q4B" data-tocid="GUID-CA909AB8-6E10-4B2A-BB2F-D39146E88A1D__SECTION_EFK_1L1_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97" data-tocid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97">8.2.5.7 unassign_macro_from_region</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_TPX_VMG_GRB" data-tocid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_TPX_VMG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_NB5_NL1_Q4B" data-tocid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_NB5_NL1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_T4H_PL1_Q4B" data-tocid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_T4H_PL1_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_KZV_QL1_Q4B" data-tocid="GUID-C0916714-9DC6-4B60-B435-A01DF3731C97__SECTION_KZV_QL1_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E" data-tocid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E">8.2.5.8 set_location</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_O2W_BNG_GRB" data-tocid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_O2W_BNG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_V4J_3M1_Q4B" data-tocid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_V4J_3M1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_EMS_JM1_Q4B" data-tocid="GUID-60A626DB-B514-4BB6-A9C5-72C365467D9E__SECTION_EMS_JM1_Q4B">Examples</a></div></li></ul></li><li class="topic-item"><a href="#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0" data-tocid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0">8.2.5.9 move_block</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_M4Q_5SG_GRB" data-tocid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_M4Q_5SG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_MS5_YQ1_Q4B" data-tocid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_MS5_YQ1_Q4B">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_CTZ_CR1_Q4B" data-tocid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_CTZ_CR1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_XNX_FR1_Q4B" data-tocid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_XNX_FR1_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_LWF_JR1_Q4B" data-tocid="GUID-B0F9AD88-FBDF-45DA-BA10-96D7C48C80C0__SECTION_LWF_JR1_Q4B">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13" data-tocid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13">8.2.5.10 set_port_block</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_DYS_FTG_GRB" data-tocid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_DYS_FTG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_GV4_BS1_Q4B" data-tocid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_GV4_BS1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_YRT_CS1_Q4B" data-tocid="GUID-2098B8EB-320E-4464-8A96-8BA403FF0E13__SECTION_YRT_CS1_Q4B">Examples</a></div></li></ul></li><li class="topic-item"><a href="#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD" data-tocid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD">8.2.5.11 set_block_options</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_LLJ_4TG_GRB" data-tocid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_LLJ_4TG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_TQP_DT1_Q4B" data-tocid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_TQP_DT1_Q4B">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_F4C_FT1_Q4B" data-tocid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_F4C_FT1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_S2K_GT1_Q4B" data-tocid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_S2K_GT1_Q4B">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_BSN_3T1_Q4B" data-tocid="GUID-F6C2C2E0-88B2-462F-B3FD-9D8C1D4E4DDD__SECTION_BSN_3T1_Q4B">See Also</a></div></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

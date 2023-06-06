@@ -1,0 +1,765 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Bidirectional Buffer with Input to the global network. Figure 14-52.  CLKBIBUF Table 14-103.  CLKBIBUF I/O Input Output D, E, PAD PAD, Y Table 14-104.  CLKBIBUF Truth Table D E PAD Y X 0 Z X X 0 0 0 X ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>14.1.4 14.2.4 Clocking</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484"/><meta name="wh-source-relpath" content="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.xml"/><meta name="wh-out-relpath" content="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+PolarFire Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for PolarFire</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A"><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4</ph>
+Clocking</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e15009" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e15009-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15009-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+PolarFire Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859-d10733e15013" class="topicref introduction" data-id="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859-d10733e15013-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022" class="topicref" data-id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F.html#GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.1</ph>
+Combinatorial Logic</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256" class="topicref" data-id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2</ph>
+Sequential Logic</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354" class="topicref" data-id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA.html#GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.3</ph>
+I/O</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484" class="topicref" data-id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4</ph>
+Clocking</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286-d10733e15492" class="topicref" data-id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-82817CFC-63EC-43F8-B5A3-F28B47323286" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286-d10733e15492-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.1</ph>
+CLKBIBUF</a></div></div></li><li role="treeitem"><div data-tocid="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D-d10733e15500" class="topicref" data-id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D-d10733e15500-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.2</ph>
+CLKBUF</a></div></div></li><li role="treeitem"><div data-tocid="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21-d10733e15508" class="topicref" data-id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21-d10733e15508-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.3</ph>
+CLKBUF_DIFF</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943-d10733e15516" class="topicref" data-id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943-d10733e15516-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.4</ph>
+CLKINT</a></div></div></li><li role="treeitem"><div data-tocid="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB-d10733e15524" class="topicref" data-id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-118DED41-52FE-43FD-B504-996EB30FE5FB" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB-d10733e15524-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.5</ph>
+CLKINT_PRESERVE</a></div></div></li><li role="treeitem"><div data-tocid="GUID-97775587-86C0-4E8B-B491-8471A954B5C9-d10733e15532" class="topicref" data-id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-97775587-86C0-4E8B-B491-8471A954B5C9" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9-d10733e15532-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.6</ph>
+GCLKBUF</a></div></div></li><li role="treeitem"><div data-tocid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50-d10733e15540" class="topicref" data-id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-77715118-06C4-458C-AF53-A9ED73AABB50" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50-d10733e15540-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.7</ph>
+GCLKBUF_DIFF</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D-d10733e15548" class="topicref" data-id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D-d10733e15548-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.8</ph>
+GCLKINT</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39-d10733e15556" class="topicref" data-id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39-d10733e15556-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.9</ph>
+RCLKINT</a></div></div></li><li role="treeitem"><div data-tocid="GUID-1949164E-9496-409E-B3F2-2B1C95B76355-d10733e15564" class="topicref" data-id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-1949164E-9496-409E-B3F2-2B1C95B76355" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355-d10733e15564-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4.10</ph>
+RGCLKINT</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574" class="topicref" data-id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782.html#GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.5</ph>
+Special</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312-d10733e15671" class="topicref" data-id="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312.html" id="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312-d10733e15671-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.6</ph>
+TX_PLL </a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680" class="topicref" data-id="GUID-41402248-97A4-40DE-876D-4022F901B51C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-41402248-97A4-40DE-876D-4022F901B51C.html#GUID-41402248-97A4-40DE-876D-4022F901B51C" id="GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.7</ph>
+RAM1K20</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6286C611-710E-40B7-B39A-D3A4A938917A-d10733e15696" class="topicref" data-id="GUID-6286C611-710E-40B7-B39A-D3A4A938917A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6286C611-710E-40B7-B39A-D3A4A938917A.html" id="GUID-6286C611-710E-40B7-B39A-D3A4A938917A-d10733e15696-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.8</ph>
+RAM64x12</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705" class="topicref" data-id="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC" id="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.9</ph>
+MACC_PA</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722" class="topicref" data-id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.html#GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC" id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.10</ph>
+MACC_PA_BC_ROM</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747" class="topicref" data-id="GUID-92622ACC-B044-4582-AE90-87F588869C4B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92622ACC-B044-4582-AE90-87F588869C4B.html#GUID-92622ACC-B044-4582-AE90-87F588869C4B" id="GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.11</ph>
+Post-Layout Macros</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e16127" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e16127-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B.html" id="tocId-d10733e16127-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2</ph>
+SmartFusion2 and IGLOO2 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2 and IGLOO2</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e16943" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e16943-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197.html#GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197" id="tocId-d10733e16943-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.3</ph>
+RTG4 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for RTG4</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A__GUID-2CF9B97E-1CC1-4F86-B95D-24D033A2D123"><article class="nested0" aria-labelledby="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A__GUID-2CF9B97E-1CC1-4F86-B95D-24D033A2D123" id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A">
+   <h1 class="- topic/title title topictitle1" id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A__GUID-2CF9B97E-1CC1-4F86-B95D-24D033A2D123" style="display:inline-block">14.1.4 Clocking</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Clocking">(Ask a Question)</a>
+<article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__GUID-B1890AEE-CBA3-4DC3-920A-E4225D7C6002" xml:lang="en-US" lang="en-US" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286">
+   <h2 class="- topic/title title topictitle2" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__GUID-B1890AEE-CBA3-4DC3-920A-E4225D7C6002" style="display:inline-block">14.1.4.1 CLKBIBUF</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=CLKBIBUF">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-00000993" data-ofbid="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-00000993">Bidirectional Buffer with Input to the global network.<figure class="- topic/fig fig fignone" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__FIG_XBS_DFQ_L4B" data-ofbid="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__FIG_XBS_DFQ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__FIG_ECG_FFQ_L4B" data-ofbid="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__FIG_ECG_FFQ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-52. <span id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__GUID-22159814-910C-4812-B403-0EB919A8085E" class="fig--title">CLKBIBUF</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__IMAGE_FCG_FFQ_L4B" src="GUID-2830E6D6-F184-4C0A-998E-5F72293A7DAF-low.png" height="195" width="407"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-00000998" data-ofbid="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-00000998" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-103. </span></span><span class="table--title" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-0000099A">CLKBIBUF I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A0">
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A1">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A2">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A4">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A6">
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A8" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A2">D, E, PAD</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009AA" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009A4">PAD, Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009AC" data-ofbid="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009AC" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-104. </span></span><span class="table--title" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009AE">CLKBIBUF Truth Table</span></caption><colgroup><col style="width:0.6164in"/><col style="width:0.6164in"/><col style="width:0.6164in"/><col style="width:0.6164in"/></colgroup><thead class="- topic/thead thead" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B6">
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B7">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B8">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BA">E</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BC">PAD</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BE">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009C0">
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009C1">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009C2" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009C4" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BA">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009C6" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BC">Z</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009C8" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BE">X</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009CA">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009CB" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009CD" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BA">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009CF" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BC">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009D1" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BE">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009D3">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009D4" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009D6" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BA">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009D8" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BC">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009DA" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BE">1</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009DC">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009DD" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B8">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009DF" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BA">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009E1" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BC">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009E3" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BE">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009E5">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009E6" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009B8">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009E8" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BA">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009EA" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BC">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009EC" headers="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286__ID-000009BE">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__GUID-95D3EC03-9C28-4567-8D4A-315D2DF5F54F" xml:lang="en-US" lang="en-US" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D">
+   <h2 class="- topic/title title topictitle2" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__GUID-95D3EC03-9C28-4567-8D4A-315D2DF5F54F" style="display:inline-block">14.1.4.2 CLKBUF</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=CLKBUF">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009F0" data-ofbid="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009F0">Input Buffer to the global network.<figure class="- topic/fig fig fignone" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__FIG_K2X_HFQ_L4B" data-ofbid="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__FIG_K2X_HFQ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__GUID-93AD7919-6A21-4F53-936D-61D677FFB169" data-ofbid="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__GUID-93AD7919-6A21-4F53-936D-61D677FFB169"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-53. <span id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__GUID-DB4DC69A-73C1-43BD-90CA-D1AE0ECF10BA" class="fig--title">CLKBUF</span></span></figcaption>
+                  
+                  <img class="- topic/image image" src="GUID-19E4394C-4562-4E41-A3AB-AFBD0A60BF50-low.png" height="124" width="393"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009F5" data-ofbid="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009F5" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-105. </span></span><span class="table--title" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009F7">CLKBUF I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009FD">
+               <tr class="- topic/row" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009FE">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009FF">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A01">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A03">
+               <tr class="- topic/row" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A04">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A05" headers="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-000009FF">PAD</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A07" headers="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A01">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A09" data-ofbid="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A09" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-106. </span></span><span class="table--title" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A0B">CLKBUF Truth Table</span></caption><colgroup><col style="width:0.625in"/><col style="width:0.6875in"/></colgroup><thead class="- topic/thead thead" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A11">
+               <tr class="- topic/row" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A12">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A13">PAD</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A15">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A17">
+               <tr class="- topic/row" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A18">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A19" headers="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A13">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A1B" headers="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A15">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A1D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A1E" headers="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A13">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A20" headers="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D__ID-00000A15">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__GUID-FAB1F21B-9158-4FC5-9204-9032C021B4E3" xml:lang="en-US" lang="en-US" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21">
+   <h2 class="- topic/title title topictitle2" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__GUID-FAB1F21B-9158-4FC5-9204-9032C021B4E3" style="display:inline-block">14.1.4.3 CLKBUF_DIFF</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=CLKBUF_DIFF">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A24" data-ofbid="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A24">Differential I/O macro to the global network, Differential I/O.<figure class="- topic/fig fig fignone" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__GUID-E9D819C2-243D-48F5-AE29-A2D9F3AB45CC" data-ofbid="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__GUID-E9D819C2-243D-48F5-AE29-A2D9F3AB45CC"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-54. <span id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__GUID-9A4FF2BB-B176-4CA9-82BA-9CDC988AFC48" class="fig--title">CLKBUF_DIFF</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__IMAGE_GCV_3RT_WPB" src="GUID-80723276-6878-4518-916A-9909FF45F6B5-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A29" data-ofbid="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A29" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-107. </span></span><span class="table--title" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A2B">INBUF_DIFF I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A31">
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A32">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A33">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A35">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A37">
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A38">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A39" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A33">PADP, PADN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A3B" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A35">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A3D" data-ofbid="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A3D" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-108. </span></span><span class="table--title" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A3F">INBUF_DIFF Truth Table</span></caption><colgroup><col style="width:0.625in"/><col style="width:0.6875in"/><col style="width:0.6875in"/></colgroup><thead class="- topic/thead thead" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A46">
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A47">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A48">PADP</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4A">PADN</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4C">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4E">
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A50" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A48">Z</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A52" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4A">Z</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A54" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4C">Y</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A56">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A57" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A48">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A59" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4A">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A5B" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4C">X</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A5D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A5E" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A48">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A60" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4A">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A62" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4C">X</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A64">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A65" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A48">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A67" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4A">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A69" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4C">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A6B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A6C" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A48">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A6E" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4A">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A70" headers="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21__ID-00000A4C">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__GUID-D081D856-34CE-4D9B-96D0-0325E21937E8" xml:lang="en-US" lang="en-US" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943">
+   <h2 class="- topic/title title topictitle2" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__GUID-D081D856-34CE-4D9B-96D0-0325E21937E8" style="display:inline-block">14.1.4.4 CLKINT</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=CLKINT">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001057" data-ofbid="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001057">This macro routes an internal fabric signal to the global network.<figure class="- topic/fig fig fignone" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__FIG_NXZ_H2J_L4B" data-ofbid="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__FIG_NXZ_H2J_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-55. <span id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__GUID-FAD6A1CF-C2F1-44BE-ABD6-1674A83A48B7" class="fig--title">CLKINT</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__IMAGE_JNM_3PF_YPB" src="GUID-94D53D43-8C72-4044-8C87-AF4EA87E3E26-low.png" width="200"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000105C" data-ofbid="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000105C" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-109. </span></span><span class="table--title" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000105E">CLKINT I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001064">
+               <tr class="- topic/row" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001065">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001066">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001068">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000106A">
+               <tr class="- topic/row" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000106B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000106C" headers="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001066">A</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000106E" headers="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001068">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001070" data-ofbid="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001070" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-110. </span></span><span class="table--title" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001072">CLKINT Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/></colgroup><thead class="- topic/thead thead" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001078">
+               <tr class="- topic/row" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001079">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107A">A</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107C">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107E">
+               <tr class="- topic/row" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001080" headers="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107A">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001082" headers="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107C">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001084">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001085" headers="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107A">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-00001087" headers="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943__ID-0000107C">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__GUID-95C9147A-AD9C-4F19-8749-6C959AAFF375" xml:lang="en-US" lang="en-US" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB">
+   <h2 class="- topic/title title topictitle2" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__GUID-95C9147A-AD9C-4F19-8749-6C959AAFF375" style="display:inline-block">14.1.4.5 CLKINT_PRESERVE</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=CLKINT_PRESERVE">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000108B" data-ofbid="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000108B">This Macro routes an internal fabric signal to the global network. It has
+         the same functionality as CLKINT except that this clock always stays on the global clock
+         network and will not be demoted during design implementation.<figure class="- topic/fig fig fignone" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__FIG_SHS_L2J_L4B" data-ofbid="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__FIG_SHS_L2J_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-56. <span id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__GUID-D4C78192-8DB9-4081-BBCF-8352A3D10758" class="fig--title">CLKINT_PRESERVE</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__IMAGE_FJF_NPF_YPB" src="GUID-7223DEFB-F1EA-4706-BFCD-4D8858D0E204-low.png" width="200"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-00001090" data-ofbid="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-00001090" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-111. </span></span><span class="table--title" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-00001092">CLKINT_PRESERVE I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-00001098">
+               <tr class="- topic/row" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-00001099">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000109A">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000109C">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000109E">
+               <tr class="- topic/row" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000109F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010A0" headers="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000109A">A</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010A2" headers="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-0000109C">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010A4" data-ofbid="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010A4" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-112. </span></span><span class="table--title" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010A6">CLKINT_PRESERVE Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/></colgroup><thead class="- topic/thead thead" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010AC">
+               <tr class="- topic/row" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010AD">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010AE">A</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B0">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B2">
+               <tr class="- topic/row" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B3">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B4" headers="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010AE">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B6" headers="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B0">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B8">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B9" headers="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010AE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010BB" headers="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB__ID-000010B0">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__GUID-14437758-A286-4B71-8815-29FF89D35E54" xml:lang="en-US" lang="en-US" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9"><h2 class="- topic/title title topictitle2" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__GUID-14437758-A286-4B71-8815-29FF89D35E54" style="display:inline-block">14.1.4.6 GCLKBUF</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=GCLKBUF">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><div class="- topic/p p" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017BC" data-ofbid="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017BC">Gated input I/O macro to the global network. The Enable signal can turn off the global network to save power.<figure class="- topic/fig fig fignone" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__FIG_TDC_YJJ_L4B" data-ofbid="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__FIG_TDC_YJJ_L4B"><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__FIG_W3G_ZJJ_L4B" data-ofbid="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__FIG_W3G_ZJJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-57. <span id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__GUID-8CD7A9F2-64C1-4071-8636-15F3ECC72C95" class="fig--title">GCLKBUF</span></span></figcaption><img class="- topic/image image" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__IMAGE_X3G_ZJJ_L4B" src="GUID-C2BC9932-493E-4EA2-9A37-60118DED557D-low.png" height="146" width="410"/></figure></div></figure></div><div class="table-container"><table class="- topic/table table" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017C1" data-ofbid="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017C1" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-113. </span></span><span class="table--title" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017C3">GCLKBUF I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017C9"><tr class="- topic/row" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017CA"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017CB">Input</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017CD">Output</th></tr></thead><tbody class="- topic/tbody tbody" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017CF"><tr class="- topic/row" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017D0"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017D1" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017CB">PAD, EN</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017D3" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017CD">Y</td></tr></tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017D5" data-ofbid="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017D5" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-114. </span></span><span class="table--title" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017D7">GCLKBUF Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.5in"/></colgroup><thead class="- topic/thead thead" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017DF"><tr class="- topic/row" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E0"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E1">PAD</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E3">EN</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E5">q</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E7">Y</th></tr></thead><tbody class="- topic/tbody tbody" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E9"><tr class="- topic/row" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017EA"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017EB" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E1">0</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017ED" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E3">0</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017EF" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E5">0</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017F1" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E7">0</td></tr><tr class="- topic/row" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017F3"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017F4" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E1">0</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017F6" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E3">1</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017F8" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E5">1</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017FA" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E7">0</td></tr><tr class="- topic/row" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017FC"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017FD" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E1">1</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017FF" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E3">X</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-00001801" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E5">q</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-00001803" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E7">q</td></tr><tr class="- topic/row" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-00001805"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-00001806" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E1">Z</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-00001808" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E3">X</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-0000180A" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E5">X</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-0000180C" headers="GUID-97775587-86C0-4E8B-B491-8471A954B5C9__ID-000017E7">X</td></tr></tbody></table></div></div></article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__GUID-B90376CF-6951-4BCE-8475-62EFC6E77B05" xml:lang="en-US" lang="en-US" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50">
+   <h2 class="- topic/title title topictitle2" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__GUID-B90376CF-6951-4BCE-8475-62EFC6E77B05" style="display:inline-block">14.1.4.7 GCLKBUF_DIFF</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=GCLKBUF_DIFF">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000012C" data-ofbid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000012C">Gated differential I/O macro to global network; the Enable signal can be
+         used to turn off the global network.<figure class="- topic/fig fig fignone" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__FIG_R22_XS4_L4B" data-ofbid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__FIG_R22_XS4_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__FIG_GLJ_1T4_L4B" data-ofbid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__FIG_GLJ_1T4_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-58. <span id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__GUID-70FF3650-64F4-4503-AE07-D6DAE9B04440" class="fig--title">GCLKBUF_DIFF</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__IMAGE_HLJ_1T4_L4B" src="GUID-23060DC3-35D1-4089-AB1D-C4120EA199CF-low.png" height="107" width="411"/>
+               </figure>
+            </div>
+         </figure></div>
+      <p class="- topic/p p" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000131" data-ofbid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000131">Differential</p>
+      <div class="table-container"><table class="- topic/table table" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000132" data-ofbid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000132" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-115. </span></span><span class="table--title" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000134">GCLKBUF_DIFF I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000013A">
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000013B">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000013C">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000013E">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000140">
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000141">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000142" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000013C">PADP, PADN, EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000144" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000013E">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000146" data-ofbid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000146" data-cols="5"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-116. </span></span><span class="table--title" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000148">GCLKBUF_DIFF Truth Table</span></caption><colgroup><col style="width:0.625in"/><col style="width:0.6875in"/><col style="width:0.625in"/><col style="width:0.625in"/><col style="width:0.6875in"/></colgroup><thead class="- topic/thead thead" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000151">
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000152">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000153">PADP</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000155">PADN</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000157">EN</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000159">q</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015B">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015D">
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015E">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015F" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000153">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000161" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000155">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000163" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000157">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000165" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000159">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000167" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015B">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000169">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000016A" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000153">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000016C" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000155">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000016E" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000157">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000170" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000159">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000172" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015B">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000174">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000175" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000153">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000177" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000155">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000179" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000157">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000017B" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000159">q</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000017D" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015B">q</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000017F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000180" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000153">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000182" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000155">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000184" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000157">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000186" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000159">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000188" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015B">X</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000018A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000018B" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000153">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000018D" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000155">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000018F" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000157">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000191" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000159">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000193" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015B">X</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000195">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000196" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000153">Z</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000198" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000155">Z</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000019A" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000157">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000019C" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-00000159">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000019E" headers="GUID-77715118-06C4-458C-AF53-A9ED73AABB50__ID-0000015B">X</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__GUID-C8A84751-68BC-4270-953E-E1C1B37A39F8" xml:lang="en-US" lang="en-US" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D">
+   <h2 class="- topic/title title topictitle2" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__GUID-C8A84751-68BC-4270-953E-E1C1B37A39F8" style="display:inline-block">14.1.4.8 GCLKINT</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=GCLKINT">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-000011FD" data-ofbid="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-000011FD">Gated macro used to route an internal fabric signal to the global network.
+         The Enable signal can be used to turn off the global network to save power.<figure class="- topic/fig fig fignone" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__FIG_JTT_PFJ_L4B" data-ofbid="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__FIG_JTT_PFJ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__FIG_IKX_ZFJ_L4B" data-ofbid="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__FIG_IKX_ZFJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-59. <span id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__GUID-CEE91381-3B81-4AF0-BA9D-D9ACCA3FECF7" class="fig--title">GCLKINT</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__IMAGE_JKX_ZFJ_L4B" src="GUID-3171D8A0-4997-495E-BF1E-BCFD5BACA2B2-low.png" height="131" width="410"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001203" data-ofbid="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001203" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-117. </span></span><span class="table--title" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001205">GCLKINT I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000120B">
+               <tr class="- topic/row" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000120C">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000120D">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000120F">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001211">
+               <tr class="- topic/row" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001212">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001213" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000120D">A, EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001215" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000120F">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001217" data-ofbid="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001217" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-118. </span></span><span class="table--title" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001219">GCLKINT Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.71701in"/><col style="width:0.71702in"/></colgroup><thead class="- topic/thead thead" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001221">
+               <tr class="- topic/row" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001222">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001223">A</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001225">EN</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001227">q (Internal Signal)</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001229">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000122B">
+               <tr class="- topic/row" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000122C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000122D" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001223">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000122F" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001225">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001231" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001227">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001233" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001229">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001235">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001236" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001223">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001238" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001225">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000123A" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001227">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000123C" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001229">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000123E">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-0000123F" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001223">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001241" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001225">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001243" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001227">q</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001245" headers="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D__ID-00001229">q</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__GUID-B93F9C6E-9ED3-4482-AE59-1D19F0F9BDA3" xml:lang="en-US" lang="en-US" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39">
+   <h2 class="- topic/title title topictitle2" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__GUID-B93F9C6E-9ED3-4482-AE59-1D19F0F9BDA3" style="display:inline-block">14.1.4.9 RCLKINT</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=RCLKINT">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001249" data-ofbid="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001249">Macro used to route an internal fabric signal to a row global buffer, thus
+         creating a local clock.<figure class="- topic/fig fig fignone" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__FIG_IYP_CGJ_L4B" data-ofbid="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__FIG_IYP_CGJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-60. <span id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__GUID-3BC3951F-C9FA-4C1D-A98E-EBDD102B2862" class="fig--title">RCLKINT</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__IMAGE_ON5_VPF_YPB" src="GUID-4BFC3598-0FD1-43C6-9701-974AF740C577-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000124E" data-ofbid="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000124E" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-119. </span></span><span class="table--title" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001250">RCLKINT I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001256">
+               <tr class="- topic/row" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001257">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001258">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000125A">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000125C">
+               <tr class="- topic/row" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000125D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000125E" headers="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001258">A</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001260" headers="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000125A">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001262" data-ofbid="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001262" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-120. </span></span><span class="table--title" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001264">RCLKINT Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/></colgroup><thead class="- topic/thead thead" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126A">
+               <tr class="- topic/row" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126B">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126C">A</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126E">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001270">
+               <tr class="- topic/row" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001271">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001272" headers="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126C">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001274" headers="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126E">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001276">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001277" headers="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126C">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-00001279" headers="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39__ID-0000126E">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__GUID-24C28055-A04B-40A9-AAEC-C49FE788023C" xml:lang="en-US" lang="en-US" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355">
+   <h2 class="- topic/title title topictitle2" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__GUID-24C28055-A04B-40A9-AAEC-C49FE788023C" style="display:inline-block">14.1.4.10 RGCLKINT</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=RGCLKINT">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000131C" data-ofbid="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000131C">Gated macro used to route an internal fabric signal to a row global
+         buffer, thus creating a local clock. The Enable signal can be used to turn off the local
+         clock to save power.<figure class="- topic/fig fig fignone" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__FIG_O5Z_NGJ_L4B" data-ofbid="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__FIG_O5Z_NGJ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__GUID-CB1A12A8-9365-4ACB-A194-383E2ED60275" data-ofbid="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__GUID-CB1A12A8-9365-4ACB-A194-383E2ED60275"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-61. <span id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__GUID-646AD3B3-1BA6-4CC1-B7FE-30B1895F81F7" class="fig--title">RGCLKINT</span></span></figcaption>
+                  
+                  <img class="- topic/image image" src="GUID-546423F0-3CF7-4BFD-B80C-C43D24A50AB6-low.png" height="140" width="413"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001321" data-ofbid="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001321" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-121. </span></span><span class="table--title" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001323">RGCLKINT I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001329">
+               <tr class="- topic/row" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000132A">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000132B">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000132D">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000132F">
+               <tr class="- topic/row" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001330">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001331" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000132B">A, EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001333" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000132D">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001335" data-ofbid="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001335" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-122. </span></span><span class="table--title" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001337">RGCLKINT Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.71701in"/><col style="width:0.71702in"/></colgroup><thead class="- topic/thead thead" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000133F">
+               <tr class="- topic/row" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001340">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001341">A</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001343">EN</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001345">q (Internal Signal)</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001347">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001349">
+               <tr class="- topic/row" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000134A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000134B" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001341">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000134D" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001343">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000134F" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001345">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001351" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001347">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001353">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001354" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001341">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001356" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001343">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001358" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001345">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000135A" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001347">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000135C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000135D" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001341">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-0000135F" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001343">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001361" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001345">q</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001363" headers="GUID-1949164E-9496-409E-B3F2-2B1C95B76355__ID-00001347">q</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-82817CFC-63EC-43F8-B5A3-F28B47323286" data-tocid="GUID-82817CFC-63EC-43F8-B5A3-F28B47323286">14.1.4.1 CLKBIBUF</a></li><li class="topic-item"><a href="#GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D" data-tocid="GUID-495505D8-30CE-4D9B-AF62-B7BAA542BF5D">14.1.4.2 CLKBUF</a></li><li class="topic-item"><a href="#GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21" data-tocid="GUID-37C72FE1-5A3C-47C8-8158-937C58C69A21">14.1.4.3 CLKBUF_DIFF</a></li><li class="topic-item"><a href="#GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943" data-tocid="GUID-FE8C7F41-169E-4A17-A2CB-5B15305BA943">14.1.4.4 CLKINT</a></li><li class="topic-item"><a href="#GUID-118DED41-52FE-43FD-B504-996EB30FE5FB" data-tocid="GUID-118DED41-52FE-43FD-B504-996EB30FE5FB">14.1.4.5 CLKINT_PRESERVE</a></li><li class="topic-item"><a href="#GUID-97775587-86C0-4E8B-B491-8471A954B5C9" data-tocid="GUID-97775587-86C0-4E8B-B491-8471A954B5C9">14.1.4.6 GCLKBUF</a></li><li class="topic-item"><a href="#GUID-77715118-06C4-458C-AF53-A9ED73AABB50" data-tocid="GUID-77715118-06C4-458C-AF53-A9ED73AABB50">14.1.4.7 GCLKBUF_DIFF</a></li><li class="topic-item"><a href="#GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D" data-tocid="GUID-0CE16264-1DFE-4AF1-865D-FA2E54C23A7D">14.1.4.8 GCLKINT</a></li><li class="topic-item"><a href="#GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39" data-tocid="GUID-4765C293-A5CC-4B92-B7A0-74CCABD89B39">14.1.4.9 RCLKINT</a></li><li class="topic-item"><a href="#GUID-1949164E-9496-409E-B3F2-2B1C95B76355" data-tocid="GUID-1949164E-9496-409E-B3F2-2B1C95B76355">14.1.4.10 RGCLKINT</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

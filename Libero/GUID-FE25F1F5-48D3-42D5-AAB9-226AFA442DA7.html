@@ -1,0 +1,450 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="SmartDebug allows you to interrogate and view embedded silicon features and device status. The following procedure describes the most common steps for using SmartDebug. Note: To use SmartDebug, ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><meta name="keywords" content="CS_TAG_Whlp_smartdebug_CREATE_PROJECT_DLG, CS_NUMBER_7516"/><title>13.3.1 Getting Started with SmartDebug</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7-d10733e12345"/><meta name="wh-source-relpath" content="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.xml"/><meta name="wh-out-relpath" content="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+SmartDebug</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDebug </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7"><div class="title"><a href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.1</ph>
+Getting Started with SmartDebug</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10987" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10987-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10987-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+FlashPro Express</a><div class="wh-tooltip"><p class="shortdesc">Information about FlasPro Express </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11587" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11587-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html" id="tocId-d10733e11587-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Secure Production Programming Solution (SPPS)</a><div class="wh-tooltip"><p class="shortdesc">Information about Secure Production Programming Solution (SPPS)
+				</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e12317" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e12317-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" id="tocId-d10733e12317-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+SmartDebug</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDebug </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89-d10733e12321" class="topicref introduction" data-id="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89-d10733e12321-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" id="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89-d10733e12321-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7-d10733e12345" class="topicref" data-id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7-d10733e12345-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7-d10733e12345-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.1</ph>
+Getting Started with SmartDebug</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9-d10733e12353" class="topicref" data-id="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9-d10733e12353-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9" id="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9-d10733e12353-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.1.1</ph>
+Use Models</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E29751C5-0093-471F-9722-13176B9C481C-d10733e12417" class="topicref" data-id="GUID-E29751C5-0093-471F-9722-13176B9C481C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-E29751C5-0093-471F-9722-13176B9C481C" id="GUID-E29751C5-0093-471F-9722-13176B9C481C-d10733e12417-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.1.2</ph>
+Configuring a Generic Device</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F-d10733e12425" class="topicref" data-id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-9954711C-FF11-4C43-A048-0A70A115EC8F" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F-d10733e12425-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.1.3</ph>
+Debugging Devices Connected in a JTAG Chain</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-593F19AE-C1E3-4819-8BB0-65929625C4A5-d10733e12433" class="topicref" data-id="GUID-593F19AE-C1E3-4819-8BB0-65929625C4A5" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-593F19AE-C1E3-4819-8BB0-65929625C4A5-d10733e12433-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-593F19AE-C1E3-4819-8BB0-65929625C4A5.html#GUID-593F19AE-C1E3-4819-8BB0-65929625C4A5" id="GUID-593F19AE-C1E3-4819-8BB0-65929625C4A5-d10733e12433-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.2</ph>
+SmartDebug User Interface</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-AFCD4A75-089E-4BD6-AFD4-FC526F201B3D-d10733e12537" class="topicref" data-id="GUID-AFCD4A75-089E-4BD6-AFD4-FC526F201B3D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-AFCD4A75-089E-4BD6-AFD4-FC526F201B3D-d10733e12537-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-AFCD4A75-089E-4BD6-AFD4-FC526F201B3D.html#GUID-AFCD4A75-089E-4BD6-AFD4-FC526F201B3D" id="GUID-AFCD4A75-089E-4BD6-AFD4-FC526F201B3D-d10733e12537-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.3</ph>
+Debugging</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-C24C4BEA-4AE5-4203-BE37-B6035BB11CA7-d10733e13386" class="topicref" data-id="GUID-C24C4BEA-4AE5-4203-BE37-B6035BB11CA7" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-C24C4BEA-4AE5-4203-BE37-B6035BB11CA7-d10733e13386-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C24C4BEA-4AE5-4203-BE37-B6035BB11CA7.html#GUID-C24C4BEA-4AE5-4203-BE37-B6035BB11CA7" id="GUID-C24C4BEA-4AE5-4203-BE37-B6035BB11CA7-d10733e13386-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.4</ph>
+SmartDebug Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6D8FE55D-13C7-4B25-806D-6C80802E000D-d10733e14292" class="topicref" data-id="GUID-6D8FE55D-13C7-4B25-806D-6C80802E000D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6D8FE55D-13C7-4B25-806D-6C80802E000D-d10733e14292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6D8FE55D-13C7-4B25-806D-6C80802E000D.html#GUID-6D8FE55D-13C7-4B25-806D-6C80802E000D" id="GUID-6D8FE55D-13C7-4B25-806D-6C80802E000D-d10733e14292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3.5</ph>
+Frequently Asked Questions</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e14622" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e14622-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="tocId-d10733e14622-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-4B42F2A2-9F0F-4976-BB08-378B03BD9F20"><article class="nested0" aria-labelledby="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-4B42F2A2-9F0F-4976-BB08-378B03BD9F20" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7"><h1 class="- topic/title title topictitle1" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-4B42F2A2-9F0F-4976-BB08-378B03BD9F20" style="display:inline-block">13.3.1 Getting Started with SmartDebug</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Getting%20Started%20with%20SmartDebug">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><div class="- topic/p p">SmartDebug allows you to interrogate and view embedded silicon features and device status. The following procedure describes the most common steps for using SmartDebug. <div class="- topic/note note notype note_notype" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-ABE8BF7D-7F57-4252-97B0-C72EDF328163" data-ofbid="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-ABE8BF7D-7F57-4252-97B0-C72EDF328163"><span class="note__title">Note:</span> To use SmartDebug, connect a FlashPro programmer from a PC to the target device.</div></div><ol class="- topic/ol ol" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-653DD413-B914-4066-985F-42EA0AE160A3" data-ofbid="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-653DD413-B914-4066-985F-42EA0AE160A3"><li class="- topic/li li" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-C5A53304-5C88-4A58-AC6B-B9725AC8226C" data-ofbid="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-C5A53304-5C88-4A58-AC6B-B9725AC8226C">Create your design. </li><li class="- topic/li li" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-1207FCFB-101A-4FA2-AC8C-72DE1E327647" data-ofbid="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-1207FCFB-101A-4FA2-AC8C-72DE1E327647">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Debug Design</span> and double click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">SmartDebug Design </span>in the Design Flow window. SmartDebug opens for your target device.</li><li class="- topic/li li" id="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-FD6D40D2-D538-47EF-BB4E-C989B33DC622" data-ofbid="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7__GUID-FD6D40D2-D538-47EF-BB4E-C989B33DC622">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">View Device Status </span>to view the device status report and check for issues.</li></ol></div><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-219C1ABB-C3A9-4E58-B74D-C0619525B61C" xml:lang="en-US" lang="en-US" id="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9"><h2 class="- topic/title title topictitle2" id="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-219C1ABB-C3A9-4E58-B74D-C0619525B61C" style="display:inline-block">13.3.1.1 Use Models</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Use%20Models">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><p class="- topic/p p">SmartDebug can be run in the following modes:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-A5672532-4FF9-4ACC-9310-E790767CD533" data-ofbid="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-A5672532-4FF9-4ACC-9310-E790767CD533"><a class="- topic/xref xref" href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-535B9EF5-F08A-43A5-949D-6EF1441B35E9">Integrated
+                    mode</a></li><li class="- topic/li li" id="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-1A080B8F-97D1-4F99-92C3-1B815DA7A050" data-ofbid="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-1A080B8F-97D1-4F99-92C3-1B815DA7A050"><a class="- topic/xref xref" href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D">Standalone
+                    mode</a></li><li class="- topic/li li" id="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-26369431-BD91-4293-B4DB-6B651AA5F8E6" data-ofbid="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9__GUID-26369431-BD91-4293-B4DB-6B651AA5F8E6"><a class="- topic/xref xref" href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8">Demo
+                mode</a></li></ul></div><article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-535B9EF5-F08A-43A5-949D-6EF1441B35E9__GUID-C6B4F8F4-C136-4FEB-B05F-0FC78F1776B0" xml:lang="en-US" lang="en-US" id="GUID-535B9EF5-F08A-43A5-949D-6EF1441B35E9"><h3 class="- topic/title title topictitle3" id="GUID-535B9EF5-F08A-43A5-949D-6EF1441B35E9__GUID-C6B4F8F4-C136-4FEB-B05F-0FC78F1776B0" style="display:inline-block">13.3.1.1.1 Integrated Mode</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Integrated%20Mode">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><p class="- topic/p p">Running SmartDebug in Integrated mode allows you to access all design and programming hardware information. No additional setup is required. In addition, the Probe Insertion feature is available in Debug FPGA Array.</p><p class="- topic/p p">To run SmartDebug in Integrated mode, expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Debug Design </span> in the Libero Design Flow window, and then double click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">SmartDebug Design</span>. Unlike Standalone mode, you do not have to create a project to use SmartDebug in Integrated mode.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D__GUID-55D95E10-3C3A-43CF-8652-A73B069ECCFA" xml:lang="en-US" lang="en-US" id="GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D"><h3 class="- topic/title title topictitle3" id="GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D__GUID-55D95E10-3C3A-43CF-8652-A73B069ECCFA" style="display:inline-block">13.3.1.1.2 Standalone Mode</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Standalone%20Mode">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">SmartDebug can be installed separately in the setup containing FlashPro Express and Job Manager.
+            This provides a lean installation that includes all the programming and debug tools to
+            be installed in a lab environment for debug. In this mode, SmartDebug is launched
+            outside of the Libero Design Flow. When launched in Standalone mode, you must create a
+            project and import a Design Debug Data Container (DDC) file exported from Libero to
+            access all debug features in the supported devices.</p>
+        <p class="- topic/p p">In the main use model for standalone SmartDebug, the DDC file must be generated from
+            Libero and imported into a SmartDebug project to obtain full access to the device debug
+            features. Alternatively, SmartDebug can be used without a DDC file with a limited
+            feature set.</p><div class="- topic/note note notype note_notype" id="GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D__GUID-89EBACB9-079B-48E7-967D-FF574BFC4915" data-ofbid="GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D__GUID-89EBACB9-079B-48E7-967D-FF574BFC4915"><span class="note__title">Note:</span> In Standalone mode, the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Probe
+                Insertion</span> feature is not available in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">FPGA Array
+                Debug</span> because it requires incremental routing to connect the user net to
+            the specified I/O.</div></div><article class="- topic/topic topic nested3" aria-labelledby="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__GUID-3F671AAA-9D05-4540-B92C-51ED4CE29E79" xml:lang="en-US" lang="en-US" id="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326">
+    <h4 class="- topic/title title topictitle4" id="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__GUID-3F671AAA-9D05-4540-B92C-51ED4CE29E79" style="display:inline-block">13.3.1.1.2.1 Creating a Standalone SmartDebug
+        Project</h4><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20a%20Standalone%20SmartDebug%20Project">(Ask a Question)</a>
+    
+    
+    <div class="- topic/body body">
+        <p class="- topic/p p">Creating standalone SmartDebug projects starts with the Create SmartDebug Project dialog
+            box. This dialog box provides two options for creating standalone SmartDebug
+            projects:</p>
+        <ul class="- topic/ul ul">
+            <li class="- topic/li li" id="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__GUID-8CC6AC84-8ED9-433E-9CDE-7DEBADE9A0B2" data-ofbid="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__GUID-8CC6AC84-8ED9-433E-9CDE-7DEBADE9A0B2"><a class="- topic/xref xref" href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5">Import DDC
+                    File</a> creates a standalone object from DDC files created in Libero.</li>
+            <li class="- topic/li li" id="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__GUID-8A2CA6C6-F5C3-41A2-9487-9FFC4A4A3DD3" data-ofbid="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__GUID-8A2CA6C6-F5C3-41A2-9487-9FFC4A4A3DD3"><a class="- topic/xref xref" href="GUID-FE25F1F5-48D3-42D5-AAB9-226AFA442DA7.html#GUID-642E1860-B207-4A85-A9B5-AAE1332E8D40">Construct
+                    Automatically</a> creates a debug project with all the devices connected in
+                the chain for the selected programmer. </li>
+        </ul>
+        <p class="- topic/p p">To display the Create SmartDebug Project dialog box, from the SmartDebug main window,
+            click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Project</span> and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">New Project</span>.</p>
+        <div class="- topic/p p">
+            <figure class="- topic/fig fig fignone" id="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__FIG_OGC_KML_KNB" data-ofbid="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__FIG_OGC_KML_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-50. <span id="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__GUID-65AC6F12-66E5-48B7-9A8A-74D98924CF1B" class="fig--title">Create SmartDebug Project
+                    Dialog Box</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326__IMAGE_XGC_KML_KNB" src="GUID-F49437D3-FCA4-4965-BAD2-DA3AA9A04F4B-low.jpg" height="389" width="539" alt="???"/>
+            </figure>
+        </div>
+    </div>
+<article class="- topic/topic topic nested4" aria-labelledby="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__GUID-8FA7AB60-936F-41F7-95D1-87688897016F" xml:lang="en-US" lang="en-US" id="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5"><h5 class="- topic/title title topictitle5" id="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__GUID-8FA7AB60-936F-41F7-95D1-87688897016F" style="display:inline-block">13.3.1.1.2.1.1 Import DDC File Created from Libero</h5><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Import%20DDC%20File%20Created%20from%20Libero">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p">If you select the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Import DDC File </span>option in the Create SmartDebug Project
+            dialog box, the SmartDebug project inherits:<ul class="- topic/ul ul" id="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__UL_T1T_LZZ_NQB" data-ofbid="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__UL_T1T_LZZ_NQB">
+                <li class="- topic/li li" id="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__GUID-F6C94D12-166B-4D4D-9753-0363894A2F4F" data-ofbid="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__GUID-F6C94D12-166B-4D4D-9753-0363894A2F4F">The Design Debug Data of the
+                    target device and all hardware and JTAG chain information in the DDC file
+                    exported in Libero. </li>
+                <li class="- topic/li li" id="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__GUID-CE92EF10-A78D-4599-B082-EE7B8C864F17" data-ofbid="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5__GUID-CE92EF10-A78D-4599-B082-EE7B8C864F17">The programming file information
+                    loaded onto other Microchip devices in the chain.</li>
+            </ul></div><p class="- topic/p p">Debug data is imported from the DDC file (created through Export SmartDebug Data in Libero) into the debug project, and the devices are configured using data from the DDC file.</p><p class="- topic/p p">If the DDC version and software version are not compatible, you cannot create the project. In
+            this case, PolarFire users must run <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Generate SmartDebug FPGA Array
+                Data</span> under <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Debug Design</span> in Design Flow. All users
+            must then click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Export SmartDebug Data </span> under <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Handle
+                Design for Debugging</span> in Design Flow to export a new DDC file for use
+            with project creation.</p></div></article><article class="- topic/topic topic nested4" aria-labelledby="GUID-642E1860-B207-4A85-A9B5-AAE1332E8D40__GUID-15567988-DB06-4713-910D-B662B0505C70" xml:lang="en-US" lang="en-US" id="GUID-642E1860-B207-4A85-A9B5-AAE1332E8D40"><h5 class="- topic/title title topictitle5" id="GUID-642E1860-B207-4A85-A9B5-AAE1332E8D40__GUID-15567988-DB06-4713-910D-B662B0505C70" style="display:inline-block">13.3.1.1.2.1.2 Construct Automatically</h5><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Construct%20Automatically">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Selecting the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Construct Automatically </span>option in the Create SmartDebug
+                                    Project dialog box creates a debug project with all the devices
+                                    connected in the chain for the selected programmer. This is
+                                    equivalent to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Construct Chain
+                                                Automatically</span> in FlashPro.</p></div></article><article class="- topic/topic topic nested4" aria-labelledby="GUID-999BA1C1-6440-465E-B369-F8A4157AEDD3__GUID-BABB1356-5BC6-4B2E-A286-2C7CCB218566" xml:lang="en-US" lang="en-US" id="GUID-999BA1C1-6440-465E-B369-F8A4157AEDD3">
+    <h5 class="- topic/title title topictitle5" id="GUID-999BA1C1-6440-465E-B369-F8A4157AEDD3__GUID-BABB1356-5BC6-4B2E-A286-2C7CCB218566" style="display:inline-block">13.3.1.1.2.1.3 Connected Programmers Drop-Down
+        List</h5><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Connected%20Programmers%20Drop-Down%20List">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Connected Programmers</span> drop-down list in the Create SmartDebug
+            Project dialog box shows all FlashPro programmers connected to the device. Select the
+            programmer connected to the chain with the debug device. At least one programmer must be
+            connected to create a standalone SmartDebug project.</p>
+        <p class="- topic/p p">Before a debugging session or after a design change, program the device using
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Programming Connectivity and Interface</span> in Design Flow.</p>
+    </div>
+</article></article></article><article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-C093F219-6E9F-45E9-A3DE-3E6707466809" xml:lang="en-US" lang="en-US" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8"><h3 class="- topic/title title topictitle3" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-C093F219-6E9F-45E9-A3DE-3E6707466809" style="display:inline-block">13.3.1.1.3 Demo Mode</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Demo%20Mode">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><div class="- topic/p p">Demo mode provides access to the following SmartDebug features without requiring you to connect a
+                                    board to the system:<ul class="- topic/ul ul" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__UL_HNX_FBR_VSB" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__UL_HNX_FBR_VSB">
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-856295BB-E69C-407A-900D-CC935B8ED445" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-856295BB-E69C-407A-900D-CC935B8ED445">Active Probe</li>
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-EAE4B032-0911-46DD-92B2-795CB06825A9" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-EAE4B032-0911-46DD-92B2-795CB06825A9">Live Probe</li>
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-8B77EDB2-1DB7-42A5-A30B-70985C957DC5" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-8B77EDB2-1DB7-42A5-A30B-70985C957DC5">Memory Blocks</li>
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-757E2FCD-D784-425E-8EC9-9D83C00A9F66" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-757E2FCD-D784-425E-8EC9-9D83C00A9F66">Transceiver</li>
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-5087D2CB-E779-43BE-B9ED-37DEE5B6B2A4" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-5087D2CB-E779-43BE-B9ED-37DEE5B6B2A4">Debug sNVM</li>
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-059FF5D8-7D08-41C4-8177-29B150B6572C" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-059FF5D8-7D08-41C4-8177-29B150B6572C">Debug UPROM</li>
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-74CB225D-A124-4D6C-8475-CEB63B9137F4" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-74CB225D-A124-4D6C-8475-CEB63B9137F4">Debug DDR</li>
+                                                <li class="- topic/li li" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-57C07798-85F4-4825-803A-FD4BD276A20D" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-57C07798-85F4-4825-803A-FD4BD276A20D">Debug IOD</li>
+                                    </ul></div>
+                        <p class="- topic/p p">To run SmartDebug in Demo mode, start SmartDebug in either Integrated or
+                                    Standalone mode when the hardware is not connected.</p><div class="- topic/note note notype note_notype" id="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-4812547C-2C3C-42A0-8886-D6A6BC9E1E7A" data-ofbid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8__GUID-4812547C-2C3C-42A0-8886-D6A6BC9E1E7A"><span class="note__title">Note:</span> SmartDebug Demo mode is for demonstration
+                                    purposes only, and does not provide the functionality of
+                                    integrated mode or standalone mode. You cannot switch between
+                                    Demo mode and any other mode while SmartDebug is running in Demo
+                                    mode.</div></div></article></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-E29751C5-0093-471F-9722-13176B9C481C__GUID-CD62D961-25A7-42A1-A0F0-8C5CCF1879E0" xml:lang="en-US" lang="en-US" id="GUID-E29751C5-0093-471F-9722-13176B9C481C"><h2 class="- topic/title title topictitle2" id="GUID-E29751C5-0093-471F-9722-13176B9C481C__GUID-CD62D961-25A7-42A1-A0F0-8C5CCF1879E0" style="display:inline-block">13.3.1.2 Configuring a Generic Device</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Configuring%20a%20Generic%20Device">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">For Microchip devices that have the same JTAG IDCODE (that is, multiple derivatives of the same
+            Die), configure the device type for SmartDebug to enable relevant features for debug. To
+            configure the device, load the programming file by selecting the device using
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configure Device</span> in Design Flow, or import DDC files using
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Programming Connectivity and Interface</span> in Design Flow. When
+            the device is configured, all debug options are shown.</p><p class="- topic/p p">For debug projects created using <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Construct Automatically</span>, use the
+            following options to debug the devices:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-E29751C5-0093-471F-9722-13176B9C481C__GUID-B4C48A5E-3C10-4E74-9945-704DAD34C571" data-ofbid="GUID-E29751C5-0093-471F-9722-13176B9C481C__GUID-B4C48A5E-3C10-4E74-9945-704DAD34C571"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Load the programming file</span>:
+                Right click the device in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Programming Connectivity and
+                    Interface</span> view.</li><li class="- topic/li li" id="GUID-E29751C5-0093-471F-9722-13176B9C481C__GUID-4E82E442-0790-424B-82F5-CFB1F206511B" data-ofbid="GUID-E29751C5-0093-471F-9722-13176B9C481C__GUID-4E82E442-0790-424B-82F5-CFB1F206511B"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Import Debug Data from DDC
+                    file</span>: Right click the device in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Programming Connectivity
+                    and Interface</span> view.</li></ul><p class="- topic/p p">The appropriate debug features of the targeted devices are enabled after the programming file or DDC file is imported.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-448962C9-08C4-4D13-97E0-93AFCA3F8CFA" xml:lang="en-US" lang="en-US" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F">
+<h2 class="- topic/title title topictitle2" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-448962C9-08C4-4D13-97E0-93AFCA3F8CFA" style="display:inline-block">13.3.1.3 Debugging Devices Connected in a JTAG Chain</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Debugging%20Devices%20Connected%20in%20a%20JTAG%20Chain">(Ask a Question)</a>
+<div class="- topic/body body">
+<div class="- topic/p p">To debug the devices that are connected in JTAG chain, use the following procedure.<ol class="- topic/ol ol" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-D75DBE10-9121-4FA1-8C9B-74B3C060F3CE" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-D75DBE10-9121-4FA1-8C9B-74B3C060F3CE">
+                <li class="- topic/li li" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-51509A78-4B87-49C1-B7AC-D9033DBE0F5C" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-51509A78-4B87-49C1-B7AC-D9033DBE0F5C">In Libero, under
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Handoff Design for Debugging</span>, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Export
+                        SmartDebug Data</span>.</li>
+                <li class="- topic/li li" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-32329EAC-1E76-43FA-BB43-CA74B76BFEFD" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-32329EAC-1E76-43FA-BB43-CA74B76BFEFD">When the Export SmartDebug Data
+                    dialog box appears, select the parameters shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__FIG_AF4_KBC_1VB" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__FIG_AF4_KBC_1VB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-51. <span id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-ACD575DD-C208-4D25-8FA0-89A4A4C24D2F" class="fig--title">Export SmartDebug Data
+                            Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image break" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__IMAGE_BHW_M3L_GVB" src="GUID-D7A06275-4D67-402C-B991-415961C32A43-low.png"/>
+                    </figure></li>
+                <li class="- topic/li li" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-0B914841-BA9B-4D4C-9685-874F2684AAB2" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-0B914841-BA9B-4D4C-9685-874F2684AAB2">Start SmartDebug in stand-alone
+                    mode, and then click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Construct Automatically</span> in the
+                    Create SmartDebug Project dialog box to create a debug project with all the
+                    devices connected in the chain for the selected programmer.<figure class="- topic/fig fig fignone" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-3F14E941-350B-4D85-B01D-9F4C4F93073F" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-3F14E941-350B-4D85-B01D-9F4C4F93073F"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-52. <span id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-46492827-3391-47FE-BBCA-BAF7BB0A2A4D" class="fig--title">Create SmartDebug Project Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image break" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__IMAGE_UYM_G3R_PVB" src="GUID-2D402B36-BE14-476B-A8A4-4A97E958644E-low.png"/>
+                    </figure></li>
+                <li class="- topic/li li" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-97C2C936-0822-412A-AF53-572CF0CAD035" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-97C2C936-0822-412A-AF53-572CF0CAD035">In Design Flow, open
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Programming Connectivity and Interface</span>, enable the
+                    devices for programming, and load the DDC file exported in step 2. After the DDC
+                    file loads successfully for all the devices, program the devices.<figure class="- topic/fig fig fignone" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__FIG_TRK_N3R_PVB" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__FIG_TRK_N3R_PVB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-53. <span id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-00A9E12B-C043-4E64-8F66-FE2E7897D8A0" class="fig--title">Enable Device for Programming</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__IMAGE_JPP_D2M_KNB" src="GUID-7FA3368F-2908-4D7B-8302-1074351959CD-low.jpg" height="168" width="467" alt="???"/>
+                    </figure></li>
+                <li class="- topic/li li" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-A6F930C8-081A-40AE-9D7C-6CEEA4C93045" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-A6F930C8-081A-40AE-9D7C-6CEEA4C93045">When you finish programming, close the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Programming Connectivity and
+                        Interface</span>. The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Device</span> drop-down list in
+                    SmartDebug shows the devices connected in a JTAG chain.</li>
+                <li class="- topic/li li" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-5BEF7D23-9B71-482D-A052-F918AB24B414" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-5BEF7D23-9B71-482D-A052-F918AB24B414">Use the
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Device</span> drop-down list to select the device you want
+                    to debug.<div class="- topic/note note important note_important" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__NOTE_JSK_5CC_1VB" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__NOTE_JSK_5CC_1VB"><span class="note__title">Important:</span> You can debug only one
+                        device at a time.</div></li>
+            </ol></div>
+        <figure class="- topic/fig fig fignone" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__FIG_CTF_BDC_1VB" data-ofbid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__FIG_CTF_BDC_1VB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-54. <span id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__GUID-AB7135C1-3C8A-48D3-A547-EEA62E45D6BA" class="fig--title">Device Drop-Down List</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F__IMAGE_LC3_DDC_1VB" src="GUID-5D4E92D4-491E-40F3-A700-649249E47933-low.png"/>
+        </figure>
+</div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9" data-tocid="GUID-755CDC63-9B68-4FC4-86C7-ED6676275DE9">13.3.1.1 Use Models</a><ul><li class="topic-item"><a href="#GUID-535B9EF5-F08A-43A5-949D-6EF1441B35E9" data-tocid="GUID-535B9EF5-F08A-43A5-949D-6EF1441B35E9">13.3.1.1.1 Integrated Mode</a></li><li class="topic-item"><a href="#GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D" data-tocid="GUID-A0460F8B-F59B-4E67-9894-3F9C13CDE87D">13.3.1.1.2 Standalone Mode</a><ul><li class="topic-item"><a href="#GUID-6D793E32-BE2A-4694-8F7B-768F4490F326" data-tocid="GUID-6D793E32-BE2A-4694-8F7B-768F4490F326">13.3.1.1.2.1 Creating a Standalone SmartDebug
+        Project</a><ul><li class="topic-item"><a href="#GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5" data-tocid="GUID-DB0CD5BB-F47C-4A4B-8077-2C783E23C6B5">13.3.1.1.2.1.1 Import DDC File Created from Libero</a></li><li class="topic-item"><a href="#GUID-642E1860-B207-4A85-A9B5-AAE1332E8D40" data-tocid="GUID-642E1860-B207-4A85-A9B5-AAE1332E8D40">13.3.1.1.2.1.2 Construct Automatically</a></li><li class="topic-item"><a href="#GUID-999BA1C1-6440-465E-B369-F8A4157AEDD3" data-tocid="GUID-999BA1C1-6440-465E-B369-F8A4157AEDD3">13.3.1.1.2.1.3 Connected Programmers Drop-Down
+        List</a></li></ul></li></ul></li><li class="topic-item"><a href="#GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8" data-tocid="GUID-6BF168B2-AD39-4FD8-B54F-4F1EC764D2F8">13.3.1.1.3 Demo Mode</a></li></ul></li><li class="topic-item"><a href="#GUID-E29751C5-0093-471F-9722-13176B9C481C" data-tocid="GUID-E29751C5-0093-471F-9722-13176B9C481C">13.3.1.2 Configuring a Generic Device</a></li><li class="topic-item"><a href="#GUID-9954711C-FF11-4C43-A048-0A70A115EC8F" data-tocid="GUID-9954711C-FF11-4C43-A048-0A70A115EC8F">13.3.1.3 Debugging Devices Connected in a JTAG Chain</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

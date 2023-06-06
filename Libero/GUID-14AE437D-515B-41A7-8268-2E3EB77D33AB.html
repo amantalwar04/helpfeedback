@@ -1,0 +1,326 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="MSVT checks for the separation of IRS nets corresponding to a given block from external nets, per the specified separation criteria. If any of the nets of the design fail to satisfy the separation ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>17.4.4.7 Checking IRS Nets for a Given Block</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB-d10733e18680"/><meta name="wh-source-relpath" content="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB.xml"/><meta name="wh-out-relpath" content="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li><div class="topicref" data-id="GUID-7FBB06B6-C1C1-4324-AC87-F2B27B5A8FE9"><div class="title"><a href="GUID-7FBB06B6-C1C1-4324-AC87-F2B27B5A8FE9.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4</ph>
+Using the MSVT Tool</a></div></div></li><li><div class="topicref" data-id="GUID-85B5B29F-544B-4AC0-A737-2C4A3FBB1A97"><div class="title"><a href="GUID-85B5B29F-544B-4AC0-A737-2C4A3FBB1A97.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4</ph>
+MSVT Report Sections</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB"><div class="title"><a href="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.7</ph>
+Checking IRS Nets for a Given Block</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70-d10733e18554" class="topicref introduction" data-id="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70-d10733e18554-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Introduction</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C218F772-7698-4D66-B5DF-E99159C6CA0B-d10733e18562" class="topicref" data-id="GUID-C218F772-7698-4D66-B5DF-E99159C6CA0B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C218F772-7698-4D66-B5DF-E99159C6CA0B.html" id="GUID-C218F772-7698-4D66-B5DF-E99159C6CA0B-d10733e18562-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.1</ph>
+Overview</a></div></div></li><li role="treeitem"><div data-tocid="GUID-8C4F44C7-C54F-43D0-BA14-AB1D4BAC3E0C-d10733e18570" class="topicref" data-id="GUID-8C4F44C7-C54F-43D0-BA14-AB1D4BAC3E0C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8C4F44C7-C54F-43D0-BA14-AB1D4BAC3E0C.html" id="GUID-8C4F44C7-C54F-43D0-BA14-AB1D4BAC3E0C-d10733e18570-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.2</ph>
+Creating a Design </a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-12E4C266-D458-4905-A739-AABF2014D996-d10733e18578" class="topicref" data-id="GUID-12E4C266-D458-4905-A739-AABF2014D996" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-12E4C266-D458-4905-A739-AABF2014D996-d10733e18578-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-12E4C266-D458-4905-A739-AABF2014D996.html" id="GUID-12E4C266-D458-4905-A739-AABF2014D996-d10733e18578-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.3</ph>
+Extracting MSVT Files</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-7FBB06B6-C1C1-4324-AC87-F2B27B5A8FE9-d10733e18594" class="topicref" data-id="GUID-7FBB06B6-C1C1-4324-AC87-F2B27B5A8FE9" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-7FBB06B6-C1C1-4324-AC87-F2B27B5A8FE9-d10733e18594-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7FBB06B6-C1C1-4324-AC87-F2B27B5A8FE9.html" id="GUID-7FBB06B6-C1C1-4324-AC87-F2B27B5A8FE9-d10733e18594-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4</ph>
+Using the MSVT Tool</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-689D90A5-2A1C-44A7-B137-507ABB5D970E-d10733e18602" class="topicref" data-id="GUID-689D90A5-2A1C-44A7-B137-507ABB5D970E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-689D90A5-2A1C-44A7-B137-507ABB5D970E.html" id="GUID-689D90A5-2A1C-44A7-B137-507ABB5D970E-d10733e18602-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.1</ph>
+Using the msvt_check Command</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3DE26738-94C1-4F77-B0A3-241A983F901D-d10733e18610" class="topicref" data-id="GUID-3DE26738-94C1-4F77-B0A3-241A983F901D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3DE26738-94C1-4F77-B0A3-241A983F901D.html" id="GUID-3DE26738-94C1-4F77-B0A3-241A983F901D-d10733e18610-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.2</ph>
+Using the msvt_check_pf Command</a></div></div></li><li role="treeitem"><div data-tocid="GUID-87C8BAB8-6936-496B-83A9-8157C68048AB-d10733e18618" class="topicref" data-id="GUID-87C8BAB8-6936-496B-83A9-8157C68048AB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-87C8BAB8-6936-496B-83A9-8157C68048AB.html" id="GUID-87C8BAB8-6936-496B-83A9-8157C68048AB-d10733e18618-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.3</ph>
+MSVT Report</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-85B5B29F-544B-4AC0-A737-2C4A3FBB1A97-d10733e18626" class="topicref" data-id="GUID-85B5B29F-544B-4AC0-A737-2C4A3FBB1A97" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-85B5B29F-544B-4AC0-A737-2C4A3FBB1A97-d10733e18626-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-85B5B29F-544B-4AC0-A737-2C4A3FBB1A97.html" id="GUID-85B5B29F-544B-4AC0-A737-2C4A3FBB1A97-d10733e18626-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4</ph>
+MSVT Report Sections</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-197B39E9-EEAE-4AC4-B015-F3C0387426EB-d10733e18634" class="topicref" data-id="GUID-197B39E9-EEAE-4AC4-B015-F3C0387426EB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-197B39E9-EEAE-4AC4-B015-F3C0387426EB.html" id="GUID-197B39E9-EEAE-4AC4-B015-F3C0387426EB-d10733e18634-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.1</ph>
+Checking IRS Connectivity Against Parameter File</a></div></div></li><li role="treeitem"><div data-tocid="GUID-95CF8802-FFDE-453E-8CD7-28DDB03BE697-d10733e18640" class="topicref" data-id="GUID-95CF8802-FFDE-453E-8CD7-28DDB03BE697" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-95CF8802-FFDE-453E-8CD7-28DDB03BE697.html" id="GUID-95CF8802-FFDE-453E-8CD7-28DDB03BE697-d10733e18640-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.2</ph>
+Checking a Block Instance Assignment to a Routing Region</a></div></div></li><li role="treeitem"><div data-tocid="GUID-57929492-3B3B-4A11-9EC6-24D2067AF783-d10733e18648" class="topicref" data-id="GUID-57929492-3B3B-4A11-9EC6-24D2067AF783" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-57929492-3B3B-4A11-9EC6-24D2067AF783.html" id="GUID-57929492-3B3B-4A11-9EC6-24D2067AF783-d10733e18648-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.3</ph>
+Checking an IRS Net Assignment to a Routing Region</a></div></div></li><li role="treeitem"><div data-tocid="GUID-377C874D-6B5D-481E-AF07-332C58ABFBDC-d10733e18656" class="topicref" data-id="GUID-377C874D-6B5D-481E-AF07-332C58ABFBDC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-377C874D-6B5D-481E-AF07-332C58ABFBDC.html" id="GUID-377C874D-6B5D-481E-AF07-332C58ABFBDC-d10733e18656-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.4</ph>
+Checking Cascaded Math Block Instance Adherence to the Separation Criteria</a></div></div></li><li role="treeitem"><div data-tocid="GUID-52FD8181-7CDB-42D1-ABF3-375598124C80-d10733e18664" class="topicref" data-id="GUID-52FD8181-7CDB-42D1-ABF3-375598124C80" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-52FD8181-7CDB-42D1-ABF3-375598124C80.html" id="GUID-52FD8181-7CDB-42D1-ABF3-375598124C80-d10733e18664-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.5</ph>
+Analyzing a Floorplan</a></div></div></li><li role="treeitem"><div data-tocid="GUID-63423C11-139A-48C3-823E-948C879D1E42-d10733e18672" class="topicref" data-id="GUID-63423C11-139A-48C3-823E-948C879D1E42" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-63423C11-139A-48C3-823E-948C879D1E42.html" id="GUID-63423C11-139A-48C3-823E-948C879D1E42-d10733e18672-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.6</ph>
+Checking Internal Nets for a Given Block</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB-d10733e18680" class="topicref" data-id="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB.html" id="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB-d10733e18680-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.7</ph>
+Checking IRS Nets for a Given Block</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3A0EBBB3-83C1-4E25-A372-7804481722B2-d10733e18688" class="topicref" data-id="GUID-3A0EBBB3-83C1-4E25-A372-7804481722B2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3A0EBBB3-83C1-4E25-A372-7804481722B2-d10733e18688-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3A0EBBB3-83C1-4E25-A372-7804481722B2.html" id="GUID-3A0EBBB3-83C1-4E25-A372-7804481722B2-d10733e18688-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.4.4.8</ph>
+Propagating IRS Nets Outgoing from &lt;Block1&gt; to &lt;Block2&gt;</a></div></div></li></ul></li></ul></li><li role="treeitem"><div data-tocid="GUID-5312561A-8EB0-481F-A071-4113ED533FC5-d10733e18712" class="topicref" data-id="GUID-5312561A-8EB0-481F-A071-4113ED533FC5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5312561A-8EB0-481F-A071-4113ED533FC5.html" id="GUID-5312561A-8EB0-481F-A071-4113ED533FC5-d10733e18712-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.5</ph>
+Report Conclusion</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FBDA7D1D-83FA-482A-B968-9ECBCF84C39C-d10733e18720" class="topicref" data-id="GUID-FBDA7D1D-83FA-482A-B968-9ECBCF84C39C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FBDA7D1D-83FA-482A-B968-9ECBCF84C39C.html" id="GUID-FBDA7D1D-83FA-482A-B968-9ECBCF84C39C-d10733e18720-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17.6</ph>
+Reference Documents</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-4A3979C9-694B-4FCD-B5F3-49615C8223FF"><h1 class="- topic/title title topictitle1" id="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-4A3979C9-694B-4FCD-B5F3-49615C8223FF" style="display:inline-block">17.4.4.7 Checking IRS Nets for a Given Block</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Checking%20IRS%20Nets%20for%20a%20Given%20Block">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">MSVT checks for the separation of IRS nets corresponding to a given block from external nets, per the specified separation criteria. If any of the nets of the design fail to satisfy the separation criteria, then information related to the violating net is listed in the <code class="+ topic/ph pr-d/codeph ph codeph">Checking IRS nets for block &lt;block name&gt;</code> section of the report and MSVT treats this as an error. This section is empty if your design does not have any nets violating separation criteria.</p><section class="- topic/section section" id="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-D22CC642-79FD-4981-8538-F99B9F7F4609" data-ofbid="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-D22CC642-79FD-4981-8538-F99B9F7F4609"><h2 class="- topic/title title sectiontitle">MSVT Output Report</h2><p class="- topic/p p">The following is an example of this section in which the IRS net <code class="+ topic/ph pr-d/codeph ph codeph">PHY_RST_c</code> of the block <code class="+ topic/ph pr-d/codeph ph codeph">Block_Cdr_0</code> is being observed by an external net corresponding to another untrusted logic </p></section><div class="- topic/example example" id="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-7569F27B-5128-4B61-9EB1-B9371CCB6B3F" data-ofbid="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-7569F27B-5128-4B61-9EB1-B9371CCB6B3F"><h2 class="- topic/title title sectiontitle">Checking IRS nets for block Block_Cdr_0</h2><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>-----------------------------------------------------------------------------------------------------------------------------------------
+Checking IRS nets for block Block_Cdr_0 ...
+====================================================================
+The following outgoing IRS nets have 0 switches separation since they are connected directly to at least one untrusted logic:
+   PHY_RST_c (cell PHY_RST_obuf/U_IOTRI)
+   coma_mode_c (cell coma_mode_obuf/U_IOTRI)
+-----------------------------------------------------------------------------------------------------------------------------------------</code></pre></div></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-D22CC642-79FD-4981-8538-F99B9F7F4609" data-tocid="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-D22CC642-79FD-4981-8538-F99B9F7F4609">MSVT Output Report</a></div></li><li class="section-title"><a href="#GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-7569F27B-5128-4B61-9EB1-B9371CCB6B3F" data-tocid="GUID-14AE437D-515B-41A7-8268-2E3EB77D33AB__GUID-7569F27B-5128-4B61-9EB1-B9371CCB6B3F">Checking IRS nets for block Block_Cdr_0</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

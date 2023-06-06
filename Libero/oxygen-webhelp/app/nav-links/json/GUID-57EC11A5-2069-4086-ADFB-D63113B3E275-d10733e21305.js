@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.6.1<\/ph>\nCommand Tools Tcl Commands","href":"Chunk1186457707.html#Chunk1186457707","attributes":{"data-id":"Chunk1186457707"},"menu":{"hasChildren":false},"tocID":"Chunk1186457707-d10733e21313","next":"Chunk1186457707-d10733e21313"}]});

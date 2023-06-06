@@ -1,0 +1,751 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The PolarFire SoC FPGA provides multiple FICs to enable connectivity between user logic in the FPGA fabric and the MSS. FIC is part of the MSS and acts as a bridge between the MSS and the FPGA fabric. ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>18.1.2.1 FIC Interface</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD-d10733e18762"/><meta name="wh-source-relpath" content="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD.xml"/><meta name="wh-out-relpath" content="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1</ph>
+PolarFire SoC MSS Simulation</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC MSS Simulation</p></div></div></div></li><li><div class="topicref" data-id="GUID-C6E6D8E0-C726-46F1-ADEA-D21BA9D5101E"><div class="title"><a href="GUID-C6E6D8E0-C726-46F1-ADEA-D21BA9D5101E.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2</ph>
+Simulation Flow</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD"><div class="title"><a href="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD.html#GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.1</ph>
+FIC Interface</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e18733" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e18733-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18733-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1</ph>
+PolarFire SoC MSS Simulation</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC MSS Simulation</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F-d10733e18737" class="topicref introduction" data-id="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F-d10733e18737-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1</ph>
+Introduction</a></div></div></li><li role="treeitem"><div data-tocid="GUID-1F9AC156-8543-4289-AEF0-42D98AC19E6D-d10733e18745" class="topicref" data-id="GUID-1F9AC156-8543-4289-AEF0-42D98AC19E6D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1F9AC156-8543-4289-AEF0-42D98AC19E6D.html" id="GUID-1F9AC156-8543-4289-AEF0-42D98AC19E6D-d10733e18745-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.1</ph>
+Creating a new PolarFire SoC Project</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-C6E6D8E0-C726-46F1-ADEA-D21BA9D5101E-d10733e18753" class="topicref" data-id="GUID-C6E6D8E0-C726-46F1-ADEA-D21BA9D5101E" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-C6E6D8E0-C726-46F1-ADEA-D21BA9D5101E-d10733e18753-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C6E6D8E0-C726-46F1-ADEA-D21BA9D5101E.html" id="GUID-C6E6D8E0-C726-46F1-ADEA-D21BA9D5101E-d10733e18753-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2</ph>
+Simulation Flow</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD-d10733e18762" class="topicref" data-id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD-d10733e18762-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD.html#GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD-d10733e18762-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.1</ph>
+FIC Interface</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03-d10733e18770" class="topicref" data-id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD.html#GUID-06BB19CA-C659-445A-A174-E981B6AEBD03" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03-d10733e18770-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.1.1</ph>
+BFM Commands</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-7CAE071E-CF96-42BF-ADD4-28446D79D191-d10733e18779" class="topicref" data-id="GUID-7CAE071E-CF96-42BF-ADD4-28446D79D191" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-7CAE071E-CF96-42BF-ADD4-28446D79D191-d10733e18779-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7CAE071E-CF96-42BF-ADD4-28446D79D191.html#GUID-7CAE071E-CF96-42BF-ADD4-28446D79D191" id="GUID-7CAE071E-CF96-42BF-ADD4-28446D79D191-d10733e18779-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.2</ph>
+Interrupts</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-D4A63E23-97E2-4A01-9F56-BEA2E6923DCB-d10733e18804" class="topicref" data-id="GUID-D4A63E23-97E2-4A01-9F56-BEA2E6923DCB" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-D4A63E23-97E2-4A01-9F56-BEA2E6923DCB-d10733e18804-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D4A63E23-97E2-4A01-9F56-BEA2E6923DCB.html#GUID-D4A63E23-97E2-4A01-9F56-BEA2E6923DCB" id="GUID-D4A63E23-97E2-4A01-9F56-BEA2E6923DCB-d10733e18804-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.3</ph>
+User Cryptoprocessor</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0459C86C-46AA-4EFA-A320-2786EC8153DE-d10733e18860" class="topicref" data-id="GUID-0459C86C-46AA-4EFA-A320-2786EC8153DE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0459C86C-46AA-4EFA-A320-2786EC8153DE.html" id="GUID-0459C86C-46AA-4EFA-A320-2786EC8153DE-d10733e18860-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.4</ph>
+DDR Controller</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4AFF2337-4706-4047-9B3F-816B296AE461-d10733e18868" class="topicref" data-id="GUID-4AFF2337-4706-4047-9B3F-816B296AE461" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4AFF2337-4706-4047-9B3F-816B296AE461.html" id="GUID-4AFF2337-4706-4047-9B3F-816B296AE461-d10733e18868-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.5</ph>
+QoS Parameter</a></div></div></li><li role="treeitem"><div data-tocid="GUID-92BA32AF-EC47-4C33-AC54-539F495FB8CF-d10733e18876" class="topicref" data-id="GUID-92BA32AF-EC47-4C33-AC54-539F495FB8CF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-92BA32AF-EC47-4C33-AC54-539F495FB8CF.html" id="GUID-92BA32AF-EC47-4C33-AC54-539F495FB8CF-d10733e18876-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.1.2.6</ph>
+L2-LIM Access</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18884" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18884-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8F623149-225E-4A84-8BC9-3142A409FAD4.html" id="tocId-d10733e18884-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18.2</ph>
+PolarFire SoC MSS Configurator</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC MSS Configurator</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B4C9BB0B-2FA7-4529-AE3F-73B7509E84F7"><article class="nested0" aria-labelledby="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B4C9BB0B-2FA7-4529-AE3F-73B7509E84F7" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD"><h1 class="- topic/title title topictitle1" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B4C9BB0B-2FA7-4529-AE3F-73B7509E84F7" style="display:inline-block">18.1.2.1 FIC Interface</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=FIC%20Interface">(Ask a Question)</a><div class="- topic/body reference/refbody body refbody"><section class="- topic/section section" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-75FFB623-48F5-4BD0-806F-D8D8995CBAC3" data-ofbid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-75FFB623-48F5-4BD0-806F-D8D8995CBAC3"><p class="- topic/p p">The PolarFire SoC FPGA provides multiple FICs to enable connectivity between user logic in the FPGA fabric and the MSS. FIC is part of the MSS and acts as a bridge between the MSS and the FPGA fabric. The initiator FIC interface provides access to the address range listed in the following table.</p><div class="- topic/p p">
+                <div class="table-container"><table class="- topic/table table frame-all" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD" data-ofbid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD" data-cols="5"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 18-1. </span></span><span class="table--title" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-482BB54B-C0F8-42F8-8533-850CD94C7A19">FIC Interface Address
+                        Ranges</span></caption><colgroup><col style="width:20%"/><col style="width:20%"/><col style="width:20%"/><col style="width:20%"/><col style="width:20%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__1">FIC
+                                    Interface</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__2">Number of
+                                    Regions</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__3">Start
+                                    Address</th>
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__4">End Address</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__5">Size</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__1" rowspan="2">
+                                    <p class="- topic/p p">FIC0</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__2" rowspan="2">
+                                    <p class="- topic/p p">2</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__3">
+                                    <p class="- topic/p p">0x6000_0000</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__4">
+                                    <p class="- topic/p p">0x7FFF_FFFF</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__5">
+                                    <p class="- topic/p p">512 MB</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__3">
+                                    <p class="- topic/p p">0x20_0000_0000</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__4">
+                                    <p class="- topic/p p">0x2F_FFFF_FFFF</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__5">
+                                    <p class="- topic/p p">64 GB</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__1" rowspan="2">
+                                    <p class="- topic/p p">FIC1</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__2" rowspan="2">
+                                    <p class="- topic/p p">2</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__3">
+                                    <p class="- topic/p p">0xE000_0000</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__4">
+                                    <p class="- topic/p p">0xFFFF_FFFF</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__5">
+                                    <p class="- topic/p p">512 MB</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__3">
+                                    <p class="- topic/p p">0x30_0000_0000</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__4">
+                                    <p class="- topic/p p">0x3F_FFFF_FFFF</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__5">
+                                    <p class="- topic/p p">64 GB</p>
+                                </td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__1">
+                                    <p class="- topic/p p">FIC3</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__2">
+                                    <p class="- topic/p p">1</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__3">
+                                    <p class="- topic/p p">0x4000_0000</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__4">
+                                    <p class="- topic/p p">0x5FFF_FFFF</p>
+                                </td>
+                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B1805ABF-3E04-4095-946A-B43EED719CAD__entry__5">
+                                    <p class="- topic/p p">512 MB</p>
+                                </td>
+                            </tr>
+                        </tbody></table></div>
+                <div class="- topic/note note notype note_notype" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-9EC1F2F5-C457-4D4D-9BE6-F84CF1EEFA3C" data-ofbid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-9EC1F2F5-C457-4D4D-9BE6-F84CF1EEFA3C"><span class="note__title">Note:</span> 64-bit BFM instructions shall not be used in FIC-3
+                        (<code class="+ topic/ph pr-d/codeph ph codeph">PFSOC_MSS_FIC3</code>).</div>
+            </div><p class="- topic/p p">The initiator FIC allows and initiates the AXI transaction only when addresses entered in the BFM file are within the dedicated address range. Otherwise, it shows a DRC in the simulation log.</p><p class="- topic/p p">The target FIC responds to AXI initiator in fabric in the following way:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-177B2E22-7CC4-4BCB-A157-33F35337D54C" data-ofbid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-177B2E22-7CC4-4BCB-A157-33F35337D54C">Uses AXI transaction details to clear interrupts and provides a valid AXI response.</li><li class="- topic/li li" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-A647D86B-1F9B-469A-9D27-C9ACA3C90D03" data-ofbid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-A647D86B-1F9B-469A-9D27-C9ACA3C90D03">Provides a transparent connection between the AXI switch and FIC interface to access the DDR controller and DDR memory.</li><li class="- topic/li li" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B4957FBA-399B-4B44-89ED-D6C4289954B8" data-ofbid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-B4957FBA-399B-4B44-89ED-D6C4289954B8">Prints a message in the simulation log in case of incorrect addressing for other addresses.</li></ul><div class="- topic/note note notype note_notype" id="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-C52F8BBD-2B76-4A91-8D64-11D40C5E1C5B" data-ofbid="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD__GUID-C52F8BBD-2B76-4A91-8D64-11D40C5E1C5B"><span class="note__title">Note:</span> The DLL in the MSS FIC interface is always bypassed in simulation. MSS_FIC_x_DLL_LOCK_M2F output is not driven (always Tri-State) in the simulation model.</div></section></div><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-184BD905-3E83-4973-8EC7-E232CB7847E1" xml:lang="en-US" lang="en-US" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03"><h2 class="- topic/title title topictitle2" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-184BD905-3E83-4973-8EC7-E232CB7847E1" style="display:inline-block">18.1.2.1.1 BFM Commands</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=BFM%20Commands">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><section class="- topic/section section" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-75FFB623-48F5-4BD0-806F-D8D8995CBAC3" data-ofbid="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-75FFB623-48F5-4BD0-806F-D8D8995CBAC3"><p class="- topic/p p">Libero generates BFM files for FIC
+                interfaces as shown in the following table.</p><div class="table-container"><table class="- topic/table table frame-all" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B" data-ofbid="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 18-2. </span></span><span class="table--title" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-CCA8E37F-5040-475B-AAC2-45590827F897">FIC Interface BFM
+                    Files</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__1">Module</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__2">BFM File Name</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__1">FIC0</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__2">PFSOC_MSS_FIC0</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__1">FIC1</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__2">PFSOC_MSS_FIC1</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__1">FIC3</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__2">PFSOC_MSS_FIC3</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__1">FIC4</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_WKW_PL5_W4B__entry__2">
+                                <p class="- topic/p p">PFSOC_MSS_FIC4 </p>
+                                <div class="- topic/note note notype note_notype" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-CF6A2BA7-A339-4915-BC6A-8D49721223C4" data-ofbid="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-CF6A2BA7-A339-4915-BC6A-8D49721223C4"><span class="note__title">Note:</span> PFSOC_MSS_FIC4
+                                    BFM is created for only S devices.</div>
+                            </td>
+                        </tr>
+                    </tbody></table></div><p class="- topic/p p">The following figure shows the BFM files that can be accessed from within the
+                simulation folder in the Libero tool.</p><figure class="- topic/fig fig fignone" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__FIG_ALW_3M5_W4B" data-ofbid="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__FIG_ALW_3M5_W4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 18-3. <span id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-C2AFC9A7-28AD-41B7-A93B-489EFB73B0A7" class="fig--title">BFM Files in the Simulation
+                    Folder</span></span></figcaption>
+                
+                <img class="- topic/image image break" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__IMAGE_BLW_3M5_W4B" src="GUID-C733D637-A697-4B47-A9F8-CF711045116F-low.png"/>
+            </figure><p class="- topic/p p">All BFM commands specified in <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/CoreAMBA_BFM_UG.pdf" target="_blank" rel="external noopener">Microchip DirectCore AMBA BFM User's Guide</a>
+                and <span class="- topic/ph ph"><a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/SgCore/SERDES/sf2_serdes_sim_ug_2.pdf" target="_blank" rel="external noopener">SmartFusion 2, IGLOO 2, RTG4, PolarFire, and PolarFire SoC FPGA High
+          Speed Serial Interface Simulation User Guide</a></span> can be
+                used to simulate the MSS.</p><p class="- topic/p p">The following code block shows a typical BFM
+                instructions.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>#=========================================================== 
+# Enter your BFM commands in this file. 
+# 
+# Syntax: 
+# ------- 
+# 
+# memmap resource_name base_address; 
+# 
+# write width resource_name byte_offset data; 
+# read width resource_name byte_offset; 
+# readcheck width resource_name byte_offset data; 
+# 
+#=========================================================== 
+procedure main;
+ 
+#FIC0 38bit Initiator Address declaration commands with memmap below 
+memmap FPR_BASE_ADDR_38bit 0x2060000000; 
+memmap FPR_BASE_ADDR_38bit_0 0x20600f0000; 
+memmap FPR_BASE_ADDR_38bit_1 0x20fffffff8;
+ 
+#FIC0 32bit Initiator Address declaration commands with memmap below 
+memmap FPR_BASE_ADDR_int 0x60000000; 
+memmap FPR_BASE_ADDR_int_0 0x60003000; 
+memmap FPR_BASE_ADDR_int_1 0x60080000; 
+memmap FPR_BASE_ADDR_int_2 0x68000000;
+ 
+#Array creation command below 
+int array[100];
+ 
+#Creating table command below 
+table LEGALISATION 0x0000 0x0000 0x0000 0x0000 \ 
+0x0000 0x0000 0xffff 0xffff \ 
+0xffff 0xfffd 0xfe01 0xfff2 \ 
+0xffff 0xfffd 0xfe05 0xffff
+ 
+#Signal declaration command below 
+int u; 
+int l;
+ 
+#Writing data command below
+write64     w FPR_BASE_ADDR_38bit_1 0x8 0x32323232 0xaaaaaaaa 
+#Reading data command below
+read64      w FPR_BASE_ADDR_38bit_1 0x8 
+#Reading and checking data command below 
+readcheck64 w FPR_BASE_ADDR_38bit_1 0x8 0x32323232 0xaaaaaaaa
+ 
+#Writing data command below 
+write64     w FPR_BASE_ADDR_38bit 0x0 0x10102020 0xaaaaaaaa
+ 
+#Writing data command below 
+write       w 0x70000000 0x0 0x10102020 
+#Reading data command below 
+read w 0x70000000 0x0 
+#Reading and checking data command below 
+readcheck w 0x70000000 0x0 0x10102020 
+#Writing data command below 
+write h 0x70000000 0x32 0xdddd 
+#Reading data command below 
+read h 0x70000000 0x32 
+#Reading and checking data command below 
+readcheck h 0x70000000 0x32 0xdddd 
+#Writing data command below 
+write b 0x70000000 0x64 0xee 
+#Reading data command below 
+read b 0x70000000 0x64 
+#Reading and checking data command below 
+readcheck b 0x70000000 0x64 0xee 
+
+#Writing data command below 
+write w FPR_BASE_ADDR_int 0x0 0x10102020 
+#Reading data command below 
+read w FPR_BASE_ADDR_int 0x0 
+#Reading and checking data command below 
+readcheck w FPR_BASE_ADDR_int 0x0 0x10102020 
+#Reading data and store command below 
+readstore x FPR_BASE_ADDR_int 0x0 u 
+#Reading data and masking command below 
+readmask x FPR_BASE_ADDR_int 0x0 0x10102020 0xFFFFFFFF 
+
+#Writing burst data command below 
+writemult w FPR_BASE_ADDR_int_0 0x0 0xFFFFFFFF 0xEEEEEEEE 0xAAAAAAAA 0xBBBBBBBB 0xCCCCCCCC 
+#Reading burst data command below 
+readmult w FPR_BASE_ADDR_int_0 0x0 5 
+#Reading and checking burst data command below 
+readmultchk w FPR_BASE_ADDR_int_0 0x0 0xFFFFFFFF 0xEEEEEEEE 0xAAAAAAAA 0xBBBBBBBB 0xCCCCCCCC
+ 
+#masking of poll data command below 
+pollmask w FPR_BASE_ADDR_int 0x0 0x10102020 0xFFFFFFFF 
+#position of pollbit command below 
+pollbit w FPR_BASE_ADDR_int 0x0 5 0x1 
+#creating poll data command below 
+poll w FPR_BASE_ADDR_int 0x0 0x10102020 
+#filling data command below 
+fill w FPR_BASE_ADDR_int 0x40 3 0x00000000 0x0 
+#writing data to table command below 
+writetable w FPR_BASE_ADDR_int 0x100 LEGALISATION 4 
+#writing to array command below 
+writearray w FPR_BASE_ADDR_int 0x120 array[0] 1 
+#After filling check the data command below 
+fillcheck w FPR_BASE_ADDR_int 0x40 3 0x00000000 0x0 
+#reading table of data command below 
+readtable w FPR_BASE_ADDR_int 0x100 LEGALISATION 4 
+#reading array command below readarray w FPR_BASE_ADDR_int 0x120 array[0] 1 
+#ahb cycle command below 
+ahbcycle w FPR_BASE_ADDR_int_1 0x0 0xBBBBBBBB 0x0 
+#memory testing command below 
+memtest FPR_BASE_ADDR_int_2 0x0 0x4 0x0 0x0 0x2
+ 
+#Writing data command below 
+write64 w FPR_BASE_ADDR_38bit 0x0 0x10102020 0xaaaaaaaa 
+#Reading data command below 
+read64 w FPR_BASE_ADDR_38bit 0x0 
+#Reading and checking data command below 
+readcheck64 w FPR_BASE_ADDR_38bit 0x0 0x10102020 0xaaaaaaaa 
+#Reading data and store command below
+ 
+readstore64 x FPR_BASE_ADDR_38bit 0x0 u l 
+#Display command below 
+print "Lower 32bits = %h", l 
+print "Upper 32bits = %h", u 
+#Reading data and masking command below 
+readmask64 x FPR_BASE_ADDR_38bit 0x0 0x10102020 0xaaaaaaaa 0xFFFFFFFF 0x0000FFFF
+ 
+#Reading data and store command below 
+readstore64 x FPR_BASE_ADDR_38bit 0x0 u l 
+#Display command below 
+print "Lower 32bits = %h", l 
+print "Upper 32bits = %h", u
+ 
+#Writing burst data command below 
+writemult64 w FPR_BASE_ADDR_38bit_0 0x0 0xFFFFFFFF 0xEEEEEEEE 0xAAAAAAAA 0xBBBBBBBB 0xCCCCCCCC 0xDDDDDDDD 0x01010101 0x02020202 0x03030303 0xBADCAD00 
+#Reading burst data command below 
+readmult64 w FPR_BASE_ADDR_38bit_0 0x0 5 
+#Reading and checking burst data command below 
+readmultchk64 w FPR_BASE_ADDR_38bit_0 0x0 0xFFFFFFFF 0xEEEEEEEE 0xAAAAAAAA 0xBBBBBBBB 0xCCCCCCCC 0xDDDDDDDD 0x01010101 0x02020202 0x03030303 0xBADCAD00 
+
+return </code></pre><p class="- topic/p p">After
+                adding a testbench to the design, you can use these BFM files to perform an MSS
+                simulation by launching the Pre-Synth simulation.</p><p class="- topic/p p">The following is an example
+                of a simulation log listing the BFM
+            transactions.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>#############################################################################
+#  
+# PFSOC_FIC_0_BFM:45:read64 w 00000021 00000000 at 105 ns
+# PFSOC_FIC_0_BFM:47:readcheck64 w 00000021 00000000 32323232 at 2863311530 ns                 108
+# PFSOC_FIC_0_BFM: Data Write 2100000000 32323232aaaaaaaa
+# PFSOC_FIC_0_BFM:50:write64 w 00000020  60000000 10102020 aaaaaaaa at 248 ns
+# PFSOC_FIC_0_BFM: Data Read 2100000000 32323232aaaaaaaa at 385.077000ns
+# PFSOC_FIC_0_BFM:53:write w 00000000 70000000 10102020 at 388 ns
+# PFSOC_FIC_0_BFM: Data Read 2100000000 32323232aaaaaaaa MASK:ffffffffffffffff at 525.105000ns
+# PFSOC_FIC_0_BFM:55:read w 00000000 70000000 at 528 ns
+# PFSOC_FIC_0_BFM: Data Write 2060000000 10102020aaaaaaaa
+# PFSOC_FIC_0_BFM:57:readcheck w 00000000 70000000 10102020 at 668 ns
+# PFSOC_FIC_0_BFM: Data Write 70000000 0000000010102020
+# PFSOC_FIC_0_BFM:59:write h 00000000 70000032 0000dddd at 808 ns
+# PFSOC_FIC_0_BFM: Data Read 70000000 1010202010102020 at 945.189000ns
+# PFSOC_FIC_0_BFM:61:read h 00000000 70000032 at 949 ns
+# PFSOC_FIC_0_BFM: Data Read 70000000 1010202010102020 MASK:00000000ffffffff at 1085.217000ns
+# PFSOC_FIC_0_BFM:63:readcheck h 00000000 70000032 0000dddd at 1089 ns
+# PFSOC_FIC_0_BFM: Data Write 70000032 00000000dddd0000
+# PFSOC_FIC_0_BFM:65:write b 00000000 70000064 000000ee at 1229 ns
+# PFSOC_FIC_0_BFM: Data Read 70000032 xxxxxxxxddddxxxx at 1365.273000ns
+# PFSOC_FIC_0_BFM:67:read b 00000000 70000064 at 1369 ns
+# PFSOC_FIC_0_BFM: Data Read 70000032 xxxxxxxxddddxxxx MASK:00000000ffff0000 at 1505.301000ns
+# PFSOC_FIC_0_BFM:69:readcheck b 00000000 70000064 000000ee at 1509 ns
+# PFSOC_FIC_0_BFM: Data Write 70000064 00000000000000ee
+# PFSOC_FIC_0_BFM:72:write w 00000000 60000000 10102020 at 1649 ns
+# PFSOC_FIC_0_BFM: Data Read 70000064 xxxxxxeexxxxxxxx at 1785.357000ns
+# PFSOC_FIC_0_BFM:74:read w 00000000 60000000 at 1789 ns
+# PFSOC_FIC_0_BFM: Data Read 70000064 xxxxxxeexxxxxxxx MASK:000000ff00000000 at 1925.385000ns
+# PFSOC_FIC_0_BFM:76:readcheck w 00000000 60000000 10102020 at 1929 ns
+# PFSOC_FIC_0_BFM: Data Write 60000000 0000000010102020
+# PFSOC_FIC_0_BFM:79:readstore x 00000000 60000000 @101 at 2069 ns 
+# PFSOC_FIC_0_BFM: Data Read 60000000 1010202010102020 at 2205.441000ns
+# PFSOC_FIC_0_BFM: Data Read 60000000 1010202010102020 MASK:00000000ffffffff at 2345.469000ns
+# PFSOC_FIC_0_BFM: Data Read 60000000 1010202010102020 at 2485.497000ns
+# PFSOC_FIC_0_BFM:81:readmask x 00000000 60000000 10102020 ffffffff at 2492 ns
+# PFSOC_FIC_0_BFM: (WARNING) writemult 32 bit command on 64 bit AXI bus is not allowed at 2495 ns
+# PFSOC_FIC_0_BFM: (WARNING) readmult 32 bit command on 64 bit AXI bus is not allowed at 2499 ns
+# PFSOC_FIC_0_BFM: (WARNING) readmultchk 32 bit command on 64 bit AXI bus is not allowed at 2502 ns
+# PFSOC_FIC_0_BFM:92:pollmask w 00000000 60000000 10102020 ffffffff at 2506 ns
+# PFSOC_FIC_0_BFM: Data Read 60000000 1010202010102020 MASK:00000000ffffffff at 2635.527000ns
+# PFSOC_FIC_0_BFM: Data Read 60000000 1010202010102020 MASK:00000000ffffffff at 2785.557000ns
+# PFSOC_FIC_0_BFM:94:pollbit w 00000000 60000000 5 1 at 2789 ns
+# PFSOC_FIC_0_BFM: Data Read 60000000 1010202010102020 MASK:0000000000000020 at 2935.587000ns
+# PFSOC_FIC_0_BFM:96:poll w 00000000 60000000 10102020 at 2939 ns
+# PFSOC_FIC_0_BFM: Data Read 60000000 1010202010102020 MASK:00000000ffffffff at 3085.617000ns
+# PFSOC_FIC_0_BFM:98:fill w 00000000 60000040 3 3 3 at 3089 ns
+# PFSOC_FIC_0_BFM: Data Write 60000040 0000000000000000
+# PFSOC_FIC_0_BFM:100:writetable w 00000000 60000100 7 4 at 3239 ns 
+# PFSOC_FIC_0_BFM: Data Write 60000044 0000000000000000
+# PFSOC_FIC_0_BFM: Data Write 60000048 0000000000000000
+# PFSOC_FIC_0_BFM: Data Write 60000100 0000000000000000
+# PFSOC_FIC_0_BFM: Data Write 60000104 0000000000000000
+# PFSOC_FIC_0_BFM:102:writearray w 00000000 60000120 1 1 at 3799 ns 
+# PFSOC_FIC_0_BFM: Data Write 60000108 0000000000000000
+# PFSOC_FIC_0_BFM:104:fillcheck w 00000000 60000040 3 3 0 at 3939 ns
+# PFSOC_FIC_0_BFM: Data Write 6000010c 0000000000000000
+# PFSOC_FIC_0_BFM: Data Write 60000120 00000000xxxxxxxx
+# PFSOC_FIC_0_BFM: Data Read 60000040 0000000000000000 MASK:00000000ffffffff at 4355.871000ns
+# PFSOC_FIC_0_BFM:106:readtable w 00000000 60000100 7 4 at 4359 ns
+# PFSOC_FIC_0_BFM: Data Read 60000044 0000000000000000 MASK:00000000ffffffff at 4495.899000ns
+# PFSOC_FIC_0_BFM: Data Read 60000048 xxxxxxxx00000000 MASK:00000000ffffffff at 4635.927000ns
+# PFSOC_FIC_0_BFM: Data Read 60000100 0000000000000000 MASK:00000000ffffffff at 4775.955000ns
+# PFSOC_FIC_0_BFM: Data Read 60000104 0000000000000000 MASK:00000000ffffffff at 4915.983000ns
+# PFSOC_FIC_0_BFM:108:readarray w 00000000 60000120 1 1 at 4919 ns
+# PFSOC_FIC_0_BFM: Data Read 60000108 0000000000000000 MASK:00000000ffffffff at 5056.011000ns
+# PFSOC_FIC_0_BFM:110:idle w 00000000 60080000 bbbbbbbb bbbbbbbb at 5059 ns
+# PFSOC_FIC_0_BFM: Data Read 6000010c 0000000000000000 MASK:00000000ffffffff at 5196.039000ns
+# PFSOC_FIC_0_BFM:112: memtest Started at 5199 ns
+# PFSOC_FIC_0_BFM:  Address 00000000 68000000 Size 4 Cycles     0
+# PFSOC_FIC_0_BFM: Data Read 60000120 xxxxxxxxxxxxxxxx at 5336.067000ns
+# PFSOC_FIC_0_BFM: Data Write 60080000 00000000bbbbbbbb
+# PFSOC_FIC_0_BFM: bfmtest complete  Writes 0  Reads 0  Nops 0
+# PFSOC_FIC_0_BFM:115:write64 w 00000020  60000000 10102020 aaaaaaaa at 5349 ns
+# PFSOC_FIC_0_BFM:117:read64 w 00000020 60000000 at 5353 ns
+# PFSOC_FIC_0_BFM:119:readcheck64 w 00000020 60000000 10102020 at 2863311530 ns                5356
+# PFSOC_FIC_0_BFM: Data Write 2060000000 10102020aaaaaaaa
+# PFSOC_FIC_0_BFM:122:readstore64 x 00000020 60000000 @101 at 5499 ns 
+# PFSOC_FIC_0_BFM: Data Read 2060000000 10102020aaaaaaaa at 5636.127000ns
+# PFSOC_FIC_0_BFM: Data Read 2060000000 10102020aaaaaaaa MASK:ffffffffffffffff at 5776.155000ns
+# PFSOC_FIC_0_BFM: Data Read 2060000000 10102020aaaaaaaa at 5916.183000ns
+# PFSOC_FIC_0_BFM:Lower 32bits = aaaaaaaa
+# PFSOC_FIC_0_BFM:Upper 32bits = 10102020
+# PFSOC_FIC_0_BFM:128:readmask64 x 00000020 60000000 10102020 aaaaaaaa ffffffff 0000ffff at 5923 ns
+# PFSOC_FIC_0_BFM:131:readstore64 x 00000020 60000000 @101 at 5926 ns 
+# PFSOC_FIC_0_BFM: Data Read 2060000000 10102020aaaaaaaa MASK:ffffffff0000ffff at 6066.213000ns
+# PFSOC_FIC_0_BFM: Data Read 2060000000 10102020aaaaaaaa at 6206.241000ns
+# PFSOC_FIC_0_BFM:Lower 32bits = aaaaaaaa
+# PFSOC_FIC_0_BFM:Upper 32bits = 10102020
+# PFSOC_FIC_0_BFM:137:writemultiple64 x 00000020 600f0000 ffffffff ... at 6213 ns
+# PFSOC_FIC_0_BFM: Data Write 20600f0000 ffffffffeeeeeeee
+# PFSOC_FIC_0_BFM: Data Write 20600f0008 aaaaaaaabbbbbbbb
+# PFSOC_FIC_0_BFM: Data Write 20600f0010 ccccccccdddddddd
+# PFSOC_FIC_0_BFM:139:readmult64 x 00000020 600f0000 10 at 6230 ns
+# PFSOC_FIC_0_BFM: Data Write 20600f0018 0101010102020202
+# PFSOC_FIC_0_BFM: Data Write 20600f0020 03030303badcad00
+# PFSOC_FIC_0_BFM: Data Read 20600f0000 ffffffffeeeeeeee at 6536.307000ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0008 aaaaaaaabbbbbbbb at 6546.309000ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0010 ccccccccdddddddd at 6556.311000ns
+# PFSOC_FIC_0_BFM:141:readmultchk64 x 00000020  600f0000 ffffffff ... at 6560 ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0018 0101010102020202 at 6566.313000ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0020 03030303badcad00 at 6576.315000ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0000 ffffffffeeeeeeee MASK:ffffffffffffffff at 6716.343000ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0008 aaaaaaaabbbbbbbb MASK:ffffffffffffffff at 6726.345000ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0010 ccccccccdddddddd MASK:ffffffffffffffff at 6736.347000ns
+# PFSOC_FIC_0_BFM:144:return
+# PFSOC_FIC_0_BFM: Data Read 20600f0018 0101010102020202 MASK:ffffffffffffffff at 6746.349000ns
+# PFSOC_FIC_0_BFM: Data Read 20600f0020 03030303badcad00 MASK:ffffffffffffffff at 6756.351000ns
+#############################################################################
+#  
+# FIC_0 BFM Simulation Complete - 50 Instructions - NO ERRORS
+#  
+#############################################################################
+</code></pre>The
+            FIC BFM initiator can also be used to mimic the DMA type burst data transfer between MSS
+            and fabric. With this, you may want to check the response of fabric RTL by transferring
+            data to/from GEM (IP/Ethernet packet), USB, and so on. <p class="- topic/p p">When data transfer is from MSS
+                to fabric, source address can be any initiator within the MSS and destination
+                address must be within the corresponding FIC address range as per <a class="- topic/xref xref" href="GUID-ED03BEDA-8293-49B8-8436-8C836C5AD7DD.html#GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-CCA8E37F-5040-475B-AAC2-45590827F897">Table 2-1. FIC Interface Address Ranges</a>. As FIC BFM
+                represents all the initiators of MSS to communicate with the fabric, so the source
+                data can be provided through the <code class="+ topic/ph pr-d/codeph ph codeph">vec</code> file. This
+                    <code class="+ topic/ph pr-d/codeph ph codeph">vec</code> file is read by BFM initiator and it transfers the data to
+                the fabric through AXI write transactions. The BFM initiator considers the data from
+                    <code class="+ topic/ph pr-d/codeph ph codeph">vec</code> as AXI data and it is your responsibility to fill the
+                    <code class="+ topic/ph pr-d/codeph ph codeph">vec</code> file with proper packets like Ethernet, USB, and so
+                on.</p><p class="- topic/p p">When data transfer is from fabric to MSS, source address should be within
+                the corresponding FIC address range and the destination can be any address within
+                MSS (Peripherals, memories, and so on). The FIC BFM transfers the data from fabric
+                to MSS through the AXI read transactions and does not store this read data anywhere
+                within the FIC/MSS.</p><div class="- topic/p p">The following table lists the BFM commands and sequence
+                that to be used to perform DMA type transfer. <div class="table-container"><table class="- topic/table table frame-all" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB" data-ofbid="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 18-3. </span></span><span class="table--title" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__GUID-CE754213-486C-4A8B-91E2-C68028CA37E6">BFM Commands And Sequence
+                        Used To Perform DMA Type Transfer</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                            <tr class="- topic/row">
+                                <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__1">Command</th>
+                                <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__2">Function</th>
+                            </tr>
+                        </thead><tbody class="- topic/tbody tbody">
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__1"><code class="+ topic/ph pr-d/codeph ph codeph">setup 0x8 &lt;source address&gt; &lt;destination
+                                        address&gt;</code></td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__2">To set source and destination address of DMA transfer</td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__1"><code class="+ topic/ph pr-d/codeph ph codeph">setup 0xA &lt;data&gt;</code></td>
+                                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__2">To set DMA data source,
+                                            where,<p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">&lt;data&gt;</code> = 0, means data
+                                        increment by 1 starting from 0x1
+                                            </p><p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">&lt;data&gt;</code> = 1, means random
+                                        data</p><p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">&lt;data&gt;</code> = 2, means data
+                                        from <code class="+ topic/ph pr-d/codeph ph codeph">vec</code> file</p></td>
+                            </tr>
+                            <tr class="- topic/row">
+                                <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__1"><code class="+ topic/ph pr-d/codeph ph codeph">setup 0x9 &lt;DMA_Length&gt;
+                                    &lt;Control&gt;</code></td>
+                                <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06BB19CA-C659-445A-A174-E981B6AEBD03__TABLE_YLZ_FGL_NRB__entry__2">To set DMA start and control, where,<p class="- topic/p p">set
+                                            <code class="+ topic/ph pr-d/codeph ph codeph">Control</code> bit-0 to '1' to start DMA
+                                        transfer</p><p class="- topic/p p">set <code class="+ topic/ph pr-d/codeph ph codeph">Control</code> bit-1 to '1' to
+                                        transfer from MSS to Fabric (AXI write) </p><p class="- topic/p p">set
+                                            <code class="+ topic/ph pr-d/codeph ph codeph">Control</code> bit-2 to '1' to transfer from
+                                        Fabric to MSS (AXI read) </p><p class="- topic/p p">use <code class="+ topic/ph pr-d/codeph ph codeph">Control</code>
+                                        = 0x3 to start DMA transfer from MSS to Fabric</p><p class="- topic/p p">use
+                                            <code class="+ topic/ph pr-d/codeph ph codeph">Control</code> = 0x5 to start DMA transfer
+                                        from Fabric to MSS</p><p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">&lt;DMA_Length&gt;</code>
+                                        is hex value of number of bytes to transfer. Maximum allowed
+                                        value is 4096 bytes.</p></td>
+                            </tr>
+                        </tbody></table></div></div><div class="- topic/p p">The following code block shows a typical example to perform DMA type
+                data
+                transfer.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>memmap GEM0  0x20110000;
+memmap LSRAM 0x60000000;// Through FIC0
+
+procedure main;
+
+int dma_size;
+set dma_size 0x100; //256 byte of dma size
+print "*************************MSS DMA test*************************"
+setup 0x8 GEM0 LSRAM // set source and destination address
+setup 0xA 0x2 Din.vec // read data from vec file
+setup 0x9 dma_size 0x3 //
+wait 1us;
+setup 0x9 dma_size 0x5
+wait 1us;
+return
+</code></pre></div></section></div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

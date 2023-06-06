@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.4.1<\/ph>\nSmart Design Tcl Commands","href":"Chunk33034294.html#Chunk33034294","attributes":{"data-id":"Chunk33034294"},"menu":{"hasChildren":false},"tocID":"Chunk33034294-d10733e20590","next":"Chunk33034294-d10733e20590"}]});

@@ -1,0 +1,733 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Description This Tcl command returns the list of HSM tickets. Note: HSM server name must be specified via HSM_SERVER_NAME DEF variable. list_all_hsm_tickets [-output_file &#34;Output file&#34;] \ ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>19.16.1 SPPS Tcl Commands</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="Chunk1434920681-d10733e24962"/><meta name="wh-out-relpath" content="Chunk1434920681.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li><div class="topicref" data-id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3"><div class="title"><a href="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16</ph>
+HSM Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li class="active"><div class="topicref" data-id="Chunk1434920681"><div class="title"><a href="Chunk1434920681.html#Chunk1434920681"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1</ph>
+SPPS Tcl Commands</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d10733e19162" class="topicref introduction" data-id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d10733e19162-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d10733e19170" class="topicref" data-id="GUID-57D1B766-9771-410F-B0F1-9199613DB164" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57D1B766-9771-410F-B0F1-9199613DB164-d10733e19170-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57D1B766-9771-410F-B0F1-9199613DB164.html" id="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d10733e19170-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.1</ph>
+Tcl Scripting Overview</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d10733e19442" class="topicref" data-id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d10733e19442-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81.html" id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d10733e19442-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.2</ph>
+Building a Libero Design Using Tcl</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d10733e19547" class="topicref" data-id="GUID-CE445F8D-419D-434B-9288-A0005F280E89" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CE445F8D-419D-434B-9288-A0005F280E89-d10733e19547-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CE445F8D-419D-434B-9288-A0005F280E89.html" id="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d10733e19547-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.3</ph>
+Project Manager Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d10733e20582" class="topicref" data-id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d10733e20582-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6.html" id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d10733e20582-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.4</ph>
+SmartDesign Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d10733e21190" class="topicref" data-id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d10733e21190-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4.html" id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d10733e21190-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.5</ph>
+HDL Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d10733e21305" class="topicref" data-id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d10733e21305-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275.html" id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d10733e21305-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.6</ph>
+Command Tools</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d10733e21598" class="topicref" data-id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d10733e21598-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F.html" id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d10733e21598-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.7</ph>
+MSS Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d10733e21654" class="topicref" data-id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d10733e21654-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670.html" id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d10733e21654-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.8</ph>
+SmartTime Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d10733e22415" class="topicref" data-id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d10733e22415-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-33C45F08-A467-4461-B5EF-8D86325E235A.html" id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d10733e22415-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.9</ph>
+SmartPower Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d10733e23069" class="topicref" data-id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d10733e23069-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641.html" id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d10733e23069-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.10</ph>
+Programming and Configuration Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d10733e23337" class="topicref" data-id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d10733e23337-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08.html" id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d10733e23337-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.11</ph>
+FlashPro Express Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d10733e23613" class="topicref" data-id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d10733e23613-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A.html" id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d10733e23613-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.12</ph>
+Configure JTAG Chain Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d10733e23817" class="topicref" data-id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d10733e23817-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010.html" id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d10733e23817-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.13</ph>
+SmartDebug Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d10733e24723" class="topicref" data-id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d10733e24723-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D8832000-73FB-42DC-860F-FF30F05EE075.html" id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d10733e24723-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14</ph>
+System Builder Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d10733e24868" class="topicref" data-id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d10733e24868-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527.html" id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d10733e24868-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.15</ph>
+Simultaneous Switching Noise Analyzer (SSNA) Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d10733e24952" class="topicref" data-id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d10733e24952-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3.html" id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d10733e24952-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16</ph>
+HSM Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="Chunk1434920681-d10733e24962" class="topicref" data-id="Chunk1434920681" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Chunk1434920681-d10733e24962-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1434920681.html#Chunk1434920681" id="Chunk1434920681-d10733e24962-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1</ph>
+SPPS Tcl Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197-d10733e24970" class="topicref" data-id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk1434920681.html#GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197-d10733e24970-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1.1</ph>
+list_all_hsm_tickets</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F-d10733e24981" class="topicref" data-id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk1434920681.html#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F-d10733e24981-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1.2</ph>
+complete_prog_job</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4-d10733e24992" class="topicref" data-id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk1434920681.html#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4-d10733e24992-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1.3</ph>
+get_job_status</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9-d10733e25003" class="topicref" data-id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk1434920681.html#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9-d10733e25003-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1.4</ph>
+process_job_request</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4-d10733e25014" class="topicref" data-id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk1434920681.html#GUID-787BE762-AD15-4F9E-A242-E597064D19D4" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4-d10733e25014-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1.5</ph>
+remove_hsm_tickets</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D-d10733e25025" class="topicref" data-id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk1434920681.html#GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D-d10733e25025-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16.1.6</ph>
+set_hsm_params</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d10733e25037" class="topicref" data-id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d10733e25037-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2_2.html#GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2" id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d10733e25037-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.17</ph>
+Derive Constraints Tcl Commands</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1"><article class="nested0" aria-labelledby="ariaid-title1" id="Chunk1434920681"><h1 class="- topic/title title topictitle1" id="ariaid-title1" style="display:inline-block">19.16.1 SPPS Tcl Commands</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SPPS%20Tcl%20Commands">(Ask a Question)</a><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__SPPS_LIST_ALL_HSM_TICKETS" xml:lang="en-US" lang="en-US" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197">
+    <h2 class="- topic/title title topictitle2" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__SPPS_LIST_ALL_HSM_TICKETS" style="display:inline-block">19.16.1.1 list_all_hsm_tickets</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=list_all_hsm_tickets">(Ask a Question)</a>
+    
+    
+    <div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section section" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-91BCD677-22E0-4ED1-8A4B-47C81785AE41" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-91BCD677-22E0-4ED1-8A4B-47C81785AE41"><h3 class="- topic/title title sectiontitle">Description</h3><p class="- topic/p p">This Tcl
+                command returns the list of HSM tickets.</p><div class="- topic/note note notype note_notype" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-2303A804-68A5-43F9-AAF1-8E8FDCFFACB1" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-2303A804-68A5-43F9-AAF1-8E8FDCFFACB1"><span class="note__title">Note:</span> HSM server name must be specified via
+                HSM_SERVER_NAME DEF
+            variable.</div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>list_all_hsm_tickets [-output_file "Output file"] \
+                     [-hsm_byte_order "TRUE | FALSE"]</code></pre></section>
+        <section class="- topic/section section" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-4627A906-D4F6-450B-A1D7-FAD0DE0C12F9" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-4627A906-D4F6-450B-A1D7-FAD0DE0C12F9"><h3 class="- topic/title title sectiontitle">Arguments</h3><div class="table-container"><table class="- topic/table table" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__1">output_file</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__3">Specifies the output file, which contains a list of ticket IDs
+                                inside HSM. This parameter is optional.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__1">hsm_byte_order</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__2">boolean</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-03510BD6-F0CB-4D5E-A0CA-495445AB9945__entry__3"><p class="- topic/p p">-</p></td>
+                        </tr>
+                    </tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F891A731-78DE-40B8-9834-926C269A5CFC" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F891A731-78DE-40B8-9834-926C269A5CFC" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F891A731-78DE-40B8-9834-926C269A5CFC__entry__1">Return Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F891A731-78DE-40B8-9834-926C269A5CFC__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F891A731-78DE-40B8-9834-926C269A5CFC__entry__1">List of strings</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F891A731-78DE-40B8-9834-926C269A5CFC__entry__2">Returns a list of HSM tickets.</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-16A3C679-6015-4122-BDA0-E2CAB307E8E0" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-16A3C679-6015-4122-BDA0-E2CAB307E8E0"><h3 class="- topic/title title sectiontitle">Error Codes</h3><div class="table-container"><table class="- topic/table table" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5__entry__1">Error Code</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5__entry__2">Fpeng error: Unable to create/get HSM client.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-811D3E16-B78F-438F-B4D1-5B81AF7FBBC5__entry__2">Parameter 'param_name' is not defined. Valid command formatting
+                                is 'list_all_hsm_tickets [-output_file "Output file which contains
+                                list of ticket IDs inside HSM"] \ [-hsm_byte_order "TRUE |
+                                FALSE"]'.</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-1976FE08-317B-45F5-9A60-B62A02383835" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-1976FE08-317B-45F5-9A60-B62A02383835"><h3 class="- topic/title title sectiontitle">Supported Families</h3><div class="table-container"><table class="- topic/table table frame-none" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-0F22DF82-7556-4A21-8A2A-D694B55EE42E" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-0F22DF82-7556-4A21-8A2A-D694B55EE42E" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">SmartFusion2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">IGLOO2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire SoC</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F86C5C94-F1AB-4756-8D86-CCAA3CC494B9" data-ofbid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F86C5C94-F1AB-4756-8D86-CCAA3CC494B9"><h3 class="- topic/title title sectiontitle">Example</h3><p class="- topic/p p">The following
+                example displays the list of the tickets in HSM
+            server:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>puts [list_all_hsm_tickets]</code></pre></section>
+        
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__SPPS_COMPLETE_PROG_JOB" xml:lang="en-US" lang="en-US" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F">
+    <h2 class="- topic/title title topictitle2" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__SPPS_COMPLETE_PROG_JOB" style="display:inline-block">19.16.1.2 complete_prog_job</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=complete_prog_job">(Ask a Question)</a>
+    
+    
+    <div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section section" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-205CE904-43D8-4664-A903-5B2D1B8678CC" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-205CE904-43D8-4664-A903-5B2D1B8678CC"><h3 class="- topic/title title sectiontitle">Description</h3><p class="- topic/p p">This Tcl
+                command completes the current open job and generates a Job Status container
+                including cryptographically signed Job Ticket end certifiers and Certificates of
+                Conformance (if enabled) of the programmed devices. It archives ticket data from the
+                HSM database. The resultant Job Status container can be imported into Job Manager
+                and validated using U-HSM. If the job status file is not specified, the information
+                is printed in the log window, and no Job Status container is created for subsequent
+                verification. The HSM Job can only be completed, if the number of devices in each
+                HSM ticket has been exhausted. If devices remain, the job can only be terminated by
+                using the "-terminate" option.</p><div class="- topic/note note notype note_notype" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-09C9606F-394A-4BA5-80AE-685D3CF82CB7" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-09C9606F-394A-4BA5-80AE-685D3CF82CB7"><span class="note__title">Note:</span> This command fails, if there are
+                devices left in any HSM ticket, and the terminate option is not
+            used.</div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>complete_prog_job [-job_status_file "job status file"] [-terminate "TRUE | FALSE"]</code></pre></section>
+        <section class="- topic/section section" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F2B3CCAC-6AF8-4E04-8961-F1F4E73DC0C4" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F2B3CCAC-6AF8-4E04-8961-F1F4E73DC0C4"><h3 class="- topic/title title sectiontitle">Arguments</h3><div class="table-container"><table class="- topic/table table" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__1">job_status_file</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__3">Specifies full path to the output Job Status container, which
+                                contains End-Job Certifier and CofCs. If not specified, information
+                                is printed in the log window. This parameter is optional.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__1">terminate</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__2">boolean</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-D86C9289-DB0E-4BA5-9022-310E09AF1277__entry__3">This option terminates the HSM job even if there are devices left
+                                in any HSM ticket. This parameter is optional, if the number of
+                                devices in all tickets are exhausted.</td>
+                        </tr>
+                    </tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-FA741489-CF7C-471E-AC38-C1D81D26B596" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-FA741489-CF7C-471E-AC38-C1D81D26B596" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-FA741489-CF7C-471E-AC38-C1D81D26B596__entry__1">Return Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-FA741489-CF7C-471E-AC38-C1D81D26B596__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-FA741489-CF7C-471E-AC38-C1D81D26B596__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-FA741489-CF7C-471E-AC38-C1D81D26B596__entry__2">None</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-9D021EE7-3ADF-4040-85BA-C3835C5FE12D" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-9D021EE7-3ADF-4040-85BA-C3835C5FE12D"><h3 class="- topic/title title sectiontitle">Error Codes</h3><div class="table-container"><table class="- topic/table table" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001__entry__1">Error Code</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001__entry__2">Fpeng error: Chain manager not set</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-E0ECA92D-FD7C-45D3-8AD7-792D2686E001__entry__2">Parameter 'param_name' is not defined. Valid command formatting
+                                is 'complete_prog_job [-job_status_file "job status file"] \
+                                [-terminate "TRUE | FALSE"]'.</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-955EF7DA-C60D-4B02-B3C9-D95F5F630407" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-955EF7DA-C60D-4B02-B3C9-D95F5F630407"><h3 class="- topic/title title sectiontitle">Supported Families</h3><div class="table-container"><table class="- topic/table table frame-none" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-A3EC51B9-973C-4C79-B907-49A9387451F8" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-A3EC51B9-973C-4C79-B907-49A9387451F8" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">SmartFusion2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">IGLOO2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire SoC</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-B74D3BEA-8CBA-43D6-9F95-6AD58AFE8164" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-B74D3BEA-8CBA-43D6-9F95-6AD58AFE8164"><h3 class="- topic/title title sectiontitle">Example</h3><p class="- topic/p p">This example
+                terminates HSM job:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>complete_prog_job -terminate</code></pre></section>
+        
+        <section class="- topic/section section" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F18AA3D7-04CB-402A-AAE3-CD85DD127954" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F18AA3D7-04CB-402A-AAE3-CD85DD127954"><h3 class="- topic/title title sectiontitle">See Also</h3><ul class="- topic/ul ul">
+                <li class="- topic/li li" id="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-2D7177FD-8BE3-468D-AC3F-068307BB9069" data-ofbid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-2D7177FD-8BE3-468D-AC3F-068307BB9069">get_job_status</li>
+            </ul></section>
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__SPPS_GET_JOB_STATUS" xml:lang="en-US" lang="en-US" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4"><h2 class="- topic/title title topictitle2" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__SPPS_GET_JOB_STATUS" style="display:inline-block">19.16.1.3 get_job_status</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=get_job_status">(Ask a Question)</a><div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p><section class="- topic/section section" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-945EA145-7AAB-47B1-85C8-A2CC08F1AF33" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-945EA145-7AAB-47B1-85C8-A2CC08F1AF33"><h3 class="- topic/title title sectiontitle">Description</h3><p class="- topic/p p">This Tcl command exports status of current open job. The job status contains a number of devices left for each HSM ticket. If job status file is not specified, the information is printed in the log window.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>get_job_status [-job_status_file "job status file"] [-archive "TRUE | FALSE"]</code></pre></section><section class="- topic/section section" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-65A4761A-6D80-4B18-8873-84EA7E255DF8" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-65A4761A-6D80-4B18-8873-84EA7E255DF8"><h3 class="- topic/title title sectiontitle">Arguments</h3><div class="table-container"><table class="- topic/table table" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__1">Parameter</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__2">Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__3">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__1">job_status_file</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__3">Path to the output FlashPro Express job status container. The job status file can be sent to the Job Manager application and Certificates of Conformance (if available) validated using the U-HSM. This parameter is optional.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__1">archive</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-82A26485-0919-4FB8-936E-C85C4343D1A0__entry__3">Moves the HSM ticket log files from the HSM ticket database to the HSM ticket archive. The archive folder is specified during HSM installation and setup. This parameter is optional. <div class="- topic/note note notype note_notype" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-F62BBB87-4747-4C9A-A559-06E8F0CC7F45" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-F62BBB87-4747-4C9A-A559-06E8F0CC7F45"><span class="note__title">Note:</span> If no <code class="+ topic/ph pr-d/codeph ph codeph">job_status_file</code> is specified, the archive option prints the Certificates of Conformance in the log window without exporting them.</div></td></tr></tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-441EDC00-0ABD-427B-92D6-C0122B7B28EE" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-441EDC00-0ABD-427B-92D6-C0122B7B28EE" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-441EDC00-0ABD-427B-92D6-C0122B7B28EE__entry__1">Return Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-441EDC00-0ABD-427B-92D6-C0122B7B28EE__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-441EDC00-0ABD-427B-92D6-C0122B7B28EE__entry__1">Integer</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-441EDC00-0ABD-427B-92D6-C0122B7B28EE__entry__2">Returns a number of devices.</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-B6E034B7-50A6-4510-B136-BE332A26E915" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-B6E034B7-50A6-4510-B136-BE332A26E915"><h3 class="- topic/title title sectiontitle">Error Codes</h3><div class="table-container"><table class="- topic/table table" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC__entry__1">Error Code</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC__entry__2">Fpeng error: Chain manager not set</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3C3BF75D-11F5-4906-B42D-D70250AECDAC__entry__2">Parameter 'param_name' is not defined. Valid command formatting is 'get_job_status [-job_status_file "job status file"] \ [-archive "TRUE | FALSE"]'.</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3E3B34EA-3DE9-4E25-A238-7E88AE58B971" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3E3B34EA-3DE9-4E25-A238-7E88AE58B971"><h3 class="- topic/title title sectiontitle">Supported Families</h3><div class="table-container"><table class="- topic/table table frame-none" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-78B1875C-C10F-4406-8BF7-A45A6A141E66" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-78B1875C-C10F-4406-8BF7-A45A6A141E66" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">PolarFire</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">SmartFusion2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">RTG4</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">IGLOO2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">PolarFire SoC</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-F8FC4C57-8CD7-46C0-9E74-1FD5FEE7C31B" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-F8FC4C57-8CD7-46C0-9E74-1FD5FEE7C31B"><h3 class="- topic/title title sectiontitle">Example</h3><p class="- topic/p p">The following example displays the status of current open job status:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>puts [get_job_status]</code></pre></section><section class="- topic/section section" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-2F78A737-1282-468D-BE45-6FCE113E7D6E" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-2F78A737-1282-468D-BE45-6FCE113E7D6E"><h3 class="- topic/title title sectiontitle">See Also</h3><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-4CE09555-D3B2-4509-B849-E5296F6FEBC1" data-ofbid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-4CE09555-D3B2-4509-B849-E5296F6FEBC1">create_job_project</li></ul></section></div></article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__SPPS_PROCESS_JOB_REQUEST" xml:lang="en-US" lang="en-US" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9">
+    <h2 class="- topic/title title topictitle2" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__SPPS_PROCESS_JOB_REQUEST" style="display:inline-block">19.16.1.4 process_job_request</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=process_job_request">(Ask a Question)</a>
+    
+    
+    <div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section section" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-E8B583EB-1DF1-4ED5-882A-9EE1DE5F82F4" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-E8B583EB-1DF1-4ED5-882A-9EE1DE5F82F4"><h3 class="- topic/title title sectiontitle">Description</h3><p class="- topic/p p">This Tcl
+                command processes a job request received from Job Manager. It is part of the Job
+                Ticket generation process.</p><div class="- topic/note note notype note_notype" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-B27A640E-D09C-4A93-A96E-1F0A215AD90B" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-B27A640E-D09C-4A93-A96E-1F0A215AD90B"><span class="note__title">Note:</span> HSM server name must be specified via HSM_SERVER_NAME DEF
+            variable.</div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>process_job_request -request_file "job request file" \
+                    -reply_file "job reply file" \
+		    [-overwrite_reply "TRUE | FALSE"]</code></pre></section>
+        <section class="- topic/section section" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D4755F37-74CB-4303-BB0F-1B0802C25FF7" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D4755F37-74CB-4303-BB0F-1B0802C25FF7"><h3 class="- topic/title title sectiontitle">Arguments</h3><div class="table-container"><table class="- topic/table table" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__1">request_file</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__3">Specifies full file name of job request file. This parameter is
+                                mandatory.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__1">reply_file</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__3">Specifies full file name of job reply file. This parameter is
+                                mandatory.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__1">overwrite_reply</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__2">boolean</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-26FBFFF0-2567-4BF9-887C-E465E5F448CE__entry__3">This parameter is optional. The possible value of this parameter
+                                are the following: <ul class="- topic/ul ul">
+                                    <li class="- topic/li li" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-72A4B70B-0920-46CC-A8BD-E30A990C1E8C" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-72A4B70B-0920-46CC-A8BD-E30A990C1E8C">TRUE or 1:
+                                        Allows overwriting of any pre-existing reply_file.</li>
+                                    <li class="- topic/li li" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-767E2F93-89FB-4FE1-ABD2-7F8EC634448E" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-767E2F93-89FB-4FE1-ABD2-7F8EC634448E">FALSE or 0:
+                                        Does not allow overwriting of any pre-existing
+                                        reply_file.</li>
+                                </ul></td>
+                        </tr>
+                    </tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D036A324-C82A-4E47-B361-74322A03AEA7" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D036A324-C82A-4E47-B361-74322A03AEA7" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D036A324-C82A-4E47-B361-74322A03AEA7__entry__1">Return Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D036A324-C82A-4E47-B361-74322A03AEA7__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D036A324-C82A-4E47-B361-74322A03AEA7__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D036A324-C82A-4E47-B361-74322A03AEA7__entry__2">None</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-C8D0220C-A2D2-40C7-BAFD-8C26F1EF7993" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-C8D0220C-A2D2-40C7-BAFD-8C26F1EF7993"><h3 class="- topic/title title sectiontitle">Error Codes</h3><div class="table-container"><table class="- topic/table table" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__1">Error Code</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__2">Required parameter 'request_file' is missing.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__2">Required parameter 'reply_file' is missing.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__2">Parameter 'request_file' : the file '/request_file_name' does not
+                                exist.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__2">overwrite_reply: Invalid argument value: 'value' (expecting TRUE,
+                                1, true, FALSE, 0 or false).</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__2">Cannot get HSM.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EF1992A2-60E2-4086-98D9-FE889F7582C3__entry__2">Parameter 'param_name' is not defined. Valid command formatting
+                                is 'process_job_request -request_file "job request file" \
+                                -reply_file "job reply file" \ [-overwrite_reply "TRUE |
+                                FALSE"]'.</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EC855A9C-24F4-4C8D-B073-D015ECC09551" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EC855A9C-24F4-4C8D-B073-D015ECC09551"><h3 class="- topic/title title sectiontitle">Supported Families</h3><div class="table-container"><table class="- topic/table table frame-none" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-2CA6E74B-83EF-4442-B6E5-3E62E63AC9D6" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-2CA6E74B-83EF-4442-B6E5-3E62E63AC9D6" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">SmartFusion2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">IGLOO2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire SoC</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-DAA39414-E716-4A2C-85B8-DEB67BC28360" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-DAA39414-E716-4A2C-85B8-DEB67BC28360"><h3 class="- topic/title title sectiontitle">Example</h3><p class="- topic/p p">This example
+                processes a job
+            request:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>process_job_request \
+        -request_file {D:/flashpro_files/jobmgr_project/cm_request.req} \
+        -reply_file {D:/flashpro_files/jobmgr_project/cm_reply.rep} \
+        -overwrite_reply {TRUE}</code></pre></section>
+        
+        <section class="- topic/section section" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-8532D47E-2FFB-4E62-81BE-FBCAB84736C8" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-8532D47E-2FFB-4E62-81BE-FBCAB84736C8"><h3 class="- topic/title title sectiontitle">See Also</h3><ul class="- topic/ul ul">
+                <li class="- topic/li li" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-F098F8BF-CC25-4F40-9218-1F6E7AC93CFF" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-F098F8BF-CC25-4F40-9218-1F6E7AC93CFF">set_hsm_params</li>
+                <li class="- topic/li li" id="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-86A12822-6BA4-47E2-BE7F-F2D333D7242F" data-ofbid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-86A12822-6BA4-47E2-BE7F-F2D333D7242F">create_job_project</li>
+            </ul></section>
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__SPPS_REMOVE_HSM_TICKETS" xml:lang="en-US" lang="en-US" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4"><h2 class="- topic/title title topictitle2" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__SPPS_REMOVE_HSM_TICKETS" style="display:inline-block">19.16.1.5 remove_hsm_tickets</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=remove_hsm_tickets">(Ask a Question)</a><div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p><section class="- topic/section section" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6CB90132-177D-4D3D-BC0D-D8101EBC7332" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6CB90132-177D-4D3D-BC0D-D8101EBC7332"><h3 class="- topic/title title sectiontitle">Description</h3><div class="- topic/p p">This Tcl command removes HSM tickets from the HSM using one of the following methods: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-9A9B6424-2AC4-4075-8684-F0B9739B3792" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-9A9B6424-2AC4-4075-8684-F0B9739B3792">By specifying the job reply file in which case all tickets that are in the reply file is deleted.</li><li class="- topic/li li" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-66847EC2-EE5C-410D-A3F7-55CF314E0C98" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-66847EC2-EE5C-410D-A3F7-55CF314E0C98">By specifying each of the ticket IDs value in hexadecimal string.</li></ul></div><div class="- topic/note note notype note_notype" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-7FFE7FE5-59E7-407B-8789-BC3B8ACA1649" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-7FFE7FE5-59E7-407B-8789-BC3B8ACA1649"><span class="note__title">Note:</span> <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-2FBE4DAD-903C-4569-AF3A-DA6F30719F57" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-2FBE4DAD-903C-4569-AF3A-DA6F30719F57">This command must be used very carefully as it removes HSM tickets, rendering any FlashPro Express jobs based on those tickets to be unusable.</li><li class="- topic/li li" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-CBD331D2-EF23-4560-967C-D2CA8B15BA4A" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-CBD331D2-EF23-4560-967C-D2CA8B15BA4A">This command does not require a FlashPro Express project to be created or opened.</li></ul></div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>remove_hsm_tickets [-ticket_ids "Ticket IDs to remove"] \
+                   [-reply_file "Reply file containing ticket IDs to remove"] \
+		   [-force "TRUE | FALSE"]</code></pre></section><section class="- topic/section section" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-AE7833A8-1D17-48A1-882B-2BA16C3FB36B" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-AE7833A8-1D17-48A1-882B-2BA16C3FB36B"><h3 class="- topic/title title sectiontitle">Arguments</h3><div class="table-container"><table class="- topic/table table" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__1">Parameter</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__2">Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__3">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__1">ticket_ids</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__3">Specifies Hex value of each ticket ID to be removed. This parameter is optional. This parameter can specify several values separated by spaces.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__1">reply_file</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__3">Specifies full file name of job request file. This parameter is optional.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__1">force</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-B25E0C73-6D4C-4826-9BDC-5E4E0E502C17__entry__3">This parameter is optional.</td></tr></tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-D416B8DD-77C9-44C3-BF14-2FB7D4140B54" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-D416B8DD-77C9-44C3-BF14-2FB7D4140B54" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-D416B8DD-77C9-44C3-BF14-2FB7D4140B54__entry__1">Return Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-D416B8DD-77C9-44C3-BF14-2FB7D4140B54__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-D416B8DD-77C9-44C3-BF14-2FB7D4140B54__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-D416B8DD-77C9-44C3-BF14-2FB7D4140B54__entry__2">None</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-E40AD661-C743-4F2D-B082-1D18EC112241" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-E40AD661-C743-4F2D-B082-1D18EC112241"><h3 class="- topic/title title sectiontitle">Error Codes</h3><div class="table-container"><table class="- topic/table table" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__1">Error Code</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__2">Specify one of the required arguments: 'ticket_ids' or 'reply_file'.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__2">'value' is not a valid hex string. Specify a valid hex string for ticket ID.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-F9FCD028-F566-4317-BCD5-1300940C899D__entry__2">Parameter 'param_name' is not defined. Valid command formatting is remove_hsm_tickets [-ticket_ids "[Ticket IDs to remove]+"] \ [-reply_file "Reply file containing ticket IDs to remove"] \ [-force "TRUE | FALSE"]'.</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-48DC2E7B-9DFB-41E5-AB6F-ACF541D01F7D" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-48DC2E7B-9DFB-41E5-AB6F-ACF541D01F7D"><h3 class="- topic/title title sectiontitle">Supported Families</h3><div class="table-container"><table class="- topic/table table frame-none" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-2189D3A4-88C4-4B30-8C2A-3472CC9064C7" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-2189D3A4-88C4-4B30-8C2A-3472CC9064C7" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">PolarFire</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">SmartFusion2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">IGLOO2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">PolarFire SoC</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6D9146CD-B5E0-4626-933E-E88C8E9E6DA0" data-ofbid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6D9146CD-B5E0-4626-933E-E88C8E9E6DA0"><h3 class="- topic/title title sectiontitle">Example</h3><p class="- topic/p p">This example removes the HSM tickets from the HSM by specifying Job reply file:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>remove_hsm_tickets \
+		    -reply_file {D:flashpro_filesjobmgr_project12cm_reply.rep}</code></pre><p class="- topic/p p">This example removes the HSM tickets from the HSM by specifying each of the ticket IDs value in hexadecimal string.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>remove_hsm_tickets \
+         -ticket_ids {00000000000000000000899f252d9fb55442aa7e 00000000000000000000b6f385c6a9eeca69705c 00000000000000000000ed5702d0b767ba686b82}</code></pre></section></div></article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__SPPS_SET_HSM_PARAMS" xml:lang="en-US" lang="en-US" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D">
+    <h2 class="- topic/title title topictitle2" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__SPPS_SET_HSM_PARAMS" style="display:inline-block">19.16.1.6 set_hsm_params</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_hsm_params">(Ask a Question)</a>
+    
+    
+    <div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section section" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-941244C5-2FFD-425E-80D8-73AD0E6ECE4D" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-941244C5-2FFD-425E-80D8-73AD0E6ECE4D"><h3 class="- topic/title title sectiontitle">Description</h3><p class="- topic/p p">This Tcl command saves the
+                HSM parameters for the Job Manager application. These parameters remain in effect
+                until overridden by another invocation of this
+            command.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_hsm_params -hsm_server_name hsm_server \
+	       -u_hsm_server {uuid} \
+	       -u_master_hsm_uuid {u_master_uuid} \
+               -hsm_key_set_dir {keyset_dir} \
+               -m_hsm_uuid {m_uuid}</code></pre></section>
+        <section class="- topic/section section" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B624051A-D949-4419-BEB3-90755188F921" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B624051A-D949-4419-BEB3-90755188F921"><h3 class="- topic/title title sectiontitle">Arguments</h3><div class="table-container"><table class="- topic/table table" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__1">hsm_server_name</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__3">Name or IP address of HSM server machine.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__1">u_hsm_uuid</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__3">Specifies User HSM UUID.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__1">u_master_hsm_uuid</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__3">Specifies User HSM Master UUID.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__1">hsm_keyset_dir</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__3">Specifies "Keyset" repository location: a directory in which the
+                                keyset files are created or used.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__1">m_hsm_uuid</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-91FEB297-DD36-42DF-B6F6-878820895F4F__entry__3">Specifies manufacturer HSM UUID. This command saves the HSM
+                                parameters for the Job Manager application. This remains in effect
+                                until its overridden using this same command.</td>
+                        </tr>
+                    </tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B57B6AE6-C212-484C-ADD2-31AF7DCFE11C" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B57B6AE6-C212-484C-ADD2-31AF7DCFE11C" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B57B6AE6-C212-484C-ADD2-31AF7DCFE11C__entry__1">Return Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B57B6AE6-C212-484C-ADD2-31AF7DCFE11C__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B57B6AE6-C212-484C-ADD2-31AF7DCFE11C__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B57B6AE6-C212-484C-ADD2-31AF7DCFE11C__entry__2">None</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-54447897-435F-4CFB-9C32-AAABDD7CCBDC" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-54447897-435F-4CFB-9C32-AAABDD7CCBDC"><h3 class="- topic/title title sectiontitle">Error Codes</h3><div class="table-container"><table class="- topic/table table" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">Error Code</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">Required parameter 'hsm_server_name' is missing.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">Could not get server information. Check server address and
+                                connection and try again.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">HSM server name cannot be empty.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">hsm_type_u: Invalid argument value: '' (expecting TRUE, 1, true,
+                                FALSE, 0 or false).</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">Warning:Deprecated 'hsm_type_u' parameter is used.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">FTP login password must be specified along with the user
+                                name.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__1">None</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-E120013F-35DA-4801-847A-90CBEEF831DC__entry__2">Parameter 'hsm_type_u' is not defined. Valid command formatting
+                                is 'set_hsm_params -hsm_server_name "HSM server machine name or IP
+                                address" \ -u_hsm_uuid "User HSM UUID" \ -u_master_hsm_uuid "User
+                                Master HSM UUID" \ -hsm_keyset_dir "path" \ -m_hsm_uuid
+                                "Manufacturer HSM UUID"'</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-D3EBEB01-4690-49FD-8336-4FD8963B75F5" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-D3EBEB01-4690-49FD-8336-4FD8963B75F5"><h3 class="- topic/title title sectiontitle">Supported Families</h3><div class="table-container"><table class="- topic/table table frame-none" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-C234C7FD-F818-43F1-A197-78AF50D5008B" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-C234C7FD-F818-43F1-A197-78AF50D5008B" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">SmartFusion2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">IGLOO2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0">PolarFire SoC</td>
+                        </tr>
+                    </tbody></table></div></section>
+        <section class="- topic/section section" id="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-EC063179-241B-451B-9743-2CC4AB81D8C1" data-ofbid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-EC063179-241B-451B-9743-2CC4AB81D8C1"><h3 class="- topic/title title sectiontitle">Example</h3><p class="- topic/p p">The following
+                example sets M-HSM
+            parameters:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_hsm_params -hsm_server_name {11.22.33.44} \
+               -hsm_type_u {0} \
+               -m_hsm_uuid {0000000000000000000000000000000000000002} \
+               -ftp_username {hsm} \
+               -ftp_password {hsm}</code></pre></section>
+        
+        
+    </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197" data-tocid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197">19.16.1.1 list_all_hsm_tickets</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-91BCD677-22E0-4ED1-8A4B-47C81785AE41" data-tocid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-91BCD677-22E0-4ED1-8A4B-47C81785AE41">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-4627A906-D4F6-450B-A1D7-FAD0DE0C12F9" data-tocid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-4627A906-D4F6-450B-A1D7-FAD0DE0C12F9">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-16A3C679-6015-4122-BDA0-E2CAB307E8E0" data-tocid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-16A3C679-6015-4122-BDA0-E2CAB307E8E0">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-1976FE08-317B-45F5-9A60-B62A02383835" data-tocid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-1976FE08-317B-45F5-9A60-B62A02383835">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F86C5C94-F1AB-4756-8D86-CCAA3CC494B9" data-tocid="GUID-2278ADD0-2906-4D5B-8D25-48F6D4349197__GUID-F86C5C94-F1AB-4756-8D86-CCAA3CC494B9">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F" data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F">19.16.1.2 complete_prog_job</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-205CE904-43D8-4664-A903-5B2D1B8678CC" data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-205CE904-43D8-4664-A903-5B2D1B8678CC">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F2B3CCAC-6AF8-4E04-8961-F1F4E73DC0C4" data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F2B3CCAC-6AF8-4E04-8961-F1F4E73DC0C4">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-9D021EE7-3ADF-4040-85BA-C3835C5FE12D" data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-9D021EE7-3ADF-4040-85BA-C3835C5FE12D">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-955EF7DA-C60D-4B02-B3C9-D95F5F630407" data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-955EF7DA-C60D-4B02-B3C9-D95F5F630407">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-B74D3BEA-8CBA-43D6-9F95-6AD58AFE8164" data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-B74D3BEA-8CBA-43D6-9F95-6AD58AFE8164">Example</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F18AA3D7-04CB-402A-AAE3-CD85DD127954" data-tocid="GUID-76D6A484-06F1-4E69-923E-8AB83ABE979F__GUID-F18AA3D7-04CB-402A-AAE3-CD85DD127954">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4" data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4">19.16.1.3 get_job_status</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-945EA145-7AAB-47B1-85C8-A2CC08F1AF33" data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-945EA145-7AAB-47B1-85C8-A2CC08F1AF33">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-65A4761A-6D80-4B18-8873-84EA7E255DF8" data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-65A4761A-6D80-4B18-8873-84EA7E255DF8">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-B6E034B7-50A6-4510-B136-BE332A26E915" data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-B6E034B7-50A6-4510-B136-BE332A26E915">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3E3B34EA-3DE9-4E25-A238-7E88AE58B971" data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-3E3B34EA-3DE9-4E25-A238-7E88AE58B971">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-F8FC4C57-8CD7-46C0-9E74-1FD5FEE7C31B" data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-F8FC4C57-8CD7-46C0-9E74-1FD5FEE7C31B">Example</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-2F78A737-1282-468D-BE45-6FCE113E7D6E" data-tocid="GUID-091D06E2-63BF-41DE-A4B8-038DECD72FE4__GUID-2F78A737-1282-468D-BE45-6FCE113E7D6E">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9" data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9">19.16.1.4 process_job_request</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-E8B583EB-1DF1-4ED5-882A-9EE1DE5F82F4" data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-E8B583EB-1DF1-4ED5-882A-9EE1DE5F82F4">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D4755F37-74CB-4303-BB0F-1B0802C25FF7" data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-D4755F37-74CB-4303-BB0F-1B0802C25FF7">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-C8D0220C-A2D2-40C7-BAFD-8C26F1EF7993" data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-C8D0220C-A2D2-40C7-BAFD-8C26F1EF7993">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EC855A9C-24F4-4C8D-B073-D015ECC09551" data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-EC855A9C-24F4-4C8D-B073-D015ECC09551">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-DAA39414-E716-4A2C-85B8-DEB67BC28360" data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-DAA39414-E716-4A2C-85B8-DEB67BC28360">Example</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-8532D47E-2FFB-4E62-81BE-FBCAB84736C8" data-tocid="GUID-B39F0A7C-2544-4E5B-80BC-DE0FD4B42EB9__GUID-8532D47E-2FFB-4E62-81BE-FBCAB84736C8">See Also</a></div></li></ul></li><li class="topic-item"><a href="#GUID-787BE762-AD15-4F9E-A242-E597064D19D4" data-tocid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4">19.16.1.5 remove_hsm_tickets</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6CB90132-177D-4D3D-BC0D-D8101EBC7332" data-tocid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6CB90132-177D-4D3D-BC0D-D8101EBC7332">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-AE7833A8-1D17-48A1-882B-2BA16C3FB36B" data-tocid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-AE7833A8-1D17-48A1-882B-2BA16C3FB36B">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-E40AD661-C743-4F2D-B082-1D18EC112241" data-tocid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-E40AD661-C743-4F2D-B082-1D18EC112241">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-48DC2E7B-9DFB-41E5-AB6F-ACF541D01F7D" data-tocid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-48DC2E7B-9DFB-41E5-AB6F-ACF541D01F7D">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6D9146CD-B5E0-4626-933E-E88C8E9E6DA0" data-tocid="GUID-787BE762-AD15-4F9E-A242-E597064D19D4__GUID-6D9146CD-B5E0-4626-933E-E88C8E9E6DA0">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D" data-tocid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D">19.16.1.6 set_hsm_params</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-941244C5-2FFD-425E-80D8-73AD0E6ECE4D" data-tocid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-941244C5-2FFD-425E-80D8-73AD0E6ECE4D">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B624051A-D949-4419-BEB3-90755188F921" data-tocid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-B624051A-D949-4419-BEB3-90755188F921">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-54447897-435F-4CFB-9C32-AAABDD7CCBDC" data-tocid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-54447897-435F-4CFB-9C32-AAABDD7CCBDC">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-D3EBEB01-4690-49FD-8336-4FD8963B75F5" data-tocid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-D3EBEB01-4690-49FD-8336-4FD8963B75F5">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-EC063179-241B-451B-9743-2CC4AB81D8C1" data-tocid="GUID-515F1932-BC5C-4C58-B134-D7AD58F8896D__GUID-EC063179-241B-451B-9743-2CC4AB81D8C1">Example</a></div></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

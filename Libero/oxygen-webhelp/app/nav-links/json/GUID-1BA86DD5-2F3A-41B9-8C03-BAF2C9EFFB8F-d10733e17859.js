@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>15.1.7.1<\/ph>\nSDC Timing Constraints","href":"GUID-538239F6-D67C-454C-8882-84FD6688D165.html","attributes":{"data-id":"GUID-538239F6-D67C-454C-8882-84FD6688D165"},"menu":{"hasChildren":false},"tocID":"GUID-538239F6-D67C-454C-8882-84FD6688D165-d10733e17867","next":"GUID-538239F6-D67C-454C-8882-84FD6688D165-d10733e17867"}]});

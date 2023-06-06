@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>15.2.9.1.1<\/ph>\nDerived SDC file","href":"GUID-A4D164C7-1F1F-434F-96B4-F986DC62CADF.html","attributes":{"data-id":"GUID-A4D164C7-1F1F-434F-96B4-F986DC62CADF"},"menu":{"hasChildren":false},"tocID":"GUID-A4D164C7-1F1F-434F-96B4-F986DC62CADF-d10733e18144","topics":[]}]});

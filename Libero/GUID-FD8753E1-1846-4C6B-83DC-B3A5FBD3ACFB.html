@@ -1,0 +1,875 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The following sections discuss the Tcl interface. set_hsm_params -hsm_server_name &lt;hsm_server&gt; -u_hsm_uuid &lt;u_uuid&gt; - u_master_hsm_uuid &lt;u_master_uuid &gt; -hsm_key_set_dir &lt;keyset_dir&gt; - m_hsm_uuid ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>13.4.8 Tcl Interface</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892"/><meta name="wh-source-relpath" content="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.xml"/><meta name="wh-out-relpath" content="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB"><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8</ph>
+Tcl Interface</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10987" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10987-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10987-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+FlashPro Express</a><div class="wh-tooltip"><p class="shortdesc">Information about FlasPro Express </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11587" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11587-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html" id="tocId-d10733e11587-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Secure Production Programming Solution (SPPS)</a><div class="wh-tooltip"><p class="shortdesc">Information about Secure Production Programming Solution (SPPS)
+				</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e12317" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e12317-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" id="tocId-d10733e12317-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+SmartDebug</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDebug </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e14622" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e14622-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="tocId-d10733e14622-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954-d10733e14626" class="topicref introduction" data-id="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954-d10733e14626-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635" class="topicref" data-id="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94.html#GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94" id="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.1</ph>
+Manufacturing Flows</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1-d10733e14667" class="topicref" data-id="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1.html" id="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1-d10733e14667-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.2</ph>
+HSM Parameter Configuration</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A-d10733e14675" class="topicref" data-id="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A.html" id="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A-d10733e14675-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.3</ph>
+Keyset File</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684" class="topicref" data-id="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90.html" id="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.4</ph>
+Programming Data</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758" class="topicref" data-id="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C.html" id="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5</ph>
+Programming Job</a></div></div></li><li role="treeitem"><div data-tocid="GUID-7CC7D91A-893B-4404-925B-3382B6A13703-d10733e14807" class="topicref" data-id="GUID-7CC7D91A-893B-4404-925B-3382B6A13703" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7CC7D91A-893B-4404-925B-3382B6A13703.html" id="GUID-7CC7D91A-893B-4404-925B-3382B6A13703-d10733e14807-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.6</ph>
+Export SPI Directory</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817" class="topicref" data-id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-C49E29C8-A8EF-4088-A975-334586BE4C88" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7</ph>
+Key Rotation</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892" class="topicref" data-id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB" id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8</ph>
+Tcl Interface</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604-d10733e14900" class="topicref" data-id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604-d10733e14900-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8.1</ph>
+Application</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650-d10733e14908" class="topicref" data-id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-6A870CCC-EEAD-4ED3-8E42-393316109650" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650-d10733e14908-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8.2</ph>
+Keyset Management</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437-d10733e14916" class="topicref" data-id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437-d10733e14916-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8.3</ph>
+Project Management</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E56DD870-72F6-45D3-B804-F05FD6475C91-d10733e14924" class="topicref" data-id="GUID-E56DD870-72F6-45D3-B804-F05FD6475C91" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E56DD870-72F6-45D3-B804-F05FD6475C91-d10733e14924-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-E56DD870-72F6-45D3-B804-F05FD6475C91" id="GUID-E56DD870-72F6-45D3-B804-F05FD6475C91-d10733e14924-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8.4</ph>
+Programming Data</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8-d10733e14972" class="topicref" data-id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8-d10733e14972-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8-d10733e14972-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8.5</ph>
+Programming Job</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5-d10733e14996" class="topicref" data-id="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5.html" id="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5-d10733e14996-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.9</ph>
+Referenced Documents</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB__GUID-E1272BDF-7A75-440D-8ACF-0C244421A84D"><article class="nested0" aria-labelledby="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB__GUID-E1272BDF-7A75-440D-8ACF-0C244421A84D" id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB"><h1 class="- topic/title title topictitle1" id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB__GUID-E1272BDF-7A75-440D-8ACF-0C244421A84D" style="display:inline-block">13.4.8 Tcl Interface</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Tcl%20Interface">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">The following sections discuss the Tcl interface. </p>
+    </div><article class="- topic/topic topic nested1" aria-labelledby="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-E5DBE230-A33F-471F-B2FA-EE1F2140C16F" xml:lang="en-US" lang="en-US" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604"><h2 class="- topic/title title topictitle2" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-E5DBE230-A33F-471F-B2FA-EE1F2140C16F" style="display:inline-block">13.4.8.1 Application</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Application">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">set_hsm_params</strong> -hsm_server_name &lt;hsm_server&gt; -u_hsm_uuid &lt;u_uuid&gt; - u_master_hsm_uuid &lt;u_master_uuid &gt; -hsm_key_set_dir &lt;keyset_dir&gt; - m_hsm_uuid &lt;m_uuid&gt;</code></pre>
+        </div>
+        <ul class="- topic/ul ul" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__UL_JZQ_LNK_TNB" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__UL_JZQ_LNK_TNB">
+            <li class="- topic/li li" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-B3B9E2B5-65D5-4B31-9AA0-914093730E74" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-B3B9E2B5-65D5-4B31-9AA0-914093730E74"><code class="+ topic/ph pr-d/codeph ph codeph">hsm_server</code> - Name or
+                IP address of HSM server machine.</li>
+            <li class="- topic/li li" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-ED6F467E-859E-408F-91ED-D10063B1FBD8" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-ED6F467E-859E-408F-91ED-D10063B1FBD8"><code class="+ topic/ph pr-d/codeph ph codeph">u_uuid</code> - User HSM
+                UUID.</li>
+            <li class="- topic/li li" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-D6B44F39-81AB-4A76-BF64-53A67D91B2D2" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-D6B44F39-81AB-4A76-BF64-53A67D91B2D2"><code class="+ topic/ph pr-d/codeph ph codeph">u_master_uuid</code> - User
+                HSM Master UUID.</li>
+            <li class="- topic/li li" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-C8F70190-B5E3-4A28-8364-F18DED03819A" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-C8F70190-B5E3-4A28-8364-F18DED03819A"><code class="+ topic/ph pr-d/codeph ph codeph">keyset_dir</code> - Keyset
+                repository location: a directory in which the keyset files will be created or
+                used.</li>
+            <li class="- topic/li li" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-5AFF0F23-04C3-49E4-8BE8-1B7630BE0C09" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-5AFF0F23-04C3-49E4-8BE8-1B7630BE0C09"><code class="+ topic/ph pr-d/codeph ph codeph">m_uuid</code> -
+                Manufacturer HSM UUID. This command saves the HSM parameters for the Job Manager
+                application. This remains in effect until its overridden using this same
+                command.</li>
+        </ul>
+        <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">get_software_info [-version]</code></p>
+        <ul class="- topic/ul ul" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__UL_CYX_YNK_TNB" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__UL_CYX_YNK_TNB">
+            <li class="- topic/li li" id="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-5BB83506-589E-409D-A305-AED988E2A9D9" data-ofbid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604__GUID-5BB83506-589E-409D-A305-AED988E2A9D9"><code class="+ topic/ph pr-d/codeph ph codeph">version</code> - Get the
+                software version info.</li>
+        </ul>
+        <p class="- topic/p p">This command prints the Job Manager software information.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-9AAD04D2-A784-4DB1-A7C5-DE0F65A2D351" xml:lang="en-US" lang="en-US" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650"><h2 class="- topic/title title topictitle2" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-9AAD04D2-A784-4DB1-A7C5-DE0F65A2D351" style="display:inline-block">13.4.8.2 Keyset Management</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Keyset%20Management">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">create_keyset</strong> -file &lt;output_file_name&gt; [-source_file 
+&lt;source_file_name&gt;] [-kip &lt;token_key&gt;]
+[-upk1 &lt;token_key&gt;] [-upk1_base &lt;base_key&gt;] 
+[-uek1 &lt;token_key&gt;] [-uek1_base &lt;base_key&gt;] 
+[-upk2 &lt;token_key&gt;] [-upk2_base &lt;base_key&gt;]
+[-uek2 &lt;token_key&gt;] [-uek2_base &lt;base_key&gt;] [-dpk &lt;token_key&gt;] 
+[-dpk_base &lt;base_key&gt;]
+[-uek3 &lt;token_key&gt;] [-uek3_base &lt;base_key&gt;]</code></pre>
+        </div>
+        <ul class="- topic/ul ul" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_N5W_CPK_TNB" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_N5W_CPK_TNB">
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-BED14D98-DCC7-4DE5-9AD4-1E58596CF075" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-BED14D98-DCC7-4DE5-9AD4-1E58596CF075"><code class="+ topic/ph pr-d/codeph ph codeph">output_file_name</code> -
+                Name of the new keyset file. Name only, no path. The file is created in the keyset
+                repository defined by the Job Manager application settings.</li>
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-1BEA5BC6-E496-4E52-906C-6E0E0A1008F1" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-1BEA5BC6-E496-4E52-906C-6E0E0A1008F1"><code class="+ topic/ph pr-d/codeph ph codeph">source_file_name</code> -
+                Optional source keyset file name for key import. The ticket key in this file must be
+                encrypted with the same U-HSM Master Key.</li>
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-5793D9E1-6301-494B-9F30-58C25CF8D570" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-5793D9E1-6301-494B-9F30-58C25CF8D570"><code class="+ topic/ph pr-d/codeph ph codeph">token_key</code> - Optional
+                value of the token keys that will be imported into the new keyset. This parameter
+                takes precedence over the keys in the source file, if specified. Token key values
+                can only be specified in plain text format.</li>
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-781060C1-D8CE-41BC-9ADB-9297414730B9" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-781060C1-D8CE-41BC-9ADB-9297414730B9"><code class="+ topic/ph pr-d/codeph ph codeph">base_key</code> - Optional
+                value of the base keys (that is, keys are used to derive device-specific token keys)
+                that will be imported into the new keyset. This parameter takes precedence over the
+                keys in the source file, if specified. Base key values can only be specified in
+                plain text.</li>
+        </ul>
+        <p class="- topic/p p">This command creates a new keyset file for the HSM flow tasks. It can create keys for the
+            following scenarios:</p>
+        <ul class="- topic/ul ul" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_RFG_CPK_TNB" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_RFG_CPK_TNB">
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-362A50E9-F52D-469C-A6E0-4201739D1456" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-362A50E9-F52D-469C-A6E0-4201739D1456">Create a new keyset file.<ul class="- topic/ul ul" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_SFG_CPK_TNB" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_SFG_CPK_TNB">
+                    <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-1B8B823D-57C9-4343-AA6C-77D6CCC0E57D" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-1B8B823D-57C9-4343-AA6C-77D6CCC0E57D">All keys are randomly
+                        generated by the U-HSM.</li>
+                </ul></li>
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-83352A7A-B67C-48B0-B288-7308F4D58283" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-83352A7A-B67C-48B0-B288-7308F4D58283">Create a new keyset file with key
+                    import.<ul class="- topic/ul ul" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_TFG_CPK_TNB" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_TFG_CPK_TNB">
+                    <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-66507E8E-CB3F-4E82-A7D9-2373D6DA23BF" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-66507E8E-CB3F-4E82-A7D9-2373D6DA23BF">Ticket key is randomly
+                        generated.</li>
+                    <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-EBCD6828-02C2-449D-B8C6-006BE82A49BE" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-EBCD6828-02C2-449D-B8C6-006BE82A49BE">User-specified keys are
+                        imported and protected by the ticket key.</li>
+                    <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-96D44FE1-CB98-48D3-B261-2F70FFB90E40" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-96D44FE1-CB98-48D3-B261-2F70FFB90E40">The rest of the keys are
+                        randomly generated and protected by the ticket key.</li>
+                </ul></li>
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-CF549F36-8F61-4239-AB38-B12DBD3E2D47" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-CF549F36-8F61-4239-AB38-B12DBD3E2D47">Create a modified copy of the
+                existing keyset file.<ul class="- topic/ul ul" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_UFG_CPK_TNB" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_UFG_CPK_TNB">
+                    <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-44945A95-AE03-4938-8D4B-396AFF02E250" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-44945A95-AE03-4938-8D4B-396AFF02E250">New keyset file receives
+                        copies of the keys from the source file including ticket key.</li>
+                </ul></li>
+            <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-23D1DC20-E072-4D78-A010-6CF8DDF6A2CF" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-23D1DC20-E072-4D78-A010-6CF8DDF6A2CF">Ticket is protected by the same U-HSM
+                Master Key.<ul class="- topic/ul ul" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_VFG_CPK_TNB" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__UL_VFG_CPK_TNB">
+                    <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-D37B0BA4-6385-455A-8213-DEB8D43FCE95" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-D37B0BA4-6385-455A-8213-DEB8D43FCE95">User-specified keys will be
+                        imported into the new keyset file in place of the keys in the source keyset
+                        file. All imported keys are protected by the ticket key from the source
+                        file.</li>
+                </ul></li>
+        </ul>
+        <div class="- topic/note note notype note_notype" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-3A6A5DB0-8E39-410C-9B2A-FE2B2F9D3683" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-3A6A5DB0-8E39-410C-9B2A-FE2B2F9D3683"><span class="note__title">Note:</span> 
+            <ol class="- topic/ol ol" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__OL_WFG_CPK_TNB" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__OL_WFG_CPK_TNB">
+                <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-B615DB5F-45CA-4BD3-B65C-3EBCE67EAC3D" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-B615DB5F-45CA-4BD3-B65C-3EBCE67EAC3D">Because the same keyset file can
+                    be shared between different Job Manager projects, <code class="+ topic/ph pr-d/codeph ph codeph">create_keyset</code>
+                    always creates a new file. It cannot delete, rename, or overwrite existing
+                    keyset files. All such operations should be handled by the user manually.</li>
+                <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-10159262-81F7-4538-B0EA-88C3A1EC1733" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-10159262-81F7-4538-B0EA-88C3A1EC1733">Keys specified in the keyset file
+                    always take effect regardless of whether <code class="+ topic/ph pr-d/codeph ph codeph">set_security_overwrite</code>
+                    command is run.</li>
+                <li class="- topic/li li" id="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-F8908F2B-93E6-4B92-972A-C9C560C98253" data-ofbid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650__GUID-F8908F2B-93E6-4B92-972A-C9C560C98253">UEK3 is only available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150
+                    devices.</li>
+            </ol>
+        </div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-69B1161C-B53E-4B0C-BD4A-F343C7B17E1F" xml:lang="en-US" lang="en-US" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437"><h2 class="- topic/title title topictitle2" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-69B1161C-B53E-4B0C-BD4A-F343C7B17E1F" style="display:inline-block">13.4.8.3 Project Management</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Project%20Management">(Ask a Question)</a><div class="- topic/body body">
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">new_project</strong> -location &lt;path&gt; -name &lt;file_name&gt;</code></pre>
+        <ul class="- topic/ul ul" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__UL_ERQ_5PK_TNB" data-ofbid="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__UL_ERQ_5PK_TNB">
+            <li class="- topic/li li" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-CFB63BBF-5A1A-477D-BAA0-44729868141F" data-ofbid="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-CFB63BBF-5A1A-477D-BAA0-44729868141F"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Top level
+                project directory.</li>
+            <li class="- topic/li li" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-02298033-8ED0-43A3-8D76-EAC51F51B050" data-ofbid="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-02298033-8ED0-43A3-8D76-EAC51F51B050"><code class="+ topic/ph pr-d/codeph ph codeph">file_name</code> - Project
+                file name.</li>
+        </ul>
+        <p class="- topic/p p">This command creates a new Job Manager project. The project directory can be moved to any
+            other location on disk as project internally uses only relative paths. If the project
+            already exists, command will exit with error.</p>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">open_project</strong> -project &lt;path&gt;</code></pre>
+        <ul class="- topic/ul ul" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__UL_MJN_BQK_TNB" data-ofbid="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__UL_MJN_BQK_TNB">
+            <li class="- topic/li li" id="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-90BC62C2-18A3-4C3B-8250-241992E984FE" data-ofbid="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437__GUID-90BC62C2-18A3-4C3B-8250-241992E984FE"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Path to the
+                Job Manager project file (.jprj).</li>
+        </ul><p class="- topic/p p">This command opens an existing Job Manager project.</p>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">close_project</strong> [-save &lt;TRUE |FALSE&gt;]</code></pre><p class="- topic/p p">This command closes the Job Manager project with or without saving it. If project was modified, then - save option must be specified.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-E56DD870-72F6-45D3-B804-F05FD6475C91__GUID-698141B2-EA8A-4E3D-A79E-5AC15C8A91D8" xml:lang="en-US" lang="en-US" id="GUID-E56DD870-72F6-45D3-B804-F05FD6475C91"><h2 class="- topic/title title topictitle2" id="GUID-E56DD870-72F6-45D3-B804-F05FD6475C91__GUID-698141B2-EA8A-4E3D-A79E-5AC15C8A91D8" style="display:inline-block">13.4.8.4 Programming Data</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Programming%20Data">(Ask a Question)</a><article class="- topic/topic topic nested2" aria-labelledby="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-097BD9D4-87BD-4CD9-BAC3-D660700E808C" xml:lang="en-US" lang="en-US" id="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D"><h3 class="- topic/title title topictitle3" id="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-097BD9D4-87BD-4CD9-BAC3-D660700E808C" style="display:inline-block">13.4.8.4.1 Design Import</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Design%20Import">(Ask a Question)</a><div class="- topic/body body"><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">new_prog_data</strong>   -data_name &lt;name&gt;
+                -import_file &lt;path&gt;
+                [-keyset_file &lt; keyset_name&gt;]</code></pre><ul class="- topic/ul ul" id="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__UL_J3T_2RK_TNB" data-ofbid="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__UL_J3T_2RK_TNB"><li class="- topic/li li" id="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-F01495AE-34C3-402D-B49E-BEEB73CC1754" data-ofbid="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-F01495AE-34C3-402D-B49E-BEEB73CC1754"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Programming data entry name.</li><li class="- topic/li li" id="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-8B5F20A2-7B85-4A16-84E0-7C626C052D2C" data-ofbid="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-8B5F20A2-7B85-4A16-84E0-7C626C052D2C"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Libero design data file (JDC).</li><li class="- topic/li li" id="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-1C54F618-5A2C-45D0-86AB-8BE0FEFB9536" data-ofbid="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D__GUID-1C54F618-5A2C-45D0-86AB-8BE0FEFB9536"><code class="+ topic/ph pr-d/codeph ph codeph">keyset_name</code> - Name of the keyset file. File name only. The file will be in the keyset directory as specified in the Application settings.</li></ul><p class="- topic/p p">This command creates a new Programming Data entry from JDC (design data exported from Libero project). If keyset parameter is specified, HSM handles all the key management.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-441E6E68-F0FD-463D-91EE-974766E5684D" xml:lang="en-US" lang="en-US" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6"><h3 class="- topic/title title topictitle3" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-441E6E68-F0FD-463D-91EE-974766E5684D" style="display:inline-block">13.4.8.4.2 Security Modifications</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Security%20Modifications">(Ask a Question)</a><div class="- topic/body body"><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">set_key -data_name</strong> &lt;name&gt; 
+[-upk1 &lt;upk1_value&gt;] [-uek1 &lt;uek1_value&gt;] [-upk2 &lt;upk2_value&gt;] [-uek2
+&lt;uek2_value&gt;] [-dpk &lt;dpk_value&gt;] [-uek3 &lt;uek3_value&gt;]</code></pre><ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_RRH_5RK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_RRH_5RK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-174EFB00-D332-4570-8B16-4E1AA7211474" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-174EFB00-D332-4570-8B16-4E1AA7211474"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Name of the Programming Data.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-2BD8CB4F-57DF-406C-8F9B-A40DAA8CB6BD" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-2BD8CB4F-57DF-406C-8F9B-A40DAA8CB6BD"><code class="+ topic/ph pr-d/codeph ph codeph">uek*_value</code> - New value for the selected encryption key.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-69759A1A-52BB-4E07-8C81-36C53E5448B9" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-69759A1A-52BB-4E07-8C81-36C53E5448B9"><code class="+ topic/ph pr-d/codeph ph codeph">upk*_value</code> - New value for the selected pass key.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-FA7C39A0-08ED-466C-B7F9-3D89306B9B49" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-FA7C39A0-08ED-466C-B7F9-3D89306B9B49"><code class="+ topic/ph pr-d/codeph ph codeph">dpk_value</code> - New value for the DPK.</li></ul><p class="- topic/p p">This command overwrites key values imported from JDC with the ones specified in the command arguments.</p><div class="- topic/note note notype note_notype" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-94BAEBD4-FEAB-465B-A600-82436DC0A395" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-94BAEBD4-FEAB-465B-A600-82436DC0A395"><span class="note__title">Note:</span> <ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__OL_P13_TRK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__OL_P13_TRK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-A776D5D5-13BB-4279-89F5-F0129F936E7E" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-A776D5D5-13BB-4279-89F5-F0129F936E7E">This command is applicable to non-HSM flow only.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-501ED429-9EB8-4DA3-9C5D-73652765CDCE" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-501ED429-9EB8-4DA3-9C5D-73652765CDCE">Keys specified by this command always take affect irrespective of whether <code class="+ topic/ph pr-d/codeph ph codeph">set_security_overwrite</code> command is run.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-925A3001-D76F-4F30-A424-418ABFB2EEED" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-925A3001-D76F-4F30-A424-418ABFB2EEED">UEK3 is only available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150 devices.</li></ul></div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">remove_key</strong>   -data_name &lt;name&gt; 
+             -key_names &lt;ALL UPK1 UEK1 UPK2 UEK2 DPK&gt; UEK3</code></pre><ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_UC3_GSK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_UC3_GSK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C8D269E8-D7D2-4FFD-AC21-8749411504F9" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C8D269E8-D7D2-4FFD-AC21-8749411504F9"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Name of the Programming Data.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C405222B-D647-41A3-9E1A-C281A85FE200" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C405222B-D647-41A3-9E1A-C281A85FE200"><code class="+ topic/ph pr-d/codeph ph codeph">key_names</code> - Names of the keys whose values to be reverted (can specify multiple values).</li></ul><p class="- topic/p p">This command reverts the value of the specified encryption and/or pass key to the value imported from JDC. This command supports action opposite to <code class="+ topic/ph pr-d/codeph ph codeph">set_key</code>.</p><div class="- topic/note note notype note_notype" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-44C1E78B-7CC5-470B-A94F-1E7F40378915" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-44C1E78B-7CC5-470B-A94F-1E7F40378915"><span class="note__title">Note:</span> <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C80DDA86-BC17-4681-8785-E9173B13BA05" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C80DDA86-BC17-4681-8785-E9173B13BA05"><p class="- topic/p p">This command is applicable to non-HSM flow only.</p></li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-6C0A3B78-609C-4E76-9664-CD1FEBF32F7F" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-6C0A3B78-609C-4E76-9664-CD1FEBF32F7F"><p class="- topic/p p">UEK3 is only available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150 devices.</p></li></ul></div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">set_security_overwrite</strong> -data_name &lt;name&gt; -file &lt;spm_file_path&gt;</code></pre><ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_IHF_PSK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_IHF_PSK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-54BE62FE-F1DC-4156-9DF1-2680DBFA8352" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-54BE62FE-F1DC-4156-9DF1-2680DBFA8352"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Name of the Programming Data entry.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-DC25FD29-7E14-47A6-9CB6-B78DDD3F40E5" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-DC25FD29-7E14-47A6-9CB6-B78DDD3F40E5"><code class="+ topic/ph pr-d/codeph ph codeph">spm_file_path</code> - File path of the new SPM file.</li></ul><p class="- topic/p p">This command overwrites design security settings imported from Libero through the new SPM file. This command is applicable to HSM and non-HSM flows. How the security policies and keys are overridden is explained below:</p><ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_VLJ_BSK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_VLJ_BSK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-EB6788B3-B092-4746-8220-C0DDC9F345D0" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-EB6788B3-B092-4746-8220-C0DDC9F345D0">Security policies: Always overwritten from the new SPM file (HSM and non-HSM flows)</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-25D9D483-22D3-4401-A21A-1F462DEF89DA" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-25D9D483-22D3-4401-A21A-1F462DEF89DA">Security Keys (UPK1, UEK1, UPK2, UEK2, UEK3, and DPK)<ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_WLJ_BSK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_WLJ_BSK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-09E825EC-AEDA-4D38-AE36-E189106391FB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-09E825EC-AEDA-4D38-AE36-E189106391FB">Non-HSM flow:<ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_XLJ_BSK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_XLJ_BSK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-1D88D019-E252-455A-8E94-4E88A0E83713" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-1D88D019-E252-455A-8E94-4E88A0E83713">If <code class="+ topic/ph pr-d/codeph ph codeph">set_key</code> is run before or after this command, then all keys specified in <code class="+ topic/ph pr-d/codeph ph codeph">set_key</code> are used. The keys that are not specified are taken from the new SPM file provided as argument.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-5538C31D-E06E-4D51-BCBC-3F36D5B1B637" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-5538C31D-E06E-4D51-BCBC-3F36D5B1B637">If set_key is not run, then all security keys are taken from the new SPM file.</li></ul></li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-9EB6BADA-99F4-4A5C-B931-D3E5C6BD515F" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-9EB6BADA-99F4-4A5C-B931-D3E5C6BD515F">HSM flow:<ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_ZLJ_BSK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_ZLJ_BSK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-CB61BF3E-2E4C-4942-A2CF-C3DF4E9ECA7D" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-CB61BF3E-2E4C-4942-A2CF-C3DF4E9ECA7D">Security keys are always taken from the keyset file.</li></ul></li></ul></li></ul><div class="- topic/note note notype note_notype" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-78B2B7BA-8FBA-4651-A637-013821F6A29D" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-78B2B7BA-8FBA-4651-A637-013821F6A29D"><span class="note__title">Note:</span> UEK3 is only available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150 devices.</div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">remove_security_overwrite</strong> -data_name &lt;name&gt;</code></pre><ul class="- topic/ul ul" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_ZQT_5SK_TNB" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__UL_ZQT_5SK_TNB"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C260E2E3-D63B-4753-8E4C-57AD1FEFA6B6" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C260E2E3-D63B-4753-8E4C-57AD1FEFA6B6"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Name of the Programming Data entry.</li></ul><p class="- topic/p p">This command removes existing security overwrite settings. This command supports action opposite to <code class="+ topic/ph pr-d/codeph ph codeph">set_security_overwrite</code>.</p><div class="- topic/note note notype note_notype" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-2389014A-230E-48E4-9865-961C4D539A4C" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-2389014A-230E-48E4-9865-961C4D539A4C"><span class="note__title">Note:</span> <p class="- topic/p p">This command will fail if <code class="+ topic/ph pr-d/codeph ph codeph">set_security_overwrite</code> is not run previously.</p></div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">set_new_keys_for_rotation</strong> -data_name &lt;name&gt; \
+                          [-keyset_file &lt;keyset_name&gt;] \ 
+                          [-upk1 &lt;upk1_value&gt;] \ 
+                          [-uek1 &lt;uek1_value&gt;] \ 
+                          [-upk2 &lt;upk2_value&gt;] \ 
+                          [-uek2 &lt;uek1_value&gt;] \ 
+                          [-dpk &lt;dpk_value&gt;] \ 
+                          [-uek3 &lt;uek3_value&gt;]</code></pre><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-D4A18247-4B9F-4C0E-9FF5-237846EE9514" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-D4A18247-4B9F-4C0E-9FF5-237846EE9514"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Name of the Programming Data.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-65C6D0BA-0A6D-4B0B-9B4B-430167AFF994" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-65C6D0BA-0A6D-4B0B-9B4B-430167AFF994"><code class="+ topic/ph pr-d/codeph ph codeph">keyset_name</code> - Name of the keyset file containing new key values.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-9D0ACF3B-D479-42DC-8DAC-C13A11468458" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-9D0ACF3B-D479-42DC-8DAC-C13A11468458"><code class="+ topic/ph pr-d/codeph ph codeph">uek*_value</code> - New value for the selected encryption key.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-B96B3B7D-1811-4BE8-90DA-3F331C2C3512" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-B96B3B7D-1811-4BE8-90DA-3F331C2C3512"><code class="+ topic/ph pr-d/codeph ph codeph">upk*_value</code> - New value for the selected pass key.</li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-F9A969B4-56B8-4763-8E80-14F96E260498" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-F9A969B4-56B8-4763-8E80-14F96E260498"><code class="+ topic/ph pr-d/codeph ph codeph">dpk_value</code> - New value for the DPK.</li></ul><p class="- topic/p p">This command is used to specify the new key values that user wants to replace with an already programmed secured device as part of <a class="- topic/xref xref" href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-C49E29C8-A8EF-4088-A975-334586BE4C88">Key Rotation</a> flow. For more information, see <a class="- topic/xref xref" href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF"><span><span>13.4.7.3 </span><span>HSM Flow</span></span></a> and <a class="- topic/xref xref" href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F"><span><span>13.4.7.4 </span><span>Non-HSM Flow</span></span></a>.</p><div class="- topic/note note notype note_notype" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-D613708F-6C9E-47B3-AF01-9D11F854F2AE" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-D613708F-6C9E-47B3-AF01-9D11F854F2AE"><span class="note__title">Note:</span> <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-A884E11D-D595-42EC-85E4-700A2E0E16F4" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-A884E11D-D595-42EC-85E4-700A2E0E16F4"><p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">keyset_file</code> parameter is only applicable to the HSM flow.</p></li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-625A7498-2B84-46E1-9A0C-1ED7160D9E3D" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-625A7498-2B84-46E1-9A0C-1ED7160D9E3D"><p class="- topic/p p">upk1, uek1, upk2, uek2, dpk, and uek3 parameters are only applicable to non-HSM flow.</p></li><li class="- topic/li li" id="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C0A80AFF-45C3-49B8-A59A-5A3B93542665" data-ofbid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6__GUID-C0A80AFF-45C3-49B8-A59A-5A3B93542665"><p class="- topic/p p">UEK3 is only available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150 devices.</p></li></ul></div></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-773FD0E9-0F69-47E9-8F0C-0C37D02521FE" xml:lang="en-US" lang="en-US" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C"><h3 class="- topic/title title topictitle3" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-773FD0E9-0F69-47E9-8F0C-0C37D02521FE" style="display:inline-block">13.4.8.4.3 eNVM Client Modifications</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=eNVM%20Client%20Modifications">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p"><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">set_envm_update</strong>   -data_name &lt;data&gt; 
+                  -client_name &lt;client&gt;
+                  -file &lt; file_path&gt;
+                  [-overwrite &lt;YES | NO&gt;]</code></pre></div><ul class="- topic/ul ul" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__UL_V4Z_L5K_TNB" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__UL_V4Z_L5K_TNB"><li class="- topic/li li" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-140A027D-5DCF-46BE-958E-FBB214A32E8F" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-140A027D-5DCF-46BE-958E-FBB214A32E8F"><code class="+ topic/ph pr-d/codeph ph codeph">data</code> - Programming data entry name.</li><li class="- topic/li li" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-01211197-9029-4E60-9A81-0C31939B96D8" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-01211197-9029-4E60-9A81-0C31939B96D8"><code class="+ topic/ph pr-d/codeph ph codeph">client</code> - Name of the target eNVM client.</li><li class="- topic/li li" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-BE28D738-5E6B-48DC-8450-8A815B76F426" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-BE28D738-5E6B-48DC-8450-8A815B76F426"><code class="+ topic/ph pr-d/codeph ph codeph">file_path</code> - File path of the client update data file.</li></ul><p class="- topic/p p">This command creates a new client update entry in the specified Programming Data. If an update already exists for that client, the command will fail unless the optional <code class="+ topic/ph pr-d/codeph ph codeph">-overwrite</code> parameter is set to "yes". Data file size must not exceed the client size defined by the Libero project and imported via the JDC file. This command allows using all eNVM data file formats that Libero supports. For more information, see <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/libero_ecf_ug.pdf" target="_blank" rel="external noopener">Libero SoC Design Flow User Guide</a>
+      </span>. This command is available for the PolarFire® SoC device family.</p><div class="- topic/p p"><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">remove_envm_update</strong>   -data_name&lt; data &gt; 
+                     -client_name &lt; client &gt; 
+                     -all &lt;YES| NO&gt;</code></pre></div><ul class="- topic/ul ul" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__UL_ZRV_RWK_TNB" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__UL_ZRV_RWK_TNB"><li class="- topic/li li" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-4DC3B755-FB84-4AB5-B614-D37446C12814" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-4DC3B755-FB84-4AB5-B614-D37446C12814"><code class="+ topic/ph pr-d/codeph ph codeph">data</code> - Programming data entry name.</li><li class="- topic/li li" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-88B43006-B93F-46DA-B052-FA82FE137B00" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-88B43006-B93F-46DA-B052-FA82FE137B00"><code class="+ topic/ph pr-d/codeph ph codeph">client</code> - Name of the target eNVM client.</li><li class="- topic/li li" id="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-D57B1690-FA55-454B-940C-12D86B613AC1" data-ofbid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C__GUID-D57B1690-FA55-454B-940C-12D86B613AC1"><code class="+ topic/ph pr-d/codeph ph codeph">all</code> - Removes all clients. Default is "YES"</li></ul><p class="- topic/p p">This command removes an entry that <code class="+ topic/ph pr-d/codeph ph codeph">set_envm_update</code> created. All client updates can be removed using "all" key set to "YES". A removed client update results in the client being reverted to the original eNVM data received in the JDC.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-7075AB3F-2819-4E72-89B5-E129E346CCB1" xml:lang="en-US" lang="en-US" id="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497"><h3 class="- topic/title title topictitle3" id="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-7075AB3F-2819-4E72-89B5-E129E346CCB1" style="display:inline-block">13.4.8.4.4 sNVM Client Modifications</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sNVM%20Client%20Modifications">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p"><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">set_snvm_update</strong>   -data_name &lt;data&gt; 
+                  -client_name &lt;client&gt; 
+                  -file &lt; file_path&gt;
+                  [-overwrite &lt;YES | NO&gt;]</code></pre></div><ul class="- topic/ul ul" id="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__UL_GM3_CXK_TNB" data-ofbid="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__UL_GM3_CXK_TNB"><li class="- topic/li li" id="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-324ADEA4-A4CA-4650-81E8-802C68FAC5FB" data-ofbid="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-324ADEA4-A4CA-4650-81E8-802C68FAC5FB"><code class="+ topic/ph pr-d/codeph ph codeph">data</code> - Programming data entry name.</li><li class="- topic/li li" id="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-7B2C034A-B5EF-42C6-9AEB-45B8B1BDCB73" data-ofbid="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-7B2C034A-B5EF-42C6-9AEB-45B8B1BDCB73"><code class="+ topic/ph pr-d/codeph ph codeph">client</code> - Name of the target sNVM client.</li><li class="- topic/li li" id="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-FB16A23B-EC95-4D34-9E5B-670325ADF2CE" data-ofbid="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497__GUID-FB16A23B-EC95-4D34-9E5B-670325ADF2CE"><code class="+ topic/ph pr-d/codeph ph codeph">file_pathc</code> - File path to the client update data file.</li></ul><p class="- topic/p p">This command creates a new client update entry in the specified Programming Data. If an update already exists for that client, the command will fail unless the optional <code class="+ topic/ph pr-d/codeph ph codeph">-overwrite</code> parameter is set to "YES". Data file size must not exceed the client size defined by the Libero project and imported via the JDC file. This command allows using all sNVM data file formats that Libero supports. For more information, see <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/libero_ecf_ug.pdf" target="_blank" rel="external noopener">Libero SoC Design Flow User Guide</a>
+      </span>.</p><p class="- topic/p p">The command is available for the PolarFire and PolarFire SoC device family.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-C59566FF-4CD6-4053-96CC-B9DA6CD074EA" xml:lang="en-US" lang="en-US" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989">
+  <h3 class="- topic/title title topictitle3" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-C59566FF-4CD6-4053-96CC-B9DA6CD074EA" style="display:inline-block">13.4.8.4.5 Bitstream Management</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Bitstream%20Management">(Ask a Question)</a>
+  <div class="- topic/body body">
+    <div class="- topic/p p"><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><span class="+ topic/ph hi-d/tt ph tt">init_bitstream</span>   -data_name "design data name" \
+        -bitstream_name "bitstream name" \
+        -bitstream_type "TRUSTED_FACILITY | MASTER | UEK1 | UEK2 | UEK3 | KEY_ROTATION | DEBUG" \
+        [-features "[ALL | FABRIC | ENVM | SNVM | SECURITY]+"] \
+        [-use_protocol "AUTH_CODE | UNIQUE_KEY"] \
+        [-unique_key_types "[UPK1 | UEK1 | UPK2 | UEK2 | UEK3 | DPK]+"] \
+        [-envm_clients "[eNVM client selection]+"] \
+        [-snvm_clients "[sNVM client selection]+"] \
+        [-generate_coc "TRUE | FALSE"] \
+        [-auth_keymode "DFK | KFPE | KFP | KUP | KUPE"] \
+        [-enable_key_rotation "TRUE | FALSE"] \
+        [-auto_inc_design_version] \
+        [-first_keymode "UEK1 | UEK2 | UEK3"] \
+        [-enable_passkey_export "TRUE | FALSE"]</code></pre></div>
+    <ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_QHC_RYK_TNB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_QHC_RYK_TNB">
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-EAB12886-A7C7-4485-9912-387C76ACD2FB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-EAB12886-A7C7-4485-9912-387C76ACD2FB"><code class="+ topic/ph pr-d/codeph ph codeph">data_name</code> - Name of the
+        Programming Data entry.</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-A6041334-FB0D-42A9-9FF8-21E2B062C7ED" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-A6041334-FB0D-42A9-9FF8-21E2B062C7ED"><code class="+ topic/ph pr-d/codeph ph codeph">bitstream_name</code> - Name of
+        the bit stream being added (without path or extension).</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-851F3548-FF40-4ECE-A2DF-E36494706CC5" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-851F3548-FF40-4ECE-A2DF-E36494706CC5"><code class="+ topic/ph pr-d/codeph ph codeph">bitstream_type</code> - Specifies
+        bit stream type. The resulting bit stream will be generated according to the security policy
+        specified in the Programming Data Security settings. Only one of the following bit stream
+        types can be selected at a time:<ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_VNB_WMF_RPB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_VNB_WMF_RPB">
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-EA1C78CE-AC04-4379-BF76-892E64C9CC5A" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-EA1C78CE-AC04-4379-BF76-892E64C9CC5A">TRUSTED_FACILITY - For the Non-HSM flow
+            only. Programs selected bit stream components (Fabric, eNVM, or non-authenticated plain
+            text sNVM clients) using KLK key mode.</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-3D4FD24E-246A-4B14-9456-F573571C463A" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-3D4FD24E-246A-4B14-9456-F573571C463A">​Initiator - Programs security and any
+            other selected components. <ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_DWS_FNF_RPB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_DWS_FNF_RPB">
+              <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-7649BD76-0AD8-4382-ABB9-859445E7E36F" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-7649BD76-0AD8-4382-ABB9-859445E7E36F">For the Non-HSM flow: Uses the KLK
+                key mode to program security and other components. If security is programmed with
+                UEK1/UEK2, then bit stream will also include plaintext UPK1/UPK2 respectively to
+                enable erase and verify actions.</li>
+              <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-50F9003C-55DF-42DB-9965-12097B754310" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-50F9003C-55DF-42DB-9965-12097B754310">For the HSM flow: Uses DFK, KFP,
+                KFPE, KUP, and KUPE key modes to program security and other components. In this
+                case, all keys are encrypted by HSM.<ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_QJV_GJJ_JVB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_QJV_GJJ_JVB">
+                  <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44447EEA-F3C9-4AAF-8EEF-E7F15456B750" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44447EEA-F3C9-4AAF-8EEF-E7F15456B750">UEK1 - Programs (updates)
+                    selected bit stream component(s) (Fabric/eNVM/sNVM) using UEK1 key mode. If the
+                    target component is update-protected, UPK1 will be used to unlock target
+                    component. <ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_C34_MNF_RPB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_C34_MNF_RPB">
+                      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-3FA45F87-B8D5-4E3E-B5D3-CE00F1AFF107" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-3FA45F87-B8D5-4E3E-B5D3-CE00F1AFF107">For the Non-HSM flow,
+                        generated bit stream uses plain text UPK1 value unlocking security.</li>
+                      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-6C353381-69A8-44B4-BEE5-6343A109D0AF" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-6C353381-69A8-44B4-BEE5-6343A109D0AF">For the HSM flow, the M-HSM
+                        performs security unlock using the encrypted value of UPK1.</li>
+                    </ul></li>
+                  <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-14920AFD-933A-40F6-A034-40D6D16975F7" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-14920AFD-933A-40F6-A034-40D6D16975F7">UEK2 - Similar to UEK1, but
+                    uses UEK2 and UPK2 respectively.</li>
+                  <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-706A408C-EDAD-433D-BC75-E9988E59C39A" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-706A408C-EDAD-433D-BC75-E9988E59C39A">UEK3 - Similar to UEK1, but
+                    uses UEK3. Supported for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150
+                    devices.</li>
+                </ul></li>
+            </ul></li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-CC388D27-7E5F-40EB-8FF6-CBE0C8BB6BD5" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-CC388D27-7E5F-40EB-8FF6-CBE0C8BB6BD5">KEY_ROTATION - Specifies that bit
+            stream will be used for updating user keys, see <a class="- topic/xref xref" href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-C49E29C8-A8EF-4088-A975-334586BE4C88"><span><span>13.4.7 </span><span>Key Rotation</span></span></a> section.</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-7FC0AFB5-350F-4F7D-9011-1CCAC3C779C2" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-7FC0AFB5-350F-4F7D-9011-1CCAC3C779C2">DEBUG - Initializes bit stream that can
+            be used for debugging with tools like SmartDebug that require HSM support to unlock
+            device debug features using One Time Passkey protocol protected by user encryption keys.
+            This type of bit stream requires specification of the protocol
+              (<code class="+ topic/ph pr-d/codeph ph codeph">ONE_TIME_PASSCODE</code>) in the current version and
+              <code class="+ topic/ph pr-d/codeph ph codeph">auth_keymode</code> that can be UEK1 or UEK2 depending on security
+            settings.</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-57400D44-4849-496E-8C74-5C5534D45A6D" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-57400D44-4849-496E-8C74-5C5534D45A6D"><code class="+ topic/ph pr-d/codeph ph codeph">features</code> - Any combination
+        of the features or ALL (default option) SECURITY is selected for programming.<div class="- topic/note note important note_important" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-FAD3F24D-5506-4171-B221-4DF18EF2B2AD" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-FAD3F24D-5506-4171-B221-4DF18EF2B2AD"><span class="note__title">Important:</span> Security is always
+          programmed in the ​Initiator bit stream.</div><ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_V1S_C4F_RPB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_V1S_C4F_RPB">
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-9A968B79-16F1-4CB1-9D4A-A31F0A32B58C" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-9A968B79-16F1-4CB1-9D4A-A31F0A32B58C">FABRIC - Selected for programming.</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-E52D3FE6-9ED0-4BD9-9E55-E16DBC313B8C" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-E52D3FE6-9ED0-4BD9-9E55-E16DBC313B8C">eNVM - Selected for programming.
+            Supported for SmartFusion 2, IGLOO 2, and PolarFire SoC devices.</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-2AF1BA51-7410-4A0B-9288-F80767FE1495" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-2AF1BA51-7410-4A0B-9288-F80767FE1495">sNVM - Selected for programming.
+            Supported for PolarFire and PolarFire SoC devices.</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-192C6E87-DC28-40EA-A4F4-C9AC1D4D2826" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-192C6E87-DC28-40EA-A4F4-C9AC1D4D2826">ALL - All features available in Design
+            Data to be selected (default).</li>
+        </ul><div class="- topic/note note important note_important" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__NOTE_VJP_GSY_4VB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__NOTE_VJP_GSY_4VB"><span class="note__title">Important:</span> For PolarFire devices, Fabric and sNVM must be programmed
+          all at once. Separate programming of sNVM disables Fabric.</div></li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-AF14D29A-C54B-4DE2-9DFC-495193C5829B" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-AF14D29A-C54B-4DE2-9DFC-495193C5829B"><code class="+ topic/ph pr-d/codeph ph codeph">use_protocol</code> - Allows
+        selecting one of the following HSM security protocols:<ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_SMQ_F4F_RPB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_SMQ_F4F_RPB">
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-5195872C-82FF-41B9-B087-814204EF7464" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-5195872C-82FF-41B9-B087-814204EF7464">AUTH_CODE - Securely sends Encryption
+            Key (KIP) to the device using Authorization code. Use this option when all the user keys
+            are project keys. This protocol supports INITIATOR bit stream flow and UEK1/UEK2/UEK3
+            update bit streams flow.</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-413D3CE2-931F-430F-8234-13F7335B5ECC" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-413D3CE2-931F-430F-8234-13F7335B5ECC">UNIQUE_KEY - Allows programming unique
+            per-device keys in the ​Initiator flow. For the UEK1/UEK2/UEK3 update flow, this option
+            can be used to generate per-device bit stream files (if DSN is known at the time of job
+            or bit stream file generation) or to use per-device keys during programming jobs using
+            the M-HSM.</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-31328D87-A769-43E1-9225-27BE74946F3D" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-31328D87-A769-43E1-9225-27BE74946F3D"><code class="+ topic/ph pr-d/codeph ph codeph">hsm_protocol_parameters</code> -
+            <p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">-unique_key_types &lt;UEK1 UEK2 UPK1 UPK2 DPK
+          UEK3&gt;</code></p><div class="- topic/p p">Parameter required for UNIQUE_KEY protocol. It specifies which of
+          the user keys are per-device keys. Each per-device key is derived from a base key and
+          Device Serial Number (DSN) during programming, which makes it device-specific.<div class="- topic/note note important note_important" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-835BC7B0-F3C1-491C-BD17-35814A0A213E" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-835BC7B0-F3C1-491C-BD17-35814A0A213E"><span class="note__title">Important:</span> UEK3 is supported for
+            M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150 devices only.</div></div></li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-5DBA65C1-E508-4766-A39E-B2DED546943C" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-5DBA65C1-E508-4766-A39E-B2DED546943C"><code class="+ topic/ph pr-d/codeph ph codeph">generate_coc</code> - Parameter
+        to setup the generation and export of Certificate of Conformance.<p class="- topic/p p">This command allows the
+          user to setup parameters for bit stream generation. Actual generation occurs upon job or
+          bit stream file export. Bitstream generation is based on design information in the
+          Programming Data entry, including all modifications such as eNVM update, security
+          overwrites, and so on.</p></li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-1E9BA572-C196-44E1-A708-948CC862F046" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-1E9BA572-C196-44E1-A708-948CC862F046"><code class="+ topic/ph pr-d/codeph ph codeph">auth_keymode</code> - Specifies
+        what key mode to use for Authorization component in INITIATOR bit stream HSM flow. This
+        parameter is required for M2S060, M2GL060, M2S090, M2GL090, M2S150, M2GL150, and all
+        PolarFire and PolarFire SoC devices and optional for the rest of SmartFusion 2 and IGLOO 2
+        devices. The following table shows the valid and default value of this parameter.</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F"><code class="+ topic/ph pr-d/codeph ph codeph">enable_passkey_export</code> - By
+        default, the programming or the job file does not contain plain text UPK values. Use
+          <code class="+ topic/ph pr-d/codeph ph codeph">-enable_passkey_export</code> to include plain text UPK values in the STAPL or
+        the JOB file. Set to TRUE in the non-HSM flow to allow erase/verify operations, if security
+        is programmed.<div class="- topic/note note important note_important" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-45781DE3-19F5-4C98-A53D-2DE45BF035DC" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-45781DE3-19F5-4C98-A53D-2DE45BF035DC"><span class="note__title">Important:</span> By
+          default, UPKs are not staged to prevent security risks.</div><div class="- topic/p p"><div class="table-container"><table class="- topic/table table" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F" data-cols="2"><caption></caption><colgroup><col style="width:60.629921259842526%"/><col style="width:39.370078740157474%"/></colgroup><thead class="- topic/thead thead">
+                <tr class="- topic/row">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F__entry__1">Device</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F__entry__2">Valid Values</th>
+                </tr>
+              </thead><tbody class="- topic/tbody tbody valign-top">
+                <tr class="- topic/row">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F__entry__1"><p class="- topic/p p">PolarFire® and PolarFire SoC devices</p><p class="- topic/p p">M2S060, M2GL060, M2S090,
+                      M2GL090, M2S150, M2GL150</p></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F__entry__2">KFP, KFPE, KUP, KUPE</td>
+                </tr>
+                <tr class="- topic/row">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F__entry__1">Other SmartFusion® 2 and IGLOO® 2 devices</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-74CA101E-31D5-464B-8509-469FFE32A16F__entry__2">DFK</td>
+                </tr>
+              </tbody></table></div></div></li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F"><code class="+ topic/ph pr-d/codeph ph codeph" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__CODEPH_BZP_Y33_WTB">enable_key_rotation</code> - Used to generate an ​initiator file, which allows updating
+        user keys using <a class="- topic/xref xref" href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-C49E29C8-A8EF-4088-A975-334586BE4C88">Key
+          Rotation</a> flow. The <code class="+ topic/ph pr-d/codeph ph codeph">UNIQUE_KEY</code> protocol is not supported.</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F"><code class="+ topic/ph pr-d/codeph ph codeph" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__CODEPH_JCJ_Y33_WTB">auto_inc_design_version</code> - Flag to automatically increase design version in each
+        of the exported key rotation bit stream file. This parameter is set by default if
+        Auto-Update flow is enabled in JDC.</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-44F2097F-FDB7-4092-A1B6-5152FD8C940F"><code class="+ topic/ph pr-d/codeph ph codeph" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__CODEPH_S32_Z33_WTB">first_keymode</code> - Denotes the key mode used to encrypt the first key rotation bit
+        stream file (<span class="+ topic/ph sw-d/filepath ph filepath">*_rotate_1_uks*</span>). If user is aware that particular User
+        Key Set is not compromised, then they can use it to securely start the key rotation
+        flow.</li>
+    </ul>
+    <p class="- topic/p p">The following is an example of bit stream settings for the SmartDebug tool.</p>
+    <div class="- topic/example example" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__EXAMPLE_GFR_2MJ_JVB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__EXAMPLE_GFR_2MJ_JVB">
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__CODEBLOCK_HX4_BMJ_JVB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__CODEBLOCK_HX4_BMJ_JVB"><code>init_bitstream -data_name {MyProgData} -bitstream_name {MyDebugBitstream} -bitstream_type {DEBUG} \
+-features {ALL} -use_protocol {ONE_TIME_PASSCODE} -auth_keymode {UEK1}</code></pre>
+    </div>
+    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>export_bitstream_file   -data_name &lt;name&gt; 
+                        -bitstream_name &lt;bitstream_name&gt;
+                        -formats &lt;format_selection&gt;
+                        -export_path &lt;path &gt; [-dsn &lt;dsn_value&gt;]</code></pre>
+    <ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_L52_5ZK_TNB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_L52_5ZK_TNB">
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-C6EAF1FB-3695-4DE1-877A-46631512FD35" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-C6EAF1FB-3695-4DE1-877A-46631512FD35"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Name of the
+        programming data.</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-9198261E-85E4-4C82-AFC1-A689295ECAA9" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-9198261E-85E4-4C82-AFC1-A689295ECAA9"><code class="+ topic/ph pr-d/codeph ph codeph">bitstream_name</code> - Name of
+        the bit stream entry to be exported.</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-ED903247-D3F6-4C51-96FA-C628CB98223E" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-ED903247-D3F6-4C51-96FA-C628CB98223E"><code class="+ topic/ph pr-d/codeph ph codeph">format_selection</code> - Any
+        combination of the format types. File will be created for each selected type:<ul class="- topic/ul ul" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_UZL_YZK_TNB" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__UL_UZL_YZK_TNB">
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-7C9DE3A2-F39F-4608-9326-EB3F14F26567" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-7C9DE3A2-F39F-4608-9326-EB3F14F26567">STAPL file (non-HSM and HSM update
+            flow)</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-FEA4CDFB-99AF-4480-8D15-63E76658792D" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-FEA4CDFB-99AF-4480-8D15-63E76658792D">SPI file (non-HSM and HSM update
+            flow)</li>
+          <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-12D57645-036E-4F22-AB89-FEA624950226" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-12D57645-036E-4F22-AB89-FEA624950226">DAT file (non-HSM and HSM update
+            flow)</li>
+        </ul></li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-2EC74CF8-2706-4406-BEE3-0494F7414C04" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-2EC74CF8-2706-4406-BEE3-0494F7414C04"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Complete file path
+        without any extension. Extensions are determined based on format parameters above.</li>
+      <li class="- topic/li li" id="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-092B79C0-7FF4-4B75-99C2-A38BE310000E" data-ofbid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989__GUID-092B79C0-7FF4-4B75-99C2-A38BE310000E"><code class="+ topic/ph pr-d/codeph ph codeph">dsn</code> - Device Serial Number
+        (DSN) of the device for which to generate per-device UEK1/2/3-bit stream files.</li>
+    </ul>
+    <p class="- topic/p p">This command generates and exports specified format bit stream file(s). The bit stream file
+      is generated based on the information provided in the Programming Data entry.</p>
+  </div>
+</article></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-D340D497-9E85-451D-8931-C310B6B9DD78" xml:lang="en-US" lang="en-US" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8">
+    <h2 class="- topic/title title topictitle2" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-D340D497-9E85-451D-8931-C310B6B9DD78" style="display:inline-block">13.4.8.5 Programming Job</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Programming%20Job">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">new_prog_job</strong> -job_name &lt;name&gt; 
+             -job_type &lt;job_type | SDebug&gt; 
+             [-setup &lt; hw_setup_type&gt;]</code></pre>
+        </div>
+        <ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_LPQ_P2L_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_LPQ_P2L_TNB">
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-C08E200C-5EF0-4A49-A6BA-577FAC7858C3" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-C08E200C-5EF0-4A49-A6BA-577FAC7858C3"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - Name of the
+                programming job entry.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-A01E8506-AB95-46A6-8741-1871B28AE9DB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-A01E8506-AB95-46A6-8741-1871B28AE9DB"><code class="+ topic/ph pr-d/codeph ph codeph">job_type</code> - Type of
+                job. One of the following:<ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_K1P_T2L_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_K1P_T2L_TNB">
+                    <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-2723D867-F946-4292-9F24-093E0F45FE16" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-2723D867-F946-4292-9F24-093E0F45FE16">IHP: Job for IHP flow.</li>
+                    <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-F50EB4EC-9C69-403A-BFD4-B69873C0BF3B" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-F50EB4EC-9C69-403A-BFD4-B69873C0BF3B">FPExpress: Job for FPExpress
+                        flow.</li>
+                    <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-B61396BF-90CA-45D9-8FB0-1659ED34660A" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-B61396BF-90CA-45D9-8FB0-1659ED34660A">SDebug: Create Debug Job (DDC
+                        file) for SmartDebug tool.</li>
+                </ul></li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-A8A5BDC9-7B31-4AEB-9E07-1F2F04EB5350" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-A8A5BDC9-7B31-4AEB-9E07-1F2F04EB5350"><code class="+ topic/ph pr-d/codeph ph codeph">hw_setup_type</code> - Type
+                of the hardware setup.<ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_HPD_Y2L_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_HPD_Y2L_TNB">
+                    <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-F488EF31-3072-4161-94E0-B77F835BBE9C" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-F488EF31-3072-4161-94E0-B77F835BBE9C">JTAG_CHAIN: JTAG chain
+                        (default parameter)</li>
+                </ul></li>
+        </ul>
+        <p class="- topic/p p">This command creates a new programming job. The programming job can be for IHP flow or
+            for FPExpress. The job is created for a specific hardware setup type. The default setup
+            type is JTAG chain. Job name must be unique among other job names. The job can have one
+            or more devices and optional HSM Tasks for the HSM flow.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">add_microsemi_prog_device</strong>   -job_name &lt;job&gt;
+                            -device_name &lt;device&gt;
+                            -device_hw_location &lt;location&gt;
+                            [-data_name &lt;data&gt;]
+                            [-bitstream_name &lt;bitstream&gt;]
+                            [-dsn &lt;dsn_value&gt;]
+                            [-bitstream_file &lt;bitstream file&gt;]</code></pre>
+        </div>
+        <ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_PZ3_G2L_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_PZ3_G2L_TNB">
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-6B4A25F7-B5CC-4B7E-9868-131158F467E2" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-6B4A25F7-B5CC-4B7E-9868-131158F467E2"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job to add device.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-51288F79-FB5C-481E-908C-1E1CCDB8F05A" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-51288F79-FB5C-481E-908C-1E1CCDB8F05A"><code class="+ topic/ph pr-d/codeph ph codeph">device</code> - User name
+                of the device. Must be unique within the Job.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-847D1018-F880-4061-A71C-03DE16F9B6FE" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-847D1018-F880-4061-A71C-03DE16F9B6FE"><code class="+ topic/ph pr-d/codeph ph codeph">location</code> - Hardware
+                location of the device in the setup: Chain index for JTAG chain.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-2F3E21A9-C1EF-4356-AD6A-9169BBA6EF4B" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-2F3E21A9-C1EF-4356-AD6A-9169BBA6EF4B"><code class="+ topic/ph pr-d/codeph ph codeph">data</code> - Name of the
+                Programming Data containing bit stream file.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-679839A9-0F87-4DBB-989C-4A22513F48E6" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-679839A9-0F87-4DBB-989C-4A22513F48E6"><code class="+ topic/ph pr-d/codeph ph codeph">bit stream</code> -
+                Bitstream name in the Programming Data.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-536496DC-A179-4151-AF45-43AF83D1729E" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-536496DC-A179-4151-AF45-43AF83D1729E"><code class="+ topic/ph pr-d/codeph ph codeph">dsn</code> - Parameter to
+                set the DSN of the device. This is used for generating per-device UEK1/2/3 bit
+                stream files.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-4837BF10-00C0-443C-9309-EA28376BED2E" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-4837BF10-00C0-443C-9309-EA28376BED2E"><code class="+ topic/ph pr-d/codeph ph codeph">bitstream_file</code> -
+                Path of STAPL file to program this device. This is useful for adding device in
+                chain.</li>
+        </ul>
+        <p class="- topic/p p">This command manually adds a Microchip device targeted for programming by a bit stream
+            generated from the specific design (Programming Data) or STAPL file. Device name must be
+            unique among other devices inside specified jobs.</p>
+        <div class="- topic/note note notype note_notype" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-C5466FE7-CDB3-4EC0-8BD7-6324664FCD37" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-C5466FE7-CDB3-4EC0-8BD7-6324664FCD37"><span class="note__title">Note:</span> You can add any valid Microchip device
+            using a stand-alone STAPL file. However, only SmartFusion 2 and IGLOO 2 are supported
+            when using the Programming Data option.</div>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">add_microsemi_bypass_device </strong>  -job_name &lt;job&gt;
+                              -device_name &lt;device&gt;
+                              -device_hw_location &lt;location&gt;
+                              [-device_type &lt;die_name&gt;]
+                              [-bitstream_file &lt;bitstream_file&gt;]</code></pre>
+        </div>
+        <ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_HQY_YDL_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_HQY_YDL_TNB">
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-09699206-4E7A-40BB-9C47-9228EABD216D" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-09699206-4E7A-40BB-9C47-9228EABD216D"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job to add device.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-14BDDE4B-C3BE-40AC-B117-654A33E7FD5B" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-14BDDE4B-C3BE-40AC-B117-654A33E7FD5B"><code class="+ topic/ph pr-d/codeph ph codeph">device</code> - User name
+                of the device. Must be unique within the Job.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-4F3F5181-33FD-486E-A041-B198E377C18F" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-4F3F5181-33FD-486E-A041-B198E377C18F"><code class="+ topic/ph pr-d/codeph ph codeph">location</code> - Hardware
+                location of the device in the setup: Chain index for JTAG chain.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-5A4DFAF5-462D-4F68-988A-8EA42CEACBD7" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-5A4DFAF5-462D-4F68-988A-8EA42CEACBD7"><code class="+ topic/ph pr-d/codeph ph codeph">die_name</code> - Name of
+                Microchip device (for example, M2S010, M2GL090TS, and so on).</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-0ECF3F1D-A1A5-41C7-B4F5-3D36A0DE1B80" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-0ECF3F1D-A1A5-41C7-B4F5-3D36A0DE1B80"><code class="+ topic/ph pr-d/codeph ph codeph">bitstream_file</code> -
+                STAPL file path for this device.</li>
+        </ul>
+        <div class="- topic/p p">This command adds a Microchip bypass device by either specifying the die name or by
+            specifying a STAPL
+            file.<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">add_non_microsemi_bypass_device </strong>  -job_name &lt;job&gt; 
+                                  -device_name &lt;device&gt;
+                                  -device_hw_location &lt;location&gt; [-ir &lt;IR_len&gt;]
+                                  [- tck &lt;tck&gt;]
+                                  [-file &lt;bsdl_file&gt;]</code></pre></div>
+        <ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_NK2_RDL_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_NK2_RDL_TNB">
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-1836069B-CF33-4A80-A4A2-1E8DE538D4D3" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-1836069B-CF33-4A80-A4A2-1E8DE538D4D3"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job to add device.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-228D473F-4365-4769-9A2C-CF8006178581" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-228D473F-4365-4769-9A2C-CF8006178581"><code class="+ topic/ph pr-d/codeph ph codeph">device</code> - User name
+                of the device. Must be unique within the Job.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-4A12F967-ED97-4E26-8AF6-98A4A7952239" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-4A12F967-ED97-4E26-8AF6-98A4A7952239"><code class="+ topic/ph pr-d/codeph ph codeph">location</code> - Hardware
+                location of the device in the setup: Chain index for JTAG chain.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-1482C697-43F3-4520-B6A8-1631EC6C52AD" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-1482C697-43F3-4520-B6A8-1631EC6C52AD"><code class="+ topic/ph pr-d/codeph ph codeph">ir</code> - IR length.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-AA1761BA-DC22-4598-AC57-D1FEB32C4BEF" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-AA1761BA-DC22-4598-AC57-D1FEB32C4BEF"><code class="+ topic/ph pr-d/codeph ph codeph">tck</code> - Max TCK
+                frequency (in MHz).</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-EECEBD11-33C9-42A5-889D-819C95B3E7E6" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-EECEBD11-33C9-42A5-889D-819C95B3E7E6"><code class="+ topic/ph pr-d/codeph ph codeph">bsdl_file</code> - BSDL
+                file path for targeted non-Microchip device.</li>
+        </ul>
+        <p class="- topic/p p">This command adds a non-Microchip bypass device by either specifying IR length and TCK
+            frequency or by specifying BSDL file.</p>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">export_prog_job </strong>-job_name &lt;job&gt;
+                -location &lt;path&gt; 
+                -name &lt;file&gt;</code></pre>
+        <ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_EHF_KDL_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_EHF_KDL_TNB">
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-3A40D8D3-9472-4049-AEE2-6A54DC40FE60" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-3A40D8D3-9472-4049-AEE2-6A54DC40FE60"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job being exported.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-2BB5D27D-8C21-4B10-9B47-20881C7DBCAF" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-2BB5D27D-8C21-4B10-9B47-20881C7DBCAF"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Path to the
+                directory in which the job file will be exported.</li>
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-F94C52B2-5C65-4311-9FB2-EE56F9F1334D" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-F94C52B2-5C65-4311-9FB2-EE56F9F1334D"><code class="+ topic/ph pr-d/codeph ph codeph">name</code> - File name of
+                the job file to be exported.</li>
+        </ul>
+        <p class="- topic/p p">This command exports a non-HSM job for FlashPro Express or IHP. </p>
+        <div class="- topic/note note notype note_notype" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-57ACE66D-E2BB-4B8A-B255-CB3504460ED7" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-57ACE66D-E2BB-4B8A-B255-CB3504460ED7"><span class="note__title">Note:</span> An HSM job is exported using the
+                <code class="+ topic/ph pr-d/codeph ph codeph">export_hsmtask</code> command.</div>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">import_job_status </strong>-job_status_file &lt;path&gt;</code></pre>
+        <ul class="- topic/ul ul" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_W2J_PDL_TNB" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__UL_W2J_PDL_TNB">
+            <li class="- topic/li li" id="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-50EF2E33-660B-427B-ADD0-35CBD2F72099" data-ofbid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8__GUID-50EF2E33-660B-427B-ADD0-35CBD2F72099"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Path to the
+                job status container generated by FlashPro Express.</li>
+        </ul>
+        <p class="- topic/p p">HSM flow only: Imports and validates job status received from FlashPro Express or IHP.
+            Status can be generated in the process of job execution to provide current job status,
+            or as a result of job end, in which case, it includes cryptographically protected proof
+            of job removal from the HSM.</p>
+    </div>
+<article class="- topic/topic topic nested2" aria-labelledby="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-7919FCA2-820A-4E2F-8E67-5CDDC0F732BD" xml:lang="en-US" lang="en-US" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186"><h3 class="- topic/title title topictitle3" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-7919FCA2-820A-4E2F-8E67-5CDDC0F732BD" style="display:inline-block">13.4.8.5.1 HSM Task</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=HSM%20Task">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">add_hsmtask_to_job </strong>  -job_name &lt;job&gt;
+                     -hsmtask_name &lt;task&gt; 
+                     [-m_request_type {INTERNAL|EXTERNAL}]</code></pre>
+        </div>
+        <ul class="- topic/ul ul" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_EYL_XJL_TNB" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_EYL_XJL_TNB">
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-0B695D98-2F25-464E-905F-AC0CE24F55CC" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-0B695D98-2F25-464E-905F-AC0CE24F55CC"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming (or debug) job for which task is created.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-C2106654-D9D0-422A-9A58-9E96733A406B" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-C2106654-D9D0-422A-9A58-9E96733A406B"><code class="+ topic/ph pr-d/codeph ph codeph">task</code> - Name of the
+                HSM Task. Must be unique within the job.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-1F582F24-B3D1-458A-9853-341E0700AFAC" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-1F582F24-B3D1-458A-9853-341E0700AFAC"><code class="+ topic/ph pr-d/codeph ph codeph">m_request_type</code> -
+                Specifies how the M-HSM request is executed. <ul class="- topic/ul ul" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_TM3_BKL_TNB" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_TM3_BKL_TNB">
+                    <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-E1026EFF-CBE7-4B0C-8BA6-84F2E07BC38D" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-E1026EFF-CBE7-4B0C-8BA6-84F2E07BC38D">INTERNAL - This mode can only
+                        be specified if the same physical User HSM is used to generate and execute
+                        the programming job. In this case, the Job Manager will internally execute
+                        the request.</li>
+                    <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-70E41853-821B-4FCD-AB6F-EEFCF9913A91" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-70E41853-821B-4FCD-AB6F-EEFCF9913A91">EXTERNAL - Default mode
+                        requires user to export the request, process it using FlashPro Express, and
+                        then import it back into the Job Manager project.</li>
+                </ul></li>
+        </ul>
+        <p class="- topic/p p">This command creates a new HSM Task for the specified programming job. The HSM task can
+            contain one or more job tickets. This HSM task is then used to send a job request to the
+            M-HSM and the job response received is imported into the HSM Task, which then enables
+            HSM task export.</p>
+        <div class="- topic/p p">
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">new_hsmtask_ticket </strong>  -job_name &lt;job&gt;
+                     -hsmtask_name &lt;task&gt;
+                     -ticket_name &lt;ticket&gt;
+                     -device &lt;device&gt;
+                     -actions &lt;programming action | DEBUG&gt;
+                     -max_device &lt;max&gt;</code></pre>
+        </div>
+        <ul class="- topic/ul ul" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_XX2_NJL_TNB" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_XX2_NJL_TNB">
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-DFF79994-02F0-46B7-B1BB-3C87F42A8F5A" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-DFF79994-02F0-46B7-B1BB-3C87F42A8F5A"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job which adds a new ticket.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-67C87467-5BC0-4197-B0B1-2F97FD85478C" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-67C87467-5BC0-4197-B0B1-2F97FD85478C"><code class="+ topic/ph pr-d/codeph ph codeph">task</code> - Name of the
+                task within the Job.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-47F088AE-983D-40D8-9BA4-621B553D2FD3" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-47F088AE-983D-40D8-9BA4-621B553D2FD3"><code class="+ topic/ph pr-d/codeph ph codeph">ticket</code> - Name of the
+                new ticket. Must be unique within the task. </li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-5EC44944-9BCD-4C46-A3F3-EEEE215A42FE" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-5EC44944-9BCD-4C46-A3F3-EEEE215A42FE"><code class="+ topic/ph pr-d/codeph ph codeph">device</code> - Name of the
+                target device in the Job for the new ticket.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-2B0C000B-EF4E-46DA-9054-D82514905D78" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-2B0C000B-EF4E-46DA-9054-D82514905D78"><code class="+ topic/ph pr-d/codeph ph codeph">action</code> - Programming
+                action for the ticket.<ul class="- topic/ul ul" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_CXC_FFF_K5B" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_CXC_FFF_K5B">
+                    <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-DC863688-9C3F-4310-8797-58BE03A377B6" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-DC863688-9C3F-4310-8797-58BE03A377B6">DEBUG: SmartDebug action for
+                        the ticket.</li>
+                </ul></li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-6A21AD5B-6A6D-4F8D-9F98-ADDEAEE12BFD" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-6A21AD5B-6A6D-4F8D-9F98-ADDEAEE12BFD"><code class="+ topic/ph pr-d/codeph ph codeph">max</code> - Overbuild
+                protection: max devices to use this ticket. Can be 'unlimited'.</li>
+        </ul>
+        <p class="- topic/p p">This command creates a new job ticket for the HSM Task. The HSM task can have one or more
+            job tickets for each device, but each job ticket is created per programming action. The
+            overbuild protection parameter <code class="+ topic/ph pr-d/codeph ph codeph">max_device</code> is applicable to the
+            protocols that are capable of controlling the number of authorized devices, such as the
+            Authorization Code and Unique Key protocols.</p>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">hsmtask_m_request </strong>  -job_name &lt;job&gt; 
+                    -hsmtask_name &lt;task&gt;
+                    -request_file &lt;path&gt;</code></pre>
+        <ul class="- topic/ul ul" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_ZD1_3JL_TNB" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_ZD1_3JL_TNB">
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-94D314AB-24B0-493A-94D9-4D157FAFC75A" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-94D314AB-24B0-493A-94D9-4D157FAFC75A"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job that contains target HSM Task.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-6B848400-B84A-440B-A8E8-62DC5958CEB9" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-6B848400-B84A-440B-A8E8-62DC5958CEB9"><code class="+ topic/ph pr-d/codeph ph codeph">task</code> - Name of the
+                HSM task for which CM request is being generated.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-D8ED278E-90AB-4605-9CBF-323A3DFF2E61" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-D8ED278E-90AB-4605-9CBF-323A3DFF2E61"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Full file
+                name of the request container.</li>
+        </ul>
+        <p class="- topic/p p">This command creates a job request that is required to perform a handshake protocol with
+            the M-HSM (FlashPro Express or IHP). Once FlashPro Express has processed the request, it
+            generates and exports a Job Reply that must be imported into the HSM Task on the Job
+            Manager side. This handshake protocol guarantees one time use of the HSM Task on the
+            FlashPro Express or IHP side (M-HSM), thus preventing job replication. This command is
+            only applicable if the HSM task was created with the request set to EXTERNAL value
+            (default). See <code class="+ topic/ph pr-d/codeph ph codeph">add_hsm_task</code> for details.</p>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">hsmtask_m_reply </strong>  -job_name &lt;job&gt; 
+                  -hsmtask_name &lt;task&gt;
+                  -reply_file &lt;path&gt;</code></pre>
+        <ul class="- topic/ul ul" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_NDH_1JL_TNB" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_NDH_1JL_TNB">
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-5C03C60C-9C76-495C-A0D8-C97E86AAB8AD" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-5C03C60C-9C76-495C-A0D8-C97E86AAB8AD"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job that owns target HSM Task.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-F9346A87-227A-4EF5-8DA3-F577FE421B59" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-F9346A87-227A-4EF5-8DA3-F577FE421B59"><code class="+ topic/ph pr-d/codeph ph codeph">task</code> - Name of the
+                task in the job.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-B034F626-DF07-4801-B899-FA7B9A176157" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-B034F626-DF07-4801-B899-FA7B9A176157"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Full file
+                name to the container with Job Response.</li>
+        </ul>
+        <p class="- topic/p p">Import job reply by FlashPro Express or IHP (M-HSM). This command is only applicable if
+            the HSM task was created with the request set to EXTERNAL value (default). See
+                <code class="+ topic/ph pr-d/codeph ph codeph">add_hsm_task</code> for details. For more information, see the
+                <code class="+ topic/ph pr-d/codeph ph codeph">process_job_request</code> FlashPro Express command documented in the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/libero_soc_tcl_cmd_ref_ug.pdf" target="_blank" rel="external noopener">Tcl Commands Reference Guide</a>
+      </span>.</p>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">export_hsmtask </strong>  -job_name &lt;job&gt; 
+                 -hsmtask_name &lt;task&gt;  
+                 -location &lt;path&gt;
+                 -name &lt;file_name&gt;
+</code></pre>
+        <ul class="- topic/ul ul" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_GBV_W3L_TNB" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__UL_GBV_W3L_TNB">
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-8F30A7D0-BDCC-42BA-93BF-72F32A4DACAD" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-8F30A7D0-BDCC-42BA-93BF-72F32A4DACAD"><code class="+ topic/ph pr-d/codeph ph codeph">job</code> - Name of the
+                programming job that contains task being exported.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-5DDCEDD8-AF9B-4073-B4E6-3789AFC96014" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-5DDCEDD8-AF9B-4073-B4E6-3789AFC96014"><code class="+ topic/ph pr-d/codeph ph codeph">task</code> - Name of the
+                task in the job.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-26D46FB4-C7B4-46F7-B254-32303A1DDC67" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-26D46FB4-C7B4-46F7-B254-32303A1DDC67"><code class="+ topic/ph pr-d/codeph ph codeph">path</code> - Location of
+                the export container.</li>
+            <li class="- topic/li li" id="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-933489B4-2A5B-44BC-AB2B-63BA1EBF1BFA" data-ofbid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186__GUID-933489B4-2A5B-44BC-AB2B-63BA1EBF1BFA"><code class="+ topic/ph pr-d/codeph ph codeph">file_name</code> - File
+                name for the export container.</li>
+        </ul>
+        <p class="- topic/p p">This command exports the HSM job for further execution by FlashPro Express or IHP. This
+            can only be executed after importing job reply.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-9B0D7C71-F180-492D-86B0-7BEE732BB0F6" xml:lang="en-US" lang="en-US" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E"><h3 class="- topic/title title topictitle3" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-9B0D7C71-F180-492D-86B0-7BEE732BB0F6" style="display:inline-block">13.4.8.5.2 SPI Directory</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SPI%20Directory">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p"><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code><strong class="+ topic/ph hi-d/b ph b">export_spi_directory </strong>  -golden_ver &lt;value or SPI file&gt; 
+                       -golden_addr &lt;hex value&gt; 
+                       -update_ver &lt;value or SPI file&gt; 
+                       -update_addr &lt;hex value&gt; 
+                       -file &lt;file_name&gt;</code></pre></div><ul class="- topic/ul ul" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_UKP_2ML_TNB" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_UKP_2ML_TNB"><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-8039BBBA-B7A9-4E7E-A7B5-3D7FFFD4D4D6" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-8039BBBA-B7A9-4E7E-A7B5-3D7FFFD4D4D6"><code class="+ topic/ph pr-d/codeph ph codeph">golden_ver &lt;value or SPI file&gt;</code> - Specifies Golden SPI Image design version. There are two ways to specify the value:<ul class="- topic/ul ul" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_GFM_GML_TNB" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_GFM_GML_TNB"><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-76970D57-F683-4155-A709-696826FD5B71" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-76970D57-F683-4155-A709-696826FD5B71">Decimal value less than 65536 (exclusive)</li><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-7A95F0B7-1ABC-49C0-A05E-9A26F0E034B8" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-7A95F0B7-1ABC-49C0-A05E-9A26F0E034B8">SPI file from which the design version is read.</li></ul></li><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-2425A2A8-3C85-4D92-B3C5-AD3A6A01A42F" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-2425A2A8-3C85-4D92-B3C5-AD3A6A01A42F"><code class="+ topic/ph pr-d/codeph ph codeph">-golden_addr &lt;hex value&gt;</code> - Specifies Golden SPI Image address where hex is 32-bit hexadecimal value with prefix 0x/0X.</li><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-75BBA1E1-CA86-4D19-98A2-5CE0A4C5EBF0" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-75BBA1E1-CA86-4D19-98A2-5CE0A4C5EBF0"><code class="+ topic/ph pr-d/codeph ph codeph">-update_ver &lt;value or SPI file&gt;</code> - Specifies Update SPI Image design version. There are two ways to specify the value:<ul class="- topic/ul ul" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_Q3K_ZLL_TNB" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_Q3K_ZLL_TNB"><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-0687C54A-76E2-43F3-9F59-E5069239AFBD" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-0687C54A-76E2-43F3-9F59-E5069239AFBD">Decimal value less than 65536 (exclusive)</li><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-A06D5A67-7B30-4197-ADBE-DC6EF5A76CB8" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-A06D5A67-7B30-4197-ADBE-DC6EF5A76CB8">SPI file from which the design version is read.</li></ul></li><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-C3B83990-3C37-41CB-830E-A56E91B412AE" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-C3B83990-3C37-41CB-830E-A56E91B412AE"><code class="+ topic/ph pr-d/codeph ph codeph">-update_addr &lt;hex value&gt;</code> - Specifies Update SPI Image address where hex is a 32-bit hexadecimal value with prefix 0x/0X.</li><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-59725C72-5BD8-4EC3-BE54-628112BA1F5F" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-59725C72-5BD8-4EC3-BE54-628112BA1F5F"><code class="+ topic/ph pr-d/codeph ph codeph">-file &lt;file&gt;</code> - Mandatory argument; specifies the file export location.</li></ul><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Supported Families</strong></p><ul class="- topic/ul ul" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_PVK_4ML_TNB" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__UL_PVK_4ML_TNB"><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-28074CAB-A5F2-4DAA-9F15-A7D197765BAB" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-28074CAB-A5F2-4DAA-9F15-A7D197765BAB">SmartFusion 2</li><li class="- topic/li li" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-13006E10-105B-4761-BE57-D9039F11D5C0" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-13006E10-105B-4761-BE57-D9039F11D5C0">IGLOO 2</li></ul><div class="- topic/example example" id="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-D6DBCD54-796C-40C3-A698-5339C71047F7" data-ofbid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E__GUID-D6DBCD54-796C-40C3-A698-5339C71047F7"><div class="- topic/p p">Both golden* options go together. The same is true for both update* options; the file argument is
+                                                  required:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>export_spi_directory \
+-golden_ver {D:\flashpro_files\m2s025_jb_spi_dir\designer\a1_MSS\export\a1_MSS.spi} \
+-golden_addr {0xa} \
+-file {D:\flashpro_files\jobmgr_project12\dev.spidir}
+
+export_spi_directory \
+-update_ver {456} \
+-update_addr {0xdef} \
+-file {D:\flashpro_files\jobmgr_project12\dev.spidir}
+
+export_spi_directory \
+-golden_ver {123} \
+-golden_addr {0xabc} \
+-update_ver {456} \
+-update_addr {0xdef} \
+-file {D:\flashpro_files\jobmgr_project12\dev.spidir}
+</code></pre></div></div></div></article></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604" data-tocid="GUID-5DE6BB75-5B83-4B1B-9AD7-541602305604">13.4.8.1 Application</a></li><li class="topic-item"><a href="#GUID-6A870CCC-EEAD-4ED3-8E42-393316109650" data-tocid="GUID-6A870CCC-EEAD-4ED3-8E42-393316109650">13.4.8.2 Keyset Management</a></li><li class="topic-item"><a href="#GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437" data-tocid="GUID-6BA80E1B-572D-4DF9-8DBC-635E24B75437">13.4.8.3 Project Management</a></li><li class="topic-item"><a href="#GUID-E56DD870-72F6-45D3-B804-F05FD6475C91" data-tocid="GUID-E56DD870-72F6-45D3-B804-F05FD6475C91">13.4.8.4 Programming Data</a><ul><li class="topic-item"><a href="#GUID-9ECC43DD-41DF-49CD-9531-5323457F357D" data-tocid="GUID-9ECC43DD-41DF-49CD-9531-5323457F357D">13.4.8.4.1 Design Import</a></li><li class="topic-item"><a href="#GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6" data-tocid="GUID-B720B9C1-9C4C-4303-B7DC-0F1A413803A6">13.4.8.4.2 Security Modifications</a></li><li class="topic-item"><a href="#GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C" data-tocid="GUID-5BD66B5B-AF51-4476-90D3-A9E25D29C92C">13.4.8.4.3 eNVM Client Modifications</a></li><li class="topic-item"><a href="#GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497" data-tocid="GUID-34F97B7D-55FD-49E3-B3CC-CF4302A3F497">13.4.8.4.4 sNVM Client Modifications</a></li><li class="topic-item"><a href="#GUID-821E757C-08E7-4DCD-AC20-7337F8147989" data-tocid="GUID-821E757C-08E7-4DCD-AC20-7337F8147989">13.4.8.4.5 Bitstream Management</a></li></ul></li><li class="topic-item"><a href="#GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8" data-tocid="GUID-FFFD2070-D972-4931-AB1C-A9D6ACC6C2E8">13.4.8.5 Programming Job</a><ul><li class="topic-item"><a href="#GUID-00D73EDA-686D-4C21-9D31-4470EE454186" data-tocid="GUID-00D73EDA-686D-4C21-9D31-4470EE454186">13.4.8.5.1 HSM Task</a></li><li class="topic-item"><a href="#GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E" data-tocid="GUID-87BE5710-5EF8-41A5-92C2-1230BC62A10E">13.4.8.5.2 SPI Directory</a></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

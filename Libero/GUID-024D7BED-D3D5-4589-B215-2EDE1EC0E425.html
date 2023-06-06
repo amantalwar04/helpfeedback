@@ -1,0 +1,495 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Starting with Libero SoC v12.5, FlashPro Express supports two modes: Operator mode Developer mode Operator mode is a current flow that provides production programming. It is the default mode and ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>13.1.7 FlashPro Express Modes</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425-d10733e11277"/><meta name="wh-source-relpath" content="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425.xml"/><meta name="wh-out-relpath" content="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+FlashPro Express</a><div class="wh-tooltip"><p class="shortdesc">Information about FlasPro Express </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425"><div class="title"><a href="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425.html#GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.7</ph>
+FlashPro Express Modes</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e10987" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e10987-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10987-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+FlashPro Express</a><div class="wh-tooltip"><p class="shortdesc">Information about FlasPro Express </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D-d10733e10991" class="topicref introduction" data-id="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D-d10733e10991-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BA431160-B028-4E63-9787-C6FF0C935F33-d10733e11000" class="topicref" data-id="GUID-BA431160-B028-4E63-9787-C6FF0C935F33" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BA431160-B028-4E63-9787-C6FF0C935F33-d10733e11000-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA431160-B028-4E63-9787-C6FF0C935F33.html#GUID-BA431160-B028-4E63-9787-C6FF0C935F33" id="GUID-BA431160-B028-4E63-9787-C6FF0C935F33-d10733e11000-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.1</ph>
+Overview</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98565239-F0CD-48C0-8514-90FCAF78EFE8-d10733e11032" class="topicref" data-id="GUID-98565239-F0CD-48C0-8514-90FCAF78EFE8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98565239-F0CD-48C0-8514-90FCAF78EFE8.html" id="GUID-98565239-F0CD-48C0-8514-90FCAF78EFE8-d10733e11032-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.2</ph>
+Installing FlashPro Express Software and Hardware</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-062A99C1-F516-44C9-B2E6-873720F7DE16-d10733e11041" class="topicref" data-id="GUID-062A99C1-F516-44C9-B2E6-873720F7DE16" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-062A99C1-F516-44C9-B2E6-873720F7DE16-d10733e11041-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-062A99C1-F516-44C9-B2E6-873720F7DE16.html#GUID-062A99C1-F516-44C9-B2E6-873720F7DE16" id="GUID-062A99C1-F516-44C9-B2E6-873720F7DE16-d10733e11041-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.3</ph>
+Getting Started</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9667B058-7378-49E5-9ADE-D187CE7B3D09-d10733e11113" class="topicref" data-id="GUID-9667B058-7378-49E5-9ADE-D187CE7B3D09" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9667B058-7378-49E5-9ADE-D187CE7B3D09.html" id="GUID-9667B058-7378-49E5-9ADE-D187CE7B3D09-d10733e11113-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.4</ph>
+Programming Connectivity and Interface</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-DC5E26BF-8BAC-4398-BB79-C3E99C4F714E-d10733e11122" class="topicref" data-id="GUID-DC5E26BF-8BAC-4398-BB79-C3E99C4F714E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-DC5E26BF-8BAC-4398-BB79-C3E99C4F714E-d10733e11122-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-DC5E26BF-8BAC-4398-BB79-C3E99C4F714E.html#GUID-DC5E26BF-8BAC-4398-BB79-C3E99C4F714E" id="GUID-DC5E26BF-8BAC-4398-BB79-C3E99C4F714E-d10733e11122-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.5</ph>
+Programmer Settings and Operations</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-16653950-7A91-4695-9F06-B1CD1A42AA77-d10733e11236" class="topicref" data-id="GUID-16653950-7A91-4695-9F06-B1CD1A42AA77" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-16653950-7A91-4695-9F06-B1CD1A42AA77-d10733e11236-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-16653950-7A91-4695-9F06-B1CD1A42AA77.html#GUID-16653950-7A91-4695-9F06-B1CD1A42AA77" id="GUID-16653950-7A91-4695-9F06-B1CD1A42AA77-d10733e11236-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.6</ph>
+Chain Programming</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425-d10733e11277" class="topicref" data-id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425-d10733e11277-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425.html#GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425-d10733e11277-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.7</ph>
+FlashPro Express Modes</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803-d10733e11285" class="topicref" data-id="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803-d10733e11285-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425.html#GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803" id="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803-d10733e11285-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.7.1</ph>
+Updating FlashPro6 Internal Design</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-757E83ED-4172-46FF-B8F8-009DD0A21E24-d10733e11310" class="topicref" data-id="GUID-757E83ED-4172-46FF-B8F8-009DD0A21E24" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-757E83ED-4172-46FF-B8F8-009DD0A21E24-d10733e11310-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-757E83ED-4172-46FF-B8F8-009DD0A21E24.html#GUID-757E83ED-4172-46FF-B8F8-009DD0A21E24" id="GUID-757E83ED-4172-46FF-B8F8-009DD0A21E24-d10733e11310-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.8</ph>
+Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0DD9BAE6-4486-4061-875B-6D27C8F57F33-d10733e11351" class="topicref" data-id="GUID-0DD9BAE6-4486-4061-875B-6D27C8F57F33" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0DD9BAE6-4486-4061-875B-6D27C8F57F33-d10733e11351-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0DD9BAE6-4486-4061-875B-6D27C8F57F33.html#GUID-0DD9BAE6-4486-4061-875B-6D27C8F57F33" id="GUID-0DD9BAE6-4486-4061-875B-6D27C8F57F33-d10733e11351-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.9</ph>
+Troubleshooting</a></div></div></li><li role="treeitem"><div data-tocid="GUID-73E1025B-F2D3-431F-916B-F479AEF8021F-d10733e11391" class="topicref" data-id="GUID-73E1025B-F2D3-431F-916B-F479AEF8021F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-73E1025B-F2D3-431F-916B-F479AEF8021F.html" id="GUID-73E1025B-F2D3-431F-916B-F479AEF8021F-d10733e11391-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.10</ph>
+SmartDebug</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-998D2735-C01E-47F5-ABA4-DD68FD8AC2C2-d10733e11400" class="topicref" data-id="GUID-998D2735-C01E-47F5-ABA4-DD68FD8AC2C2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-998D2735-C01E-47F5-ABA4-DD68FD8AC2C2-d10733e11400-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-998D2735-C01E-47F5-ABA4-DD68FD8AC2C2.html#GUID-998D2735-C01E-47F5-ABA4-DD68FD8AC2C2" id="GUID-998D2735-C01E-47F5-ABA4-DD68FD8AC2C2-d10733e11400-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.11</ph>
+Electrical Parameters</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1D787CF3-9F0D-4247-96DB-581F24A5554D-d10733e11426" class="topicref" data-id="GUID-1D787CF3-9F0D-4247-96DB-581F24A5554D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1D787CF3-9F0D-4247-96DB-581F24A5554D-d10733e11426-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D787CF3-9F0D-4247-96DB-581F24A5554D.html#GUID-1D787CF3-9F0D-4247-96DB-581F24A5554D" id="GUID-1D787CF3-9F0D-4247-96DB-581F24A5554D-d10733e11426-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.12</ph>
+Electrical Specifications</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-FB552CE1-25C1-4C8B-A7DF-09AA4CA3C6CF-d10733e11491" class="topicref" data-id="GUID-FB552CE1-25C1-4C8B-A7DF-09AA4CA3C6CF" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-FB552CE1-25C1-4C8B-A7DF-09AA4CA3C6CF-d10733e11491-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FB552CE1-25C1-4C8B-A7DF-09AA4CA3C6CF.html#GUID-FB552CE1-25C1-4C8B-A7DF-09AA4CA3C6CF" id="GUID-FB552CE1-25C1-4C8B-A7DF-09AA4CA3C6CF-d10733e11491-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.13</ph>
+FlashPro Express Reference</a></div></div></li><li role="treeitem"><div data-tocid="GUID-32DA3EAA-B9B1-41A7-84C9-3E117CC68F16-d10733e11571" class="topicref" data-id="GUID-32DA3EAA-B9B1-41A7-84C9-3E117CC68F16" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-32DA3EAA-B9B1-41A7-84C9-3E117CC68F16.html" id="GUID-32DA3EAA-B9B1-41A7-84C9-3E117CC68F16-d10733e11571-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.14</ph>
+Appendix A: Sample Programming and SmartDebug Times Using FlashPro5 and FlashPro6</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E450223A-F9BC-49DC-808E-8A86B4BD3810-d10733e11579" class="topicref" data-id="GUID-E450223A-F9BC-49DC-808E-8A86B4BD3810" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E450223A-F9BC-49DC-808E-8A86B4BD3810.html" id="GUID-E450223A-F9BC-49DC-808E-8A86B4BD3810-d10733e11579-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.15</ph>
+Appendix B: Regulatory and Compliance Information</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11587" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11587-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html" id="tocId-d10733e11587-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Secure Production Programming Solution (SPPS)</a><div class="wh-tooltip"><p class="shortdesc">Information about Secure Production Programming Solution (SPPS)
+				</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e12317" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e12317-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" id="tocId-d10733e12317-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+SmartDebug</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDebug </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e14622" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e14622-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="tocId-d10733e14622-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-295DBA6D-DB3A-4595-94DB-3F1A0A9CC75D"><article class="nested0" aria-labelledby="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-295DBA6D-DB3A-4595-94DB-3F1A0A9CC75D" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425"><h1 class="- topic/title title topictitle1" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-295DBA6D-DB3A-4595-94DB-3F1A0A9CC75D" style="display:inline-block">13.1.7 FlashPro Express Modes</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=FlashPro%20Express%20Modes">(Ask a Question)</a><div class="- topic/body body">
+        <div class="- topic/p p">Starting with Libero SoC v12.5, FlashPro Express supports two modes: <ul class="- topic/ul ul" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_D5Q_VYX_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_D5Q_VYX_PNB">
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-50148444-3F42-434E-818E-383B6AFFD703" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-50148444-3F42-434E-818E-383B6AFFD703">Operator mode</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-308C7DFB-7249-44A1-82AF-F01B45450B71" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-308C7DFB-7249-44A1-82AF-F01B45450B71">Developer mode</li>
+            </ul>Operator mode is a current flow that provides production programming. It is the
+            default mode and allows you to run selected actions for individual and all devices.</div>
+        <div class="- topic/p p">Developer mode allows you to:<ul class="- topic/ul ul" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_O1X_XYX_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_O1X_XYX_PNB">
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-EBCA081F-1E1B-4787-89FB-A1BB2D34608E" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-EBCA081F-1E1B-4787-89FB-A1BB2D34608E">Update jobs before running
+                    programming.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-C47465FC-00B1-457B-8107-753410946866" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-C47465FC-00B1-457B-8107-753410946866">Enable or disable chain
+                    devices.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-1533A510-FBA1-458B-94E4-608053AB8DC7" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-1533A510-FBA1-458B-94E4-608053AB8DC7">Load design and SPI Flash
+                    Programming files and select different programming actions for each chain device
+                    and SPI-Flash.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-5F137B27-5802-4B37-B72D-1CCAEC7BD9CA" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-5F137B27-5802-4B37-B72D-1CCAEC7BD9CA">Run selected actions for individual and all devices. </li>
+            </ul></div>
+        <p class="- topic/p p">You select Operator or Developer mode using the Preference dialog box (<span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Project </span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Preferences</span></span>). The preference is saved per user per machine on Windows and per user on
+            Linux. The mode preference remains the same until you change it.</p>
+        <figure class="- topic/fig fig fignone" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_SFV_J1Y_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_SFV_J1Y_PNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-23. <span id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-32FE29AA-9D42-4AE3-804D-9BB9BA7A21ED" class="fig--title">FlashPro Express Mode Preference Dialog (Windows)</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_LLB_K1Y_PNB" src="GUID-B99DE163-B677-466C-A56B-5388A7082697-low.png" height="305" width="434" alt="???"/>
+        </figure>
+        <figure class="- topic/fig fig fignone" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_TVF_L1Y_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_TVF_L1Y_PNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-24. <span id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-475E3C8E-5E15-414C-8BC4-DDCB5D7FBD7C" class="fig--title">FlashPro Express Mode Preference Dialog (Linux)</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_FRG_L1Y_PNB" src="GUID-3A9195CB-C020-4DC1-AA4A-19A59EEEEA26-low.png" height="280" width="439" alt="C:\Users\Mark\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\C9FC8D62.tmp"/>
+        </figure>
+        <p class="- topic/p p">The FlashPro Express mode can be switched before opening a job. If a job is opened, you
+            are prompted to confirm closing of the job to save the mode preference after clicking
+            the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> button. </p>
+        <div class="- topic/p p">After a job is opened in Developer mode, each device displays:<ul class="- topic/ul ul" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_IQR_P1Y_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_IQR_P1Y_PNB">
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-7C46EC21-C519-4E7D-8D19-7F67F5C15F9F" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-7C46EC21-C519-4E7D-8D19-7F67F5C15F9F">An info (<img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_CRT_Q1Y_PNB" src="GUID-3BD6BACD-B26C-4D25-9411-06ADE993BCB2-low.png" height="15" width="16" alt="???"/>) icon with device specific
+                    data.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-CD5472BE-DC04-4FF8-B746-5C2060E9F3ED" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-CD5472BE-DC04-4FF8-B746-5C2060E9F3ED">Design icon (<img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_DSH_R1Y_PNB" src="GUID-6E940A25-9903-4023-9C91-3F7647D3DB6F-low.png" height="17" width="23" alt="???"/>). The per-device selected
+                    action appears next to the icon if the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run selected action for all
+                        devices</span> option is unselected.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-36B97CFC-61F3-4AB0-A1FC-87BD5325F2F6" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-36B97CFC-61F3-4AB0-A1FC-87BD5325F2F6">SPI Flash icon (<img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_KXJ_S1Y_PNB" src="GUID-6E940A25-9903-4023-9C91-3F7647D3DB6F-low.png" height="17" width="23" alt="???"/>) if SPI Flash programming is available
+                    for the device. The per-device selected SPI Flash action appears next to the
+                    icon if the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run selected action for all devices</span> option is
+                    unselected.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-A960BCD5-5B5D-49D4-994D-A443BE02A71C" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-A960BCD5-5B5D-49D4-994D-A443BE02A71C">Configure button (<img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_ZS2_T1Y_PNB" src="GUID-B868F5D8-7714-482E-9188-FD985F5AFEE6-low.png" height="16" width="25" alt="???"/>) providing a menu
+                    of configuration options based on the device. The configure button is enabled
+                    when no programming action is running. </li>
+            </ul></div>
+        <div class="- topic/p p">The following list describes Developer mode features:<ul class="- topic/ul ul" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_XDZ_4BY_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__UL_XDZ_4BY_PNB">
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-7A319B73-9D7D-43C6-9F01-2BEAACBBFCA0" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-7A319B73-9D7D-43C6-9F01-2BEAACBBFCA0">Device configuration options<figure class="- topic/fig fig fignone" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_S1N_QBY_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_S1N_QBY_PNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-25. <span id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-B5AE2412-507F-4AAD-94E0-352E3232C8AC" class="fig--title">Device Options to Program Design</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_RS4_QBY_PNB" src="GUID-AD515300-051E-4D10-873C-2CD5C5B4FB54-low.png" height="202" width="624" alt="???"/>
+                    </figure><figure class="- topic/fig fig fignone" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_TFR_SBY_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_TFR_SBY_PNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-26. <span id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-25F39DF6-9677-4098-820C-324CAC00376F" class="fig--title">Device Options to Program Design and SPI Flash</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_VXM_TBY_PNB" src="GUID-F99A08A0-4509-459A-B34D-A5CA143E2A19-low.png" height="245" width="624" alt="???"/>
+                    </figure></li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-893BAACA-DCEF-4809-A92B-7D828A4CDAE8" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-893BAACA-DCEF-4809-A92B-7D828A4CDAE8">Enable/Disable device for
+                    programming. The option allows the device to be enabled or disabled (put in
+                    “bypass”). You must load the programming file when enabling a device that is in
+                    “bypass,” with no programming file associated with the device or SPI-Flash. The
+                    device header info tooltip is updated with selected programming action if
+                    enabled or “bypass” if disabled.<div class="- topic/note note notype note_notype" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-A2FFA236-1266-4845-B859-271CCEBA6F6E" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-A2FFA236-1266-4845-B859-271CCEBA6F6E"><span class="note__title">Note:</span> The job cannot be saved if
+                        all devices are disabled or if any enabled devices do not have a loaded
+                        programming file. If all the devices are disabled, an actions combo box and
+                        a <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run</span> button are disabled.</div></li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-3C29B5E2-1F2D-4839-9B67-80698B672B3A" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-3C29B5E2-1F2D-4839-9B67-80698B672B3A">Load Programming File. The option is available for the enabled devices to load a
+                    different programming file for the target device. FlashPro Express requires all
+                    programming files to be in the local job folder. When loading a programming file
+                    from outside the job folder the file will be copied to the job folder first and
+                    then loaded for the selected device. The user must confirm copying the
+                    programming file to the job folder and overwriting the existing file.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-9EAE8A03-0263-4FA3-9FD2-2AC332EE25EF" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-9EAE8A03-0263-4FA3-9FD2-2AC332EE25EF">Select a programming action and configure actions and procedures per device. The
+                    option allows the selection of the programming action and configuration of the
+                    actions’ procedures. The option is available for an enabled device that has
+                    programming file loaded, and when the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run selected action for all
+                        devices</span> option is unselected.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-AE59723A-44DB-4CCB-9154-ECCE3FDF78AF" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-AE59723A-44DB-4CCB-9154-ECCE3FDF78AF">Load SPI Flash file. This option allows you to load a different SPI Flash
+                    programming file. </li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-C6C35AD6-6D63-49BE-B4A5-E437DEEB3DC7" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-C6C35AD6-6D63-49BE-B4A5-E437DEEB3DC7">Select SPI Flash Action. The option allows the selection of the programming
+                    action for the SPI Flash. The option is available for the enabled device that
+                    has SPI Flash Programming File loaded, and when the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run selected
+                        action for all devices</span> option is unselected.</li>
+                <li class="- topic/li li" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-1372939D-9CA9-4CE8-991B-7FF79A0F5999" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-1372939D-9CA9-4CE8-991B-7FF79A0F5999">Program device selected actions.
+                    In Developer mode, when the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run selected action for all
+                        devices</span> check box is selected, FlashPro Express runs selected
+                    action from the drop-down list below the check box for all enabled devices –
+                    similar to Operator mode.<figure class="- topic/fig fig fignone" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_XRK_HDY_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_XRK_HDY_PNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-27. <span id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-877BF0A2-F3B0-4734-A3A8-2DEC13E964AB" class="fig--title">Run One Action for All
+                            Chain Devices</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_Q5M_HDY_PNB" src="GUID-972BF30D-8357-40B3-A44E-4B555B758D81-low.png" height="360" width="624" alt="???"/>
+                    </figure>When the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run selected action for all devices</span> check
+                    box is unselected, the actions drop-down list is disabled. FlashPro Express runs
+                    the programming actions for the enabled device and SPI Flash, as selected
+                    uniquely for each device.<figure class="- topic/fig fig fignone" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_SPD_4DY_PNB" data-ofbid="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__FIG_SPD_4DY_PNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-28. <span id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__GUID-30E95FEB-82F7-41C8-A70C-74D379532304" class="fig--title">Run Device Selected
+                            Actions</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425__IMAGE_CBF_4DY_PNB" src="GUID-2E600778-AB6E-4BC0-A502-461393DF8F5A-low.png" height="321" width="624" alt="???"/>
+                    </figure></li>
+            </ul></div>
+    </div><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__GUID-D7C38B1A-286E-4C25-A316-62A6C534DD5D" xml:lang="en-US" lang="en-US" id="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803"><h2 class="- topic/title title topictitle2" id="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__GUID-D7C38B1A-286E-4C25-A316-62A6C534DD5D" style="display:inline-block">13.1.7.1 Updating FlashPro6 Internal Design</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Updating%20FlashPro6%20Internal%20Design">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><div class="- topic/p p">FlashPro6 programmer internal design is updated to handle a corner case of JTAG state machine
+            traversal. This corner case is not observed using Libero or FlashPro Express tools, but
+            it needs to be fixed for integrating with other debug tools. The FlashPro6 design update
+            feature is added as part of the Libero or FlashPro Express software flow to detect the
+            current design version of the attached programmer and trigger an update if you choose
+            to. This update is possible only in Developer mode. Operator mode does not support this
+            feature. The tool displays a warning message in the following two scenarios:<ul class="- topic/ul ul" id="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__UL_KP4_YKD_3RB" data-ofbid="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__UL_KP4_YKD_3RB">
+                <li class="- topic/li li" id="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__GUID-16309FFB-089E-41D2-9E39-47FDECF3B311" data-ofbid="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__GUID-16309FFB-089E-41D2-9E39-47FDECF3B311">If you choose not to proceed with
+                    the update in Developer mode.</li>
+                <li class="- topic/li li" id="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__GUID-D906FFAC-0195-4219-9E1F-E3A5CC8A1223" data-ofbid="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803__GUID-D906FFAC-0195-4219-9E1F-E3A5CC8A1223">If the tool is in Operator mode
+                    and the programmer design is out of date.</li>
+            </ul></div><p class="- topic/p p">You can update FlashPro6 with FlashPro Express tool or with Tcl Commands.</p></div><article class="- topic/topic topic nested2" aria-labelledby="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-9B5DB7C3-B226-4ABA-AB08-50A2E11322B9" xml:lang="en-US" lang="en-US" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7">
+<h3 class="- topic/title title topictitle3" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-9B5DB7C3-B226-4ABA-AB08-50A2E11322B9" style="display:inline-block">13.1.7.1.1 Updating FlashPro6 Internal Design To New
+        Version In Developer Mode</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Updating%20FlashPro6%20Internal%20Design%20To%20New%20Version%20In%20Developer%20Mode">(Ask a Question)</a>
+<div class="- topic/body body">
+        <div class="- topic/p p">In order to update FlashPro6 internal design from old version to new version in Developer
+            mode, you need to follow the below steps:<ol class="- topic/ol ol" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__OL_VXN_RFN_KRB" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__OL_VXN_RFN_KRB">
+                <li class="- topic/li li" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-0E95318F-F5E1-489B-95D6-4E9A1F379843" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-0E95318F-F5E1-489B-95D6-4E9A1F379843">On connecting the FlashPro6
+                    programmers, the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Message</span> window displays the design
+                    information. </li>
+                <li class="- topic/li li" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-7F7F23E5-C2ED-4146-A6DA-566743C94FB5" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-7F7F23E5-C2ED-4146-A6DA-566743C94FB5">After executing the
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">RUN</span> action, the FlashPro6 update starts.</li>
+                <li class="- topic/li li" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-D8465C84-B517-4BE3-9ACD-001C7E70AF7D" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-D8465C84-B517-4BE3-9ACD-001C7E70AF7D">A warning message pop up displays
+                    all the FlashPro6 programmers that need to be updated. You can choose whether
+                    you want the programmer to be updated with the latest design. If
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Yes</span>, the flow starts updating all the programmers
+                    listed and then completes the action. If <span class="+ topic/ph ui-d/uicontrol ph uicontrol">No</span>, then the
+                    flow continues with the intended action (in this case, it runs DEVICE_INFO)
+                    along with a warning message in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Warnings</span> window.
+                    Whenever, you choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">RUN</span>, it displays all the programmers
+                    that need to be updated, regardless of selecting <span class="+ topic/ph ui-d/uicontrol ph uicontrol">No</span>
+                        previously.<div class="- topic/note note notype note_notype" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-4C2C7469-878D-46FA-8729-358A199D58DD" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-4C2C7469-878D-46FA-8729-358A199D58DD"><span class="note__title">Note:</span> You must not
+                        disconnect the programmers while the update is running. If you do so, the
+                        programmer does not get detected by the operating system. It is recommended
+                        to contact Microchip FPGA Support to get the defective programmer
+                        repaired.</div></li>
+            </ol></div>
+        <p class="- topic/p p">If update passes, the programmer message shows that the update passed.</p>
+        <div class="- topic/example example" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-7A4CB73F-F64F-4959-ABA6-CA13DB274194" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-7A4CB73F-F64F-4959-ABA6-CA13DB274194"><p class="- topic/p p">The below example shows how the
+                design version in FlashPro6 programmer 138013A is updated from old version 0018 to
+                new version 001A. </p><p class="- topic/p p">On connecting the programmer, the message window displays
+                the design version 0018 for FlashPro6 programmer 138013A.</p><figure class="- topic/fig fig fignone" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__FIG_RFX_LKN_KRB" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__FIG_RFX_LKN_KRB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-29. <span id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-3A63154C-2BA0-4268-BEFD-E7464790B50B" class="fig--title">Programmer Connected With
+                    Design Version 0018</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__IMAGE_HPN_VWQ_TSB" src="GUID-C7A5D974-618B-4F95-8B6E-960F4A3C6D66-low.png"/>
+            </figure>After executing the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">RUN</span> action, the FlashPro6 update
+            starts. As shown in figure below, only one programmer is out of date (that is,
+                138013A).<figure class="- topic/fig fig fignone" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__FIG_XGR_3MN_KRB" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__FIG_XGR_3MN_KRB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-30. <span id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-2EEE9728-039B-42B1-B5D7-35234CEA8C8D" class="fig--title">Warning Message Showing The
+                    FlashPro6 Programmer 138013A To Be Out Of Date</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__IMAGE_SDR_GXQ_TSB" src="GUID-46170E23-9922-4711-9627-A53055A332B2-low.png"/>
+            </figure><div class="- topic/p p">On choosing <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Yes</span>, the FlashPro6 programmer 138013A starts
+                updating. If the update passes, the programmer message shows that the update passed.
+                Once the programmer is updated, the design version of FlashPro6 programmer 138013A
+                is updated to design version 001A.<figure class="- topic/fig fig fignone" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__FIG_UQV_JNN_KRB" data-ofbid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__FIG_UQV_JNN_KRB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-31. <span id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__GUID-B4356DF1-62A0-4C64-943A-1FB0DCE7F7AB" class="fig--title">Programmer 138013A Showing
+                        Design Version 001A On Successful Update</span></span></figcaption>
+                    
+                    <img class="- topic/image image" id="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7__IMAGE_QZG_KXQ_TSB" src="GUID-ABAC4517-BA80-46E0-A147-90F37F071B26-low.png"/>
+                </figure></div></div>
+    </div>
+</article><article class="- topic/topic topic nested2" aria-labelledby="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__GUID-18DCCDDD-663F-4713-AE21-D9EB8E5A57A4" xml:lang="en-US" lang="en-US" id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E">
+<h3 class="- topic/title title topictitle3" id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__GUID-18DCCDDD-663F-4713-AE21-D9EB8E5A57A4" style="display:inline-block">13.1.7.1.2 Updating FlashPro6 Internal Design To New
+        Version In Operator Mode</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Updating%20FlashPro6%20Internal%20Design%20To%20New%20Version%20In%20Operator%20Mode">(Ask a Question)</a>
+<div class="- topic/body body">
+        <div class="- topic/p p">When a FlashPro6 programmer is out of date in Operator mode, a warning message is
+            displayed in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Warnings</span> window as shown in figure below. <figure class="- topic/fig fig fignone" id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__FIG_QGP_V4N_KRB" data-ofbid="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__FIG_QGP_V4N_KRB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 13-32. <span id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__GUID-6403DE14-3347-4365-9D52-267194BA923D" class="fig--title">Warning Message Displayed In
+                    Log Window Showing That Programmer Is Not Updated</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__IMAGE_NFM_NXQ_TSB" src="GUID-FC3C4FBC-F871-4757-B2DF-F40E56591AC9-low.png"/>
+            </figure></div>
+        <div class="- topic/p p">The warning message states that one or more programmers require update. There are two
+            options to update the programmers:<ol class="- topic/ol ol" id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__OL_OD5_GPN_KRB" data-ofbid="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__OL_OD5_GPN_KRB">
+                <li class="- topic/li li" id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__GUID-61A86281-56E4-442B-961A-CE40EECA20A2" data-ofbid="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__GUID-61A86281-56E4-442B-961A-CE40EECA20A2">Switch to <a class="- topic/xref xref" href="GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425.html#GUID-024D7BED-D3D5-4589-B215-2EDE1EC0E425">developer mode</a> and run an action.</li>
+                <li class="- topic/li li" id="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__GUID-36C1D749-B2D3-4521-BB8D-A6878DE59C4A" data-ofbid="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E__GUID-36C1D749-B2D3-4521-BB8D-A6878DE59C4A">Use Tcl command <code class="+ topic/ph pr-d/codeph ph codeph">update_fp6_programmers</code> in your Tcl script.</li>
+            </ol>
+        </div>
+    </div>
+</article></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803" data-tocid="GUID-C81E96BB-257F-47B7-83B3-A79CEEFFF803">13.1.7.1 Updating FlashPro6 Internal Design</a><ul><li class="topic-item"><a href="#GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7" data-tocid="GUID-1947DE8F-2212-4D9F-BB41-4448C1CBBEB7">13.1.7.1.1 Updating FlashPro6 Internal Design To New
+        Version In Developer Mode</a></li><li class="topic-item"><a href="#GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E" data-tocid="GUID-BBFD4DEF-1119-42CF-838B-AEE4A8B4870E">13.1.7.1.2 Updating FlashPro6 Internal Design To New
+        Version In Operator Mode</a></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

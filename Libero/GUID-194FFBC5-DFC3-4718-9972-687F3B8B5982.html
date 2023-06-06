@@ -1,0 +1,937 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The following sections describe how to generate timing reports. The following table lists the types of timing reports you can generate using SmartTime. Table 11-3.  Types of Timing Reports Report ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>11.8 Generating Timing Reports</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777"/><meta name="wh-source-relpath" content="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.xml"/><meta name="wh-out-relpath" content="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982"><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8</ph>
+Generating Timing Reports</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505" class="topicref introduction" data-id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513" class="topicref" data-id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE.html#GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.1</ph>
+About SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577" class="topicref" data-id="GUID-19433C68-C188-4952-B4CB-C85384DB239C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-19433C68-C188-4952-B4CB-C85384DB239C.html#GUID-19433C68-C188-4952-B4CB-C85384DB239C" id="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.2</ph>
+Design Flows with SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585" class="topicref" data-id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884.html#GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.3</ph>
+Starting and Closing SmartTime</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595" class="topicref" data-id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E.html#GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.4</ph>
+Configuring SmartTime Settings</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627" class="topicref" data-id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983.html#GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.5</ph>
+SmartTime Toolbar</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635" class="topicref" data-id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6</ph>
+SmartTime Timing Analyzer</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723" class="topicref" data-id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723.html#GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.7</ph>
+Advanced Timing Analysis</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777" class="topicref" data-id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8</ph>
+Generating Timing Reports</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-7581283E-0809-492C-90BF-2DC1E1892D42-d10733e8785" class="topicref" data-id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-7581283E-0809-492C-90BF-2DC1E1892D42" id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42-d10733e8785-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.1</ph>
+Types of Reports</a></div></div></li><li role="treeitem"><div data-tocid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303-d10733e8793" class="topicref" data-id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-459D78A4-CC32-48F1-887F-B66B3D931303" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303-d10733e8793-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.2</ph>
+Generating a Timing Report</a><div class="wh-tooltip"><p class="shortdesc">The Timing Report allows you to determine whether timing problems exist in your         design.</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13-d10733e8804" class="topicref" data-id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13-d10733e8804-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13-d10733e8804-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.3</ph>
+Understanding Timing Reports</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C07DA75F-6344-4169-8665-63DC564E7574-d10733e8901" class="topicref" data-id="GUID-C07DA75F-6344-4169-8665-63DC564E7574" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-C07DA75F-6344-4169-8665-63DC564E7574" id="GUID-C07DA75F-6344-4169-8665-63DC564E7574-d10733e8901-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.4</ph>
+Generating a Timing Violation Report</a><div class="wh-tooltip"><p class="shortdesc">The Timing Violations Report provides a Flat Slack Report centered around constraint         violations.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D-d10733e8912" class="topicref" data-id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D-d10733e8912-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.5</ph>
+Understanding Timing Violation Reports</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9-d10733e8920" class="topicref" data-id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9" id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9-d10733e8920-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.6</ph>
+Generating a Constraints Coverage Report</a><div class="wh-tooltip"><p class="shortdesc">The Constraints Coverage Report contains information about the constraints in the         design.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F-d10733e8931" class="topicref" data-id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F-d10733e8931-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.7</ph>
+Understanding Constraints Coverage Reports</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7-d10733e8939" class="topicref" data-id="GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7" id="GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7-d10733e8939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.8</ph>
+Generating a Bottleneck Report</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E-d10733e8947" class="topicref" data-id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E-d10733e8947-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.9</ph>
+Understanding Bottleneck Reports—SmartFusion 2, IGLOO 2, RTG4, and PolarFire</a></div></div></li><li role="treeitem"><div data-tocid="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A-d10733e8955" class="topicref" data-id="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A" id="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A-d10733e8955-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.10</ph>
+Generating a Datasheet Report</a><div class="wh-tooltip"><p class="shortdesc">The Datasheet Report shows information about a design’s external         characteristics.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-06FBED96-3725-431D-8533-D1306FE0EB86-d10733e8967" class="topicref" data-id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-06FBED96-3725-431D-8533-D1306FE0EB86" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86-d10733e8967-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.11</ph>
+Understanding Datasheet Reports</a></div></div></li><li role="treeitem"><div data-tocid="GUID-21977408-F775-41F5-A28B-48B2B47D28F6-d10733e8975" class="topicref" data-id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-21977408-F775-41F5-A28B-48B2B47D28F6" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6-d10733e8975-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.12</ph>
+Generating a Combinational Loop Report</a><div class="wh-tooltip"><p class="shortdesc">The Combinational Loop Report shows all loops found during initialization and reports         pins associated with the loop(s) and the location where a loop is broken.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679-d10733e8986" class="topicref" data-id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-254DAF46-A0DA-445F-87DA-F56105B9F679" id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679-d10733e8986-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.13</ph>
+Understanding Combinational Loop Reports</a></div></div></li><li role="treeitem"><div data-tocid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436-d10733e8994" class="topicref" data-id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436-d10733e8994-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8.14</ph>
+Generating a Clock Domain Crossing (CDC) Report</a><div class="wh-tooltip"><p class="shortdesc">The Clock Domain Crossing (CDC) Report analyzes timing paths that cross from one clock     domain (the source clock) to another clock domain (the destination clock). The CDC Report helps     identify instances where there may be data loss or metastability issues.</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005" class="topicref" data-id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9</ph>
+Timing Concepts</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144" class="topicref" data-id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10</ph>
+SmartTime Tutorials</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280" class="topicref" data-id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81.html" id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.11</ph>
+SmartTime Dialog Boxes</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922" class="topicref" data-id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65.html#GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.12</ph>
+Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930" class="topicref" data-id="GUID-2828B133-C6FD-448F-A255-5EA58554C211" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2828B133-C6FD-448F-A255-5EA58554C211.html#GUID-2828B133-C6FD-448F-A255-5EA58554C211" id="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.13</ph>
+Glossary</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982__GUID-BAD797EA-875D-4597-9C23-BCDA406D1197"><article class="nested0" aria-labelledby="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982__GUID-BAD797EA-875D-4597-9C23-BCDA406D1197" id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982"><h1 class="- topic/title title topictitle1" id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982__GUID-BAD797EA-875D-4597-9C23-BCDA406D1197" style="display:inline-block">11.8 Generating Timing Reports</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20Timing%20Reports">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The following sections describe how to generate timing reports.</p></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__GUID-82611277-C6A8-4F61-BD2E-EB1FCD7A3EAC" xml:lang="en-US" lang="en-US" id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42">
+    <h2 class="- topic/title title topictitle2" id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__GUID-82611277-C6A8-4F61-BD2E-EB1FCD7A3EAC" style="display:inline-block">11.8.1 Types of Reports</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Types%20of%20Reports">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <div class="- topic/p p">The following table lists the types of timing reports you can generate using
+                SmartTime.<div class="table-container"><table class="- topic/table table frame-all" id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB" data-ofbid="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 11-3. </span></span><span class="table--title" id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__GUID-CF6B4666-6D60-4DFF-B428-52704D7BD5B2">Types of Timing
+                    Reports</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Report</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Timer Report</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Displays the timing information organized by clock
+                                domain.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Timing Violations Report</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Provides information about constraint violations.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Bottleneck Report</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Displays points in the design that contribute to the most timing
+                                violations.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Datasheet Report</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Describes the characteristics of the pins, I/O technologies, and
+                                timing properties in the design.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Constraints Coverage Report</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Displays the overall coverage of the timing constraints set on
+                                the current design.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Combinational Loop Report</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Displays loops found during initialization.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__1">Clock Domain Crossing Report</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-7581283E-0809-492C-90BF-2DC1E1892D42__TABLE_THN_2WX_3NB__entry__2">Analyzes timing paths that cross from one clock domain (the
+                                source clock) to another clock domain (the destination
+                                clock).</td>
+                        </tr>
+                    </tbody></table></div></div>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-C6EF0138-E24E-48E2-991A-239F93720D9C" xml:lang="en-US" lang="en-US" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303">
+<h2 class="- topic/title title topictitle2" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-C6EF0138-E24E-48E2-991A-239F93720D9C" style="display:inline-block">11.8.2 Generating a Timing Report</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20a%20Timing%20Report">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The Timing Report allows you to determine whether timing problems exist in your
+        design.</p>
+        <section class="- topic/section task/context section context" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-193BC26D-B192-48B8-A3B0-DC96460F3C3D" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-193BC26D-B192-48B8-A3B0-DC96460F3C3D">The Maximum Delay Analysis Timing
+            Report lists the following information about your design:<ul class="- topic/ul ul">
+                <li class="- topic/li li" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-09AA1834-76FA-414A-B1F5-18FBE319E34B" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-09AA1834-76FA-414A-B1F5-18FBE319E34B">Maximum delay from input I/O to
+                    output I/O</li>
+                <li class="- topic/li li" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-D0D212B6-E216-4350-B5C5-5E63EBB3724A" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-D0D212B6-E216-4350-B5C5-5E63EBB3724A">Maximum delay from input I/O to
+                    internal registers</li>
+                <li class="- topic/li li" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-AF2701C7-A2A5-4E1C-AB0F-5F29BBDA96CC" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-AF2701C7-A2A5-4E1C-AB0F-5F29BBDA96CC">Maximum delay from internal
+                    registers to output I/O</li>
+                <li class="- topic/li li" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-705334CA-3C94-4444-ABFF-CDB13F93F267" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-705334CA-3C94-4444-ABFF-CDB13F93F267">Maximum delays for each clock
+                    network</li>
+                <li class="- topic/li li" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-1FCDA8A0-63D7-47A3-B1E0-FA5CB4328B99" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-1FCDA8A0-63D7-47A3-B1E0-FA5CB4328B99">Maximum delays for interactions
+                    between clock networks</li>
+            </ul><p class="- topic/p p">To generate a Timing Report:</p></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-5493BAF5-FA5B-4AF4-A4B5-31A37D34B005" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-5493BAF5-FA5B-4AF4-A4B5-31A37D34B005">
+            <li class="- topic/li task/step li step" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-57D0F54A-0E4B-4839-BE96-369EAF929B4A" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-57D0F54A-0E4B-4839-BE96-369EAF929B4A">
+                <span class="- topic/ph task/cmd ph cmd">From the SmartTime Max/Min Delay Analysis View, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools &gt;
+                        Reports &gt; Timer</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The <a class="- topic/xref xref" href="GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0.html#GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0">Timing Report Options dialog box</a> appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-4622BDA9-F025-4D6E-961F-DBFF778BFD5B" data-ofbid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303__GUID-4622BDA9-F025-4D6E-961F-DBFF778BFD5B">
+                <span class="- topic/ph task/cmd ph cmd">Select the options you want to include in the report, and then click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Timing Report appears in a separate window.</div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic topic nested1" aria-labelledby="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-7ACF88E1-C2AA-4413-8B22-5582ED20CE27" xml:lang="en-US" lang="en-US" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13">
+    <h2 class="- topic/title title topictitle2" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-7ACF88E1-C2AA-4413-8B22-5582ED20CE27" style="display:inline-block">11.8.3 Understanding Timing Reports</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Understanding%20Timing%20Reports">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The following table lists the sections in the Timing Report.</p>
+        <div class="- topic/p p">
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB" data-ofbid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 11-4 11-5 11-6. </span></span><span class="table--title" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-4E820F7C-CC70-4EF9-BF49-065603701CD7">Timing Report Sections</span></caption><colgroup><col style="width:25.510204081632654%"/><col style="width:74.48979591836735%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__1">Section</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__1">Header</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__2">Lists the:<ul class="- topic/ul ul" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__UL_VHB_XLS_JNB" data-ofbid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__UL_VHB_XLS_JNB">
+                                    <li class="- topic/li li" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-878A64E3-B2E5-4DA0-A1E6-A8818D650BF3" data-ofbid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-878A64E3-B2E5-4DA0-A1E6-A8818D650BF3">Report
+                                        type</li>
+                                    <li class="- topic/li li" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-4BBDE314-8E09-4C69-91EF-86D0ABC51F0E" data-ofbid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-4BBDE314-8E09-4C69-91EF-86D0ABC51F0E">Version of
+                                        Designer used to generate the report</li>
+                                    <li class="- topic/li li" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-96585B7E-F3CA-4DD8-8B2D-50AB0D65BCC0" data-ofbid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-96585B7E-F3CA-4DD8-8B2D-50AB0D65BCC0">Date and time
+                                        the report was generated</li>
+                                    <li class="- topic/li li" id="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-21FF0CA0-8E24-46B6-8D30-F6D0467C88E2" data-ofbid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__GUID-21FF0CA0-8E24-46B6-8D30-F6D0467C88E2">General
+                                        design information (name, family, and so on) </li>
+                                </ul></td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__1">Summary</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__2">Reports the timing information for each clock domain. By default,
+                                the clock domains reported are the explicit clock domains that are
+                                shown in SmartTime. To filter the domains and show only specific
+                                sections in the report, use the <a class="- topic/xref xref" href="GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0.html#GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0">Timing Report Options dialog box</a>.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__1">Path</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13__TABLE_M23_5LS_JNB__entry__2">Lists the timing information for different types of paths in the
+                                design. This section is reported by default. You can deselect this
+                                option in the Timing Report Options dialog box. <p class="- topic/p p">By default, the
+                                    number of paths displayed per set is 5. You can filter the
+                                    domains using the Timing Report Options dialog box. You can also
+                                    view the stored filter sets in the generated report using the
+                                    Timing Report options. The filter sets are listed by name in
+                                    their appropriate section. The number of paths reported for the
+                                    filter set is the same as for the main sets. By default, the
+                                    filter sets are not reported.</p></td>
+                        </tr>
+                    </tbody></table></div>
+        </div>
+    </div>
+<article class="- topic/topic topic nested2" aria-labelledby="GUID-77BF64C1-1EE8-4EBE-9225-17BD94839517__GUID-8F966FAD-CAAE-4FB0-B568-10D9105DF218" xml:lang="en-US" lang="en-US" id="GUID-77BF64C1-1EE8-4EBE-9225-17BD94839517"><h3 class="- topic/title title topictitle3" id="GUID-77BF64C1-1EE8-4EBE-9225-17BD94839517__GUID-8F966FAD-CAAE-4FB0-B568-10D9105DF218" style="display:inline-block">11.8.3.1 Clock Domains</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Clock%20Domains">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">Paths are organized by clock domain.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-7A218215-8E51-47E8-8F48-5046B07C81BB__GUID-2098F702-5118-49CA-9E59-DB389CEDBAB7" xml:lang="en-US" lang="en-US" id="GUID-7A218215-8E51-47E8-8F48-5046B07C81BB"><h3 class="- topic/title title topictitle3" id="GUID-7A218215-8E51-47E8-8F48-5046B07C81BB__GUID-2098F702-5118-49CA-9E59-DB389CEDBAB7" style="display:inline-block">11.8.3.2 Register to Register Set</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Register%20to%20Register%20Set">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the paths from the registers clock pins to the registers data pins in the current clock domain.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-AADF6163-2DA7-419E-BBD3-3A82ED92AE8E__GUID-38806D6D-3483-47E7-852B-609F4AE9DD45" xml:lang="en-US" lang="en-US" id="GUID-AADF6163-2DA7-419E-BBD3-3A82ED92AE8E"><h3 class="- topic/title title topictitle3" id="GUID-AADF6163-2DA7-419E-BBD3-3A82ED92AE8E__GUID-38806D6D-3483-47E7-852B-609F4AE9DD45" style="display:inline-block">11.8.3.3 External Setup Set</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=External%20Setup%20Set">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the paths from the top-level design input ports to the registers in the current
+            clock domain.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-0FE449BD-C045-46E3-AA8A-3A2816053785__GUID-5362194F-4F0D-46A3-ACBA-DB7235DE813D" xml:lang="en-US" lang="en-US" id="GUID-0FE449BD-C045-46E3-AA8A-3A2816053785"><h3 class="- topic/title title topictitle3" id="GUID-0FE449BD-C045-46E3-AA8A-3A2816053785__GUID-5362194F-4F0D-46A3-ACBA-DB7235DE813D" style="display:inline-block">11.8.3.4 Clock to Output Set</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Clock%20to%20Output%20Set">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the paths from the registers clock pins to the top-level design output ports in
+            the current clock domain.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-133ACDA0-9403-4822-B5A4-8AED34BF8E9F__GUID-E3FE1F90-B76F-4158-A99C-3C3C93FCE623" xml:lang="en-US" lang="en-US" id="GUID-133ACDA0-9403-4822-B5A4-8AED34BF8E9F"><h3 class="- topic/title title topictitle3" id="GUID-133ACDA0-9403-4822-B5A4-8AED34BF8E9F__GUID-E3FE1F90-B76F-4158-A99C-3C3C93FCE623" style="display:inline-block">11.8.3.5 Register to Asynchronous Set</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Register%20to%20Asynchronous%20Set">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the paths from registers to asynchronous control signals, such as asynchronous
+            set/reset.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-421CABE4-5691-4F37-B4E8-0989CDB1F906__GUID-5B40A1E4-B708-48A6-8D3F-3A506F77CD26" xml:lang="en-US" lang="en-US" id="GUID-421CABE4-5691-4F37-B4E8-0989CDB1F906"><h3 class="- topic/title title topictitle3" id="GUID-421CABE4-5691-4F37-B4E8-0989CDB1F906__GUID-5B40A1E4-B708-48A6-8D3F-3A506F77CD26" style="display:inline-block">11.8.3.6 External Recovery Set</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=External%20Recovery%20Set">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the external recovery check timing for asynchronous control signals, such as
+            asynchronous set/reset.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-883F3A55-B141-43D9-A4B5-7EC9C10713AD__GUID-3846BCDD-D751-4B8B-86A8-F2CDDA60E427" xml:lang="en-US" lang="en-US" id="GUID-883F3A55-B141-43D9-A4B5-7EC9C10713AD"><h3 class="- topic/title title topictitle3" id="GUID-883F3A55-B141-43D9-A4B5-7EC9C10713AD__GUID-3846BCDD-D751-4B8B-86A8-F2CDDA60E427" style="display:inline-block">11.8.3.7 Asynchronous to Register Set</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Asynchronous%20to%20Register%20Set">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the paths from asynchronous control signals, such as asynchronous set/reset, to
+            registers.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-8493CA03-E755-48FB-998B-C96B08364933__GUID-B51C288B-964B-4A9B-82E6-491764A5375F" xml:lang="en-US" lang="en-US" id="GUID-8493CA03-E755-48FB-998B-C96B08364933"><h3 class="- topic/title title topictitle3" id="GUID-8493CA03-E755-48FB-998B-C96B08364933__GUID-B51C288B-964B-4A9B-82E6-491764A5375F" style="display:inline-block">11.8.3.8 Inter-clock Domain</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Inter-clock%20Domain">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the paths from the registers clock pins of the specified clock domain to the registers data pins in the current clock domain. Inter-domain paths are not reported by default.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-8C85406E-1C04-424A-8204-2573D0CCADA7__GUID-FAFB3FF7-F05A-4F34-8583-8B1C23FA276D" xml:lang="en-US" lang="en-US" id="GUID-8C85406E-1C04-424A-8204-2573D0CCADA7"><h3 class="- topic/title title topictitle3" id="GUID-8C85406E-1C04-424A-8204-2573D0CCADA7__GUID-FAFB3FF7-F05A-4F34-8583-8B1C23FA276D" style="display:inline-block">11.8.3.9 Pin to Pin</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Pin%20to%20Pin">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set lists input to output paths and user sets. Input-to-output paths are reported by
+            default. To see the user- defined sets, use the <a class="- topic/xref xref" href="GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0.html#GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0">Timing Report Options dialog box</a>.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-7D5BAFCF-5942-4B6D-B2C8-991A094CA991__GUID-D8E8D7C8-0778-4FD3-8A99-7226521F833C" xml:lang="en-US" lang="en-US" id="GUID-7D5BAFCF-5942-4B6D-B2C8-991A094CA991"><h3 class="- topic/title title topictitle3" id="GUID-7D5BAFCF-5942-4B6D-B2C8-991A094CA991__GUID-D8E8D7C8-0778-4FD3-8A99-7226521F833C" style="display:inline-block">11.8.3.10 Input to Output Set</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Input%20to%20Output%20Set">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This set reports the paths from the top-level design input ports to the top-level design output
+            ports.</p></div></article><article class="- topic/topic topic nested2" aria-labelledby="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683__GUID-D386633B-4064-4CAF-990C-A6AE438B9230" xml:lang="en-US" lang="en-US" id="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683"><h3 class="- topic/title title topictitle3" id="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683__GUID-D386633B-4064-4CAF-990C-A6AE438B9230" style="display:inline-block">11.8.3.11 Expanded Paths</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Expanded%20Paths">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Expanded paths can be reported for each set. By default, the number of expanded paths to report
+            is set to 1. You can select and change the number when you specify <a class="- topic/xref xref" href="GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0.html#GUID-29A2149F-C54F-4D59-B99E-CCC19A108FF0">Timing Report options</a>.</p><div class="- topic/p p">
+            <figure class="- topic/fig fig fignone" id="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683__FIG_PNL_LR5_JNB" data-ofbid="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683__FIG_PNL_LR5_JNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-21. <span id="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683__GUID-485487FC-62BD-4C70-86FB-992C3078552D" class="fig--title">Timing Report</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683__IMAGE_FD2_MR5_JNB" src="GUID-C8417114-7EAF-477B-9B77-0DE78F86CE04-low.jpg" height="636" width="539" alt="???"/>
+            </figure>
+        </div></div></article></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-F2650447-23FE-40D8-AD58-727749402637" xml:lang="en-US" lang="en-US" id="GUID-C07DA75F-6344-4169-8665-63DC564E7574">
+<h2 class="- topic/title title topictitle2" id="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-F2650447-23FE-40D8-AD58-727749402637" style="display:inline-block">11.8.4 Generating a Timing Violation Report</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20a%20Timing%20Violation%20Report">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The Timing Violations Report provides a Flat Slack Report centered around constraint
+        violations.</p>
+        <section class="- topic/section task/context section context" id="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-9BFA7225-ECE1-45CC-8791-F8C542537D53" data-ofbid="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-9BFA7225-ECE1-45CC-8791-F8C542537D53">To Timing Violations
+            Report:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-83E3E1D2-1A2F-4B73-A989-4F9D6F9CFF98" data-ofbid="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-83E3E1D2-1A2F-4B73-A989-4F9D6F9CFF98">
+            <li class="- topic/li task/step li step" id="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-09E9102D-CBAC-4F85-B8D7-DEBD64CFC7E1" data-ofbid="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-09E9102D-CBAC-4F85-B8D7-DEBD64CFC7E1">
+                <span class="- topic/ph task/cmd ph cmd">From the SmartTime Max/Min Delay Analysis View window, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools
+                        &gt; Reports &gt; Timing Violations</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The <a class="- topic/xref xref" href="GUID-892D2E3C-BC08-4D52-8468-95678F41CD25.html#GUID-892D2E3C-BC08-4D52-8468-95678F41CD25">Timing Violations Report Options dialog box</a> appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-BBB03F64-8B24-4926-BA6A-063198AF00BB" data-ofbid="GUID-C07DA75F-6344-4169-8665-63DC564E7574__GUID-BBB03F64-8B24-4926-BA6A-063198AF00BB">
+                <span class="- topic/ph task/cmd ph cmd">Select the options you want to include in the report, and then click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Timing Violations Report appears in a separate window.</div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic topic nested1" aria-labelledby="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-6EA0A5A2-5E84-46E8-8802-E21D2A451DDA" xml:lang="en-US" lang="en-US" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D">
+    <h2 class="- topic/title title topictitle2" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-6EA0A5A2-5E84-46E8-8802-E21D2A451DDA" style="display:inline-block">11.8.5 Understanding Timing Violation
+        Reports</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Understanding%20Timing%20Violation%20Reports">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The following figure shows an example of a Timing Violations Report.</p>
+        <div class="- topic/p p">
+            <figure class="- topic/fig fig fignone" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-AC413FC9-7842-4B3D-89DA-2DDCC0222C81" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-AC413FC9-7842-4B3D-89DA-2DDCC0222C81"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-22. <span id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-9D710870-B0D7-4D1C-94EE-7C88F9F85231" class="fig--title">Sample Timing Violation Report</span></span></figcaption>
+                
+            </figure>
+            <figure class="- topic/fig fig fignone" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__FIG_P3S_T55_JNB" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__FIG_P3S_T55_JNB">
+                <img class="- topic/image image" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__IMAGE_KVT_T55_JNB" src="GUID-7E555290-95C3-42C4-9BAE-A457364F1C43-low.jpg" height="529" width="542" alt="???"/>
+            </figure>
+        </div>
+        <p class="- topic/p p">The following table lists the sections in the Timing Violation Report.</p>
+        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 11-4 11-5 11-6. </span></span><span class="table--title" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-4E820F7C-CC70-4EF9-BF49-065603701CD7">Timing Violation Report
+                Sections</span></caption><colgroup><col style="width:34.48275862068966%"/><col style="width:65.51724137931035%"/></colgroup><thead class="- topic/thead thead">
+                    <tr class="- topic/row">
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB__entry__1">Section</th>
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB__entry__2">Description</th>
+                    </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB__entry__1">Header</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB__entry__2">This section lists the:<ul class="- topic/ul ul" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__UL_VHB_XLS_JNB" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__UL_VHB_XLS_JNB">
+                                <li class="- topic/li li" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-878A64E3-B2E5-4DA0-A1E6-A8818D650BF3" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-878A64E3-B2E5-4DA0-A1E6-A8818D650BF3">Report type</li>
+                                <li class="- topic/li li" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-4BBDE314-8E09-4C69-91EF-86D0ABC51F0E" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-4BBDE314-8E09-4C69-91EF-86D0ABC51F0E">Version of
+                                    Designer used to generate the report</li>
+                                <li class="- topic/li li" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-96585B7E-F3CA-4DD8-8B2D-50AB0D65BCC0" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-96585B7E-F3CA-4DD8-8B2D-50AB0D65BCC0">Date and time the
+                                    report was generated</li>
+                                <li class="- topic/li li" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-21FF0CA0-8E24-46B6-8D30-F6D0467C88E2" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-21FF0CA0-8E24-46B6-8D30-F6D0467C88E2">General design
+                                    information (name, family, and so on) </li>
+                            </ul></td>
+                    </tr>
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB__entry__1">Paths</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__TABLE_M23_5LS_JNB__entry__2">This section lists the timing information for different types of
+                            paths in the design. The number of paths displayed is controlled by the
+                            following parameters:<ul class="- topic/ul ul" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__UL_TTH_J55_JNB" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__UL_TTH_J55_JNB">
+                                <li class="- topic/li li" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-642D73C5-F3A5-459C-A1BD-3B7A4BC2314F" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-642D73C5-F3A5-459C-A1BD-3B7A4BC2314F">A maximum slack
+                                    threshold to report</li>
+                                <li class="- topic/li li" id="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-8111F35A-E607-4290-902F-B0857BA649A9" data-ofbid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D__GUID-8111F35A-E607-4290-902F-B0857BA649A9">A maximum number
+                                    or path to report</li>
+                            </ul>
+                            <p class="- topic/p p">By default, the slack threshold is 0 and the number of paths is
+                                limited. The default maximum number of paths reported is 100.All
+                                clocks domains are mixed in this report. The paths are listed by
+                                decreasing slack.</p><p class="- topic/p p">You can also choose to expand one or more
+                                paths. By default, no paths are expanded. For details, see the
+                                Timing Violation Report options.</p></td>
+                    </tr>
+                </tbody></table></div>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-2D87101C-691B-4094-B3B4-776408ABF1E1" xml:lang="en-US" lang="en-US" id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9">
+<h2 class="- topic/title title topictitle2" id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-2D87101C-691B-4094-B3B4-776408ABF1E1" style="display:inline-block">11.8.6 Generating a Constraints Coverage Report</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20a%20Constraints%20Coverage%20Report">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The Constraints Coverage Report contains information about the constraints in the
+        design.</p>
+<section class="- topic/section task/context section context" id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-381EE300-7166-491F-8543-F3E3930FBE9F" data-ofbid="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-381EE300-7166-491F-8543-F3E3930FBE9F">To generate a Constraints Coverage
+            Report:</section>
+<ol class="- topic/ol task/steps ol steps" id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-B89FCB42-FA60-4691-94F9-E1F48FDF157D" data-ofbid="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-B89FCB42-FA60-4691-94F9-E1F48FDF157D">
+<li class="- topic/li task/step li step" id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-3B3B73DA-0A95-4150-BBDA-76C6F8982FEA" data-ofbid="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-3B3B73DA-0A95-4150-BBDA-76C6F8982FEA">
+                                <span class="- topic/ph task/cmd ph cmd">From the SmartTime Max/Min Delay Analysis View, choose
+                                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools &gt; Reports &gt; Constraints
+                                                Coverage</span>.</span>
+                        </li>
+            <li class="- topic/li task/step li step" id="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-8570358F-E418-46BF-A7F4-FE3A8C7C8C76" data-ofbid="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9__GUID-8570358F-E418-46BF-A7F4-FE3A8C7C8C76">
+                <span class="- topic/ph task/cmd ph cmd"> Select the text format and number of unconstrained instances and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The report appears in a separate window.</div>
+            </li>
+</ol>
+</div>
+</article><article class="- topic/topic topic nested1" aria-labelledby="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__GUID-94619117-2C34-4F0E-8205-7BAA43FE06F4" xml:lang="en-US" lang="en-US" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F">
+    <h2 class="- topic/title title topictitle2" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__GUID-94619117-2C34-4F0E-8205-7BAA43FE06F4" style="display:inline-block">11.8.7 Understanding Constraints Coverage
+        Reports</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Understanding%20Constraints%20Coverage%20Reports">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The Constraints Coverage Report shows the overall coverage of the timing constraints set
+            on the current design. You can generate this report either from within Designer or
+            within SmartTime Analyzer. </p>
+        <figure class="- topic/fig fig fignone" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__FIG_HV3_3X5_JNB" data-ofbid="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__FIG_HV3_3X5_JNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-23. <span id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__GUID-05E8D178-C578-4E8E-9065-AA183C58878F" class="fig--title">Sample Constraints Coverage Report</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__IMAGE_AWK_3X5_JNB" src="GUID-0243446C-E895-46F7-A05B-D62DB22AB81C-low.jpg" height="617" width="544" alt="???"/>
+            <p class="- topic/p p">The following table lists the sections in the Constraints Coverage Report.</p>
+        </figure>
+        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB" data-ofbid="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 11-4 11-5 11-6. </span></span><span class="table--title" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__GUID-4E820F7C-CC70-4EF9-BF49-065603701CD7">Constraints Coverage Report
+                Sections</span></caption><colgroup><col style="width:43.47826086956522%"/><col style="width:56.52173913043479%"/></colgroup><thead class="- topic/thead thead">
+                    <tr class="- topic/row">
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__1">Section</th>
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__2">Description</th>
+                    </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__1">Coverage Summary</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__2">Shows statistical information about the timing constraint in the
+                            design. For each type of timing checks (Setup, Recovery, Output, Hold,
+                            and Removal), it specifies how many are Met (there is a constraint and
+                            it is satisfied), Violated (there is a constraint and it is not
+                            satisfied), or Untested (no constraint was found).</td>
+                    </tr>
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__1">Results by Clock Domain</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__2">This section provides a coverage summary for each clock
+                            domain.</td>
+                    </tr>
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__1">Enhancement Suggestions</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__2">Reports, per clock domain, a list of constraints that can be added to
+                            the design to improve the coverage. It also reports if some options
+                            impacting the coverage can be changed.</td>
+                    </tr>
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__1">Detailed Stats</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F__TABLE_M23_5LS_JNB__entry__2">Provides detailed suggestions about specific clocks or I/O ports that
+                            may require to be constrained for every pin/port that requires
+                            checks.</td>
+                    </tr>
+                </tbody></table></div>
+    </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7__GUID-0E583DAD-7E27-4530-B261-5CBA3651D5F5" xml:lang="en-US" lang="en-US" id="GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7">
+<h2 class="- topic/title title topictitle2" id="GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7__GUID-0E583DAD-7E27-4530-B261-5CBA3651D5F5" style="display:inline-block">11.8.8 Generating a Bottleneck Report</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20a%20Bottleneck%20Report">(Ask a Question)</a>
+<div class="- topic/body concept/conbody body conbody">
+<p class="- topic/p p">To generate a Bottleneck Report:</p>
+        <p class="- topic/p p">From the SmartTime Max/Min Delay Analysis View, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools &gt; Reports &gt;
+                Bottleneck</span>. The report appears in a separate window.</p>
+</div>
+</article><article class="- topic/topic topic nested1" aria-labelledby="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-77E3E57F-B995-46EF-9FF5-0AE9F3405CAA" xml:lang="en-US" lang="en-US" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E">
+    <h2 class="- topic/title title topictitle2" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-77E3E57F-B995-46EF-9FF5-0AE9F3405CAA" style="display:inline-block">11.8.9 Understanding Bottleneck
+        Reports—SmartFusion 2, IGLOO 2, RTG4, and PolarFire</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Understanding%20Bottleneck%20Reports%E2%80%94SmartFusion%202%2C%20IGLOO%202%2C%20RTG4%2C%20and%20PolarFire">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <div class="- topic/p p">A bottleneck is a point in the design that contributes to multiple timing violations. The
+            Bottleneck Report lists the bottlenecks in the design. You can generate this report
+            from SmartTime Analyzer.<div class="- topic/note note notype note_notype" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-C99F4AA8-9524-4EE3-93A2-C735AEAEF098" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-C99F4AA8-9524-4EE3-93A2-C735AEAEF098"><span class="note__title">Note:</span> The bottleneck can be computed only when a cost type is
+                defined. There are two cost type options available:<ul class="- topic/ul ul" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__UL_SF2_ZCV_JNB" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__UL_SF2_ZCV_JNB">
+                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-1E0F65A7-92E6-45DB-AF55-0F24FC3A78CD" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-1E0F65A7-92E6-45DB-AF55-0F24FC3A78CD"><strong class="+ topic/ph hi-d/b ph b">Path count</strong>: associates
+                        the severity of the bottleneck to the count of violating/critical paths that
+                        traverse the instance.</li>
+                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-A4BA6655-F375-46E4-8D14-4EC8552150FA" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-A4BA6655-F375-46E4-8D14-4EC8552150FA"><strong class="+ topic/ph hi-d/b ph b">Path cost</strong>: associates
+                        the severity of the bottleneck to the sum of the timing violations for the
+                        violating/critical paths that traverse the instance.</li>
+                </ul></div><figure class="- topic/fig fig fignone" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__FIG_QZC_KCV_JNB" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__FIG_QZC_KCV_JNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-24. <span id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-33E5EB46-F409-43CC-9A71-8C14512284B3" class="fig--title">Sample Bottleneck Report</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__IMAGE_JLN_LCV_JNB" src="GUID-B351E835-BEE2-45F4-AD26-AC1F33C72580-low.jpg" height="397" width="540" alt="???"/>
+            </figure></div>
+        <p class="- topic/p p">The following table lists the sections in the Bottleneck Report.</p>
+        <div class="- topic/p p">
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 11-7. </span></span><span class="table--title" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-4EA81F1E-4C0D-4179-9D7D-9493B7D468F6">Bottleneck Report
+                    Sections</span></caption><colgroup><col style="width:39.525691699604735%"/><col style="width:60.47430830039525%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB__entry__1">Part</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB__entry__1">Device Description</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB__entry__2">Contains general information about the design, including:<ul class="- topic/ul ul" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__UL_JJ1_5CV_JNB" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__UL_JJ1_5CV_JNB">
+                                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-33714582-40EC-4B41-BBC1-4F67D4B74BB9" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-33714582-40EC-4B41-BBC1-4F67D4B74BB9">Design
+                                        name</li>
+                                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-BC7B6EC2-A482-493C-B9F5-B21C161C5A82" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-BC7B6EC2-A482-493C-B9F5-B21C161C5A82">Family</li>
+                                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-A15D4CFA-4CD9-4A2D-A955-FE06FC46CF58" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-A15D4CFA-4CD9-4A2D-A955-FE06FC46CF58">Die</li>
+                                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-C56892EB-7C9B-4954-A2DB-CA91A5224553" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-C56892EB-7C9B-4954-A2DB-CA91A5224553">Package</li>
+                                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-6D86A3EE-9418-4992-9E1E-612061F811BF" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-6D86A3EE-9418-4992-9E1E-612061F811BF">Software
+                                        version</li>
+                                </ul></td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB__entry__1">Bottleneck Analysis</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__TABLE_GP5_RCV_JNB__entry__2">
+                                <p class="- topic/p p">Lists the core of the bottleneck information. It is organized
+                                    into two columns:</p>
+                                <ul class="- topic/ul ul" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__UL_ZX3_VCV_JNB" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__UL_ZX3_VCV_JNB">
+                                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-4E57AFA2-EE25-482C-BDDE-B7A47DAC39D3" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-4E57AFA2-EE25-482C-BDDE-B7A47DAC39D3">Instance
+                                        Name: refers to the output pin name of the instance.</li>
+                                    <li class="- topic/li li" id="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-5A48E566-0813-431F-9FA2-6CDF5E7EEDA4" data-ofbid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E__GUID-5A48E566-0813-431F-9FA2-6CDF5E7EEDA4">Path Count:
+                                        shows the number of violating paths that include the
+                                        instance pin.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody></table></div>
+        </div>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-C8AE4281-1DAF-41F1-BB3F-095AAF8884BF" xml:lang="en-US" lang="en-US" id="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A">
+<h2 class="- topic/title title topictitle2" id="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-C8AE4281-1DAF-41F1-BB3F-095AAF8884BF" style="display:inline-block">11.8.10 Generating a Datasheet Report</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20a%20Datasheet%20Report">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The Datasheet Report shows information about a design’s external
+        characteristics.</p>
+        <section class="- topic/section task/context section context" id="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-7B3370A5-D2E0-4DC0-BADF-E7A267077B6B" data-ofbid="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-7B3370A5-D2E0-4DC0-BADF-E7A267077B6B">To generate a Datasheet
+            Report:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-68311743-9BE0-4AE7-9079-FA8E7DB0D421" data-ofbid="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-68311743-9BE0-4AE7-9079-FA8E7DB0D421">
+            <li class="- topic/li task/step li step" id="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-6F14601A-DCA8-4F8E-811C-556990803879" data-ofbid="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A__GUID-6F14601A-DCA8-4F8E-811C-556990803879">
+                <span class="- topic/ph task/cmd ph cmd">From the SmartTime Max/Min Delay Analysis View, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools &gt;
+                        Reports &gt; Datasheet</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The report appears in a separate window.</div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic topic nested1" aria-labelledby="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__GUID-9614ED15-9CE2-4473-AEBF-13A80DD9A259" xml:lang="en-US" lang="en-US" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86">
+    <h2 class="- topic/title title topictitle2" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__GUID-9614ED15-9CE2-4473-AEBF-13A80DD9A259" style="display:inline-block">11.8.11 Understanding Datasheet Reports</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Understanding%20Datasheet%20Reports">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The Datasheet Report displays the external characteristics of the design. You can
+            generate this report from SmartTime Max/Min Delay Analysis View. </p>
+        <div class="- topic/p p">
+            <figure class="- topic/fig fig fignone" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__GUID-9396E960-5549-4314-A859-2931BC1E6B3F" data-ofbid="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__GUID-9396E960-5549-4314-A859-2931BC1E6B3F"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-25. <span id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__GUID-127033ED-6A80-48CE-BDA7-09C9DFB8BD2A" class="fig--title">Sample Datasheet Report</span></span></figcaption>
+                
+            </figure>
+            <figure class="- topic/fig fig fignone" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__FIG_ZLR_WZ5_JNB" data-ofbid="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__FIG_ZLR_WZ5_JNB">
+                <img class="- topic/image image" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__IMAGE_XC2_XZ5_JNB" src="GUID-A8C7EACC-6016-406D-97B7-90CCD901096B-low.jpg" height="523" width="539" alt="???"/>
+                <p class="- topic/p p">The following table lists the tables in the Datasheet Report.</p>
+            </figure>
+        </div>
+        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB" data-ofbid="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 11-8. </span></span><span class="table--title" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__GUID-E598FF8C-7A53-4113-AF26-F01CF934E75B">Datasheet Report Tables</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                    <tr class="- topic/row">
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__1">Table</th>
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__2">Description</th>
+                    </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__1">Pin Description</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__2">Provides the port name in the netlist, location on the package, type
+                            of port, and I/O technology assigned to it. Types can be input, output,
+                            or clock. Clock ports are ports shown as "clock" in the Clock domain
+                            browser.</td>
+                    </tr>
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__1">DC Electrical Characteristics</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__2">Provides the parameters of the different I/O technologies used in the
+                            design. The number of parameters displayed depends on the family for
+                            which you have created the design.</td>
+                    </tr>
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__1">AC Electrical Characteristics</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-06FBED96-3725-431D-8533-D1306FE0EB86__TABLE_VWR_11V_JNB__entry__2">Provides the timing properties of the ports of the design. For each
+                            clock, this section includes the maximum frequency. For each input, it
+                            includes the external setup, external hold, external recovery, and
+                            external removal for every clock where it applies. For each output, it
+                            includes the clock-to-out propagation time. This section also displays
+                            the input-to-output propagation time for combinational paths.</td>
+                    </tr>
+                </tbody></table></div>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-1A390DF0-406A-48CF-955F-730779354A62" xml:lang="en-US" lang="en-US" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6">
+<h2 class="- topic/title title topictitle2" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-1A390DF0-406A-48CF-955F-730779354A62" style="display:inline-block">11.8.12 Generating a Combinational Loop Report</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20a%20Combinational%20Loop%20Report">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The Combinational Loop Report shows all loops found during initialization and reports
+        pins associated with the loop(s) and the location where a loop is broken.</p>
+        <section class="- topic/section task/context section context" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-C82F026A-C986-4A7F-9A6C-3F96498F5AFF" data-ofbid="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-C82F026A-C986-4A7F-9A6C-3F96498F5AFF">To generate a Combinational Loop
+            Report:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-C75D8A29-3FD0-45BC-A683-0472D16B3295" data-ofbid="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-C75D8A29-3FD0-45BC-A683-0472D16B3295">
+            <li class="- topic/li task/step li step" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-BAEB7DD6-3325-4989-9C1D-8D4E99456B5F" data-ofbid="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-BAEB7DD6-3325-4989-9C1D-8D4E99456B5F">
+                <span class="- topic/ph task/cmd ph cmd">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools</span> menu, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Reports &gt;
+                        Combinational Loops</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Combinational_Loops Report Options dialog box appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-BFCCBE26-EABF-449C-A108-11EE4C4E5AD8" data-ofbid="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-BFCCBE26-EABF-449C-A108-11EE4C4E5AD8">
+                <span class="- topic/ph task/cmd ph cmd">Select either <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Plain Text</span> or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Comma Separated
+                        Values</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-1878E671-6EF1-41D0-9022-4313641BE93B" data-ofbid="GUID-21977408-F775-41F5-A28B-48B2B47D28F6__GUID-1878E671-6EF1-41D0-9022-4313641BE93B">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic topic nested1" aria-labelledby="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__GUID-B45B45E8-6AAE-4135-9C56-99ECC21FB6E4" xml:lang="en-US" lang="en-US" id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679"><h2 class="- topic/title title topictitle2" id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__GUID-B45B45E8-6AAE-4135-9C56-99ECC21FB6E4" style="display:inline-block">11.8.13 Understanding Combinational Loop Reports</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Understanding%20Combinational%20Loop%20Reports">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The Combinational Loop Report shows all loops found during initialization, reports the pins
+            associated with the loops, and identifies the locations where loops are broken.</p><div class="- topic/p p" id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__CDC_TABLE_FORMAT" data-ofbid="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__CDC_TABLE_FORMAT">
+            <figure class="- topic/fig fig fignone" id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__FIG_VCK_Y2V_JNB" data-ofbid="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__FIG_VCK_Y2V_JNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-26. <span id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__GUID-6E4AF8EA-9D6D-4924-809D-4E142639B4F3" class="fig--title">Sample Combinational Loop Report</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679__IMAGE_S2L_Z2V_JNB" src="GUID-82B60F44-74D5-437C-837D-52F0A0F19113-low.jpg" height="538" width="541" alt="???"/>
+            </figure>
+        </div></div></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-3CDFF5E2-3BD2-4A71-A16B-7575B8B692A3" xml:lang="en-US" lang="en-US" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436"><h2 class="- topic/title title topictitle2" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-3CDFF5E2-3BD2-4A71-A16B-7575B8B692A3" style="display:inline-block">11.8.14 Generating a Clock Domain Crossing (CDC) Report</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Generating%20a%20Clock%20Domain%20Crossing%20%28CDC%29%20Report">(Ask a Question)</a><div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The Clock Domain Crossing (CDC) Report analyzes timing paths that cross from one clock
+    domain (the source clock) to another clock domain (the destination clock). The CDC Report helps
+    identify instances where there may be data loss or metastability issues.</p><section class="- topic/section task/context section context" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-4C64AC95-27DE-439B-97E0-0E18CD3ED425" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-4C64AC95-27DE-439B-97E0-0E18CD3ED425">To generate the CDC Report:</section><ol class="- topic/ol task/steps ol steps" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-989C6BD6-5CCD-4555-B7E9-45BBC42A8750" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-989C6BD6-5CCD-4555-B7E9-45BBC42A8750"><li class="- topic/li task/step li step" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-FC03AB37-1D7E-454F-A6BA-656C9A10BB72" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-FC03AB37-1D7E-454F-A6BA-656C9A10BB72">
+                <span class="- topic/ph task/cmd ph cmd">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools</span> menu, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Reports &gt;
+                        Clock Domain Crossing (CDC).</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Clock Domain Crossing Report Options dialog box
+                    appears.</div>
+            </li><li class="- topic/li task/step li step" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-97CB28E3-8AB2-4FC3-8809-1C860D40C1D7" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-97CB28E3-8AB2-4FC3-8809-1C860D40C1D7"><span class="- topic/ph task/cmd ph cmd">Select either <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CDC Table</span> or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Comma Separated Values</span>.</span></li><li class="- topic/li task/step li step" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E7B4D9B6-D5E9-4604-8CC7-0710A4D7541B" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E7B4D9B6-D5E9-4604-8CC7-0710A4D7541B"><span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span><div class="- topic/itemgroup task/info itemgroup info"><p class="- topic/p p">Selecting <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CDC Table</span> displays a graphical table with color-coded cells.
+                                                Each cell represents a CDC type between the source
+                                                clock and the destination clock domains that have
+                                                constraints. Clocks without constraints do not
+                                                appear in the CDC table.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_MNJ_GBS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_MNJ_GBS_QNB"><img class="- topic/image image break" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_DT4_JBS_QNB" src="GUID-2E50EB4E-F03A-49E9-B426-AFA1B4E244D5-low.jpg" width="576"/></figure>
+          <p class="- topic/p p"></p><p class="- topic/p p">The attributes present in the path table are as follows:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-304AF609-AD16-4E17-9F19-A052415EAD18" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-304AF609-AD16-4E17-9F19-A052415EAD18"><p class="- topic/p p">Source Clock: source of the clock</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-4E88106E-A640-4A78-A279-8A60D6DE3747" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-4E88106E-A640-4A78-A279-8A60D6DE3747"><p class="- topic/p p">Destination Clock: destination of the clock</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-89C02209-2004-48E4-ABE7-449C10C07019" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-89C02209-2004-48E4-ABE7-449C10C07019"><p class="- topic/p p">Worst Slack (ns): worst slack of the CDC path in nanoseconds</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EC80C16A-ED0B-4052-AAA6-1B23E0739C92" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EC80C16A-ED0B-4052-AAA6-1B23E0739C92"><p class="- topic/p p">Worst Slack Edge: source/sink edge for the worst path of CDC</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE"><p class="- topic/p p">Max Delay Cstr: see the following table.</p><div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:19.64636542239686%"/><col style="width:80.35363457760315%"/></colgroup><thead><tr class="- topic/sthead sthead">
+                                                  <th class="- topic/stentry stentry" scope="col" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__1">Value</th>
+                                                  <th class="- topic/stentry stentry" scope="col" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__2">Description</th>
+                                                  </tr></thead><tbody><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__1">
+                                                  <p class="- topic/p p">Yes</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__2">
+                                                  <p class="- topic/p p">All paths in CDC have set_max_delay applied</p>
+                                                  </td>
+                                                  </tr><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__1">
+                                                  <p class="- topic/p p">No</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__2">
+                                                  <p class="- topic/p p">No paths in CDC have the constraints
+                                                  applied</p>
+                                                  </td>
+                                                  </tr><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__1">
+                                                  <p class="- topic/p p">Partial</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EBB5F95D-63D0-412A-AFC7-76D6CE408DDE__stentry__2">
+                                                  <p class="- topic/p p">Any path in CDC has the constraint applied</p>
+                                                  </td>
+                                                  </tr></tbody></table></div></li></ul><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF"><p class="- topic/p p">Multicycle Path Cstr: see the following table.</p><div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:16.207455429497568%"/><col style="width:83.79254457050244%"/></colgroup><thead><tr class="- topic/sthead sthead">
+                                                  <th class="- topic/stentry stentry" scope="col" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__1">Value</th>
+                                                  <th class="- topic/stentry stentry" scope="col" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__2">Description</th>
+                                                  </tr></thead><tbody><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__1">
+                                                  <p class="- topic/p p">Yes</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__2">
+                                                  <p class="- topic/p p">All paths in CDC have set_multicycle_path
+                                                  applied</p>
+                                                  </td>
+                                                  </tr><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__1">
+                                                  <p class="- topic/p p">No</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__2">
+                                                  <p class="- topic/p p">No paths in CDC have the constraints
+                                                  applied</p>
+                                                  </td>
+                                                  </tr><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__1">
+                                                  <p class="- topic/p p">Partial</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E4639E3D-2E92-42E8-8DD6-73B259AF45EF__stentry__2">
+                                                  <p class="- topic/p p">Any path in CDC has the constraint applied</p>
+                                                  </td>
+                                                  </tr></tbody></table></div></li></ul><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71"><p class="- topic/p p">Clock Group Cstr: see the following table.</p><div class="simpletable-container"><table class="- topic/simpletable simpletable"><colgroup><col style="width:15.64945226917058%"/><col style="width:84.35054773082942%"/></colgroup><thead><tr class="- topic/sthead sthead">
+                                                  <th class="- topic/stentry stentry" scope="col" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71__stentry__1">Value</th>
+                                                  <th class="- topic/stentry stentry" scope="col" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71__stentry__2">Description</th>
+                                                  </tr></thead><tbody><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71__stentry__1">
+                                                  <p class="- topic/p p">Yes</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71__stentry__2">
+                                                  <p class="- topic/p p">CDC has set_clock_group applied</p>
+                                                  </td>
+                                                  </tr><tr class="- topic/strow strow">
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71__stentry__1">
+                                                  <p class="- topic/p p">No</p>
+                                                  </td>
+                                                  <td class="- topic/stentry stentry" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-270AE047-920E-4ACA-A9ED-0DF5C97BBD71__stentry__2">
+                                                  <p class="- topic/p p">CDC does not have set_clock_group applied</p>
+                                                  </td>
+                                                  </tr></tbody></table></div></li></ul><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-D0D43F99-0986-4913-973A-47A009DDB6A3" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-D0D43F99-0986-4913-973A-47A009DDB6A3"><p class="- topic/p p">Clock Uncertainty Cstr: uncertainty value for the worst path in CDC; otherwise, the clock
+                uncertainty field is left empty.</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-A44E5EC5-69FC-40AB-8FDE-66F0E9F4AF19" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-A44E5EC5-69FC-40AB-8FDE-66F0E9F4AF19"><p class="- topic/p p">Num of Paths: number of paths in CDC. For User Ignored paths, the value is 0.</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-C31CCC7D-77C5-419C-8667-5E5409F2F18F" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-C31CCC7D-77C5-419C-8667-5E5409F2F18F"><p class="- topic/p p">Clock Pair Status: status can be Timed Safe, Timed Unsafe or User Ignored.</p></li></ul><p class="- topic/p p">In the CDC Report dialog box, you can select the clocks to view or hide. Clicking the
+                                                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clock Selection</span> button at
+                                                the top left of the dialog box lists all clocks that
+                                                can be viewed or hidden. By default, all clocks are
+                                                checked and visible. To hide a clock, clear its
+                                                check box.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_L5R_SGV_JNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_L5R_SGV_JNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-27. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-B0F21AB6-86E2-426F-B3AD-C3C3C4B131D3" class="fig--title">Showing or Hiding Clocks</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_QHS_SGV_JNB" src="GUID-970CB474-2C24-4C6B-B456-BA8CB22C610D-low.jpg" height="274" width="534" alt="???"/></figure><p class="- topic/p p">The following table describes the colors in the CDC Report shown in the preceding figure.</p><div class="table-container"><table class="- topic/table table" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0" data-cols="3"><caption></caption><colgroup><col style="width:63.63636363636363%"/><col style="width:21.21212121212121%"/><col style="width:15.151515151515152%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__1">Pattern</th><th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__2">Status</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__3">Color</th></tr></thead><tbody class="- topic/tbody tbody valign-top"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__1">Paths from the source clock domain to the destination clock domain have all been disabled by false path or clock group constraints.</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__2">User-Ignored Paths</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__3">Light blue</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__1">No Paths found from the source clock domain to the destination clock domain.</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__2">No Paths</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__3">Gray</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__1">The source and destination clocks are synchronous: Both the clocks have a common primary
+                                                  clock and paths are found from the source clock
+                                                  domain to the destination clock domain.</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__2">Timed</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__3">Dark Blue</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__1">The source and destination clocks are asynchronous: Both the clocks have NO common primary
+                                                  clock, while paths are found from the source clock
+                                                  domain to the destination clock domain. Currently,
+                                                  synchronizers, if present, are not accounted for
+                                                  in this report.</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__2">Timed (unsafe)</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DD7256DB-FDD4-4E18-943F-C5E7B8E127F0__entry__3">Brown</td></tr></tbody></table></div><p class="- topic/p p">There are certain scenarios related to the path table as explained in the following:</p><ol class="- topic/ol ol" type="a" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5A466A19-9FCE-428F-BC9C-DA3097F668DA" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5A466A19-9FCE-428F-BC9C-DA3097F668DA"><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-F98A6032-E8CA-46EB-85E6-9F391216C822" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-F98A6032-E8CA-46EB-85E6-9F391216C822"><p class="- topic/p p">When CDC Report is generated, path table is shown by default for all CDC having paths. Each row
+                shows the worst slack for a clock crossing. Similarly, when clicking on a particular
+                CDC crossing in CDC Report, you can have a single row showing the worst slack for
+                CDC crossing.</p><p class="- topic/p p">Example: The path table shown in the following figure, the worst path for reg_com_clk_10mhz to
+                                                  reg_com_clk_5mhz has the worst slack of 93.541.
+                                                  The same path is displayed by default, when the
+                                                  CDC crossing is selected.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_KPF_KPS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_KPF_KPS_QNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-28. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EE11E55B-17CF-436F-B178-744C7EBEA39A" class="fig--title">Worst Path with Slack 93.541 ns</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_NHR_LPS_QNB" src="GUID-E19728AF-20A0-44DE-A4BB-27E7AC6E7D07-low.jpg"/></figure><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_G5Z_HQS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_G5Z_HQS_QNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-29. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-FAD37590-AE13-425F-8750-901C39600CEA" class="fig--title">Smarttime Showing the Worst Path with Slack
+                                                  93.541 ns </span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_TFB_JQS_QNB" src="GUID-81B1290D-1819-4B57-AFBE-222FFBA8D124-low.png"/></figure></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-D9DA0D6D-B634-41A3-BC1F-5D24BFFF4CAD" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-D9DA0D6D-B634-41A3-BC1F-5D24BFFF4CAD"><p class="- topic/p p">Clicking on the CDC box shows the worst slack for a clock crossing as in path table in the
+                                                  following figure.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_OGC_MQS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_OGC_MQS_QNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-30. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-42291FE5-FB61-4F03-BB09-568742674C1A" class="fig--title">Highlighted CDC Box Showing the Worst Slack in
+                                                  Path Table</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_HKR_4QS_QNB" src="GUID-7B9C71E2-9858-4A7F-BF9F-0E01EA8DE56D-low.jpg"/></figure><p class="- topic/p p">Clicking on the same CDC box again shows details for all the clocks selected in the CDC
+                Report.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_NXR_SQS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_NXR_SQS_QNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-31. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-E32B78B3-78DB-4D9E-9765-4C070684BEA6" class="fig--title">CDC Path Table Showing All Clocks on
+                                                  Deselecting the Selected CDC Box</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_KTY_TQS_QNB" src="GUID-CDF85114-B2EA-4D9D-AC19-D9C005EB6FC2-low.jpg"/></figure><p class="- topic/p p">For all clocks having large names, tool-tips for columns have been added.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_M23_VQS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_M23_VQS_QNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-32. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-4DCA4BA5-63BC-4931-8A79-B5E1D32290EC" class="fig--title">CDC Path Table Showing Tool-Tip for a Source
+                                                  Clock Name</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_I42_WQS_QNB" src="GUID-7E477BAD-7D6A-41B6-9345-5759E0E8C047-low.jpg"/></figure></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-9B9AC81F-0DD9-4574-93D8-0A84038E4A8C" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-9B9AC81F-0DD9-4574-93D8-0A84038E4A8C"><p class="- topic/p p">Selecting/deselecting clocks in clock selection dynamically changes the path table along with the
+                CDC table. Both the tables are in sync. Example: Here, clk_input_100mhz is selected,
+                therefore, the clock is displayed in CDC table and path table.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_LVH_XQS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_LVH_XQS_QNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-33. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-8B0F0F6C-E048-4921-983A-85CE62A92CD9" class="fig--title">CDC Table in Sync with Clock Selection
+                                                  Section</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_AYT_YQS_QNB" src="GUID-4522D923-77CF-474C-8135-7B2A98103601-low.jpg"/></figure><p class="- topic/p p">When the clock clk_input_100mhz is unselected, then the same clock is removed from the CDC table.
+                                                  The crossings related to the clock are also
+                                                  removed from the path table as shown in the
+                                                  following figure.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_MRG_1RS_QNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_MRG_1RS_QNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-34. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-3E8E119F-6235-4E6B-B4DC-ADDF846FCD52" class="fig--title">Deselecting a Clock in Clock Selection Section
+                                                  Syncs the Path Table Accordingly</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_RLR_BRS_QNB" src="GUID-02B7BC6F-F8E8-43BA-94C5-D8B2F78C7DC4-low.jpg"/></figure></li></ol><p class="- topic/p p">After clicking any one of the four options in the CDC category, the clock table is filtered
+            according to the CDC category selected.</p><p class="- topic/p p">In the following scenario, the Timed button has been selected and Timed safe CDC is displayed
+            only in the clock table.</p><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-354D935C-4EC1-4DAB-A9D6-966A1A02B9B7" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-354D935C-4EC1-4DAB-A9D6-966A1A02B9B7"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-35. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-3ECC43B5-0996-4B1D-9A64-069BF2A9584E" class="fig--title">CDC Report When Timed Button is
+                Selected in CDC Category</span></span></figcaption>
+              
+              <img class="- topic/image image" src="GUID-2DB25DE8-2014-485A-95E0-823D9D370829-low.jpg"/>
+            </figure>Clicking on the same CDC category shows the details for all the clocks selected in
+            CDC Report. Selecting/unselecting clocks in clock selection does dynamically change the
+            clock table along with the CDC table.</div><p class="- topic/p p">In the following figure, the User Ignored CDC category button is chosen and clk_input_100mhz is
+                                                selected. Therefore, the clock is displayed in CDC
+                                                table and clock table.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_BR3_4QH_T4B" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_BR3_4QH_T4B"><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_QXS_QQH_T4B" src="GUID-673A100F-7CEC-4242-957E-4608D1DBCC2D-low.jpg"/></figure><p class="- topic/p p">Now, when clock clk_input_100mhz is unselected, the same clock is moved from CDC table and the
+                                                crossings related to that clock are also removed
+                                                from clock table. Therefore, when the User Ignored
+                                                CDC category is selected, entries related to
+                                                clk_input_100mhz are not visible.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_DSN_RQH_T4B" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_DSN_RQH_T4B"><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_HN3_SQH_T4B" src="GUID-5D2F90E2-45A0-4808-88A6-3A2259462FB9-low.jpg"/></figure><p class="- topic/p p">After right-clicking a CDC box, you can choose to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Copy</span>, <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add a
+              Clock Group Constraint</span> or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Go to Timing
+            Explorer</span>.</p><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5D33B375-8C62-4E90-8387-D8FDDC52EF2F" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5D33B375-8C62-4E90-8387-D8FDDC52EF2F"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-36. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-589AE79A-C22B-42E1-ACB7-1FB76135A5C9" class="fig--title">CDC Report with Go to Timing Explorer
+                                                  Option</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_LXH_X4J_V4B" src="GUID-3135ECF6-4255-412D-A416-AC688B93C451-low.jpg"/></figure></div><p class="- topic/p p">Selecting the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Go to Timing Explorer</span> option opens the Timing Explorer
+                                                dialog box.</p><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_NLS_X4J_V4B" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_NLS_X4J_V4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-37. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-355B72E2-34CE-4DBE-B59F-9E1DCD38CE9E" class="fig--title">Timing Report Explorer</span></span></figcaption><img class="- topic/image image" src="GUID-F572A680-51BD-43C4-AF79-A3A8898259CC-low.jpg"/></figure><p class="- topic/p p">There are corner scenarios when cross probing between CDC and Timing Explorer:</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Scenario 1:</strong></p><p class="- topic/p p">This is a scenario where difference is seen between SmartTime and Verify timing, when two clocks
+                                                are defined on same port and when cross probing for
+                                                CDC reg_com_clk_10mhz and reg_com_clk_5mhz is unable
+                                                to find the same in Timing Report Explorer.</p><p class="- topic/p p">The constraints are as follows:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code> create_clock -name {reg_com_clk_10mhz} -period 100 -waveform {0 50 } [ get_ports { reg_com_clk_10mhz } ]
+create_clock -name {reg_com_clk_5mhz} -period 200 -waveform {0 100 } -add [ get_ports { reg_com_clk_10mhz } ]</code></pre><p class="- topic/p p">The Timing Report Explorer does not pick reg_com_clk_5mhz as destination clock, and Smart time
+            does pick the reg_com_clk_10mhz and reg_com_clk_5mhz pair as CDC, as shown in the
+            following figure.</p><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-1AA46B71-3F35-4209-B0C7-0E08F9E60D03" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-1AA46B71-3F35-4209-B0C7-0E08F9E60D03"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-38. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5A482444-65F6-40F3-8A83-92DDB004B79C" class="fig--title">Timing Report Explorer Snapshot - 1</span></span></figcaption>
+                                                  
+                                                  <img class="- topic/image image" src="GUID-15BE3E27-56B8-4113-A6EB-C8F08AE7DC5E-low.jpg"/>
+                                                </figure><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-558F68CB-2CA2-44C4-9E25-CAE5354977AA" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-558F68CB-2CA2-44C4-9E25-CAE5354977AA"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-39. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-8AE2018D-5ABB-44A3-BA3C-7CD17423F9C9" class="fig--title">Timing Report Explorer Snapshot - 2</span></span></figcaption>
+                                                  
+                                                  <img class="- topic/image image" src="GUID-3166515A-8219-4322-9272-D26DEDBB93CC-low.jpg"/>
+                                                </figure><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-FDEDB409-51B9-4F97-B6DE-818A11C767F8" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-FDEDB409-51B9-4F97-B6DE-818A11C767F8"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-40. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-DA7485E5-475E-4280-8C60-A55FA8585F41" class="fig--title">SmartTime Snapshot</span></span></figcaption>
+                                                  
+                                                  <img class="- topic/image image" src="GUID-9D3D6831-AD7E-484C-BCAD-140B15E3A1D0-low.jpg"/>
+                                                </figure>Timing Explorer is picking the worst slack
+                                                path for a pair of start and end point. Therefore,
+                                                you can miss CDC and other reg to reg paths with
+                                                lower slack values.</div><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Scenario 2:</strong></p><p class="- topic/p p">This is a scenario where due to different operating conditions set in Smart Time, you can have
+                                                different results, when cross probing between CDC
+                                                and Timing Report Explorer. SmartTime and CDC are in
+                                                sync.</p><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-0D45DDF9-E59F-43BA-92C6-E5E1B943E1DB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-0D45DDF9-E59F-43BA-92C6-E5E1B943E1DB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-41. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-26A921FC-AE05-4208-A645-EE33161D7FBA" class="fig--title">Worst Slack of 97.958 ns in Timing Report
+                                                  Explorer</span></span></figcaption>
+                                                  
+                                                  <img class="- topic/image image" src="GUID-AEA12866-9E0F-4339-A2CC-9CD680252D39-low.jpg"/>
+                                                </figure><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EFA3812E-DB36-44F1-83BC-05E898999351" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-EFA3812E-DB36-44F1-83BC-05E898999351"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-42. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-045D5916-6FCF-482B-958B-6453E867EE3B" class="fig--title">Worst Slack of 98.154 ns in SmartTime</span></span></figcaption>
+                                                  
+                                                  <img class="- topic/image image" src="GUID-C6AADB66-E4BD-4413-92AC-D226EDAE287D-low.jpg"/>
+                                                </figure><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-C4CC577A-6421-4B5D-8CAF-92BEEBBE34AC" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-C4CC577A-6421-4B5D-8CAF-92BEEBBE34AC"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-43. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-86BA60C5-9F85-4FBE-AB9C-014B5F632E63" class="fig--title">Operating Conditions</span></span></figcaption>
+                                                  
+                                                  <img class="- topic/image image" src="GUID-741E3075-77C9-4EB1-BB9A-A5DC891FEB25-low.jpg"/>
+                                                </figure>The Timing Report Explorer reports the path
+                                                from slow_lv_lt, and SmartTime reports using the
+                                                operating condition fast_hv_lt. When the operating
+                                                condition in SmartTime is changed to slow_lv_lt, the
+                                                worst slack becomes the same as in the Timing Report
+                                                Explorer.</div><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-3E0BDB1C-7795-4D6A-B7E6-42B6918021B8" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-3E0BDB1C-7795-4D6A-B7E6-42B6918021B8"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-44. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-309325AA-1A17-411C-A3D2-8B85B44C46D9" class="fig--title">Slack After Changing the Operating Condition
+                                                  to slow_lv_lt</span></span></figcaption><img class="- topic/image image" src="GUID-7BA820D5-BCBC-46BF-ACF6-AAC912FE3931-low.jpg"/></figure></div><p class="- topic/p p">CDC Reports worst path for a particular corner selected in SmartTime, and Timing Report Explorer
+            reports the worst path across all the corners.</p><p class="- topic/p p">In such cases, you can see changes in values when navigating from CDC to Timing Report Explorer.
+                                                To make you aware of such situations, Corner Info
+                                                column is added to display the operating
+                                                conditions.</p><div class="- topic/note note notype note_notype" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5B4C0DFE-A4F1-4E09-AF26-7B851E06BA4C" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5B4C0DFE-A4F1-4E09-AF26-7B851E06BA4C"><span class="note__title">Note:</span> <div class="- topic/p p"><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-2306512E-5B01-4E79-8B69-1376487A3590" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-2306512E-5B01-4E79-8B69-1376487A3590"><p class="- topic/p p">The path details for the same clock crossing (C1 to C1) are not shown in the path tale as they
+                    are not valid clock crossings and are currently shown as timed safe by default
+                    in CDC Report.</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-58BEFECB-9E95-43AC-831E-3F5B56A595B5" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-58BEFECB-9E95-43AC-831E-3F5B56A595B5"><p class="- topic/p p">The clock table has CDC details only related to clocks checked in clock selection from CDC
+                    Report.</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-BDAC77E8-EC3E-494E-A96E-A901A172CB86" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-BDAC77E8-EC3E-494E-A96E-A901A172CB86"><p class="- topic/p p">Path table will not show any CDC having no paths.</p></li><li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-582B5148-0368-4DB2-880A-1031D7EBF464" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-582B5148-0368-4DB2-880A-1031D7EBF464"><p class="- topic/p p">For User Ignored CDC columns, “Worst Slack (ns)”, “Worst Slack Edge”, “Max Delay Cstr”,
+                                                  “Multicycle Path Cstr”, and “Clock Uncertainty
+                                                  Cstr” are empty.</p></li>
+                                                  <li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-A97CC940-92F4-489B-8FFD-91E5BE130B78" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-A97CC940-92F4-489B-8FFD-91E5BE130B78">Cross probing is allowed to Timing Report
+                                                  Explorer for the same clock crossing (C1 to
+                                                  C1).</li>
+                                                  <li class="- topic/li li" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5845C8C3-D22F-4A85-9111-A0E89D5473B5" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-5845C8C3-D22F-4A85-9111-A0E89D5473B5">For User Ignored CDC category, Corner Info
+                                                  column is empty.</li></ul></div></div><p class="- topic/p p">Selecting <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Comma Separated Value</span> exports the CDC Report to a CSV file. If you select this option, a window appears in which you assign a name to the CSV file and specify the location where it will be exported. The CSV file shows details about the CDC between each clock domain in numeric format. Each CDC type is represented as a number similar to colors in the table. The CSV file includes an explanation of each number type and CDC type.</p><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_GKL_FHV_JNB" data-ofbid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__FIG_GKL_FHV_JNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-45. <span id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__GUID-B72DD3F4-EB04-49FD-A6E0-C4106AE7FDA7" class="fig--title">Sample CSV Report</span></span></figcaption><img class="- topic/image image" id="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436__IMAGE_TZN_ZGV_JNB" src="GUID-F0C9CAE8-4481-4215-97A6-0E6EA870E66B-low.jpg" alt="???"/></figure></div></div></li></ol></div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-7581283E-0809-492C-90BF-2DC1E1892D42" data-tocid="GUID-7581283E-0809-492C-90BF-2DC1E1892D42">11.8.1 Types of Reports</a></li><li class="topic-item"><a href="#GUID-459D78A4-CC32-48F1-887F-B66B3D931303" data-tocid="GUID-459D78A4-CC32-48F1-887F-B66B3D931303">11.8.2 Generating a Timing Report</a></li><li class="topic-item"><a href="#GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13" data-tocid="GUID-DD3BBABA-2FC5-4931-9528-C82EA9BA1C13">11.8.3 Understanding Timing Reports</a><ul><li class="topic-item"><a href="#GUID-77BF64C1-1EE8-4EBE-9225-17BD94839517" data-tocid="GUID-77BF64C1-1EE8-4EBE-9225-17BD94839517">11.8.3.1 Clock Domains</a></li><li class="topic-item"><a href="#GUID-7A218215-8E51-47E8-8F48-5046B07C81BB" data-tocid="GUID-7A218215-8E51-47E8-8F48-5046B07C81BB">11.8.3.2 Register to Register Set</a></li><li class="topic-item"><a href="#GUID-AADF6163-2DA7-419E-BBD3-3A82ED92AE8E" data-tocid="GUID-AADF6163-2DA7-419E-BBD3-3A82ED92AE8E">11.8.3.3 External Setup Set</a></li><li class="topic-item"><a href="#GUID-0FE449BD-C045-46E3-AA8A-3A2816053785" data-tocid="GUID-0FE449BD-C045-46E3-AA8A-3A2816053785">11.8.3.4 Clock to Output Set</a></li><li class="topic-item"><a href="#GUID-133ACDA0-9403-4822-B5A4-8AED34BF8E9F" data-tocid="GUID-133ACDA0-9403-4822-B5A4-8AED34BF8E9F">11.8.3.5 Register to Asynchronous Set</a></li><li class="topic-item"><a href="#GUID-421CABE4-5691-4F37-B4E8-0989CDB1F906" data-tocid="GUID-421CABE4-5691-4F37-B4E8-0989CDB1F906">11.8.3.6 External Recovery Set</a></li><li class="topic-item"><a href="#GUID-883F3A55-B141-43D9-A4B5-7EC9C10713AD" data-tocid="GUID-883F3A55-B141-43D9-A4B5-7EC9C10713AD">11.8.3.7 Asynchronous to Register Set</a></li><li class="topic-item"><a href="#GUID-8493CA03-E755-48FB-998B-C96B08364933" data-tocid="GUID-8493CA03-E755-48FB-998B-C96B08364933">11.8.3.8 Inter-clock Domain</a></li><li class="topic-item"><a href="#GUID-8C85406E-1C04-424A-8204-2573D0CCADA7" data-tocid="GUID-8C85406E-1C04-424A-8204-2573D0CCADA7">11.8.3.9 Pin to Pin</a></li><li class="topic-item"><a href="#GUID-7D5BAFCF-5942-4B6D-B2C8-991A094CA991" data-tocid="GUID-7D5BAFCF-5942-4B6D-B2C8-991A094CA991">11.8.3.10 Input to Output Set</a></li><li class="topic-item"><a href="#GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683" data-tocid="GUID-7F97B788-7F3F-488F-AD97-91BC7E7F6683">11.8.3.11 Expanded Paths</a></li></ul></li><li class="topic-item"><a href="#GUID-C07DA75F-6344-4169-8665-63DC564E7574" data-tocid="GUID-C07DA75F-6344-4169-8665-63DC564E7574">11.8.4 Generating a Timing Violation Report</a></li><li class="topic-item"><a href="#GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D" data-tocid="GUID-A4CD44A0-6215-45DC-AEBF-B996FB48E37D">11.8.5 Understanding Timing Violation
+        Reports</a></li><li class="topic-item"><a href="#GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9" data-tocid="GUID-C07D5AB2-52F3-48A8-BDBA-00217016E7F9">11.8.6 Generating a Constraints Coverage Report</a></li><li class="topic-item"><a href="#GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F" data-tocid="GUID-0C495E8A-9BB1-4A8A-AE95-F54EC516A62F">11.8.7 Understanding Constraints Coverage
+        Reports</a></li><li class="topic-item"><a href="#GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7" data-tocid="GUID-AE5DFB04-E75B-4274-9525-C07A97EAE8C7">11.8.8 Generating a Bottleneck Report</a></li><li class="topic-item"><a href="#GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E" data-tocid="GUID-3128A520-78FD-4FB5-A3BB-4EB43F4D825E">11.8.9 Understanding Bottleneck
+        Reports—SmartFusion 2, IGLOO 2, RTG4, and PolarFire</a></li><li class="topic-item"><a href="#GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A" data-tocid="GUID-34A4889B-DB12-4DE4-89FE-F2EEE1A54B2A">11.8.10 Generating a Datasheet Report</a></li><li class="topic-item"><a href="#GUID-06FBED96-3725-431D-8533-D1306FE0EB86" data-tocid="GUID-06FBED96-3725-431D-8533-D1306FE0EB86">11.8.11 Understanding Datasheet Reports</a></li><li class="topic-item"><a href="#GUID-21977408-F775-41F5-A28B-48B2B47D28F6" data-tocid="GUID-21977408-F775-41F5-A28B-48B2B47D28F6">11.8.12 Generating a Combinational Loop Report</a></li><li class="topic-item"><a href="#GUID-254DAF46-A0DA-445F-87DA-F56105B9F679" data-tocid="GUID-254DAF46-A0DA-445F-87DA-F56105B9F679">11.8.13 Understanding Combinational Loop Reports</a></li><li class="topic-item"><a href="#GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436" data-tocid="GUID-389F6D5F-520E-4A29-B203-1B27AAFAA436">11.8.14 Generating a Clock Domain Crossing (CDC) Report</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

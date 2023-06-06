@@ -1,0 +1,644 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The following sections describe timing concepts associated with the RTG4 FPGA Clock Conditioning Circuit with PLL configuration. STA offers an efficient technique for identifying timing violations in ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>11.9 Timing Concepts</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005"/><meta name="wh-source-relpath" content="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.xml"/><meta name="wh-out-relpath" content="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795"><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9</ph>
+Timing Concepts</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505" class="topicref introduction" data-id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513" class="topicref" data-id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE.html#GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.1</ph>
+About SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577" class="topicref" data-id="GUID-19433C68-C188-4952-B4CB-C85384DB239C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-19433C68-C188-4952-B4CB-C85384DB239C.html#GUID-19433C68-C188-4952-B4CB-C85384DB239C" id="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.2</ph>
+Design Flows with SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585" class="topicref" data-id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884.html#GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.3</ph>
+Starting and Closing SmartTime</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595" class="topicref" data-id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E.html#GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.4</ph>
+Configuring SmartTime Settings</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627" class="topicref" data-id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983.html#GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.5</ph>
+SmartTime Toolbar</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635" class="topicref" data-id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6</ph>
+SmartTime Timing Analyzer</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723" class="topicref" data-id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723.html#GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.7</ph>
+Advanced Timing Analysis</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777" class="topicref" data-id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8</ph>
+Generating Timing Reports</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005" class="topicref" data-id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9</ph>
+Timing Concepts</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C-d10733e9013" class="topicref" data-id="GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C" id="GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C-d10733e9013-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.1</ph>
+Static Timing Analysis Versus Dynamic Simulation</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12-d10733e9021" class="topicref" data-id="GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12" id="GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12-d10733e9021-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.2</ph>
+Delay Models</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7-d10733e9029" class="topicref" data-id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7" id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7-d10733e9029-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.3</ph>
+Timing Path Types</a></div></div></li><li role="treeitem"><div data-tocid="GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D-d10733e9037" class="topicref" data-id="GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D" id="GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D-d10733e9037-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.4</ph>
+Maximum Clock Frequency</a></div></div></li><li role="treeitem"><div data-tocid="GUID-5F397272-04CE-488D-81F5-046B2DB6733C-d10733e9045" class="topicref" data-id="GUID-5F397272-04CE-488D-81F5-046B2DB6733C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-5F397272-04CE-488D-81F5-046B2DB6733C" id="GUID-5F397272-04CE-488D-81F5-046B2DB6733C-d10733e9045-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.5</ph>
+Setup Check</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157-d10733e9053" class="topicref" data-id="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157" id="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157-d10733e9053-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.6</ph>
+Arrival Time, Required Time, and Slack</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3-d10733e9061" class="topicref" data-id="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3" id="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3-d10733e9061-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.7</ph>
+Timing Exceptions Overview</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6-d10733e9069" class="topicref" data-id="GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6" id="GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6-d10733e9069-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.8</ph>
+Clock Skew</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E77B5846-01E9-4600-9E93-7B82CA335689-d10733e9077" class="topicref" data-id="GUID-E77B5846-01E9-4600-9E93-7B82CA335689" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E77B5846-01E9-4600-9E93-7B82CA335689-d10733e9077-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-E77B5846-01E9-4600-9E93-7B82CA335689" id="GUID-E77B5846-01E9-4600-9E93-7B82CA335689-d10733e9077-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9.9</ph>
+Cross Probing</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144" class="topicref" data-id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10</ph>
+SmartTime Tutorials</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280" class="topicref" data-id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81.html" id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.11</ph>
+SmartTime Dialog Boxes</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922" class="topicref" data-id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65.html#GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.12</ph>
+Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930" class="topicref" data-id="GUID-2828B133-C6FD-448F-A255-5EA58554C211" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2828B133-C6FD-448F-A255-5EA58554C211.html#GUID-2828B133-C6FD-448F-A255-5EA58554C211" id="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.13</ph>
+Glossary</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795__GUID-C53C3FD1-2F08-4CF4-82B1-43CA210B2132"><article class="nested0" aria-labelledby="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795__GUID-C53C3FD1-2F08-4CF4-82B1-43CA210B2132" id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795"><h1 class="- topic/title title topictitle1" id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795__GUID-C53C3FD1-2F08-4CF4-82B1-43CA210B2132" style="display:inline-block">11.9 Timing Concepts</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Timing%20Concepts">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The following sections describe timing concepts associated with the RTG4 FPGA Clock Conditioning
+            Circuit with PLL configuration.</p></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C__GUID-A89B2A28-E9D1-4653-9355-1E444F320CFA" xml:lang="en-US" lang="en-US" id="GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C"><h2 class="- topic/title title topictitle2" id="GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C__GUID-A89B2A28-E9D1-4653-9355-1E444F320CFA" style="display:inline-block">11.9.1 Static Timing Analysis Versus Dynamic Simulation</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Static%20Timing%20Analysis%20Versus%20Dynamic%20Simulation">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">STA offers an efficient technique for identifying timing violations in your design and ensuring
+                                                  that it meets all your timing requirements. You
+                                                  can communicate timing requirements and timing
+                                                  exceptions to the system by setting timing
+                                                  constraints. Then a static timing analysis tool
+                                                  checks and reports setup, and holds violations and
+                                                  violations on specific path requirements.</p><p class="- topic/p p">STA is well suited for traditional synchronous designs. The main advantage of STA is that, unlike
+            dynamic simulation, it does not require input vectors. It covers all possible paths in
+            the design and does all the above with relatively low run-time requirements. The major
+            disadvantage of STA is that the STA tools do not automatically detect false paths in
+            their algorithms.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12__GUID-DA9C6909-6B1E-4343-A52A-353355D20DEA" xml:lang="en-US" lang="en-US" id="GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12"><h2 class="- topic/title title topictitle2" id="GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12__GUID-DA9C6909-6B1E-4343-A52A-353355D20DEA" style="display:inline-block">11.9.2 Delay Models</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Delay%20Models">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The first step in timing analysis is the computation of single component delays. These components
+            can be either a combinational gate or block or a single interconnect connecting two
+            components.</p><p class="- topic/p p">Gates that are part of the library are pre-characterized with delays under different parameters, such as input-slew rates or capacitive loads. Traditional models provide delays between each pair of I/Os of the gate and between rising and falling edges.</p><p class="- topic/p p">The accuracy with which interconnect delays are computed depends on the design phase. These can
+            be estimated using a simple Wire Load Model (WLM) at the pre-layout phase or a more
+            complex Resistor and Capacitor (RC) tree solver at the post-layout phase.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-D26916AA-FA87-43BE-9953-0AE0390CB477" xml:lang="en-US" lang="en-US" id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7"><h2 class="- topic/title title topictitle2" id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-D26916AA-FA87-43BE-9953-0AE0390CB477" style="display:inline-block">11.9.3 Timing Path Types</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Timing%20Path%20Types">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Path delays are computed by adding delay values across a chain of gates and interconnects.
+            SmartTime uses this information to check for timing violations. Traditionally, timing
+            paths are presented by static timing analysis tools in four categories or "sets."</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-3DD18177-CD4D-4FB1-A123-233A8CD9F711" data-ofbid="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-3DD18177-CD4D-4FB1-A123-233A8CD9F711"><strong class="+ topic/ph hi-d/b ph b">Paths between sequential components internal
+                    to the design</strong>. SmartTime displays this category under the Register to
+                Register set of each displayed clock domain.</li>
+            <li class="- topic/li li" id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-39F53870-4898-4BC1-9647-FAB3FF104727" data-ofbid="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-39F53870-4898-4BC1-9647-FAB3FF104727"><strong class="+ topic/ph hi-d/b ph b">Paths that start at input ports and end at sequential components internal to the
+                    design</strong>. SmartTime displays this category under the External Setup and
+                External Hold sets of each displayed clock domain.</li>
+            <li class="- topic/li li" id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-07C17A79-3B6B-48A2-94D1-1863C564CAA5" data-ofbid="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-07C17A79-3B6B-48A2-94D1-1863C564CAA5"><strong class="+ topic/ph hi-d/b ph b">Paths that start at sequential components internal to the design and end at
+                    output ports</strong>. SmartTime displays this category under the Clock to Out set of
+                each displayed clock domain.</li><li class="- topic/li li" id="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-7EDCBAFD-486D-43F2-9848-34547B180A8B" data-ofbid="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7__GUID-7EDCBAFD-486D-43F2-9848-34547B180A8B"><strong class="+ topic/ph hi-d/b ph b">Paths that start at input ports and end at
+                    output ports</strong>. SmartTime displays this category under the Input to Output
+                set.</li></ul></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D__GUID-62C45298-52C9-4F45-89B8-8A81BCE09345" xml:lang="en-US" lang="en-US" id="GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D"><h2 class="- topic/title title topictitle2" id="GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D__GUID-62C45298-52C9-4F45-89B8-8A81BCE09345" style="display:inline-block">11.9.4 Maximum Clock Frequency</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Maximum%20Clock%20Frequency">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Generally, you set clock constraints on clocks for which you have a specified requirement. The
+            absence of violations indicates that this clock can run at least at the specified
+            frequency. However, in the absence of such requirements, you may still be interested in
+            computing the maximum frequency of a specific clock domain.</p><p class="- topic/p p">To obtain the maximum clock frequency, a static timing analysis tool computes the minimum period
+                                    for each path between two sequential elements. To compute the
+                                    maximum period, the tool evaluates the maximum data path delay
+                                    and the minimum skew between the two elements and the setup on
+                                    the receiving sequential element. It also considers the polarity
+                                    of each sequential element. The maximum frequency is the inverse
+                                    of the largest value among the maximum period of all the paths
+                                    in the clock domain. The path responsible for limiting the
+                                    frequency of a given clock is called the “critical path.”</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-5F397272-04CE-488D-81F5-046B2DB6733C__GUID-2FD08229-0472-4427-91FF-650F9E4E11CE" xml:lang="en-US" lang="en-US" id="GUID-5F397272-04CE-488D-81F5-046B2DB6733C"><h2 class="- topic/title title topictitle2" id="GUID-5F397272-04CE-488D-81F5-046B2DB6733C__GUID-2FD08229-0472-4427-91FF-650F9E4E11CE" style="display:inline-block">11.9.5 Setup Check</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Setup%20Check">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">The setup and hold check ensures that the design works as specified at the required clock
+            frequency.</p>
+        <p class="- topic/p p">Setup check specifies when data is required to be present at the input of a sequential
+            component so that the clock can capture the data effectively into the component. Timing
+            analyzers evaluate the setup check as a maximum timing budget allowed between adjacent
+            sequential elements. </p>
+        <p class="- topic/p p">For more information about how setup check is processed, see section <a class="- topic/xref xref" href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157"><span><span>11.9.6 </span><span>Arrival Time, Required Time, and Slack</span></span></a>.</p>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157__GUID-DDC4DECC-BA57-49A2-B222-549A5AB6FBB9" xml:lang="en-US" lang="en-US" id="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157"><h2 class="- topic/title title topictitle2" id="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157__GUID-DDC4DECC-BA57-49A2-B222-549A5AB6FBB9" style="display:inline-block">11.9.6 Arrival Time, Required Time, and Slack</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Arrival%20Time%2C%20Required%20Time%2C%20and%20Slack">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">You can use arrival time and required time to verify timing requirements in the presence
+            of constraints. The following simple example is applied to verify the clock requirement
+            for setup between sequential elements in the design.</p>
+        <p class="- topic/p p">The arrival time represents the time at which the data arrives at the input of the
+            receiving sequential element. In this example, the arrival time is considered from the
+            setup launch edge at CK, taken as a time reference (instant zero). It follows the clock
+            network along the blue line until the clock pin on FF1 (delay d1). Then it continues
+            along the data path always following the blue line until the data pin D on FF2.
+            Therefore:</p>
+        <p class="- topic/p p">Arrival_TimeFF2:D = d1 + d2</p>
+        <p class="- topic/p p">The required time represents when the data is required to be present at the same pin
+            FF2:D. Consider in this example, in the presence of an FF with the same polarity, the
+            capturing edge is simply one cycle following the launch edge. Using the period T
+            provided to the tool through the clock constraint, the event gets propagated through the
+            clock network along the red line until the clock pin of FF2 (delay d3), taking FF2 setup
+            (delay d4) into account. This means the clock constraint requires the data to be present
+            d4 time before the capturing clock edge on FF2. Therefore, the required time is:</p>
+        <p class="- topic/p p">Required_TimeFF2:D = T + d3 - d4</p>
+        <p class="- topic/p p">If the slack is negative, the path is violating the setup relationship between the two
+            sequential elements.</p>
+        <p class="- topic/p p">The slack is simply the difference between the required time and arrival time: SlackFF2:D
+            = Required_TimeFF2:D - Arrival_TimeFF2:D</p>
+        <figure class="- topic/fig fig fignone" id="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157__FIG_QWG_BVB_KNB" data-ofbid="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157__FIG_QWG_BVB_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-46. <span id="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157__GUID-FBD4B112-42FE-474C-98C8-7A006348C867" class="fig--title">Arrival Time and Required Time for Setup Check</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157__IMAGE_R3X_1VB_KNB" src="GUID-4D1F36EB-8743-4386-AB5D-4F31E5E891E9-low.png" height="228" width="384" alt="???"/>
+        </figure>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-2C3D21C0-29CF-4C83-88FF-2B0EA9C1BF19" xml:lang="en-US" lang="en-US" id="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3"><h2 class="- topic/title title topictitle2" id="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-2C3D21C0-29CF-4C83-88FF-2B0EA9C1BF19" style="display:inline-block">11.9.7 Timing Exceptions Overview</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Timing%20Exceptions%20Overview">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">Use timing exceptions to overwrite the default behavior of the design path. </p>
+        <p class="- topic/p p">Timing exceptions include:</p>
+        <ul class="- topic/ul ul">
+            <li class="- topic/li li" id="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-8B0E4924-DA1A-4A9B-818F-7C40FCF47DBF" data-ofbid="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-8B0E4924-DA1A-4A9B-818F-7C40FCF47DBF">Setting multicycle constraint to
+                specify paths that (by design) will take more than one cycle.</li>
+            <li class="- topic/li li" id="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-D6BC50A3-433E-4737-B3F3-846E01902CBD" data-ofbid="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-D6BC50A3-433E-4737-B3F3-846E01902CBD">Setting a false path constraint to identify paths that must not be included in the
+                timing analysis or the optimization flow.</li>
+            <li class="- topic/li li" id="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-2B8F2210-5A78-46A3-B65E-865FECCA9866" data-ofbid="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3__GUID-2B8F2210-5A78-46A3-B65E-865FECCA9866">Setting a maximum/minimum delay constraint on specific paths to relax or to tighten
+                the original clock constraint requirement.</li>
+        </ul>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6__GUID-C3C9A7B3-D920-49FF-AF65-7B2F356E7605" xml:lang="en-US" lang="en-US" id="GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6"><h2 class="- topic/title title topictitle2" id="GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6__GUID-C3C9A7B3-D920-49FF-AF65-7B2F356E7605" style="display:inline-block">11.9.8 Clock Skew</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Clock%20Skew">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The clock skew between two sequential components is the difference between the insertion delays
+            from the clock source to the clock pins of these components. SmartTime calculates the
+            arrival time at the clock pin of each sequential component. Then it subtracts the
+            arrival time at the receiving component from the arrival time at the launching component
+            to obtain an accurate clock skew.</p><p class="- topic/p p">Both setup and hold checks must account for clock skew. However, for setup check, SmartTime looks for the smallest skew. This skew is computed by using the maximum insertion delay to the launching sequential component and the shortest insertion delay to the receiving component.</p><p class="- topic/p p">For hold check, SmartTime looks for the largest skew. This skew is computed by using the shortest insertion delay to the launching sequential component and the largest insertion delay to the receiving component.</p><p class="- topic/p p">SmartTime makes the distinction between setup and hold checks and hold checks automatically.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-E77B5846-01E9-4600-9E93-7B82CA335689__GUID-367A318A-1A9E-44C8-92D8-3F18ED55B05B" xml:lang="en-US" lang="en-US" id="GUID-E77B5846-01E9-4600-9E93-7B82CA335689">
+            <h2 class="- topic/title title topictitle2" id="GUID-E77B5846-01E9-4600-9E93-7B82CA335689__GUID-367A318A-1A9E-44C8-92D8-3F18ED55B05B" style="display:inline-block">11.9.9 Cross Probing</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Cross%20Probing">(Ask a Question)</a>
+            <div class="- topic/body body">
+                        <p class="- topic/p p">Design objects displayed in SmartTime can be cross-probed into other
+                                    Libero SoC tools. Libero SoC allows cross-probing from SmartTime
+                                    to the Constraints Editor (but not vice versa) and from
+                                    SmartTime to Chip Planner (but not vice versa). When
+                                    cross-probing from SmartTime to one of the other tools, both
+                                    SmartTime and the other tool must first be opened.</p>
+            </div>
+<article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__GUID-C0A9E831-ECE9-4A6B-A7FC-3F0A241EC446" xml:lang="en-US" lang="en-US" id="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021">
+<h3 class="- topic/title title topictitle3" id="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__GUID-C0A9E831-ECE9-4A6B-A7FC-3F0A241EC446" style="display:inline-block">11.9.9.1 Cross-probing from SmartTime into the Constraints Editor</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Cross-probing%20from%20SmartTime%20into%20the%20Constraints%20Editor">(Ask a Question)</a>
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc"></p>
+<p class="- topic/p p">To add a timing exception constraint from SmartTime and have the Constraints Editor display the
+            constraint:</p>
+        <ol class="- topic/ol ol" id="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__OL_EGZ_PS3_4NB" data-ofbid="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__OL_EGZ_PS3_4NB">
+            <li class="- topic/li li" id="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__GUID-5D5EE350-576D-42D9-87D7-B1BF04D755C4" data-ofbid="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__GUID-5D5EE350-576D-42D9-87D7-B1BF04D755C4">From the SmartTime Maximum or Minimum Delay Analysis view, click a timing path to
+                add a timing exception constraint.</li>
+            <li class="- topic/li li" id="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__GUID-55F47191-06E0-4019-A03A-85045D661830" data-ofbid="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021__GUID-55F47191-06E0-4019-A03A-85045D661830">When the Constraints Editor’s Add Constraint dialog box appears, the fields for
+                source (from) pin and destination (to) pin are populated with the correct names from
+                the timing path you selected.</li>
+        </ol>
+</div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-05BAEA34-5E27-42C1-AC52-61937DFA5E35" xml:lang="en-US" lang="en-US" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0">
+<h3 class="- topic/title title topictitle3" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-05BAEA34-5E27-42C1-AC52-61937DFA5E35" style="display:inline-block">11.9.9.2 Adding a Timing Exception Constraint from a
+        Timing Path</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Adding%20a%20Timing%20Exception%20Constraint%20from%20a%20Timing%20Path">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">To add a timing exception constraint from a timing path in SmartTime Max/Min Delay
+        Analysis View:</p>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-5E7CDF0E-83CC-406E-9A77-BBFDCBC16B93" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-5E7CDF0E-83CC-406E-9A77-BBFDCBC16B93">
+            <li class="- topic/li task/step li step" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-39E46C70-1088-488C-B488-C924370583B0" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-39E46C70-1088-488C-B488-C924370583B0">
+                <span class="- topic/ph task/cmd ph cmd">Open SmartTime (<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Design Flow Window &gt; Verify Timing &gt; Open
+                        interactively</span>).</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-CA0BFADA-8406-4A27-842F-2154D91CA6CB" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-CA0BFADA-8406-4A27-842F-2154D91CA6CB">
+                <span class="- topic/ph task/cmd ph cmd">Open the Constraints Editor (<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Constraint Manager &gt; Timing Tab &gt;
+                        Edit with Constraints Editor</span>).</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-3B0EF25A-5DDA-419C-91E2-A4C08803AF58" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-3B0EF25A-5DDA-419C-91E2-A4C08803AF58">
+                <span class="- topic/ph task/cmd ph cmd">Select Max/Min Delay Analysis View, and then right-click a timing path in the
+                    table.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-27AE80A9-37A8-4001-BF1F-B1DC2F3DDD5D" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-27AE80A9-37A8-4001-BF1F-B1DC2F3DDD5D">
+                <span class="- topic/ph task/cmd ph cmd">Select a timing exception constraint to add:</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <ul class="- topic/ul ul" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__UL_XSS_LYB_KNB" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__UL_XSS_LYB_KNB">
+                        <li class="- topic/li li" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-CEC67300-350A-4BA6-AEE3-E87C7FCD7147" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-CEC67300-350A-4BA6-AEE3-E87C7FCD7147"> False Path
+                            Constraint</li>
+                        <li class="- topic/li li" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-A8DF18AB-C7BD-4437-B631-71ED7A3DDDE3" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-A8DF18AB-C7BD-4437-B631-71ED7A3DDDE3">Maximum Delay
+                            Constraint</li>
+                        <li class="- topic/li li" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-2413AC14-99C2-4381-BBF2-C741420FD0DF" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-2413AC14-99C2-4381-BBF2-C741420FD0DF">Minimum Delay
+                            Constraint</li>
+                        <li class="- topic/li li" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-DB3BD64A-EB98-48CE-AD50-83A317AB4EB1" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-DB3BD64A-EB98-48CE-AD50-83A317AB4EB1">Multicycle Path
+                            Constraint</li>
+                    </ul>
+                    <figure class="- topic/fig fig fignone" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__FIG_BQJ_4YB_KNB" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__FIG_BQJ_4YB_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-47. <span id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-331EFDB2-ADE2-466D-8606-FA87DD218699" class="fig--title">Add Timing Constraint
+                            from SmartTime’s Reported Timing Path</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__IMAGE_RKK_4YB_KNB" src="GUID-A4C3AB51-C85F-48F2-84B9-BAD7F88E41C4-low.jpg" height="424" width="542" alt="???"/>
+                        <div class="- topic/note note notype note_notype" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-741FC0BA-0F41-4601-A743-19A5DBBFD8DD" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-741FC0BA-0F41-4601-A743-19A5DBBFD8DD"><span class="note__title">Note:</span>  If the Constraint
+                            Editor is not open, the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Max/Min Delay</span>,
+                                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">False Path</span>, and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Multicycle Path
+                                Constraint</span> menu items are grayed out.</div>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-8EF3222C-46CA-4E3B-9427-4A102251EC8B" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-8EF3222C-46CA-4E3B-9427-4A102251EC8B">
+                <span class="- topic/ph task/cmd ph cmd">Add the Constraint in the Add Constraint dialog box. The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">source/from
+                        pin</span> and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">destination/to pin</span> fields are
+                    populated with the appropriate pin names captured from the SmartTime reported
+                    path (Source Pin and Sink Pin) you clicked.</span>
+                <ol class="- topic/ol task/substeps ol substeps" type="a" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-FB16736D-EB95-476C-8E9E-9B7CA03DF565" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-FB16736D-EB95-476C-8E9E-9B7CA03DF565">
+                    <li class="- topic/li task/substep li substep" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-33F9CF15-B8A9-41F7-A196-FD1C3B1B4D6A" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-33F9CF15-B8A9-41F7-A196-FD1C3B1B4D6A">
+                        <span class="- topic/ph task/cmd ph cmd">Click <strong class="+ topic/ph hi-d/b ph b">OK </strong>to exit the Add Constraint dialog box.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-5C90728B-0BBB-4FF2-9896-F699DD464933" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-5C90728B-0BBB-4FF2-9896-F699DD464933">
+                        <span class="- topic/ph task/cmd ph cmd">Click <strong class="+ topic/ph hi-d/b ph b">Save </strong>in the Constraints Editor.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-B2FFC16B-DE8B-4BD5-9138-223559357AD5" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-B2FFC16B-DE8B-4BD5-9138-223559357AD5">
+                        <span class="- topic/ph task/cmd ph cmd">Exit the Constraints Editor.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-46913F7C-BCF4-4F5D-8B6A-4217DD8F8DA6" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-46913F7C-BCF4-4F5D-8B6A-4217DD8F8DA6">
+                        <span class="- topic/ph task/cmd ph cmd">Exit SmartTime.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-5B5A120C-427C-4598-B385-A826EBC1AD44" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-5B5A120C-427C-4598-B385-A826EBC1AD44">
+                        <span class="- topic/ph task/cmd ph cmd">If the newly added constraint that is added to a file (the Target file)
+                            is used for Place and Route and Verify Timing, rerun Place and
+                            Route.</span>
+                    </li>
+                    <li class="- topic/li task/substep li substep" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-030648C0-7F7A-4D30-878C-E062E3E320EB" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-030648C0-7F7A-4D30-878C-E062E3E320EB">
+                        <span class="- topic/ph task/cmd ph cmd">Open SmartTime Maximum/Minimum Delay Analysis View.</span>
+                    </li>
+                </ol>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__FIG_RKW_G1C_KNB" data-ofbid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__FIG_RKW_G1C_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-48. <span id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__GUID-E5523611-4E29-4500-83E6-FF528BCD6682" class="fig--title">Add Maximum Delay
+                            Constraint</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0__IMAGE_QTW_G1C_KNB" src="GUID-B83B3E1B-06ED-4E05-A83D-D6646CF8118E-low.jpg" height="449" width="539" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-B9490521-36B6-4545-AC72-CBD4D3C479D7" xml:lang="en-US" lang="en-US" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD">
+        <h3 class="- topic/title title topictitle3" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-B9490521-36B6-4545-AC72-CBD4D3C479D7" style="display:inline-block">11.9.9.3 Cross-probing from SmartTime to Chip
+                Planner</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Cross-probing%20from%20SmartTime%20to%20Chip%20Planner">(Ask a Question)</a>
+        
+        <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Cross-probing of design objects is available from SmartTime to Chip Planner, but
+                not vice versa. Cross-probing allows you to select a design object in one
+                application and display the selected object in another application. </p>
+                <section class="- topic/section task/prereq section prereq" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__PREREQ_ANJ_RCC_KNB" data-ofbid="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__PREREQ_ANJ_RCC_KNB">Complete the Place and Route step on the design, and
+                        then open both SmartTime and Chip Planner.</section>
+                <section class="- topic/section task/context section context" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-408A5347-C1B8-4D7B-B186-95FC5C1CED7A" data-ofbid="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-408A5347-C1B8-4D7B-B186-95FC5C1CED7A">Because Libero SoC allows
+                        you to cross-probe design objects from SmartTime to Chip Planner, you can
+                        better understand how the two applications interact with each other. With
+                        cross-probing, a timing path not meeting timing requirements can be fixed
+                        with relative ease when you see the less-than-optimal placement of the
+                        design object (in terms of timing requirements) in Chip Planner.
+                        Cross-probing from SmartTime to Chip Planner is available for the following
+                        design objects:<ul class="- topic/ul ul" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__UL_RPV_NCC_KNB" data-ofbid="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__UL_RPV_NCC_KNB">
+                                <li class="- topic/li li" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-2AE62CFA-F055-4133-BF88-B38EDE36107E" data-ofbid="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-2AE62CFA-F055-4133-BF88-B38EDE36107E">Macros</li>
+                                <li class="- topic/li li" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-CB5EC8F5-13BF-4523-A0AC-E395B2C26ECA" data-ofbid="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-CB5EC8F5-13BF-4523-A0AC-E395B2C26ECA">Ports</li>
+                                <li class="- topic/li li" id="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-7FE6CBBF-E2AE-4BE2-B77F-22D8365E9D5C" data-ofbid="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD__GUID-7FE6CBBF-E2AE-4BE2-B77F-22D8365E9D5C">Nets/Paths</li>
+                        </ul><p class="- topic/p p">To cross-probe from SmartTime to Chip Planner, use a design macro in
+                                SmartTime.</p></section>
+        </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-0A5CAC83-AC3D-4E44-AED6-4C051019B96E" xml:lang="en-US" lang="en-US" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2">
+<h3 class="- topic/title title topictitle3" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-0A5CAC83-AC3D-4E44-AED6-4C051019B96E" style="display:inline-block">11.9.9.4 Design Macro Example</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Design%20Macro%20Example">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-4C55EDCE-FA82-4328-95DA-BEE5A9D2FEC3" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-4C55EDCE-FA82-4328-95DA-BEE5A9D2FEC3">
+            <li class="- topic/li task/step li step" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-F712B146-C461-491C-8907-C16A57414CAE" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-F712B146-C461-491C-8907-C16A57414CAE">
+                <span class="- topic/ph task/cmd ph cmd">Make sure the design completed the Place and Route step successfully.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-566E8868-6841-4BCD-B87C-83922B858C06" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-566E8868-6841-4BCD-B87C-83922B858C06">
+                <span class="- topic/ph task/cmd ph cmd">Open SmartTime Maximum/Minimum Analysis View.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-8C4F920B-F041-4CB4-9EED-2DFDDCCE81CB" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-8C4F920B-F041-4CB4-9EED-2DFDDCCE81CB">
+                <span class="- topic/ph task/cmd ph cmd">Open Chip Planner.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-EF050A45-7C1A-46C7-8832-A54AE2AC6E4E" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-EF050A45-7C1A-46C7-8832-A54AE2AC6E4E">
+                <span class="- topic/ph task/cmd ph cmd">In the SmartTime Maximum Analysis View, right-click the instance Q[2] in the
+                    Timing Path Graph and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show in Chip Planner</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Properties window in Chip Planner displays the properties of Q[2].
+                    With cross-probing, the Q[2] macro is selected in Chip Planner’s Logical View
+                    and highlighted (white) in the Chip Canvas.<div class="- topic/note note notype note_notype" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-1E6E9020-204C-40FC-8EAF-7E9C39CA1C59" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-1E6E9020-204C-40FC-8EAF-7E9C39CA1C59"><span class="note__title">Note:</span> If Chip Planner is not open,
+                            <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show in Chip Planner</span> is gray and
+                        unavailable.</div><figure class="- topic/fig fig fignone" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__FIG_AX1_VGC_KNB" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__FIG_AX1_VGC_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-49. <span id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-ACBA89C0-FD6C-49DB-BB0B-A5F8AFBCE330" class="fig--title">Cross-Probing –
+                            Macro</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__IMAGE_EGB_VGC_KNB" src="GUID-CAE75E3C-7516-4005-89C6-0F7EF6C17637-low.jpg" height="304" width="540" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-A1BAE54C-1A1C-42F8-95F0-F524A2A11D88" data-ofbid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2__GUID-A1BAE54C-1A1C-42F8-95F0-F524A2A11D88">
+                <span class="- topic/ph task/cmd ph cmd">If necessary, zoom in to view the highlighted Q2 Macro in the Chip
+                    Canvas.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-D13335DC-24C6-4282-A1EB-E1FD22576D24" xml:lang="en-US" lang="en-US" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E">
+<h3 class="- topic/title title topictitle3" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-D13335DC-24C6-4282-A1EB-E1FD22576D24" style="display:inline-block">11.9.9.5 Timing Path Example</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Timing%20Path%20Example">(Ask a Question)</a>
+<div class="- topic/body task/taskbody body taskbody">
+        <section class="- topic/section task/context section context" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-B1A7B301-2803-4FB2-86C8-23C582F1FF7C" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-B1A7B301-2803-4FB2-86C8-23C582F1FF7C">
+            <p class="- topic/p p">The following procedure provides an example of working with timing paths.</p>
+        </section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-DAE65A6B-FA38-4163-8A9F-8DB69BE3D041" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-DAE65A6B-FA38-4163-8A9F-8DB69BE3D041">
+            <li class="- topic/li task/step li step" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-F712B146-C461-491C-8907-C16A57414CAE" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-F712B146-C461-491C-8907-C16A57414CAE">
+                <span class="- topic/ph task/cmd ph cmd">Make sure the design completed the Place and Route step successfully .</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-566E8868-6841-4BCD-B87C-83922B858C06" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-566E8868-6841-4BCD-B87C-83922B858C06">
+                <span class="- topic/ph task/cmd ph cmd">Open SmartTime Maximum/Minimum Analysis View.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-8C4F920B-F041-4CB4-9EED-2DFDDCCE81CB" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-8C4F920B-F041-4CB4-9EED-2DFDDCCE81CB">
+                <span class="- topic/ph task/cmd ph cmd">Open Chip Planner.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-97F8409B-B095-46EC-AFC9-959E5AF0C3D6" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-97F8409B-B095-46EC-AFC9-959E5AF0C3D6">
+                <span class="- topic/ph task/cmd ph cmd">In the SmartTime Maximum/Minimum Analysis View, right-click the net
+                    CLK_ibuf/U0/U_IOPAD:PAD in the table and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show Path in Chip
+                        Planner</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The net is selected (highlighted in red) in the Chip Canvas view and the
+                    three macros connected to the net are highlighted in white in the Chip Canvas
+                        view.<div class="- topic/note note notype note_notype" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-2AACBB95-BF04-4C75-81F5-A416FE7F3EB7" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-2AACBB95-BF04-4C75-81F5-A416FE7F3EB7"><span class="note__title">Note:</span>  If Chip Planner is not open, <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show Path</span> in
+                        Chip Planner is gray and unavailable.</div><figure class="- topic/fig fig fignone" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__FIG_NRB_1JC_KNB" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__FIG_NRB_1JC_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-50. <span id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-6382D196-FF91-4EB2-827F-6C168878CE17" class="fig--title">Cross-Probing – Timing Path</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__IMAGE_KNC_1JC_KNB" src="GUID-B25F504F-52D3-4BC7-8A34-07907B0FA142-low.jpg" height="264" width="538" alt="???"/>
+                    </figure><figure class="- topic/fig fig fignone" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__FIG_FVP_BJC_KNB" data-ofbid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__FIG_FVP_BJC_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-51. <span id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__GUID-5A08EF00-7364-4CBC-ABB8-A6F5971C7D5A" class="fig--title">Cross-Probing Path from Max/Min Delay Analysis View Table</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-03E576CE-435E-45C5-8307-01DC32E4695E__IMAGE_LNC_1JC_KNB" src="GUID-9D9900BF-C8C0-48E8-AAFF-764B4D2EFD37-low.jpg" height="276" width="543" alt="???"/>
+                    </figure><p class="- topic/p p">Instead of performing step 4, you can right-click a path in the Max/Min
+                        Delay Analysis View and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show Path in Chip
+                            Planner</span> to cross-probe the path.</p></div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-A2EBAC20-C153-4A62-A478-7210D0EB8833" xml:lang="en-US" lang="en-US" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A">
+<h3 class="- topic/title title topictitle3" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-A2EBAC20-C153-4A62-A478-7210D0EB8833" style="display:inline-block">11.9.9.6 Port Example</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Port%20Example">(Ask a Question)</a>
+<div class="- topic/body task/taskbody body taskbody">
+        <ol class="- topic/ol task/steps ol steps" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-D4039CCE-E875-4044-823C-A2E8696EFBFE" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-D4039CCE-E875-4044-823C-A2E8696EFBFE">
+            <li class="- topic/li task/step li step" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-F712B146-C461-491C-8907-C16A57414CAE" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-F712B146-C461-491C-8907-C16A57414CAE">
+                <span class="- topic/ph task/cmd ph cmd">Make sure the design completed the Place and Route step successfully.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-566E8868-6841-4BCD-B87C-83922B858C06" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-566E8868-6841-4BCD-B87C-83922B858C06">
+                <span class="- topic/ph task/cmd ph cmd">Open SmartTime Maximum/Minimum Analysis View.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-8C4F920B-F041-4CB4-9EED-2DFDDCCE81CB" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-8C4F920B-F041-4CB4-9EED-2DFDDCCE81CB">
+                <span class="- topic/ph task/cmd ph cmd">Open Chip Planner.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-7F8B645C-4B74-40D0-9926-7C60FD25B2A1" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-7F8B645C-4B74-40D0-9926-7C60FD25B2A1">
+                <span class="- topic/ph task/cmd ph cmd">In the SmartTime Maximum/Minimum Analysis View, right-click the Port “CLK” in
+                    the Path and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show in Chip Planner</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Port “CLK” is selected and highlighted in the Chip Planner Port
+                        View.<div class="- topic/note note notype note_notype" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-1E6E9020-204C-40FC-8EAF-7E9C39CA1C59" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-1E6E9020-204C-40FC-8EAF-7E9C39CA1C59"><span class="note__title">Note:</span> If Chip Planner is
+                        not open, <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Show in Chip Planner</span> is gray and
+                        unavailable.</div><figure class="- topic/fig fig fignone" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__FIG_XPJ_ZKC_KNB" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__FIG_XPJ_ZKC_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-52. <span id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-EAFDCF7E-9C94-4724-B0C4-BFA33F6A79BD" class="fig--title">Cross-Probing – Port</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__IMAGE_EZJ_ZKC_KNB" src="GUID-0FED0139-A258-49E3-B923-C6198D6F56CF-low.jpg" height="258" width="541" alt="???"/>
+                    </figure><p class="- topic/p p">From the Properties View inside Chip Planner, you will find useful
+                        information about the Port “CLK” you are cross- probing:</p><ul class="- topic/ul ul" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__UL_QDD_CLC_KNB" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__UL_QDD_CLC_KNB">
+                        <li class="- topic/li li" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-28CCDE97-E3E2-4B39-8990-DD2EF9790911" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-28CCDE97-E3E2-4B39-8990-DD2EF9790911">Port Type</li>
+                        <li class="- topic/li li" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-244C0263-98D1-4512-A946-D9FEF7FC63FE" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-244C0263-98D1-4512-A946-D9FEF7FC63FE">Port Placement Location
+                            (X-Y coordinates)</li>
+                        <li class="- topic/li li" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-236D688C-EF8D-48E9-AAC5-D391412C2524" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-236D688C-EF8D-48E9-AAC5-D391412C2524">I/O Bank Number</li>
+                        <li class="- topic/li li" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-EA4BB8CF-D719-4BE2-A66B-E4212937D97D" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-EA4BB8CF-D719-4BE2-A66B-E4212937D97D">I/O Standard</li>
+                        <li class="- topic/li li" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-048E69E8-BEE7-4A0F-996B-8E99D1DE173D" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-048E69E8-BEE7-4A0F-996B-8E99D1DE173D">Pin Assignment</li>
+                    </ul><figure class="- topic/fig fig fignone" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__FIG_CVY_DLC_KNB" data-ofbid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__FIG_CVY_DLC_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-53. <span id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__GUID-69F37B3E-4F78-46D5-AB37-0352F15CC201" class="fig--title">Properties View of Port “CLK”</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A__IMAGE_UCZ_DLC_KNB" src="GUID-6F632D70-6559-4CBD-9270-7DA6840983DA-low.jpg" height="410" width="540" alt="???"/>
+                    </figure></div>
+            </li>
+        </ol>
+    </div>
+</article></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C" data-tocid="GUID-F0F0CA00-B979-45B9-9C03-B91F0802457C">11.9.1 Static Timing Analysis Versus Dynamic Simulation</a></li><li class="topic-item"><a href="#GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12" data-tocid="GUID-9D4DF93F-B3AD-430A-B0AD-783D70DCCD12">11.9.2 Delay Models</a></li><li class="topic-item"><a href="#GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7" data-tocid="GUID-D68FCDB0-7C07-4637-9A4E-47DD2B06FAF7">11.9.3 Timing Path Types</a></li><li class="topic-item"><a href="#GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D" data-tocid="GUID-8B6FC063-E2FC-452F-B0F0-F0C12071D52D">11.9.4 Maximum Clock Frequency</a></li><li class="topic-item"><a href="#GUID-5F397272-04CE-488D-81F5-046B2DB6733C" data-tocid="GUID-5F397272-04CE-488D-81F5-046B2DB6733C">11.9.5 Setup Check</a></li><li class="topic-item"><a href="#GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157" data-tocid="GUID-D8B64789-BB83-444B-A1F5-4D3BB1240157">11.9.6 Arrival Time, Required Time, and Slack</a></li><li class="topic-item"><a href="#GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3" data-tocid="GUID-3A4A4556-9627-4BB8-BD99-0F2C180049A3">11.9.7 Timing Exceptions Overview</a></li><li class="topic-item"><a href="#GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6" data-tocid="GUID-2F86AFA9-3D50-4DCC-88BD-8F90D34A4BA6">11.9.8 Clock Skew</a></li><li class="topic-item"><a href="#GUID-E77B5846-01E9-4600-9E93-7B82CA335689" data-tocid="GUID-E77B5846-01E9-4600-9E93-7B82CA335689">11.9.9 Cross Probing</a><ul><li class="topic-item"><a href="#GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021" data-tocid="GUID-7244BA72-3DDA-4F99-8898-EF2E677E1021">11.9.9.1 Cross-probing from SmartTime into the Constraints Editor</a></li><li class="topic-item"><a href="#GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0" data-tocid="GUID-37E9EAFD-6B04-417D-AD65-E8A4CEC3ABB0">11.9.9.2 Adding a Timing Exception Constraint from a
+        Timing Path</a></li><li class="topic-item"><a href="#GUID-2ECE2322-538A-455A-82D6-AD553591A7AD" data-tocid="GUID-2ECE2322-538A-455A-82D6-AD553591A7AD">11.9.9.3 Cross-probing from SmartTime to Chip
+                Planner</a></li><li class="topic-item"><a href="#GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2" data-tocid="GUID-6A6B88F7-C435-4852-BC01-D165D92CEEB2">11.9.9.4 Design Macro Example</a></li><li class="topic-item"><a href="#GUID-03E576CE-435E-45C5-8307-01DC32E4695E" data-tocid="GUID-03E576CE-435E-45C5-8307-01DC32E4695E">11.9.9.5 Timing Path Example</a></li><li class="topic-item"><a href="#GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A" data-tocid="GUID-C68CF16C-F0D6-4934-A0A3-2CE814FB7A9A">11.9.9.6 Port Example</a></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

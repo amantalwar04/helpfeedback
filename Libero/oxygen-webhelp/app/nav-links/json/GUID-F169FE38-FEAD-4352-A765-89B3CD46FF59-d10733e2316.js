@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>3.6.7.1<\/ph>\nPlace and Route Options","href":"GUID-16AC6815-2A39-4FFC-8AE9-F7A82337A198.html#GUID-62533E96-F2EA-445D-96C2-DC146045845C","attributes":{"data-id":"GUID-62533E96-F2EA-445D-96C2-DC146045845C"},"menu":{"hasChildren":false},"tocID":"GUID-62533E96-F2EA-445D-96C2-DC146045845C-d10733e2324","topics":[]}]});

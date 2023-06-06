@@ -1,0 +1,1103 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Description Tcl query to determine if a project can be synthesized. The source is an .edn file. is_synthesis_enabled Arguments Return Type Description 1 Synthesis is enabled. 0 Synthesis is disabled. ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>19.14.1 System Builder Tcl Commands</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="Chunk699018032-d10733e24731"/><meta name="wh-out-relpath" content="Chunk699018032.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li><div class="topicref" data-id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075"><div class="title"><a href="GUID-D8832000-73FB-42DC-860F-FF30F05EE075.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14</ph>
+System Builder Tcl Commands</a></div></div></li><li class="active"><div class="topicref" data-id="Chunk699018032"><div class="title"><a href="Chunk699018032.html#Chunk699018032"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1</ph>
+System Builder Tcl Commands</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d10733e19162" class="topicref introduction" data-id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d10733e19162-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d10733e19170" class="topicref" data-id="GUID-57D1B766-9771-410F-B0F1-9199613DB164" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57D1B766-9771-410F-B0F1-9199613DB164-d10733e19170-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57D1B766-9771-410F-B0F1-9199613DB164.html" id="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d10733e19170-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.1</ph>
+Tcl Scripting Overview</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d10733e19442" class="topicref" data-id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d10733e19442-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81.html" id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d10733e19442-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.2</ph>
+Building a Libero Design Using Tcl</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d10733e19547" class="topicref" data-id="GUID-CE445F8D-419D-434B-9288-A0005F280E89" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CE445F8D-419D-434B-9288-A0005F280E89-d10733e19547-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CE445F8D-419D-434B-9288-A0005F280E89.html" id="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d10733e19547-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.3</ph>
+Project Manager Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d10733e20582" class="topicref" data-id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d10733e20582-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6.html" id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d10733e20582-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.4</ph>
+SmartDesign Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d10733e21190" class="topicref" data-id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d10733e21190-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4.html" id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d10733e21190-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.5</ph>
+HDL Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d10733e21305" class="topicref" data-id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d10733e21305-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275.html" id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d10733e21305-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.6</ph>
+Command Tools</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d10733e21598" class="topicref" data-id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d10733e21598-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F.html" id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d10733e21598-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.7</ph>
+MSS Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d10733e21654" class="topicref" data-id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d10733e21654-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670.html" id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d10733e21654-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.8</ph>
+SmartTime Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d10733e22415" class="topicref" data-id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d10733e22415-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-33C45F08-A467-4461-B5EF-8D86325E235A.html" id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d10733e22415-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.9</ph>
+SmartPower Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d10733e23069" class="topicref" data-id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d10733e23069-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641.html" id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d10733e23069-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.10</ph>
+Programming and Configuration Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d10733e23337" class="topicref" data-id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d10733e23337-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08.html" id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d10733e23337-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.11</ph>
+FlashPro Express Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d10733e23613" class="topicref" data-id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d10733e23613-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A.html" id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d10733e23613-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.12</ph>
+Configure JTAG Chain Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d10733e23817" class="topicref" data-id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d10733e23817-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010.html" id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d10733e23817-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.13</ph>
+SmartDebug Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d10733e24723" class="topicref" data-id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d10733e24723-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D8832000-73FB-42DC-860F-FF30F05EE075.html" id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d10733e24723-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14</ph>
+System Builder Tcl Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="Chunk699018032-d10733e24731" class="topicref" data-id="Chunk699018032" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action Chunk699018032-d10733e24731-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#Chunk699018032" id="Chunk699018032-d10733e24731-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1</ph>
+System Builder Tcl Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5-d10733e24739" class="topicref" data-id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5-d10733e24739-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.1</ph>
+is_synthesis_enabled</a></div></div></li><li role="treeitem"><div data-tocid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668-d10733e24747" class="topicref" data-id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668-d10733e24747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.2</ph>
+sb_configure_page</a></div></div></li><li role="treeitem"><div data-tocid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD-d10733e24755" class="topicref" data-id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD-d10733e24755-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.3</ph>
+sb_add_core</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793-d10733e24763" class="topicref" data-id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793-d10733e24763-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.4</ph>
+sb_configure_core</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008-d10733e24771" class="topicref" data-id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008-d10733e24771-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.5</ph>
+sb_configure_core_count</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E-d10733e24779" class="topicref" data-id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E-d10733e24779-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.6</ph>
+sb_move_core</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1-d10733e24787" class="topicref" data-id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-E564C323-1B2C-4642-A172-068110C2B8E1" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1-d10733e24787-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.7</ph>
+sb_enable_core</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB-d10733e24795" class="topicref" data-id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB-d10733e24795-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.8</ph>
+sb_disable_core</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D-d10733e24803" class="topicref" data-id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D-d10733e24803-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.9</ph>
+sb_enable_peripheral</a></div></div></li><li role="treeitem"><div data-tocid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA-d10733e24811" class="topicref" data-id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA-d10733e24811-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.10</ph>
+sb_disable_peripheral</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2-d10733e24820" class="topicref" data-id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2-d10733e24820-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.11</ph>
+sb_configure_peripheral</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A-d10733e24828" class="topicref" data-id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-E69EE27F-78E4-487C-8616-190342AE6B1A" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A-d10733e24828-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.12</ph>
+sb_set_fic_direct_mode</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F-d10733e24836" class="topicref" data-id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F-d10733e24836-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.13</ph>
+sb_configure_envm</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265-d10733e24844" class="topicref" data-id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265-d10733e24844-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.14</ph>
+open_sb_component</a></div></div></li><li role="treeitem"><div data-tocid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89-d10733e24852" class="topicref" data-id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89-d10733e24852-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.15</ph>
+generate_sb_component</a></div></div></li><li role="treeitem"><div data-tocid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B-d10733e24860" class="topicref" data-id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="Chunk699018032.html#GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B-d10733e24860-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.14.1.16</ph>
+close_sb_component</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d10733e24868" class="topicref" data-id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d10733e24868-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527.html" id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d10733e24868-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.15</ph>
+Simultaneous Switching Noise Analyzer (SSNA) Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d10733e24952" class="topicref" data-id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d10733e24952-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3.html" id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d10733e24952-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.16</ph>
+HSM Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d10733e25037" class="topicref" data-id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d10733e25037-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2_2.html#GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2" id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d10733e25037-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19.17</ph>
+Derive Constraints Tcl Commands</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1"><article class="nested0" aria-labelledby="ariaid-title1" id="Chunk699018032"><h1 class="- topic/title title topictitle1" id="ariaid-title1" style="display:inline-block">19.14.1 System Builder Tcl Commands</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=System%20Builder%20Tcl%20Commands">(Ask a Question)</a><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-39DA878E-569A-4F81-8F74-F1F6ED5CA535" xml:lang="en-US" lang="en-US" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5">
+<h2 class="- topic/title title topictitle2" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-39DA878E-569A-4F81-8F74-F1F6ED5CA535" style="display:inline-block">19.14.1.1 is_synthesis_enabled</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=is_synthesis_enabled">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-C003F1E6-7B59-4923-B50D-6BBD4A729C0B" data-ofbid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-C003F1E6-7B59-4923-B50D-6BBD4A729C0B"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">Tcl query to determine if a project can be synthesized. The source is an
+                    <span class="+ topic/ph sw-d/filepath ph filepath">.edn</span> file.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>is_synthesis_enabled</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-E5EE01AB-C55E-415A-B466-4F6B6D4291A1" data-ofbid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-E5EE01AB-C55E-415A-B466-4F6B6D4291A1"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B" data-ofbid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B__entry__1">Return Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B__entry__2">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B__entry__1">1</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B__entry__2">Synthesis is enabled.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B__entry__1">0</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-A5DF6AFE-0B7F-4415-B178-F495B72B6F8B__entry__2">Synthesis is disabled.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-037213B7-94D8-407D-9B0F-3A9B1BE193A5" data-ofbid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-037213B7-94D8-407D-9B0F-3A9B1BE193A5"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set p [is_synthesis_enabled]
+puts “$p”
+</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-96C35E5E-47A7-412B-AC5A-63A662949A76" xml:lang="en-US" lang="en-US" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668">
+<h2 class="- topic/title title topictitle2" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-96C35E5E-47A7-412B-AC5A-63A662949A76" style="display:inline-block">19.14.1.2 sb_configure_page</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_configure_page">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-DF544616-940E-489C-8C7A-1E00ECB57513" data-ofbid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-DF544616-940E-489C-8C7A-1E00ECB57513"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to configure the parameters of a System Builder component
+                page.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_page \
+-component_name {component_name} \
+-page_name {page_name} \
+[-params {param_list}] 
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-2A6F9719-7707-45D3-A930-7575F71F4B3F" data-ofbid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-2A6F9719-7707-45D3-A930-7575F71F4B3F"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A" data-ofbid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__1">-page_name {page_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__3">Mandatory. Name of the system builder page being configured.
+                            </td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__1">-params {param_list}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-23223059-6145-4BB2-A1FB-C3418719188A__entry__3">Mandatory. List of parameters being configured within given
+                                page.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-B5A17780-4FC2-42AB-8FB3-EA58FA43D56A" data-ofbid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-B5A17780-4FC2-42AB-8FB3-EA58FA43D56A"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_page -component_name {sb} -page_name{DEVICEFEATURES} -params {USE_ENVM:1}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-E4FC2CF1-DF3D-4C38-9FCE-BC79ED537CAC" xml:lang="en-US" lang="en-US" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD">
+<h2 class="- topic/title title topictitle2" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-E4FC2CF1-DF3D-4C38-9FCE-BC79ED537CAC" style="display:inline-block">19.14.1.3 sb_add_core</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_add_core">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-C94CE266-F574-4223-B2D5-14EDA3A6F2FF" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-C94CE266-F574-4223-B2D5-14EDA3A6F2FF"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <div class="- topic/p p">This Tcl command is used to add cores to Master/Slave subsystems in the
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder
+                    component.<div class="- topic/note note notype note_notype" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-EA7B6490-20EF-46D7-B0B9-074DA9032A3A" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-EA7B6490-20EF-46D7-B0B9-074DA9032A3A"><span class="note__title">Note:</span> There are two types of cores that can be added using the
+                        <code class="+ topic/ph pr-d/codeph ph codeph">sb_add_core</code> command.<ol class="- topic/ol ol" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__OL_TVL_LT5_VNB" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__OL_TVL_LT5_VNB">
+                        <li class="- topic/li li" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-1A66BABC-99D7-41C7-844F-8FC6E8609EE3" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-1A66BABC-99D7-41C7-844F-8FC6E8609EE3">One type is of actual cores like CoreI2C, CoreGPIO with fixed core
+                            versions available in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page. If,
+                            for example, CoreI2C is added to a subsystem with core_name specified as
+                            i2c_peripheral and a core count of 4, then the actual instance names of
+                            CoreI2C added will be i2c_peripheral_0, i2c_peripheral_1,
+                            i2c_peripheral_2 and i2c_peripheral_3 in the generated design. </li>
+                        <li class="- topic/li li" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-D651AF1B-F8F9-4376-B613-867415B633A2" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-D651AF1B-F8F9-4376-B613-867415B633A2">Second type of cores are Fabric AMBA Slave and Fabric AMBA Master.
+                            Adding them to a subsystem will configure the bus core of the subsystem
+                            to enable and expose master/slave interfaces of the bus core on the
+                            generated System Builder component to be connected to actual
+                            masters/slaves in the fabric. If, for example, Fabric AMBA Slave
+                            configured as AHBLite(<code class="+ topic/ph pr-d/codeph ph codeph">AMBA_INTERFACE_TYPE:AHBLITE</code>) is
+                            added to a subsystem with core_name specified as ahb_slave and a core
+                            count of 4, then the CoreAHBLite bus core of that subsystem will be
+                            configured to enable and expose 4 AHBLite slave bus interfaces with
+                            names ahb_slave, ahb_slave_1, ahb_slave_2 and ahb_slave_3 on the System
+                            Builder component to be connected to actual slave peripherals in the
+                            fabric.</li>
+                    </ol></div></div>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_add_core \
+-component_name {component_name} \
+-core_vlnv {vendor:library:name:version} \
+[-core_name {core_name}] \
+-subsystem_name {subsystem_name}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-226CFF75-281A-4A35-AE45-AF2C8234D2BB" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-226CFF75-281A-4A35-AE45-AF2C8234D2BB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__1">-core_vlnv {vendor:library:name:version}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__3">Mandatory. Version identifier of the core being instantiated in
+                                the SmartDesign. </td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__1">-core_name {core_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__3">Optional. Name of the instance of the core in the System Builder
+                                component. If no details are provided, the instance name will be
+                                automatically defined as <code class="+ topic/ph pr-d/codeph ph codeph">&lt;vlnv_core_name&gt;_n</code>
+                                (where <code class="+ topic/ph pr-d/codeph ph codeph">n</code> starts at 0).</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__1">-subsystem_name {subsystem_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-85623957-7E5B-44A1-9154-850B0FF6EAF8__entry__3">Mandatory. Name of the subsystem the core is being added
+                                to.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-A8CA0980-8DE0-496B-AC1C-EFAD023EA4C6" data-ofbid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-A8CA0980-8DE0-496B-AC1C-EFAD023EA4C6"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_add_core -component_name {sb} -core_vlnv {Actel:SystemBuilder:AMBA_SLAVE:0.0.102} -core_name {AMBA_SLAVE_0} -subsystem_name {FIC0_Master_Subsystem}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-07A30DED-D1C8-42AB-8FB0-359182553680" xml:lang="en-US" lang="en-US" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793">
+<h2 class="- topic/title title topictitle2" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-07A30DED-D1C8-42AB-8FB0-359182553680" style="display:inline-block">19.14.1.4 sb_configure_core</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_configure_core">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-798D56F1-F22A-426C-87B7-54C0EDD6BFFE" data-ofbid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-798D56F1-F22A-426C-87B7-54C0EDD6BFFE"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to configure cores that are already added to Master/Slave
+                subsystem in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder
+                component.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_core \
+-component_name {component_name} \
+[-core_name {core_name}] \
+[-params {param_list}]
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-874C9298-082B-4EBF-9799-8A3F5A8FF6E4" data-ofbid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-874C9298-082B-4EBF-9799-8A3F5A8FF6E4"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A" data-ofbid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__1">-core_name {core_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__3">Optional. Name of the instance of the core in the System Builder
+                                component. </td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__1">-params {param_list}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-E6C66A2D-4CE1-4441-BA4F-7BD5DC605E6A__entry__3">Mandatory. List of the configuration parameters for the selected
+                                core.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-282AC459-D64A-42B1-BA18-9DF6D3A89091" data-ofbid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-282AC459-D64A-42B1-BA18-9DF6D3A89091"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_core -component_name {sb} -core_name {AMBA_SLAVE_0} -params {"AMBA_INTERFACE_TYPE:AHBLITE" "NUM_OF_INTERRUPTS:0"}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-2F4B3C91-2D16-4B14-A4A7-3B6EAF94097C" xml:lang="en-US" lang="en-US" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008">
+<h2 class="- topic/title title topictitle2" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-2F4B3C91-2D16-4B14-A4A7-3B6EAF94097C" style="display:inline-block">19.14.1.5 sb_configure_core_count</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_configure_core_count">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-2476C74E-3599-46D3-9A4D-9BE9536078FE" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-2476C74E-3599-46D3-9A4D-9BE9536078FE"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <div class="- topic/p p">This command is used to specify the number of instances of a core already added to
+                Master/Slave subsystem in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System
+                Builder component. All instances will have the same configuration.<div class="- topic/note note notype note_notype" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-08DDDBC2-C268-427F-9D14-7D2D63866511" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-08DDDBC2-C268-427F-9D14-7D2D63866511"><span class="note__title">Note:</span> There are
+                    two types of cores that can be added using the <code class="+ topic/ph pr-d/codeph ph codeph">sb_add_core</code>
+                        command.<ol class="- topic/ol ol" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__OL_TVL_LT5_VNB" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__OL_TVL_LT5_VNB">
+                        <li class="- topic/li li" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-85A33EA7-7505-4729-A2D6-8EDA4554C766" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-85A33EA7-7505-4729-A2D6-8EDA4554C766">One type is of actual cores like CoreI2C, CoreGPIO with fixed core
+                            versions available in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page. If,
+                            for example, CoreI2C is added to a subsystem with core_name specified as
+                            i2c_peripheral and a core count of 4, then the actual instance names of
+                            CoreI2C added will be i2c_peripheral_0, i2c_peripheral_1,
+                            i2c_peripheral_2 and i2c_peripheral_3 in the generated design. </li>
+                        <li class="- topic/li li" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-3A6AF8BD-5A79-4874-8ABF-D89D2308097F" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-3A6AF8BD-5A79-4874-8ABF-D89D2308097F">Second type of cores are Fabric AMBA Slave and Fabric AMBA Master.
+                            Adding them to a subsystem will configure the bus core of the subsystem
+                            to enable and expose master/slave interfaces of the bus core on the
+                            generated System Builder component to be connected to actual
+                            masters/slaves in the fabric. If, for example, Fabric AMBA Slave
+                            configured as AHBLite(<code class="+ topic/ph pr-d/codeph ph codeph">AMBA_INTERFACE_TYPE:AHBLITE</code>) is
+                            added to a subsystem with core_name specified as ahb_slave and a core
+                            count of 4, then the CoreAHBLite bus core of that subsystem will be
+                            configured to enable and expose 4 AHBLite slave bus interfaces with
+                            names ahb_slave, ahb_slave_1, ahb_slave_2 and ahb_slave_3 on the System
+                            Builder component to be connected to actual slave peripherals in the
+                            fabric.</li>
+                    </ol></div></div>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_core_count \
+-component_name {component_name} \
+-core_vlnv {vendor:library:name:version} \
+[-core_name {core_name}] \
+-subsystem_name {subsystem_name}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-19541034-E096-4FC4-86E1-1E70B433A07E" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-19541034-E096-4FC4-86E1-1E70B433A07E"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__1">-core_vlnv {vendor:library:name:version}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__2"></td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__3">Mandatory. Version identifier of the core being instantiated in
+                                the SmartDesign.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__1">-core_name {core_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__3">Optional. Name of the instance of the core in the System Builder
+                                component. If no details are provided, the instance name will be
+                                automatically defined as <code class="+ topic/ph pr-d/codeph ph codeph">&lt;vlnv_core_name&gt;_n</code>
+                                (where <code class="+ topic/ph pr-d/codeph ph codeph">n</code> starts at 0).</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__1">-subsystem_name {subsystem_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5586466B-23E5-4E7E-B445-106EF6C895DA__entry__3">Mandatory. Name of the subsystem the core is being added
+                                to.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5C5A1470-CABD-4959-8074-0CFACED87DC1" data-ofbid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5C5A1470-CABD-4959-8074-0CFACED87DC1"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_core_count -component_name {sb} -core_name {AMBA_SLAVE_0} -count {2} </code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-14C5DE79-5C5A-4C9D-BF06-4DCB84481431" xml:lang="en-US" lang="en-US" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E">
+<h2 class="- topic/title title topictitle2" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-14C5DE79-5C5A-4C9D-BF06-4DCB84481431" style="display:inline-block">19.14.1.6 sb_move_core</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_move_core">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-E3B147AF-9333-4F94-AA16-5F2FE74CAE27" data-ofbid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-E3B147AF-9333-4F94-AA16-5F2FE74CAE27"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <div class="- topic/p p">This Tcl command is used to move cores from one Subsystem to another in the
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of System Builder. In the exported Tcl
+                description file of a System Builder component, the only scenario where this command
+                will be seen is when the Fabric DDR is used and is moved from its default 'Fabric
+                DDR Subsystem' to a different Subsystem in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span>
+                page. <div class="- topic/note note notype note_notype" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-6DEFD1F1-DBDA-47C8-8D0A-BCD1C461B956" data-ofbid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-6DEFD1F1-DBDA-47C8-8D0A-BCD1C461B956"><span class="note__title">Note:</span> In a System Builder design, if the Fabric External DDR Memory (FDDR) is
+                    enabled on the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Device Features</span> page, then the Fabric DDR
+                    Subsystem is automatically enabled with the core Fabric_DDR_RAM added to it in
+                    the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page. <p class="- topic/p p">A Fabric AMBA Master configured
+                        as AXI or AHBLite can be added to the Fabric DDR Subsystem to enable a
+                        fabric master to access external DDR memory using FDDR. Alternatively, the
+                        Fabric DDR RAM can also be moved (drag and drop) to other Subsystems in the
+                        Peripherals page so that the master(s) in that Subsystem will also be able
+                        to access external DDR memory using FDDR. </p><p class="- topic/p p">For example, the
+                        Fabric_DDR_RAM can be moved from its default 'Fabric DDR Subsystem' to 'MSS
+                        FIC_0 - MSS Master Subsystem' (FIC0_Master_Subsystem) which will enable
+                        Cortex-M3 in the MSS to access external DDR memory using FDDR via FIC_0
+                        Master address space.  The Tcl command <code class="+ topic/ph pr-d/codeph ph codeph">sb_move_core</code> will be
+                        used to capture the action of moving the Fabric_DDR_RAM to a different
+                        Subsystem in the exported Tcl description for a System Builder
+                        component.</p></div></div>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_move_core \
+-component_name {component_name} \
+[-core_name {core_name}] \
+-subsystem_name {subsystem_name}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-45DC1F78-81F8-4E90-9295-3898E2751A50" data-ofbid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-45DC1F78-81F8-4E90-9295-3898E2751A50"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7" data-ofbid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__1">-core_name {core_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__3">Optional. Name of the instance of the core in the System Builder
+                                component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__1">-subsystem_name {subsystem_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-2B9FA671-BCA2-4ED7-A054-6D98DCC0D1D7__entry__3">Mandatory. Name of the subsystem the core is being added
+                                to.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-0120A98C-5733-41B1-AE52-2512D2CC1E4F" data-ofbid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-0120A98C-5733-41B1-AE52-2512D2CC1E4F"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_move_core -component_name {sb} -core_name {Fabric_DDR_RAM} -subsystem_name {FIC0_Master_Subsystem}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-5BA012E5-A1F3-4A2B-93F0-C0EEAD0EE4DF" xml:lang="en-US" lang="en-US" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1">
+<h2 class="- topic/title title topictitle2" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-5BA012E5-A1F3-4A2B-93F0-C0EEAD0EE4DF" style="display:inline-block">19.14.1.7 sb_enable_core</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_enable_core">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-942A6592-B93A-4100-9AFE-5FD34BE3A69B" data-ofbid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-942A6592-B93A-4100-9AFE-5FD34BE3A69B"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to enable the cores/bus interfaces in various subsystems of
+                the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder component
+                (excluding the MSS Peripherals).</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_enable_core \
+-component_name {component_name} \
+[-core_name {core_name}]
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-7800A12D-37DE-4FE8-B505-BBE2DFD46E7D" data-ofbid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-7800A12D-37DE-4FE8-B505-BBE2DFD46E7D"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F" data-ofbid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__1">-core_name {core_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-F844E16C-A983-42F1-9B2A-4B413281C52F__entry__3">Optional. Name of the instance of the core in the System Builder
+                                component.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-0579C05F-47A6-4D96-B6E6-6C3FA5E63DF4" data-ofbid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-0579C05F-47A6-4D96-B6E6-6C3FA5E63DF4"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_enable_core -component_name {sb} -core_name {FIC_0_AMBA_MASTER}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-00ACC422-387F-4088-8D38-CBD50F764E49" xml:lang="en-US" lang="en-US" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB">
+<h2 class="- topic/title title topictitle2" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-00ACC422-387F-4088-8D38-CBD50F764E49" style="display:inline-block">19.14.1.8 sb_disable_core</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_disable_core">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-15CE6D65-84DF-4247-B2F9-1582EFCEDFBE" data-ofbid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-15CE6D65-84DF-4247-B2F9-1582EFCEDFBE"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to disable the cores/bus interfaces in various subsystems of
+                the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder component
+                (excluding the MSS Peripherals).</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_disable_core \
+-component_name {component_name} \
+[-core_name {core_name}]
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-1E8E5CC9-223C-40F0-A7EF-D5FE23771E0F" data-ofbid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-1E8E5CC9-223C-40F0-A7EF-D5FE23771E0F"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D" data-ofbid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__1">-core_name {core_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-517DF83C-F174-48E6-86E2-8EA3531F620D__entry__3">Optional. Name of the instance of the core in the System Builder
+                                component.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-53284063-B5DA-4F18-A060-884224BAA547" data-ofbid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-53284063-B5DA-4F18-A060-884224BAA547"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_disable_core -component_name {sb} -core_name {FIC_0_AMBA_MASTER}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-CB3F34A7-5050-4115-BFA1-E789FA5BC3DC" xml:lang="en-US" lang="en-US" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D">
+<h2 class="- topic/title title topictitle2" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-CB3F34A7-5050-4115-BFA1-E789FA5BC3DC" style="display:inline-block">19.14.1.9 sb_enable_peripheral</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_enable_peripheral">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-394FE41D-C207-4D46-86C6-C2E926B8D766" data-ofbid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-394FE41D-C207-4D46-86C6-C2E926B8D766"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <div class="- topic/p p">This Tcl command is used to enable the MSS peripherals in various subsystems of the
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder component.<div class="- topic/note note notype note_notype" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-33A4D980-42BF-4A08-B0BC-480B96A04736" data-ofbid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-33A4D980-42BF-4A08-B0BC-480B96A04736"><span class="note__title">Note:</span> By
+                    default, MSS_GIO, MSS_USB, MSS_MAC and MSS_CAN are disabled in all devices. Use
+                    the <code class="+ topic/ph pr-d/codeph ph codeph">sb_enable_peripheral</code> command to enable the required
+                    peripheral.</div></div>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_enable_peripheral \
+-component_name {component_name} \
+[-peripheral_name {peripheral_name}]
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-4D6AB24F-FED0-41EA-BD32-6245B7D5D1EF" data-ofbid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-4D6AB24F-FED0-41EA-BD32-6245B7D5D1EF"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4" data-ofbid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__2"></td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__1">-peripheral_name {peripheral_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__2"></td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-745CC80B-585A-45CF-A3E0-4EAE8F5BA4A4__entry__3">Mandatory. Name of the MSS peripheral instance to be
+                                enabled.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-F4444197-15E6-44B7-ABD7-2C3047300E33" data-ofbid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-F4444197-15E6-44B7-ABD7-2C3047300E33"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_enable_peripheral -component_name {sb} -peripheral_name {MSS_SPI_0}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-A5177CE5-2430-4D74-B393-E2914B27D92D" xml:lang="en-US" lang="en-US" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA">
+<h2 class="- topic/title title topictitle2" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-A5177CE5-2430-4D74-B393-E2914B27D92D" style="display:inline-block">19.14.1.10 sb_disable_peripheral</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_disable_peripheral">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-8535A24A-C93B-40CD-AB55-475068CFA8D2" data-ofbid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-8535A24A-C93B-40CD-AB55-475068CFA8D2"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <div class="- topic/p p">This Tcl command is used to disable the MSS peripherals in various subsystems of the
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder component.<div class="- topic/note note notype note_notype" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-14358515-4BA5-46D7-9212-D15D09D47A49" data-ofbid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-14358515-4BA5-46D7-9212-D15D09D47A49"><span class="note__title">Note:</span> By
+                    default, MSS_MMUART_0/1, MSS_I2C_0/1, MSS_SPI_0/1 are enabled in all devices.
+                    Use the <code class="+ topic/ph pr-d/codeph ph codeph">sb_disable_peripheral</code> command to disable the
+                    peripherals that are not needed.</div></div>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_disable_peripheral \
+-component_name {component_name} \
+[-peripheral_name {peripheral_name}]
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-ACCB9A05-8E02-4BD7-B4C2-F995DF7D4D39" data-ofbid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-ACCB9A05-8E02-4BD7-B4C2-F995DF7D4D39"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273" data-ofbid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__1">-peripheral_name {peripheral_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-4DF5D5BF-9D67-4440-8186-D3F340A94273__entry__3">Mandatory. Name of the MSS peripheral instance to be
+                                disabled.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-FCDA8FF0-B74C-4A47-83CD-45D009448E43" data-ofbid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-FCDA8FF0-B74C-4A47-83CD-45D009448E43"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_disable_peripheral -component_name {sb} -peripheral_name {MSS_SPI_0}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-8DAC8096-7BDD-4E58-BAB9-EA2BDB3386EB" xml:lang="en-US" lang="en-US" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2">
+<h2 class="- topic/title title topictitle2" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-8DAC8096-7BDD-4E58-BAB9-EA2BDB3386EB" style="display:inline-block">19.14.1.11 sb_configure_peripheral</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_configure_peripheral">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-0AE4F67A-27E9-42FD-8815-7E2BDAEBA260" data-ofbid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-0AE4F67A-27E9-42FD-8815-7E2BDAEBA260"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to configure the MSS peripherals in various subsystems of
+                the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder component.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_peripheral \
+-component_name {component_name} \
+[-peripheral_name {peripheral_name}]
+[-params {param_list}]
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-2A9E0EEA-E257-426A-938C-B29AD7F84634" data-ofbid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-2A9E0EEA-E257-426A-938C-B29AD7F84634"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED" data-ofbid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__1">-peripheral_name {peripheral_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__3">Mandatory. Name of the MSS peripheral instance to be
+                                enabled.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__1">-params {param_list}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-9E8F5666-884F-4651-A6F1-6573C347C6ED__entry__3">Mandatory. List of the configuration parameters for the selected
+                                MSS peripheral.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-009F4364-DE49-4E7E-ABE0-7E22BBD4A332" data-ofbid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-009F4364-DE49-4E7E-ABE0-7E22BBD4A332"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_peripheral -component_name {sb} -peripheral_name {MM_UART_0} -params {"MODE:MODE_ASYNC" "MODE_DUPLEX:MODE_FULL" "MODEM_MUX:MUX_IO" "TX_RX_MUX:MUX_IO" "USE_MODEM:false" }</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-125A3916-0922-4BF1-9A03-AB60ACD4ABF5" xml:lang="en-US" lang="en-US" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A">
+<h2 class="- topic/title title topictitle2" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-125A3916-0922-4BF1-9A03-AB60ACD4ABF5" style="display:inline-block">19.14.1.12 sb_set_fic_direct_mode</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_set_fic_direct_mode">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-59273227-E4D7-47E0-8635-E69BFD240EDB" data-ofbid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-59273227-E4D7-47E0-8635-E69BFD240EDB"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to set/unset the Fabric Interface Controller (FIC) direct
+                mode in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Peripherals</span> page of the System Builder
+                component.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_set_fic_direct_mode \
+-component_name {component_name} \
+-mode {true|false}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-BCF60815-CF6B-4A9F-B059-E5436B44631C" data-ofbid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-BCF60815-CF6B-4A9F-B059-E5436B44631C"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825" data-ofbid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__1">-mode {true|false} </td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__2"></td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-FF6BB216-342D-4C9A-AEA0-A77A4BE05825__entry__3">Mandatory. Set the mode to 'true' to enable the direct mode, else
+                                'false'. </td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-25DC40EB-751C-4AB4-B35C-9B21D69AE759" data-ofbid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-25DC40EB-751C-4AB4-B35C-9B21D69AE759"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_set_fic_direct_mode -component_name {sb} -mode {true}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-A7C0BC4D-59E2-42CB-98F6-E7D5D2ECF3E8" xml:lang="en-US" lang="en-US" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F">
+<h2 class="- topic/title title topictitle2" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-A7C0BC4D-59E2-42CB-98F6-E7D5D2ECF3E8" style="display:inline-block">19.14.1.13 sb_configure_envm</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=sb_configure_envm">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-8C6EE1C3-C0AE-439F-96C1-233A686F75AE" data-ofbid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-8C6EE1C3-C0AE-439F-96C1-233A686F75AE"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to specify a <span class="+ topic/ph sw-d/filepath ph filepath">.cfg</span> file with all clients
+                information in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">ENVM</span> tab of the
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Memories</span> page in the System Builder component.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_envm \
+-component_name {component_name} \
+-cfg_file {file_path}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-F8BAC9D7-1220-4DCB-98C5-82FCB1D3AE49" data-ofbid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-F8BAC9D7-1220-4DCB-98C5-82FCB1D3AE49"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF" data-ofbid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__1">-cfg_file &lt;file_path&gt;</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-9E918C4A-221D-4C6C-BDB8-8E628B06F3DF__entry__3">Mandatory. Path of the configuration file (.cfg) used to
+                                configure the ENVM.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-E524254C-5B7F-4202-9543-D61E1B2CC514" data-ofbid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-E524254C-5B7F-4202-9543-D61E1B2CC514"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>sb_configure_envm -component_name {sb} -cfg_file{./ENVM.cfg} </code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-BEF0F4BD-74A8-4205-8420-7478D63980C3" xml:lang="en-US" lang="en-US" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265">
+<h2 class="- topic/title title topictitle2" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-BEF0F4BD-74A8-4205-8420-7478D63980C3" style="display:inline-block">19.14.1.14 open_sb_component</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=open_sb_component">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-0A26BF51-BED7-4745-B508-D6A63B9FF656" data-ofbid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-0A26BF51-BED7-4745-B508-D6A63B9FF656"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command opens a System Builder component. You must open a System Builder
+                component before you can configure any of its pages using the <code class="+ topic/ph pr-d/codeph ph codeph">sb_*</code>
+                commands.</p>
+            <div class="- topic/note note notype note_notype" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-FDEE1A28-8542-46AD-9DA4-0F096B5B2E40" data-ofbid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-FDEE1A28-8542-46AD-9DA4-0F096B5B2E40"><span class="note__title">Note:</span> To create a System Builder design, the <code class="+ topic/ph pr-d/codeph ph codeph">create_and_configure_core</code>
+                command must be used, but with empty params. This creates an ungenerated System
+                Builder component with default configuration. Then before configuring any of the
+                System Builder pages, the System Builder component needs to be opened using the
+                    <code class="+ topic/ph pr-d/codeph ph codeph">open_sb_component</code> command.</div>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>open_sb_component \
+-component_name {component_name}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E0AAE960-30C1-4634-BF95-B983D157CD04" data-ofbid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E0AAE960-30C1-4634-BF95-B983D157CD04"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292" data-ofbid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-3AE70311-0899-4468-A402-4AA075774292__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E396D4AA-388A-4D80-A72A-7E55B98D3A16" data-ofbid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E396D4AA-388A-4D80-A72A-7E55B98D3A16"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>open_sb_component -component_name</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-58D52241-2DF7-4F0D-9769-25D1809221CE" xml:lang="en-US" lang="en-US" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89">
+<h2 class="- topic/title title topictitle2" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-58D52241-2DF7-4F0D-9769-25D1809221CE" style="display:inline-block">19.14.1.15 generate_sb_component</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=generate_sb_component">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D680874A-B8AD-4720-8A26-EB554AE34463" data-ofbid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D680874A-B8AD-4720-8A26-EB554AE34463"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">This Tcl command is used to generate a System Builder component.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>generate_sb_component \
+-component_name {component_name}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-7882C411-FC75-4EB4-921C-24E3FDE57FAE" data-ofbid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-7882C411-FC75-4EB4-921C-24E3FDE57FAE"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059" data-ofbid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D589E229-86EA-455F-AD1D-5F55A8127059__entry__3">Mandatory. Name of the system builder component. </td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+        
+        <section class="- topic/section section" id="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-DBAB4DE6-04A2-45C8-9036-29AD8CDD8678" data-ofbid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-DBAB4DE6-04A2-45C8-9036-29AD8CDD8678"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>generate_sb_component -component_name {sb}</code></pre>
+        </section>
+        
+    </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-5636844E-9065-414A-9251-92ABEE0EF1FC" xml:lang="en-US" lang="en-US" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B">
+<h2 class="- topic/title title topictitle2" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-5636844E-9065-414A-9251-92ABEE0EF1FC" style="display:inline-block">19.14.1.16 close_sb_component</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=close_sb_component">(Ask a Question)</a>
+    <div class="- topic/body reference/refbody body refbody">
+        <section class="- topic/section section" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-99CE693B-FAAC-4599-B03B-C9662037CE7A" data-ofbid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-99CE693B-FAAC-4599-B03B-C9662037CE7A"><h3 class="- topic/title title sectiontitle">Description</h3>
+            
+            <p class="- topic/p p">Close a System Builder component. You must close the System Builder component after
+                you are done with configuring all its pages and generating it.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>close_sb_component \
+-component_name {component_name}
+</code></pre>
+        </section>
+        <section class="- topic/section section" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-A70403C0-BBFA-4564-9A92-F8F2DB5C84B8" data-ofbid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-A70403C0-BBFA-4564-9A92-F8F2DB5C84B8"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <div class="table-container"><table class="- topic/table table" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397" data-ofbid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397__entry__1">Parameter</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397__entry__2">Type</th>
+                            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397__entry__3">Description</th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397__entry__1">-component_name {component_name}</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397__entry__2">string</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-6364A610-031C-4FED-806C-5E93A3254397__entry__3">Mandatory. Name of the system builder component.</td>
+                        </tr>
+                    </tbody></table></div>
+        </section>
+
+        <section class="- topic/section section" id="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-5AD92C7D-1CDF-412C-ABDB-541328C417AD" data-ofbid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-5AD92C7D-1CDF-412C-ABDB-541328C417AD"><h3 class="- topic/title title sectiontitle">Example</h3>
+            
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>close_sb_component -component_name {sb}</code></pre>
+        </section>
+        
+    </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5" data-tocid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5">19.14.1.1 is_synthesis_enabled</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-C003F1E6-7B59-4923-B50D-6BBD4A729C0B" data-tocid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-C003F1E6-7B59-4923-B50D-6BBD4A729C0B">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-E5EE01AB-C55E-415A-B466-4F6B6D4291A1" data-tocid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-E5EE01AB-C55E-415A-B466-4F6B6D4291A1">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-037213B7-94D8-407D-9B0F-3A9B1BE193A5" data-tocid="GUID-ECCFAE0B-9C12-4FB5-88F3-E0C6A7ED55A5__GUID-037213B7-94D8-407D-9B0F-3A9B1BE193A5">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668" data-tocid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668">19.14.1.2 sb_configure_page</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-DF544616-940E-489C-8C7A-1E00ECB57513" data-tocid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-DF544616-940E-489C-8C7A-1E00ECB57513">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-2A6F9719-7707-45D3-A930-7575F71F4B3F" data-tocid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-2A6F9719-7707-45D3-A930-7575F71F4B3F">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-B5A17780-4FC2-42AB-8FB3-EA58FA43D56A" data-tocid="GUID-16D6A051-49ED-4AF5-A1B5-CC0D61158668__GUID-B5A17780-4FC2-42AB-8FB3-EA58FA43D56A">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD" data-tocid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD">19.14.1.3 sb_add_core</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-C94CE266-F574-4223-B2D5-14EDA3A6F2FF" data-tocid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-C94CE266-F574-4223-B2D5-14EDA3A6F2FF">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-226CFF75-281A-4A35-AE45-AF2C8234D2BB" data-tocid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-226CFF75-281A-4A35-AE45-AF2C8234D2BB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-A8CA0980-8DE0-496B-AC1C-EFAD023EA4C6" data-tocid="GUID-34EFA50D-935C-4319-B740-DCC92D1E5CFD__GUID-A8CA0980-8DE0-496B-AC1C-EFAD023EA4C6">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793" data-tocid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793">19.14.1.4 sb_configure_core</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-798D56F1-F22A-426C-87B7-54C0EDD6BFFE" data-tocid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-798D56F1-F22A-426C-87B7-54C0EDD6BFFE">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-874C9298-082B-4EBF-9799-8A3F5A8FF6E4" data-tocid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-874C9298-082B-4EBF-9799-8A3F5A8FF6E4">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-282AC459-D64A-42B1-BA18-9DF6D3A89091" data-tocid="GUID-DCE1AA0E-97FD-4E2F-94CF-CA7236058793__GUID-282AC459-D64A-42B1-BA18-9DF6D3A89091">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008" data-tocid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008">19.14.1.5 sb_configure_core_count</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-2476C74E-3599-46D3-9A4D-9BE9536078FE" data-tocid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-2476C74E-3599-46D3-9A4D-9BE9536078FE">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-19541034-E096-4FC4-86E1-1E70B433A07E" data-tocid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-19541034-E096-4FC4-86E1-1E70B433A07E">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5C5A1470-CABD-4959-8074-0CFACED87DC1" data-tocid="GUID-D4E2EE0E-7688-47FB-ACE8-73688CE1F008__GUID-5C5A1470-CABD-4959-8074-0CFACED87DC1">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E" data-tocid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E">19.14.1.6 sb_move_core</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-E3B147AF-9333-4F94-AA16-5F2FE74CAE27" data-tocid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-E3B147AF-9333-4F94-AA16-5F2FE74CAE27">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-45DC1F78-81F8-4E90-9295-3898E2751A50" data-tocid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-45DC1F78-81F8-4E90-9295-3898E2751A50">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-0120A98C-5733-41B1-AE52-2512D2CC1E4F" data-tocid="GUID-4D88513E-CA6B-40ED-AC29-6673CEC2610E__GUID-0120A98C-5733-41B1-AE52-2512D2CC1E4F">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-E564C323-1B2C-4642-A172-068110C2B8E1" data-tocid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1">19.14.1.7 sb_enable_core</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-942A6592-B93A-4100-9AFE-5FD34BE3A69B" data-tocid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-942A6592-B93A-4100-9AFE-5FD34BE3A69B">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-7800A12D-37DE-4FE8-B505-BBE2DFD46E7D" data-tocid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-7800A12D-37DE-4FE8-B505-BBE2DFD46E7D">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-0579C05F-47A6-4D96-B6E6-6C3FA5E63DF4" data-tocid="GUID-E564C323-1B2C-4642-A172-068110C2B8E1__GUID-0579C05F-47A6-4D96-B6E6-6C3FA5E63DF4">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB" data-tocid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB">19.14.1.8 sb_disable_core</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-15CE6D65-84DF-4247-B2F9-1582EFCEDFBE" data-tocid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-15CE6D65-84DF-4247-B2F9-1582EFCEDFBE">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-1E8E5CC9-223C-40F0-A7EF-D5FE23771E0F" data-tocid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-1E8E5CC9-223C-40F0-A7EF-D5FE23771E0F">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-53284063-B5DA-4F18-A060-884224BAA547" data-tocid="GUID-B8ADF5AB-B73D-4C59-AB07-3630609CA4EB__GUID-53284063-B5DA-4F18-A060-884224BAA547">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D" data-tocid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D">19.14.1.9 sb_enable_peripheral</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-394FE41D-C207-4D46-86C6-C2E926B8D766" data-tocid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-394FE41D-C207-4D46-86C6-C2E926B8D766">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-4D6AB24F-FED0-41EA-BD32-6245B7D5D1EF" data-tocid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-4D6AB24F-FED0-41EA-BD32-6245B7D5D1EF">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-F4444197-15E6-44B7-ABD7-2C3047300E33" data-tocid="GUID-9471307B-AEA4-4C87-B67E-E2F6FEDA1A5D__GUID-F4444197-15E6-44B7-ABD7-2C3047300E33">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA" data-tocid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA">19.14.1.10 sb_disable_peripheral</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-8535A24A-C93B-40CD-AB55-475068CFA8D2" data-tocid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-8535A24A-C93B-40CD-AB55-475068CFA8D2">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-ACCB9A05-8E02-4BD7-B4C2-F995DF7D4D39" data-tocid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-ACCB9A05-8E02-4BD7-B4C2-F995DF7D4D39">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-FCDA8FF0-B74C-4A47-83CD-45D009448E43" data-tocid="GUID-05C3BD86-AD9B-4FEB-A366-6B46FBEA5EAA__GUID-FCDA8FF0-B74C-4A47-83CD-45D009448E43">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2" data-tocid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2">19.14.1.11 sb_configure_peripheral</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-0AE4F67A-27E9-42FD-8815-7E2BDAEBA260" data-tocid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-0AE4F67A-27E9-42FD-8815-7E2BDAEBA260">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-2A9E0EEA-E257-426A-938C-B29AD7F84634" data-tocid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-2A9E0EEA-E257-426A-938C-B29AD7F84634">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-009F4364-DE49-4E7E-ABE0-7E22BBD4A332" data-tocid="GUID-6767B9AD-DC0D-4F74-9BDE-BAFF30A6DFF2__GUID-009F4364-DE49-4E7E-ABE0-7E22BBD4A332">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-E69EE27F-78E4-487C-8616-190342AE6B1A" data-tocid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A">19.14.1.12 sb_set_fic_direct_mode</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-59273227-E4D7-47E0-8635-E69BFD240EDB" data-tocid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-59273227-E4D7-47E0-8635-E69BFD240EDB">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-BCF60815-CF6B-4A9F-B059-E5436B44631C" data-tocid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-BCF60815-CF6B-4A9F-B059-E5436B44631C">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-25DC40EB-751C-4AB4-B35C-9B21D69AE759" data-tocid="GUID-E69EE27F-78E4-487C-8616-190342AE6B1A__GUID-25DC40EB-751C-4AB4-B35C-9B21D69AE759">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F" data-tocid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F">19.14.1.13 sb_configure_envm</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-8C6EE1C3-C0AE-439F-96C1-233A686F75AE" data-tocid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-8C6EE1C3-C0AE-439F-96C1-233A686F75AE">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-F8BAC9D7-1220-4DCB-98C5-82FCB1D3AE49" data-tocid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-F8BAC9D7-1220-4DCB-98C5-82FCB1D3AE49">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-E524254C-5B7F-4202-9543-D61E1B2CC514" data-tocid="GUID-3E67CEFA-2A0C-412D-B334-BF293BF0A43F__GUID-E524254C-5B7F-4202-9543-D61E1B2CC514">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265" data-tocid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265">19.14.1.14 open_sb_component</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-0A26BF51-BED7-4745-B508-D6A63B9FF656" data-tocid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-0A26BF51-BED7-4745-B508-D6A63B9FF656">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E0AAE960-30C1-4634-BF95-B983D157CD04" data-tocid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E0AAE960-30C1-4634-BF95-B983D157CD04">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E396D4AA-388A-4D80-A72A-7E55B98D3A16" data-tocid="GUID-3E04A6C7-7009-4BD4-B4A9-86370F4DE265__GUID-E396D4AA-388A-4D80-A72A-7E55B98D3A16">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89" data-tocid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89">19.14.1.15 generate_sb_component</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D680874A-B8AD-4720-8A26-EB554AE34463" data-tocid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-D680874A-B8AD-4720-8A26-EB554AE34463">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-7882C411-FC75-4EB4-921C-24E3FDE57FAE" data-tocid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-7882C411-FC75-4EB4-921C-24E3FDE57FAE">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-DBAB4DE6-04A2-45C8-9036-29AD8CDD8678" data-tocid="GUID-CD45B562-4FE6-4D4D-9414-C6B3CC933D89__GUID-DBAB4DE6-04A2-45C8-9036-29AD8CDD8678">Example</a></div></li></ul></li><li class="topic-item"><a href="#GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B" data-tocid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B">19.14.1.16 close_sb_component</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-99CE693B-FAAC-4599-B03B-C9662037CE7A" data-tocid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-99CE693B-FAAC-4599-B03B-C9662037CE7A">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-A70403C0-BBFA-4564-9A92-F8F2DB5C84B8" data-tocid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-A70403C0-BBFA-4564-9A92-F8F2DB5C84B8">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-5AD92C7D-1CDF-412C-ABDB-541328C417AD" data-tocid="GUID-BB4D1385-BEFB-4628-ACD3-84206787F32B__GUID-5AD92C7D-1CDF-412C-ABDB-541328C417AD">Example</a></div></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

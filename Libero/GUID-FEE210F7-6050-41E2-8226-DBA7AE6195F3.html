@@ -1,0 +1,700 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="This PDC command assigns the specified macro to a particular location on the chip. set_location -inst_name &lt;macro_inst_name&gt; -fixed &lt;true|false&gt; -x &lt;integer&gt; -y &lt;integer&gt; Note: This command may not ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>8.1.3.4 set_location</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3-d10733e6869"/><meta name="wh-source-relpath" content="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.xml"/><meta name="wh-out-relpath" content="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+PDC Commands for PolarFire</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for PolarFire</p></div></div></div></li><li><div class="topicref" data-id="GUID-B4411012-05F3-43A2-9B31-46410819AB0A"><div class="title"><a href="GUID-B4411012-05F3-43A2-9B31-46410819AB0A.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3</ph>
+I/O PDC Commands</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3"><div class="title"><a href="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.4</ph>
+set_location</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6745" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6745-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6745-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+PDC Commands for PolarFire</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE-d10733e6749" class="topicref introduction" data-id="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE-d10733e6749-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE-d10733e6749-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17-d10733e6765" class="topicref" data-id="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17-d10733e6765-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17.html#GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17" id="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17-d10733e6765-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.1</ph>
+PDC Syntax Conventions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D-d10733e6805" class="topicref" data-id="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B5771ED9-1690-454F-84CD-E9BEC314976D-d10733e6805-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D.html#GUID-B5771ED9-1690-454F-84CD-E9BEC314976D" id="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D-d10733e6805-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.2</ph>
+PDC Naming Conventions</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-B4411012-05F3-43A2-9B31-46410819AB0A-d10733e6837" class="topicref" data-id="GUID-B4411012-05F3-43A2-9B31-46410819AB0A" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-B4411012-05F3-43A2-9B31-46410819AB0A-d10733e6837-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B4411012-05F3-43A2-9B31-46410819AB0A.html" id="GUID-B4411012-05F3-43A2-9B31-46410819AB0A-d10733e6837-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3</ph>
+I/O PDC Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59-d10733e6845" class="topicref" data-id="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59.html" id="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59-d10733e6845-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.1</ph>
+set_iobank</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D-d10733e6853" class="topicref" data-id="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D.html" id="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D-d10733e6853-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.2</ph>
+reserve</a></div></div></li><li role="treeitem"><div data-tocid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13-d10733e6861" class="topicref" data-id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13.html" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13-d10733e6861-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.3</ph>
+set_io</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3-d10733e6869" class="topicref" data-id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.html" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3-d10733e6869-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.4</ph>
+set_location</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86-d10733e6877" class="topicref" data-id="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86-d10733e6877-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86.html#GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86" id="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86-d10733e6877-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.4</ph>
+Netlist Attributes NDC Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6-d10733e6901" class="topicref" data-id="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6-d10733e6901-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6.html#GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6" id="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6-d10733e6901-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.5</ph>
+Floorplanning FDC Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e6946" class="topicref" data-id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e6946-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762.html#GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e6946-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.6</ph>
+Post Layout Edit PDC Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0-d10733e6970" class="topicref" data-id="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0.html" id="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0-d10733e6970-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.7</ph>
+A – Packages/Memory Types</a><div class="wh-tooltip"><p class="shortdesc">This appendix provides device, package, slot, and memory type         information.</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6981" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6981-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" id="tocId-d10733e6981-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+PDC Commands for SmartFusion2 and IGLOO2</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for SmartFusion2 and IGLOO2</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C0A72614-24E8-4EF1-81A2-BECAC9F54F57">
+  <h1 class="- topic/title title topictitle1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C0A72614-24E8-4EF1-81A2-BECAC9F54F57" style="display:inline-block">8.1.3.4 set_location</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_location">(Ask a Question)</a>
+  <div class="- topic/body concept/conbody body conbody">
+    <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008EF" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008EF">This PDC command assigns the specified macro to a particular location on the
+      chip.</p>
+    <div class="- topic/p p">
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location -inst_name &lt;macro_inst_name&gt; -fixed &lt;true|false&gt; -x &lt;integer&gt; -y &lt;integer&gt;</code></pre>
+    </div>
+    <div class="- topic/note note notype note_notype" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-DDD8C881-1D6E-4E87-870D-E4AFB8AF7C5A" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-DDD8C881-1D6E-4E87-870D-E4AFB8AF7C5A"><span class="note__title">Note:</span> This command may not honor placing globals
+      to physical locations on the die. Instead of placing globals on die locations, let the Libero
+      Design Suite decide where to place the global buffers.</div>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C87DC03F-D275-44F2-9CB2-16E18AB92C40" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C87DC03F-D275-44F2-9CB2-16E18AB92C40"><h2 class="- topic/title title sectiontitle">Arguments</h2>
+      
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-400FC203-117E-4F9A-BE28-2E50712B819D" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-400FC203-117E-4F9A-BE28-2E50712B819D">-inst_name</dt>
+          <dd class="- topic/dd dd">Specifies the instance name of the macro in the netlist to assign to a particular
+            location on the chip.</dd>
+        
+      </dl>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-B1CD38B4-EDBF-4AD2-A3DF-2787CEC8A9C0" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-B1CD38B4-EDBF-4AD2-A3DF-2787CEC8A9C0">-fixed &lt;true | false&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008F7" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008F7">Sets whether the location of this instance is fixed (that is,
+              locked). Locked instances are not moved during layout. The default is YES. </p>
+            <p class="- topic/p p">The following table lists the acceptable values for this argument.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008F9" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008F9" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-24. </span></span><span class="table--title" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9ECC8E0B-0917-44F0-A24B-15A3DEA69D27">-inst_name Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00001C81">
+                  <tr class="- topic/row" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008FE">
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008FF">Value</th>
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000902">Description</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008FD">
+                  <tr class="- topic/row" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000905">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000906" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008FF">True</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000909" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000902">The location of this instance is
+                      locked.</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000090C">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000090D" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000008FF">False</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000910" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000902">The location of this instance is
+                      unlocked.</td>
+                  </tr>
+                </tbody></table></div>
+          </dd>
+        
+      </dl>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-592E80DA-B5B8-406E-8CB9-ABC603674F40" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-592E80DA-B5B8-406E-8CB9-ABC603674F40">-x -y</dt>
+          <dd class="- topic/dd dd">The x and y coordinates specify where to place the macro on the chip. Use the Chip
+            Planner tool to determine the x and y coordinates of the location.</dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4AFE843B-03F6-4963-941C-4DF8CF2DA7C3" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4AFE843B-03F6-4963-941C-4DF8CF2DA7C3"><h2 class="- topic/title title sectiontitle">Exceptions</h2>
+      
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000918" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000918">None</p>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-7CC27E4C-6F2C-4BC9-917B-73282052B63A" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-7CC27E4C-6F2C-4BC9-917B-73282052B63A"><h2 class="- topic/title title sectiontitle">Example</h2>
+      
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000091C" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000091C">This example assigns and locks the macro with the name “mem_data_in\[57\]”
+        at the location x=7, y=2:</p>
+      <div class="- topic/p p">
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location -inst_name mem_data_in\[57\] -fixed true -x 7 -y 2</code></pre>
+      </div>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8D0BD730-DE33-43D9-A8A8-540FA889BE64" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8D0BD730-DE33-43D9-A8A8-540FA889BE64"><h2 class="- topic/title title sectiontitle">DDR3 Memory Placement</h2>
+      
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000922" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000922">DDR3 memory must be placed in specific locations on the PolarFire chip to
+        meet timing requirements. For DDR3 memory placement, the <code class="+ topic/ph pr-d/codeph ph codeph">set_location</code>
+        command has the following syntax:</p>
+      <div class="- topic/p p">
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location -inst_name &lt;hierarchical path to DDR instance&gt; -location &lt;edge&gt;_&lt;anchor&gt;</code></pre>
+      </div>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5F33F734-5633-497A-9BDD-9F6C7B263910" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5F33F734-5633-497A-9BDD-9F6C7B263910">-inst_name &lt;hierarchical path to DDR instance&gt;</dt>
+          <dd class="- topic/dd dd">Specifies the hierarchical path to the DDR instance.</dd>
+        
+      </dl>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-95B15C43-B532-4277-9CD6-5004E6DD24DE" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-95B15C43-B532-4277-9CD6-5004E6DD24DE">-location &lt;edge&gt;_&lt;anchor&gt;</dt>
+          <dd class="- topic/dd dd">Specifies the <code class="+ topic/ph pr-d/codeph ph codeph">edge_anchor</code> location.</dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__SECTION_TC3_HZL_DRB" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__SECTION_TC3_HZL_DRB"><h2 class="- topic/title title sectiontitle">Example</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location -inst_name {DDR3_TOP/DDR3_0}\ -location {NORTH_NE}</code></pre>
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000930" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000930">The maximum DDR width varies with the die/package combinations and the
+        location they are placed in. See the following table for the correct location to place the
+        DDR3 memory. The numbers in the table refer to the maximum DDR3 width.</p>
+      <div class="table-container"><table class="- topic/table table frame-all" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000936" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000936" data-cols="7"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-25. </span></span><span class="table--title" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-93AA3054-3059-4A35-B030-D14A1BC3A013">Locations for Placing DDR3
+          Memory</span></caption><colgroup><col/><col/><col/><col/><col/><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00001C82">
+            <tr class="- topic/row" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000940">
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000941" rowspan="2">Die/Package</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943" colspan="6">Location (Edge_Anchor}
+                Edge={NORTH/SOUTH/WEST}, Anchor={NE/NW/SE/SW}</th>
+            </tr>
+            <tr class="- topic/row" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000946">
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094A">NORTH_NE</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094D">NORTH_NW</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000950">SOUTH_SE</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000953">SOUTH_SW</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000956">WEST_NW</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000959">WEST_SW</th>
+            </tr>
+          </thead><tbody class="- topic/tbody tbody" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000093F">
+            <tr class="- topic/row" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000095C">
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000095D" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000941">MPF200/FULLPKGE</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000960" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094A">16</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000963" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094D">16</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000966" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000950">Invalid Loc</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000969" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000953">40</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000096C" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000956">64</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000096F" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000959">40</td>
+            </tr>
+            <tr class="- topic/row" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000972">
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000973" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000941">MPF300/FCG1152</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000976" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094A">64</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000979" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094D">72</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000097C" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000950">16</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000097F" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000953">40</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000982" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000956">72</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000985" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000959">64</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000941">MPF300/FCG484</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094A">8</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094D">8</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000950">Invalid Loc</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000953">32</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000956">Invalid Loc</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000959">16</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000941">MPF300/FCVG484</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094A">16</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-0000094D">16</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000950">Invalid Loc</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000953">40</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000956">16</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000943 GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000959">16</td>
+            </tr>
+          </tbody></table></div>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-36980ED2-33C0-490C-83F2-71B9189B2797" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-36980ED2-33C0-490C-83F2-71B9189B2797"><h2 class="- topic/title title sectiontitle">PLL Placement</h2>
+      
+      <div class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009C2" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009C2">For PLL placement, the <code class="+ topic/ph pr-d/codeph ph codeph">set_location</code> command has the
+        following
+        syntax:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location -inst_name &lt;hierarchical inst name&gt; -location &lt;PLL location&gt;</code></pre></div>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D8481A02-192C-4E40-B2B5-244767B4C73E" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D8481A02-192C-4E40-B2B5-244767B4C73E">-inst_name &lt;hierarchical inst name&gt;</dt>
+          <dd class="- topic/dd dd">Specifies the hierarchical instance name.</dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9D1B360A-62FD-42C8-837F-409AB68206EB" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9D1B360A-62FD-42C8-837F-409AB68206EB">-location &lt;PLL location&gt;</dt>
+          <dd class="- topic/dd dd">
+            <div class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009C8" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009C8">Specifies the PLL location. Location can be one of the following:
+                <ul class="- topic/ul ul" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__UL_GXB_LMN_1MB" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__UL_GXB_LMN_1MB">
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8C616D79-6685-4B51-8C5F-A73A28392C7F" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8C616D79-6685-4B51-8C5F-A73A28392C7F">PLL0_NW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-FED46369-F05D-49D6-9F94-E767E3A70852" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-FED46369-F05D-49D6-9F94-E767E3A70852">PLL1_NW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-02F39ABB-E531-40F1-82B6-A7D948521489" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-02F39ABB-E531-40F1-82B6-A7D948521489">PLL0_NE</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4F26135F-DA3A-4C5F-A599-FFDB7C423B8A" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4F26135F-DA3A-4C5F-A599-FFDB7C423B8A">PLL1_NE</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D02B954A-241E-49A3-8581-6AEED46DEDF8" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D02B954A-241E-49A3-8581-6AEED46DEDF8">PLL0_SW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-6A9C1287-83BA-4B65-9088-DE95C2BAE99F" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-6A9C1287-83BA-4B65-9088-DE95C2BAE99F">PLL1_SW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-22BF4953-EA9B-4B5A-9F97-9006E298050E" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-22BF4953-EA9B-4B5A-9F97-9006E298050E">PLL0_SE</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-738B11EF-E849-4B4E-A290-4419BD09B393" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-738B11EF-E849-4B4E-A290-4419BD09B393">PLL1_SE</li>
+              </ul></div>
+            <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009C9" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009C9">For more information, see <a class="- topic/xref xref" href="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.html#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9A7FB382-4AA2-4C34-8FCB-C82368BC036F"><span>Placement Rules for PLLs and DLLs</span></a>.</p>
+          </dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-98397C0F-B52A-45A8-85FD-BC3B64F41878" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-98397C0F-B52A-45A8-85FD-BC3B64F41878"><h2 class="- topic/title title sectiontitle">DLL Placement</h2>
+      
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009CF" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009CF">For DLL placement, the <code class="+ topic/ph pr-d/codeph ph codeph">set_location</code> command has the
+        following syntax:</p>
+      <div class="- topic/p p">
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location -inst_name &lt;hierarchical inst name&gt; -location &lt;DLL location&gt;</code></pre>
+      </div>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-1EAE88DF-E612-4DE3-8180-D27EA6908619" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-1EAE88DF-E612-4DE3-8180-D27EA6908619">-inst_name &lt;hierarchical inst name&gt;</dt>
+          <dd class="- topic/dd dd">Specifies the hierarchical instance name.</dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-3FCC55F2-F210-4383-B290-D7C691DA956C" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-3FCC55F2-F210-4383-B290-D7C691DA956C">-location &lt;DLL location&gt;</dt>
+          <dd class="- topic/dd dd">
+            <div class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009D5" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009D5">Specifies the DLL location. Location can be one of the following:
+                <ul class="- topic/ul ul" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__UL_IPN_YMN_1MB" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__UL_IPN_YMN_1MB">
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-916657CE-C50A-481B-825F-C1F2CB12953F" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-916657CE-C50A-481B-825F-C1F2CB12953F">DLL0_NW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9E2D9C8F-09CD-4730-8DB4-DF9173414CDD" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9E2D9C8F-09CD-4730-8DB4-DF9173414CDD">DLL1_NW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C9D1006C-4300-44BD-A75C-AE482380D591" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C9D1006C-4300-44BD-A75C-AE482380D591">DLL0_NE</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-3863E790-F8D0-42DF-A639-8934C55267D2" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-3863E790-F8D0-42DF-A639-8934C55267D2">DLL1_NE</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-6E2BC7E8-D734-4678-A7F7-0F80E83A75FB" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-6E2BC7E8-D734-4678-A7F7-0F80E83A75FB">DLL0_SW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-959646B0-2E13-4BE3-9C71-392F0D36A9B4" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-959646B0-2E13-4BE3-9C71-392F0D36A9B4">DLL1_SW</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D35B8ABF-8441-4579-AF1D-F252EFBA114F" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D35B8ABF-8441-4579-AF1D-F252EFBA114F">DLL0_SE</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8E553C08-F3C0-43B8-BF0D-712566048824" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8E553C08-F3C0-43B8-BF0D-712566048824">DLL1_SE</li>
+              </ul></div>
+            <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009D6" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009D6">For more information, see <a class="- topic/xref xref" href="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.html#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9A7FB382-4AA2-4C34-8FCB-C82368BC036F"><span>Placement Rules for PLLs and DLLs</span></a>.</p>
+          </dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-F5ED41FA-6909-4B2C-A25D-511FAE297B2A" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-F5ED41FA-6909-4B2C-A25D-511FAE297B2A"><h2 class="- topic/title title sectiontitle">TxPLL Placement</h2>
+      
+      <div class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009DB" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009DB">For TxPLL placement, the <code class="+ topic/ph pr-d/codeph ph codeph">set_location</code> command has the
+        following
+        syntax:<pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_location -inst_name &lt;hierarchical inst name&gt; -location &lt;TxPLL location&gt;</code></pre></div>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-0A0AFF25-C4E7-4D65-AB76-56C6BEC34A64" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-0A0AFF25-C4E7-4D65-AB76-56C6BEC34A64">-inst_name &lt;hierarchical inst name&gt;</dt>
+          <dd class="- topic/dd dd">Specifies the hierarchical instance name.</dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-64F4FC43-769F-4501-A626-C1692D218A4A" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-64F4FC43-769F-4501-A626-C1692D218A4A">-location &lt;TxPLL location&gt;</dt>
+          <dd class="- topic/dd dd">
+            <div class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009E1" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009E1">Specifies the TxPLL location. Location can be one of the
+                following:<ul class="- topic/ul ul" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__UL_DF3_SNN_1MB" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__UL_DF3_SNN_1MB">
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-32253EA3-72F2-4D24-A38A-BE03E90F7BE1" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-32253EA3-72F2-4D24-A38A-BE03E90F7BE1">Q2_TXPLL0</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-BBC1D592-37E0-4FB6-80F4-9D3E1CCDA582" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-BBC1D592-37E0-4FB6-80F4-9D3E1CCDA582">Q2_TXPLL_SSC</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-24A04F13-AAA8-4807-9676-E2C71F57A348" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-24A04F13-AAA8-4807-9676-E2C71F57A348">Q2_TXPLL1</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-944865A4-4746-4C45-BBA5-80D6A69A38FA" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-944865A4-4746-4C45-BBA5-80D6A69A38FA">Q0_TXPLL0</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-3920A470-FDEB-4D49-8ADA-8BD2E350FE67" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-3920A470-FDEB-4D49-8ADA-8BD2E350FE67">Q0_TXPLL_SSC</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-866678E9-A686-4F4B-A580-98F7BC64041D" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-866678E9-A686-4F4B-A580-98F7BC64041D">Q0_TXPLL1</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8F5F4D9E-D33B-49C5-A801-EFD3D58782C7" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8F5F4D9E-D33B-49C5-A801-EFD3D58782C7">Q1_TXPLL0</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5234025C-4D81-4C91-8F75-229E43EA028E" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5234025C-4D81-4C91-8F75-229E43EA028E">Q1_TXPLL_SSC</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-1682522C-CBF9-42FD-9866-E8F28263B526" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-1682522C-CBF9-42FD-9866-E8F28263B526">Q1_TXPLL1</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C8BCEE06-0F31-4A36-9EBF-A5A90CC5EA7B" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C8BCEE06-0F31-4A36-9EBF-A5A90CC5EA7B">Q3_TXPLL_SSC</li>
+                <li class="- topic/li li" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-6A4D2748-3459-478F-B3E0-89D159679E01" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-6A4D2748-3459-478F-B3E0-89D159679E01">Q3_TXPLL1</li>
+              </ul></div>
+            <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009E2" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009E2">For more information, see <a class="- topic/xref xref" href="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.html#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5A8649F4-3FF5-459F-9B04-E858ACA8D487"><span>Placement Rules for Transceivers</span></a>.</p>
+          </dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9A7FB382-4AA2-4C34-8FCB-C82368BC036F" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9A7FB382-4AA2-4C34-8FCB-C82368BC036F"><h2 class="- topic/title title sectiontitle">Placement Rules for PLLs and
+        DLLs</h2>
+      
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009E9" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009E9">The following error messages indicate non-compliance with placement rules
+        for PLL and DLL.</p>
+      <div class="table-container"><table class="- topic/table table frame-all" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-26. </span></span><span class="table--title" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-03DFBFD3-7806-4398-B563-4ED0762B1172">Error Messages</span></caption><colgroup><col style="width:13.850415512465371%"/><col style="width:44.87534626038781%"/><col style="width:41.27423822714681%"/></colgroup><thead class="- topic/thead thead">
+            <tr class="- topic/row">
+              <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__1">Error Code</th>
+              <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__2">Error Message</th>
+              <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__3">Description</th>
+            </tr>
+          </thead><tbody class="- topic/tbody tbody">
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__1">PRPF_010</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__2">There can be a maximum of 6 PLL/DLL reference and/or fabric clocks coming
+                driven by the FPGA fabric in the &lt;NW|SW|NE|SE&gt; location.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__3">
+                <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009EF" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009EF">There are four corners (NW, SW, NE, SE) that PLL and DLL
+                  instances can be placed in on each MPF300 or MPF200 FPGA device.</p>
+                <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009F0" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009F0">You can place multiple PLL/DLL instances in each corner.
+                  However, for each corner, the total of PLL/DLL reference clocks and fabric clocks
+                  that the fabric drives must be six or less.</p>
+              </td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__1">PRPF_011</td>
+              <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__2">There can be a maximum of 2 PLL/DLL reference clocks coming driven by the FPGA
+                fabric in the &lt;NW|SW|NE|SE&gt; location.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-EE6E7986-7BAB-4419-9AF4-7940162CDB52__entry__3">For each corner, only two PLL/DLL reference clocks can be driven by the
+                fabric.</td>
+            </tr>
+          </tbody></table></div>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4869715C-9ED8-4C0C-9AA1-B029CED9368D" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4869715C-9ED8-4C0C-9AA1-B029CED9368D"><h2 class="- topic/title title sectiontitle">Placement Rules for RGMII, SGMII, and
+        IOG CDR Interfaces</h2>
+      
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009F9" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-000009F9">Placement rules must be adhered to for RGMII, SGMII, and IOG CDR
+        interfaces. Non-compliance with these rules may result in the following errors.</p>
+      <div class="table-container"><table class="- topic/table table frame-all" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-27. </span></span><span class="table--title" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-A921287E-A989-4700-836D-F4D2056D4ADE">Error Messages</span></caption><colgroup><col style="width:14.224751066856328%"/><col style="width:45.519203413940254%"/><col style="width:40.25604551920342%"/></colgroup><thead class="- topic/thead thead">
+            <tr class="- topic/row">
+              <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__1">Error Code</th>
+              <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__2">Error Message</th>
+              <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__3">Description</th>
+            </tr>
+          </thead><tbody class="- topic/tbody tbody">
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__1">PRPF_001</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__2">Port &lt;port name&gt; for Interface &lt;inst name&gt; must be placed before
+                running Place-and-Route.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__3">All PADs must be placed using the <code class="+ topic/ph pr-d/codeph ph codeph">set_io</code> command.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__1">PRPF_002</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__2">Interface &lt;inst name&gt; has ports that must be assigned to the same
+                physical lane. The current port assignment for this interface does not meet this
+                requirement.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__3">For the SGMII interface and IOG CDR, all RX_ and TX_ PADs must be placed in the
+                same lane. For the RGMII interface, all RX [ ] PADs and the RXCLK PAD must be placed
+                in the same lane.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__1">PRPF_003</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__2">The current Interface &lt;inst name&gt; port assignment requires that pin
+                &lt;pin name (functional pin name)&gt; is reserved. You must not assign any port to
+                that package pin.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__3">For the SGMII interface and IOG CDR, the <code class="+ topic/ph pr-d/codeph ph codeph">DQS_N</code> pin of the lane
+                is reserved for internal use. It must be left unused.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__1">PRPF_004</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__2">You must not assign &lt;inst name&gt; to any location. Use the set_io command
+                to assign any interface port to package pins. This instance is automatically
+                placed.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__3">IOD instances with TRAINING/OVERLAY must not be placed. These are internal
+                instances and will be handled by the tool.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__1">PRPF_005</td>
+              <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__2">Port &lt;port name&gt; for Interface &lt;inst name&gt; must be assigned to
+                &lt;pin name (functional pin name)&gt;.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-D333FBC7-DDCC-4BA3-ACFA-CBD12DA7888C__entry__3">For the RGMII interface, <code class="+ topic/ph pr-d/codeph ph codeph">RX_CLK</code> must be assigned to the DQS (P
+                pad) of the lane.</td>
+            </tr>
+          </tbody></table></div>
+    </section>
+    <section class="- topic/section section" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5A8649F4-3FF5-459F-9B04-E858ACA8D487" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5A8649F4-3FF5-459F-9B04-E858ACA8D487"><h2 class="- topic/title title sectiontitle">Placement Rules for Transceivers</h2>
+      
+      <p class="- topic/p p" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000A0A" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__ID-00000A0A">For PolarFire designs with the transceiver (XCVR) interface, some
+        placement rules apply. Non-compliance with these rules may result in the following errors.
+        For more information about rules for transceivers, see <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/UserGuides/PolarFire_FPGA_and_PolarFire_SoC_FPGA_Transceiver_User_Guide_VB.pdf" target="_blank" rel="external noopener">PolarFire Family Transceiver User Guide</a>
+      </span>. </p>
+      <div class="table-container"><table class="- topic/table table frame-all" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646" data-ofbid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-28. </span></span><span class="table--title" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-624CE27F-6263-4B7F-9A34-29AC1A7621D2">Error Messages</span></caption><colgroup><col style="width:14.025245441795231%"/><col style="width:45.5820476858345%"/><col style="width:40.39270687237027%"/></colgroup><thead class="- topic/thead thead">
+            <tr class="- topic/row">
+              <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__1">Error Code</th>
+              <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__2">Error Message</th>
+              <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__3">Description</th>
+            </tr>
+          </thead><tbody class="- topic/tbody tbody">
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__1">PRPF_007</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__2">TxPLL &lt;inst name&gt; must be placed before running Place-and-Route.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__3">Transceiver Tx PLLs must be placed by the user with the
+                  <code class="+ topic/ph pr-d/codeph ph codeph">set_location</code> command before running Place-and-Route.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__1">PRPF_008</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__2">Dedicated XCVR ports &lt;port name&gt;* must be placed before running
+                Place-and-Route.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__3">The transceiver interface has dedicated ports. These must be placed using the
+                  <code class="+ topic/ph pr-d/codeph ph codeph">set_io</code> command.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__1">PRPF_009</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__2">Dedicated XCVR reference clock port &lt;port name&gt; must be placed before
+                running Place -and-Route.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__3">All transceiver reference clock PADs must be placed using the
+                  <span class="+ topic/keyword sw-d/cmdname keyword cmdname">set_io</span> command before running layout.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__1">PRPF_008</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__2">Dedicated XCVR ports &lt;port name&gt;* must be placed before running Place
+                &amp; Route.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__3">The transceiver interface has dedicated ports. These must be placed using the
+                  <span class="+ topic/keyword sw-d/cmdname keyword cmdname">set_io</span> command.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__1">PRPF_009</td>
+              <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__2">Dedicated XCVR reference clock port &lt;port name&gt; must be placed before
+                running Place &amp; Route.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__3">All transceiver reference clock PADs must be placed using the
+                  <code class="+ topic/ph pr-d/codeph ph codeph">set_io</code> command before running layout.</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__1">PRPF_009</td>
+              <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__2">Dedicated XCVR reference clock port &lt;port name&gt; must be placed before
+                running Place &amp; Route.</td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4969D8A1-9FED-4084-B95B-9DD766BBA646__entry__3">The transceiver interface has dedicated ports. These must be placed using the
+                  <code class="+ topic/ph pr-d/codeph ph codeph">set_io</code> command.</td>
+            </tr>
+          </tbody></table></div>
+    </section>
+  </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C87DC03F-D275-44F2-9CB2-16E18AB92C40" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-C87DC03F-D275-44F2-9CB2-16E18AB92C40">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4AFE843B-03F6-4963-941C-4DF8CF2DA7C3" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4AFE843B-03F6-4963-941C-4DF8CF2DA7C3">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-7CC27E4C-6F2C-4BC9-917B-73282052B63A" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-7CC27E4C-6F2C-4BC9-917B-73282052B63A">Example</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8D0BD730-DE33-43D9-A8A8-540FA889BE64" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-8D0BD730-DE33-43D9-A8A8-540FA889BE64">DDR3 Memory Placement</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__SECTION_TC3_HZL_DRB" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__SECTION_TC3_HZL_DRB">Example</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-36980ED2-33C0-490C-83F2-71B9189B2797" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-36980ED2-33C0-490C-83F2-71B9189B2797">PLL Placement</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-98397C0F-B52A-45A8-85FD-BC3B64F41878" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-98397C0F-B52A-45A8-85FD-BC3B64F41878">DLL Placement</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-F5ED41FA-6909-4B2C-A25D-511FAE297B2A" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-F5ED41FA-6909-4B2C-A25D-511FAE297B2A">TxPLL Placement</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9A7FB382-4AA2-4C34-8FCB-C82368BC036F" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-9A7FB382-4AA2-4C34-8FCB-C82368BC036F">Placement Rules for PLLs and
+        DLLs</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4869715C-9ED8-4C0C-9AA1-B029CED9368D" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-4869715C-9ED8-4C0C-9AA1-B029CED9368D">Placement Rules for RGMII, SGMII, and
+        IOG CDR Interfaces</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5A8649F4-3FF5-459F-9B04-E858ACA8D487" data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3__GUID-5A8649F4-3FF5-459F-9B04-E858ACA8D487">Placement Rules for Transceivers</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

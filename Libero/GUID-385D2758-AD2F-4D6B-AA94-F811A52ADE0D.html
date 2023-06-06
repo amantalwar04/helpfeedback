@@ -1,0 +1,888 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="D-Type Flip-Flop. Figure 14-28.  DFN1 Table 14-57.  DFN1 I/O Input Output D, CLK Q Table 14-58.  DFN1 Truth Table CLK D Q n+1 not Rising X Q n — D D D-Type Flip-Flop with active-low Clear. Figure ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>14.1.2 14.2.2 Sequential Logic</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256"/><meta name="wh-source-relpath" content="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.xml"/><meta name="wh-out-relpath" content="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+PolarFire Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for PolarFire</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D"><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2</ph>
+Sequential Logic</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e15009" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e15009-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15009-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+PolarFire Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859-d10733e15013" class="topicref introduction" data-id="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859-d10733e15013-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022" class="topicref" data-id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F.html#GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.1</ph>
+Combinatorial Logic</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256" class="topicref" data-id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2</ph>
+Sequential Logic</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62-d10733e15264" class="topicref" data-id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62-d10733e15264-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.1</ph>
+DFN1</a></div></div></li><li role="treeitem"><div data-tocid="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4-d10733e15272" class="topicref" data-id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4-d10733e15272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.2</ph>
+DFN1C0</a></div></div></li><li role="treeitem"><div data-tocid="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6-d10733e15280" class="topicref" data-id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6-d10733e15280-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.3</ph>
+DFN1E1</a></div></div></li><li role="treeitem"><div data-tocid="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176-d10733e15288" class="topicref" data-id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176-d10733e15288-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.4</ph>
+DFN1E1C0</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DAB68254-623A-4145-8364-1A24FCDE957A-d10733e15296" class="topicref" data-id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-DAB68254-623A-4145-8364-1A24FCDE957A" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A-d10733e15296-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.5</ph>
+DFN1E1P0</a></div></div></li><li role="treeitem"><div data-tocid="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01-d10733e15304" class="topicref" data-id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01-d10733e15304-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.6</ph>
+DLN1</a></div></div></li><li role="treeitem"><div data-tocid="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B-d10733e15312" class="topicref" data-id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B-d10733e15312-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.7</ph>
+DLN1C0</a></div></div></li><li role="treeitem"><div data-tocid="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829-d10733e15320" class="topicref" data-id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829-d10733e15320-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.8</ph>
+DLN1P0</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C-d10733e15328" class="topicref" data-id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C-d10733e15328-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.9</ph>
+SLE</a></div></div></li><li role="treeitem"><div data-tocid="GUID-933887BB-E22E-49CC-9210-80702F65196C-d10733e15336" class="topicref" data-id="GUID-933887BB-E22E-49CC-9210-80702F65196C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-933887BB-E22E-49CC-9210-80702F65196C" id="GUID-933887BB-E22E-49CC-9210-80702F65196C-d10733e15336-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.10</ph>
+SLE_DEBUG</a></div></div></li><li role="treeitem"><div data-tocid="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C-d10733e15345" class="topicref" data-id="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C" id="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C-d10733e15345-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2.11</ph>
+SLE_INIT</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354" class="topicref" data-id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA.html#GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.3</ph>
+I/O</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484" class="topicref" data-id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4</ph>
+Clocking</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574" class="topicref" data-id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782.html#GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.5</ph>
+Special</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312-d10733e15671" class="topicref" data-id="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312.html" id="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312-d10733e15671-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.6</ph>
+TX_PLL </a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680" class="topicref" data-id="GUID-41402248-97A4-40DE-876D-4022F901B51C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-41402248-97A4-40DE-876D-4022F901B51C.html#GUID-41402248-97A4-40DE-876D-4022F901B51C" id="GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.7</ph>
+RAM1K20</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6286C611-710E-40B7-B39A-D3A4A938917A-d10733e15696" class="topicref" data-id="GUID-6286C611-710E-40B7-B39A-D3A4A938917A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6286C611-710E-40B7-B39A-D3A4A938917A.html" id="GUID-6286C611-710E-40B7-B39A-D3A4A938917A-d10733e15696-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.8</ph>
+RAM64x12</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705" class="topicref" data-id="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC" id="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.9</ph>
+MACC_PA</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722" class="topicref" data-id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.html#GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC" id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.10</ph>
+MACC_PA_BC_ROM</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747" class="topicref" data-id="GUID-92622ACC-B044-4582-AE90-87F588869C4B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92622ACC-B044-4582-AE90-87F588869C4B.html#GUID-92622ACC-B044-4582-AE90-87F588869C4B" id="GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.11</ph>
+Post-Layout Macros</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e16127" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e16127-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B.html" id="tocId-d10733e16127-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2</ph>
+SmartFusion2 and IGLOO2 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2 and IGLOO2</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e16943" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e16943-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197.html#GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197" id="tocId-d10733e16943-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.3</ph>
+RTG4 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for RTG4</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D__GUID-6F697ABF-65C4-4E82-A012-59DF6E517E1B"><article class="nested0" aria-labelledby="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D__GUID-6F697ABF-65C4-4E82-A012-59DF6E517E1B" id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D">
+   <h1 class="- topic/title title topictitle1" id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D__GUID-6F697ABF-65C4-4E82-A012-59DF6E517E1B" style="display:inline-block">14.1.2 Sequential Logic</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Sequential%20Logic">(Ask a Question)</a>
+<article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__GUID-636ACD4C-6DE9-4547-8F7A-92F83CE354DF" xml:lang="en-US" lang="en-US" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62">
+   <h2 class="- topic/title title topictitle2" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__GUID-636ACD4C-6DE9-4547-8F7A-92F83CE354DF" style="display:inline-block">14.1.2.1 DFN1</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DFN1">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001917" data-ofbid="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001917">D-Type Flip-Flop.<figure class="- topic/fig fig fignone" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__FIG_E4X_3KJ_L4B" data-ofbid="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__FIG_E4X_3KJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-28. <span id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__GUID-DAEDBAA3-61B6-4B60-9175-658A5C72098A" class="fig--title">DFN1</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__IMAGE_QR1_BBM_1QB" src="GUID-D47D7F38-2478-472A-8A7A-61AD9CE1318D-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000191D" data-ofbid="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000191D" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-57. </span></span><span class="table--title" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000191F">DFN1 I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001925">
+               <tr class="- topic/row" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001926">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001927">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001929">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000192B">
+               <tr class="- topic/row" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000192C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000192D" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001927">D, CLK</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000192F" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001929">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001931" data-ofbid="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001931" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-58. </span></span><span class="table--title" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001933">DFN1 Truth Table</span></caption><colgroup><col style="width:0.92708in"/><col style="width:0.92708in"/><col style="width:0.92708in"/></colgroup><thead class="- topic/thead thead" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193A">
+               <tr class="- topic/row" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193B">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193C">CLK</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193E">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001940">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001942">n+1</sub></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001943">
+               <tr class="- topic/row" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001944">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001945" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193C">not Rising</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001947" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193E">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001949" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001940">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000194B">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000194C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000194D" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193C">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000194F" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-0000193E">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001951" headers="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62__ID-00001940">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__GUID-B4B9562F-0CAE-4E7D-9FB1-81A8025A992A" xml:lang="en-US" lang="en-US" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4">
+   <h2 class="- topic/title title topictitle2" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__GUID-B4B9562F-0CAE-4E7D-9FB1-81A8025A992A" style="display:inline-block">14.1.2.2 DFN1C0</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DFN1C0">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001955" data-ofbid="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001955">D-Type Flip-Flop with active-low Clear.<figure class="- topic/fig fig fignone" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__FIG_VDD_NKJ_L4B" data-ofbid="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__FIG_VDD_NKJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-29. <span id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__GUID-16A2D2F1-A4BB-42C2-BE74-39B77BA2A8EF" class="fig--title">DFN1C0</span></span></figcaption>
+            
+            <img class="- topic/image image break" src="GUID-E54E6DF5-7613-4CD3-B190-155FEB72D0E3-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000195A" data-ofbid="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000195A" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-59. </span></span><span class="table--title" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000195C">DFN1C0 I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001962">
+               <tr class="- topic/row" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001963">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001964">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001966">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001968">
+               <tr class="- topic/row" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001969">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000196A" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001964">D, CLK, CLR</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000196C" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001966">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000196E" data-ofbid="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000196E" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-60. </span></span><span class="table--title" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001970">DFN1C0 Truth Table</span></caption><colgroup><col style="width:0.81432in"/><col style="width:1.56432in"/><col style="width:0.81432in"/><col style="width:0.81432in"/></colgroup><thead class="- topic/thead thead" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001978">
+               <tr class="- topic/row" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001979">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197A">CLR</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197C">CLK</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197E">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001980">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001982">n+1</sub></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001983">
+               <tr class="- topic/row" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001984">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001985" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197A">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001987" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197C">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001989" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197E">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000198B" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001980">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000198D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000198E" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197A">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001990" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197C">not Rising</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001992" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197E">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001994" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001980">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001996">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001997">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001998" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197A">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000199A" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197C">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000199C" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000197E">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-0000199E" headers="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4__ID-00001980">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__GUID-303E359F-6C88-4B50-A21E-C2D5D9BCFA21" xml:lang="en-US" lang="en-US" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6">
+   <h2 class="- topic/title title topictitle2" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__GUID-303E359F-6C88-4B50-A21E-C2D5D9BCFA21" style="display:inline-block">14.1.2.3 DFN1E1</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DFN1E1">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019A2" data-ofbid="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019A2">D-Type Flip-Flop with active high Enable.<figure class="- topic/fig fig fignone" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__FIG_M2Q_4KJ_L4B" data-ofbid="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__FIG_M2Q_4KJ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__FIG_PCW_PKJ_L4B" data-ofbid="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__FIG_PCW_PKJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-30. <span id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__GUID-99571A25-63C5-4384-A23B-DED4660801FB" class="fig--title">DFN1E1</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__IMAGE_QCW_PKJ_L4B" src="GUID-A2B0A20F-BA99-464D-A817-07D35BD70D2C-low.png" height="297" width="420"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019A7" data-ofbid="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019A7" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-61. </span></span><span class="table--title" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019A9">DFN1E1 I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019AF">
+               <tr class="- topic/row" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B0">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B1">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B3">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B5">
+               <tr class="- topic/row" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B6">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B7" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B1">D, E, CLK</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B9" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019B3">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019BB" data-ofbid="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019BB" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-62. </span></span><span class="table--title" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019BD">DFN1E1 Truth Table</span></caption><colgroup><col style="width:0.6164in"/><col style="width:1.39765in"/><col style="width:0.89765in"/><col style="width:0.89765in"/></colgroup><thead class="- topic/thead thead" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C5">
+               <tr class="- topic/row" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C6">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C7">E</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C9">CLK</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CB">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CD">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CF">n+1</sub></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019D0">
+               <tr class="- topic/row" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019D1">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019D2" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C7">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019D4" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C9">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019D6" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CB">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019D8" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CD">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019DA">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019DB">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019DC" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C7">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019DE" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C9">not Rising</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019E0" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CB">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019E2" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CD">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019E4">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019E5">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019E6" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C7">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019E8" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019C9">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019EA" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CB">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019EC" headers="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6__ID-000019CD">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__GUID-781548BD-878B-4437-B1D7-4A9812D6747F" xml:lang="en-US" lang="en-US" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176">
+   <h2 class="- topic/title title topictitle2" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__GUID-781548BD-878B-4437-B1D7-4A9812D6747F" style="display:inline-block">14.1.2.4 DFN1E1C0</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DFN1E1C0">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019F0" data-ofbid="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019F0">D-Type Flip-Flop, with active-high Enable and active-low Clear.<figure class="- topic/fig fig fignone" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__FIG_XPJ_SKJ_L4B" data-ofbid="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__FIG_XPJ_SKJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-31. <span id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__GUID-ABC822BD-40B1-4F2B-BBBB-3548A2B0BE7A" class="fig--title">DFN1E1C0</span></span></figcaption>
+            
+            <img class="- topic/image image break" src="GUID-192B71FD-7F0D-4B9D-B964-041261C6E029-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019F5" data-ofbid="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019F5" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-63. </span></span><span class="table--title" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019F7">DFN1E1C0 I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019FD">
+               <tr class="- topic/row" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019FE">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019FF">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A01">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A03">
+               <tr class="- topic/row" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A04">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A05" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-000019FF">CLR, D, E, CLK</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A07" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A01">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A09" data-ofbid="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A09" data-cols="5"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-64. </span></span><span class="table--title" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A0B">DFN1E1C0 Truth Table</span></caption><colgroup><col style="width:1.04722in"/><col style="width:1.04722in"/><col style="width:1.04722in"/><col style="width:1.04722in"/><col style="width:1.04722in"/></colgroup><thead class="- topic/thead thead" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A14">
+               <tr class="- topic/row" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A15">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A16">CLR</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A18">E</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1A">CLK</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1C">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1E">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A20">n+1</sub></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A21">
+               <tr class="- topic/row" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A22">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A23" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A16">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A25" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A18">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A27" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1A">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A29" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1C">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A2B" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1E">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A2D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A2E" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A16">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A30" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A18">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A32" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1A">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A34" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1C">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A36" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1E">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A38">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A39">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A3A" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A16">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A3C" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A18">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A3E" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1A">not Rising</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A40" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1C">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A42" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1E">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A44">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A45">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A46" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A16">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A48" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A18">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A4A" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1A">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A4C" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1C">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A4E" headers="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176__ID-00001A1E">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__GUID-8BE9FD3D-AE3F-4DAE-8892-5234D6F94E1D" xml:lang="en-US" lang="en-US" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A">
+   <h2 class="- topic/title title topictitle2" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__GUID-8BE9FD3D-AE3F-4DAE-8892-5234D6F94E1D" style="display:inline-block">14.1.2.5 DFN1E1P0</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DFN1E1P0">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A52" data-ofbid="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A52">D-Type Flip-Flop with active-high Enable and active-low Preset.<figure class="- topic/fig fig fignone" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__FIG_SQH_VKJ_L4B" data-ofbid="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__FIG_SQH_VKJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-32. <span id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__GUID-FACC016D-3B98-4CE2-AACA-A54D861B497C" class="fig--title">DFN1E1P0</span></span></figcaption>
+            
+            <img class="- topic/image image break" src="GUID-104677AE-3D09-4A54-9340-AEE240840962-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A57" data-ofbid="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A57" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-65. </span></span><span class="table--title" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A59">DFN1E1P0 I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A5F">
+               <tr class="- topic/row" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A60">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A61">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A63">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A65">
+               <tr class="- topic/row" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A66">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A67" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A61">D, E, PRE, CLK</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A69" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A63">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A6B" data-ofbid="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A6B" data-cols="5"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-66. </span></span><span class="table--title" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A6D">DFN1E1P0 Truth Table</span></caption><colgroup><col style="width:1.03212in"/><col style="width:1.03212in"/><col style="width:1.03212in"/><col style="width:1.03212in"/><col style="width:1.03212in"/></colgroup><thead class="- topic/thead thead" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A76">
+               <tr class="- topic/row" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A77">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A78">PRE</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7A">E</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7C">CLK</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7E">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A80">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A82">n+1</sub></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A83">
+               <tr class="- topic/row" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A84">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A85" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A78">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A87" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7A">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A89" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7C">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A8B" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7E">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A8D" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A80">1</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A8F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A90" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A78">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A92" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7A">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A94" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7C">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A96" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7E">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A98" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A80">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A9A">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A9B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A9C" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A78">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A9E" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7A">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AA0" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7C">not Rising</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AA2" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7E">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AA4" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A80">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AA6">n</sub></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AA7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AA8" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A78">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AAA" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7A">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AAC" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7C">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AAE" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A7E">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001AB0" headers="GUID-DAB68254-623A-4145-8364-1A24FCDE957A__ID-00001A80">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__GUID-FF8CEB8E-B294-4F6F-8DDA-257D757DC190" xml:lang="en-US" lang="en-US" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01">
+   <h2 class="- topic/title title topictitle2" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__GUID-FF8CEB8E-B294-4F6F-8DDA-257D757DC190" style="display:inline-block">14.1.2.6 DLN1</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DLN1">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B00" data-ofbid="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B00">Data Latch.<figure class="- topic/fig fig fignone" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__FIG_PJP_ZKJ_L4B" data-ofbid="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__FIG_PJP_ZKJ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__FIG_Y4Q_1LJ_L4B" data-ofbid="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__FIG_Y4Q_1LJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-33. <span id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__GUID-4B7472FF-5BAA-44F7-8BC9-21554DCA22CE" class="fig--title">DLN1</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__IMAGE_Z4Q_1LJ_L4B" src="GUID-8891F4FF-4D52-4DCC-9A10-2CD47889FFA1-low.png" height="297" width="420"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B05" data-ofbid="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B05" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-67. </span></span><span class="table--title" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B07">DLN1 I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B0D">
+               <tr class="- topic/row" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B0E">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B0F">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B11">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B13">
+               <tr class="- topic/row" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B14">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B15" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B0F">D, G</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B17" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B11">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B19" data-ofbid="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B19" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-68. </span></span><span class="table--title" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B1B">DLN1 Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.5in"/></colgroup><thead class="- topic/thead thead" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B22">
+               <tr class="- topic/row" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B23">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B24">G</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B26">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B28">Q</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B2A">
+               <tr class="- topic/row" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B2B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B2C" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B24">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B2E" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B26">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B30" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B28">Q</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B32">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B33" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B24">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B35" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B26">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B37" headers="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01__ID-00001B28">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__GUID-4B485877-AA2B-439F-8E42-7F7A6180C087" xml:lang="en-US" lang="en-US" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B">
+   <h2 class="- topic/title title topictitle2" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__GUID-4B485877-AA2B-439F-8E42-7F7A6180C087" style="display:inline-block">14.1.2.7 DLN1C0</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DLN1C0">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B3B" data-ofbid="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B3B">Data Latch with active-low Clear.<figure class="- topic/fig fig fignone" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__FIG_JDH_DLJ_L4B" data-ofbid="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__FIG_JDH_DLJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-34. <span id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__GUID-075D91F8-5F25-4FC3-A617-B46E8EB43F62" class="fig--title">DLN1C0</span></span></figcaption>
+            
+            <img class="- topic/image image break" src="GUID-A6E4E3C0-F3B0-46BC-A05C-D5CF12E5AAF9-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B41" data-ofbid="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B41" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-69. </span></span><span class="table--title" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B43">I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B49">
+               <tr class="- topic/row" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B4A">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B4B">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B4D">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B4F">
+               <tr class="- topic/row" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B50">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B51" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B4B">CLR, D, G</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B53" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B4D">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B55" data-ofbid="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B55" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-70. </span></span><span class="table--title" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B57">Truth Table</span></caption><colgroup><col style="width:0.51367in"/><col style="width:0.51367in"/><col style="width:0.51367in"/><col style="width:0.51367in"/></colgroup><thead class="- topic/thead thead" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B5F">
+               <tr class="- topic/row" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B60">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B61">CLR</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B63">G</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B65">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B67">Q</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B69">
+               <tr class="- topic/row" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B6A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B6B" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B61">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B6D" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B63">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B6F" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B65">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B71" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B67">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B73">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B74" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B61">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B76" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B63">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B78" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B65">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B7A" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B67">Q</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B7C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B7D" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B61">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B7F" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B63">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B81" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B65">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B83" headers="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B__ID-00001B67">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__GUID-8C87C6EF-5D79-4D0B-B20C-89963CA5FF01" xml:lang="en-US" lang="en-US" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829">
+   <h2 class="- topic/title title topictitle2" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__GUID-8C87C6EF-5D79-4D0B-B20C-89963CA5FF01" style="display:inline-block">14.1.2.8 DLN1P0</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=DLN1P0">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B87" data-ofbid="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B87">Data Latch with active-low Preset.<figure class="- topic/fig fig fignone" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__FIG_HSV_FLJ_L4B" data-ofbid="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__FIG_HSV_FLJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-35. <span id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__GUID-5326BA5C-B73B-4D07-93FC-47CF49D61AD7" class="fig--title">DLN1P0</span></span></figcaption>
+            
+            <img class="- topic/image image break" src="GUID-268FFA37-735F-4505-9A52-3EA6DBEF3990-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B8C" data-ofbid="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B8C" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-71. </span></span><span class="table--title" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B8E">DLN1C0 I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B94">
+               <tr class="- topic/row" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B95">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B96">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B98">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B9A">
+               <tr class="- topic/row" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B9B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B9C" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B96">D, G, PRE</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B9E" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001B98">Q</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BA0" data-ofbid="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BA0" data-cols="4"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-72. </span></span><span class="table--title" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BA2">DLN1C0 Truth Table</span></caption><colgroup><col style="width:0.51367in"/><col style="width:0.51367in"/><col style="width:0.51367in"/><col style="width:0.51367in"/></colgroup><thead class="- topic/thead thead" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAA">
+               <tr class="- topic/row" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAB">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAC">PRE</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAE">G</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB0">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB2">Q</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB4">
+               <tr class="- topic/row" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB5">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB6" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAC">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB8" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAE">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BBA" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BBC" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB2">1</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BBE">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BBF" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAC">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BC1" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAE">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BC3" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BC5" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB2">Q</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BC7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BC8" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAC">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BCA" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BAE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BCC" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB0">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BCE" headers="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829__ID-00001BB2">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__GUID-8FDB2BD5-A076-4331-8AD5-E71CD2C84BB8" xml:lang="en-US" lang="en-US" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C">
+   <h2 class="- topic/title title topictitle2" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__GUID-8FDB2BD5-A076-4331-8AD5-E71CD2C84BB8" style="display:inline-block">14.1.2.9 SLE</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SLE">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001367" data-ofbid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001367">Sequential Logic Element.<figure class="- topic/fig fig fignone" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__FIG_UVP_SGJ_L4B" data-ofbid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__FIG_UVP_SGJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-36. <span id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__GUID-DACCBC5D-0048-47D0-B62E-816F0B8948CF" class="fig--title">SLE</span></span></figcaption>
+            
+            <img class="- topic/image image break" src="GUID-5BC6F810-F522-4D89-B011-A5A7A6527846-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000136C" data-ofbid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000136C" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-73. </span></span><span class="table--title" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000136E">SLE I/O</span></caption><colgroup><col style="width:1.12935in"/><col style="width:2.69185in"/><col style="width:0.95573in"/></colgroup><thead class="- topic/thead thead" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001375">
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001376">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377" colspan="2">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001379">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000137B">
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000137C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000137D" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Name</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000137F" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Function</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001381" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001379" rowspan="9">Q</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001383">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001384" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001386" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Data input</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001388">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001389" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">CLK</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000138B" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Clock input</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000138D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000138E" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001390" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Active-High CLK enable</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001392">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001393" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">ALn</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001395" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Asynchronous Load. This active-Low signal
+                     either sets the register or clears the register depending on the value of
+                     ADn.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001397">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001398" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">ADn<sup class="+ topic/ph hi-d/sup ph sup"><a class="- topic/xref xref" href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AB">1</a></sup></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000139A" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Static asynchronous load data. When ALn is active, Q goes to the complement of ADn.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000139C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000139D" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">SLn</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000139F" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Synchronous load. This active-Low signal
+                     either sets the register or clears the register depending on the value of SD,
+                     at the rising edge of clock.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013A1">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013A2" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">SD<a class="- topic/xref xref" href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AB">1</a></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013A4" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Static synchronous load data. When SLn is
+                     active (that is, low), Q goes to the value of SD at the rising edge of
+                     CLK.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013A6">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013A7" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">LAT<a class="- topic/xref xref" href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AB">1</a></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013A9" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001377">Active-High Latch Enable. This signal enables
+                     latch mode when high and register mode when low.</td>
+               </tr>
+            </tbody></table></div>
+      <div class="- topic/p p" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AB" data-ofbid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AB">
+         <ol class="- topic/ol ol" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__GUID-5626E378-D197-4452-BBF8-38DE29963120" data-ofbid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__GUID-5626E378-D197-4452-BBF8-38DE29963120">
+            <li class="- topic/li li" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__GUID-6B215039-4938-455B-990B-999D4E4A3E6F" data-ofbid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__GUID-6B215039-4938-455B-990B-999D4E4A3E6F">ADn, SD, and LAT are static signals defined at design time and need to be tied to 0
+               or 1.</li>
+         </ol>
+      </div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AD" data-ofbid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AD" data-cols="9"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-74. </span></span><span class="table--title" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013AF">SLE Truth Table</span></caption><colgroup><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.79514in"/><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:0.5in"/><col style="width:1.01in"/></colgroup><thead class="- topic/thead thead" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BC">
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BD">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">ALn</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">ADn</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">LAT</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">CLK</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">EN</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">SLn</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">SD</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">D</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">Q<sub class="+ topic/ph hi-d/sub ph sub" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013D0">n+1</sub></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013D1">
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013D2">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013D3" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013D5" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">ADn</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013D7" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013D9" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013DB" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013DD" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013DF" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013E1" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013E3" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">!ADn</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013E5">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013E6" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013E8" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013EA" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013EC" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">Not rising</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013EE" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013F0" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013F2" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013F4" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013F6" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">Qn</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013F8">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013F9" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013FB" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013FD" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013FF" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001401" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001403" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001405" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001407" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001409" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">Qn</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000140B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000140C" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000140E" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001410" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001412" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001414" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001416" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001418" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">SD</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000141A" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000141C" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">SD</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000141E">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000141F" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001421" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001423" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001425" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">—</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001427" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001429" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000142B" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000142D" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000142F" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">D</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001431">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001432" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001434" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001436" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001438" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000143A" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000143C" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000143E" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001440" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001442" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">Qn</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001444">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001445" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001447" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001449" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000144B" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000144D" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000144F" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001451" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001453" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001455" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">Qn</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001457">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001458" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000145A" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000145C" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000145E" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001460" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001462" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001464" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">SD</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001466" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001468" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">SD</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000146A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000146B" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013BE">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000146D" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C0">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000146F" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C2">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001471" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C4">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001473" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C6">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001475" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013C8">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001477" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CA">X</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-00001479" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CC">D</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-0000147B" headers="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C__ID-000013CE">D</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-933887BB-E22E-49CC-9210-80702F65196C__POST-LAYOUT_MACROS_SLE_DEBUG" xml:lang="en-US" lang="en-US" id="GUID-933887BB-E22E-49CC-9210-80702F65196C"><h2 class="- topic/title title topictitle2" id="GUID-933887BB-E22E-49CC-9210-80702F65196C__POST-LAYOUT_MACROS_SLE_DEBUG" style="display:inline-block">14.1.2.10 SLE_DEBUG</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SLE_DEBUG">(Ask a Question)</a><div class="- topic/body reference/refbody body refbody"><section class="- topic/section section" id="GUID-933887BB-E22E-49CC-9210-80702F65196C__GUID-992DE178-3128-4B91-AA33-A0ECA1DC6E23" data-ofbid="GUID-933887BB-E22E-49CC-9210-80702F65196C__GUID-992DE178-3128-4B91-AA33-A0ECA1DC6E23"><p class="- topic/p p">The SLE_DEBUG Macro is used to communicate with SmartDebug. The SLE_DEBUG mechanism gives ability to run synthesis while preserving a set of registers. It provides the ability to identify, rename, and classify registers for SmartDebug.</p></section></div></article><article class="- topic/topic reference/reference topic reference nested1" aria-labelledby="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C__POST-LAYOUT_MACROS_SLE_INIT" xml:lang="en-US" lang="en-US" id="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C"><h2 class="- topic/title title topictitle2" id="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C__POST-LAYOUT_MACROS_SLE_INIT" style="display:inline-block">14.1.2.11 SLE_INIT</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SLE_INIT">(Ask a Question)</a><div class="- topic/body reference/refbody body refbody"><section class="- topic/section section" id="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C__GUID-DFD963CE-5E3D-4BB5-B8BE-C7BD3974DCBB" data-ofbid="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C__GUID-DFD963CE-5E3D-4BB5-B8BE-C7BD3974DCBB"><p class="- topic/p p">Refer to <a class="- topic/xref xref" href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C"><span><span>14.1.2.9 </span><span>SLE</span></span></a> macro for more
+                                details.</p></section></div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62" data-tocid="GUID-3334FF3D-F58E-4ECA-976B-115E65CD8E62">14.1.2.1 DFN1</a></li><li class="topic-item"><a href="#GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4" data-tocid="GUID-38454296-38DB-4ECD-9ECF-0093DADE23E4">14.1.2.2 DFN1C0</a></li><li class="topic-item"><a href="#GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6" data-tocid="GUID-5AA4F7BC-8A72-413F-BE49-B0D35B3DDDC6">14.1.2.3 DFN1E1</a></li><li class="topic-item"><a href="#GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176" data-tocid="GUID-77576906-DE8B-4A0B-8C80-B9D19B5D9176">14.1.2.4 DFN1E1C0</a></li><li class="topic-item"><a href="#GUID-DAB68254-623A-4145-8364-1A24FCDE957A" data-tocid="GUID-DAB68254-623A-4145-8364-1A24FCDE957A">14.1.2.5 DFN1E1P0</a></li><li class="topic-item"><a href="#GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01" data-tocid="GUID-406BE8F8-402B-4EA7-AED4-71D8BBBDEF01">14.1.2.6 DLN1</a></li><li class="topic-item"><a href="#GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B" data-tocid="GUID-964BF360-A5CD-49B2-9163-DCE3C2C47E7B">14.1.2.7 DLN1C0</a></li><li class="topic-item"><a href="#GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829" data-tocid="GUID-32ECC3B5-3122-4FFB-B3E5-A065983E1829">14.1.2.8 DLN1P0</a></li><li class="topic-item"><a href="#GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C" data-tocid="GUID-6D00EB75-CAF2-401C-BA59-4C630E3F956C">14.1.2.9 SLE</a></li><li class="topic-item"><a href="#GUID-933887BB-E22E-49CC-9210-80702F65196C" data-tocid="GUID-933887BB-E22E-49CC-9210-80702F65196C">14.1.2.10 SLE_DEBUG</a></li><li class="topic-item"><a href="#GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C" data-tocid="GUID-00644110-EBAB-4D5E-8B0B-6324FBDF158C">14.1.2.11 SLE_INIT</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

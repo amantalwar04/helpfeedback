@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>8.1.1<\/ph>\nSupported Families","href":"GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-20135110-E7E7-45AD-A2C8-07A0AC1CF8DB","attributes":{"data-id":"GUID-20135110-E7E7-45AD-A2C8-07A0AC1CF8DB"},"menu":{"hasChildren":false},"tocID":"GUID-20135110-E7E7-45AD-A2C8-07A0AC1CF8DB-d10733e6757","topics":[]}]});

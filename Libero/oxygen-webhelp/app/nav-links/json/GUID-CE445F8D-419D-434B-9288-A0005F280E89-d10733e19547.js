@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.3.1<\/ph>\nProject Manager Tcl Commands","href":"Chunk2025038347.html#Chunk2025038347","attributes":{"data-id":"Chunk2025038347"},"menu":{"hasChildren":false},"tocID":"Chunk2025038347-d10733e19555","next":"Chunk2025038347-d10733e19555"}]});

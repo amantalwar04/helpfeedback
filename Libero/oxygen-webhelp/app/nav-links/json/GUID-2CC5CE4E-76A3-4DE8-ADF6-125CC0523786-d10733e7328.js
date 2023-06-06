@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>9.1.3.1<\/ph>\nExport Physical Design Constraint (PDC)","href":"GUID-5FFBA9FB-DFEB-46D5-B2FB-732E7C6206AD.html#GUID-689AC512-461D-4BFB-B5C5-3B4D0A440F39","attributes":{"data-id":"GUID-689AC512-461D-4BFB-B5C5-3B4D0A440F39"},"menu":{"hasChildren":false},"tocID":"GUID-689AC512-461D-4BFB-B5C5-3B4D0A440F39-d10733e7336","topics":[]}]});

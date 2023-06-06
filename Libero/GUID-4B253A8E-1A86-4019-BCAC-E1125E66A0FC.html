@@ -1,0 +1,864 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The MACC_PA_BC_ROM macro extends the functionality of the MACC_PA macro to provide a 16x18 ROM at the A input along with a pipelined output of B for cascading. The additional features of the ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>14.1.10 MACC_PA_BC_ROM</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722"/><meta name="wh-source-relpath" content="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.xml"/><meta name="wh-out-relpath" content="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+PolarFire Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for PolarFire</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC"><div class="title"><a href="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.html#GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.10</ph>
+MACC_PA_BC_ROM</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e15009" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e15009-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15009-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+PolarFire Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859-d10733e15013" class="topicref introduction" data-id="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859-d10733e15013-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022" class="topicref" data-id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F.html#GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e15022-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.1</ph>
+Combinatorial Logic</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256" class="topicref" data-id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D.html#GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e15256-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.2</ph>
+Sequential Logic</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354" class="topicref" data-id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA.html#GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e15354-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.3</ph>
+I/O</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484" class="topicref" data-id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A.html#GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e15484-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.4</ph>
+Clocking</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574" class="topicref" data-id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782.html#GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e15574-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.5</ph>
+Special</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312-d10733e15671" class="topicref" data-id="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312.html" id="GUID-FAD56886-DFDA-424F-B0A8-D2EC1FFFF312-d10733e15671-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.6</ph>
+TX_PLL </a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680" class="topicref" data-id="GUID-41402248-97A4-40DE-876D-4022F901B51C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-41402248-97A4-40DE-876D-4022F901B51C.html#GUID-41402248-97A4-40DE-876D-4022F901B51C" id="GUID-41402248-97A4-40DE-876D-4022F901B51C-d10733e15680-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.7</ph>
+RAM1K20</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6286C611-710E-40B7-B39A-D3A4A938917A-d10733e15696" class="topicref" data-id="GUID-6286C611-710E-40B7-B39A-D3A4A938917A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6286C611-710E-40B7-B39A-D3A4A938917A.html" id="GUID-6286C611-710E-40B7-B39A-D3A4A938917A-d10733e15696-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.8</ph>
+RAM64x12</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705" class="topicref" data-id="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC" id="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC-d10733e15705-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.9</ph>
+MACC_PA</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722" class="topicref" data-id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.html#GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC" id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC-d10733e15722-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.10</ph>
+MACC_PA_BC_ROM</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A-d10733e15730" class="topicref" data-id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.html#GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A-d10733e15730-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.10.1</ph>
+Features</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6-d10733e15738" class="topicref" data-id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC.html#GUID-6C623429-22EB-4403-8D48-A6D855C18FE6" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6-d10733e15738-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.10.2</ph>
+Parameters</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747" class="topicref" data-id="GUID-92622ACC-B044-4582-AE90-87F588869C4B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92622ACC-B044-4582-AE90-87F588869C4B.html#GUID-92622ACC-B044-4582-AE90-87F588869C4B" id="GUID-92622ACC-B044-4582-AE90-87F588869C4B-d10733e15747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1.11</ph>
+Post-Layout Macros</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e16127" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e16127-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B.html" id="tocId-d10733e16127-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2</ph>
+SmartFusion2 and IGLOO2 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2 and IGLOO2</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e16943" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e16943-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197.html#GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197" id="tocId-d10733e16943-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.3</ph>
+RTG4 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for RTG4</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC__GUID-9698CFEF-4DB3-433E-ABF0-25FC18EFC6B0"><article class="nested0" aria-labelledby="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC__GUID-9698CFEF-4DB3-433E-ABF0-25FC18EFC6B0" id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC">
+   <h1 class="- topic/title title topictitle1" id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC__GUID-9698CFEF-4DB3-433E-ABF0-25FC18EFC6B0" style="display:inline-block">14.1.10 MACC_PA_BC_ROM</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=MACC_PA_BC_ROM">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC__ID-0000102F" data-ofbid="GUID-4B253A8E-1A86-4019-BCAC-E1125E66A0FC__ID-0000102F">The MACC_PA_BC_ROM macro extends the functionality of the MACC_PA macro to provide a 16x18 ROM at the A input along with a pipelined output of B for cascading.</p>
+   </div>
+<article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__GUID-E0DB8788-1017-43AB-802F-FFD65F4D4823" xml:lang="en-US" lang="en-US" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A">
+   <h2 class="- topic/title title topictitle2" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__GUID-E0DB8788-1017-43AB-802F-FFD65F4D4823" style="display:inline-block">14.1.10.1 Features</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Features">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001032" data-ofbid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001032">The additional features of the MACC_PA_BC_ROM block are as follows:</p>
+      <ul class="- topic/ul ul">
+         <li class="- topic/li li" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001033" data-ofbid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001033">Selection of the A input from a 16 x 18 ROM.</li>
+         <li class="- topic/li li" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001035" data-ofbid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001035">Additional pipelining of the B input for cascading to the next Math block or output to the fabric.</li>
+         <li class="- topic/li li" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001037" data-ofbid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001037">Due to routing bandwidth limitations, either result P or B2 output can be used in the same MACC_PA_BC_ROM block.</li>
+      </ul>
+      <div class="- topic/p p" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001039" data-ofbid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__ID-00001039">The following table shows a simplified block diagram of the MACC_PA_BC_ROM
+            block.<figure class="- topic/fig fig fignone" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__FIG_C1Q_ZSW_L4B" data-ofbid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__FIG_C1Q_ZSW_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-70. <span id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__GUID-4DA67C7A-9CFC-4451-8A9F-59DCEBBFF3C3" class="fig--title">SIimplified Block Diagram of
+               MACC_PA</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A__IMAGE_UQZ_P5K_V4B" src="GUID-DB6F8FF3-BDAB-404D-A7ED-5939A53F3AEF-low.jpg"/>
+         </figure></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__GUID-E1B8DF3F-982B-4709-8969-29DCE0E1A81A" xml:lang="en-US" lang="en-US" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6">
+   <h2 class="- topic/title title topictitle2" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__GUID-E1B8DF3F-982B-4709-8969-29DCE0E1A81A" style="display:inline-block">14.1.10.2 Parameters</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Parameters">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001042" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001042">There is one parameter, INIT, to hold the 16x18 ROM content as a linear array. The first 18 bits is word 0, the next 18 bits is word 1, and so on.</p>
+      <div class="table-container"><table class="- topic/table table" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001043" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001043" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-148. </span></span><span class="table--title" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001045">MACC_PA_BC_ROM Parameter Descriptions </span></caption><colgroup><col style="width:0.81481in"/><col style="width:4.33046in"/><col style="width:1.37037in"/></colgroup><thead class="- topic/thead thead" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000104C">
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000104D">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000104E">Parameter</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001050">Dimensions</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001052">Description</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001054">
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001055">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001056" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000104E">INIT</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001058" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001050">parameter [287:0] INIT = {<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000105A" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000105A">18'h0, 18'h0, 18'h0, 18'h0, 18'h0, 18'h0, 18'h0, 18'h0,</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000105B" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000105B">18'h0, 18'h0, 18'h0, 18'h0, 18'h0, 18'h0, 18'h0, 18'h0</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000105C" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000105C">};</p></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000105E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001052">16 x 18 ROM content specified in Verilog</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001060">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001061" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000104E">INIT</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001063" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001050">generic map(INIT =&gt; (<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001065" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001065">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”&amp;</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001066" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001066">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”&amp;</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001067" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001067">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”&amp;</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001068" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001068">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”&amp;</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001069" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001069">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”&amp;</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106A" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106A">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”&amp;</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106B" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106B">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”&amp;</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106C" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106C">B“00_0000_0000_0000_0000”&amp; B“00_0000_0000_0000_0000”)</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106D" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106D">)</p></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000106F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001052">16 x 18 ROM content specified in VHDL</td>
+               </tr>
+            </tbody></table></div>
+      <p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001071" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001071">PORT LIST</p>
+      <div class="table-container"><table class="- topic/table table" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001072" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001072" data-cols="5"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-149. </span></span><span class="table--title" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001074">MACC_PA_BC_ROM Pin Descriptions </span></caption><colgroup><col style="width:1.53403in"/><col style="width:0.69722in"/><col style="width:0.59306in"/><col style="width:0.59167in"/><col style="width:3.08889in"/></colgroup><thead class="- topic/thead thead">
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107E">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">Port Name</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Direction</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Type</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Polarity</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Description</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107D">
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001089">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000108A" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">DOTP</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000108C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000108E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001090" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001092" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Dot-product mode.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001094" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001094">When DOTP = 1, MACC_PA_BC_ROM block performs Dot-product of two pairs of 9-bit operands.</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001095" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001095">•   SIMD must not be 1.</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001096" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001096">•   C[8:0] must be connected to CARRYIN.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001097">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001098" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">SIMD</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000109A" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000109C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000109E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">SIMD mode.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A2" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A2">When SIMD = 1, MACC_PA_BC_ROM block performs dual independent multiplication of two pairs of 9-bit operands.</p><ul class="- topic/ul ul">
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A3" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A3">DOTP must not be 1.</li>
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A5" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A5">ARSHFT17 must be 0.</li>
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A7" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A7">D[8:0] must be 0.</li>
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A9" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010A9">C[17:0] must be 0.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010AB" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010AB">E[17:0] must be
+                              0. Refer to <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D3E"><span>Table 14-142</span></a> to see how</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010AD" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010AD">operand E is
+                              obtained from P, CDIN or 0.</p></li>
+                     </ul></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010AE">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010AF" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">OVFL_CARRYOUT_SEL</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010B1" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010B3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010B5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010B7" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Generate OVERFLOW or CARRYOUT with result P.<ul class="- topic/ul ul">
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010B9" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010B9">OVERFLOW when OVFL_CARRYOUT_SEL = 0</li>
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010BB" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010BB">CARRYOUT when OVFL_CARRYOUT_SEL = 1</li>
+                     </ul></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010C0">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010C1" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CLK</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010C3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010C5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010C7" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Rising edge</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010C9" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Clock for A, B, C, CARRYIN, D, P, OVFL_CARRYOUT, ARSHFT17, CDIN_FDBK_SEL, PASUB and SUB registers.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010CB">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010CC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">AL_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010CE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010D0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010D2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010D4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Asynchronous load for A, B, B2, P, OVFL_CARRYOUT, ARSHFT17, CDIN_FDBK_SEL, PASUB and SUB registers. Connect to 1, if none are registered.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010D6" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010D6">When asserted, A, B, P and OVFL_CARRYOUT registers are loaded with zero, while the ARSHFT17, CDIN_FDBK_SEL, PASUB and SUB registers are loaded with the complementary value of the respective _AD_N.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010DA">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010DB" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">USE_ROM</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010DD" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010DF" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E1" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E1">(virtual)</p></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Selection for operand A.<ul class="- topic/ul ul">
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E6" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E6">When USE_ROM = 0, select input data A.</li>
+                        <li class="- topic/li li" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E8" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010E8">When USE_ROM = 1, select ROM data at ROM_ADDR.</li>
+                     </ul></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010EA">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010EB" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">ROM_ADDR[3:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010EE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010F0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010F2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010F4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Address of ROM data for operand A when<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010F6" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010F6">USE_ROM = 1.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010F7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010F8" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">A[17:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010FA" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010FC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000010FE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001100" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Input data for operand A when USE_ROM = 0.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001102">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001103" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">A_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001105" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001107" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001109" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000110B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass data A registers. Connect to 1, if not
+                     registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000110E">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000110F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">A_SRST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001111" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001113" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001115" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001117" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous reset for data A registers.
+                     Connect to<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001119" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001119">1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000111B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000111C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">A_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000111E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001120" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001122" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001124" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for data A registers. Connect to 1, if
+                     not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000112A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000112B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B[17:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000112E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001130" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001132" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001134" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Input data B to Pre-adder with data D.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001136">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001137" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001139" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000113B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000113D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000113F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass data B registers. Connect to 1, if not
+                     registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001142">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001143" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B_SRST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001145" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001147" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001149" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000114B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous reset for data B registers.
+                     Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000114E">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000114F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001151" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001153" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001155" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001157" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for data B registers. Connect to 1, if
+                     not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000115D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000115E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B2[17:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001160" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Output</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001162" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001164" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001166" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Pipelined output of input data B. Result P
+                     must be floating when B2 is used.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001168">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001169" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B2_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000116B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000116D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000116F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001171" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass data B2 registers. Connect to 1, if
+                     not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001174">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001175" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B2_SRST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001177" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001179" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000117B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000117D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous reset for data B2 registers.
+                     Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001180">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001181" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">B2_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001183" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001185" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001187" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001189" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for data B2 registers. Connect to 1,
+                     if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000118F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001190" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">BCOUT[17:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001192" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Output</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001194" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Cascade</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001196" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001198" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Cascade output of B2. Value of BCOUT is the same as B2. The entire bus must either be dangling or drive an entire B input of another MACC_PA or MACC_PA_BC_ROM block.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000119D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000119E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">D[17:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011A0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011A2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011A4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011A6" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Input data D to Pre-adder with data B. When SIMD = 1, connect D[8:0] to 0.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011A8">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011A9" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">D_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011AB" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011AD" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011AF" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011B1" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass data D registers. Connect to 1, if not
+                     registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011B4">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011B5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">D_ARST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011B7" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011B9" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011BB" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011BD" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Asynchronous reset for data D registers.
+                     Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011C0">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011C1" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">D_SRST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011C3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011C5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011C7" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011C9" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous reset for data D registers.
+                     Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011CD">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011CE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">D_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011D0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011D2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011D4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011D6" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for data D registers. Connect to 1, if
+                     not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011DD">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011DE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CARRYIN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011E0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011E2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011E4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011E6" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">CARRYIN for input data C.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011EB">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011EC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">C[47:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011EE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011F0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011F2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011F4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Input data C.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011F6" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011F6">When DOTP = 1, connect C[8:0] to CARRYIN. When SIMD = 1, connect C[8:0] to 0.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011F7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011F8" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">C_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011FA" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011FC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000011FE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001200" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass CARRYIN and C registers. Connect to 1,
+                     if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001203">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001204" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">C_ARST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001206" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001208" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000120A" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000120C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Asynchronous reset for CARRYIN and C
+                     registers. Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000120F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001210" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">C_SRST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001212" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001214" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001216" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001218" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous reset for CARRYIN and C
+                     registers. Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000121B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000121C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">C_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000121E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001220" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001222" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001224" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for CARRYIN and C registers. Connect
+                     to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F98"><span>Table 14-147</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000122A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000122B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDIN[47:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001230" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001232" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Cascade</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001234" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001236" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Cascaded input for operand E.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001238" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001238">The entire bus must be driven by an entire</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001239" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001239">CDOUT of another MACC_PA or MAC_PA_BC_ROM</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123A" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123A">block. In Dot-product mode, the driving CDOUT</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123B" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123B">must also be generated by a MACC_PA or</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123C" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123C">MAC_PA_BC_ROM block in Dot-product mode.</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123D" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000123D">Refer to <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D3E"><span>Table 14-142</span></a> to see how CDIN is propagated to operand E.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001242">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001243" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">P[47:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001245" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Output</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001247" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083"></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001249" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000124B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Result data. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D7F"><span>Table 14-143</span></a>. B2 output must be floating when P is used.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000124F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001250" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">OVFL_CARRYOUT</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001252" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Output</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001254" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083"></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001256" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001258" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">OVERFLOW or CARRYOUT. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E25"><span>Table 14-144</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000125B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000125C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">P_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000125E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001260" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001262" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001264" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass P and OVFL_CARRYOUT registers. Connect
+                     to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>. <p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001268" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001268">P_BYPASS must be 0 when
+                        CDIN_FDBK_SEL[0] = 1. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D3E"><span>Table 14-142</span></a>.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000126A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000126B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">P_SRST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000126D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000126F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001271" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001273" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous reset for P and OVFL_CARRYOUT
+                     registers. Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001276">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001277" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">P_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001279" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000127B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000127D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000127F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for P and OVFL_CARRYOUT registers.
+                     Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000F03"><span>Table 14-146</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001285">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001286" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDOUT[47:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001288" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Output</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000128A" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Cascade</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000128C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000128E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Cascade output of result P. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D7F"><span>Table 14-143</span></a>.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001291" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001291">Value of CDOUT is the same as P. The
+                        entire bus</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001292" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001292">must either be dangling or drive an entire
+                        CDIN of</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001293" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001293">another MACC_PA or MAC_PA_BC_ROM block
+                        incascaded mode.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001297">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001298" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">PASUB</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000129A" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000129C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000129E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012A0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Subtract operation for Pre-adder of B and D.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012A2">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012A3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">PASUB_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012A5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012A7" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012A9" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012AB" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass PASUB register. Connect to 1, if not
+                     registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012AF">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012B0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">PASUB_AD_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012B2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012B4" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012B6" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012B8" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Asynchronous load data for PASUB register.
+                     See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012BC">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012BD" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">PASUB_SL_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012BF" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012C1" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012C3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012C5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load for PASUB register. Connect
+                        to<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012C7" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012C7">1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012CA">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012CB" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">PASUB_SD_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012CD" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012CF" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012D1" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012D3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load data for PASUB register.
+                        See<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012D5" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012D5"><a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012D7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012D8" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">PASUB_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012DA" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012DC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012DE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012E0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for PASUB register. Connect to 1, if
+                     not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012E6">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012E7" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDIN_FDBK_SEL[1:0]</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012EC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012EE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012F0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012F2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Select CDIN, P or 0 for operand E. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D3E"><span>Table 14-142</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012F5">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012F6" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDIN_FDBK_SEL_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012F8" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012FA" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012FC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000012FE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Select CDIN, P or 0 for operand E. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D3E"><span>Table 14-142</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001301">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001302" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDIN_FDBK_SEL_AD_N<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001304" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001304">[1:0]</p></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001305" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001307" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001309" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000130B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Asynchronous load data for CDIN_FDBK_SEL<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000130D" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000130D">register. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000130F">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001310" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDIN_FDBK_SEL_SL_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001312" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001314" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001316" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001318" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load for CDIN_FDBK_SEL register.
+                     Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000131B">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000131C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDIN_FDBK_SEL_SD_N<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000131E" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000131E">[1:0]</p></td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000131F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001321" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001323" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001325" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load data for CDIN_FDBK_SEL<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001327" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001327">register. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001329">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000132A" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">CDIN_FDBK_SEL_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000132C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000132E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001330" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001332" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for CDIN_FDBK_SEL register. Connect to
+                     1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001338">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001339" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">ARSHFT17</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000133B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000133D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000133F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001341" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Arithmetic right-shift for operand E.<p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001343" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001343">When asserted, a 17-bit arithmetic right-shift is</p><p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001344" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001344">performed on operand E. Refer to <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000D3E"><span>Table 14-142</span></a> to see how operand E is obtained from P, CDIN or 0. When
+                        SIMD = 1, ARSHFT17 must be 0.</p></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001346">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001347" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">ARSHFT17_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001349" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000134B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000134D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000134F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass ARSHFT17 register. Connect to 1, if
+                     not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001352">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001353" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">ARSHFT17_AD_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001355" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001357" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001359" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000135B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Asynchronous load data for ARSHFT17 register.
+                     See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000135E">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000135F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">ARSHFT17_SL_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001361" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001363" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001365" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001367" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load for ARSHFT17 register.
+                     Connect to 1, if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000136A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000136B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">ARSHFT17_SD_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000136D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000136F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001371" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001373" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load data for ARSHFT17 register.
+                     See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001376">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001377" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">ARSHFT17_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001379" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000137B" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000137D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000137F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for ARSHFT17 register. Connect to 1,
+                     if not registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001385">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001386" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">SUB</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001388" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000138A" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000138C" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000138E" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Subtract operation.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001390">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001391" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">SUB_BYPASS</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001393" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001395" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001397" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001399" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Bypass SUB register. Connect to 1, if not
+                     registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000139C">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000139D" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">SUB_AD_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000139F" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013A1" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013A3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013A5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Asynchronous load data for SUB register. See
+                        <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013A9">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013AA" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">SUB_SL_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013AC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013AE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013B0" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013B2" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load for SUB register. Connect to
+                     1, if not registered. <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013B5">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013B6" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">SUB_SD_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013B8" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013BA" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Static</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013BC" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">Low</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013BE" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Synchronous load data for SUB register. See
+                        <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013C2">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013C3" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-0000107F">SUB_EN</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013C5" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001081">Input</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013C7" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001083">Dynamic</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013C9" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001085">High</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013CB" headers="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-00001087">Enable for SUB register. Connect to 1, if not
+                     registered. See <a class="- topic/xref xref" href="GUID-6AC383CF-C29B-427B-A3B2-FD280645F8CC.html#GUID-97173640-AE33-4230-A0B3-23C9114A072C__ID-00000E48"><span>Table 14-145</span></a>.</td>
+               </tr>
+            </tbody></table></div>
+      <p class="- topic/p p" id="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013CE" data-ofbid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6__ID-000013CE">Static inputs are defined at design time and need to be tied to 0 or 1.</p>
+   </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A" data-tocid="GUID-84F83AE9-69BD-4E0D-AF49-E6FA587FC72A">14.1.10.1 Features</a></li><li class="topic-item"><a href="#GUID-6C623429-22EB-4403-8D48-A6D855C18FE6" data-tocid="GUID-6C623429-22EB-4403-8D48-A6D855C18FE6">14.1.10.2 Parameters</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<keywords publicationid="GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B"
+          language="en-US"
+          version="7"
+          documenttitle="Libero SoC Design Suite Unified Help"
+          pubtype="Online Reference"
+          pubsubtype=""
+          pubuserguidesubtype=""
+          pubproducthierarchy=""
+          devices=""
+          revisiondate="09/05/2023 00:00:00"
+          revisionletter="2023.1"
+          isbn=""
+          pubid=""
+          reachid=""
+          description=""
+          lastmodified="17/05/2023 10:44:53"
+          covertitle="Libero SoC Design Suite Help Documentation"
+          frontcover="">
+   <keyworditem topicid="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Libero SoC Design Suite v2023.1 Welcome
+        Page</register>
+      <title>Libero SoC Design Suite v2023.1 Welcome Page</title>
+      <bitfield/>
+      <keyword>liberohelp</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-D3BE74A4-8846-442A-9F67-834757001FE2"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_design_flow</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_smartdesign</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_nlv</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_chip_planner</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_pf_pdc</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_timing_constraints</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_flashpro</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_spps</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_smartdebug</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_job_mgr</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_pf_mlg</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-81D89143-7721-417B-9A7C-FE911F855C5E"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>pf_custom_flow</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_sf2_mlg</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_mss_simulation</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-8F623149-225E-4A84-8BC9-3142A409FAD4"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_mss_configurator</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_smartpower</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_tcl_cmd</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_smarttime_sta</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_io_editor</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_sf2_pdc</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-232B70EB-57FD-43AA-8B42-DE9F514AD347"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_nlv_interface</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-00AC7215-5AFA-49E3-B91B-62F8F2835ACD"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_linux_setup</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-44DCDF4C-5DB7-44FC-BCCC-C52326F39438"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Logging In</register>
+      <title>Logging In</title>
+      <bitfield/>
+      <keyword>Whlp_ide_IDD_NEW_PROJECT_WIZARD_DEVICE_SELECTION</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_installation_licensing</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-DCBABD25-B7D6-4950-9B0F-078AB62B1608"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>System Requirements</register>
+      <title>System Requirements</title>
+      <bitfield/>
+      <keyword>Whlp_ide_IDD_NEW_PROJECT_WIZARD_DEVICE_SETTINGS</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-1C4DA946-C3F4-47E8-8F91-85A784840E58"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Downloading the Libero SoC Software</register>
+      <title>Downloading the Libero SoC Software</title>
+      <bitfield/>
+      <keyword>Whlp_ide_IDD_NEW_PROJECT_WIZARD_NAME_LOCATION</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-C0B72183-D3F1-4225-9B1A-9498A28AD292"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Libero SoC Software Installation and Configuration</register>
+      <title>Libero SoC Software Installation and Configuration</title>
+      <bitfield/>
+      <keyword>Whlp_ide_IDD_NEW_PROJECT_WIZARD_ADD_HDL_SOURCES</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-275B07BD-027C-4116-9CE0-C1D23508097F"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_custom_flow</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_rtg4_mlg</keyword>
+   </keyworditem>
+   <keyworditem topicid="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_design_separation_methodology</keyword>
+   </keyworditem>
+</keywords>

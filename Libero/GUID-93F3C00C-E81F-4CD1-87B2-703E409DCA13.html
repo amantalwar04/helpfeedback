@@ -1,0 +1,1341 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The set_io command assigns an I/O technology, places, or locks the I/O at a given pin location. Two I/O types are available for PolarFire: GPIO HSIO Each I/O type supports different I/O standards. ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>8.1.3.3 set_io</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13-d10733e6861"/><meta name="wh-source-relpath" content="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13.xml"/><meta name="wh-out-relpath" content="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+PDC Commands for PolarFire</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for PolarFire</p></div></div></div></li><li><div class="topicref" data-id="GUID-B4411012-05F3-43A2-9B31-46410819AB0A"><div class="title"><a href="GUID-B4411012-05F3-43A2-9B31-46410819AB0A.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3</ph>
+I/O PDC Commands</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13"><div class="title"><a href="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.3</ph>
+set_io</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6745" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6745-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6745-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+PDC Commands for PolarFire</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE-d10733e6749" class="topicref introduction" data-id="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE-d10733e6749-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE-d10733e6749-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17-d10733e6765" class="topicref" data-id="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17-d10733e6765-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17.html#GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17" id="GUID-15EF6541-899F-4DA8-8392-C3D23F99CC17-d10733e6765-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.1</ph>
+PDC Syntax Conventions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D-d10733e6805" class="topicref" data-id="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B5771ED9-1690-454F-84CD-E9BEC314976D-d10733e6805-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D.html#GUID-B5771ED9-1690-454F-84CD-E9BEC314976D" id="GUID-B5771ED9-1690-454F-84CD-E9BEC314976D-d10733e6805-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.2</ph>
+PDC Naming Conventions</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-B4411012-05F3-43A2-9B31-46410819AB0A-d10733e6837" class="topicref" data-id="GUID-B4411012-05F3-43A2-9B31-46410819AB0A" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-B4411012-05F3-43A2-9B31-46410819AB0A-d10733e6837-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B4411012-05F3-43A2-9B31-46410819AB0A.html" id="GUID-B4411012-05F3-43A2-9B31-46410819AB0A-d10733e6837-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3</ph>
+I/O PDC Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59-d10733e6845" class="topicref" data-id="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59.html" id="GUID-64C9CF1E-C1A6-4931-A471-4033EB97AB59-d10733e6845-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.1</ph>
+set_iobank</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D-d10733e6853" class="topicref" data-id="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D.html" id="GUID-0412CE0F-9D4E-44B1-B757-2ED349BACA6D-d10733e6853-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.2</ph>
+reserve</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13-d10733e6861" class="topicref" data-id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13.html" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13-d10733e6861-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.3</ph>
+set_io</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3-d10733e6869" class="topicref" data-id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3.html" id="GUID-FEE210F7-6050-41E2-8226-DBA7AE6195F3-d10733e6869-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.3.4</ph>
+set_location</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86-d10733e6877" class="topicref" data-id="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86-d10733e6877-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86.html#GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86" id="GUID-A6A155B6-62E2-481F-9C5B-FF4718FE7E86-d10733e6877-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.4</ph>
+Netlist Attributes NDC Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6-d10733e6901" class="topicref" data-id="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6-d10733e6901-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6.html#GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6" id="GUID-8C97569D-AD28-425A-AAFB-C3A53E88CDA6-d10733e6901-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.5</ph>
+Floorplanning FDC Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e6946" class="topicref" data-id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e6946-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762.html#GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e6946-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.6</ph>
+Post Layout Edit PDC Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0-d10733e6970" class="topicref" data-id="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0.html" id="GUID-FE93D9AB-C334-4368-A99E-C378332F7EF0-d10733e6970-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1.7</ph>
+A – Packages/Memory Types</a><div class="wh-tooltip"><p class="shortdesc">This appendix provides device, package, slot, and memory type         information.</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6981" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6981-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" id="tocId-d10733e6981-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+PDC Commands for SmartFusion2 and IGLOO2</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for SmartFusion2 and IGLOO2</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-A1F5178A-8DB6-461F-BFAD-E23040296EAE"><h1 class="- topic/title title topictitle1" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-A1F5178A-8DB6-461F-BFAD-E23040296EAE" style="display:inline-block">8.1.3.3 set_io</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_io">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody">
+    <div class="- topic/p p" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001BA" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001BA">The <kbd class="+ topic/ph sw-d/userinput ph userinput">set_io</kbd> command assigns an I/O technology, places,
+      or locks the I/O at a given pin location. Two I/O types are available for PolarFire:<ul class="- topic/ul ul" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__UL_PG1_GVN_1MB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__UL_PG1_GVN_1MB">
+        <li class="- topic/li li" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-42F64F91-9F58-4302-9236-46E61D7DC06D" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-42F64F91-9F58-4302-9236-46E61D7DC06D">GPIO</li>
+        <li class="- topic/li li" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-3BC56086-F0EF-4883-8512-E2DB1BF32ED0" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-3BC56086-F0EF-4883-8512-E2DB1BF32ED0">HSIO</li>
+      </ul>Each I/O type supports different I/O standards.</div>
+    <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001BD" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001BD" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-10. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-EFB2AB22-92D8-4CE5-B085-F17C7A82DF75">set_io Standards</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C6E">
+          <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C2">
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C3">I/O Types</th>
+            <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C6">Supported I/O Standards</th>
+          </tr>
+        </thead><tbody class="- topic/tbody tbody" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C1">
+          <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C9">
+            <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001CA" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C3">HSIO</td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001CD" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C6">LVCMOS12, LVCMOS15, LVCMOS18, SSTL18I, SSTL18II,
+              HSUL18I, HSUL18II, SSTL15I, SSTL15II, HSTL15I, HSTL15II, SSTL135I, SSTL135II,
+              HSTL135I, HSTL135II, HSTL12I, HSTL12II, HSUL12I, SLVSE15, POD12I, POD12II, SLVS18,
+              HCSL18, LVDS18, RSDS18, MINILVDS18, SUBLVDS18, PPDS18, LCMDS18, SHIELD18, SHIELD15,
+              SHIELD135, SHIELD12</td>
+          </tr>
+          <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001D1">
+            <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001D2" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C3">GPIO</td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001D5" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000001C6">LVTTL, LVCMOS33, PCI, LVCMOS12, LVCMOS15, LVCMOS18,
+              LVCMOS25, SSTL25I, SSTL25II, SSTL18I, SSTL18II, HSUL18I, HSUL18II, SSTL15I, SSTL15II,
+              HSTL15I, HSTL15II, SLVS33, HCSL33, HCSL25, MIPI25, MIPIE25, LVPECL33, LVPECL25,
+              LVPECLE33, LVDS18G, LVDS25, LVDS33, RSDS25, RSDS33, MINILVDS25, MINILVDS33, SUBLVDS25,
+              SUBLVDS33, PPDS25, PPDS33, SLVSE15, MLVDSE25, BUSLVDSE25, LCMDS33, LCMDS25, SHIELD33,
+              SHIELD25, SHIELD18, SHIELD15, SHIELD12</td>
+          </tr>
+        </tbody></table></div>
+    <div class="- topic/note note notype note_notype" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-0082BA31-E18C-4E29-AEF3-C0F30F72EB66" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-0082BA31-E18C-4E29-AEF3-C0F30F72EB66"><span class="note__title">Note:</span> LCMDS18 IOSTD is not supported for MPF300XT
+      devices.</div>
+    <p class="- topic/p p">The following is the syntax for this command:</p>
+    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_io -port_name &lt;port_name&gt; \
+       [-pin_name &lt;package_pin&gt;] \
+       [-fixed &lt;true|false&gt;] \
+       [-io_std &lt;io_std_values&gt;] \
+       [-OUT_LOAD &lt;value&gt;] \
+       [-RES_PULL &lt;value&gt;] \ 
+       [-LOCK_DOWN &lt;value&gt;] \
+       [-CLAMP_DIODE &lt;value&gt;] \
+       [-SCHMITT_TRIGGER &lt;value&gt;] \
+       [-SLEW &lt;value&gt;] \
+       [-VCM_RANGE &lt;value&gt;] \ 
+       [-ODT &lt;value&gt;] \
+       [-ODT_VALUE] \
+       [-OUT_DRIVE &lt;value&gt;] \ 
+       [-IMPEDANCE &lt;value&gt;] \
+       [-SOURCE_TERM &lt;value&gt;] \ 
+       [-IN_DELAY &lt;value&gt;] \
+       [-OUT_DELAY &lt;value&gt;]</code></pre>
+    <section class="- topic/section section" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-75F5E46B-B4B0-4824-BC89-08E6040B9D08" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-75F5E46B-B4B0-4824-BC89-08E6040B9D08"><h2 class="- topic/title title sectiontitle">Arguments</h2>
+      
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-410B7D63-3C45-4E54-9856-B1FEE71C1CFA" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-410B7D63-3C45-4E54-9856-B1FEE71C1CFA">-port_name &lt;port_name&gt;</dt>
+          <dd class="- topic/dd dd">Specifies the port name of the I/O macro.</dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-2ECDAB6F-9BBF-475A-A131-DE52D647B194" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-2ECDAB6F-9BBF-475A-A131-DE52D647B194">-pin_name &lt;package_pin&gt;</dt>
+          <dd class="- topic/dd dd">Specifies the package pin name(s) on which to place the I/O.</dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-2EA073BA-19A1-4B09-9C23-A9D4080BDF72" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-2EA073BA-19A1-4B09-9C23-A9D4080BDF72">-io_std &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000002FE" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000002FE">Sets the I/O standard for this macro. If the voltage standard used
+              with the I/O is not compatible with other I/Os in the I/O bank, assigning an I/O
+              standard to a port invalidates its location and automatically unassigns the I/O.</p>
+            <p class="- topic/p p" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000002FF" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000002FF">The following table lists the supported values for
+                <code class="+ topic/ph pr-d/codeph ph codeph">-io_std</code> and their corresponding I/O standards. Some I/O standards
+              support only single I/O or differential I/Os, while others support both single and
+              differential I/Os.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000302" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000302" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-11. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-FEB0BA79-5460-46AD-BE65-BFE285AF0CFB">-io_std Values and Corresponding
+                I/O Standards</span></caption><colgroup><col style="width:33.333333333333336%"/><col style="width:33.333333333333336%"/><col style="width:33.333333333333336%"/></colgroup><thead class="- topic/thead thead" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1" rowspan="2">-io_std Value</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2" colspan="2">I/O Standard</th>
+                  </tr>
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">Single</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">Differential</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000307">
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000308">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000313" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVTTL</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000316" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000319" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000312">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000031D" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVCMOS33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000320" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000323" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000031C">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000327" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVCMOS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000032A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000032D" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000326">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000331" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVCMOS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000334" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000337" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000330">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000033B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVCMOS15</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000033E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000341" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000033A">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000345" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVCMOS12</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000348" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000034B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000344">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000034F" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">PCI</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000352" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000355" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000034E">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000359" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">POD12I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000035C" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000035F" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000358">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000363" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">POD12II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000366" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000369" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000362">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000036D" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">PPDS33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000370" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000373" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000036C">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000377" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">PPDS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000037A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000037D" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000376">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000381" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">PPDS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000384" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000387" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000380">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000038B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SLVS33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000038E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000391" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000038A">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000395" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SLVS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000398" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000039B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000394">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000039F" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SLVS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003A2" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003A5" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000039E">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003A9" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HCSL33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003AC" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003AF" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003A8">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003B3" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HCSL25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003B6" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003B9" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003B2">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003BD" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HCSL18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003C0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003C3" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003BC">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003C7" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SLVSE15</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003CA" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003CD" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003C6">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003D1" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">BUSLVDSE</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003D4" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003D7" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003D0">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003E2" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">BUSLVDSE25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003E5" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003E8" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003E1">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003EC" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MLVDSE</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003EF" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003F2" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003EB">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003F6" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MLVDSE25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003F9" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003FC" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003F5">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000400" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVDS</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000403" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000406" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000003FF">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000040A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVDS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000040D" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000410" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000409">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000414" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVDS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000417" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000041A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000413">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000041E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVDS18G</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000421" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000424" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">BUSLVDS</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000427">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000428" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">BUSLVDSE25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000042B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000042E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000431">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000432" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MLVDS</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000435" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000438" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000043B">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000043C" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MIPI25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000043F" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000442" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000445">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000446" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MIPIE25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000449" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000044C" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000044F">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000450" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MIPIE33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000453" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000456" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000459">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000045A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MINILVDS</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000045D" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000460" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000463">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000464" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MINILVDS33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000467" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000046A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000046D">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000046E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MINILVDS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000471" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000474" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000477">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000478" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">MINILVDS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000047B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000047E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000481">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000482" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">RSDS</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000485" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000488" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000048B">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000048C" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">RSDS33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000048F" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000492" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000495">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000496" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">RSDS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000499" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000049C" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000049F">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004A0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">RSDS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004A3" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004A6" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004A9">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004AA" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVPECL (only for inputs)</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004AD" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004B0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004B3">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004B4" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVPECL33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004B7" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004BA" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004BD">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004BE" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LVPECLE33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004C1" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004C4" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004C7">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004C8" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSTL15I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004CB" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004CE" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004D1">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004D2" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSTL15II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004D5" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004D8" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004DB">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004DC" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSTL135I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004DF" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004E2" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004E5">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004E6" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSTL135II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004E9" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004EC" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004EF">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004F0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSTLI2I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004F3" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004F6" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004F9">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004FA" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSTL12II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000004FD" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000500" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000503">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000504" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL18I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000507" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000050A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000050D">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000050E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL18II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000511" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000514" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000517">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000518" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL15I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000051B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000051E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000521">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000522" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL15II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000525" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000528" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000052B">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000052C" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL135I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000052F" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000532" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000535">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000536" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL135II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000539" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000053C" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000053F">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000540" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL25I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000543" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000546" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000549">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000054A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SSTL25II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000054D" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000550" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000553">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000554" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSUL18I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000557" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000055A" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSUL18II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSUL12I</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">HSUL12II</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SUBLVDS33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SUBLVDS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SUBLVDS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LCMDS33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LCMDS25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">LCMDS18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">NO</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">YES</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SHIELD33</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SHIELD25</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SHIELD18</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SHIELD15</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SHIELD135</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__1">SHIELD12</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030C">YES</td>
+                    <td class="- topic/entry entry align-center colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C74__entry__2 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000030F">NO</td>
+                  </tr>
+                </tbody></table></div>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-43801C1D-024F-4C77-9F2E-1B6D9B01134F" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-43801C1D-024F-4C77-9F2E-1B6D9B01134F">-fixed &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000005FC" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000005FC">Specifies whether the location of this port is fixed (that is,
+              locked). Locked ports are not moved during layout. The default value is true. You can
+              enter one of the following values.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000005FE" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-000005FE" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-12. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-44B81126-C292-4545-9D88-A2CCBABF0C9A">-fixed Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C75">
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000603">
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000604">Value</th>
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000607">Description</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000602">
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000060A">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000060B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000604">True</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000060E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000607">The location of this port is
+                      locked.</td>
+                  </tr>
+                  <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000611">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000612" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000604">False</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000615" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000607">The location of this port is
+                      unlocked.</td>
+                  </tr>
+                </tbody></table></div>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-31116169-F7E2-46A7-93AE-3DFF86D9F02C" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-31116169-F7E2-46A7-93AE-3DFF86D9F02C">-OUT_LOAD &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets the output load (in pF) of output signals. The default is 5 pF.</p>
+            <p class="- topic/p p">Direction: Output</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-F7B09AD9-5F7C-4824-93C2-E2391B32E1F6" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-F7B09AD9-5F7C-4824-93C2-E2391B32E1F6">-RES_PULL &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Allows you to include a weak resistor for either pull-up or pull-down of the input
+              and output buffers. Not all I/O standards have a selectable resistor pull option.</p>
+            <p class="- topic/p p">The following table shows the acceptable values for the <code class="+ topic/ph pr-d/codeph ph codeph">-RES_PULL</code>
+              attribute for the input buffer.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-13. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-9E4A615B-B12D-4D42-B73E-2C520674C708">-RES_PULL Values (Input
+                Buffer)</span></caption><colgroup><col style="width:38.32442067736185%"/><col style="width:17.825311942959004%"/><col style="width:43.850267379679146%"/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__2">Value</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__3">Description</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry align-left colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__1" rowspan="4"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Single
+                      I/Os</span>: LVTTL, LVCMOS33, LVCMOS25, LVCMOS18, LVCMOS15, LVCMOS12,
+                      PCI</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__2">Up</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__3">Includes a weak resistor for pull-up of the input
+                      buffer.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__2">Down</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__3">Includes a weak resistor for pull-down of the input
+                      buffer.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__2">Hold</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__3">Holds the last value.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__2">None</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__3">Does not include a weak resistor.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry align-left colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__1" rowspan="2"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Differential
+                        I/Os</span>: PPDS25, PPDS33, HCSL33, HCSL25, BUSLVDSE25, LVDS33,
+                      LVDS25, LVDS18G, MINILVDS33, MINILVDS25, RSDS33, RSDS25, LVPECL33, SUBLVDS33,
+                      SUBLVDS25, LCMDS33, LCMDS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__2">Up</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__3">Includes a weak resistor for pull-up of the input
+                      buffer.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__2">Down</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_XZ2_5WN_KNB__entry__3">Includes a weak resistor for pull-down of the input
+                      buffer.</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">For I/O standards in the preceding table, the default is Up. For all other I/O
+              standards, the value is None.</p>
+            <p class="- topic/p p">The following table lists the acceptable values for the <code class="+ topic/ph pr-d/codeph ph codeph">-RES_PULL</code>
+              attribute for the output buffer.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB" data-cols="3"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-14. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-62AC1C71-F703-4E4F-A859-CD17EE878690">-RES_PULL Values (Output
+                Buffer)</span></caption><colgroup><col style="width:38.65698729582577%"/><col style="width:18.148820326678766%"/><col style="width:43.19419237749546%"/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__2">Value</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__3">Description</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry align-left colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__1" rowspan="3"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Single
+                      I/Os</span>: LVTTL, LVCMOS33, LVCMOS25, LVCMOS18, LVCMOS15, LVCMOS12,
+                      PCI</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__2">Up</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__3">Includes a weak resistor for pull-up of the output
+                      buffer.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__2">Down</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__3">Includes a weak resistor for pull-down of the output
+                      buffer.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__2">None</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_YZ2_5WN_KNB__entry__3">Does not include a weak resistor.</td>
+                  </tr>
+                </tbody></table></div>
+            <div class="- topic/note note notype note_notype" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-DA66AEAB-9DAA-42A8-9AF7-560F152902AF" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-DA66AEAB-9DAA-42A8-9AF7-560F152902AF"><span class="note__title">Note:</span> 
+              <ul class="- topic/ul ul" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__UL_XBM_Y4N_DRB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__UL_XBM_Y4N_DRB">
+                <li class="- topic/li li" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-C54B5B67-FC7A-4A23-8FE4-DF19B96738B5" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-C54B5B67-FC7A-4A23-8FE4-DF19B96738B5">
+                  <p class="- topic/p p">For all I/O standards, the default value for output buffer is None.</p>
+                </li>
+                <li class="- topic/li li" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-DD4AD5AA-E276-4EE8-8D2E-613B6EA862B6" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-DD4AD5AA-E276-4EE8-8D2E-613B6EA862B6">
+                  <p class="- topic/p p">For output differential I/Os, <code class="+ topic/ph pr-d/codeph ph codeph">res_pull</code> is not supported.</p>
+                </li>
+              </ul>
+            </div>
+            <p class="- topic/p p">Direction: Inout</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-F38C2212-E413-486B-88CC-AC8623491C92" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-F38C2212-E413-486B-88CC-AC8623491C92">-LOCK_DOWN &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Security feature that locks down the I/Os, if tampering is detected. Values are ON
+              and OFF. The default is OFF.</p>
+            <p class="- topic/p p">Direction: Inout</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-8F916BBD-8F0F-4B88-9AB7-EF90E5A7BAB5" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-8F916BBD-8F0F-4B88-9AB7-EF90E5A7BAB5">-CLAMP_DIODE &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Specifies whether to add a power clamp diode to the I/O buffer. This attribute option
+              is available to all I/O buffers with I/O technology set to LVTTL. A clamp diode
+              provides a circuit protection from voltage spikes, surges, electrostatic discharge,
+              and other overvoltage conditions.</p>
+            <p class="- topic/p p">Values are OFF and ON.</p>
+            <p class="- topic/p p">The following table lists the values for GPIO standards. For HSIO standards, the
+              value is always ON.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-15. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-1C91A5CC-9FE4-42A8-B9F4-B15C62E33423">-CLAMP_DIODE Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__1">LVCMOS12, LVCMOS15, LVCMOS18, SSTL18I, SSTL18II, SSTL15I,
+                      SSTL15II, HSTL15I, HSTL15II, LVTTL, LVCMOS33, LVCMOS25, SSTL25I, SSTL25II,
+                      SLVS25, HCSL25, LVDS25, RSDS25, MINILVDS25, SUBLVDS25, PPDS25, LCMDS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__2">OFF, ON. The default is ON.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__1">MIPI25, LVDS18G</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__2">OFF, ON. The default is OFF.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__1">HSUL18I, HSUL18II, SLVSE15, PCI, SLVS25, SLVS33, HCSL33,
+                      HCSL25, MIPIE33, MIPIE25, LVPECL33, LVPECL25, LVPECLE33, LVDS25, LVDS33,
+                      RSDS25, RSDS33, MINILVDS25, MINILVDS33, SUBLVDS25, SUBLVDS33, PPDS25, PPDS33,
+                      MLVDSE25, BUSLVDSE25, LCMDS25, LCMDS33</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_ZZ2_5WN_KNB__entry__2">ON</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">Direction: Inout</p>
+            <div class="- topic/note note notype note_notype" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-D47B8268-5507-4B61-AA77-6DFA6BDA5305" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-D47B8268-5507-4B61-AA77-6DFA6BDA5305"><span class="note__title">Note:</span> For input LVDS18G, the only
+              supported value for Clamp Diode is OFF.</div>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-F1D839F5-07F4-442F-ACD4-3F114B2A26C3" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-F1D839F5-07F4-442F-ACD4-3F114B2A26C3">-SCHMITT_TRIGGER &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Specifies whether this I/O has an input Schmitt Trigger. The Schmitt Trigger
+              introduces hysteresis on the I/O input. This allows very slow moving or noisy input
+              signals to be used with the part without false or multiple I/O transitions taking
+              place in the I/O.</p>
+            <p class="- topic/p p">For the following I/O standards, the values are OFF and ON. The default is OFF.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-16. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-7B3C9790-81FE-4E7F-BB2A-E4973ED30800">-SCHMITT_TRIGGER Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__1 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__2" colspan="2"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">GPIO</span></td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__1">LVCMOS25, LVCMOS33, LVTTL, PCI</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__2">OFF, ON</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__1 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__2" colspan="2"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">HSIO</span></td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__1">LVCMOS18, LVCMOS15</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_A1F_5WN_KNB__entry__2">OFF, ON</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">For all other I/O standards, the value is OFF.</p>
+            <p class="- topic/p p">Direction: Input</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-CC94E5C2-3556-4B72-98E4-D487CAED9F00" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-CC94E5C2-3556-4B72-98E4-D487CAED9F00">-SLEW &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets the output slew rate. Slew control affects only the falling edges for some
+              families. Slew control affects both rising and falling edges. Not all I/O standards
+              have a selectable slew. Whether you can use the slew attribute depends on which I/O
+              standard you have specified for this command.</p>
+            <p class="- topic/p p">The following I/O standards have values OFF and ON. The default is OFF.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_B1F_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_B1F_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-17. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-E53B301B-0C36-4B36-B9F4-1FDC1284E52B">-SLEW Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_B1F_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_B1F_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_B1F_5WN_KNB__entry__1">LVCMOS25, LVCMOS33, LVTTL, PCI</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_B1F_5WN_KNB__entry__2">OFF, ON</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">For all other I/O standards, the value is OFF.</p>
+            <p class="- topic/p p">Direction: Output</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-8FF8019E-48CB-4A15-A83C-E6DCC99EEAE2" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-8FF8019E-48CB-4A15-A83C-E6DCC99EEAE2">-VCM_RANGE &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets the VCM input range.</p>
+            <p class="- topic/p p">The following table lists the supported values and I/O standards.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-18. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-777A479D-9D5C-41FB-977F-E01A7AD71E10">-VCM_RANGE Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2" colspan="2"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">GPIO</span></td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1">HSTL15I, HSTL15II, HSUL18I, HSUL18II, SSTL15I, SSTL15II,
+                      SSTL18I, SSTL18II, SSTL25I, SSTL25II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2">MID</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1">HCSL33, HCSL25, LVDS18G, LVDS33, LVDS25, LVPECL33,
+                      LVPECLE33, MINILVDS33, MINILVDS25, MIPI25, MIPIE25, MLVDSE25, PPDS33, PPDS25,
+                      RSDS33, RSDS25, SLVS33, SLVS25, SLVSE15, BUSLVDSE25, SUBLVDS33, SUBLVDS25<div class="- topic/note note notype note_notype" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-96B42F9C-3379-4FED-8FBC-255096EE751C" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-96B42F9C-3379-4FED-8FBC-255096EE751C"><span class="note__title">Note:</span> While assigning VCM input
+                        range for true differential I/Os in the same bank, a mix of MID and LOW
+                        values cannot be assigned for the I/Os. You can assign only MID or only LOW
+                        values for all differential I/Os in the same bank.</div></td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2">MID, LOW. The default is MID.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1">LCMDS33, LCMDS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2">LOW</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2" colspan="2"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">HSIO</span></td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1">HSTL12I, HSTL12II, HSTL135I, HSTL135II, HSTL15I, HSTL15II,
+                      HSUL12I, HSUL18I, HSUL18II, LVSTL11I, LVSTL11II, POD12I, POD12II, SSTL135I,
+                      SSTL135II, SSTL15I, SSTL15II, SSTL18I, SSTL18II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2">MID</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1">SLVSE15, LVDS18, HCSL18, MINILVDS18, PPDS18, RSDS18, SLVS18,
+                        SUBLVDS18<div class="- topic/note note notype note_notype" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-B609B596-5680-46A4-AD5F-D5007AA33AFB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-B609B596-5680-46A4-AD5F-D5007AA33AFB"><span class="note__title">Note:</span> While
+                        assigning VCM input range for true differential I/Os in the same bank, a mix
+                        of MID and LOW values cannot be assigned for the I/Os. You can assign only
+                        MID or only LOW values for all differential I/Os in the same
+                      bank.</div></td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2">MID, LOW. The default is MID.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__1">LCMDS18</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_C1F_5WN_KNB__entry__2">LOW</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">Direction: Input</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-06CE5135-464D-422E-8B71-1210CBD39BD7" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-06CE5135-464D-422E-8B71-1210CBD39BD7">-ODT &lt;value&gt;</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">On-die Termination (ODT) is the technology where the termination resistor for
+              impedance matching in transmission lines is located inside a semiconductor chip
+              instead of on a printed circuit board.</p>
+            <p class="- topic/p p">In case of LVDS fail-safe mode, use the DYNAMIC value for ODT.</p>
+            <p class="- topic/p p">Values are OFF and ON.</p>
+            <p class="- topic/p p">The following table lists acceptable values.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-19. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-AD023168-35EC-4243-A317-6DF0C0223A3D">-ODT Values</span></caption><colgroup><col style="width:50%"/><col style="width:50%"/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__1">LVCMOS12, LVCMOS15, LVCMOS18, LVCMOS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__2">OFF, ON. The default is OFF.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__1">HSUL18I, HSUL18II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__2">
+                      <p class="- topic/p p">OFF, ON, DYNAMIC. The default is OFF.</p>
+                    </td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__1">SSTL15I, SSTL15II, SSTL18I, SSTL18II, HSUL12I, LVSTL11I,
+                      LVSTL11II, POD12I, POD12II, SSTL135I, SSTL135II, HSTL15I, HSTL15II, LVDS18G,
+                      LVDS33, LVDS25, LVPECL33, LVPECLE33, LVPECL25, MINILVDS33, MINILVDS25, RSDS33,
+                      RSDS25, SUBLVDS33, SUBLVDS25, HSTL12I, HSTL12II, HSTL135I, HSTL135II, LCMDS33,
+                      LCMDS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_D1F_5WN_KNB__entry__2">OFF, ON, DYNAMIC. The default is ON.</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">Direction: Input</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-A83632FD-7F92-44F7-BDD2-DE5F803C8992" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-A83632FD-7F92-44F7-BDD2-DE5F803C8992">-ODT_VALUE</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets the ODT value in Ohms.</p>
+            <p class="- topic/p p">Values vary depending on the I/O standard. The following table lists acceptable
+              values.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-20. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-3EC47192-93A5-42FE-B5F8-53589FEC4D6E">-ODT_VALUE Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">LVCMOS12, LVCMOS15, LVCMOS18</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">120, 240. The default is 120.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">LVCMOS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">120</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">HSUL12I</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">60, 120, 240. The default is 120.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">SSTL15I, SSTL15II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">20, 30, 40, 60, 120. The default is 30.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">SSTL135I, SSTL135II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">20, 30, 40, 60, 120. The default is 40.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">SSTL18I, SSTL18II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">50, 75, 150. The default is 50.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">POD12I, POD12II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">34, 40, 48, 60, 80, 120, 240. The default is 60.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">LVDS18G, LVDS33, LVDS25, LVPECL33, LVPECL25, MINILVDS33,
+                      MINILVDS25, RSDS33, RSDS25, SLVSE15, SUBLVDS33, SUBLVDS25, LCMDS33,
+                      LCMDS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">100</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__1">HSTL15I, HSTL15II, HSUL18I, HSUL18II, HSTL12I, HSTL12II,
+                      HSTL135I, HSTL135II</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_E1F_5WN_KNB__entry__2">50</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">Direction: Inout</p>
+            <p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">-OUT_DRIVE &lt;value&gt;</span></p>
+            <p class="- topic/p p">Sets the strength of the output buffer to 1.5, 2, 3.5, 4, 6, 8, 10, 12, 16, or 20 in
+              mA, weakest to strongest. The list of I/O standards for which you can change the
+              output drive and the list of values you can assign for each I/O standard is
+              family-specific. Not all I/O standards have a selectable output drive strength.</p>
+            <p class="- topic/p p">Each I/O standard has a different range of legal output drive strength values. The
+              values you can choose depend on which I/O standard you specified for this command. The
+              following table lists the acceptable values.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-21. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-11DF37ED-75D7-4539-A761-DCA586EDF998">-OUT_DRIVE Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">I/O Standard</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2" colspan="2">GPIO</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVCMOS12</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">2, 4, 6, 8. Default is 8.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVCMOS15</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">2, 4, 6, 8, 10. Default is 8.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVCMOS18</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">2, 4, 6, 8, 10, 12. Default is 8.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVCMOS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">2, 4, 6, 8, 12, 16. Default is 8.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVCMOS33, LVTTL</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">2, 4, 8, 12, 16, 20. Default is 8.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVDS18G, LVDS25, LVDS33, MINILVDS25, MINILVDS33, LCMDS33,
+                      LCMDS25</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">3, 3.5, 4, 6. Default is 6.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">PPDS25, PPDS33, RSDS25, RSDS33</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">1.5, 2, 3. Default is 3.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">SUBLVDS25, SUBLVDS33</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">1, 1.5, 2. Default is 2.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">BUSLVDSE25, MLVDSE25, LVPECLE33</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">16</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">MIPIE25, SLVSE15</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">8</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">PCI</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">20</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1 GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2" colspan="2">HSIO</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVCMOS12, LVCMOS15</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">2, 4, 6, 8, 10. Default is 8.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">LVCMOS18</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">2, 4, 6, 8, 10, 12. Default is 8.</td>
+                  </tr>
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__1">SLVSE15</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_F1F_5WN_KNB__entry__2">8</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">Direction: Output</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-D29CEAEB-0F42-40D8-9236-6D1D03E25DC9" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-D29CEAEB-0F42-40D8-9236-6D1D03E25DC9">-IMPEDANCE</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets the impedance value in Ohms.</p>
+            <p class="- topic/p p">Values vary depending on the I/O standards.</p>
+            <p class="- topic/p p">Direction: Output</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-76FD4681-B5C2-44BB-962C-8F648DFB2352" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-76FD4681-B5C2-44BB-962C-8F648DFB2352">-SOURCE_TERM</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Near-end termination for a differential output I/O. The following table lists the
+              acceptable values.</p>
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_G1F_5WN_KNB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_G1F_5WN_KNB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-22. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-F5290A80-2D0E-40E8-B134-5ADE649C432C">-SOURCE_TERM Values</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_G1F_5WN_KNB__entry__1">I/O Standards</th>
+                    <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_G1F_5WN_KNB__entry__2">Values</th>
+                  </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_G1F_5WN_KNB__entry__1">LVDS18G, LVDS25, LVDS33, MINILVDS25, MINILVDS33, LCMDS33,
+                      LCMDS25, PPDS25, PPDS33, RSDS25, RSDS33, SUBLVDS25, SUBLVDS331</td>
+                    <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__TABLE_G1F_5WN_KNB__entry__2">OFF, 100. The default is OFF.</td>
+                  </tr>
+                </tbody></table></div>
+            <p class="- topic/p p">Direction: Output</p>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-0C3878DA-55EE-4130-8447-78EEDE16A22D" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-0C3878DA-55EE-4130-8447-78EEDE16A22D">-IN_DELAY</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets the input delay.</p>
+            <p class="- topic/p p">Input delay applies to all I/O standards. The values are OFF and 0-127, 128, 130,
+              132,..., 254. The default value is OFF.</p>
+            <p class="- topic/p p">Direction: Input</p>
+            <div class="- topic/note note notype note_notype" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-00079F34-6AD1-4D3E-9E84-791FEE9174D9" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-00079F34-6AD1-4D3E-9E84-791FEE9174D9"><span class="note__title">Note:</span> This attribute does not appear in
+              the I/O attributes and cannot be used in the PDC for some I/Os with dynamic delays,
+              such as DDR I/Os.</div>
+          </dd>
+        
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-9CC845E0-A761-4908-8455-01B281D7FC74" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-9CC845E0-A761-4908-8455-01B281D7FC74">-OUT_DELAY</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Sets the output delay.</p>
+            <p class="- topic/p p">Output delay applies to all I/O standards. The values are OFF and 0–127. The default
+              value is OFF.</p>
+            <p class="- topic/p p">Direction: Output</p>
+            <div class="- topic/note note note note_note" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-E4F9D2A7-175B-4478-BFC7-12B74563DCB9" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-E4F9D2A7-175B-4478-BFC7-12B74563DCB9"><span class="note__title">Note:</span> This attribute does not
+              appear in the I/O attributes and cannot be used in the PDC for some I/Os with dynamic
+              delays, such as DDR I/Os.</div>
+            <div class="- topic/note note notype note_notype" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-46F2937B-A6D9-4F37-9F13-B96B7872DE5C" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-46F2937B-A6D9-4F37-9F13-B96B7872DE5C"><span class="note__title">Note:</span> 
+              <p class="- topic/p p">In case of LVDS fail-safe mode, you can use the following PDC commands:</p>
+              <ul class="- topic/ul ul" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__UL_IHG_CPN_DRB" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__UL_IHG_CPN_DRB">
+                <li class="- topic/li li" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-BA5FC186-D718-4120-BA26-D7330EDB060E" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-BA5FC186-D718-4120-BA26-D7330EDB060E">
+                  <p class="- topic/p p">Weak pull-up/pull-down resistor for differential inputs.</p>
+                  <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_io -RES_PULL &lt;value&gt;</code></pre>
+                </li>
+                <li class="- topic/li li" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-6D72CC87-F1BF-445F-8B64-16DD9469055D" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-6D72CC87-F1BF-445F-8B64-16DD9469055D">
+                  <p class="- topic/p p">Dynamic ODT access per I/O.</p>
+                  <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_io -ODT DYNAMIC</code></pre>
+                </li>
+              </ul>
+            </div>
+          </dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-5F2FB98F-2580-4478-B764-530E11808D5E" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-5F2FB98F-2580-4478-B764-530E11808D5E"><h2 class="- topic/title title sectiontitle">Examples</h2>
+      
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_io -port_name IO_in\[2\] 
+-io_std LVCMOS25 \ 
+-fixed true\</code></pre>
+    </section>
+    <section class="- topic/section section" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-68587D85-B4E5-4CCF-BDAF-EEC21A80C044" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-68587D85-B4E5-4CCF-BDAF-EEC21A80C044"><h2 class="- topic/title title sectiontitle">I/O Directions Not Supported</h2>
+      
+      <p class="- topic/p p" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000624" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000624">The following table lists the I/O directions that are not supported for
+        I/O standards.</p>
+      <div class="table-container"><table class="- topic/table table frame-all" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000627" data-ofbid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000627" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-23. </span></span><span class="table--title" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-CB00FE23-9F56-4FFF-A817-7D4BC08128C7">I/O Directions That are Not Supported
+          (set_io)</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00001C76">
+            <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000062C">
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000062D">I/O Direction</th>
+              <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000630">IO_STD Value</th>
+            </tr>
+          </thead><tbody class="- topic/tbody tbody" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000062B">
+            <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000633">
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000634" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000062D"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Input</span></td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000637" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000630">SLVSE15, MLVDSE25, BUSLVDSE25, MIPIE33,
+                LVPECLE33, SHIELD33, SHIELD25, SHIELD18, SHIELD15, SHIELD135, SHIELD12</td>
+            </tr>
+            <tr class="- topic/row" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000063A">
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000063B" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000062D"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Output</span></td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000063E" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000630">SLVS33, SLVS25, HCSL33, HCSL25, LVPECL33,
+                LVPECL25, MIPI25, LVDS18, RSDS18, MINILVDS18, SUBLVDS18, PPDS18, SLVS18, HCSL18,
+                LCMDS18</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000062D"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tribuff</span></td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000630">SLVS33, SLVS25, HCSL33, HCSL25, LVPECL33, LVPECL25, MIPI25,
+                LVDS18, RSDS18, MINILVDS18, SUBLVDS18, PPDS18, SLVS18, HCSL18, LVDS18G, LVDS25,
+                LVDS33, RSDS25, RSDS33, MINILVDS25, MINILVDS33, SUBLVDS25, SUBLVDS33, PPDS25,
+                PPDS33, LCMDS25, LCMDS33, LCMDS18</td>
+            </tr>
+            <tr class="- topic/row">
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-0000062D"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Inout</span></td>
+              <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__ID-00000630">LVDS18G, LVDS33, LVDS18, LVDS25, RSDS18, RSDS33, RSDS25,
+                MINILVDS18, MINILVDS33, MINILVDS25, SUBLVDS18, SUBLVDS33, SUBLVDS25, PPDS18, PPDS33,
+                PPDS25, SLVS33, SLVS25, HCSL33, HCSL25, LVPECL33, LVPECL25, MIPI25, MIPIE25, SLVS18,
+                HCSL18, SHIELD33, SHIELD25, SHIELD18, SHIELD15, SHIELD135, SHIELD12, LCMDS25,
+                LCMDS33, LCMDS18</td>
+            </tr>
+          </tbody></table></div>
+    </section>
+  </div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-75F5E46B-B4B0-4824-BC89-08E6040B9D08" data-tocid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-75F5E46B-B4B0-4824-BC89-08E6040B9D08">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-5F2FB98F-2580-4478-B764-530E11808D5E" data-tocid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-5F2FB98F-2580-4478-B764-530E11808D5E">Examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-68587D85-B4E5-4CCF-BDAF-EEC21A80C044" data-tocid="GUID-93F3C00C-E81F-4CD1-87B2-703E409DCA13__GUID-68587D85-B4E5-4CCF-BDAF-EEC21A80C044">I/O Directions Not Supported</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

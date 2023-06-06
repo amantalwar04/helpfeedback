@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>7.5.1<\/ph>\nInterface—Specific I\/O Views","href":"GUID-77B8F011-8BF8-45FE-9A83-0F05541715D8.html","attributes":{"data-id":"GUID-77B8F011-8BF8-45FE-9A83-0F05541715D8"},"menu":{"hasChildren":false},"tocID":"GUID-77B8F011-8BF8-45FE-9A83-0F05541715D8-d10733e6287","topics":[]}]});

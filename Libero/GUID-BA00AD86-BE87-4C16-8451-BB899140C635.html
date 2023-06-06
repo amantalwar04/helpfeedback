@@ -1,0 +1,873 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Use the following steps to calculate the power consumption of your design. The list of screens and steps appear in the order in which you should view them to analyze your power accurately. Summary ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>12.4 Calculating Power</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-BA00AD86-BE87-4C16-8451-BB899140C635-d10733e10747"/><meta name="wh-source-relpath" content="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.xml"/><meta name="wh-out-relpath" content="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-BA00AD86-BE87-4C16-8451-BB899140C635"><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-BA00AD86-BE87-4C16-8451-BB899140C635"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4</ph>
+Calculating Power</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991-d10733e9943" class="topicref introduction" data-id="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991-d10733e9943-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+Introduction</a></div></div></li><li role="treeitem"><div data-tocid="GUID-72819F8E-4486-4FE0-BBA8-169B31A6CF33-d10733e9951" class="topicref" data-id="GUID-72819F8E-4486-4FE0-BBA8-169B31A6CF33" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-72819F8E-4486-4FE0-BBA8-169B31A6CF33.html" id="GUID-72819F8E-4486-4FE0-BBA8-169B31A6CF33-d10733e9951-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.1</ph>
+Starting SmartPower</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-99428940-29C0-4D02-B947-C6ACA4AD2649-d10733e9960" class="topicref" data-id="GUID-99428940-29C0-4D02-B947-C6ACA4AD2649" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-99428940-29C0-4D02-B947-C6ACA4AD2649-d10733e9960-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-99428940-29C0-4D02-B947-C6ACA4AD2649.html#GUID-99428940-29C0-4D02-B947-C6ACA4AD2649" id="GUID-99428940-29C0-4D02-B947-C6ACA4AD2649-d10733e9960-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.2</ph>
+SmartPower Interface</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C1A93347-8FAB-4D54-8B58-E178CDAD736A-d10733e10735" class="topicref" data-id="GUID-C1A93347-8FAB-4D54-8B58-E178CDAD736A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C1A93347-8FAB-4D54-8B58-E178CDAD736A.html" id="GUID-C1A93347-8FAB-4D54-8B58-E178CDAD736A-d10733e10735-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.3</ph>
+Power Options</a><div class="wh-tooltip"><p class="shortdesc">Allows you to set options that affect graphical and textual reports.</p></div></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-BA00AD86-BE87-4C16-8451-BB899140C635-d10733e10747" class="topicref" data-id="GUID-BA00AD86-BE87-4C16-8451-BB899140C635" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-BA00AD86-BE87-4C16-8451-BB899140C635-d10733e10747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-BA00AD86-BE87-4C16-8451-BB899140C635" id="GUID-BA00AD86-BE87-4C16-8451-BB899140C635-d10733e10747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4</ph>
+Calculating Power</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7-d10733e10755" class="topicref" data-id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-FE220513-1C98-4FCF-9A87-E75755867CE7" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7-d10733e10755-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.1</ph>
+Calculating Power</a><div class="wh-tooltip"><p class="shortdesc">Use the following steps to calculate the power consumption of your design. The list of         screens and steps appear in the order in which you should view them to analyze your power         accurately.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6-d10733e10766" class="topicref" data-id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6-d10733e10766-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.2</ph>
+Extracting Power Consumption of a Specific Clock Domain</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B-d10733e10776" class="topicref" data-id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-922BAE6C-1622-4711-93BA-05987FD1134B" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B-d10733e10776-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.3</ph>
+Advanced Analysis of I/Os</a><div class="wh-tooltip"><p class="shortdesc">SmartPower allows you to estimate the power consumption related to I/Os. You can then         analyze power consumption in detail.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-733349B7-D420-45AE-A46F-490143AE1D85-d10733e10787" class="topicref" data-id="GUID-733349B7-D420-45AE-A46F-490143AE1D85" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-733349B7-D420-45AE-A46F-490143AE1D85" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85-d10733e10787-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.4</ph>
+Adding a New Clock Domain</a><div class="wh-tooltip"><p class="shortdesc">When you run SmartPower, it researches your existing clock domains and partitions your         design automatically. </p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-5A38584C-D442-472F-839D-8C165AB39C68-d10733e10798" class="topicref" data-id="GUID-5A38584C-D442-472F-839D-8C165AB39C68" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-5A38584C-D442-472F-839D-8C165AB39C68" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68-d10733e10798-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.5</ph>
+Verifying Lists of Clock and Data Pins of a Clock Domain</a><div class="wh-tooltip"><p class="shortdesc">Beyond the verification of the list of clock domains, you may also wish to verify that         the lists of clock pins and data pins computed for each clock domain are         correct.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A-d10733e10809" class="topicref" data-id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-24191BD0-799B-4D7B-A474-CA86C675F14A" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A-d10733e10809-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.6</ph>
+Adding a New Set of Pins</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-654C007A-2050-4AC0-A27C-B470BA64835B-d10733e10819" class="topicref" data-id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-654C007A-2050-4AC0-A27C-B470BA64835B" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B-d10733e10819-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.7</ph>
+Specifying Clock and Data Frequencies in SmartPower</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23-d10733e10829" class="topicref" data-id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23-d10733e10829-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.8</ph>
+Verifying the InputSet</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C-d10733e10839" class="topicref" data-id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C-d10733e10839-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.9</ph>
+Splitting the InputSet </a><div class="wh-tooltip"><p class="shortdesc">You might want to split the InputSet into several sets in order to specify different         frequencies. For example, you might want to create a ResetSet—a reset tree with a very low         frequency.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71-d10733e10850" class="topicref" data-id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71-d10733e10850-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.10</ph>
+Specifying Individual Pin Frequencies</a><div class="wh-tooltip"><p class="shortdesc">The <strong class="ph b">Frequencies</strong> tab allows you to specify an average clock and data frequency for         each clock domain, and also an average frequency for each set of pins. This gives you an         initial estimate of the power consumption of your design. However, if this estimate is not         sufficiently accurate, you can refine it with a pin-by-pin annotation of the         frequency.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87-d10733e10865" class="topicref" data-id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87-d10733e10865-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.11</ph>
+Changing the Frequency Annotation of a Pin</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978-d10733e10875" class="topicref" data-id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978-d10733e10875-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.12</ph>
+Removing the Frequency Annotation of a Pin</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E-d10733e10885" class="topicref" data-id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E-d10733e10885-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E-d10733e10885-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.13</ph>
+Specifying Individual Pin Probabilities</a><div class="wh-tooltip"><p class="shortdesc">The <strong class="ph b">Probabilities </strong>tab allows you to specify the default output probability         value for memory blocks, and tristate and bidirectional I/Os. In addition, you can increase         the accuracy of the power estimation by annotating the probability of specific         pins.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2-d10733e10919" class="topicref" data-id="GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2" id="GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2-d10733e10919-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.14</ph>
+Vectorless Estimation</a></div></div></li><li role="treeitem"><div data-tocid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81-d10733e10927" class="topicref" data-id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81-d10733e10927-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.15</ph>
+Viewing Results (Design Level)</a><div class="wh-tooltip"><p class="shortdesc">Click the <strong class="ph b">Summary</strong> tab to view global power consumption at the design level.         The <strong class="ph b">Summary </strong>tab shows your design's estimated power consumption and temperature         information.</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275-d10733e10944" class="topicref" data-id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275-d10733e10944-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.16</ph>
+Analyzing Results</a><div class="wh-tooltip"><p class="shortdesc">The <strong class="ph b">Analysis</strong> tab shows the estimated power consumption of individual blocks,         gates, nets, I/Os, and memory, and allows you to make a hierarchical analysis of your power         consumption. </p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60-d10733e10958" class="topicref" data-id="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60" id="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60-d10733e10958-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.17</ph>
+SmartPower Calculation Equations</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5-d10733e10966" class="topicref" data-id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5-d10733e10966-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.18</ph>
+Sample Equations:</a></div></div></li><li role="treeitem"><div data-tocid="GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003-d10733e10974" class="topicref" data-id="GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA00AD86-BE87-4C16-8451-BB899140C635.html#GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003" id="GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003-d10733e10974-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12.4.19</ph>
+Data Change History - SmartPower</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-BA00AD86-BE87-4C16-8451-BB899140C635__GUID-3B5545B1-9653-4D16-8131-DBA7EFDA42F2"><article class="nested0" aria-labelledby="GUID-BA00AD86-BE87-4C16-8451-BB899140C635__GUID-3B5545B1-9653-4D16-8131-DBA7EFDA42F2" id="GUID-BA00AD86-BE87-4C16-8451-BB899140C635"><h1 class="- topic/title title topictitle1" id="GUID-BA00AD86-BE87-4C16-8451-BB899140C635__GUID-3B5545B1-9653-4D16-8131-DBA7EFDA42F2" style="display:inline-block">12.4 Calculating Power</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Calculating%20Power">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p"></p></div><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-9090AFA7-6A9B-43A6-962D-483D2DC8E9B3" xml:lang="en-US" lang="en-US" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7">
+<h2 class="- topic/title title topictitle2" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-9090AFA7-6A9B-43A6-962D-483D2DC8E9B3" style="display:inline-block">12.4.1 Calculating Power</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Calculating%20Power">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Use the following steps to calculate the power consumption of your design. The list of
+        screens and steps appear in the order in which you should view them to analyze your power
+        accurately.</p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-47FD0922-FBBB-4EFB-9AE7-EED0D98E4D16" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-47FD0922-FBBB-4EFB-9AE7-EED0D98E4D16"></section>
+        <section class="- topic/section task/context section context" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-46DBB282-41B2-4DF0-824D-14FB10DA6619" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-46DBB282-41B2-4DF0-824D-14FB10DA6619"></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-691AA03E-4661-495E-B508-560A0BD39462" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-691AA03E-4661-495E-B508-560A0BD39462">
+            <li class="- topic/li task/step li step" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-F06F379A-1CE3-4543-BF24-5781385710E1" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-F06F379A-1CE3-4543-BF24-5781385710E1">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">Summary</strong> tab: view global power at the design level and view its impact
+                    on junction temperature.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-F041EAFF-4A0C-484B-A79A-2564191E8707" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-F041EAFF-4A0C-484B-A79A-2564191E8707">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">Domains</strong> tab: define clock domains and specify a clock frequency and a
+                    data frequency for each clock domain.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-F6EA5E22-DE21-4CD1-92C5-F91D74738DE8" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-F6EA5E22-DE21-4CD1-92C5-F91D74738DE8">
+                <span class="- topic/ph task/cmd ph cmd">
+                    <strong class="+ topic/ph hi-d/b ph b">Analysis</strong> tab (optional): view detailed hierarchical analysis of your
+                    power consumption. If your power consumption exceeds your budget, this step
+                    helps you understand where there is room for improvement.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-89051C80-0A95-4C51-991A-CBA59B8179C6" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-89051C80-0A95-4C51-991A-CBA59B8179C6">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">Frequencies</strong> tab (optional): specify individual pin frequencies. This
+                    step provides pin-by-pin control of the frequency.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-86C6F430-B1BC-4B4D-91D1-1A3FCB05C1F2" data-ofbid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7__GUID-86C6F430-B1BC-4B4D-91D1-1A3FCB05C1F2">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">Probabilities</strong> tab (optional): specify probabilities. You can use the
+                    default probabilities or set your own.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-E58FC3D0-E1EA-469E-A5BA-9AD9E482CFFB" xml:lang="en-US" lang="en-US" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6">
+<h2 class="- topic/title title topictitle2" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-E58FC3D0-E1EA-469E-A5BA-9AD9E482CFFB" style="display:inline-block">12.4.2 Extracting Power Consumption of a Specific Clock Domain</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Extracting%20Power%20Consumption%20of%20a%20Specific%20Clock%20Domain">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-E01FFF30-1FB1-41CB-B36A-5425FA1BE370" data-ofbid="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-E01FFF30-1FB1-41CB-B36A-5425FA1BE370"></section>
+        <section class="- topic/section task/context section context" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-030A531C-5C9F-4CDD-B7A4-2B7C565232F1" data-ofbid="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-030A531C-5C9F-4CDD-B7A4-2B7C565232F1">To calculate the power consumption
+            of a single clock domain (clock tree and data path) in a design:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-2CC38F4C-654C-4043-AB85-19D1D28D4526" data-ofbid="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-2CC38F4C-654C-4043-AB85-19D1D28D4526">
+            <li class="- topic/li task/step li step" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-F812D830-E1C7-4B38-8C67-A101AB55E273" data-ofbid="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-F812D830-E1C7-4B38-8C67-A101AB55E273">
+                <span class="- topic/ph task/cmd ph cmd">Set SmartPower in toggle-rate mode. This is the default setting. To confirm
+                    that SmartPower is in toggle-rate mode, choose <strong class="+ topic/ph hi-d/b ph b">Preferences </strong>from the
+                        <strong class="+ topic/ph hi-d/b ph b">File </strong>menu. Select the <strong class="+ topic/ph hi-d/b ph b">Use Toggle Rates </strong>check box.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-86769BE5-7A86-42C9-B031-F633965C4916" data-ofbid="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6__GUID-86769BE5-7A86-42C9-B031-F633965C4916">
+                <span class="- topic/ph task/cmd ph cmd">In the <strong class="+ topic/ph hi-d/b ph b">Domains</strong> tab, set all the <strong class="+ topic/ph hi-d/b ph b">Clock Frequencies </strong>to zero except
+                    for the clock domain for which you are calculating the power consumption.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-1CE6A21B-37D3-4F60-944D-06DDBCC085BA" xml:lang="en-US" lang="en-US" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B">
+<h2 class="- topic/title title topictitle2" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-1CE6A21B-37D3-4F60-944D-06DDBCC085BA" style="display:inline-block">12.4.3 Advanced Analysis of I/Os</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Advanced%20Analysis%20of%20I%2FOs">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">SmartPower allows you to estimate the power consumption related to I/Os. You can then
+        analyze power consumption in detail.</p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-4F091C8E-392C-4B4D-94A8-1653CC88E624" data-ofbid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-4F091C8E-392C-4B4D-94A8-1653CC88E624"></section>
+        <section class="- topic/section task/context section context" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-5F1A6DEE-D7F0-4E01-8F58-464A310DA159" data-ofbid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-5F1A6DEE-D7F0-4E01-8F58-464A310DA159">To display I/O power
+            consumption:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-BAADA791-8226-4900-AE01-2236E00793C9" data-ofbid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-BAADA791-8226-4900-AE01-2236E00793C9">
+            <li class="- topic/li task/step li step" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-2B929ECC-13F7-4771-9388-F8FEBFA0570C" data-ofbid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-2B929ECC-13F7-4771-9388-F8FEBFA0570C">
+                <span class="- topic/ph task/cmd ph cmd">In the <strong class="+ topic/ph hi-d/b ph b">Summary </strong>tab, select <strong class="+ topic/ph hi-d/b ph b">By Type </strong>from the <strong class="+ topic/ph hi-d/b ph b">Breakdown
+                    </strong>drop-down list. The grid displays the total power consumption of all I/Os in
+                    the design, as well as all other components. If you use different I/O standards,
+                    and different Vcci power rails, you can also display the power consumption for
+                    each rail by selecting <strong class="+ topic/ph hi-d/b ph b">By Rail </strong>from the <strong class="+ topic/ph hi-d/b ph b">Breakdown </strong>drop-down list.
+                        <strong class="+ topic/ph hi-d/b ph b">Breakdown By Rail </strong>shows the power consumption and current for each
+                    Vcci rail in the design.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-02A1E1CB-308F-4E07-ACAE-F69523F651AF" data-ofbid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-02A1E1CB-308F-4E07-ACAE-F69523F651AF">
+                <span class="- topic/ph task/cmd ph cmd">In the <strong class="+ topic/ph hi-d/b ph b">Analysis </strong>tab, select the highest hierarchy level in the Hierarchy
+                    tree in the left pane. Select <strong class="+ topic/ph hi-d/b ph b">By Instance </strong>from the Breakdown drop-down
+                    list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-ECA7F103-3254-4862-96FB-4EA14D95791C" data-ofbid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-ECA7F103-3254-4862-96FB-4EA14D95791C">
+                <span class="- topic/ph task/cmd ph cmd">In the <strong class="+ topic/ph hi-d/b ph b">Analysis </strong>tab, unselect all categories under <strong class="+ topic/ph hi-d/b ph b">Instances
+                        Contributions </strong>except I/Os, and then click <strong class="+ topic/ph hi-d/b ph b">Apply</strong>. The table then
+                    displays a list of all I/Os in the design, along with the power contribution of
+                    each individual I/O. The columns display important I/O attributes: external port
+                    name, load, standard, drive- strength, slew, and macro.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-0DC7FA0E-B302-4FA4-B5EA-A67FB3E62985" data-ofbid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B__GUID-0DC7FA0E-B302-4FA4-B5EA-A67FB3E62985">
+                <span class="- topic/ph task/cmd ph cmd">In the <strong class="+ topic/ph hi-d/b ph b">Probabilities </strong>tab, you can control the output probability of each
+                    tri-state and bidirectional I/O. The probability is the percentage of time that
+                    the I/O is used as an output. The default value can be changed and a specific
+                    value can also be set for each bidirectional or tri-state I/O.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-A7F5761C-CEF7-48BA-81BF-3ACB105B5ABB" xml:lang="en-US" lang="en-US" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85">
+<h2 class="- topic/title title topictitle2" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-A7F5761C-CEF7-48BA-81BF-3ACB105B5ABB" style="display:inline-block">12.4.4 Adding a New Clock Domain</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Adding%20a%20New%20Clock%20Domain">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">When you run SmartPower, it researches your existing clock domains and partitions your
+        design automatically. </p>
+<section class="- topic/section task/prereq section prereq" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-D10D6EB3-E5D9-4A21-A270-FB5870C7BBBF" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-D10D6EB3-E5D9-4A21-A270-FB5870C7BBBF"></section>
+<section class="- topic/section task/context section context" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-25F1D0E7-5E70-4A02-92CC-60041625BB70" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-25F1D0E7-5E70-4A02-92CC-60041625BB70">You may want to review the list of clock
+            domains in the <strong class="+ topic/ph hi-d/b ph b">Domains</strong> tab to ensure that all the clocks of your design are
+            included in the list. Add or remove clocks as necessary.<p class="- topic/p p">To add a new clock
+                domain:</p></section>
+<ol class="- topic/ol task/steps ol steps" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-BA1CDD0E-BEC8-4F9A-8B3D-AE755FA581D7" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-BA1CDD0E-BEC8-4F9A-8B3D-AE755FA581D7">
+            <li class="- topic/li task/step li step" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-01134CB0-7A23-4886-96E7-CFE620546AF9" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-01134CB0-7A23-4886-96E7-CFE620546AF9">
+                <span class="- topic/ph task/cmd ph cmd">Click the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab, and then click the <strong class="+ topic/ph hi-d/b ph b">Add Domain </strong>button.
+                </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-C8830F5F-D3C9-4999-A14E-618C38D40A0E" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-C8830F5F-D3C9-4999-A14E-618C38D40A0E">
+                <span class="- topic/ph task/cmd ph cmd">Select <strong class="+ topic/ph hi-d/b ph b">Clock Domain </strong>from the drop-down list.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Create Clock Domain dialog box appears.<figure class="- topic/fig fig fignone" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__FIG_FJ5_ZMC_FNB" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__FIG_FJ5_ZMC_FNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 12-66. <span id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-10C95FFA-4540-4E8C-A320-4DC34C580909" class="fig--title">Create Clock Domain Dialog Box – Toggle Rates Disabled</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__IMAGE_ES5_ZMC_FNB" src="GUID-16E15507-0CFA-4968-AE83-0BD4670C3C01-low.png" height="112" width="289" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-9F2CD6CF-96F5-415B-A9D7-7D25118B4C32" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-9F2CD6CF-96F5-415B-A9D7-7D25118B4C32">
+                <span class="- topic/ph task/cmd ph cmd">To create a new clock, select a <strong class="+ topic/ph hi-d/b ph b">Potential Clock Pin</strong>, specify a clock and
+                    data frequency and click <strong class="+ topic/ph hi-d/b ph b">Create</strong>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The new clock domain appears in the Domains window. If you select an
+                    existing clock pin from the drop- down list, the lists of clock pins and data
+                    pins of this new clock domain are computed automatically based on the netlist
+                        topology.<div class="- topic/note note notype note_notype" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-05AB9562-D009-4340-BEEE-44E94A7E53BA" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__GUID-05AB9562-D009-4340-BEEE-44E94A7E53BA"><span class="note__title">Note:</span> Select <strong class="+ topic/ph hi-d/b ph b">Use
+                            Toggle Rates</strong> in the SmartPower Preferences to define your data
+                        frequency as a percentage of your clock frequency. If your data frequency is
+                        20% of your clock frequency, type <strong class="+ topic/ph hi-d/b ph b">20</strong> in the <strong class="+ topic/ph hi-d/b ph b">Data Frequency</strong>
+                        text box.</div><figure class="- topic/fig fig fignone" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__FIG_RBQ_L4C_FNB" data-ofbid="GUID-733349B7-D420-45AE-A46F-490143AE1D85__FIG_RBQ_L4C_FNB">
+                        <img class="- topic/image image" id="GUID-733349B7-D420-45AE-A46F-490143AE1D85__IMAGE_XMQ_L4C_FNB" src="GUID-00D100D3-33E5-4660-92C3-A1549042EF01-low.png" height="112" width="288" alt="???"/>
+                    </figure>If you want to create an empty clock domain and fill the lists of
+                    clock-pins and data pins manually, do not select a clock pin. Instead, type a
+                    new name for your clock domain.</div>
+            </li>
+        </ol>
+</div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-BFE420FF-FA39-4641-8740-C6DECFE1A132" xml:lang="en-US" lang="en-US" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68">
+<h2 class="- topic/title title topictitle2" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-BFE420FF-FA39-4641-8740-C6DECFE1A132" style="display:inline-block">12.4.5 Verifying Lists of Clock and Data Pins of a
+        Clock Domain</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Verifying%20Lists%20of%20Clock%20and%20Data%20Pins%20of%20a%20Clock%20Domain">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Beyond the verification of the list of clock domains, you may also wish to verify that
+        the lists of clock pins and data pins computed for each clock domain are
+        correct.</p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-15EF57FE-6FCC-474E-9F7C-12FAA9EC48C6" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-15EF57FE-6FCC-474E-9F7C-12FAA9EC48C6"></section>
+        <section class="- topic/section task/context section context" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-5DA33196-EA53-4D50-87CF-722DCA661DAA" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-5DA33196-EA53-4D50-87CF-722DCA661DAA">To verify the lists of clock pins
+            and data pins of a clock domain:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-84E78192-1680-431D-9E74-09C099ACC5E9" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-84E78192-1680-431D-9E74-09C099ACC5E9">
+            <li class="- topic/li task/step li step" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-1F02AB73-7A8A-4686-B190-FE37F077AA97" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-1F02AB73-7A8A-4686-B190-FE37F077AA97">
+                <span class="- topic/ph task/cmd ph cmd">Click the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab and select a specific <strong class="+ topic/ph hi-d/b ph b">Domain </strong>in the
+                    list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-74F3383A-92B4-4CED-BBB1-24D87EABA41A" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-74F3383A-92B4-4CED-BBB1-24D87EABA41A">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">Display the list of clock pins or data pins of this Domain. </strong>A drop-down
+                    list in the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab allows you to select clock pins or data pins.
+                    SmartPower displays the list of pins corresponding to your selection below the
+                    drop-down list. You can add or remove clock pins and data pins as
+                    necessary.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-B3EC8493-C242-4168-AAC8-AFFD6F60FC75" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-B3EC8493-C242-4168-AAC8-AFFD6F60FC75">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">Remove a pin from a clock domain. </strong>Highlight the selected pin and click
+                    the <strong class="+ topic/ph hi-d/b ph b">Remove </strong>button. The pin is removed from the clock domain and is made
+                    available in the list of pins that you can add in another clock domain.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-D8DFB41B-CCDA-4274-95C9-E2A50C0F7924" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-D8DFB41B-CCDA-4274-95C9-E2A50C0F7924">
+                <span class="- topic/ph task/cmd ph cmd">Highlight the selected pin in the list of pins that are not yet in a domain and
+                    click the <strong class="+ topic/ph hi-d/b ph b">Add </strong>button to add a pin in a clock domain. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">This pin is added to the clock domain. The pin is a clock or data pin,
+                    depending on the specification of the drop-down list when you clicked the <strong class="+ topic/ph hi-d/b ph b">Add
+                        </strong>button.<div class="- topic/note note notype note_notype" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-B7FBC125-A4C2-4D82-B3AF-EBD8656985A4" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__GUID-B7FBC125-A4C2-4D82-B3AF-EBD8656985A4"><span class="note__title">Note:</span> You cannot add a pin that exists in another domain until
+                        you free it from its existing domain. The pin is unavailable until you
+                        remove it from that domain.</div></div>
+            </li>
+        </ol>
+        <section class="- topic/section task/postreq section postreq" id="GUID-5A38584C-D442-472F-839D-8C165AB39C68__POSTREQ_H1V_LPC_FNB" data-ofbid="GUID-5A38584C-D442-472F-839D-8C165AB39C68__POSTREQ_H1V_LPC_FNB">After you verify that all the clocks of your designs are
+            correctly identified and constructed, specify the correct clock and data frequency for
+            each clock domain.</section>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-574CA76B-B1DF-4D8B-8611-0B9028E94FDC" xml:lang="en-US" lang="en-US" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A">
+<h2 class="- topic/title title topictitle2" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-574CA76B-B1DF-4D8B-8611-0B9028E94FDC" style="display:inline-block">12.4.6 Adding a New Set of Pins</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Adding%20a%20New%20Set%20of%20Pins">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-05109A6C-56A6-4D77-B9E1-E1C7ECE956C1" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-05109A6C-56A6-4D77-B9E1-E1C7ECE956C1"></section>
+        <section class="- topic/section task/context section context" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-3DDDA70A-FFD5-40CF-BEF3-B164227C7645" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-3DDDA70A-FFD5-40CF-BEF3-B164227C7645">To add a new set of pins:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-8B6D8F4D-373C-413B-A96A-D2D1693D7F4F" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-8B6D8F4D-373C-413B-A96A-D2D1693D7F4F">
+            <li class="- topic/li task/step li step" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-A28E9375-A15E-40A0-A640-4EC144D5A1FC" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-A28E9375-A15E-40A0-A640-4EC144D5A1FC">
+                <span class="- topic/ph task/cmd ph cmd">Open the Create Clock Domain dialog box.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-CD585436-6A9A-4B48-9078-0578C6BB3A2A" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-CD585436-6A9A-4B48-9078-0578C6BB3A2A">
+                <span class="- topic/ph task/cmd ph cmd">Click the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab and click the <strong class="+ topic/ph hi-d/b ph b">Add Domain </strong>button.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-8BE84915-0877-477E-8ABB-5526BFD48B1C" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-8BE84915-0877-477E-8ABB-5526BFD48B1C">
+                <span class="- topic/ph task/cmd ph cmd"> Select <strong class="+ topic/ph hi-d/b ph b">Set of Pins </strong>from the drop-down list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-31A615DB-B640-4EB5-BC0A-5D28797CC077" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-31A615DB-B640-4EB5-BC0A-5D28797CC077">
+                <span class="- topic/ph task/cmd ph cmd"><strong class="+ topic/ph hi-d/b ph b">Create a Set of Pins. </strong>Name your new set of pins, specify a data
+                    frequency, and click <strong class="+ topic/ph hi-d/b ph b">Create</strong></span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__FIG_VTW_MQC_FNB" data-ofbid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__FIG_VTW_MQC_FNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 12-67. <span id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__GUID-2ED5613D-8B51-4815-9388-0682A023288E" class="fig--title">Create Set of Pins Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A__IMAGE_WTW_MQC_FNB" src="GUID-921F5E7C-3A25-4CD2-A5FE-EFEAC97ADA2F-low.png" height="96" width="246" alt="???"/>
+                    </figure>
+                </div>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The new set of pins appears in the Domains window.</div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-6B5BEC82-F920-4ABD-8D11-480D05B90084" xml:lang="en-US" lang="en-US" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B">
+<h2 class="- topic/title title topictitle2" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-6B5BEC82-F920-4ABD-8D11-480D05B90084" style="display:inline-block">12.4.7 Specifying Clock and Data Frequencies in SmartPower</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Specifying%20Clock%20and%20Data%20Frequencies%20in%20SmartPower">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-5BD6541C-8AA6-4315-9D4D-4582EEDDDF73" data-ofbid="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-5BD6541C-8AA6-4315-9D4D-4582EEDDDF73"></section>
+        <section class="- topic/section task/context section context" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-75EB9661-0FA0-498D-B760-49A54BB24A5A" data-ofbid="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-75EB9661-0FA0-498D-B760-49A54BB24A5A">To specify a clock and data
+            frequency:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-143A6300-B243-4D83-98DF-26012B8F4061" data-ofbid="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-143A6300-B243-4D83-98DF-26012B8F4061">
+            <li class="- topic/li task/step li step" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-EC54A9A0-D2C8-463F-8B9C-FD4012DD7628" data-ofbid="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-EC54A9A0-D2C8-463F-8B9C-FD4012DD7628">
+                <span class="- topic/ph task/cmd ph cmd">Click the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-70383F92-A2AF-478A-9A94-A9B977ADD2CC" data-ofbid="GUID-654C007A-2050-4AC0-A27C-B470BA64835B__GUID-70383F92-A2AF-478A-9A94-A9B977ADD2CC">
+                <span class="- topic/ph task/cmd ph cmd">Select the <strong class="+ topic/ph hi-d/b ph b">Clock/Data </strong>frequency cell and enter a new value.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <p class="- topic/p p">SmartPower defaults to 0 MHz for the clock frequency. Import your clock
+                        frequency from SmartTime by using the Initialize Frequencies dialog box in
+                        SmartPower or input your target for each clock frequency in the <strong class="+ topic/ph hi-d/b ph b">Domains
+                        </strong>tab. You must also specify a data frequency (5% of your clock frequency
+                        is a typical guideline for your data frequency—this corresponds to a toggle
+                        rate of 10%).</p>
+                    <p class="- topic/p p">Not all the pins/gates/nets of your design are associated with a specific
+                        clock. For example, the frequency of a design input port is not always
+                        correlated to a clock frequency. By extension, all pins that are upstream of
+                        the first level of sequential elements are not associated with any clock.
+                        SmartPower creates an InputSet by default that it uses to group all the pins
+                        that are controlled by design inputs (instead of sequential elements). You
+                        may want to view and verify the InputSet to further evaluate your
+                        design.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-94A61C0F-97F6-4FFC-93D8-D90ECC85686E" xml:lang="en-US" lang="en-US" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23">
+<h2 class="- topic/title title topictitle2" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-94A61C0F-97F6-4FFC-93D8-D90ECC85686E" style="display:inline-block">12.4.8 Verifying the InputSet</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Verifying%20the%20InputSet">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-D45BCAAE-CA2D-471C-A7FA-BDF23E8EAB74" data-ofbid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-D45BCAAE-CA2D-471C-A7FA-BDF23E8EAB74"></section>
+        <section class="- topic/section task/context section context" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-944EF351-D2E5-4464-B832-F92A8DC7E3B4" data-ofbid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-944EF351-D2E5-4464-B832-F92A8DC7E3B4">To verify the InputSet:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-C72A82BD-0FD3-4FEA-A5F4-52E37FBDC764" data-ofbid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-C72A82BD-0FD3-4FEA-A5F4-52E37FBDC764">
+            <li class="- topic/li task/step li step" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-890382EF-5123-43D6-B255-96C1BB9A9341" data-ofbid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-890382EF-5123-43D6-B255-96C1BB9A9341">
+                <span class="- topic/ph task/cmd ph cmd">Click the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab and select the domain named <strong class="+ topic/ph hi-d/b ph b">InputSet </strong>in the
+                    list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-C3F5A5C0-6A6B-410C-8297-FC8A7F53CBC7" data-ofbid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-C3F5A5C0-6A6B-410C-8297-FC8A7F53CBC7">
+                <span class="- topic/ph task/cmd ph cmd">Verify the list of pins of this domain. All the input ports of your design
+                    (except the clocks) belong in the <strong class="+ topic/ph hi-d/b ph b">InputSet</strong>. All pins between these input
+                    ports and the first level of sequential elements belong in the <strong class="+ topic/ph hi-d/b ph b">InputSet</strong>.
+                    You can add or remove pins as necessary.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-CD574B24-40A7-4853-B1AB-620C334B690D" data-ofbid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23__GUID-CD574B24-40A7-4853-B1AB-620C334B690D">
+                <span class="- topic/ph task/cmd ph cmd">Specify an average input frequency. SmartPower uses the same frequency for all
+                    pins of the InputSet. The default InputSet frequency is 1 MHz. Enter a new value
+                    to change it.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-6658615F-E5B8-4CDE-8D02-B3D241C1A395" xml:lang="en-US" lang="en-US" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C">
+<h2 class="- topic/title title topictitle2" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-6658615F-E5B8-4CDE-8D02-B3D241C1A395" style="display:inline-block">12.4.9 Splitting the InputSet </h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Splitting%20the%20InputSet">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">You might want to split the InputSet into several sets in order to specify different
+        frequencies. For example, you might want to create a ResetSet—a reset tree with a very low
+        frequency.</p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-5F032D26-254E-4A71-8517-FCDD69E4B620" data-ofbid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-5F032D26-254E-4A71-8517-FCDD69E4B620"></section>
+        <section class="- topic/section task/context section context" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-6F1A038F-6CFE-4801-837A-8BD198CD776E" data-ofbid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-6F1A038F-6CFE-4801-837A-8BD198CD776E">To  split the InputSet:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-612273CD-0A73-4474-A537-B372F1F906C2" data-ofbid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-612273CD-0A73-4474-A537-B372F1F906C2">
+            <li class="- topic/li task/step li step" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-10C726A4-AEE5-4D6B-A281-5D2D07967DD3" data-ofbid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-10C726A4-AEE5-4D6B-A281-5D2D07967DD3">
+                <span class="- topic/ph task/cmd ph cmd">Create a new set of pins: In the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab, click the <strong class="+ topic/ph hi-d/b ph b">New
+                    </strong>button, and select <strong class="+ topic/ph hi-d/b ph b">Set of Pins </strong>from the drop- down menu. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-C01456EF-0FCA-42D4-98FC-23F41D484773" data-ofbid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-C01456EF-0FCA-42D4-98FC-23F41D484773">
+                <span class="- topic/ph task/cmd ph cmd">In the Create Set of Pins dialog box, type a name and a frequency for the new
+                    set and click <strong class="+ topic/ph hi-d/b ph b">Create</strong>. The new set of pins appears in the Domains window.
+                    You can only create an empty set of pins, but it is possible to add pins to this
+                    domain later.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-A8486CD7-13C7-4D94-9B06-4AD377BB8768" data-ofbid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-A8486CD7-13C7-4D94-9B06-4AD377BB8768">
+                <span class="- topic/ph task/cmd ph cmd">Remove a group of pins from the <strong class="+ topic/ph hi-d/b ph b">InputSet</strong>. Click the <strong class="+ topic/ph hi-d/b ph b">Domains </strong>tab
+                    and select the domain named <strong class="+ topic/ph hi-d/b ph b">InputSet</strong> in the list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-82E84DDE-8B65-4771-8713-CCA63E56A054" data-ofbid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C__GUID-82E84DDE-8B65-4771-8713-CCA63E56A054">
+                <span class="- topic/ph task/cmd ph cmd">Select the pins that you want to remove and click the <strong class="+ topic/ph hi-d/b ph b">Remove
+                    </strong>button.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-918B3798-37E5-4F5D-926A-E06E5C5C9345" xml:lang="en-US" lang="en-US" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71">
+<h2 class="- topic/title title topictitle2" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-918B3798-37E5-4F5D-926A-E06E5C5C9345" style="display:inline-block">12.4.10 Specifying Individual Pin Frequencies</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Specifying%20Individual%20Pin%20Frequencies">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The <strong class="+ topic/ph hi-d/b ph b">Frequencies</strong> tab allows you to specify an average clock and data frequency for
+        each clock domain, and also an average frequency for each set of pins. This gives you an
+        initial estimate of the power consumption of your design. However, if this estimate is not
+        sufficiently accurate, you can refine it with a pin-by-pin annotation of the
+        frequency.</p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-74040BA1-C355-42C7-B1B9-6F6A0A906140" data-ofbid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-74040BA1-C355-42C7-B1B9-6F6A0A906140"></section>
+        <section class="- topic/section task/context section context" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-D47DDA71-2FD7-4529-BEEF-1D094990FB2C" data-ofbid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-D47DDA71-2FD7-4529-BEEF-1D094990FB2C">The following procedure describes
+            how to set the frequency of an individual pin. Performing this procedure does not remove
+            the pin from its clock domain. A frequency annotation merely overrides the domain level
+            frequency.</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-77D7D7A2-F698-4768-BCB4-81A7D0AE309A" data-ofbid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-77D7D7A2-F698-4768-BCB4-81A7D0AE309A">
+            <li class="- topic/li task/step li step" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-57F4A420-999D-458E-890C-6D9EA767B999" data-ofbid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-57F4A420-999D-458E-890C-6D9EA767B999">
+                <span class="- topic/ph task/cmd ph cmd">Locate the pin in the <strong class="+ topic/ph hi-d/b ph b">Frequencies </strong>tab. You may need to select different
+                    clock domains from the drop-down list on the <strong class="+ topic/ph hi-d/b ph b">Frequencies </strong>tab. You can use
+                    filters to facilitate this search.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-3A5014CC-1452-4330-B835-CE1463753D85" data-ofbid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-3A5014CC-1452-4330-B835-CE1463753D85">
+                <span class="- topic/ph task/cmd ph cmd">Select the pin(s) in the grid and click the <strong class="+ topic/ph hi-d/b ph b">Set frequencies for selected
+                        pins </strong>button.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-12D63509-E083-4084-B09B-490BAB91D662" data-ofbid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71__GUID-12D63509-E083-4084-B09B-490BAB91D662">
+                <span class="- topic/ph task/cmd ph cmd">Enter a new frequency value and click <strong class="+ topic/ph hi-d/b ph b">OK</strong>. This specifies a new frequency
+                    for the selected pin(s).</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-2DED46AC-B164-4513-8CBB-9BAD25F11A59" xml:lang="en-US" lang="en-US" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87">
+    <h2 class="- topic/title title topictitle2" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-2DED46AC-B164-4513-8CBB-9BAD25F11A59" style="display:inline-block">12.4.11 Changing the Frequency Annotation of a
+        Pin</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Changing%20the%20Frequency%20Annotation%20of%20a%20Pin">(Ask a Question)</a>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-7EAAE0FF-B5B6-4FDB-9EF4-48B10AF150BC" data-ofbid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-7EAAE0FF-B5B6-4FDB-9EF4-48B10AF150BC"></section>
+        <section class="- topic/section task/context section context" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-ADA4DB45-92A1-4266-B83F-55846396A04B" data-ofbid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-ADA4DB45-92A1-4266-B83F-55846396A04B">The following procedure describes
+            how to change the frequency annotation of an individual pin. This may be useful when you
+            import a VCD (value change-dump) file (see ).</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-1D9E84F1-4BE8-4552-A89F-EA2A86777B04" data-ofbid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-1D9E84F1-4BE8-4552-A89F-EA2A86777B04">
+            <li class="- topic/li task/step li step" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-4C61062A-C909-4235-9116-3C30E65E5DF2" data-ofbid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-4C61062A-C909-4235-9116-3C30E65E5DF2">
+                <span class="- topic/ph task/cmd ph cmd">Locate the pin in the <strong class="+ topic/ph hi-d/b ph b">Frequencies </strong>tab<strong class="+ topic/ph hi-d/b ph b">. </strong>You may need to select
+                    different clock domains from the drop-down list on the <strong class="+ topic/ph hi-d/b ph b">Frequencies </strong>tab.
+                    You can use filters to facilitate the search.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-7EFC6544-01E0-4758-8BFA-1B981138161E" data-ofbid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-7EFC6544-01E0-4758-8BFA-1B981138161E">
+                <span class="- topic/ph task/cmd ph cmd">Select the pin(s) in the grid and click the <strong class="+ topic/ph hi-d/b ph b">Set frequency for selected pins
+                    </strong>button.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-2C48F38E-C79B-4100-9155-595F448CD074" data-ofbid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87__GUID-2C48F38E-C79B-4100-9155-595F448CD074">
+                <span class="- topic/ph task/cmd ph cmd">Enter a new frequency value and click <strong class="+ topic/ph hi-d/b ph b">OK</strong>. This specifies a new frequency
+                    for the selected pin(s).</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-5CA078BC-5357-43F8-8E02-A9EA50971A2A" xml:lang="en-US" lang="en-US" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978">
+<h2 class="- topic/title title topictitle2" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-5CA078BC-5357-43F8-8E02-A9EA50971A2A" style="display:inline-block">12.4.12 Removing the Frequency Annotation of a Pin</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Removing%20the%20Frequency%20Annotation%20of%20a%20Pin">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-56257561-7623-4EBE-AA38-FCB6BD22E8FD" data-ofbid="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-56257561-7623-4EBE-AA38-FCB6BD22E8FD"></section>
+        <section class="- topic/section task/context section context" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-CC3B30B4-B3D8-42FC-B667-A1EB2C9A32AB" data-ofbid="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-CC3B30B4-B3D8-42FC-B667-A1EB2C9A32AB">This procedure describes how to
+            remove the frequency annotation of an individual pin. This may be useful when you import
+            a VCD (value change-dump) file.</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-FB6D9EF0-5D79-47A4-BF7E-01476DE66CC9" data-ofbid="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-FB6D9EF0-5D79-47A4-BF7E-01476DE66CC9">
+            <li class="- topic/li task/step li step" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-BF72AE23-B34D-455B-9698-76D8905ACE30" data-ofbid="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-BF72AE23-B34D-455B-9698-76D8905ACE30">
+                <span class="- topic/ph task/cmd ph cmd">Locate the pin in the <strong class="+ topic/ph hi-d/b ph b">Frequencies </strong>tab. You may need to select different
+                    clock domains from the drop-down menu on the <strong class="+ topic/ph hi-d/b ph b">Frequencies </strong>tab. You can use
+                    filters to facilitate the search.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-AFCA6A66-60A7-4A27-9E83-462B7119A516" data-ofbid="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978__GUID-AFCA6A66-60A7-4A27-9E83-462B7119A516">
+                <span class="- topic/ph task/cmd ph cmd">Select the pin(s) in the grid and click the <strong class="+ topic/ph hi-d/b ph b">Reset frequencies for selected
+                        pins </strong>button. This removes the specified frequency from the selected
+                    pins.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-41BED1AD-F131-4702-AF1A-C89F23F54231" xml:lang="en-US" lang="en-US" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E">
+    <h2 class="- topic/title title topictitle2" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-41BED1AD-F131-4702-AF1A-C89F23F54231" style="display:inline-block">12.4.13 Specifying Individual Pin
+        Probabilities</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Specifying%20Individual%20Pin%20Probabilities">(Ask a Question)</a>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The <strong class="+ topic/ph hi-d/b ph b">Probabilities </strong>tab allows you to specify the default output probability
+        value for memory blocks, and tristate and bidirectional I/Os. In addition, you can increase
+        the accuracy of the power estimation by annotating the probability of specific
+        pins.</p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-7E3BC56E-F4C2-4BF9-8D9D-767D393DFF2D" data-ofbid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-7E3BC56E-F4C2-4BF9-8D9D-767D393DFF2D"></section>
+        <section class="- topic/section task/context section context" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-E5F5D361-FD1B-4595-BDA4-43FF51B03448" data-ofbid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-E5F5D361-FD1B-4595-BDA4-43FF51B03448">To specify or change the probability
+            for one or multiple pins:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-7F72BCD5-7634-4E17-906F-0840ABDAC22A" data-ofbid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-7F72BCD5-7634-4E17-906F-0840ABDAC22A">
+            <li class="- topic/li task/step li step" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-0A931D0F-CBFE-4F2D-AFF1-6324F9C46F61" data-ofbid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-0A931D0F-CBFE-4F2D-AFF1-6324F9C46F61">
+                <span class="- topic/ph task/cmd ph cmd">Locate the pin(s) in the <strong class="+ topic/ph hi-d/b ph b">Probabilities </strong>tab. You can use filters to
+                    facilitate this search.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-E525C20B-8EEE-4DDE-9B8E-9231D77A0B07" data-ofbid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-E525C20B-8EEE-4DDE-9B8E-9231D77A0B07">
+                <span class="- topic/ph task/cmd ph cmd">Select the pin(s) and click the <strong class="+ topic/ph hi-d/b ph b">Set probabilities for selected pins</strong>
+                    button.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-D5DEFEC5-212C-490B-B9A5-587236AA1989" data-ofbid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E__GUID-D5DEFEC5-212C-490B-B9A5-587236AA1989">
+                <span class="- topic/ph task/cmd ph cmd">Enter a new probability value and click <strong class="+ topic/ph hi-d/b ph b">OK</strong>.</span>
+            </li>
+        </ol>
+    </div>
+<article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-905971B6-C25A-45E0-A1F4-6DAEB22BDE28" xml:lang="en-US" lang="en-US" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE">
+<h3 class="- topic/title title topictitle3" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-905971B6-C25A-45E0-A1F4-6DAEB22BDE28" style="display:inline-block">12.4.13.1 Specifying or Changing Probability for One or More Pins</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Specifying%20or%20Changing%20Probability%20for%20One%20or%20More%20Pins">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-2CB0D273-E4D1-4AD7-B8ED-06078570D3A1" data-ofbid="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-2CB0D273-E4D1-4AD7-B8ED-06078570D3A1"></section>
+        <section class="- topic/section task/context section context" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-D2DFACCD-BDAD-42C5-82C2-1AB1EA3BEC20" data-ofbid="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-D2DFACCD-BDAD-42C5-82C2-1AB1EA3BEC20">To specify or change the probability
+            for one or multiple pins:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-762E76ED-D9A2-4DFC-9A4B-83E3797AF46B" data-ofbid="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-762E76ED-D9A2-4DFC-9A4B-83E3797AF46B">
+            <li class="- topic/li task/step li step" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-9264D4D4-54DC-4FF2-8E0B-7A71E13E6F24" data-ofbid="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-9264D4D4-54DC-4FF2-8E0B-7A71E13E6F24">
+                <span class="- topic/ph task/cmd ph cmd">Locate the pin(s) in the <strong class="+ topic/ph hi-d/b ph b">Probabilities </strong>tab. You can use filters to
+                    facilitate this search.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-7FC30F6A-E659-4A4D-81A7-D5DE43C4062C" data-ofbid="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-7FC30F6A-E659-4A4D-81A7-D5DE43C4062C">
+                <span class="- topic/ph task/cmd ph cmd">Select the pin(s) and click the <strong class="+ topic/ph hi-d/b ph b">Set probabilities for selected pins</strong>
+                    button.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-C0AE27B5-3663-47F7-ABA8-438FD03849A5" data-ofbid="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE__GUID-C0AE27B5-3663-47F7-ABA8-438FD03849A5">
+                <span class="- topic/ph task/cmd ph cmd">Enter a new probability value and click <strong class="+ topic/ph hi-d/b ph b">OK</strong>.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-08DB02C2-5798-483B-B2C2-ECC41CCB73BE" xml:lang="en-US" lang="en-US" id="GUID-E355B9BC-0052-4D8D-B585-E62691907D92">
+<h3 class="- topic/title title topictitle3" id="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-08DB02C2-5798-483B-B2C2-ECC41CCB73BE" style="display:inline-block">12.4.13.2 Resetting the Probability for One or More Pins</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Resetting%20the%20Probability%20for%20One%20or%20More%20Pins">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-899E66EC-9021-4034-9115-693EFD4E21E5" data-ofbid="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-899E66EC-9021-4034-9115-693EFD4E21E5"></section>
+        <section class="- topic/section task/context section context" id="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-612C88B1-2295-4A41-AA1A-1D317425C38C" data-ofbid="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-612C88B1-2295-4A41-AA1A-1D317425C38C">To reset the probability for one or
+            multiple pins:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-02D6E76F-5C45-4C6C-8A16-957BE5DCBB03" data-ofbid="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-02D6E76F-5C45-4C6C-8A16-957BE5DCBB03">
+            <li class="- topic/li task/step li step" id="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-5F9C3156-5E3F-4C34-975F-5BAC0B4CBE83" data-ofbid="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-5F9C3156-5E3F-4C34-975F-5BAC0B4CBE83">
+                <span class="- topic/ph task/cmd ph cmd">Locate the pin(s) in the <strong class="+ topic/ph hi-d/b ph b">Probabilities </strong>tab. You can use filters to
+                    facilitate this search.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-B44B9E05-C732-444F-B6EF-DBBAB7B0394E" data-ofbid="GUID-E355B9BC-0052-4D8D-B585-E62691907D92__GUID-B44B9E05-C732-444F-B6EF-DBBAB7B0394E">
+                <span class="- topic/ph task/cmd ph cmd">Select the pin(s) and click the <strong class="+ topic/ph hi-d/b ph b">Reset Probabilities for selected
+                    pins</strong>button.</span>
+            </li>
+        </ol>
+    </div>
+</article></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2__GUID-054B6F58-CE31-4A2F-A509-6C4860C96B93" xml:lang="en-US" lang="en-US" id="GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2">
+    <h2 class="- topic/title title topictitle2" id="GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2__GUID-054B6F58-CE31-4A2F-A509-6C4860C96B93" style="display:inline-block">12.4.14 Vectorless Estimation</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Vectorless%20Estimation">(Ask a Question)</a>
+    <div class="- topic/body body">
+        <p class="- topic/p p">The Vectorless estimation method is an accurate method of annotating individual pins with
+            frequencies and probabilities. It uses primary inputs, clock frequencies, and nets
+            annotated with other methods as a starting point, and uses a Monte Carlo simulation to
+            annotate all nets in the design with frequencies and probabilities.</p>
+        <p class="- topic/p p">Vectorless estimation is available for SmartFusion 2, IGLOO 2, RTG 4, PolarFire and
+            PolarFire SoC families of devices.</p>
+        <p class="- topic/p p">Vectorless estimation can be enabled from the Initialize Frequencies and Probabilities
+            dialog box or from the VCD Import dialog box.</p>
+        <p class="- topic/p p">Changes to probabilities or frequencies in the Probabilities, Frequencies, or Domains
+            tabs result in an out-of-date vectorless estimation. To update vectorless estimation,
+            press the refresh vectorless <img class="- topic/image image" height="22" src="GUID-BE4E7A8B-72B6-4AF4-8E76-832A7DDCD714-low.png" width="21" alt="???"/> button.</p>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-1F193B01-5D85-49A0-802B-4FFDD12974AA" xml:lang="en-US" lang="en-US" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81">
+    <h2 class="- topic/title title topictitle2" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-1F193B01-5D85-49A0-802B-4FFDD12974AA" style="display:inline-block">12.4.15 Viewing Results (Design Level)</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Viewing%20Results%20%28Design%20Level%29">(Ask a Question)</a>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">Click the <strong class="+ topic/ph hi-d/b ph b">Summary</strong> tab to view global power consumption at the design level.
+        The <strong class="+ topic/ph hi-d/b ph b">Summary </strong>tab shows your design's estimated power consumption and temperature
+        information.</p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-41D58203-AE7A-4B63-8D8A-4BE7C29D8D51" data-ofbid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-41D58203-AE7A-4B63-8D8A-4BE7C29D8D51"></section>
+        <section class="- topic/section task/context section context" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-0927B622-9237-44C7-8218-C16155DD2886" data-ofbid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-0927B622-9237-44C7-8218-C16155DD2886">The power estimation reported in the
+                <strong class="+ topic/ph hi-d/b ph b">Summary </strong>tab is the total static and dynamic power consumption of your design.
+            For a more detailed view of this power consumption, click the <strong class="+ topic/ph hi-d/b ph b">Analysis</strong> tab.<p class="- topic/p p">To
+                estimate the junction temperature:</p></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-BDCE1EC0-E3F1-4994-BE7F-123F5CBFDCBA" data-ofbid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-BDCE1EC0-E3F1-4994-BE7F-123F5CBFDCBA">
+            <li class="- topic/li task/step li step" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-FE1AA806-2608-4479-9C71-8915DAE6FB24" data-ofbid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-FE1AA806-2608-4479-9C71-8915DAE6FB24">
+                <span class="- topic/ph task/cmd ph cmd">Verify your package. You cannot change your package directly in SmartPower,
+                    because it may render your place-and-route information (and thus it may severely
+                    impact the total power consumption). To choose another package, use <strong class="+ topic/ph hi-d/b ph b">Designer
+                        &gt; Tools &gt; Device Selection</strong>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-4F514E6A-9940-4960-90BF-880FFB55C825" data-ofbid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-4F514E6A-9940-4960-90BF-880FFB55C825">
+                <span class="- topic/ph task/cmd ph cmd">Click the <strong class="+ topic/ph hi-d/b ph b">Summary </strong>tab and select a <strong class="+ topic/ph hi-d/b ph b">Cooling </strong>style in the list.
+                    Thermal resistance changes automatically when you update the cooling
+                    style.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-399A0444-AA48-45D9-91D1-A558AA2015FF" data-ofbid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-399A0444-AA48-45D9-91D1-A558AA2015FF">
+                <span class="- topic/ph task/cmd ph cmd">Specify an ambient temperature. Enter an <strong class="+ topic/ph hi-d/b ph b">ambient temperature </strong>(default
+                    value is 25ºC) and click the <strong class="+ topic/ph hi-d/b ph b">Set</strong> button.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <div class="- topic/note note notype note_notype" id="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-54BA12EE-4A88-49AD-B6C4-59A4ADC2EBC7" data-ofbid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81__GUID-54BA12EE-4A88-49AD-B6C4-59A4ADC2EBC7"><span class="note__title">Note:</span> The junction temperature value changes according to the package, cooling
+                        style, and ambient temperature values you choose.</div>
+                </div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-E3B39799-9F68-47B2-85CE-2F25836A305D" xml:lang="en-US" lang="en-US" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275">
+<h2 class="- topic/title title topictitle2" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-E3B39799-9F68-47B2-85CE-2F25836A305D" style="display:inline-block">12.4.16 Analyzing Results</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Analyzing%20Results">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The <strong class="+ topic/ph hi-d/b ph b">Analysis</strong> tab shows the estimated power consumption of individual blocks,
+        gates, nets, I/Os, and memory, and allows you to make a hierarchical analysis of your power
+        consumption. </p>
+        <section class="- topic/section task/prereq section prereq" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-F2CB6200-9E2D-4849-8F8F-1094245990C5" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-F2CB6200-9E2D-4849-8F8F-1094245990C5"></section>
+        <section class="- topic/section task/context section context" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-00BAA4B7-2C8E-44B8-86DD-176345E2CAC3" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-00BAA4B7-2C8E-44B8-86DD-176345E2CAC3">The <strong class="+ topic/ph hi-d/b ph b">Analysis </strong>tab may also
+            help you to improve your power consumption by identifying the components that consume a
+            significant amount of power.<p class="- topic/p p">To identify the components consuming the most
+            power:</p></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-1CE9C84B-0291-4834-B51C-E6D8F46903DE" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-1CE9C84B-0291-4834-B51C-E6D8F46903DE">
+            <li class="- topic/li task/step li step" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-B3ADB64F-0F15-4EFE-BB55-EACF047FA728" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-B3ADB64F-0F15-4EFE-BB55-EACF047FA728">
+                <span class="- topic/ph task/cmd ph cmd">Use the <strong class="+ topic/ph hi-d/b ph b">Analysis </strong>tab to expand the design hierarchy. The <strong class="+ topic/ph hi-d/b ph b">Analysis
+                    </strong>tab allows you to expand your design hierarchy and view a complete list of
+                    the blocks in your design. In the hierarchy window, click the <strong class="+ topic/ph hi-d/b ph b">+ </strong>next to
+                    your design to view the items in the hierarchy. Click the <strong class="+ topic/ph hi-d/b ph b">+ </strong>next to a
+                    sub-block to view its sub-elements.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__FIG_RGS_L4B_FNB" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__FIG_RGS_L4B_FNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 12-68. <span id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-200B1ED2-ED77-4D34-8E5E-64784B4F4A40" class="fig--title">Analysis Tab Dialog
+                            Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__IMAGE_PDQ_M4B_FNB" src="GUID-81CFF79D-6F01-4599-B961-4A7B730EC946-low.png" height="359" width="538" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-3AB15DCB-FE52-4414-8412-2A7F792E4D32" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-3AB15DCB-FE52-4414-8412-2A7F792E4D32">
+                <span class="- topic/ph task/cmd ph cmd">Click to select a block. By default, SmartPower selects the design-level block,
+                    but you can always select another block in the hierarchical tree. The Report
+                    window displays the list of sub-elements of the selected block. Initially, this
+                    list includes all sub-elements. The grid in the Analysis window displays a
+                    breakdown of the power of the selected block by type. This breakdown provides
+                    you a good overview of which areas of your design you should optimize for
+                    power.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-21C01D34-0599-4B30-A42A-41BA8A54B45F" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-21C01D34-0599-4B30-A42A-41BA8A54B45F">
+                <span class="- topic/ph task/cmd ph cmd">To find the components that use a significant amount of power, choose <strong class="+ topic/ph hi-d/b ph b">By
+                        Instance </strong>from the <strong class="+ topic/ph hi-d/b ph b">Breakdown</strong> drop-down list.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-7F46AB86-8FA7-43E9-A85C-9791C15F4C0A" data-ofbid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275__GUID-7F46AB86-8FA7-43E9-A85C-9791C15F4C0A">
+                <span class="- topic/ph task/cmd ph cmd">Sort and filter the sub-elements to find the component that is using the most
+                    power. The Analysis window displays the list of sub-elements of the selected
+                    block. By default, this list includes all sub-elements. The grid contains
+                    columns for name, type, power, driver, fanout, macro, I/O standard, output load,
+                    output drive, slew, port, domain and frequency. You can limit the list of
+                    sub-elements to a list of sub-blocks, nets, gates, I/Os, memories, or any
+                    combination of these five classes of sub-elements. You can sort the list
+                    according to any column by double-clicking the column header.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic topic nested1" aria-labelledby="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-B5BE2F1A-823D-4899-8526-361F1FAC395F" xml:lang="en-US" lang="en-US" id="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60"><h2 class="- topic/title title topictitle2" id="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-B5BE2F1A-823D-4899-8526-361F1FAC395F" style="display:inline-block">12.4.17 SmartPower Calculation Equations</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SmartPower%20Calculation%20Equations">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">SmartPower calculates the static power and the dynamic power of your design, for given operating conditions and operating modes:</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Static Power</strong>: summation of the static power consumed by each element of the design.
+            SmartPower provides a static power consumption of the array. This value is
+            die-dependent. This value is also a function of the operating mode. For some families,
+            SmartPower also considers a static power contribution per I/O bank. For specific I/O
+            technologies like voltage referenced I/Os or differential I/Os, SmartPower also
+            considers a static power contribution per I/O.</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Dynamic Power</strong>: summation of the dynamic power consumed by each element of the design
+            (nets, modules, I/Os, RAMs, FIFOs, PLLs, etc.).</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Operating Conditions</strong>: SmartPower calculates power consumption in Worst, Typical, or Best operating conditions. SmartPower uses the following as general guidelines:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-56CB2606-EB0E-4675-940C-D6B4497620F5" data-ofbid="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-56CB2606-EB0E-4675-940C-D6B4497620F5">It applies a voltage derating to dynamic power contributions. Higher voltage typically leads to higher power consumption.</li><li class="- topic/li li" id="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-63A983F4-39E6-44D5-B76E-CAA8D56E6F45" data-ofbid="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-63A983F4-39E6-44D5-B76E-CAA8D56E6F45">It applies a temperature derating to static power contributions. Higher temperature typically leads to higher power consumption.</li><li class="- topic/li li" id="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-941D33AA-C538-4214-857D-E514E703B526" data-ofbid="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60__GUID-941D33AA-C538-4214-857D-E514E703B526">It applies no radiation derating.</li></ul><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Operating Modes</strong>: SmartPower calculates power consumption in Active, Static, Flash*Freeze,
+            Sleep, and Shutdown operating modes when applicable for your design.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-0BF2F027-F6E5-4CD6-9053-2B6565853647" xml:lang="en-US" lang="en-US" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5"><h2 class="- topic/title title topictitle2" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-0BF2F027-F6E5-4CD6-9053-2B6565853647" style="display:inline-block">12.4.18 Sample Equations:</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Sample%20Equations%3A">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The following examples are for general evaluation purposes only. They are not a precise
+            representation of the actual calculations, since each calculation takes into account
+            family-specific information.</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-795A2295-8961-4B49-8104-B4406E065887" data-ofbid="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-795A2295-8961-4B49-8104-B4406E065887">For a <strong class="+ topic/ph hi-d/b ph b">net</strong>,<p class="- topic/p p"><img class="- topic/image image" src="GUID-9F02FEA9-E082-4066-84B9-4FE8F0F0D947-low.png" height="12" width="101" alt="???"/></p><div class="- topic/p p">where C is the total capacitive loading of the net
+                    (extracted from the routing topology), V is the net's voltage swing, and F is
+                    the average switching frequency.<div class="- topic/note note notype note_notype" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-4EBFDD46-CF94-47E9-B860-D92383F11EA6" data-ofbid="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-4EBFDD46-CF94-47E9-B860-D92383F11EA6"><span class="note__title">Note:</span> For the ProASIC<u class="+ topic/ph hi-d/u ph u">PLUS</u> family,
+                        SmartPower extracts the capacitive loading of a net from a Wire Load
+                        model.</div></div></li><li class="- topic/li li" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-24B8605F-826E-44C7-B22B-0A6F396B4EDA" data-ofbid="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-24B8605F-826E-44C7-B22B-0A6F396B4EDA">For a <strong class="+ topic/ph hi-d/b ph b">module</strong>, the power is computed using
+                a characterized library (by family and die-size) describing a specific power model
+                for each type of module. For example, the power model of a flip-flop is given by
+                    <img class="- topic/image image" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__IMAGE_NSR_WNB_FNB" src="GUID-F742B356-42B1-454D-99C8-64CB6DDDDA1F-low.png" height="17" width="306" alt="???"/><p class="- topic/p p">where FCK is the average clock-input
+                    frequency for this flip-flop, FDOUT is its average data-output frequency, and
+                    PCK, PDOUT, PDin are three constants estimated by electrical simulation and
+                    silicon characterization for this flip-flop module, and FDin is its average
+                    data-input frequency.</p></li><li class="- topic/li li" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-6D0C01CD-0827-440E-BC95-49F2CF64F99C" data-ofbid="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-6D0C01CD-0827-440E-BC95-49F2CF64F99C">For an <strong class="+ topic/ph hi-d/b ph b">I/O</strong>, the formula used for computing the power consumption depends on the I/O technology and the family. For example, for a TTL output, the dynamic power is given by<p class="- topic/p p"><img class="- topic/image image" src="GUID-F4DEF193-BF5A-4A3C-AF95-C906F43B544D-low.png" height="17" width="171" alt="???"/></p><p class="- topic/p p">where C is the output load (derived from what you have set in the I/O Attribute Editor GUI, typically 35 pF for TTL), V is the output's voltage swing (3.3 V for TTL), and PINT represents an internal power contribution dissipated in the pad, and F is the average switching frequency of the I/O.</p></li><li class="- topic/li li" id="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-BA6D1D1E-BBDF-4A26-A646-2C6C0D23D98E" data-ofbid="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5__GUID-BA6D1D1E-BBDF-4A26-A646-2C6C0D23D98E">For a <strong class="+ topic/ph hi-d/b ph b">complex block</strong>, like a RAM, a FIFO, or a PLL, SmartPower uses a high-level power model that integrates design parameters.</li></ul><p class="- topic/p p">SmartPower computes all the constant parameters of these equations automatically. However, the
+            frequencies depend on the target frequencies of your design. Since it is impractical to
+            enter each frequency manually, SmartPower has several flows that help you estimate the
+            frequencies and calculate the power consumption.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003__GUID-1C25CC56-C2E4-4CD5-ACC5-64D9329E01B5" xml:lang="en-US" lang="en-US" id="GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003"><h2 class="- topic/title title topictitle2" id="GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003__GUID-1C25CC56-C2E4-4CD5-ACC5-64D9329E01B5" style="display:inline-block">12.4.19 Data Change History - SmartPower</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Data%20Change%20History%20-%20SmartPower">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The data change history report lists power data updates up to the current release that may impact the power consumption of the design.</p><p class="- topic/p p">To generate a data change history report, choose <strong class="+ topic/ph hi-d/b ph b">Data Change History</strong> from the <strong class="+ topic/ph hi-d/b ph b">Help
+            </strong>menu to open a data change history report in text format.</p></div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-FE220513-1C98-4FCF-9A87-E75755867CE7" data-tocid="GUID-FE220513-1C98-4FCF-9A87-E75755867CE7">12.4.1 Calculating Power</a></li><li class="topic-item"><a href="#GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6" data-tocid="GUID-F666940F-5C61-4E09-8248-E2D8AAA2A1A6">12.4.2 Extracting Power Consumption of a Specific Clock Domain</a></li><li class="topic-item"><a href="#GUID-922BAE6C-1622-4711-93BA-05987FD1134B" data-tocid="GUID-922BAE6C-1622-4711-93BA-05987FD1134B">12.4.3 Advanced Analysis of I/Os</a></li><li class="topic-item"><a href="#GUID-733349B7-D420-45AE-A46F-490143AE1D85" data-tocid="GUID-733349B7-D420-45AE-A46F-490143AE1D85">12.4.4 Adding a New Clock Domain</a></li><li class="topic-item"><a href="#GUID-5A38584C-D442-472F-839D-8C165AB39C68" data-tocid="GUID-5A38584C-D442-472F-839D-8C165AB39C68">12.4.5 Verifying Lists of Clock and Data Pins of a
+        Clock Domain</a></li><li class="topic-item"><a href="#GUID-24191BD0-799B-4D7B-A474-CA86C675F14A" data-tocid="GUID-24191BD0-799B-4D7B-A474-CA86C675F14A">12.4.6 Adding a New Set of Pins</a></li><li class="topic-item"><a href="#GUID-654C007A-2050-4AC0-A27C-B470BA64835B" data-tocid="GUID-654C007A-2050-4AC0-A27C-B470BA64835B">12.4.7 Specifying Clock and Data Frequencies in SmartPower</a></li><li class="topic-item"><a href="#GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23" data-tocid="GUID-6C539A8C-A58E-4B8C-8A66-285AC71C9B23">12.4.8 Verifying the InputSet</a></li><li class="topic-item"><a href="#GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C" data-tocid="GUID-5276CBC0-8FD6-4A0A-8D40-13AD931D4D4C">12.4.9 Splitting the InputSet </a></li><li class="topic-item"><a href="#GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71" data-tocid="GUID-EC2E1BB0-8461-4236-A1AA-9FA89C3B7B71">12.4.10 Specifying Individual Pin Frequencies</a></li><li class="topic-item"><a href="#GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87" data-tocid="GUID-102B1901-2D81-4E69-8E12-723BD8ABBB87">12.4.11 Changing the Frequency Annotation of a
+        Pin</a></li><li class="topic-item"><a href="#GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978" data-tocid="GUID-9E034ED5-7570-4E67-979C-E6A1FAD4A978">12.4.12 Removing the Frequency Annotation of a Pin</a></li><li class="topic-item"><a href="#GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E" data-tocid="GUID-3558D485-2078-4711-BB1A-D0C4A5E2D03E">12.4.13 Specifying Individual Pin
+        Probabilities</a><ul><li class="topic-item"><a href="#GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE" data-tocid="GUID-70DA9B1D-AAAF-4269-80F7-C12A6A1135EE">12.4.13.1 Specifying or Changing Probability for One or More Pins</a></li><li class="topic-item"><a href="#GUID-E355B9BC-0052-4D8D-B585-E62691907D92" data-tocid="GUID-E355B9BC-0052-4D8D-B585-E62691907D92">12.4.13.2 Resetting the Probability for One or More Pins</a></li></ul></li><li class="topic-item"><a href="#GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2" data-tocid="GUID-80F1B302-2A96-40E1-BD59-D332A55B9EA2">12.4.14 Vectorless Estimation</a></li><li class="topic-item"><a href="#GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81" data-tocid="GUID-41B5C7B6-5659-4144-970D-A5B35B10AD81">12.4.15 Viewing Results (Design Level)</a></li><li class="topic-item"><a href="#GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275" data-tocid="GUID-3BB0DC80-CB8F-4F0F-A274-032B6C63A275">12.4.16 Analyzing Results</a></li><li class="topic-item"><a href="#GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60" data-tocid="GUID-E1EC4F9E-745D-4F40-987E-24F5E947FB60">12.4.17 SmartPower Calculation Equations</a></li><li class="topic-item"><a href="#GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5" data-tocid="GUID-C9DCD5E8-1F51-4FB7-9331-0CAA8A5BE7B5">12.4.18 Sample Equations:</a></li><li class="topic-item"><a href="#GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003" data-tocid="GUID-56E6AA91-AF9B-4BF5-87E4-3CE53670F003">12.4.19 Data Change History - SmartPower</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>15.2.9.2.1<\/ph>\nDerived PDC file","href":"GUID-2D9C9364-EEF4-425D-BD89-6F78AB67B02D.html","attributes":{"data-id":"GUID-2D9C9364-EEF4-425D-BD89-6F78AB67B02D"},"menu":{"hasChildren":false},"tocID":"GUID-2D9C9364-EEF4-425D-BD89-6F78AB67B02D-d10733e18160","topics":[]}]});

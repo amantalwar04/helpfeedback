@@ -1,0 +1,532 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="To set netlist-specific constraints, use Netlist attributes Netlist Design Constraint (NDC) commands. These commands are placed in a Compile Netlist Constraint ( *.ndc ) file and used by the Libero ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>8.2.4 Netlist Attributes NDC Commands</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5-d10733e7142"/><meta name="wh-source-relpath" content="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.xml"/><meta name="wh-out-relpath" content="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+PDC Commands for SmartFusion2 and IGLOO2</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for SmartFusion2 and IGLOO2</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5"><div class="title"><a href="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.html#GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.4</ph>
+Netlist Attributes NDC Commands</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6745" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6745-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6745-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.1</ph>
+PDC Commands for PolarFire</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e6981" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e6981-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" id="tocId-d10733e6981-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+PDC Commands for SmartFusion2 and IGLOO2</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for SmartFusion2 and IGLOO2</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E-d10733e6986" class="topicref introduction" data-id="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E-d10733e6986-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E.html#GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E" id="GUID-1D299B8E-92B4-431E-B1F1-CCCDF490193E-d10733e6986-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469-d10733e7003" class="topicref" data-id="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BCD56451-DA80-4F00-8388-DB8FA617E469-d10733e7003-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469.html#GUID-BCD56451-DA80-4F00-8388-DB8FA617E469" id="GUID-BCD56451-DA80-4F00-8388-DB8FA617E469-d10733e7003-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.1</ph>
+PDC Syntax Conventions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719-d10733e7044" class="topicref" data-id="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719-d10733e7044-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719.html#GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719" id="GUID-DC4B9852-275C-43A4-B6F5-B7E54AD68719-d10733e7044-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.2</ph>
+PDC Naming Conventions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C-d10733e7077" class="topicref" data-id="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C-d10733e7077-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C.html#GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C" id="GUID-E5A356A0-59A9-45FC-90EA-C56909C60E1C-d10733e7077-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.3</ph>
+I/O PDC Commands</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5-d10733e7142" class="topicref" data-id="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5-d10733e7142-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.html#GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5" id="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5-d10733e7142-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.4</ph>
+Netlist Attributes NDC Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953-d10733e7150" class="topicref" data-id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.html#GUID-EEC645D5-830F-480D-9C83-DABBA518F953" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953-d10733e7150-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.4.1</ph>
+set_mitigation (RTG4 Devices Only)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D-d10733e7158" class="topicref" data-id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.html#GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D-d10733e7158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.4.2</ph>
+set_ioff</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D-d10733e7166" class="topicref" data-id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5.html#GUID-A265EE6D-C160-4E61-B78C-4A10E104444D" id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D-d10733e7166-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.4.3</ph>
+set_preserve</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3-d10733e7176" class="topicref" data-id="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3-d10733e7176-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3.html#GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3" id="GUID-B39A0261-A3E4-4E04-B1CD-4B3C30947ED3-d10733e7176-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.5</ph>
+Floorplanning FDC Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e7273" class="topicref" data-id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e7273-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762_2.html#GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762" id="GUID-56F544B4-D7F7-4385-9F94-D2CC2D1FD762-d10733e7273-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8.2.6</ph>
+Post Layout Edit PDC Commands</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5__GUID-24240969-A41B-4546-AFFD-1ABCA6032F28"><article class="nested0" aria-labelledby="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5__GUID-24240969-A41B-4546-AFFD-1ABCA6032F28" id="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5"><h1 class="- topic/title title topictitle1" id="GUID-B0082A32-AB1D-4BCA-8B59-F959035E9DE5__GUID-24240969-A41B-4546-AFFD-1ABCA6032F28" style="display:inline-block">8.2.4 Netlist Attributes NDC Commands</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Netlist%20Attributes%20NDC%20Commands">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">To set netlist-specific constraints, use Netlist attributes Netlist Design Constraint (NDC)
+      commands. These commands are placed in a Compile Netlist Constraint
+        (<span class="+ topic/ph sw-d/filepath ph filepath">*.ndc</span>) file and used by the Libero SoC Compile engine to optimize the
+      post-synthesis netlist.</p></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-2A564B94-2DE4-4F7B-A34B-3F7F6E75EE0F" xml:lang="en-US" lang="en-US" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953"><h2 class="- topic/title title topictitle2" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-2A564B94-2DE4-4F7B-A34B-3F7F6E75EE0F" style="display:inline-block">8.2.4.1 set_mitigation (RTG4 Devices Only)</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_mitigation%20%28RTG4%20Devices%20Only%29">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">This command sets the mitigation option on a per-instance basis for RTG4 devices. For the
+            Enhanced Constraint flow, import this NDC command as a Netlist Attributes constraint
+            file (<span class="+ topic/ph sw-d/filepath ph filepath">*.ndc</span>) and associate it with Synthesis in the
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Constraint Manager</span>.</p>
+        <p class="- topic/p p">For the Classic Constraint Flow, save the command as a PDC file
+                (<span class="+ topic/ph sw-d/filepath ph filepath">*.pdc</span>) and import the <span class="+ topic/ph sw-d/filepath ph filepath">*.pdc</span> file into the
+            Project (<span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Design Flow Window </span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Floorplan Constraints</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Import Files</span></span>). After import, associate the file with Compile (Right-click the PDC file
+            and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Use for Compile</span>).</p>
+        <div class="- topic/note note important note_important" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__NOTE_TXL_HW4_5TB" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__NOTE_TXL_HW4_5TB"><span class="note__title">Important:</span> This NDC/PDC command overrides the project-wide
+            global setting for mitigation option (<span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Project Settings </span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Device settings</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enable Single Event Transient Mitigation</span></span>). The global mitigation setting is project-wide and applies to ALL
+            instances in the design that the mitigation option is valid. If you want to override the
+            global setting for certain specific instances in the design (and allow the global
+            setting to remain valid on all other instances), use the set_mitigation command for the
+            specific instances because this command sets the mitigation option on a per-instance
+            basis.</div>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_mitigation -inst_name &lt;instance_name&gt; -mitigated &lt;value&gt;</code></pre>
+        <section class="- topic/section section" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_EHD_THG_GRB" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_EHD_THG_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">set_mitigation</code> (RTG4 Devices Only)
+                arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9C1F223B-4B79-4A1A-BF05-894C87A35F98" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9C1F223B-4B79-4A1A-BF05-894C87A35F98">-inst_name &lt;instance_name&gt;</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the instance in the netlist to set the mitigation
+                            option. A hierarchical instance name is allowed. The wildcard character
+                            "*" in the instance name is also supported. When the mitigation option
+                            is set on an instance that contains design elements that can have the
+                            mitigation option, all the design elements within that instance are set
+                            with this option. This applies to MACC blocks, µSRAM blocks, LSRAM
+                            blocks, I/O Flip-Flops, and regular Flip-Flops within that instance.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-2D6D13A4-E755-4F5E-B178-50B2B58033C9" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-2D6D13A4-E755-4F5E-B178-50B2B58033C9">-mitigated Value</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Sets the mitigation value for the instance. The acceptable values for
+                            this argument are listed in the following table.</p>
+                        <div class="table-container"><table class="- topic/table table frame-all" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-83. </span></span><span class="table--title" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-3A12C935-03DC-4D44-AA4A-DA0332588FA7">-mitigated
+                                Value</span></caption><colgroup><col style="width:20%"/><col style="width:80%"/></colgroup><thead class="- topic/thead thead">
+                                    <tr class="- topic/row">
+                                        <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866__entry__1">Value</th>
+                                        <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866__entry__2">Description</th>
+                                    </tr>
+                                </thead><tbody class="- topic/tbody tbody valign-top">
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866__entry__1">Yes | on | true | 1</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866__entry__2">The mitigation option is enabled on this instance.
+                                            “Yes”, “On”, “True” are case-insensitive.</td>
+                                    </tr>
+                                    <tr class="- topic/row">
+                                        <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866__entry__1">No | off | false | 0</td>
+                                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-9F345166-9A66-4C31-81DE-29F0FA46A866__entry__2">The mitigation option is disabled on this instance.
+                                            No, Off, and False are case-insensitive.</td>
+                                    </tr>
+                                </tbody></table></div>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_AQ5_QB1_Q4B" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_AQ5_QB1_Q4B"><h3 class="- topic/title title sectiontitle">Return Value</h3>
+            
+            <p class="- topic/p p">Returns "0" on success and "1" on failure.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_YWG_LB1_Q4B" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_YWG_LB1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <p class="- topic/p p">This example sets the mitigation option on the instance blk1/* globally in the
+                netlist:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_mitigation -inst_name blk1/* -mitigated yes</code></pre>
+            <p class="- topic/p p">After the first command above, to set a different mitigation value on a specific
+                instance, for example, instance FF_1 inside the blk1 instance, use the
+                &lt;-mitigated No&gt; argument as follows:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_mitigation -inst_name blk1/FF_1 -mitigated No</code></pre>
+            <div class="- topic/note note notype note_notype" id="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-67338DE5-C8CD-43AF-AA56-4D41015CED96" data-ofbid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__GUID-67338DE5-C8CD-43AF-AA56-4D41015CED96"><span class="note__title">Note:</span> The last
+                    <code class="+ topic/ph pr-d/codeph ph codeph">set_mitigation</code> command overrides a previous set_mitigation
+                command, if there is a conflict.</div>
+        </section>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-772204E7-31BF-496C-84FC-410285D6ECC2" xml:lang="en-US" lang="en-US" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D"><h2 class="- topic/title title topictitle2" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-772204E7-31BF-496C-84FC-410285D6ECC2" style="display:inline-block">8.2.4.2 set_ioff</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_ioff">(Ask a Question)</a><div class="- topic/body body">
+        <p class="- topic/p p">This command specifies whether or not a register is combined with an I/O during
+            synthesis/compile. This command is placed in a Compile Netlist Constraint
+                (<span class="+ topic/ph sw-d/filepath ph filepath">*.ndc</span>) file and passed to the Libero SoC Compile engine for
+            netlist optimization after synthesis.</p>
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_ioff {&lt;portname&gt;} 
+\[-in_reg yes|no] \ 
+[-out_reg yes|no] \
+[-en_reg yes|no]</code></pre>
+        <section class="- topic/section section" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_C2T_L3G_GRB" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_C2T_L3G_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+            
+            <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">set_ioff</code> arguments.</p>
+            <dl class="- topic/dl dl">
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-E2A76E92-9A2C-45D9-AEC6-E6F2983AAFF0" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-E2A76E92-9A2C-45D9-AEC6-E6F2983AAFF0">portname</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies the name of the I/O port to be combined with a register. The
+                            port can be an input, output, or inout port.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-3B917735-8AED-474E-A3EB-D25370FBC658" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-3B917735-8AED-474E-A3EB-D25370FBC658">-in_reg</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies whether the input register is combined into the port
+                            &lt;portname&gt;. Valid values are “yes” or “no”.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-BEADA8D2-16EB-490B-8F7D-FE1AABEF5962" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-BEADA8D2-16EB-490B-8F7D-FE1AABEF5962">-out_reg</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies whether the output register is combined into the port
+                            &lt;portname&gt;. Valid values are “yes” or “no”.</p>
+                    </dd>
+                
+                
+                    <dt class="- topic/dt dt dlterm" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-41E1FDD6-86A7-4E09-8080-215586E59B0E" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-41E1FDD6-86A7-4E09-8080-215586E59B0E">-en_reg</dt>
+                    <dd class="- topic/dd dd">
+                        <p class="- topic/p p">Specifies whether the enable register is combined into the port
+                            &lt;portname&gt;. Valid values are “yes” or “no”.</p>
+                    </dd>
+                
+            </dl>
+        </section>
+        <section class="- topic/section section" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_XBR_4C1_Q4B" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_XBR_4C1_Q4B"><h3 class="- topic/title title sectiontitle">Return Value</h3>
+            
+            <p class="- topic/p p">The command returns “0” on success and “1” on failure.</p>
+        </section>
+        <section class="- topic/section section" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_FLD_BFW_GTB" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_FLD_BFW_GTB"><h3 class="- topic/title title sectiontitle">I/O Register Combining Rules</h3>
+            
+            <p class="- topic/p p">I/Os are combined with a register to achieve better clock-to-out and input-to-clock
+                timing. When combining these registers at the I/O buffer, some design rules must be
+                met. This feature is supported by all I/O standards. The I/O register combining
+                rules are as follows:</p>
+            <ul class="- topic/ul ul" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__UL_FNY_JFW_GTB" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__UL_FNY_JFW_GTB">
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-B94EF643-57A8-4820-9A02-4215D6E58138" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-B94EF643-57A8-4820-9A02-4215D6E58138">Registers combined on the Output and Output Enable must have the same
+                        configuration.<p class="- topic/p p">Example: If the output register is DFN1C0, the Output
+                        Enable register must also be DFN1C0.</p></li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-94CC8612-C9C1-43B8-87EF-61CEEFD2CB8F" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-94CC8612-C9C1-43B8-87EF-61CEEFD2CB8F">All registers (Input, Output, and Output Enable) connected to an I/O must share
+                    the same clear (CLR) or preset (PRE) pin.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-E245D311-EACA-4F67-8514-C8C804F55B96" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-E245D311-EACA-4F67-8514-C8C804F55B96">If one of the registers has a CLR pin, all the other registers that are
+                    candidates for combining in the I/O must have a CLR pin.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-5F532A62-1419-4F95-AD8B-461C223C1C30" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-5F532A62-1419-4F95-AD8B-461C223C1C30">If one of the registers has a PRE pin, all the other registers that are
+                    candidates for combining in the I/O must have a PRE pin.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-D9C2C464-DE5E-4D8E-84E3-7A1981E82D4F" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-D9C2C464-DE5E-4D8E-84E3-7A1981E82D4F">If one of the registers has neither a CLR nor a PRE pin, all the other registers
+                    that are candidates for combining must have neither a CLR nor a PRE pin.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-21104A69-5231-4F2F-9381-9F69BA2D59EF" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-21104A69-5231-4F2F-9381-9F69BA2D59EF">If the CLR or PRE pins are present, they must have the same polarity.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-53A9CDEC-4D0A-49E7-81DF-D97B7C37AF8E" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-53A9CDEC-4D0A-49E7-81DF-D97B7C37AF8E">If the CLR or PRE pins are present, they must be driven by the same signal
+                    (net).</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-320374D5-13AE-4BD5-AA3D-D72CAA1B03FD" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-320374D5-13AE-4BD5-AA3D-D72CAA1B03FD">The fan-out between an I/O pin (D, Y, or E) and a register must be equal to
+                    1.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-37F6A210-1C41-488F-846B-727D4748BBB6" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-37F6A210-1C41-488F-846B-727D4748BBB6">The register pin connected to the I/O must be the 'D' or 'Q' pin.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-E9C9589F-75F7-4761-AE50-739E0863CDB7" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-E9C9589F-75F7-4761-AE50-739E0863CDB7">Registers connected to an I/O on the Output and Output Enable pins must have the
+                    same clock and enable function.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-08508028-EEA2-4B8F-A227-9FD0AFDC33D2" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-08508028-EEA2-4B8F-A227-9FD0AFDC33D2">Both the Output and Output Enable registers must have an E pin (clock enable) or
+                    none at all.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-70F8F746-22B8-4AE4-A1E8-C259E30D843C" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-70F8F746-22B8-4AE4-A1E8-C259E30D843C">If the E pins are present, they must have the same polarity. The CLK pins must
+                    also have the same polarity. </li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-392493D4-8B96-40A4-8327-0FCAB3451850" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-392493D4-8B96-40A4-8327-0FCAB3451850">Input Registers—The I/O must
+                    drive the D pin of a register with a fanout of 1.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-0F02F868-5D6A-41AD-89F4-0FB8F85068D6" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-0F02F868-5D6A-41AD-89F4-0FB8F85068D6">Output Registers—The Q pin of the
+                    register must drive the D pin of the I/O with a fanout of 1.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-0786E1CD-BA7B-405D-B6E7-660FFB965241" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-0786E1CD-BA7B-405D-B6E7-660FFB965241">Enable Registers—The Q pin of the
+                    register must drive the E pin of the I/O with a fanout of 1.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-017C6034-598E-494B-9E4A-9D4FBEFA2143" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-017C6034-598E-494B-9E4A-9D4FBEFA2143">Output and Enable Register CLK pins must be driven by the same net with the same
+                    polarity to be combined in the same I/O.</li>
+                <li class="- topic/li li" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-8F937FD2-A442-459A-BA1E-FD41FFEE9B34" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__GUID-8F937FD2-A442-459A-BA1E-FD41FFEE9B34">Input, Output and Enable register ALn and SLn must be driven by the same net and
+                    the same polarity to combine them into the same I/O.</li>
+            </ul>
+        </section>
+        <section class="- topic/section section" id="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_ODZ_HC1_Q4B" data-ofbid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_ODZ_HC1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+            
+            <p class="- topic/p p">The following command specifies that for the port my_in_out[1], the output register
+                is combined into the port, but it is not combined into the input register nor the
+                enable register:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_ioff {my_in_out[1]} –in_reg no –out_reg yes –en_reg no</code></pre>
+            <p class="- topic/p p">The following command specifies that for the port my_in_out[19], the enable register
+                is combined into the port, but is not combined into the input register nor the
+                output register:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_ioff {my_in_out[19]} –in_reg no –out_reg no –en_reg yes</code></pre>
+            <p class="- topic/p p">The set_ioff command applies to scalar I/Os only. For an I/O bus, use the for-loop
+                available in Tcl. The following command combines each scalar member of the 32-bit
+                I/O bus DataA with input registers:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>for { set i 0 } { i &lt; 32 } { incr i } { set_ioff "DataA\[$i\]" -in_reg yes }</code></pre>
+            <p class="- topic/p p">Alternatively, you can use a wild card to include all scalar signals of an I/O
+                bus:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_ioff {DataA[*]} -in_reg yes</code></pre>
+        </section>
+    </div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__GUID-AF9B2FB4-EA5F-4D80-AB6A-DDB7C6CE2E10" xml:lang="en-US" lang="en-US" id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D"><h2 class="- topic/title title topictitle2" id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__GUID-AF9B2FB4-EA5F-4D80-AB6A-DDB7C6CE2E10" style="display:inline-block">8.2.4.3 set_preserve</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=set_preserve">(Ask a Question)</a><div class="- topic/body body">
+    <p class="- topic/p p">This command sets a preserve property on instances before compile. Therefore, the compile
+      will preserve these instances and not combine them.</p>
+    <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_preserve hier_inst_name</code></pre>
+    <section class="- topic/section section" id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_OPF_W3G_GRB" data-ofbid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_OPF_W3G_GRB"><h3 class="- topic/title title sectiontitle">Arguments</h3>
+      
+      <p class="- topic/p p">The following sections describe <code class="+ topic/ph pr-d/codeph ph codeph">set_preserve</code> arguments.</p>
+      <dl class="- topic/dl dl">
+        
+          <dt class="- topic/dt dt dlterm" id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__GUID-2F9684C1-A388-49F4-84EF-8916BD6C4328" data-ofbid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__GUID-2F9684C1-A388-49F4-84EF-8916BD6C4328">hier_inst_name</dt>
+          <dd class="- topic/dd dd">
+            <p class="- topic/p p">Specifies the full hierarchical name of the macro in the netlist to preserve.</p>
+          </dd>
+        
+      </dl>
+    </section>
+    <section class="- topic/section section" id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_A3R_DD1_Q4B" data-ofbid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_A3R_DD1_Q4B"><h3 class="- topic/title title sectiontitle">Exceptions</h3>
+      
+      <p class="- topic/p p">You must put this command in a PDC constraint file and associate it to Place and Route.</p>
+    </section>
+    <section class="- topic/section section" id="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_TT1_FD1_Q4B" data-ofbid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_TT1_FD1_Q4B"><h3 class="- topic/title title sectiontitle">Examples</h3>
+      
+      <p class="- topic/p p">In some cases, you may want to preserve some instances for timing purposes. For example,
+        you may want registers to be combined with input of a bibuf and keep the output as it
+        is.</p>
+      <p class="- topic/p p">If the outbuf of a bi-directional signal test[1] needs to be preserved while inbuf is
+        required to combine with the registers, use the following PDC commands:</p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_io test\[1\] -register yes set_preserve test\[31\]</code></pre>
+      <p class="- topic/p p">If any internal instance is required to be preserved, use the set_preserve command as shown
+        in the following example:</p>
+      <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_preserve top/inst1 top/inst2</code></pre>
+    </section>
+  </div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-EEC645D5-830F-480D-9C83-DABBA518F953" data-tocid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953">8.2.4.1 set_mitigation (RTG4 Devices Only)</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_EHD_THG_GRB" data-tocid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_EHD_THG_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_AQ5_QB1_Q4B" data-tocid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_AQ5_QB1_Q4B">Return Value</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_YWG_LB1_Q4B" data-tocid="GUID-EEC645D5-830F-480D-9C83-DABBA518F953__SECTION_YWG_LB1_Q4B">Examples</a></div></li></ul></li><li class="topic-item"><a href="#GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D" data-tocid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D">8.2.4.2 set_ioff</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_C2T_L3G_GRB" data-tocid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_C2T_L3G_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_XBR_4C1_Q4B" data-tocid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_XBR_4C1_Q4B">Return Value</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_FLD_BFW_GTB" data-tocid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_FLD_BFW_GTB">I/O Register Combining Rules</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_ODZ_HC1_Q4B" data-tocid="GUID-B628C314-F2AF-43B0-8D21-BC61A4154C8D__SECTION_ODZ_HC1_Q4B">Examples</a></div></li></ul></li><li class="topic-item"><a href="#GUID-A265EE6D-C160-4E61-B78C-4A10E104444D" data-tocid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D">8.2.4.3 set_preserve</a><ul><li class="section-item"><div class="section-title"><a href="#GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_OPF_W3G_GRB" data-tocid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_OPF_W3G_GRB">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_A3R_DD1_Q4B" data-tocid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_A3R_DD1_Q4B">Exceptions</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_TT1_FD1_Q4B" data-tocid="GUID-A265EE6D-C160-4E61-B78C-4A10E104444D__SECTION_TT1_FD1_Q4B">Examples</a></div></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

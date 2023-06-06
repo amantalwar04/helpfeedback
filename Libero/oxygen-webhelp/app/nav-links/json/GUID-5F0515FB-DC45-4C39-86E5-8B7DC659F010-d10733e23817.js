@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.13.1<\/ph>\nSmart Debug Tcl Commands","href":"Chunk962536605.html#Chunk962536605","attributes":{"data-id":"Chunk962536605"},"menu":{"hasChildren":false},"tocID":"Chunk962536605-d10733e23825","next":"Chunk962536605-d10733e23825"}]});

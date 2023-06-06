@@ -1,0 +1,643 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><meta name="description" content="Floorplanning includes creating regions and making logic assignments to those regions. It is an optional methodology to improve the performance and routability of your design. The objective in ..."/>        
+      <title>9.6 Floorplanning Using Chip Planner</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A-d10733e7876"/><meta name="wh-source-relpath" content="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.xml"/><meta name="wh-out-relpath" content="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A"><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6</ph>
+Floorplanning Using Chip Planner</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F-d10733e7294" class="topicref introduction" data-id="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F-d10733e7294-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5FFBA9FB-DFEB-46D5-B2FB-732E7C6206AD-d10733e7302" class="topicref" data-id="GUID-5FFBA9FB-DFEB-46D5-B2FB-732E7C6206AD" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5FFBA9FB-DFEB-46D5-B2FB-732E7C6206AD-d10733e7302-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5FFBA9FB-DFEB-46D5-B2FB-732E7C6206AD.html#GUID-5FFBA9FB-DFEB-46D5-B2FB-732E7C6206AD" id="GUID-5FFBA9FB-DFEB-46D5-B2FB-732E7C6206AD-d10733e7302-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.1</ph>
+About Chip Planner</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B-d10733e7344" class="topicref" data-id="GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B-d10733e7344-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B.html#GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B" id="GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B-d10733e7344-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.2</ph>
+Chip Planner Views</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-7AF759E0-C716-4D28-B474-12BB377EEC44-d10733e7712" class="topicref" data-id="GUID-7AF759E0-C716-4D28-B474-12BB377EEC44" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-7AF759E0-C716-4D28-B474-12BB377EEC44-d10733e7712-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7AF759E0-C716-4D28-B474-12BB377EEC44.html#GUID-7AF759E0-C716-4D28-B474-12BB377EEC44" id="GUID-7AF759E0-C716-4D28-B474-12BB377EEC44-d10733e7712-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.3</ph>
+Display Options Window</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3DB45993-F925-4705-B1BD-3F7035940A45-d10733e7820" class="topicref" data-id="GUID-3DB45993-F925-4705-B1BD-3F7035940A45" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3DB45993-F925-4705-B1BD-3F7035940A45-d10733e7820-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3DB45993-F925-4705-B1BD-3F7035940A45.html#GUID-3DB45993-F925-4705-B1BD-3F7035940A45" id="GUID-3DB45993-F925-4705-B1BD-3F7035940A45-d10733e7820-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.4</ph>
+Floorplanner View Window</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-7E4E80BA-742D-4B7D-8C4D-C74F01FF7941-d10733e7852" class="topicref" data-id="GUID-7E4E80BA-742D-4B7D-8C4D-C74F01FF7941" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-7E4E80BA-742D-4B7D-8C4D-C74F01FF7941-d10733e7852-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7E4E80BA-742D-4B7D-8C4D-C74F01FF7941.html#GUID-7E4E80BA-742D-4B7D-8C4D-C74F01FF7941" id="GUID-7E4E80BA-742D-4B7D-8C4D-C74F01FF7941-d10733e7852-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.5</ph>
+Other Chip Planner Windows</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A-d10733e7876" class="topicref" data-id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A-d10733e7876-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A-d10733e7876-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6</ph>
+Floorplanning Using Chip Planner</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D-d10733e7886" class="topicref" data-id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D-d10733e7886-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D" id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D-d10733e7886-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.1</ph>
+Types of Regions</a></div></div></li><li role="treeitem"><div data-tocid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D-d10733e7918" class="topicref" data-id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D-d10733e7918-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.2</ph>
+Creating Rectilinear Regions</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20-d10733e7926" class="topicref" data-id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-9A129C04-044B-4D1D-8107-3C6110171E20" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20-d10733e7926-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.3</ph>
+Creating Non-Rectilinear Regions</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7-d10733e7934" class="topicref" data-id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7-d10733e7934-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.4</ph>
+Assigning Components/Macros to Regions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787-d10733e7942" class="topicref" data-id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787-d10733e7942-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787" id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787-d10733e7942-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.5</ph>
+Routing Inside a Constrained Region</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-761A365A-6367-4913-A26B-992DC9895F73-d10733e7958" class="topicref" data-id="GUID-761A365A-6367-4913-A26B-992DC9895F73" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-761A365A-6367-4913-A26B-992DC9895F73-d10733e7958-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-761A365A-6367-4913-A26B-992DC9895F73" id="GUID-761A365A-6367-4913-A26B-992DC9895F73-d10733e7958-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.6</ph>
+Empty Region General Guidelines</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F-d10733e7998" class="topicref" data-id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F" id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F-d10733e7998-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.7</ph>
+Overbooking of Regions</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F-d10733e8006" class="topicref" data-id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A.html#GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F-d10733e8006-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.6.8</ph>
+User Action in Regions in the Floorplanner View</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F0F4634F-08B9-4B9E-9FD6-2A807892EABC-d10733e8014" class="topicref" data-id="GUID-F0F4634F-08B9-4B9E-9FD6-2A807892EABC" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F0F4634F-08B9-4B9E-9FD6-2A807892EABC-d10733e8014-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F0F4634F-08B9-4B9E-9FD6-2A807892EABC.html#GUID-F0F4634F-08B9-4B9E-9FD6-2A807892EABC" id="GUID-F0F4634F-08B9-4B9E-9FD6-2A807892EABC-d10733e8014-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.7</ph>
+Netlist Views</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4A2AD403-2B0D-4A10-9C55-0ECF5229D726-d10733e8054" class="topicref" data-id="GUID-4A2AD403-2B0D-4A10-9C55-0ECF5229D726" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4A2AD403-2B0D-4A10-9C55-0ECF5229D726-d10733e8054-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4A2AD403-2B0D-4A10-9C55-0ECF5229D726.html#GUID-4A2AD403-2B0D-4A10-9C55-0ECF5229D726" id="GUID-4A2AD403-2B0D-4A10-9C55-0ECF5229D726-d10733e8054-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.8</ph>
+Cross-Probing from SmartTime to Chip View/Netlist View</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ED873946-9AEE-4211-86AA-49A9A92BDC65-d10733e8110" class="topicref" data-id="GUID-ED873946-9AEE-4211-86AA-49A9A92BDC65" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ED873946-9AEE-4211-86AA-49A9A92BDC65-d10733e8110-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ED873946-9AEE-4211-86AA-49A9A92BDC65.html#GUID-ED873946-9AEE-4211-86AA-49A9A92BDC65" id="GUID-ED873946-9AEE-4211-86AA-49A9A92BDC65-d10733e8110-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9.9</ph>
+A - Limitations</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__GUID-45D9667C-3021-49A6-8005-767A67C134F5"><article class="nested0" aria-labelledby="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__GUID-45D9667C-3021-49A6-8005-767A67C134F5" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A">
+<h1 class="- topic/title title topictitle1" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__GUID-45D9667C-3021-49A6-8005-767A67C134F5" style="display:inline-block">9.6 Floorplanning Using Chip Planner</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Floorplanning%20Using%20Chip%20Planner">(Ask a Question)</a>
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc"></p>
+        <p class="- topic/p p" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AD5" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AD5">Floorplanning includes creating regions and making logic assignments to
+            those regions. It is an optional methodology to improve the performance and routability
+            of your design. The objective in floorplanning is to assign logic to specific regions on
+            the chip to enhance performance and routability.</p>
+        <p class="- topic/p p" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AD6" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AD6">When floorplanning, you analyze your design to see if certain logic can
+            be grouped within regions. Placement regions are especially useful for hierarchical
+            designs with plenty of local connectivity within a block. If your timing analysis
+            indicates several paths with negative slack, try grouping the logic included in these
+            paths into their own regions. This forces the placement of logic within the path closer
+            together and may improve timing performance of the design.</p>
+        <p class="- topic/p p" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AD7" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AD7">Use floorplanning to create Design Separation Regions for
+            security-critical designs. For Microchip’s Design Separation Methodology, all logic
+            should be contained in a logic placement region with dedicated Place and Route
+            resources. For details, see the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/design_sep_methodology_ug.pdf" target="_blank" rel="external noopener">Design Separation Methodology User Guide</a>
+      </span>.</p>
+        <p class="- topic/p p" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000ADB" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000ADB">Use Chip Planner before and after running layout to help you floorplan.
+            You can:</p>
+        <ul class="- topic/ul ul" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__UL_K3K_DTM_ZLB" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__UL_K3K_DTM_ZLB">
+            <li class="- topic/li li" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000ADC" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000ADC">Create Regions</li>
+            <li class="- topic/li li" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000ADF" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000ADF">Move, resize, merge, or delete regions</li>
+            <li class="- topic/li li" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AE2" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AE2">Assign logic to region</li>
+            <li class="- topic/li li" id="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AE5" data-ofbid="GUID-4B6E196B-F860-44AB-8D9F-7E687564C43A__ID-00000AE5">Assign nets to regions</li>
+        </ul>
+</div>
+<article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__GUID-85D34133-CE0F-4678-A68F-1B4C551DF66F" xml:lang="en-US" lang="en-US" id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D">
+   <h2 class="- topic/title title topictitle2" id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__GUID-85D34133-CE0F-4678-A68F-1B4C551DF66F" style="display:inline-block">9.6.1 Types of Regions</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Types%20of%20Regions">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AEB" data-ofbid="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AEB">Three region types can be created for floorplanning purposes:</p>
+      <ul class="- topic/ul ul">
+         <li class="- topic/li li" id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AEC" data-ofbid="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AEC">Inclusive region</li>
+         <li class="- topic/li li" id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AEF" data-ofbid="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AEF">Exclusive region</li>
+         <li class="- topic/li li" id="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AF2" data-ofbid="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D__ID-00000AF2">Empty region</li>
+      </ul>
+   </div>
+<article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__GUID-8C363148-4C64-449C-B19F-77A88F1AE60C" xml:lang="en-US" lang="en-US" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C">
+   <h3 class="- topic/title title topictitle3" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__GUID-8C363148-4C64-449C-B19F-77A88F1AE60C" style="display:inline-block">9.6.1.1 Inclusive Region</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Inclusive%20Region">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000AF8" data-ofbid="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000AF8">In an inclusive region, the Place and Route tool places unassigned logic
+         within its boundary. It can contain macros, both assigned and unassigned to region. Routing
+         resources within an inclusive region are also not restricted. Logic that is placed prior to
+         region creation is not unplaced from the region.</p>
+      <p class="- topic/p p" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000AF9" data-ofbid="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000AF9">Use the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create Inclusive Region</span> icon <img class="- topic/image image" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000AFD" src="GUID-A9257C20-7B7A-4F24-B45C-C431BEB2CD85-low.png" width="38" height="27"/> to create an inclusive region.</p>
+      <p class="- topic/p p" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000B00" data-ofbid="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000B00">When a region rectangle is created, you can assign logic macros,  net
+         macros, and port macros to it from the Design View window.</p>
+      <figure class="- topic/fig fig fignone" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__FIG_KND_SRW_YMB" data-ofbid="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__FIG_KND_SRW_YMB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 9-41. <span id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__GUID-F250105F-7439-456A-9C05-83CE0FB12AA8" class="fig--title">Inclusive Region Example</span></span></figcaption>
+         
+         <img class="- topic/image image break" id="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C__ID-00000B03" src="GUID-3BC61E88-3F0B-4B34-ADAC-DC2F10F079A3-low.jpg" width="523" height="214"/>
+      </figure>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__GUID-E23F226A-AAA7-465A-B403-3C763C2EEFFB" xml:lang="en-US" lang="en-US" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2">
+   <h3 class="- topic/title title topictitle3" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__GUID-E23F226A-AAA7-465A-B403-3C763C2EEFFB" style="display:inline-block">9.6.1.2 Exclusive Region</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Exclusive%20Region">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B0B" data-ofbid="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B0B">In an exclusive region, the Place and Route tool does not place unassigned
+         logic within its boundary. It can contain only macros already assigned to the region before
+         the region is created. However, routing resources within an exclusive region are not
+         restricted.</p>
+      <p class="- topic/p p" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B0F" data-ofbid="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B0F">Use the <strong class="+ topic/ph hi-d/b ph b" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B11">Create Exclusive Region </strong>icon to create an
+         exclusive region: <img class="- topic/image image" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B0C" src="GUID-42660667-BA41-416E-A1AA-B6B33D3CEEAF-low.png" width="37" height="32"/>
+      </p>
+      <p class="- topic/p p" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B14" data-ofbid="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B14">When a region rectangle is created, you can assign logic macros, net
+         macros, and port macros to it from the Design View window.</p>
+      <p class="- topic/p p" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B15" data-ofbid="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B15">If an exclusive region rectangle is created over placed macros, the locked macros already inside the exclusive region will not be unplaced. They are automatically assigned to the region. If the macro is placed but not locked, the macros will be unplaced from the locations and will not be assigned to the exclusive region.</p>
+      <figure class="- topic/fig fig fignone" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-FIG-0000006A" data-ofbid="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-FIG-0000006A"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 9-42. <span id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__GUID-D015BD43-A8C8-4B43-BF87-DA6E37729ECA" class="fig--title">Exclusive Region Example</span></span></figcaption>
+         
+         <img class="- topic/image image break" id="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2__ID-00000B17" src="GUID-63B15184-BA38-45E3-8E93-A073BB01C826-low.jpg" width="483" height="222"/>
+      </figure>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__GUID-3E193792-50A9-43AD-BA0E-43F6DAA0EE0D" xml:lang="en-US" lang="en-US" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D">
+   <h3 class="- topic/title title topictitle3" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__GUID-3E193792-50A9-43AD-BA0E-43F6DAA0EE0D" style="display:inline-block">9.6.1.3 Empty Region</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Empty%20Region">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-00000B1F" data-ofbid="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-00000B1F">In an empty region, neither the user nor the Place and Route tool can
+         place any logic within its boundary. However, routing resources within an empty region can
+         be used by the Place and Route tool.</p>
+      <div class="- topic/p p">Use the <strong class="+ topic/ph hi-d/b ph b">Create Empty Region</strong> icon to create an empty region: <img class="- topic/image image break" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-00000B21" src="GUID-EE08ADCB-46F0-4789-9519-1F9A1D00120E-low.png" width="38" height="37"/></div>
+      <p class="- topic/p p">You cannot assign logic macros, net macros, or port macros to an empty region.</p>
+      <figure class="- topic/fig fig fignone" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-FIG-0000006B" data-ofbid="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-FIG-0000006B">
+         <div class="- topic/p p" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-00000B20" data-ofbid="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-00000B20"> If an empty region rectangle is created over placed macros which are
+            not locked, the macros will be unplaced from the locations. The creation of an empty
+            region over locked macros is not allowed.<figure class="- topic/fig fig fignone" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__FIG_T53_JBQ_ZLB" data-ofbid="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__FIG_T53_JBQ_ZLB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 9-43. <span id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__GUID-95BAE9FD-3A9F-4CF4-B32C-74E3D29EF172" class="fig--title">Empty Region Example (PolarFire)</span></span></figcaption>
+               
+               <img class="- topic/image image break" id="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D__ID-00000B26" src="GUID-BD5992FA-06B0-4272-B2B1-5D5937A7CD2C-low.jpg" width="524" height="270"/>
+            </figure></div>
+      </figure>
+   </div>
+</article></article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-D539FF4F-A79C-4675-A68E-0A27112AC5DA" xml:lang="en-US" lang="en-US" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D">
+   <h2 class="- topic/title title topictitle2" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-D539FF4F-A79C-4675-A68E-0A27112AC5DA" style="display:inline-block">9.6.2 Creating Rectilinear Regions</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20Rectilinear%20Regions">(Ask a Question)</a>
+   
+   <div class="- topic/body task/taskbody body taskbody"><div class="- topic/abstract abstract">
+      <p class="- topic/p p" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B2D" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B2D">To create a rectilinear region for floorplanning:</p>
+   </div>
+      <ol class="- topic/ol task/steps ol steps" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-6953E781-D996-4B6D-A054-1AE85035F003" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-6953E781-D996-4B6D-A054-1AE85035F003">
+         <li class="- topic/li task/step li step" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-00000008" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-00000008">
+            <span class="- topic/ph task/cmd ph cmd" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B2E">Click the region icon: Empty/Inclusive/Exclusive.</span>
+         </li>
+         <li class="- topic/li task/step li step" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-00000009" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-00000009">
+            <span class="- topic/ph task/cmd ph cmd" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B31">Go to the Floorplanner View and click at the location where you
+               want to create a region.</span>
+         </li>
+         <li class="- topic/li task/step li step" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-0000000A" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-0000000A">
+            <span class="- topic/ph task/cmd ph cmd" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B34">Drag the mouse diagonally to draw a rectilinear shape for the size
+               of the region you want. The region is named UserRegion1, 2, 3, and so on by default
+               for Inclusive and Exclusive Regions, and EmptyRegion1, 2, 3, and so on by default for
+               Empty Regions.</span>
+         </li>
+         <li class="- topic/li task/step li step" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-0000000B" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-0000000B">
+            <span class="- topic/ph task/cmd ph cmd" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B3F">(Optional) Right click and select <strong class="+ topic/ph hi-d/b ph b" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B42">Rename
+               </strong>to rename the region from the default name to a different name.</span>
+         </li>
+         <li class="- topic/li task/step li step" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-0000000C" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-STEP-0000000C">
+            <span class="- topic/ph task/cmd ph cmd" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B44">Click <strong class="+ topic/ph hi-d/b ph b" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__ID-00000B47">Commit </strong>to save the changes.</span>
+         </li>
+      </ol>
+      <section class="- topic/section task/result section result" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-129A9659-BE22-4A5B-9BF6-E441ED979FD8" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-129A9659-BE22-4A5B-9BF6-E441ED979FD8">The Log window prints the message that
+         PDC files are updated/written to reflect the changes you have made in Chip Planner.<div class="- topic/note note note note_note" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-48BC1572-6D4F-475E-88F4-D76809821160" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-48BC1572-6D4F-475E-88F4-D76809821160"><span class="note__title">Note:</span>  If a user region and its
+            boundary fall on top of a cluster boundary, the tool extends the region to include the
+            cluster in the region.</div><figure class="- topic/fig fig fignone" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__FIG_UXZ_TSW_YMB" data-ofbid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__FIG_UXZ_TSW_YMB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 9-44. <span id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__GUID-C7204643-9526-4647-860F-6D6AC5E3632B" class="fig--title">Log Window Messages</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D__IMAGE_VXZ_TSW_YMB" height="163" src="GUID-8DCFA4D3-DF3B-445B-B48D-4D8C7E810400-low.jpg" width="528"/>
+         </figure><p class="- topic/p p">The <code class="+ topic/ph pr-d/codeph ph codeph">floorplan.pdc</code> file is updated with the “define_region” PDC
+            command to reflect the new user region you
+            create.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>define_region -name EmptyRegion3 -type empty -color 2143322112 648 225 659 227
+define_region -name UserRegion1 -type inclusive -color 2147442270 552 300 731 311</code></pre><p class="- topic/p p">For
+            details about PDC commands, see the <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/12_0_0/Tool/pdc_ug.pdf" target="_blank" rel="external noopener">PDC Commands User Guide (SmartFusion2, IGLOO2, RTG4</a> or the
+               <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/12_2_0/Tool/pf_pdc_ug.pdf" target="_blank" rel="external noopener">PDC Commands User Guide (PolarFire)</a>.</p><p class="- topic/p p">The <a class="- topic/xref xref" href="GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B.html#GUID-3D67109C-7094-4CF8-93DA-1F4632C894B9">Properties Window</a> displays
+            the properties of the region you created.</p></section>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-C01E027B-331F-446A-B3E7-26C625216B83" xml:lang="en-US" lang="en-US" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20">
+   <h2 class="- topic/title title topictitle2" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-C01E027B-331F-446A-B3E7-26C625216B83" style="display:inline-block">9.6.3 Creating Non-Rectilinear Regions</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20Non-Rectilinear%20Regions">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B64" data-ofbid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B64">By default, a region is created with a rectangular area. However, you can
+         also create a non-rectilinear region by merging two or more rectangular regions.</p>
+      <div class="- topic/note note note note_note" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B65" data-ofbid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B65"><span class="note__title">Note:</span> 
+         <ul class="- topic/ul ul" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__UL_TQX_T5M_ZLB" data-ofbid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__UL_TQX_T5M_ZLB">
+            <li class="- topic/li li" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-4816A34F-E081-465D-AD68-67909B49CE61" data-ofbid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-4816A34F-E081-465D-AD68-67909B49CE61">Use inclusive or exclusive region constraints if you intend to assign logic to a
+               region. An inclusive region constraint with no macros assigned to it has no effect.
+               An exclusive region constraint with no macros assigned to it is equivalent to an
+               empty region.</li>
+            <li class="- topic/li li" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-00A6B6B1-4E5F-438F-B4F1-3EEDFEF02B4A" data-ofbid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-00A6B6B1-4E5F-438F-B4F1-3EEDFEF02B4A"> A user region in which there are macros assigned to it is identified by a vertical
+               and horizontal<div class="- topic/p p" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B69" data-ofbid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B69">checkered-board pattern: <img class="- topic/image image break" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B6A" src="GUID-8A9D0240-47D2-4C7D-9C1F-CF15C97B862D-low.png" width="36" height="29"/></div></li>
+            <li class="- topic/li li" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-1BE45B1C-7C0A-42AD-A70E-0F60B83A02CD" data-ofbid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__GUID-1BE45B1C-7C0A-42AD-A70E-0F60B83A02CD">A user region without any logic assigned to it is identified by a diagonal hash line
+               pattern: <img class="- topic/image image break" id="GUID-9A129C04-044B-4D1D-8107-3C6110171E20__ID-00000B6D" src="GUID-B7599D87-32A9-4DAC-81E1-A619BB8DC4F0-low.png" width="43" height="32"/></li>
+         </ul>
+      </div>
+   </div>
+</article><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__GUID-6C0742B6-425E-4C7B-8A8C-EAFE7282867B" xml:lang="en-US" lang="en-US" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7">
+   <h2 class="- topic/title title topictitle2" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__GUID-6C0742B6-425E-4C7B-8A8C-EAFE7282867B" style="display:inline-block">9.6.4 Assigning Components/Macros to
+      Regions</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Assigning%20Components%2FMacros%20to%20Regions">(Ask a Question)</a>
+   
+   <div class="- topic/body task/taskbody body taskbody"><div class="- topic/abstract abstract">
+      <p class="- topic/p p" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-00000B71" data-ofbid="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-00000B71">To assign components or macros to a user region:</p>
+   </div>
+      <ol class="- topic/ol task/steps ol steps" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__GUID-C64C73B4-4947-49C7-A5EB-840939BF854F" data-ofbid="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__GUID-C64C73B4-4947-49C7-A5EB-840939BF854F">
+         <li class="- topic/li task/step li step" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-STEP-0000000D" data-ofbid="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-STEP-0000000D">
+            <span class="- topic/ph task/cmd ph cmd" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-00000B72">Right click the component or macro in the Logical View and choose
+                  <strong class="+ topic/ph hi-d/b ph b" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-00000B79">Region Assign</strong>. A dialog box opens for you to select a user
+               region.</span>
+         </li>
+         <li class="- topic/li task/step li step" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-STEP-0000000E" data-ofbid="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-STEP-0000000E">
+            <span class="- topic/ph task/cmd ph cmd" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-00000B7C">Click <strong class="+ topic/ph hi-d/b ph b" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__ID-00000B7F">Commit </strong>to save the changes.</span>
+            <div class="- topic/itemgroup task/info itemgroup info">Alternatively, you can drag-drop the component or macro from the port, Logical
+               View, or net onto a user region in the Floorplanner View.<div class="- topic/p p">The component or macro
+                  assigned to the region is identified by a blue check mark:<img class="- topic/image image break" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__IMAGE_B35_TTW_YMB" src="GUID-0D42AF36-065C-466A-BE0B-5CEFF3DCC71E-low.png" width="26" height="25"/>
+               </div><figure class="- topic/fig fig fignone" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__FIG_C35_TTW_YMB" data-ofbid="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__FIG_C35_TTW_YMB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 9-45. <span id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__GUID-14671CB4-73DC-4240-879B-9C6EFA9A4E54" class="fig--title">Macro Assigned to a User
+                     Region</span></span></figcaption>
+                  
+                  <img class="- topic/image image break" id="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7__IMAGE_D35_TTW_YMB" src="GUID-F8A5EE1D-0CF7-4E89-831A-DD1084602DEC-low.jpg" width="246" height="436"/>
+               </figure><p class="- topic/p p">The Log window prints the message that PDC files are updated/written to
+                  reflect the changes you have made in Chip Planner.</p><p class="- topic/p p">The
+                     <code class="+ topic/ph pr-d/codeph ph codeph">floorplan.pdc</code> file is updated with the assign_region PDC
+                  command:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>define_region -name UserRegion1 -type inclusive -color 2147442270 552 300 731 311 
+assign_region UserRegion1 FDDR_INIT_0</code></pre><p class="- topic/p p">For
+                  details about PDC commands, see the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/pf_pdc_ug.pdf" target="_blank" rel="external noopener">PDC Commands User Guide for PolarFire FPGA</a>
+      </span> and the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/pdc_ug.pdf" target="_blank" rel="external noopener">PDC Commands User Guide for SmartFusion2, IGLOO2, and RTG4</a>
+      </span>.</p></div>
+         </li>
+      </ol>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__GUID-03BAB245-0EB0-42E4-B321-EBD881C764EE" xml:lang="en-US" lang="en-US" id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787">
+   <h2 class="- topic/title title topictitle2" id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__GUID-03BAB245-0EB0-42E4-B321-EBD881C764EE" style="display:inline-block">9.6.5 Routing Inside a Constrained Region</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Routing%20Inside%20a%20Constrained%20Region">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__ID-00000B9A" data-ofbid="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__ID-00000B9A">By default, when a region is first created, the region properties
+         (Inclusive/Exclusive/Empty) apply to design resources (Placement) only. The Place and Route
+         tool is free to use the routing resources inside the region. To further constrain the Place
+         and Route tool on routing resources usage inside the region, click the <strong class="+ topic/ph hi-d/b ph b" id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__ID-00000B9B">Constrain Routing </strong>check box in the Properties window.</p>
+      <figure class="- topic/fig fig fignone" id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__ID-FIG-0000006F" data-ofbid="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__ID-FIG-0000006F"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 9-46. <span id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__GUID-5F53F2C4-CDDE-498C-9292-10971419D64C" class="fig--title">Constrain Routing Check Box inside
+            Property Window</span></span></figcaption>
+         
+         <img class="- topic/image image break" id="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787__ID-00000B9F" src="GUID-61BBC069-0A55-4BCE-B0DA-56E6D9586BDD-low.jpg" width="541" height="388"/>
+      </figure>
+   </div>
+<article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__GUID-8F86AC30-F17A-426B-92A0-412AA07592A7" xml:lang="en-US" lang="en-US" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F">
+   <h3 class="- topic/title title topictitle3" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__GUID-8F86AC30-F17A-426B-92A0-412AA07592A7" style="display:inline-block">9.6.5.1 Constrain Routing</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Constrain%20Routing">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BA4" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BA4">This option applies to all types of regions: inclusive, exclusive, and empty.</p>
+      <p class="- topic/p p" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BA5" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BA5">When this check box is checked, the region constraints are applied to
+         routing, in addition to placement. The routing behavior is summarized in the following
+         table for each type of user region.</p>
+      <div class="table-container"><table class="- topic/table table frame-all" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BAB" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BAB" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 9-13. </span></span><span class="table--title" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__GUID-884A782E-0460-449B-9308-84A2F7674CDE">Routing Behavior Inside User Regions with Constrain Routing Enabled</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000D87">
+               <tr class="- topic/row" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB0">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB1"><strong class="+ topic/ph hi-d/b ph b" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB3">Region Type</strong></th>
+                  <th class="- topic/entry entry align-center colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB4"><strong class="+ topic/ph hi-d/b ph b" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB6">Routing Behavior</strong></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BAF">
+               <tr class="- topic/row" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB8" headers="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB1">Inclusive</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BBB" headers="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB4"><ul class="- topic/ul ul">
+                        <li class="- topic/li li" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BBC" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BBC">For all nets internal to the region (the source and all destinations belong to the region), routing must be inside the region (that is, such nets cannot be assigned any routing resources that are outside the region or cross the region boundaries).</li>
+                        <li class="- topic/li li" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BBF" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BBF">Nets not internal to the region can use routing resources within the region.</li>
+                     </ul></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BC7">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BC8" headers="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB1">Exclusive</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BCB" headers="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB4"><ul class="- topic/ul ul">
+                        <li class="- topic/li li" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BCC" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BCC">For all nets internal to the region (the source and all destinations belong to the region), routing must be inside the region (that is, such nets cannot be assigned any routing resources that are outside the region or cross the region boundaries).</li>
+                        <li class="- topic/li li" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BCF" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BCF">Nets without pins inside the region cannot be assigned any routing resources that are outside the region or cross region boundaries).</li>
+                     </ul></td>
+               </tr>
+               <tr class="- topic/row" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BD2">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BD3" headers="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB1">Empty</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BD6" headers="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BB4"><ul class="- topic/ul ul">
+                        <li class="- topic/li li" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BD7" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BD7">No routing is allowed inside the Empty Region.</li>
+                        <li class="- topic/li li" id="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BDA" data-ofbid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F__ID-00000BDA">However, local clocks and globals can cross empty regions.</li>
+                     </ul></td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article></article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-761A365A-6367-4913-A26B-992DC9895F73__GUID-C7F2054A-1E37-4DC8-AC93-561D4BE49F1A" xml:lang="en-US" lang="en-US" id="GUID-761A365A-6367-4913-A26B-992DC9895F73">
+<h2 class="- topic/title title topictitle2" id="GUID-761A365A-6367-4913-A26B-992DC9895F73__GUID-C7F2054A-1E37-4DC8-AC93-561D4BE49F1A" style="display:inline-block">9.6.6 Empty Region General Guidelines</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Empty%20Region%20General%20Guidelines">(Ask a Question)</a>
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc"></p>
+<p class="- topic/p p">Empty regions allow you to create exclusive areas on the device where no logic
+            placement can occur. Empty regions help guide the placer to pack your logic closer
+            together and thereby use more local routing resources to connect it. You cannot create
+            empty regions in areas that contain locked macros. Use the following guidelines for
+            empty regions.</p>
+</div>
+<article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-F421CE52-4590-43B6-A153-281F62B05E15__GUID-5AFBB18A-1ED3-4D87-9C0A-E08F6938334A" xml:lang="en-US" lang="en-US" id="GUID-F421CE52-4590-43B6-A153-281F62B05E15">
+<h3 class="- topic/title title topictitle3" id="GUID-F421CE52-4590-43B6-A153-281F62B05E15__GUID-5AFBB18A-1ED3-4D87-9C0A-E08F6938334A" style="display:inline-block">9.6.6.1 Use Empty Regions to Guide the Place and Route
+            Process</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Use%20Empty%20Regions%20to%20Guide%20the%20Place%20and%20Route%20Process">(Ask a Question)</a>
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc"></p>
+<p class="- topic/p p">If your design does not completely use up your target device (for example, 60% utilization or
+      lower), use empty regions to cluster your logic placement into specific subareas of the chip.
+      This helps when you have originally placed-and-routed the design into a smaller device but
+      want to fit it to a larger part while still preserving the performance you have achieved in
+      the smaller device.</p>
+</div>
+</article><article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7__GUID-D6FADEB2-D675-434A-AE99-A0B9637477D4" xml:lang="en-US" lang="en-US" id="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7">
+<h3 class="- topic/title title topictitle3" id="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7__GUID-D6FADEB2-D675-434A-AE99-A0B9637477D4" style="display:inline-block">9.6.6.2 Use Empty Regions to Reduce Routing Congestion</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Use%20Empty%20Regions%20to%20Reduce%20Routing%20Congestion">(Ask a Question)</a>
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc"></p>
+        <p class="- topic/p p" id="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7__ID-00000BE7" data-ofbid="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7__ID-00000BE7">Creating empty regions next to the congested area(s) of your design
+            helps reduce congestion. When you place an empty region next to congested logic blocks
+            or regions, the placer cannot place any logic next to your region or logic block. Logic
+            which would normally be placed there is forced to be placed somewhere else. Routing
+            resources next to the congested area are freed up and provide the router more options to
+            route signals into the congested block.</p>
+        <p class="- topic/p p" id="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7__ID-00000BE8" data-ofbid="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7__ID-00000BE8">Before deciding to place empty region(s), analyze your design for
+            congestion areas. Use the <strong class="+ topic/ph hi-d/b ph b" id="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7__ID-00000BE9">Ratsnest</strong> view in Chip Planner to see
+            dense areas of connectivity into and out of your logic blocks or regions. Create empty
+            regions in these congested areas and see it if improves the routability of your
+            logic.</p>
+</div>
+</article><article class="- topic/topic concept/concept topic concept nested2" aria-labelledby="GUID-75DCDA18-2317-4F2C-9BFE-FB18B2592C52__GUID-7AE2D201-B25C-4EB6-A8FD-E7EB974E9911" xml:lang="en-US" lang="en-US" id="GUID-75DCDA18-2317-4F2C-9BFE-FB18B2592C52">
+<h3 class="- topic/title title topictitle3" id="GUID-75DCDA18-2317-4F2C-9BFE-FB18B2592C52__GUID-7AE2D201-B25C-4EB6-A8FD-E7EB974E9911" style="display:inline-block">9.6.6.3 Use Empty Regions to Reserve Device Resources</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Use%20Empty%20Regions%20to%20Reserve%20Device%20Resources">(Ask a Question)</a>
+
+<div class="- topic/body concept/conbody body conbody"><p class="- topic/shortdesc shortdesc"></p>
+<p class="- topic/p p">If you want to preserve the placement of your existing design but plan additional
+            modifications in the future, create empty regions in the areas of the chip where you
+            plan to add additional logic. As you add new logic, remove or resize your empty regions
+            accordingly to fit your new logic. Empty regions placed over I/O pins reserve them for
+            future use as the I/O needs of your design changes. There are some restrictions for
+            using empty regions in this manner.</p>
+</div>
+</article></article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__GUID-1CD1D62D-704C-41F2-9FD6-CD985402508E" xml:lang="en-US" lang="en-US" id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F">
+   <h2 class="- topic/title title topictitle2" id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__GUID-1CD1D62D-704C-41F2-9FD6-CD985402508E" style="display:inline-block">9.6.7 Overbooking of Regions</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Overbooking%20of%20Regions">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__ID-00000BF2" data-ofbid="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__ID-00000BF2">Overbooking of regions (assigning resources over 100% utilization) is not
+         allowed. When you try to overbook a region, Chip Planner shows the overbooked resource type
+         in the <a class="- topic/xref xref" href="GUID-FB359B49-296E-40DF-822B-F6D1F81EBA3B.html#GUID-3D67109C-7094-4CF8-93DA-1F4632C894B9">Properties
+            Window</a> of the Region and the resources are not assigned to the region. The
+         overbooked resource is highlighted in red in the Region Properties window as shown in the
+         following figure.</p>
+      <figure class="- topic/fig fig fignone" id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__ID-FIG-00000070" data-ofbid="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__ID-FIG-00000070"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 9-47. <span id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__GUID-7F0319B4-4A30-43C4-A7DF-3E50315EAC82" class="fig--title">Overbooking of Region</span></span></figcaption>
+         
+         <img class="- topic/image image break" id="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F__ID-00000BF5" src="GUID-1F4C9710-F53B-4A36-A135-6EBD3FF176A0-low.jpg" width="547" height="215"/>
+      </figure>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__GUID-0F5F6B86-44CF-40BC-91C2-84565E304C45" xml:lang="en-US" lang="en-US" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F">
+   <h2 class="- topic/title title topictitle2" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__GUID-0F5F6B86-44CF-40BC-91C2-84565E304C45" style="display:inline-block">9.6.8 User Action in Regions in the Floorplanner
+      View</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=User%20Action%20in%20Regions%20in%20the%20Floorplanner%20View">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000BFC" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000BFC">When you select a region on the Floorplanner View, you may see some of the
+         following options:</p>
+      <ul class="- topic/ul ul">
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000BFD" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000BFD">Rename Regions</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C00" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C00">Delete Regions</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C03" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C03">Merge Regions</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C06" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C06">Unassign macros from Regions</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C09" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C09">Assign Macros inside Region</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C0C" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C0C">Clone Region</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C0F" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C0F">Unassign All</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C12" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C12">Unassign Selected Nets</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C15" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C15">Unassign Selected Components</li>
+         <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C18" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C18">Unassign Selected Ports</li>
+      </ul>
+      <div class="- topic/p p">Floorplanner View has two operating modes:<ul class="- topic/ul ul" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__UL_AG1_D5W_YMB" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__UL_AG1_D5W_YMB">
+            <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__GUID-CA5D0D4F-C7FA-4F07-AC2F-670F3997E181" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__GUID-CA5D0D4F-C7FA-4F07-AC2F-670F3997E181">Macro Manipulation Mode</li>
+            <li class="- topic/li li" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__GUID-C7CD46F2-7073-4AE7-A169-EB3977A60165" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__GUID-C7CD46F2-7073-4AE7-A169-EB3977A60165">Region Manipulation Mode</li>
+         </ul>In Macro Manipulation Mode, before any region operations (resizing, renaming,
+         deleting, or merging), you must first click the Region Manipulation Mode button to enter
+         the Region Manipulation Mode.</div>
+      <div class="- topic/note note note note_note" id="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C1B" data-ofbid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F__ID-00000C1B"><span class="note__title">Note:</span>   Any side-effects, such as unplacing or unassigning of a
+         macro due to region creation or region resizing, are shown in the Log window.</div>
+   </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D" data-tocid="GUID-27F78266-60C3-41C6-B3A6-18582B1CC56D">9.6.1 Types of Regions</a><ul><li class="topic-item"><a href="#GUID-A80F3735-75E5-4653-B888-01893C6BFD0C" data-tocid="GUID-A80F3735-75E5-4653-B888-01893C6BFD0C">9.6.1.1 Inclusive Region</a></li><li class="topic-item"><a href="#GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2" data-tocid="GUID-18624988-2AD5-46E9-B1A5-BC13A622D0D2">9.6.1.2 Exclusive Region</a></li><li class="topic-item"><a href="#GUID-1F8CB941-B333-42A4-8920-ABD2D312651D" data-tocid="GUID-1F8CB941-B333-42A4-8920-ABD2D312651D">9.6.1.3 Empty Region</a></li></ul></li><li class="topic-item"><a href="#GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D" data-tocid="GUID-BA5B64C8-D3E0-4F34-A363-634DC4073D2D">9.6.2 Creating Rectilinear Regions</a></li><li class="topic-item"><a href="#GUID-9A129C04-044B-4D1D-8107-3C6110171E20" data-tocid="GUID-9A129C04-044B-4D1D-8107-3C6110171E20">9.6.3 Creating Non-Rectilinear Regions</a></li><li class="topic-item"><a href="#GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7" data-tocid="GUID-AF200D61-07AB-47BA-A0BE-BEA1E318A6D7">9.6.4 Assigning Components/Macros to
+      Regions</a></li><li class="topic-item"><a href="#GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787" data-tocid="GUID-C8D9F48B-74B3-41F9-8335-A42CE7808787">9.6.5 Routing Inside a Constrained Region</a><ul><li class="topic-item"><a href="#GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F" data-tocid="GUID-E1AF3112-28FE-4FA1-BA86-8D271FC73E3F">9.6.5.1 Constrain Routing</a></li></ul></li><li class="topic-item"><a href="#GUID-761A365A-6367-4913-A26B-992DC9895F73" data-tocid="GUID-761A365A-6367-4913-A26B-992DC9895F73">9.6.6 Empty Region General Guidelines</a><ul><li class="topic-item"><a href="#GUID-F421CE52-4590-43B6-A153-281F62B05E15" data-tocid="GUID-F421CE52-4590-43B6-A153-281F62B05E15">9.6.6.1 Use Empty Regions to Guide the Place and Route
+            Process</a></li><li class="topic-item"><a href="#GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7" data-tocid="GUID-D5926E47-D60B-4E73-BA61-4C11E3CDF9A7">9.6.6.2 Use Empty Regions to Reduce Routing Congestion</a></li><li class="topic-item"><a href="#GUID-75DCDA18-2317-4F2C-9BFE-FB18B2592C52" data-tocid="GUID-75DCDA18-2317-4F2C-9BFE-FB18B2592C52">9.6.6.3 Use Empty Regions to Reserve Device Resources</a></li></ul></li><li class="topic-item"><a href="#GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F" data-tocid="GUID-8F7CEC0E-A8C0-42CD-AA99-FD8227844A2F">9.6.7 Overbooking of Regions</a></li><li class="topic-item"><a href="#GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F" data-tocid="GUID-2B2DF721-4627-4B4C-BD8C-22A8DDEF258F">9.6.8 User Action in Regions in the Floorplanner
+      View</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

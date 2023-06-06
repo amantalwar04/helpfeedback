@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>6.2<\/ph>\nChanging the Color Setting","href":"GUID-B7273502-1A58-48CC-9304-1FE6F9916E81.html","outputclass":"CHPLK__2.3.1.1_Changing_the_Color_Setting","attributes":{"data-id":"GUID-B7273502-1A58-48CC-9304-1FE6F9916E81"},"menu":{"hasChildren":false},"tocID":"GUID-B7273502-1A58-48CC-9304-1FE6F9916E81-d10733e5470","topics":[]}]});

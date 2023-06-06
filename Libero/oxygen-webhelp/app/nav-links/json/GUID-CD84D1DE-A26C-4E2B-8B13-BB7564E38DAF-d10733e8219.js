@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>10.2.1.1<\/ph>\nSpecifying Clock Constraints","href":"GUID-82C12ACE-BFDB-4DE1-8DFA-01693C236E2B.html#GUID-D0733B39-C341-4E47-8C42-518ED632436D","attributes":{"data-id":"GUID-D0733B39-C341-4E47-8C42-518ED632436D"},"menu":{"hasChildren":false},"tocID":"GUID-D0733B39-C341-4E47-8C42-518ED632436D-d10733e8227","topics":[]}]});

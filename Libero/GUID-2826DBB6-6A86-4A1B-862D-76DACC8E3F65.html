@@ -1,0 +1,370 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="After completing the Synthesis and Post-Synthesis simulation in your environment, you must use Libero again to physically implement your design, run timing and power analysis, and generate your ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>15.2.6 Implementing Your Design</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65-d10733e18104"/><meta name="wh-source-relpath" content="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65.xml"/><meta name="wh-out-relpath" content="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-275B07BD-027C-4116-9CE0-C1D23508097F.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2</ph>
+SmartFusion 2, IGLOO 2, and RTG4 Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartFusion 2, IGLOO 2, and RTG4 Custom Flow
+				</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65"><div class="title"><a href="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.6</ph>
+Implementing Your Design</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17751" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17751-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17751-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.1</ph>
+PolarFire Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e18004" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e18004-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-275B07BD-027C-4116-9CE0-C1D23508097F.html" id="tocId-d10733e18004-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2</ph>
+SmartFusion 2, IGLOO 2, and RTG4 Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartFusion 2, IGLOO 2, and RTG4 Custom Flow
+				</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-275B07BD-027C-4116-9CE0-C1D23508097F-d10733e18008" class="topicref introduction" data-id="GUID-275B07BD-027C-4116-9CE0-C1D23508097F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-275B07BD-027C-4116-9CE0-C1D23508097F.html" id="GUID-275B07BD-027C-4116-9CE0-C1D23508097F-d10733e18008-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-A37221FD-A433-48C8-92E2-E0E51BC1034D-d10733e18016" class="topicref" data-id="GUID-A37221FD-A433-48C8-92E2-E0E51BC1034D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-A37221FD-A433-48C8-92E2-E0E51BC1034D-d10733e18016-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A37221FD-A433-48C8-92E2-E0E51BC1034D.html" id="GUID-A37221FD-A433-48C8-92E2-E0E51BC1034D-d10733e18016-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.1</ph>
+Overview</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-21EFBB2D-7F99-4C6B-B52B-40B50BBF57D9-d10733e18048" class="topicref" data-id="GUID-21EFBB2D-7F99-4C6B-B52B-40B50BBF57D9" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-21EFBB2D-7F99-4C6B-B52B-40B50BBF57D9-d10733e18048-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-21EFBB2D-7F99-4C6B-B52B-40B50BBF57D9.html" id="GUID-21EFBB2D-7F99-4C6B-B52B-40B50BBF57D9-d10733e18048-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.2</ph>
+Component Configuration</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F74FB55A-0E6C-43FF-92B6-91BC59D72792-d10733e18080" class="topicref" data-id="GUID-F74FB55A-0E6C-43FF-92B6-91BC59D72792" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F74FB55A-0E6C-43FF-92B6-91BC59D72792.html" id="GUID-F74FB55A-0E6C-43FF-92B6-91BC59D72792-d10733e18080-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.3</ph>
+Constraint Generation</a></div></div></li><li role="treeitem"><div data-tocid="GUID-244611A3-3F5A-4D50-B82B-0FC6D68FD0AA-d10733e18088" class="topicref" data-id="GUID-244611A3-3F5A-4D50-B82B-0FC6D68FD0AA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-244611A3-3F5A-4D50-B82B-0FC6D68FD0AA.html" id="GUID-244611A3-3F5A-4D50-B82B-0FC6D68FD0AA-d10733e18088-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.4</ph>
+Synthesizing Your Design</a></div></div></li><li role="treeitem"><div data-tocid="GUID-85F233D7-CED9-4B4E-A39B-37B732B57B93-d10733e18096" class="topicref" data-id="GUID-85F233D7-CED9-4B4E-A39B-37B732B57B93" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-85F233D7-CED9-4B4E-A39B-37B732B57B93.html" id="GUID-85F233D7-CED9-4B4E-A39B-37B732B57B93-d10733e18096-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.5</ph>
+Simulating Your Design</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65-d10733e18104" class="topicref" data-id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65.html" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65-d10733e18104-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.6</ph>
+Implementing Your Design</a></div></div></li><li role="treeitem"><div data-tocid="GUID-1F16A799-7019-40DC-8759-0FC231835BC7-d10733e18112" class="topicref" data-id="GUID-1F16A799-7019-40DC-8759-0FC231835BC7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1F16A799-7019-40DC-8759-0FC231835BC7.html" id="GUID-1F16A799-7019-40DC-8759-0FC231835BC7-d10733e18112-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.7</ph>
+Building Your Firmware Project</a></div></div></li><li role="treeitem"><div data-tocid="GUID-300A7A34-C436-4603-9587-9158FDCF9535-d10733e18120" class="topicref" data-id="GUID-300A7A34-C436-4603-9587-9158FDCF9535" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-300A7A34-C436-4603-9587-9158FDCF9535.html" id="GUID-300A7A34-C436-4603-9587-9158FDCF9535-d10733e18120-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.8</ph>
+Appendix A—Libero-Generated Hardware Configuration Files</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-84D9087E-0AAC-41EC-889A-EED2C24E1549-d10733e18128" class="topicref" data-id="GUID-84D9087E-0AAC-41EC-889A-EED2C24E1549" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-84D9087E-0AAC-41EC-889A-EED2C24E1549-d10733e18128-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-84D9087E-0AAC-41EC-889A-EED2C24E1549.html" id="GUID-84D9087E-0AAC-41EC-889A-EED2C24E1549-d10733e18128-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.9</ph>
+Appendix B—Sample SDC and PDC Constraints</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0F9B8F21-6A33-4856-BAB6-F8704914CDDD-d10733e18169" class="topicref" data-id="GUID-0F9B8F21-6A33-4856-BAB6-F8704914CDDD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0F9B8F21-6A33-4856-BAB6-F8704914CDDD.html" id="GUID-0F9B8F21-6A33-4856-BAB6-F8704914CDDD-d10733e18169-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.10</ph>
+Appendix C—Importing Simulation Libraries into Simulation Environment</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-C2F68D32-B5A8-46EF-B1F8-020E2627B30E-d10733e18177" class="topicref" data-id="GUID-C2F68D32-B5A8-46EF-B1F8-020E2627B30E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-C2F68D32-B5A8-46EF-B1F8-020E2627B30E-d10733e18177-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C2F68D32-B5A8-46EF-B1F8-020E2627B30E.html" id="GUID-C2F68D32-B5A8-46EF-B1F8-020E2627B30E-d10733e18177-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15.2.11</ph>
+Appendix D—Derive Constraints</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-7F9982F5-5A4F-4C96-A915-15864A354594"><h1 class="- topic/title title topictitle1" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-7F9982F5-5A4F-4C96-A915-15864A354594" style="display:inline-block">15.2.6 Implementing Your Design</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Implementing%20Your%20Design">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p">After completing the Synthesis and Post-Synthesis simulation in your environment, you must use Libero again to physically implement your design, run timing and power analysis, and generate your programming file.<ol class="- topic/ol ol" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_K2Z_TXQ_YPB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_K2Z_TXQ_YPB"><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-8C7704D4-B172-4062-BEEE-26755278E80D" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-8C7704D4-B172-4062-BEEE-26755278E80D">Create a new Libero project for the physical implementation and layout of the design. Make sure to target the same device as in the reference project you created in <a class="- topic/xref xref" href="GUID-21EFBB2D-7F99-4C6B-B52B-40B50BBF57D9.html"><span><span>15.2.2 </span><span>Component Configuration</span></span></a>.</li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E1E0E3DF-B0A4-404D-A7E1-E9DA8E2B5BE8" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E1E0E3DF-B0A4-404D-A7E1-E9DA8E2B5BE8">After project creation, remove Synthesis from the tool chain in the Design Flow window (<span class="+ topic/ph sw-d/filepath ph filepath">Project &gt; Project Settings &gt; Design Flow &gt; Uncheck Enable Synthesis</span>).</li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-278E4AD2-8290-4D18-BD7A-808C81D53EB3" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-278E4AD2-8290-4D18-BD7A-808C81D53EB3">Import your post-synthesis <span class="+ topic/ph sw-d/filepath ph filepath">*.edn</span> or <span class="+ topic/ph sw-d/filepath ph filepath">*.vm</span> file into this project, (<span class="+ topic/ph sw-d/filepath ph filepath">File &gt; Import &gt; Synthesized Verilog Netlist (VM)</span>).<div class="- topic/note note tip note_tip" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-F7965D71-6832-4C2E-8831-F7701721DB80" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-F7965D71-6832-4C2E-8831-F7701721DB80"><span class="note__title">Tip:</span> It is recommended that you create a link to this file, so that if you re-synthesize your design, Libero always uses the latest post-synthesis netlist.</div><ol class="- topic/ol ol" type="a" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_LM4_1YQ_YPB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_LM4_1YQ_YPB"><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-9925C48C-7138-4789-9F44-2FE844CFE692" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-9925C48C-7138-4789-9F44-2FE844CFE692">In the Design Hierarchy window, note the name of the root module (shown in the following figure).<figure class="- topic/fig fig fignone" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_MRB_DYQ_YPB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_MRB_DYQ_YPB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 15-10. <span id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-FB28E5EE-4909-482D-9062-FCE415691CAB" class="fig--title">Root Module in Design Hierarchy</span></span></figcaption><img class="- topic/image image" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__IMAGE_AWC_PYQ_YPB" src="GUID-4C727B23-48A1-450E-AABD-04C263F99AEA-low.png"/></figure></li></ol></li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-027581C8-C2FC-484D-8212-A34AAFB01B1B" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-027581C8-C2FC-484D-8212-A34AAFB01B1B">Import the constraints into the Libero project. Use the Constraint Manager to import <span class="+ topic/ph sw-d/filepath ph filepath">*.pdc</span><p class="- topic/p p">/<span class="+ topic/ph sw-d/filepath ph filepath">*.sdc/*.ndc</span> constraints.</p><ol class="- topic/ol ol" type="a" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_KSG_SYQ_YPB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_KSG_SYQ_YPB"><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E7901E33-76CA-4A11-83E4-3B2D5358E3BC" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E7901E33-76CA-4A11-83E4-3B2D5358E3BC">Import I/O <span class="+ topic/ph sw-d/filepath ph filepath">*.pdc</span> constraint files (<span class="+ topic/ph sw-d/filepath ph filepath">Constraints Manager &gt; I/O Attributes &gt; Import</span>).</li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-31052DCC-6D0F-44D3-826A-8D588DF91977" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-31052DCC-6D0F-44D3-826A-8D588DF91977">Import Floorplanning <span class="+ topic/ph sw-d/filepath ph filepath">*.pdc</span> constraint files (<span class="+ topic/ph sw-d/filepath ph filepath">Constraints Manager &gt; Floor Planner &gt; Import).</span> If your design contains CoreConfigP (SmartFusion 2 and IGLOO 2 only), make sure to import the PDC file generated through Derive Constraint tool.</li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-38000333-122A-4B95-BEB0-C0B05EB01EC8" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-38000333-122A-4B95-BEB0-C0B05EB01EC8">Import <span class="+ topic/ph sw-d/filepath ph filepath">*.sdc</span> timing constraint files (<span class="+ topic/ph sw-d/filepath ph filepath">Constraints Manager &gt; Timing &gt; Import</span>). If your design has any of the cores listed in <a class="- topic/xref xref" href="GUID-A37221FD-A433-48C8-92E2-E0E51BC1034D.html"><span><span>15.2.1 </span><span>Overview</span></span></a>, make sure to import the SDC file generated through derive constraint tool.</li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-DD9F48D8-9992-4403-80DA-4A7A2840F522" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-DD9F48D8-9992-4403-80DA-4A7A2840F522">Import <span class="+ topic/ph sw-d/filepath ph filepath">*.ndc</span> constraint files (<span class="+ topic/ph sw-d/filepath ph filepath">Constraints Manager &gt; Netlist Attributes &gt; Import</span>). If your design is an RTG4 design using RTG4FCCCECALIB core, then make sure to import the NDC file generated through derive constraint tool.</li></ol></li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-77812A02-3B99-4BEF-B149-D358DF778C09" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-77812A02-3B99-4BEF-B149-D358DF778C09">Associate Constraints Files to design tools<ol class="- topic/ol ol" type="a" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_C5J_YYQ_YPB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__OL_C5J_YYQ_YPB"><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-3C9065EE-BD0D-4F7C-B32E-B621FDDC8702" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-3C9065EE-BD0D-4F7C-B32E-B621FDDC8702">Open Constraint Manager (<span class="+ topic/ph sw-d/filepath ph filepath">Manage Constraints &gt; Open Manage Constraints View</span>). Check the Place-and-Route and Timing Verifications check box next to the constraint file to establish constraint file and tool association. Associate the <span class="+ topic/ph sw-d/filepath ph filepath">*.pdc</span> constraint to Place-and-Route and the <span class="+ topic/ph sw-d/filepath ph filepath">*.sdc</span> to both Place-and-Route and Timing Verifications. Associate the <span class="+ topic/ph sw-d/filepath ph filepath">*.ndc</span> file to Compile Netlist.</li></ol><div class="- topic/note note tip note_tip" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-CFCF87B1-82BE-4D19-AF8F-2ED0351B6942" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-CFCF87B1-82BE-4D19-AF8F-2ED0351B6942"><span class="note__title">Tip:</span> <ul class="- topic/ul ul" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__UL_TWD_C2Q_SSB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__UL_TWD_C2Q_SSB"><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-56FAEC9F-1C60-4C38-88AF-D9281D53A266" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-56FAEC9F-1C60-4C38-88AF-D9281D53A266">If Place and Route fails with this <span class="+ topic/ph sw-d/filepath ph filepath">*.sdc</span> constraint file, import this same <span class="+ topic/ph sw-d/filepath ph filepath">*.sdc</span> file to synthesis and re-run synthesis.</li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-934DB4CA-3B12-487E-8FC7-0A75A8EE2A56" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-934DB4CA-3B12-487E-8FC7-0A75A8EE2A56">SmartFusion 2 and IGLOO 2 only: The derived floorplanning PDC file constrains the CoreConfigP in an optimal location for placement and improves timing performance of the design.</li></ul></div></li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E60A3924-98E5-4F02-B0D3-74458948CCDA" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E60A3924-98E5-4F02-B0D3-74458948CCDA">Click Compile Netlist and then Place and Route to complete the layout step.</li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-4E19A76B-E804-47FF-973B-566BAB54A6EA" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-4E19A76B-E804-47FF-973B-566BAB54A6EA">From all <a class="- topic/xref xref" href="GUID-CBA28D38-9B16-4D6E-B465-EF0C370A2E37.html"><span><span>15.2.2.2 </span><span>Component Manifests</span></span></a> Reports:<ul class="- topic/ul ul">
+            <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-BF46EDDA-D743-4F17-92A1-5466001FE266" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-BF46EDDA-D743-4F17-92A1-5466001FE266">
+              <p class="- topic/p p">For SmartFusion 2 and IGLOO 2 devices, import all the files in the
+                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configuration files to be used for Programming</span> and
+                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configuration files to be used for Power Analysis</span> sections
+                using the <span class="+ topic/ph sw-d/filepath ph filepath">import_component_data</span> Tcl command:</p>
+              <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>import_component_data -module "&lt;name of root component&gt;" \
+                -fddr "&lt;path to FDDR.reg&gt;" \
+                -mddr "&lt;path to MDDR.reg&gt;" \
+                -serdes0 "&lt;path to SERDESIF_0_init.reg&gt;" \
+                -serdes1 "&lt;path to SERDESIF_1_init.reg&gt;" \
+                -serdes2 "&lt;path to SERDESIF_2_init.reg&gt;" \
+                -serdes3 "&lt;path to SERDESIF_3_init.reg&gt;" \
+                -envm_cfg "&lt;path to eNVM cfg&gt;"</code></pre>
+            </li>
+            <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-A62F0F3E-7E4F-474B-8147-8A00E953C565" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-A62F0F3E-7E4F-474B-8147-8A00E953C565">
+              <p class="- topic/p p">For RTG4, import all the files in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configuration files to be used for
+                  Programming</span> and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configuration files to be used for Power
+                  Analysis</span> sections using the <span class="+ topic/ph sw-d/filepath ph filepath">import_component_data</span>
+                Tcl command:</p>
+              <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>import_component_data 
+                -module "&lt;name of root component&gt;" \
+                -uprom_cfg "&lt;path to uPROM cfg&gt;"</code></pre>
+            </li>
+          </ul><div class="- topic/note note important note_important" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-117E16D3-1791-408B-B511-9BB6E5BA76E6" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-117E16D3-1791-408B-B511-9BB6E5BA76E6"><span class="note__title">Important:</span> All
+            configuration files imported with <span class="+ topic/ph sw-d/filepath ph filepath">import_component_data</span>. Tcl
+            command are imported to the <span class="+ topic/ph sw-d/filepath ph filepath">designer/&lt;root name&gt;/component/
+              folder</span> in the Libero project directory.</div><div class="- topic/note note tip note_tip" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-86A52859-2A59-468D-B786-C347FAA0085A" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-86A52859-2A59-468D-B786-C347FAA0085A"><span class="note__title">Tip:</span> 
+            <ul class="- topic/ul ul">
+              <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E14B785C-3A5E-4E37-A6BF-EE2C4874FDB0" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-E14B785C-3A5E-4E37-A6BF-EE2C4874FDB0">For SmartFusion 2 device, if you do
+                not run SmartPower, you can skip importing the <span class="+ topic/ph sw-d/filepath ph filepath">*.reg files</span>, and
+                you only need to import the <span class="+ topic/ph sw-d/filepath ph filepath">ENVM.cfg</span> file. For IGLOO 2 device,
+                you must import all <span class="+ topic/ph sw-d/filepath ph filepath">*.reg</span> and <span class="+ topic/ph sw-d/filepath ph filepath">ENVM.cfg</span>
+                files specified in all your relevant <a class="- topic/xref xref" href="GUID-CBA28D38-9B16-4D6E-B465-EF0C370A2E37.html"><span><span>15.2.2.2 </span><span>Component Manifests</span></span></a> Reports.</li>
+              <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-7A96DA32-9CF2-4790-92CD-C37DFE08A866" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-7A96DA32-9CF2-4790-92CD-C37DFE08A866">For RTG4, only the UPROM
+                  <span class="+ topic/ph sw-d/filepath ph filepath">.cfg</span> file can be imported.</li>
+            </ul>
+          </div></li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-58E9E06D-EAA5-40EF-8593-84561782AD3D" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-58E9E06D-EAA5-40EF-8593-84561782AD3D">For SmartFusion 2/IGLOO 2 devices, if you need to change eNVM content, open the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Update eNVM Memory Content</span> dialog box (see the following figure). Changes you make in this dialog box are saved to the eNVM <span class="+ topic/ph sw-d/filepath ph filepath">*.cfg</span> file you imported.<figure class="- topic/fig fig fignone" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_C5V_GBR_YPB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_C5V_GBR_YPB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 15-11. <span id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-5A57398D-3523-4F5A-962D-EC309464818D" class="fig--title">Update eNVM Memory Content</span></span></figcaption><img class="- topic/image image" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__IMAGE_SFY_VFD_GQB" src="GUID-BD1819D0-87E7-4E53-980A-4DCE22518F98-low.png"/></figure></li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-CE1775B3-F7A8-44E3-9CCA-77BC43B373FE" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-CE1775B3-F7A8-44E3-9CCA-77BC43B373FE">For RTG4, if you need to change uPROM content, open the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Update uPROM Memory Content</span> dialog box (see the following figure). Changes you make in this dialog box are saved to the <span class="+ topic/ph sw-d/filepath ph filepath">uPROM.cfg</span> file you imported.<figure class="- topic/fig fig fignone" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_S53_XHS_YPB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_S53_XHS_YPB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 15-12. <span id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-9EFA8D5C-926C-4AE9-8C87-C2B1642EA7FC" class="fig--title">uPROM Memory Content Dialog Box</span></span></figcaption><img class="- topic/image image" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__IMAGE_Z51_T3S_YPB" src="GUID-5BCA4FEA-A263-411E-9E7B-B6F5D636CA26-low.png"/></figure></li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-7926B3C1-7B49-491C-9363-47CE608BD6E9" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-7926B3C1-7B49-491C-9363-47CE608BD6E9"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">PolarFire</span>: The Configure
+          Design Initialization Data and Memories tool allows you to initialize design blocks such
+          as LSRAM, uSRAM, XCVR (transceivers), and PCIe using data stored in nonvolatile uPROM,
+          sNVM, or external SPI Flash storage memory. The tool has the following tabs for defining
+          the specification of the design initialization sequence and the specification of the
+          initialization clients as well as user data clients.<ul class="- topic/ul ul" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__UL_IHD_WBV_FQB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__UL_IHD_WBV_FQB">
+            <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-80098000-BAF4-4ACE-9988-4AABB794017B" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-80098000-BAF4-4ACE-9988-4AABB794017B">Design Initialization tab</li>
+            <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-6DDD06D1-3EEC-4615-90AB-72A765C3041A" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-6DDD06D1-3EEC-4615-90AB-72A765C3041A">uPROM tab</li>
+            <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-B233EC37-08B6-473F-B5D1-2F7AB39B2375" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-B233EC37-08B6-473F-B5D1-2F7AB39B2375">sNVM tab</li>
+            <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-8C75B795-A2D2-4952-B04F-D92FC741B2B5" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-8C75B795-A2D2-4952-B04F-D92FC741B2B5">SPI Flash tab</li>
+            <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-439477EA-B466-4224-8D95-F64456E9129E" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-439477EA-B466-4224-8D95-F64456E9129E">Fabric RAMs tab</li>
+          </ul><p class="- topic/p p">Use the tabs in the tool to configure the design initialization data and
+            memories.</p><figure class="- topic/fig fig fignone" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_KFZ_GCV_FQB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__FIG_KFZ_GCV_FQB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 15-13. <span id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-335A6DBC-9117-45DA-80C4-A422EB546A50" class="fig--title">Design Initialization data and
+              memories</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__IMAGE_MYS_KWJ_GQB" src="GUID-E1D56F24-A87A-4ED6-BAB4-81E16F3F5507-low.png"/>
+          </figure><div class="- topic/p p">After completing the configuration, perform the following steps to program the
+            initialization data:<ul class="- topic/ul ul" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__UL_E4H_MDV_FQB" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__UL_E4H_MDV_FQB">
+              <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-B402925A-EA73-4114-AAB7-D0BB98D8F450" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-B402925A-EA73-4114-AAB7-D0BB98D8F450">Generate initialization
+                clients</li>
+              <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-B394FE9C-118C-4E2C-8FAA-512FF464CE23" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-B394FE9C-118C-4E2C-8FAA-512FF464CE23">Generate or export the bit
+                stream</li>
+              <li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-FCBD1C05-51E0-4DE5-8AA2-44E28C019940" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-FCBD1C05-51E0-4DE5-8AA2-44E28C019940">Program the device</li>
+            </ul></div><p class="- topic/p p">For detailed information on how to use this tool, see <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/libero_ecf_ug.pdf" target="_blank" rel="external noopener">Libero SoC Design Flow User Guide</a>
+      </span>. For more information
+            on the Tcl commands used to configure various tabs in the tool and specify memory
+            configuration files (<span class="+ topic/ph sw-d/filepath ph filepath">*.cfg</span>), see <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="http://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/libero_soc_tcl_cmd_ref_ug.pdf" target="_blank" rel="external noopener">Tcl Commands Reference Guide</a>
+      </span>.</p></li><li class="- topic/li li" id="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-1F117329-D746-45B9-9BFD-0D79EAC03B46" data-ofbid="GUID-2826DBB6-6A86-4A1B-862D-76DACC8E3F65__GUID-1F117329-D746-45B9-9BFD-0D79EAC03B46">Generate a Programming File from this project and use it to program your FPGA.</li></ol></div></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.15.1<\/ph>\nSimultaneous Switching Noise Analyzer Tcl Commands","href":"Chunk1759346984.html#Chunk1759346984","attributes":{"data-id":"Chunk1759346984"},"menu":{"hasChildren":false},"tocID":"Chunk1759346984-d10733e24878","next":"Chunk1759346984-d10733e24878"}]});

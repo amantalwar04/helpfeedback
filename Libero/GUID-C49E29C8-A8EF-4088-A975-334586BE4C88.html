@@ -1,0 +1,398 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Key rotation flow enables the user to securely update user keys (UPK1, UEK1, UPK2, UEK2, DPK and UEK3) in SmartFusion 2 and IGLOO 2 devices. The key rotation flow is as follows: The Libero SoC tool is ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>13.4.7 Key Rotation</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817"/><meta name="wh-source-relpath" content="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.xml"/><meta name="wh-out-relpath" content="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88"><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-C49E29C8-A8EF-4088-A975-334586BE4C88"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7</ph>
+Key Rotation</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10987" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10987-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10987-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+FlashPro Express</a><div class="wh-tooltip"><p class="shortdesc">Information about FlasPro Express </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11587" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11587-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html" id="tocId-d10733e11587-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Secure Production Programming Solution (SPPS)</a><div class="wh-tooltip"><p class="shortdesc">Information about Secure Production Programming Solution (SPPS)
+				</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e12317" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e12317-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" id="tocId-d10733e12317-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+SmartDebug</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDebug </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e14622" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e14622-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="tocId-d10733e14622-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954-d10733e14626" class="topicref introduction" data-id="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954-d10733e14626-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635" class="topicref" data-id="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94.html#GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94" id="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.1</ph>
+Manufacturing Flows</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1-d10733e14667" class="topicref" data-id="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1.html" id="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1-d10733e14667-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.2</ph>
+HSM Parameter Configuration</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A-d10733e14675" class="topicref" data-id="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A.html" id="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A-d10733e14675-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.3</ph>
+Keyset File</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684" class="topicref" data-id="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90.html" id="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.4</ph>
+Programming Data</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758" class="topicref" data-id="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C.html" id="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5</ph>
+Programming Job</a></div></div></li><li role="treeitem"><div data-tocid="GUID-7CC7D91A-893B-4404-925B-3382B6A13703-d10733e14807" class="topicref" data-id="GUID-7CC7D91A-893B-4404-925B-3382B6A13703" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7CC7D91A-893B-4404-925B-3382B6A13703.html" id="GUID-7CC7D91A-893B-4404-925B-3382B6A13703-d10733e14807-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.6</ph>
+Export SPI Directory</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817" class="topicref" data-id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-C49E29C8-A8EF-4088-A975-334586BE4C88" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7</ph>
+Key Rotation</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-DD889701-AE35-4123-BD02-CFD21A208D69-d10733e14825" class="topicref" data-id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-DD889701-AE35-4123-BD02-CFD21A208D69" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69-d10733e14825-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7.1</ph>
+Master Bitstream Job Flow</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6-d10733e14836" class="topicref" data-id="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6" id="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6-d10733e14836-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7.2</ph>
+Update Bitstream Job Flow</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF-d10733e14847" class="topicref" data-id="GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF" id="GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF-d10733e14847-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7.3</ph>
+HSM Flow</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F-d10733e14858" class="topicref" data-id="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F" id="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F-d10733e14858-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7.4</ph>
+Non-HSM Flow</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7-d10733e14869" class="topicref" data-id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7-d10733e14869-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7.5</ph>
+Key Rotation Bitstream Files</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57-d10733e14880" class="topicref" data-id="GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57" id="GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57-d10733e14880-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7.6</ph>
+Export SPI Directories</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892" class="topicref" data-id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB" id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8</ph>
+Tcl Interface</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5-d10733e14996" class="topicref" data-id="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5.html" id="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5-d10733e14996-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.9</ph>
+Referenced Documents</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-20029210-2E93-4EE2-832D-C52D47089C6C"><article class="nested0" aria-labelledby="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-20029210-2E93-4EE2-832D-C52D47089C6C" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88"><h1 class="- topic/title title topictitle1" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-20029210-2E93-4EE2-832D-C52D47089C6C" style="display:inline-block">13.4.7 Key Rotation</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Key%20Rotation">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">Key rotation flow enables the user to securely update user keys (UPK1, UEK1, UPK2, UEK2, DPK and
+            UEK3) in SmartFusion 2 and IGLOO 2 devices.</p><p class="- topic/p p">The key rotation flow is as follows:</p><ol class="- topic/ol ol" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-63E03629-D401-4473-BB18-6D92D3A10FD9" data-ofbid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-63E03629-D401-4473-BB18-6D92D3A10FD9"><li class="- topic/li li" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-2CAB8BDE-2DBE-4EEB-91E8-5B808E8F9570" data-ofbid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-2CAB8BDE-2DBE-4EEB-91E8-5B808E8F9570"><p class="- topic/p p">The Libero SoC tool is used to create the design and export the JDC file.</p></li><li class="- topic/li li" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-A370B613-1A39-44FF-B9FC-8BCE8F803526" data-ofbid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-A370B613-1A39-44FF-B9FC-8BCE8F803526"><p class="- topic/p p">Job Manager uses the JDC file to generate the master and key rotation update bitstreams.</p></li><li class="- topic/li li" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-587D29FC-A331-41A3-8D84-7B069890CBA1" data-ofbid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-587D29FC-A331-41A3-8D84-7B069890CBA1"><p class="- topic/p p">Program devices with initial master bitstream that does not lock user key segments so it can update user keys in future.</p></li><li class="- topic/li li" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-9FF66B65-BB70-440A-A8B8-E69F8AFB2AF2" data-ofbid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88__GUID-9FF66B65-BB70-440A-A8B8-E69F8AFB2AF2"><p class="- topic/p p">Program key rotation bitstreams in sequence, which updates the user keys.</p></li></ol></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-5949942E-4D87-4F12-B229-9B0A26489556" xml:lang="en-US" lang="en-US" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69"><h2 class="- topic/title title topictitle2" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-5949942E-4D87-4F12-B229-9B0A26489556" style="display:inline-block">13.4.7.1 Master Bitstream Job Flow</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Master%20Bitstream%20Job%20Flow">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/shortdesc shortdesc"></p><p class="- topic/p p">Users can generate the Master Bitstream Job for Hardware Security Modules (HSM) or Non-HSM flow.
+            The parameter <code class="+ topic/ph pr-d/codeph ph codeph">enable_key_rotation</code> in <code class="+ topic/ph pr-d/codeph ph codeph">init_bitstream</code>
+            Tcl command is used to allow updating user keys in future.</p><div class="- topic/note note notype note_notype" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-A7D3365F-A1FB-44FC-B192-006C9B3C74B4" data-ofbid="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-A7D3365F-A1FB-44FC-B192-006C9B3C74B4"><span class="note__title">Note:</span> <p class="- topic/p p">When the key rotation is enabled, the master bit stream generated does not lock User Lock-Bit,
+                User Key1, and User Key2 segments to allow user keys to be updated in the
+                future.</p></div><p class="- topic/p p">When key rotation is enabled, Job Manager checks for the following:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-E200FC4E-2D7F-4816-A008-F7F587DC3B92" data-ofbid="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-E200FC4E-2D7F-4816-A008-F7F587DC3B92"><p class="- topic/p p">If Design version is set in JDC file.</p></li><li class="- topic/li li" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-0A78322C-18C0-4F5C-8406-80A74F554B12" data-ofbid="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-0A78322C-18C0-4F5C-8406-80A74F554B12"><p class="- topic/p p">Verify that no permanent security setting is selected.</p></li><li class="- topic/li li" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-295F14C8-CAE4-42C6-9CEE-113C7C5B20F1" data-ofbid="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-295F14C8-CAE4-42C6-9CEE-113C7C5B20F1"><p class="- topic/p p">If more than one keysets are being programmed.</p></li></ul><div class="- topic/note note notype note_notype" id="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-63C5E731-25F2-41BF-9CD5-E3D0DC60A66C" data-ofbid="GUID-DD889701-AE35-4123-BD02-CFD21A208D69__GUID-63C5E731-25F2-41BF-9CD5-E3D0DC60A66C"><span class="note__title">Note:</span> <p class="- topic/p p">The Key Rotation Flow is not supported for <code class="+ topic/ph pr-d/codeph ph codeph">UNIQUE_KEY</code> protocol.</p></div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6__GUID-DBCF0458-D3BA-4438-89A8-483190ED5231" xml:lang="en-US" lang="en-US" id="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6"><h2 class="- topic/title title topictitle2" id="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6__GUID-DBCF0458-D3BA-4438-89A8-483190ED5231" style="display:inline-block">13.4.7.2 Update Bitstream Job Flow</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Update%20Bitstream%20Job%20Flow">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/shortdesc shortdesc"></p><p class="- topic/p p">Using Job Manager you can generate a stand-alone bit stream file (STAPL/SPI/DAT), which will
+                        update the user keys that are already programmed on device using the Master
+                        Bitstream Flow. Since multiple Key Sets need to be updated, there will be
+                        multiple key rotation bit stream files (one for each key set). The multiple
+                        key rotation bit stream files need to be programmed in a specific order. The
+                        order in which they need to be programmed is embedded as part of the file
+                        name.</p><p class="- topic/p p">Users can specify the new key values, which are used to replace old keys programmed in the device
+            using the <code class="+ topic/ph pr-d/codeph ph codeph">set_new_keys_for_rotation</code> Tcl command. Depending on whether
+            HSM is being used, the user specifies the key values:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6__GUID-6F6C7BF1-1440-48CD-A594-670CF90A0E71" data-ofbid="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6__GUID-6F6C7BF1-1440-48CD-A594-670CF90A0E71">If it is an HSM flow, then the user must create a
+        new keyset file with new keys values and use the keyset file as input to the Tcl
+        command.</li><li class="- topic/li li" id="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6__GUID-DF84C7DC-DCB2-4FA6-8879-66CE8CDD6758" data-ofbid="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6__GUID-DF84C7DC-DCB2-4FA6-8879-66CE8CDD6758">If it is a non-HSM flow, then the user must
+        specify new keys values, which must be updated in this Tcl command. Any key that is not
+        specified will retain its original value.</li></ul><p class="- topic/p p">User can use the <code class="+ topic/ph pr-d/codeph ph codeph">init_bitstream</code> Tcl command to initialize bit stream that allows
+                        users to specify the key rotation parameters.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF__GUID-A4934CAF-198D-4918-BC5E-E6A892E877F4" xml:lang="en-US" lang="en-US" id="GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF"><h2 class="- topic/title title topictitle2" id="GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF__GUID-A4934CAF-198D-4918-BC5E-E6A892E877F4" style="display:inline-block">13.4.7.3 HSM Flow</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=HSM%20Flow">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/shortdesc shortdesc"></p><p class="- topic/p p">If the Master Bitstream Flow was run using HSM, then in the Update Bitstream File Flow, user must
+                                             create a new key set using the
+                                                  <code class="+ topic/ph pr-d/codeph ph codeph">create_keyset</code> Tcl command and set
+                                             the new keyset file as input in the
+                                                  <code class="+ topic/ph pr-d/codeph ph codeph">set_new_keys_for_rotation</code> Tcl
+                                             command. User then specifies the bit stream type as
+                                             KEY_ROTATION in the <code class="+ topic/ph pr-d/codeph ph codeph">init_bitstream</code> Tcl
+                                             command and then exports the file using the
+                                                  <code class="+ topic/ph pr-d/codeph ph codeph">export_bitstream_file</code> Tcl
+                                             command. This generates multiple bit stream files, one
+                                             for each user key set.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_new_keys_for_rotation -data_name "design data name" \
+                          [-keyset_file "keyset file name"]
+
+init_bitstream -data_name "design data name" \
+               -bitstream_type "bitstream name" \
+               -bitstream_type "KEY_ROTATION" \
+               [-auto_inc_design_version] \
+               [-first_keymode "UEK1 | UEK2 | UEK3"]
+
+export_bitstream_file -data_name "design data name" \
+                      -bitstream_name "bitstream name" \
+                      -formats "[STAPL | SPI | DAT]" \
+                      -export_path "export_file"</code></pre></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-52FD9FAF-F7F3-4C67-85F7-4F0040EB5E15" xml:lang="en-US" lang="en-US" id="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F"><h2 class="- topic/title title topictitle2" id="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-52FD9FAF-F7F3-4C67-85F7-4F0040EB5E15" style="display:inline-block">13.4.7.4 Non-HSM Flow</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Non-HSM%20Flow">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/shortdesc shortdesc"></p><p class="- topic/p p">If the Master Bitstream Flow was run without HSM, then in the update bitstream file flow user specifies new values for keys via TCL command. Any key that is not specified will retain the original value (from Master Bitstream Flow). Details about each key is logged while running <code class="+ topic/ph pr-d/codeph ph codeph">set_new_keys_for_rotation</code> TCL command.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_new_keys_for_rotation -data_name "design data name" \
+                                   [-upk1 "security key value (UPK1)"] \                                  
+                                   [-uek1 "security key value (UEK1)"] \
+                                   [-upk2 "security key value (UPK2)"] \
+                                   [-uek2 "security key value (UEK2)"] \
+                                   [-dpk "security key value (DPK)"] \
+                                   [-uek3 "security key value (UEK3)"] \
+
+ init_bitstream -data_name "design data name" \
+                -bitstream_type "bitstream name" \
+                -bitstream_type "KEY_ROTATION" \
+                [-auto_inc_design_version] \
+                [-first_keymode "UEK1 | UEK2 | UEK3"]
+
+export_bitstream_file -data_name "design data name" \
+                      -bitstream_name "bitstream name" \
+                      -formats "[SPI | DAT]" \
+                      -export_path "export_file"</code></pre><div class="- topic/example example" id="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-933ED337-985F-4930-9762-D62C17C65EBC" data-ofbid="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-933ED337-985F-4930-9762-D62C17C65EBC"><h3 class="- topic/title title sectiontitle">Details About Key Log On Running <code class="+ topic/ph pr-d/codeph ph codeph">set_new_keys_for_rotation</code> TCL Command</h3><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>Info: UEK1 will not be updated during key rotation as no new key value is specified.
+Info: UEK2 will not be updated during key rotation as it is absent in JDC.
+Info: UEK3 will not change during key rotation as the old and new values are same.
+Info: UPK1 will not change during key rotation as the old and new values are same.
+Info: UPK2 will not be updated during key rotation as it is absent in JDC.
+Info: DPK will be updated during key rotation.</code></pre></div><div class="- topic/note note notype note_notype" id="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-893ED47F-2266-4936-87FC-24A150BCD520" data-ofbid="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-893ED47F-2266-4936-87FC-24A150BCD520"><span class="note__title">Note:</span> <p class="- topic/p p">Key rotation files for each user key set are always exported (UKS1, UKS2, and UEK3) even if the key value is same. For example, if user does not specify new key value for UPK1 and UEK1, then original key values are used to generate the key rotation bitstream, so that it amounts to reprogramming, same key value.</p></div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-8F0DB82E-9BFF-41F0-A5B7-0F6D12E59AA5" xml:lang="en-US" lang="en-US" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7"><h2 class="- topic/title title topictitle2" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-8F0DB82E-9BFF-41F0-A5B7-0F6D12E59AA5" style="display:inline-block">13.4.7.5 Key Rotation Bitstream Files</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Key%20Rotation%20Bitstream%20Files">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/shortdesc shortdesc"></p><p class="- topic/p p">When <code class="+ topic/ph pr-d/codeph ph codeph">export_bitstream_file</code> Tcl command is run for KEY_ROTATION bit stream type,
+            multiple files will be generated, one file for each user key set used in JDC.</p><p class="- topic/p p">The key rotation bit stream files are named in the following format:</p><p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">&lt;user_specified_filename&gt;_rotate_{1|2|3}_uks{1|2|3}</code></p><p class="- topic/p p">Where:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-8C215B0D-C252-43A8-84D8-FE9192AC9F19" data-ofbid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-8C215B0D-C252-43A8-84D8-FE9192AC9F19"><p class="- topic/p p"><code class="+ topic/ph pr-d/codeph ph codeph">&lt;user_specified_filename&gt;</code> is the file name specified in the <code class="+ topic/ph pr-d/codeph ph codeph">export_path</code> of <code class="+ topic/ph pr-d/codeph ph codeph">export_bitstream_file</code> command.</p></li><li class="- topic/li li" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-BB70852C-7EE0-4886-B074-AE9C8B3ADCEE" data-ofbid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-BB70852C-7EE0-4886-B074-AE9C8B3ADCEE"><p class="- topic/p p">Number after <code class="+ topic/ph pr-d/codeph ph codeph">rotate_</code> is the file order in which it must be programmed.</p></li><li class="- topic/li li" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-95C0B5FA-A2DC-4FD3-85E5-EC5B118E2785" data-ofbid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-95C0B5FA-A2DC-4FD3-85E5-EC5B118E2785"><p class="- topic/p p">Number after <code class="+ topic/ph pr-d/codeph ph codeph">uks</code> is the user key set that is being modified by this key rotation file.</p></li></ul><div class="- topic/example example" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-E63DB1CF-560C-4B71-8A96-1E78D79666E4" data-ofbid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-E63DB1CF-560C-4B71-8A96-1E78D79666E4"><h3 class="- topic/title title sectiontitle">Example to Explain the Key Rotation
+                Bitstream File Format</h3>If exported file name is
+                <code class="+ topic/ph pr-d/codeph ph codeph">myUpdateProgFile_rotate_1_uks3.spi</code>, then
+                <code class="+ topic/ph pr-d/codeph ph codeph">myUpdateProgFile</code> is the same as user specified in the
+                <code class="+ topic/ph pr-d/codeph ph codeph">export_bitstream_file</code>. <code class="+ topic/ph pr-d/codeph ph codeph">rotate_1</code> denotes it is the
+            first file that needs to be programmed, <code class="+ topic/ph pr-d/codeph ph codeph">uks3</code> denotes that the SPI file
+            will update User Key Set 3 (UEK3). <p class="- topic/p p"></p>If the JDC design has all the three keysets being
+            programmed and the key rotation bitstream files are being generated with name
+                <code class="+ topic/ph pr-d/codeph ph codeph">myUpdateProgFile</code> then one set of possible key rotation bitstream
+            files can be: <code class="+ topic/ph pr-d/codeph ph codeph">myUpdateProgFile_rotate_1_uks3.spi</code>,
+                <code class="+ topic/ph pr-d/codeph ph codeph">myUpdateProgFile_rotate_2_uks1.spi</code>, and<code class="+ topic/ph pr-d/codeph ph codeph">
+                myUpdateProgFile_rotate_3_uks2.spi</code>.</div><p class="- topic/p p">If the JDC file has Auto-Update enabled, then design version is automatically incremented for each key rotation bitstream file and info messages log this during bitstream generation.</p><div class="- topic/example example" id="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-14AB5B0E-0519-4B5B-8290-49D6CD9CE560" data-ofbid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-14AB5B0E-0519-4B5B-8290-49D6CD9CE560"><h3 class="- topic/title title sectiontitle">Example of Message Log Showing Successful Generation Of Key Rotation Bitstream File</h3><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>Info: Successfully generated key rotation bitstream file 'myprogfile2_rotate_1_uks3.spi'. This will update the design version to 1435.
+Info: Successfully generated key rotation bitstream file 'myprogfile2_rotate_2_uks1.spi'. This will update the design version to 1436.
+Info: Successfully generated key rotation bitstream file 'myprogfile2_rotate_3_uks2.spi'. This will update the design version to 1437.</code></pre></div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57__GUID-70C4C4B7-6923-4610-858B-F4520C81809B" xml:lang="en-US" lang="en-US" id="GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57"><h2 class="- topic/title title topictitle2" id="GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57__GUID-70C4C4B7-6923-4610-858B-F4520C81809B" style="display:inline-block">13.4.7.6 Export SPI Directories</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Export%20SPI%20Directories">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/shortdesc shortdesc"></p><p class="- topic/p p">User must export multiple SPI directory files, one for each key rotation bitstream file and use it in the Auto-Update flow using the <code class="+ topic/ph pr-d/codeph ph codeph">export_spi_directory</code> TCL command.</p></div></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-DD889701-AE35-4123-BD02-CFD21A208D69" data-tocid="GUID-DD889701-AE35-4123-BD02-CFD21A208D69">13.4.7.1 Master Bitstream Job Flow</a></li><li class="topic-item"><a href="#GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6" data-tocid="GUID-1AD9C3CD-81E1-4D3D-AB5B-AD402E360BF6">13.4.7.2 Update Bitstream Job Flow</a></li><li class="topic-item"><a href="#GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF" data-tocid="GUID-BC42DAD0-340F-408B-9F07-9F8B814336EF">13.4.7.3 HSM Flow</a></li><li class="topic-item"><a href="#GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F" data-tocid="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F">13.4.7.4 Non-HSM Flow</a><ul><li class="section-title"><a href="#GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-933ED337-985F-4930-9762-D62C17C65EBC" data-tocid="GUID-2D65BCE8-762B-4C14-8551-E93DC50F278F__GUID-933ED337-985F-4930-9762-D62C17C65EBC">Details About Key Log On Running <code class="+ topic/ph pr-d/codeph ph codeph">set_new_keys_for_rotation</code> TCL Command</a></li></ul></li><li class="topic-item"><a href="#GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7" data-tocid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7">13.4.7.5 Key Rotation Bitstream Files</a><ul><li class="section-title"><a href="#GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-E63DB1CF-560C-4B71-8A96-1E78D79666E4" data-tocid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-E63DB1CF-560C-4B71-8A96-1E78D79666E4">Example to Explain the Key Rotation
+                Bitstream File Format</a></li><li class="section-title"><a href="#GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-14AB5B0E-0519-4B5B-8290-49D6CD9CE560" data-tocid="GUID-FFA28669-F4E3-43FF-A867-19A8F70301B7__GUID-14AB5B0E-0519-4B5B-8290-49D6CD9CE560">Example of Message Log Showing Successful Generation Of Key Rotation Bitstream File</a></li></ul></li><li class="topic-item"><a href="#GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57" data-tocid="GUID-BB8F5522-9079-466D-A58A-DBAD3F7C5B57">13.4.7.6 Export SPI Directories</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

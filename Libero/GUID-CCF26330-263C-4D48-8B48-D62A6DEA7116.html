@@ -1,0 +1,1135 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The following sections describe SmartTime tutorials. This tutorial describes how to enter a clock constraint for the 32-bit shift register on SmartFusion 2 device. You use the SmartTime Constraints ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>11.10 SmartTime Tutorials</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144"/><meta name="wh-source-relpath" content="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.xml"/><meta name="wh-out-relpath" content="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116"><div class="title"><a href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10</ph>
+SmartTime Tutorials</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505" class="topicref introduction" data-id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3-d10733e8505-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513" class="topicref" data-id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE.html#GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE" id="GUID-8CA09B7E-0612-484F-81AC-C91F5F90F3EE-d10733e8513-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.1</ph>
+About SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577" class="topicref" data-id="GUID-19433C68-C188-4952-B4CB-C85384DB239C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-19433C68-C188-4952-B4CB-C85384DB239C.html#GUID-19433C68-C188-4952-B4CB-C85384DB239C" id="GUID-19433C68-C188-4952-B4CB-C85384DB239C-d10733e8577-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.2</ph>
+Design Flows with SmartTime</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585" class="topicref" data-id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884.html#GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884" id="GUID-E9AC2CD2-CDE5-47F1-AC42-BD038D739884-d10733e8585-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.3</ph>
+Starting and Closing SmartTime</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595" class="topicref" data-id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E.html#GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E" id="GUID-57260E9F-ECFE-4CD4-9174-73B0F5B6B30E-d10733e8595-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.4</ph>
+Configuring SmartTime Settings</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627" class="topicref" data-id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983.html#GUID-D2917F1D-978D-40B7-961F-80C39B0DC983" id="GUID-D2917F1D-978D-40B7-961F-80C39B0DC983-d10733e8627-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.5</ph>
+SmartTime Toolbar</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635" class="topicref" data-id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB.html#GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB" id="GUID-ACBC75AF-8281-4EC9-8923-D807DC7097AB-d10733e8635-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.6</ph>
+SmartTime Timing Analyzer</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723" class="topicref" data-id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723.html#GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723" id="GUID-6CBA2A60-1CCC-452E-94B5-1BEC4DB0B723-d10733e8723-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.7</ph>
+Advanced Timing Analysis</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777" class="topicref" data-id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982.html#GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982" id="GUID-194FFBC5-DFC3-4718-9972-687F3B8B5982-d10733e8777-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.8</ph>
+Generating Timing Reports</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005" class="topicref" data-id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795.html#GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795" id="GUID-1E628CEB-C29F-4E76-B2D3-29E1CC3B4795-d10733e9005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.9</ph>
+Timing Concepts</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144" class="topicref" data-id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116" id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116-d10733e9144-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10</ph>
+SmartTime Tutorials</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6-d10733e9152" class="topicref" data-id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6-d10733e9152-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6-d10733e9152-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10.1</ph>
+Tutorial 1—32-Bit Shift Register with Clock Enable</a><div class="wh-tooltip"><p class="shortdesc">This tutorial describes how to enter a clock constraint for the 32-bit shift register         on SmartFusion 2 device. </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031-d10733e9217" class="topicref" data-id="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031-d10733e9217-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031" id="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031-d10733e9217-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10.2</ph>
+Tutorial 2—False Path Constraints</a></div></div></li><li role="treeitem"><div data-tocid="tocId-d10733e9273" class="topicref" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-494EC740-A134-461D-9D4F-BBF0809ECE80-low.jpg" id="tocId-d10733e9273-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.10.3</ph>
+aac5928e97fe2ec185090abb955473aeffe34205.jpg</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280" class="topicref" data-id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81.html" id="GUID-F96D2B4E-7DDD-4507-8621-C49A84F55C81-d10733e9280-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.11</ph>
+SmartTime Dialog Boxes</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922" class="topicref" data-id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65.html#GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65" id="GUID-AB5F5CF9-8D42-47D3-BDC3-1E8CDEA45C65-d10733e9922-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.12</ph>
+Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930" class="topicref" data-id="GUID-2828B133-C6FD-448F-A255-5EA58554C211" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2828B133-C6FD-448F-A255-5EA58554C211.html#GUID-2828B133-C6FD-448F-A255-5EA58554C211" id="GUID-2828B133-C6FD-448F-A255-5EA58554C211-d10733e9930-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11.13</ph>
+Glossary</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116__GUID-FF8E9F78-200E-490A-B8E8-27A5D302C781"><article class="nested0" aria-labelledby="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116__GUID-FF8E9F78-200E-490A-B8E8-27A5D302C781" id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116"><h1 class="- topic/title title topictitle1" id="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116__GUID-FF8E9F78-200E-490A-B8E8-27A5D302C781" style="display:inline-block">11.10 SmartTime Tutorials</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SmartTime%20Tutorials">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The following sections describe SmartTime tutorials.</p></div><article class="- topic/topic task/task topic task nested1" aria-labelledby="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-9CC9F506-E3B1-4338-9714-C46C05C810E7" xml:lang="en-US" lang="en-US" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6">
+    <h2 class="- topic/title title topictitle2" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-9CC9F506-E3B1-4338-9714-C46C05C810E7" style="display:inline-block">11.10.1 Tutorial 1—32-Bit Shift Register with
+        Clock Enable</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Tutorial%201%E2%80%9432-Bit%20Shift%20Register%20with%20Clock%20Enable">(Ask a Question)</a>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">This tutorial describes how to enter a clock constraint for the 32-bit shift register
+        on SmartFusion 2 device. </p>
+        <section class="- topic/section task/context section context" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-2D4E452E-34A8-4BF8-879D-85E85CF30CAC" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-2D4E452E-34A8-4BF8-879D-85E85CF30CAC">You use the SmartTime Constraints
+            Editor and perform post-layout timing analysis using the SmartTime Timing Analyzer.<figure class="- topic/fig fig fignone" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_F5L_VBH_KNB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_F5L_VBH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-54. <span id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-8828E904-3F7C-4FDF-AB80-780300CF331D" class="fig--title">32-bit Shift Register</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__IMAGE_PXC_WBH_KNB" src="GUID-AA471A76-0240-4104-8F70-6EDBDEECCA1F-low.jpg" height="246" width="497" alt="???"/>
+            </figure><p class="- topic/p p">To set up your project:</p></section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-F66FCB7F-C3D5-4E03-919B-EE98AC472E5C" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-F66FCB7F-C3D5-4E03-919B-EE98AC472E5C">
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-286C8609-90C5-4439-BD93-09C31C6FBF97" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-286C8609-90C5-4439-BD93-09C31C6FBF97">
+                <span class="- topic/ph task/cmd ph cmd">Invoke Libero SoC. From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Project</span> menu, choose
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">New Project</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-A139B46F-F70D-4BEF-94E8-2DD59DCA9292" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-A139B46F-F70D-4BEF-94E8-2DD59DCA9292">
+                <span class="- topic/ph task/cmd ph cmd">Type <kbd class="+ topic/ph sw-d/userinput ph userinput">sf2_shift32</kbd> for your new project name and browse to
+                    a folder for your project location.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-21F37521-440F-49F7-A250-377D6ACD8F58" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-21F37521-440F-49F7-A250-377D6ACD8F58">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Verilog</span> as the Preferred HDL Type.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-ECCA2A4B-38D3-4D31-AF25-93CFFF94FC64" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-ECCA2A4B-38D3-4D31-AF25-93CFFF94FC64">
+                <span class="- topic/ph task/cmd ph cmd">Leave all other settings at their default values.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_AP3_QCH_KNB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_AP3_QCH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-55. <span id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-BC24F233-C129-4423-8567-3C1233AD3C1F" class="fig--title">New Project Creation - 32 Bit Shift Register</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__IMAGE_O2K_QCH_KNB" src="GUID-80E11D28-FAE6-47B3-97F0-6C3E7E011ABC-low.jpg" height="312" width="544" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-BCE1F6D8-C645-4861-A8AC-072F1AB230D4" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-BCE1F6D8-C645-4861-A8AC-072F1AB230D4">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Next</span> to go to Device Selection page. Make the
+                    following selection from the pull-down menus:</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <ul class="- topic/ul ul" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__UL_F5X_WCH_KNB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__UL_F5X_WCH_KNB">
+                        <li class="- topic/li li" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-4DAFCDAC-A667-4ACE-89F3-758C558D99AB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-4DAFCDAC-A667-4ACE-89F3-758C558D99AB"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Family</span>: SmartFusion 2</li>
+                        <li class="- topic/li li" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-061683BE-22FB-494F-9935-969927691E52" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-061683BE-22FB-494F-9935-969927691E52"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Die</span>: M2S090TS</li>
+                        <li class="- topic/li li" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-2AA96804-B804-4049-A454-C3AD5DA49BF8" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-2AA96804-B804-4049-A454-C3AD5DA49BF8"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Package</span>: 484 FBGA</li>
+                        <li class="- topic/li li" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-96ACA38E-6856-4D3E-A673-68A590AB9514" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-96ACA38E-6856-4D3E-A673-68A590AB9514"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Speed</span>: STD</li>
+                        <li class="- topic/li li" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-EBC91E03-0F4F-4FF1-AA99-9CB3F116C11F" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-EBC91E03-0F4F-4FF1-AA99-9CB3F116C11F"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Core
+                                Voltage</span>: 1.2V</li>
+                        <li class="- topic/li li" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-5E4DAF21-AA75-455B-BF90-1A21566A4E96" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-5E4DAF21-AA75-455B-BF90-1A21566A4E96"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Range</span>: COM</li>
+                    </ul>
+                </div>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_WBL_DDH_KNB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_WBL_DDH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-56. <span id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-CF420FA7-D22D-4F02-B64A-387767345FE4" class="fig--title">Selections from Pull-down Menus</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__IMAGE_WYL_DDH_KNB" src="GUID-90B36446-BC72-43E8-B0AF-2051ECA63111-low.jpg" height="310" width="543" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-C8505B65-2D2D-4126-9399-9150886EEB48" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-C8505B65-2D2D-4126-9399-9150886EEB48">
+                <span class="- topic/ph task/cmd ph cmd">Click the M2S090TS-1FG484 part number and click .</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-10C55B0B-A4FC-4C15-A441-7D3FE001F546" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-10C55B0B-A4FC-4C15-A441-7D3FE001F546">
+                <span class="- topic/ph task/cmd ph cmd">Accept the default settings in the Device Settings page and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Next</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-D0CD6E18-A797-46AB-B50F-F4824604F36B" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-D0CD6E18-A797-46AB-B50F-F4824604F36B">
+                <span class="- topic/ph task/cmd ph cmd">Accept the default settings in the Design Template page and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Next</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-8BFA871B-0CCF-49BB-8129-859A39979CE9" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-8BFA871B-0CCF-49BB-8129-859A39979CE9">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Next</span> to go to the Add Constraints page.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-0B13DDE2-B190-44A6-A4B0-61175836166B" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-0B13DDE2-B190-44A6-A4B0-61175836166B">
+                <span class="- topic/ph task/cmd ph cmd">Because you are not adding any constraints, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Finish</span>
+                    to exit the New Project Creation wizard.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-470140BD-939B-41E8-9623-0323FBE72A37" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-470140BD-939B-41E8-9623-0323FBE72A37">
+                <span class="- topic/ph task/cmd ph cmd">To add a new HDL file, select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File&gt; New&gt; HDL</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Create a new HDL file dialog box appears. </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-EFA6B166-A1D7-475D-ABFD-7E8D58863D2A" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-EFA6B166-A1D7-475D-ABFD-7E8D58863D2A">
+                <span class="- topic/ph task/cmd ph cmd">Name the HDL file <kbd class="+ topic/ph sw-d/userinput ph userinput">shift_reg32</kbd> as shown below and click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_S53_TDH_KNB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_S53_TDH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-57. <span id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-4ADC476E-97D6-40E5-BDCF-8204459E4D9E" class="fig--title">Create a New HDL File Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__IMAGE_OKK_TDH_KNB" src="GUID-78451DB2-4FB5-480F-AF0A-9D7F1293BB83-low.jpg" height="256" width="424" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-C18D86D2-A16F-4366-9AD8-76F61A517B57" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-C18D86D2-A16F-4366-9AD8-76F61A517B57">
+                <span class="- topic/ph task/cmd ph cmd">Copy the following code and paste it into the Verilog file:<code class="+ topic/ph pr-d/codeph ph codeph"><span class="+ topic/ph sidscDomain-d/instanceOffsets ph instanceOffsets">
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">module shift32 ( Q,CLK,D,EN,RESET); input
+                                D,EN,CLK,RESET;</span></p>
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">output[31:0] Q; reg [31:0] Q_int;</span></p>
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">assign Q=Q_int;</span></p>
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">always@ (posedge CLK) begin</span></p>
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">if(RESET)</span></p>
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">Q_int&lt;=0; else begin if(EN)</span></p>
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">Q_int&lt;={Q_int[30:0],D}; end</span></p>
+                            <p class="- topic/p p"><span class="+ topic/ph hi-d/tt ph tt">end endmodule</span></p>
+                        </span></code></span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-E31875F6-D7D7-414C-A1CC-10A91E921D3C" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-E31875F6-D7D7-414C-A1CC-10A91E921D3C">
+                <span class="- topic/ph task/cmd ph cmd">Check the HDL file to confirm there are no syntax errors.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-C7DCBB8E-87E6-43C3-9B29-25179DD3C428" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-C7DCBB8E-87E6-43C3-9B29-25179DD3C428">
+                <span class="- topic/ph task/cmd ph cmd">Confirm that the shift_reg32 design appears in the Design Hierarchy window, as
+                    shown in the following figure.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_KZN_BJH_KNB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_KZN_BJH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-58. <span id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-98475A9B-E758-4DFC-B94E-2DAE46BCDA70" class="fig--title">shift_reg32 in the Design Hierarchy Window</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__IMAGE_ZF4_BJH_KNB" src="GUID-352E4B41-43F5-4ED5-BD6A-83303E3965B7-low.jpg" height="272" width="529" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-BE608CD0-A3FA-47AD-B201-2E392C9D6CE6" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-BE608CD0-A3FA-47AD-B201-2E392C9D6CE6">
+                <span class="- topic/ph task/cmd ph cmd">In the Design Flow window, double-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Synthesize</span> to
+                    run Synplify Pro with default settings.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">A green check mark appears next to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Synthesize</span>
+                    when Synthesis is successful, as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_ZNK_3JH_KNB" data-ofbid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__FIG_ZNK_3JH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-59. <span id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__GUID-9439567B-2EF9-4F3F-80B9-F98361617FA4" class="fig--title">Synthesis and Compile Complete - 32-Bit Shift Register with Clock
+                            Enable</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6__IMAGE_AYK_3JH_KNB" src="GUID-D82B4359-E002-44E3-A61B-F75280E97E79-low.jpg" height="344" width="540" alt="???"/>
+                    </figure></div>
+            </li>
+        </ol>
+    </div>
+<article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-EF47470E-D0C9-491D-8D97-4F298753C56F" xml:lang="en-US" lang="en-US" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A">
+<h3 class="- topic/title title topictitle3" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-EF47470E-D0C9-491D-8D97-4F298753C56F" style="display:inline-block">11.10.1.1 Add a Clock Constraint - 32 Bit Shift Register</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Add%20a%20Clock%20Constraint%20-%2032%20Bit%20Shift%20Register">(Ask a Question)</a>
+
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">To add a clock constraint to your design:</p>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-92A1D80D-1CE9-4242-AEA4-F07691C4FA48" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-92A1D80D-1CE9-4242-AEA4-F07691C4FA48">
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-21BB6348-1C6E-44E4-B477-ADD9B7071472" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-21BB6348-1C6E-44E4-B477-ADD9B7071472">
+                <span class="- topic/ph task/cmd ph cmd">In the Design Flow window, double-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Manage
+                        Constraints</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Constraint Manager appears.<figure class="- topic/fig fig fignone" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_A3Y_D5H_KNB" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_A3Y_D5H_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-60. <span id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-8B44067E-9CB1-450A-9ABA-C9311BDD6567" class="fig--title">Constraint Manager</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__IMAGE_DD1_25H_KNB" src="GUID-0FDDCCCC-180C-4D3E-8EB3-2140BFA4EF0C-low.jpg" height="377" width="540" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-3B5B2EF1-5C53-4809-A33A-4541A206C12A" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-3B5B2EF1-5C53-4809-A33A-4541A206C12A">
+                <span class="- topic/ph task/cmd ph cmd">Click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing</span> tab.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-2B11DCE4-A0C7-4DC8-8A17-86455440A639" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-2B11DCE4-A0C7-4DC8-8A17-86455440A639">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit with Constraints Editor &gt; Edit Place and Route
+                        Constraints</span>.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_ZKZ_45H_KNB" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_ZKZ_45H_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-61. <span id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-D62CBF2E-E16C-4C54-B956-3B87355C044B" class="fig--title">Constraints Editor – Add Clock Constraint</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__IMAGE_ALZ_45H_KNB" src="GUID-0624B5F4-965A-44C2-B9BA-B02E220F7BD5-low.jpg" height="181" width="542" alt="???"/>
+                    </figure>
+                </div>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Constraints Editor appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-6AC96A4A-D7D7-46DE-AB79-56DD76329284" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-6AC96A4A-D7D7-46DE-AB79-56DD76329284">
+                <span class="- topic/ph task/cmd ph cmd">In the Constraints Editor, right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clock</span> under
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Requirement</span> and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Clock
+                        Constraint</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Create Clock Constraint dialog box appears.<figure class="- topic/fig fig fignone" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_U5Y_55H_KNB" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_U5Y_55H_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-62. <span id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-E6BCD8E1-C32F-4900-8405-4B34AD982DAF" class="fig--title">Create Clock Constraint Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__IMAGE_AD1_V5H_KNB" src="GUID-C23898BD-F2ED-42DA-9984-8E4A63E72929-low.jpg" height="311" width="540" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-3D8EF358-C0BF-49F4-8399-BB07A280FD33" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-3D8EF358-C0BF-49F4-8399-BB07A280FD33">
+                <span class="- topic/ph task/cmd ph cmd">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clock Source</span> drop-down menu, choose the
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CLK</span> pin.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-B224A0B3-6EE6-4F5F-B4C3-CFE5DDF211BE" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-B224A0B3-6EE6-4F5F-B4C3-CFE5DDF211BE">
+                <span class="- topic/ph task/cmd ph cmd">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clock Name</span> field, type
+                        <kbd class="+ topic/ph sw-d/userinput ph userinput">my_clk</kbd>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-4A4195B6-BCAD-4092-85E9-F682BB21E3F6" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-4A4195B6-BCAD-4092-85E9-F682BB21E3F6">
+                <span class="- topic/ph task/cmd ph cmd">Set the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Frequency</span> to 250 MHz (as shown in the following
+                    figure) and accept all other default values.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_OMR_CVH_KNB" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_OMR_CVH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-63. <span id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-E35E459B-235B-4B82-B5CA-7E7C528523ED" class="fig--title">Add a 250 MHz Clock Constraint</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__IMAGE_A5R_CVH_KNB" src="GUID-A2B094F6-4FCB-4C73-850D-82CE11B65746-low.jpg" height="311" width="540" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-C77D6BA9-DFC9-4644-806F-26F7C346BAF8" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-C77D6BA9-DFC9-4644-806F-26F7C346BAF8">
+                <span class="- topic/ph task/cmd ph cmd"> Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> to continue.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The clock constraint appears in the SmartTime Constraints Editor.<figure class="- topic/fig fig fignone" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_UKR_MVH_KNB" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_UKR_MVH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-64. <span id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-D091AC4E-D47C-4892-BE00-8CDA2AEABCE2" class="fig--title">250 MHz Clock Constraint in the Constraint Editor</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__IMAGE_F1S_MVH_KNB" src="GUID-9BC19F69-41F4-4696-B1BC-C180846219C9-low.jpg" height="378" width="544" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-D0E1598C-167C-4598-AAFA-E79120A3DF42" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-D0E1598C-167C-4598-AAFA-E79120A3DF42">
+                <span class="- topic/ph task/cmd ph cmd">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File</span> menu, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save</span>
+                    to save the constraints.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-13E61317-B342-4D95-B739-AD3A8D30E354" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-13E61317-B342-4D95-B739-AD3A8D30E354">
+                <span class="- topic/ph task/cmd ph cmd">From the SmartTime <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File</span> menu, choose
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Exit</span> to exit SmartTime.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">Libero creates a constraint file to store the clock constraint. This
+                    file appears in the Constraint Manager. It is named
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">user.sdc</span> and designated as
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Target</span>.<div class="- topic/note note notype note_notype" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-3889628A-99AC-43BE-A3D4-4146B89157D4" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-3889628A-99AC-43BE-A3D4-4146B89157D4"><span class="note__title">Note:</span> A target file is used to store newly
+                        added constraints from the Constraint Editor. If you invoke the Constraint
+                        Editor with no SDC timing constraint file present, Libero SoC creates the
+                        user.sdc file and marks it as <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Target</span> to store the
+                        timing constraints you create in the Constraint Editor.</div></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-C50F67C5-95C2-4D7C-B31B-612B184FB978" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-C50F67C5-95C2-4D7C-B31B-612B184FB978">
+                <span class="- topic/ph task/cmd ph cmd">In the Constraint Manager, check the check boxes under <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Place and
+                        Route</span> and  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing Verification</span> to
+                    associate the constraint file to the tools. The constraint file is used for both
+                    Place and Route and Timing verification.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_QXD_GWH_KNB" data-ofbid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__FIG_QXD_GWH_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-65. <span id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__GUID-E0936D5C-D6AC-44B5-A657-C43D72C153D8" class="fig--title">SDC Constraint File and Tool Association</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A__IMAGE_V22_GWH_KNB" src="GUID-00507744-E29C-439D-9F67-8755311B7AE6-low.jpg" height="309" width="542" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-3FE15277-3ADB-4440-9C52-3BCD2D219067" xml:lang="en-US" lang="en-US" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60">
+<h3 class="- topic/title title topictitle3" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-3FE15277-3ADB-4440-9C52-3BCD2D219067" style="display:inline-block">11.10.1.2 Run Place and Route</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Run%20Place%20and%20Route">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/context section context" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-49DCA54B-AB40-4084-A8D4-4966B1B8D002" data-ofbid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-49DCA54B-AB40-4084-A8D4-4966B1B8D002">To run Place and Route:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-FC461631-04C0-4436-9288-41984E951BF9" data-ofbid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-FC461631-04C0-4436-9288-41984E951BF9">
+            <li class="- topic/li task/step li step" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-8D54C11E-7614-4FFD-AC6F-4D5C6214ECCB" data-ofbid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-8D54C11E-7614-4FFD-AC6F-4D5C6214ECCB">
+                <span class="- topic/ph task/cmd ph cmd">Right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Place and Route</span> and choose
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configure Options</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Layout Options dialog box appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-50EBEB4D-63D2-4C1C-A3C2-88CC1CEE4E60" data-ofbid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-50EBEB4D-63D2-4C1C-A3C2-88CC1CEE4E60">
+                <span class="- topic/ph task/cmd ph cmd">Click the check box to enable <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing-driven</span> layout ans
+                    accept the other default values shown in the following figure.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <div class="- topic/p p">
+                        <figure class="- topic/fig fig fignone" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__FIG_UXV_4FJ_KNB" data-ofbid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__FIG_UXV_4FJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-66. <span id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-0403266D-345A-4FFE-BDCC-9E982EA68D34" class="fig--title">Layout Options Dialog Box</span></span></figcaption>
+                            
+                            <img class="- topic/image image" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__IMAGE_VXV_4FJ_KNB" src="GUID-524F5536-7CCB-4E9B-8812-58A3742F002F-low.jpg" height="546" width="382" alt="???"/>
+                        </figure>
+                    </div>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-AEFBCDD1-8DE3-4AB5-A6D5-AD9DC06A4684" data-ofbid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-AEFBCDD1-8DE3-4AB5-A6D5-AD9DC06A4684">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> to continue.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-10DE2870-4F7B-4DB6-A172-936F3B81010A" data-ofbid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60__GUID-10DE2870-4F7B-4DB6-A172-936F3B81010A">
+                <span class="- topic/ph task/cmd ph cmd">In the Design Flow window, double-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Place and Route</span>
+                    to start the Place and Route.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-03CB8ABA-BFD6-4ECD-ADEE-F68C35565998" xml:lang="en-US" lang="en-US" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C">
+<h3 class="- topic/title title topictitle3" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-03CB8ABA-BFD6-4ECD-ADEE-F68C35565998" style="display:inline-block">11.10.1.3 Maximum Delay Analysis with Timing Analyzer -
+        32-Bit Shift Register Example</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Maximum%20Delay%20Analysis%20with%20Timing%20Analyzer%20-%2032-Bit%20Shift%20Register%20Example">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The SmartTime Maximum Delay Analysis window shows the design maximum operating frequency
+        along with any setup violations.</p>
+        <section class="- topic/section task/context section context" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-32E0C5C6-27D6-4E68-8316-F08BB0B4D0AA" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-32E0C5C6-27D6-4E68-8316-F08BB0B4D0AA">To perform maximum delay
+            analysis:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-3416153F-3AD9-4E4A-9E47-CED3286512E9" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-3416153F-3AD9-4E4A-9E47-CED3286512E9">
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-B911EBB0-791C-4326-9D90-3818D3385EF8" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-B911EBB0-791C-4326-9D90-3818D3385EF8">
+                <span class="- topic/ph task/cmd ph cmd"> Right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Open SmartTime </span>in the Design Flow window
+                    and choose <strong class="+ topic/ph hi-d/b ph b">Open Interactively </strong>to open SmartTime. The Maximum Delay
+                    analysis window appears. A green check next to the clock name indicates there
+                    are no timing violations for that clock domain. The Summary page displays a
+                    summary of the clock domain timing performance.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Maximum Delay Analysis Summary appears with the following
+                    information shown:<ul class="- topic/ul ul" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__UL_D5N_1W3_KNB" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__UL_D5N_1W3_KNB">
+                        <li class="- topic/li li" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-E7F3076F-C873-4158-80C8-81941E4E4D49" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-E7F3076F-C873-4158-80C8-81941E4E4D49">Maximum operating
+                            frequency for the design</li>
+                        <li class="- topic/li li" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-3A6E2E39-D7DB-467C-8AF2-F214DBCAB072" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-3A6E2E39-D7DB-467C-8AF2-F214DBCAB072">External setup and hold
+                            requirements</li>
+                        <li class="- topic/li li" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-472F6E31-5211-4B84-9378-16BCAC406BF9" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-472F6E31-5211-4B84-9378-16BCAC406BF9">Maximum and minimum clock-to-out times. In this example, the maximum
+                            clock frequency for CLK is 609.75 MHz.</li>
+                    </ul><figure class="- topic/fig fig fignone" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_Q4G_FW3_KNB" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_Q4G_FW3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-67. <span id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-71E41D13-AFE1-42DA-B010-68BCEBC199FB" class="fig--title">Maximum Delay Analysis - Summary</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__IMAGE_NN3_FW3_KNB" src="GUID-04B16FDA-8DE6-4691-ABF7-949BA76F7F11-low.jpg" height="286" width="468" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-D6ED6343-1510-4DCC-8509-F82F2AE6F32C" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-D6ED6343-1510-4DCC-8509-F82F2AE6F32C">
+                <span class="- topic/ph task/cmd ph cmd">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">my_clk</span> to display the Register to Register,
+                    External Setup, and Clock to Output path sets.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_JC1_MW3_KNB" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_JC1_MW3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-68. <span id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-2B2A5348-18E1-4960-8A3F-7A197D17F030" class="fig--title">SmartTime Register-to-Register Delay</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__IMAGE_XK1_MW3_KNB" src="GUID-B80F1DC4-B18F-4228-B051-CEC32D04C015-low.jpg" height="325" width="543" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-0944D19A-AA32-418A-B4E9-A79AC8EB432D" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-0944D19A-AA32-418A-B4E9-A79AC8EB432D">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Register to Register</span> to display the
+                    register-to-register paths. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The window displays a list of register- to-register paths and detailed
+                    timing analysis for the selected path. All the slack values are positive,
+                    indicating that there are no setup time violations</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-3E8D40F1-1B80-4525-B79C-482DB5BF7D63" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-3E8D40F1-1B80-4525-B79C-482DB5BF7D63">
+                <span class="- topic/ph task/cmd ph cmd">Double-click a path row to open the Expanded Path window.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The window shows a calculation of the data arrival and required times,
+                    along with a schematic of the path.<div class="- topic/note note notype note_notype" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-CD93D166-B115-4B52-80EE-7AFECC145FCA" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-CD93D166-B115-4B52-80EE-7AFECC145FCA"><span class="note__title">Note:</span> Timing numbers in the reports may vary
+                        slightly with different versions of the Libero software, and may not be what
+                        you see when you run the tutorial.</div><figure class="- topic/fig fig fignone" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_JKP_ZW3_KNB" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_JKP_ZW3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-69. <span id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-2B92B4C8-5E8C-4155-8B84-1DAAB70AE4D1" class="fig--title">Register-to-Register Expanded Path View</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__IMAGE_BVP_ZW3_KNB" src="GUID-22A4B95C-6CB0-4DA0-AAC9-C447EE2270C8-low.jpg" height="358" width="536" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-2425A877-568D-4AE7-9993-A153CEDA1579" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-2425A877-568D-4AE7-9993-A153CEDA1579">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">External Setup</span> to display the Input to Register
+                    timing. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-31E065A7-C855-44A3-938A-7FF1DA7FC1C4" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-31E065A7-C855-44A3-938A-7FF1DA7FC1C4">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Path 3</span>.  </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Input Arrival time from the EN pin to Q_int[27]:EN is 4.547 ns.<figure class="- topic/fig fig fignone" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_GRM_3X3_KNB" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_GRM_3X3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-70. <span id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-AEAB9828-DD26-45D7-8037-904734BF4C9E" class="fig--title">SmartTime - Input to Register Path Analysis</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__IMAGE_XBN_3X3_KNB" src="GUID-836A45D8-43E1-4298-B0BF-A40B275796DA-low.jpg" height="358" width="541" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-91F39C0A-0068-4C23-9ED3-EC5024117301" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-91F39C0A-0068-4C23-9ED3-EC5024117301">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clock to Output</span> to display the register to output
+                    timing. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-C2AFAEF9-4764-4091-A6B1-6A527B6E753B" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-C2AFAEF9-4764-4091-A6B1-6A527B6E753B">
+                <span class="- topic/ph task/cmd ph cmd">Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Path 1</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The maximum clock to output time from Q_int[16]:CLK to Q[16 ] is 9.486
+                        ns.<figure class="- topic/fig fig fignone" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_AB5_PX3_KNB" data-ofbid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__FIG_AB5_PX3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-71. <span id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__GUID-6AEB8EB3-B4EE-43C3-A231-93CE2E1CD880" class="fig--title">SmartTime Clock to
+                            Output Path Analysis</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C__IMAGE_NH5_PX3_KNB" src="GUID-D8F59008-8ED2-4C32-9204-6083C2201937-low.jpg" height="358" width="539" alt="???"/>
+                    </figure></div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-C816DE41-DF59-46FC-A966-7922EE6D9F77" xml:lang="en-US" lang="en-US" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE">
+<h3 class="- topic/title title topictitle3" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-C816DE41-DF59-46FC-A966-7922EE6D9F77" style="display:inline-block">11.10.1.4 Minimum Delay Analysis with Timing Analyzer - 32-Bit Shift Register Example</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Minimum%20Delay%20Analysis%20with%20Timing%20Analyzer%20-%2032-Bit%20Shift%20Register%20Example">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The SmartTime Minimum Delay Analysis window identifies any hold violations that exist in
+        the design.</p>
+        <section class="- topic/section task/context section context" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-1016C862-255D-43E2-9B48-5C591ABF57F4" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-1016C862-255D-43E2-9B48-5C591ABF57F4">To perform minimum delay
+            analysis:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-8F20EBA4-9BFB-439E-9EB8-DF8741E45F64" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-8F20EBA4-9BFB-439E-9EB8-DF8741E45F64">
+            <li class="- topic/li task/step li step" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-EC4019DE-5242-4FC4-AC50-DC509AD527FD" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-EC4019DE-5242-4FC4-AC50-DC509AD527FD">
+                <span class="- topic/ph task/cmd ph cmd"> From the SmartTime Analysis window, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools &gt; Minimum Delay
+                        Analysis</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Minimum Delay Analysis View appears, as shown in the following
+                        figure.<figure class="- topic/fig fig fignone" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__FIG_GTG_PY3_KNB" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__FIG_GTG_PY3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-72. <span id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-EA0E5997-2C7A-4FAF-A2F9-9923FA1F47C9" class="fig--title">SmartTime Minimum Delay Analysis View- Summary</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__IMAGE_VCH_PY3_KNB" src="GUID-C5A53D3D-8C36-4767-80E7-7E6C5C92F5C8-low.jpg" height="352" width="544" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-99C6C1ED-BDE8-4B42-BB59-92973A163DD7" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-99C6C1ED-BDE8-4B42-BB59-92973A163DD7">
+                <span class="- topic/ph task/cmd ph cmd">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">my_clk</span> to display Register to Register, External
+                    Hold, Clock to Output, Register to Asynchronous, External Removal, and
+                    Asynchronous to Register path sets.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-71B39FAB-2519-4A07-8EFA-26DC313907B0" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-71B39FAB-2519-4A07-8EFA-26DC313907B0">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Register to Register</span> to display the reg to reg
+                    paths.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The window displays a list of register to register paths and detailed
+                    timing analysis for the selected path. All the slack value are positive,
+                    indicating that there are no hold time violations.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-7A0F78FF-3709-4AB9-9ACF-8135AA0D7178" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-7A0F78FF-3709-4AB9-9ACF-8135AA0D7178">
+                <span class="- topic/ph task/cmd ph cmd">Click to select the first path and observe the hold analysis calculation
+                    details, as shown in the following figure.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__FIG_AT1_DZ3_KNB" data-ofbid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__FIG_AT1_DZ3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-73. <span id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__GUID-52854C94-F6F7-4B3C-86FB-926DEC8140D7" class="fig--title">SmartTime Minimum Delay Analysis</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE__IMAGE_V2X_DZ3_KNB" src="GUID-98F3AC61-0BF1-41CF-86DF-589BE26CCFE2-low.jpg" height="363" width="544" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-4F652B4B-52B9-41E4-B772-3515ACBB6759" xml:lang="en-US" lang="en-US" id="GUID-29D74514-C048-43A6-A026-95300C69D319">
+    <h3 class="- topic/title title topictitle3" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-4F652B4B-52B9-41E4-B772-3515ACBB6759" style="display:inline-block">11.10.1.5 Changing Constraints and Observing Results
+        - 32-Bit Shift Register Example</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Changing%20Constraints%20and%20Observing%20Results%20-%2032-Bit%20Shift%20Register%20Example">(Ask a Question)</a>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">You can use the Constraints Editor to change your constraints and view the results in
+        your design. The following procedure describes how.</p>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-C38EAB60-D976-4083-BFCF-56FB623664AB" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-C38EAB60-D976-4083-BFCF-56FB623664AB">
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-6D4D438B-F0DB-4C79-9C09-7EF20F60A10C" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-6D4D438B-F0DB-4C79-9C09-7EF20F60A10C">
+                <span class="- topic/ph task/cmd ph cmd">Open the Constraints Editor (<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Constraints Manager &gt; Timing Tab
+                        &gt; Edit Constraints with Constraint Editor &gt; Edit Timing Verifications
+                        Constraints</span>).</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Constraints Editor shows the clock constraint at 250 MHz you entered
+                        earlier.<figure class="- topic/fig fig fignone" id="GUID-29D74514-C048-43A6-A026-95300C69D319__FIG_XFD_YKJ_KNB" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__FIG_XFD_YKJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-74. <span id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-F7E3F96F-A06B-4BA2-AA26-F758AF97FF1F" class="fig--title">Clock Constraint Set to 250 MHz</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-29D74514-C048-43A6-A026-95300C69D319__IMAGE_LBF_YKJ_KNB" src="GUID-78698A04-DFF6-472B-A161-034F24EE8027-low.jpg" height="192" width="537" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-92852E87-9E3D-4C78-9D9A-68555D330C6C" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-92852E87-9E3D-4C78-9D9A-68555D330C6C">
+                <span class="- topic/ph task/cmd ph cmd">Select the second row. Right-click and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Clock
+                        Constraint</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Edit Clock Constraint dialog box appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-695A69C3-FE3D-43C2-B400-2F64C9170CEA" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-695A69C3-FE3D-43C2-B400-2F64C9170CEA">
+                <span class="- topic/ph task/cmd ph cmd"> Change the clock constraint from 250 MHz to 800 MHz, and then click the green
+                    check mark to continue.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-CFFBB5DF-828E-4B57-8DF6-48BACA42D762" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-CFFBB5DF-828E-4B57-8DF6-48BACA42D762">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Open SmartTime &gt; Open Interactively</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-4B92FFA7-F7C3-4165-B724-2CE6BF91E89B" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-4B92FFA7-F7C3-4165-B724-2CE6BF91E89B">
+                <span class="- topic/ph task/cmd ph cmd">Choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Maximum Delay Analysis View</span> to view the max delay
+                    analysis.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-537B6F3D-33D5-4C4C-81B1-BCDB00E3A782" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-537B6F3D-33D5-4C4C-81B1-BCDB00E3A782">
+                <span class="- topic/ph task/cmd ph cmd">In the Maximum Delay Analysis window, expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">my_clk</span>.
+                </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-1AA77A22-2B84-4637-8963-A3A52D0A60F9" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-1AA77A22-2B84-4637-8963-A3A52D0A60F9">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Register to Register</span> to observe the timing
+                    information. The slacks decrease after you increase the frequency. You may see
+                    the slacks go negative, which indicates Timing Violations. Negative slacks are
+                    shown in red.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <div class="- topic/note note notype note_notype" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-8B4D0DC5-321C-4046-9A71-0B8A8DA5280C" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-8B4D0DC5-321C-4046-9A71-0B8A8DA5280C"><span class="note__title">Note:</span> The actual timing numbers you see may be slightly different.</div>
+                </div>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-29D74514-C048-43A6-A026-95300C69D319__FIG_PXP_5LJ_KNB" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__FIG_PXP_5LJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-75. <span id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-00064FBF-AF93-4553-AB54-3A63E7FC8485" class="fig--title">Maximum Delay Analysis After Setting Clock Constraint to 800
+                            MHz</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-29D74514-C048-43A6-A026-95300C69D319__IMAGE_RNR_5LJ_KNB" src="GUID-256047D1-9029-4842-8E3D-66A81F8AF375-low.jpg" height="349" width="538" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-FFC06985-907F-4CA5-9B8F-940B78F39C61" data-ofbid="GUID-29D74514-C048-43A6-A026-95300C69D319__GUID-FFC06985-907F-4CA5-9B8F-940B78F39C61">
+                <span class="- topic/ph task/cmd ph cmd">Close SmartTime. When prompted to save changes, click
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">No</span>.</span>
+            </li>
+        </ol>
+    </div>
+</article></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031__GUID-3965F7DA-F659-4DA9-903E-96EE364B4A62" xml:lang="en-US" lang="en-US" id="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031"><h2 class="- topic/title title topictitle2" id="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031__GUID-3965F7DA-F659-4DA9-903E-96EE364B4A62" style="display:inline-block">11.10.2 Tutorial 2—False Path Constraints</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Tutorial%202%E2%80%94False%20Path%20Constraints">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">This section describes how to enter false path constraints in SmartTime. Import an RTL source
+            file from the following design. After routing the design, you analyze the timing, set
+            false path constraints, and observe the maximum operating frequency in the SmartTime
+            Timing Analysis window.</p><div class="- topic/p p">
+            <figure class="- topic/fig fig fignone" id="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031__FIG_Y5M_QZ3_KNB" data-ofbid="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031__FIG_Y5M_QZ3_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-76. <span id="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031__GUID-9E62F51E-85BD-4472-9267-271E67769E79" class="fig--title">Example Design with False Paths</span></span></figcaption>
+                
+                <img class="- topic/image image" id="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031__IMAGE_MJ5_QZ3_KNB" src="GUID-9B362C17-BB7E-4FD8-AE8F-E24FD0C15397-low.jpg" height="161" width="521" alt="???"/>
+            </figure>
+        </div></div><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-CDFE4B58-9081-405A-853B-6C973D5CC17B" xml:lang="en-US" lang="en-US" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B">
+<h3 class="- topic/title title topictitle3" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-CDFE4B58-9081-405A-853B-6C973D5CC17B" style="display:inline-block">11.10.2.1 Set Up Your False Path Example Design Project</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Set%20Up%20Your%20False%20Path%20Example%20Design%20Project">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">To set up your false path example design project:</p>
+<ol class="- topic/ol task/steps ol steps" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-0E58372F-1022-41DA-B44E-6B87B806AD23" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-0E58372F-1022-41DA-B44E-6B87B806AD23">
+<li class="- topic/li task/step li step" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-3A0B8A56-F529-4826-8951-4F910CCFA07C" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-3A0B8A56-F529-4826-8951-4F910CCFA07C">
+                <span class="- topic/ph task/cmd ph cmd">Open Libero.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-C92708AF-885D-4276-9B9E-AA76C7E6F8A8" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-C92708AF-885D-4276-9B9E-AA76C7E6F8A8">
+                <span class="- topic/ph task/cmd ph cmd">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Project</span> menu, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">New
+                        Project</span> to create a new project.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-297A3BD5-F4F3-41B5-B998-3185720BED73" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-297A3BD5-F4F3-41B5-B998-3185720BED73">
+                <span class="- topic/ph task/cmd ph cmd">Name the project <kbd class="+ topic/ph sw-d/userinput ph userinput">false_path</kbd> and set the project location
+                    according to your preferences. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-ACFCC9D2-7E39-44B0-A968-2F12F06200B5" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-ACFCC9D2-7E39-44B0-A968-2F12F06200B5">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Next</span>. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-6A3286A6-34BD-4FFB-9058-5F5AFDA735AA" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-6A3286A6-34BD-4FFB-9058-5F5AFDA735AA">
+                <span class="- topic/ph task/cmd ph cmd">Enter the following values for your <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Device Selection</span>
+                    settings:</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <ul class="- topic/ul ul" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__UL_ETG_P1J_KNB" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__UL_ETG_P1J_KNB">
+                        <li class="- topic/li li" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-F79B1869-7EE1-4F94-A41B-EA8ADBBC5BCB" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-F79B1869-7EE1-4F94-A41B-EA8ADBBC5BCB"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Family</span>: SmartFusion 2</li>
+                        <li class="- topic/li li" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-FD6A2EB0-7BC0-4D4B-A0C1-38B6F15F9F4A" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-FD6A2EB0-7BC0-4D4B-A0C1-38B6F15F9F4A"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Die</span>: M2S050</li>
+                        <li class="- topic/li li" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-6C0AB05F-73A1-417E-9CB4-83FD3241B778" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-6C0AB05F-73A1-417E-9CB4-83FD3241B778"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Package</span>: 484 FBGA</li>
+                        <li class="- topic/li li" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-443052AD-CBFE-4CB4-A0C9-CCD85E577B05" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-443052AD-CBFE-4CB4-A0C9-CCD85E577B05"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Speed</span>: STD</li>
+                        <li class="- topic/li li" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-81DDAA82-34FD-4541-A4C1-07CDAA979E01" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-81DDAA82-34FD-4541-A4C1-07CDAA979E01"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Die Voltage</span>: 1.2 V</li>
+                        <li class="- topic/li li" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-4131DA01-8619-4ACE-A9A2-13BCD560A527" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-4131DA01-8619-4ACE-A9A2-13BCD560A527"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Range</span>: COM</li>
+                    </ul>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-68DE5E5E-9185-4D85-B2C8-8B46F39DEBFE" data-ofbid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B__GUID-68DE5E5E-9185-4D85-B2C8-8B46F39DEBFE">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Finish</span> to create the new project.</span>
+            </li>
+</ol>
+</div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-33CC5781-FA8D-4137-BB42-57EC2212D4F7" xml:lang="en-US" lang="en-US" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695">
+<h3 class="- topic/title title topictitle3" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-33CC5781-FA8D-4137-BB42-57EC2212D4F7" style="display:inline-block">11.10.2.2 Import the false_path Verilog File and Add Constraints</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Import%20the%20false_path%20Verilog%20File%20and%20Add%20Constraints">(Ask a Question)</a>
+<div class="- topic/body task/taskbody body taskbody">
+        <section class="- topic/section task/prereq section prereq" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-25E18312-0944-45A6-BF32-630006162302" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-25E18312-0944-45A6-BF32-630006162302">For this tutorial, you import the
+                <a class="- topic/xref xref" href="GUID-CCF26330-263C-4D48-8B48-D62A6DEA7116.html#GUID-A9A6AB2A-8945-4590-88B9-1273078F566E"><span><span>11.10.2.5 </span><span>false_path.v</span></span></a> Verilog
+            source file into your design, and then run Libero SoC.</section>
+        <section class="- topic/section task/context section context" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-26DADF90-E90C-422F-855A-7EDDC4258BB8" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-26DADF90-E90C-422F-855A-7EDDC4258BB8">To import the Verilog source
+            file:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-16159FBC-0FE1-4152-AB01-3CFADA52482C" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-16159FBC-0FE1-4152-AB01-3CFADA52482C">
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-2769315E-9A44-422F-969E-72BB1C7E4282" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-2769315E-9A44-422F-969E-72BB1C7E4282">
+                <span class="- topic/ph task/cmd ph cmd">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">File</span> menu, choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Import &gt; HDL
+                        Source Files</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-37685917-99C9-4819-998D-B2BBE13D2FC3" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-37685917-99C9-4819-998D-B2BBE13D2FC3">
+                <span class="- topic/ph task/cmd ph cmd">Browse to the location of the false_path.v you saved and select it. Click
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Open</span> to import the file.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-613A4354-52BD-4EF3-B469-6493E791E948" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-613A4354-52BD-4EF3-B469-6493E791E948">
+                <span class="- topic/ph task/cmd ph cmd">Verify that the file appears in Design Hierarchy.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-A02CA5D4-FB20-4E72-8108-3F8F97A9E26A" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-A02CA5D4-FB20-4E72-8108-3F8F97A9E26A">
+                <span class="- topic/ph task/cmd ph cmd"> In the Design Flow window, double-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Synthesize</span> to
+                    run synthesis.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> A green check mark appears when the Synthesis step completes
+                    successfully.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-1BDF47EB-1812-4020-8B12-119D42F7730A" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-1BDF47EB-1812-4020-8B12-119D42F7730A">
+                <span class="- topic/ph task/cmd ph cmd">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Constraints</span>. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-2B7ACEC9-1359-4478-A63F-0279D81DB697" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-2B7ACEC9-1359-4478-A63F-0279D81DB697">
+                <span class="- topic/ph task/cmd ph cmd">Right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing Constraints</span> and choose
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Open Interactively</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-FA2E2ABE-D2CA-4249-956F-7991C46A8C33" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-FA2E2ABE-D2CA-4249-956F-7991C46A8C33">
+                <span class="- topic/ph task/cmd ph cmd">Double-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Manage Constraints</span>. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-2B9B8E70-1156-47B1-8D1C-16E1310A64BB" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-2B9B8E70-1156-47B1-8D1C-16E1310A64BB">
+                <span class="- topic/ph task/cmd ph cmd">Select the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing</span> tab.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-EA0EB0A0-AF5A-44B9-A0A0-82631C6D4922" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-EA0EB0A0-AF5A-44B9-A0A0-82631C6D4922">
+                <span class="- topic/ph task/cmd ph cmd">Expand the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit with Constraint Editor</span> sub-menu, and
+                    select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Place and Route Constraints</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Constraints Editor appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-5BE43347-82FD-41AE-B536-FE87FF169884" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-5BE43347-82FD-41AE-B536-FE87FF169884">
+                <span class="- topic/ph task/cmd ph cmd">Double-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Requirements: Clock</span>. </span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Create Clock Constraint dialog box appears.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-7D6DA1E8-95E6-4D5F-8776-F366E61FB0B5" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-7D6DA1E8-95E6-4D5F-8776-F366E61FB0B5">
+                <span class="- topic/ph task/cmd ph cmd">Double click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Browse</span> button for <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clock
+                        Source</span>, select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CLK</span>, and assign it a name
+                    (for example, <kbd class="+ topic/ph sw-d/userinput ph userinput">clk</kbd>).</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-04426FE7-2BA1-4D57-88CF-1A6EFDC9B090" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-04426FE7-2BA1-4D57-88CF-1A6EFDC9B090">
+                <span class="- topic/ph task/cmd ph cmd">Set the frequency to 100 MHz.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__FIG_MSC_D2J_KNB" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__FIG_MSC_D2J_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-77. <span id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-ADA71A1E-4CCD-47B3-B719-FF356D82F443" class="fig--title">Clock Constraint of
+                            100 MHz</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__IMAGE_HQ2_D2J_KNB" src="GUID-44C04215-7238-40D7-A34A-7F4A766E3957-low.jpg" height="270" width="467" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-8252B1AB-E29E-41C7-BCA7-F6E9C65EA3A5" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-8252B1AB-E29E-41C7-BCA7-F6E9C65EA3A5">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> to return to the Constraints Editor and observe
+                    that the clock information has been filled in, as shown in the following
+                    figure.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__FIG_EWZ_H2J_KNB" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__FIG_EWZ_H2J_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-78. <span id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-C77B039B-E68A-4987-8A39-049C159FFF23" class="fig--title">Clock Constraint of
+                            100 MHz in false_path Design</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__IMAGE_JCG_J2J_KNB" src="GUID-CC5E20F1-FFAA-4E5D-8D45-63EEA18A7570-low.png" height="111" width="472" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-B86FDF3E-54E1-457E-8ECA-7A145245DFD8" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-B86FDF3E-54E1-457E-8ECA-7A145245DFD8">
+                <span class="- topic/ph task/cmd ph cmd">Save your changes (<span class="+ topic/ph ui-d/uicontrol ph uicontrol">File &gt; Save</span>) and close the
+                    Constraints Editor (<span class="+ topic/ph ui-d/uicontrol ph uicontrol">File &gt; Close</span>).</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-60FE164F-9B98-4B17-8C58-DE085971E68E" data-ofbid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695__GUID-60FE164F-9B98-4B17-8C58-DE085971E68E">
+                <span class="- topic/ph task/cmd ph cmd">In the Constraint Manager, check the check boxes under <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Place and
+                        Route</span> and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing Verification</span> to
+                    associate the constraint file to both tools. The constraint file is used for
+                    both Place and Route and Timing verification.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-3A161092-8EC2-4C37-ABD0-A5DAA066285D" xml:lang="en-US" lang="en-US" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181">
+    <h3 class="- topic/title title topictitle3" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-3A161092-8EC2-4C37-ABD0-A5DAA066285D" style="display:inline-block">11.10.2.3 Place and Route Your FALSE_PATH
+        Design</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Place%20and%20Route%20Your%20FALSE_PATH%20Design">(Ask a Question)</a>
+    
+    <div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc"></p>
+        <section class="- topic/section task/context section context" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-227215DB-3B34-449A-9385-14973522F95C" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-227215DB-3B34-449A-9385-14973522F95C">To run Place and Route on false_path
+            design:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-3093A615-BBE0-4F36-825C-031187C2580F" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-3093A615-BBE0-4F36-825C-031187C2580F">
+            <li class="- topic/li task/step li step" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-64778BC0-2B08-47A1-90C2-42A7960B6BA1" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-64778BC0-2B08-47A1-90C2-42A7960B6BA1">
+                <span class="- topic/ph task/cmd ph cmd">In Libero SoC, right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Place and Route </span>and choose
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Configure Options</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">The Layout Options dialog box appears.<figure class="- topic/fig fig fignone" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__FIG_T2N_PNJ_KNB" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__FIG_T2N_PNJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-79. <span id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-DE0AB510-0C91-4882-9856-845BF4B24CB0" class="fig--title">Layout Options Dialog Box</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__IMAGE_FY4_PNJ_KNB" src="GUID-524F5536-7CCB-4E9B-8812-58A3742F002F-low.jpg" height="546" width="382" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-10A70EEB-C841-45A0-8081-818729EB250F" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-10A70EEB-C841-45A0-8081-818729EB250F">
+                <span class="- topic/ph task/cmd ph cmd">Click the check box to enable <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing-Driven</span> layout and
+                    leave all other values unchecked. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-1E1259AC-FBFF-4DCF-BB9C-2C031E5C6DD8" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-1E1259AC-FBFF-4DCF-BB9C-2C031E5C6DD8">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> to close the Layout Options dialog box.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-4C0D0BF3-9C40-47F4-A26E-80D38A9FDC3B" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-4C0D0BF3-9C40-47F4-A26E-80D38A9FDC3B">
+                <span class="- topic/ph task/cmd ph cmd">Right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Place and Route</span> and choose
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult">A green check mark appears next to <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Place and
+                        Route</span> in the Design Flow window when Place and Route completes
+                        successfully.<figure class="- topic/fig fig fignone" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__FIG_IDS_24J_KNB" data-ofbid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__FIG_IDS_24J_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-80. <span id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__GUID-9C404913-90AF-414A-9FE9-90A182627FF0" class="fig--title">Synthesize and Place and Route Successful Completion</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181__IMAGE_YB5_24J_KNB" src="GUID-4169D031-8999-47C9-A6EA-D07B34B570C2-low.jpg" height="570" width="464" alt="???"/>
+                    </figure></div>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic task/task topic task nested2" aria-labelledby="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-5B575DE3-CE73-4AA7-9817-548B259F27CA" xml:lang="en-US" lang="en-US" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59">
+<h3 class="- topic/title title topictitle3" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-5B575DE3-CE73-4AA7-9817-548B259F27CA" style="display:inline-block">11.10.2.4 Timing Analysis - Maximum Clock Frequency</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Timing%20Analysis%20-%20Maximum%20Clock%20Frequency">(Ask a Question)</a>
+
+<div class="- topic/body task/taskbody body taskbody"><p class="- topic/shortdesc shortdesc">The SmartTime Maximum Delay Analysis View displays the design maximum operating frequency
+        and lists any setup violations.</p>
+        <section class="- topic/section task/context section context" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-06A3AF86-CA53-4EDE-A01A-9C2AA312AC0B" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-06A3AF86-CA53-4EDE-A01A-9C2AA312AC0B">To perform maximum delay
+            analysis:</section>
+        <ol class="- topic/ol task/steps ol steps" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-1D64FAC7-A10E-46DA-8165-2AE5DCF97C9C" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-1D64FAC7-A10E-46DA-8165-2AE5DCF97C9C">
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-837A1BD5-A110-4B71-B03A-65315822D62A" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-837A1BD5-A110-4B71-B03A-65315822D62A">
+                <span class="- topic/ph task/cmd ph cmd">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Verify Post Layout Implementation</span>. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B41C48C0-9EB7-4340-BCBC-161A83E0F422" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B41C48C0-9EB7-4340-BCBC-161A83E0F422">
+                <span class="- topic/ph task/cmd ph cmd">Right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Open SmartTime</span> and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Open
+                        Interactively</span> to open SmartTime.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Maximum Delay Analysis View appears. The Maximum Delay Analysis
+                    View summarizes design performance and indicates that the design will operate at
+                    a maximum frequency of 442.48 MHz.<div class="- topic/note note notype note_notype" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-D7FF337B-E659-4990-91D1-CCDF9F1CF3B8" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-D7FF337B-E659-4990-91D1-CCDF9F1CF3B8"><span class="note__title">Note:</span> You may see a slightly different maximum
+                        frequency with a different version of Libero SoC.</div><figure class="- topic/fig fig fignone" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_ZWX_FPJ_KNB" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_ZWX_FPJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-81. <span id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-9423EF4F-94EA-41E2-B96B-C91AEF2846A3" class="fig--title">Maximum Delay Analysis Summary</span></span></figcaption>
+                        
+                        <p class="- topic/p p"><img class="- topic/image image" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__IMAGE_FFY_FPJ_KNB" src="GUID-9FE9A4AF-0FAB-4CED-847F-F960456563D3-low.jpg" height="308" width="544" alt="???"/></p>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-89DC7B3C-0FF1-45F2-AC7A-AF96683D698A" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-89DC7B3C-0FF1-45F2-AC7A-AF96683D698A">
+                <span class="- topic/ph task/cmd ph cmd">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">clk</span> to expand the display and show the Register
+                    to Register path sets.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-2C550A8C-4245-4AC4-97E0-DC8E1F71BCC3" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-2C550A8C-4245-4AC4-97E0-DC8E1F71BCC3">
+                <span class="- topic/ph task/cmd ph cmd"> Select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Register to Register</span> to display the
+                    register-to-register paths. Notice that the slack values are positive.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_NXV_KPJ_KNB" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_NXV_KPJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-82. <span id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B350FB52-28EC-4317-AA6A-F96ED73BF5EC" class="fig--title">Expanded Path</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__IMAGE_B4X_KPJ_KNB" src="GUID-494EC740-A134-461D-9D4F-BBF0809ECE80-low.jpg" height="137" width="471" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-E7618E46-3DDA-42E7-81D2-B37642B29900" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-E7618E46-3DDA-42E7-81D2-B37642B29900">
+                <span class="- topic/ph task/cmd ph cmd"> Double-click to select and expand the row in the path list with the path is
+                    from the CLK pin of flip-flop D0_reg to the D input of flip flop Q_reg. Note
+                    that the path goes through the S input of multiplexer un1_MUX2.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <p class="- topic/p p">Looking at the code in false_path.v, you can see on lines 51 and 52, that
+                        D0_reg and D)_inv_reg are always the inverse of each other in "operational"
+                        mode (except when RST is active). Line 56 says that XOR2 is the XOR of these
+                        two signals, and hence always 1 (except when RST is active). Line 59 says
+                        that XOR2 is the select of MUX2.</p>
+                    <div class="- topic/p p">We might reasonably decide that we are not interested in the reset mode delay
+                        for this design; therefore, this path is a false path for our timing
+                        analysis purposes.<figure class="- topic/fig fig fignone" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_GSC_SPJ_KNB" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_GSC_SPJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-83. <span id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-0A661088-0240-4F72-819F-8F83DC057830" class="fig--title">Analyzing the
+                                False Paths</span></span></figcaption>
+                            
+                            <img class="- topic/image image" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__IMAGE_LKS_SPJ_KNB" src="GUID-9D789DE0-0BF9-4409-9C8A-81EBE00F1DC5-low.png" height="301" width="371" alt="???"/>
+                        </figure></div>
+                    <p class="- topic/p p">Similar analysis shows that the path from D0_inv_reg:CLK to Q_reg:D shares
+                        exactly the same false-path characteristic. Disable both paths.</p>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-6E2036BE-E9B6-4764-A520-2B4E1BE41BD9" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-6E2036BE-E9B6-4764-A520-2B4E1BE41BD9">
+                <span class="- topic/ph task/cmd ph cmd">Restart the Libero Constraints Editor. The Constraints Editor must be running
+                    to use SmartTime’s back-annotation feature. Go to the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Constraint
+                        Manager</span> tab, then go to the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Timing</span>
+                    sub-tab, pull down <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit with Constraint Editor</span>, and
+                    choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Timing Verification Constraints</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-C432B5B9-BFF8-4697-BCAA-16D502E12161" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-C432B5B9-BFF8-4697-BCAA-16D502E12161">
+                <span class="- topic/ph task/cmd ph cmd">Leave this running and return to SmartTime. </span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-D1CAD9E3-2527-4677-B460-6484AF8F1635" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-D1CAD9E3-2527-4677-B460-6484AF8F1635">
+                <span class="- topic/ph task/cmd ph cmd">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools</span> menu, select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Max Delay
+                        Analysis</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-E8CDCF1B-B20B-4222-BED9-A27B1963ED61" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-E8CDCF1B-B20B-4222-BED9-A27B1963ED61">
+                <span class="- topic/ph task/cmd ph cmd">To set the path from D0_inv_reg:CLK to Q_reg :D as false, select the row
+                    containing this path in the Register to Register path set, right-click and
+                    choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add False Path Constraint</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> The Set False Path Constraint dialog box appears. It might pop behind
+                    the current dialog box, so check other Constraint Manager windows.<figure class="- topic/fig fig fignone" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_OTG_HQJ_KNB" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_OTG_HQJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-84. <span id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-2C2696BA-DE7D-4B69-9987-4335508306D4" class="fig--title">Right-clicking Add False Path Constraint</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__IMAGE_QH3_HQJ_KNB" src="GUID-557201F7-4128-4A7A-944C-3C9FD194CFA2-low.jpg" height="199" width="543" alt="???"/>
+                    </figure></div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-C0C87B90-561B-47BA-AA41-ED9D5360A106" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-C0C87B90-561B-47BA-AA41-ED9D5360A106">
+                <span class="- topic/ph task/cmd ph cmd">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> to close the Set False Path Constraint dialog
+                    box.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B4D4D5C8-1846-4B77-9528-E5AAFB34F226" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B4D4D5C8-1846-4B77-9528-E5AAFB34F226">
+                <span class="- topic/ph task/cmd ph cmd">In the Constraints Editor window, check for an entry below
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Exceptions &gt; False Path</span>.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-A4199448-D92C-43AA-A116-703573333A51" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-A4199448-D92C-43AA-A116-703573333A51">
+                <span class="- topic/ph task/cmd ph cmd">Return to the SmartTime window and repeat for the D0_reg:CLK -&gt; Q_reg:D
+                    path.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-922423B2-7B55-47A4-829E-830DED7058C9" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-922423B2-7B55-47A4-829E-830DED7058C9">
+                <span class="- topic/ph task/cmd ph cmd">Because we are interested only in timing analysis through the MUX when select =
+                    1, we can ignore the MUX "0" path from D1_reg:D through the AND2. We make this a
+                    false path. At this point the Constraints Editor should now look as follows.
+                    Save the file and exit the Constraints Editor and SmartTime.</span>
+            </li>
+            <div class="- topic/li task/stepsection li stepsection" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B7FAEDEF-2D39-4B93-B494-CE13375598D5" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B7FAEDEF-2D39-4B93-B494-CE13375598D5">
+                <figure class="- topic/fig fig fignone" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_LGM_YQJ_KNB" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_LGM_YQJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-85. <span id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-D2ABAA95-A759-41CB-9323-A97264A83ACF" class="fig--title">False Path Constraints in the SmartTime Constraint Editor</span></span></figcaption>
+                    
+                    <img class="- topic/image image" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__IMAGE_GSQ_YQJ_KNB" src="GUID-05989FD3-241A-4209-BE96-38F6F1E78A87-low.jpg" height="438" width="636" alt="???"/>
+                </figure>
+                <p class="- topic/p p">Place and Route is now invalidated and must be re-run before we can perform
+                    timing analysis again. This is because we changed the constraint file we are
+                    using for both P&amp;R and for Timing Analysis. We can use different constraint
+                    files, in which case we would not need to re-run P&amp;R.</p>
+            </div>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-E3763E85-6901-482D-A2EF-81B5390F1353" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-E3763E85-6901-482D-A2EF-81B5390F1353">
+                <span class="- topic/ph task/cmd ph cmd">Right-click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Open SmartTime</span> and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Update
+                        and Open Interactively</span>.</span>
+                <div class="- topic/itemgroup task/stepresult itemgroup stepresult"> You will see that Place and Route is run automatically before SmartTime
+                    is restarted.</div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-77C1A279-C867-458F-B21A-164AA063CF5E" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-77C1A279-C867-458F-B21A-164AA063CF5E">
+                <span class="- topic/ph task/cmd ph cmd">View the summary in the Maximum Delay Analysis View (<span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tools &gt; Max
+                        Delay Analysis</span>).  SmartTime now reports the maximum operating
+                    frequency as 586.17 MHz, as shown in the following figure.</span>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <div class="- topic/note note notype note_notype" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-BEEB75BE-37A2-47E4-B9E4-F28445C6DE84" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-BEEB75BE-37A2-47E4-B9E4-F28445C6DE84"><span class="note__title">Note:</span> The maximum operating frequency may vary slightly with a different version
+                        of the Libero software.</div>
+                </div>
+                <div class="- topic/itemgroup task/info itemgroup info">
+                    <figure class="- topic/fig fig fignone" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_K3X_NRJ_KNB" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_K3X_NRJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-86. <span id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-887290EF-7800-4ADE-8E69-D40F7AE8637B" class="fig--title">Maximum Delay Analysis View - Summary</span></span></figcaption>
+                        
+                        <img class="- topic/image image" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__IMAGE_YWX_NRJ_KNB" src="GUID-81D57110-1345-42E0-ACF7-153FB0D12266-low.jpg" height="291" width="535" alt="???"/>
+                    </figure>
+                </div>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B80FED70-FB14-45EF-B38C-C159BD6CD9AC" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B80FED70-FB14-45EF-B38C-C159BD6CD9AC">
+                <span class="- topic/ph task/cmd ph cmd">Select the Register to Register set for my_clk. Observe that only one path is
+                    visible, from D2_reg: CLK to Q_reg:D. This is the only path that propagates a
+                    signal, as shown in the following figure.</span>
+            </li>
+            <div class="- topic/li task/stepsection li stepsection" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-89A8C422-F80A-4B25-AAA6-96A80C197C0C" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-89A8C422-F80A-4B25-AAA6-96A80C197C0C">
+                <figure class="- topic/fig fig fignone" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_NZ2_RRJ_KNB" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__FIG_NZ2_RRJ_KNB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 11-87. <span id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-52DC02E2-A5EE-480A-A6A0-72A66FEBEAB3" class="fig--title">Maximum Delay Analysis View - Register to Register</span></span></figcaption>
+                    
+                    <img class="- topic/image image" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__IMAGE_X3F_RRJ_KNB" src="GUID-D4AB48F6-F712-41F4-A7CA-892D4FC13BA2-low.jpg" height="291" width="536" alt="???"/>
+                </figure>
+            </div>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B1812285-132E-408F-949E-E6EA46664356" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-B1812285-132E-408F-949E-E6EA46664356">
+                <span class="- topic/ph task/cmd ph cmd">Close SmartTime.</span>
+            </li>
+            <li class="- topic/li task/step li step" id="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-348E8824-4DD2-4877-BE47-AA705774DC8A" data-ofbid="GUID-D47B3511-B30F-4D80-8629-95269D321B59__GUID-348E8824-4DD2-4877-BE47-AA705774DC8A">
+                <span class="- topic/ph task/cmd ph cmd">Close Libero SoC.</span>
+            </li>
+        </ol>
+    </div>
+</article><article class="- topic/topic topic nested2" aria-labelledby="GUID-A9A6AB2A-8945-4590-88B9-1273078F566E__GUID-5A9870C1-6C24-45F7-AD03-86128DBD303A" xml:lang="en-US" lang="en-US" id="GUID-A9A6AB2A-8945-4590-88B9-1273078F566E"><h3 class="- topic/title title topictitle3" id="GUID-A9A6AB2A-8945-4590-88B9-1273078F566E__GUID-5A9870C1-6C24-45F7-AD03-86128DBD303A" style="display:inline-block">11.10.2.5 false_path.v</h3><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=false_path.v">(Ask a Question)</a><div class="- topic/body body">
+        <pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>//////////////////////////////////////////////////////////// 
+Company: Microchip Corp
+//
+// File history:
+// 0.1 Initial Version
+//
+// Description:
+// Simple example design to demonstrate use of timing // constraints.
+//
+// Targeted device: Family::SmartFusion2; Die::M2S050;
+// Package::484 FBGA;
+//
+// Author: Joe X // //
+//
+////////////////////////////////////////////////////////////
+module     false_path (D0, D1, D2, RST, CLK, Q); input D0;
+input      D1;
+input      D2;
+input      RST;
+input      CLK;
+output     Q;
+
+reg        D0_reg;
+reg        D0_inv_reg;
+reg        D1_reg;
+reg        D2_reg;
+
+reg        Q_reg;
+
+wire       XOR2          /*synthesis syn_keep=1*/; 
+wire       AND2          /*synthesis syn_keep=1*/; 
+wire       OR2           /*synthesis syn_keep=1*/; 
+wire       MUX2          /*synthesis syn_keep=1*/; 
+wire       NOT1          /*synthesis syn_keep=1*/; 
+wire       NOT2          /*synthesis syn_keep=1*/;
+
+assign Q = Q_reg /*synthesis syn_keep=1*/; 
+
+always @(posedge CLK or posedge RST)
+
+begin
+          if (RST)
+          begin
+              D0_reg         &lt;= 1'b0;
+              D0_inv_reg     &lt;= 1'b0;
+          end
+          else
+          begin
+              D0_reg         &lt;= D0;
+              D0_inv_reg     &lt;= ~D0;
+          end
+end
+          assign XOR2 = D0_reg ^ D0_inv_reg; 
+          assign OR2 = D0_inv_reg || D1_reg; 
+          assign AND2 = OR2 &amp;&amp; D2_reg;
+          assign MUX2 = (XOR2) ? (D2_reg) : (AND2);
+
+          always @(posedge CLK) 
+          begin
+              D1_reg     &lt;= D1;
+              D2_reg     &lt;= D2;
+
+              Q_reg &lt;= NOT2;
+          end
+
+          not u1 (NOT1, MUX2); 
+          not u2 (NOT2, NOT1);
+
+
+          endmodule</code></pre>
+    </div></article></article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6" data-tocid="GUID-4658D101-06D8-4909-BD3C-E535FBC3DFA6">11.10.1 Tutorial 1—32-Bit Shift Register with
+        Clock Enable</a><ul><li class="topic-item"><a href="#GUID-A92830BE-0D96-4F03-B396-593DF16AC74A" data-tocid="GUID-A92830BE-0D96-4F03-B396-593DF16AC74A">11.10.1.1 Add a Clock Constraint - 32 Bit Shift Register</a></li><li class="topic-item"><a href="#GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60" data-tocid="GUID-6FDEC6AA-6471-4671-BDC7-FFD8005DCE60">11.10.1.2 Run Place and Route</a></li><li class="topic-item"><a href="#GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C" data-tocid="GUID-A810F40E-C9E4-453F-A92E-1DBF36D6824C">11.10.1.3 Maximum Delay Analysis with Timing Analyzer -
+        32-Bit Shift Register Example</a></li><li class="topic-item"><a href="#GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE" data-tocid="GUID-4F1C339B-6A85-4099-A1F5-9B9FB04905CE">11.10.1.4 Minimum Delay Analysis with Timing Analyzer - 32-Bit Shift Register Example</a></li><li class="topic-item"><a href="#GUID-29D74514-C048-43A6-A026-95300C69D319" data-tocid="GUID-29D74514-C048-43A6-A026-95300C69D319">11.10.1.5 Changing Constraints and Observing Results
+        - 32-Bit Shift Register Example</a></li></ul></li><li class="topic-item"><a href="#GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031" data-tocid="GUID-CC97B607-42A8-4AB3-B39A-CCAA1F5FB031">11.10.2 Tutorial 2—False Path Constraints</a><ul><li class="topic-item"><a href="#GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B" data-tocid="GUID-BF3B2812-0AD4-49B8-87B2-5CB478C15A5B">11.10.2.1 Set Up Your False Path Example Design Project</a></li><li class="topic-item"><a href="#GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695" data-tocid="GUID-E267C989-C656-4CA0-ACCA-0E9CF536E695">11.10.2.2 Import the false_path Verilog File and Add Constraints</a></li><li class="topic-item"><a href="#GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181" data-tocid="GUID-58B9873C-4C6D-4FDA-82C6-DDBF2B8B4181">11.10.2.3 Place and Route Your FALSE_PATH
+        Design</a></li><li class="topic-item"><a href="#GUID-D47B3511-B30F-4D80-8629-95269D321B59" data-tocid="GUID-D47B3511-B30F-4D80-8629-95269D321B59">11.10.2.4 Timing Analysis - Maximum Clock Frequency</a></li><li class="topic-item"><a href="#GUID-A9A6AB2A-8945-4590-88B9-1273078F566E" data-tocid="GUID-A9A6AB2A-8945-4590-88B9-1273078F566E">11.10.2.5 false_path.v</a></li></ul></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

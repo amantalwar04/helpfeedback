@@ -1,0 +1,363 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="After creating a FlashPro Express or SmartDebug job, the user specifies the type of hardware setup: JTAG Chain – supported in the current release of the Job Manager The following device types can be ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>13.4.5.2 Creating a FlashPro Express or SmartDebug Job</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC-d10733e14775"/><meta name="wh-source-relpath" content="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.xml"/><meta name="wh-out-relpath" content="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div></li><li><div class="topicref" data-id="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C"><div class="title"><a href="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5</ph>
+Programming Job</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC"><div class="title"><a href="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html#GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5.2</ph>
+Creating a FlashPro Express or SmartDebug Job</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10987" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10987-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10987-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+FlashPro Express</a><div class="wh-tooltip"><p class="shortdesc">Information about FlasPro Express </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11587" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11587-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-800C7F69-3DF8-403F-8D5C-EC2DA2D2CFE5.html" id="tocId-d10733e11587-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.2</ph>
+Secure Production Programming Solution (SPPS)</a><div class="wh-tooltip"><p class="shortdesc">Information about Secure Production Programming Solution (SPPS)
+				</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e12317" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e12317-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89.html#GUID-5AD63D11-4351-4BE1-8AC4-45142AFC5E89" id="tocId-d10733e12317-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.3</ph>
+SmartDebug</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDebug </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e14622" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e14622-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="tocId-d10733e14622-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Job Manager</a><div class="wh-tooltip"><p class="shortdesc">Information about Job Manager </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954-d10733e14626" class="topicref introduction" data-id="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954.html" id="GUID-EC96DE03-40C0-44F0-8D55-29B2A6682954-d10733e14626-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635" class="topicref" data-id="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94.html#GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94" id="GUID-88BC980D-FB18-4716-8478-2D0EE00BEC94-d10733e14635-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.1</ph>
+Manufacturing Flows</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1-d10733e14667" class="topicref" data-id="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1.html" id="GUID-0D7E0D43-BC80-4DD0-8D43-5CDC640D45A1-d10733e14667-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.2</ph>
+HSM Parameter Configuration</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A-d10733e14675" class="topicref" data-id="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A.html" id="GUID-FA65E854-D3BE-4A5E-9D59-1E8DA84DC48A-d10733e14675-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.3</ph>
+Keyset File</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684" class="topicref" data-id="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90.html" id="GUID-F98BC431-42AB-4FCC-9C8C-004277BF6E90-d10733e14684-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.4</ph>
+Programming Data</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758" class="topicref" data-id="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C.html" id="GUID-728029E0-3AC3-460A-8426-9ABFF38A1F4C-d10733e14758-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5</ph>
+Programming Job</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-D714154A-98E8-4B0D-BD6F-7BB114CB63A6-d10733e14766" class="topicref" data-id="GUID-D714154A-98E8-4B0D-BD6F-7BB114CB63A6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D714154A-98E8-4B0D-BD6F-7BB114CB63A6.html" id="GUID-D714154A-98E8-4B0D-BD6F-7BB114CB63A6-d10733e14766-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5.1</ph>
+HSM Programming or Debug Job</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC-d10733e14775" class="topicref" data-id="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC-d10733e14775-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html#GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC" id="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC-d10733e14775-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5.2</ph>
+Creating a FlashPro Express or SmartDebug Job</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F-d10733e14783" class="topicref" data-id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html#GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F" id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F-d10733e14783-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5.2.1</ph>
+Configuring a JTAG Chain</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0-d10733e14791" class="topicref" data-id="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html#GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0" id="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0-d10733e14791-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5.2.2</ph>
+Export of Non-HSM Programming Job</a></div></div></li><li role="treeitem"><div data-tocid="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A-d10733e14799" class="topicref" data-id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html#GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A" id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A-d10733e14799-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.5.2.3</ph>
+HSM Tasks</a></div></div></li></ul></li></ul></li><li role="treeitem"><div data-tocid="GUID-7CC7D91A-893B-4404-925B-3382B6A13703-d10733e14807" class="topicref" data-id="GUID-7CC7D91A-893B-4404-925B-3382B6A13703" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7CC7D91A-893B-4404-925B-3382B6A13703.html" id="GUID-7CC7D91A-893B-4404-925B-3382B6A13703-d10733e14807-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.6</ph>
+Export SPI Directory</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817" class="topicref" data-id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88.html#GUID-C49E29C8-A8EF-4088-A975-334586BE4C88" id="GUID-C49E29C8-A8EF-4088-A975-334586BE4C88-d10733e14817-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.7</ph>
+Key Rotation</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892" class="topicref" data-id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB" id="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB-d10733e14892-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.8</ph>
+Tcl Interface</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5-d10733e14996" class="topicref" data-id="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5.html" id="GUID-E63B4D4E-AEBA-4E30-911D-769A64A028A5-d10733e14996-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.4.9</ph>
+Referenced Documents</a></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC__GUID-F46A3BE6-F6E6-4E30-9846-C39B5BBC1D29"><article class="nested0" aria-labelledby="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC__GUID-F46A3BE6-F6E6-4E30-9846-C39B5BBC1D29" id="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC"><h1 class="- topic/title title topictitle1" id="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC__GUID-F46A3BE6-F6E6-4E30-9846-C39B5BBC1D29" style="display:inline-block">13.4.5.2 Creating a FlashPro Express or SmartDebug
+        Job</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20a%20FlashPro%20Express%20or%20SmartDebug%20Job">(Ask a Question)</a><div class="- topic/body body">
+    <p class="- topic/p p">After creating a FlashPro Express or SmartDebug job, the user specifies the type of hardware
+      setup:</p>
+    <p class="- topic/p p">JTAG Chain – supported in the current release of the Job Manager</p>
+  </div><article class="- topic/topic topic nested1" aria-labelledby="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-315639CE-EE1C-49B3-820A-E101D96C81EE" xml:lang="en-US" lang="en-US" id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F"><h2 class="- topic/title title topictitle2" id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-315639CE-EE1C-49B3-820A-E101D96C81EE" style="display:inline-block">13.4.5.2.1 Configuring a JTAG Chain</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Configuring%20a%20JTAG%20Chain">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The following device types can be added to a JTAG chain:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-E36E67A0-9328-429A-B094-3572A2B24BD1" data-ofbid="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-E36E67A0-9328-429A-B094-3572A2B24BD1">Microchip device targeted for programming</li></ul><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-0E661AD2-C414-4E00-A016-E666EA7694E5" data-ofbid="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-0E661AD2-C414-4E00-A016-E666EA7694E5">Microchip bypass device not targeted for programming<ul class="- topic/ul ul">
+                    <li class="- topic/li li" id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-70F68EDB-9E99-4581-927E-388BCD7192CD" data-ofbid="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-70F68EDB-9E99-4581-927E-388BCD7192CD">Non-Microchip bypass
+                        device</li>
+                </ul></li></ul><p class="- topic/p p">Each device has a user-defined name that is unique within the JTAG chain. Microchip devices can
+            be programmed using a bit stream generated by a Programming Data entry or by using
+            existing programming bit stream files (STAPL) loaded from disk.</p><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Adding a Microchip Device for Programming by Generated Bitstream</span></p><p class="- topic/p p">If a Microchip device is programmed by a bit stream generated from Programming Data, the bit
+            stream must be specified in the Programming Data and bit stream name parameters in the
+                <code class="+ topic/ph pr-d/codeph ph codeph">add_microsemi_prog_device</code> Tcl command (see <a class="- topic/xref xref" href="GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB.html#GUID-FD8753E1-1846-4C6B-83DC-B3A5FBD3ACFB"><span><span>13.4.8 </span><span>Tcl Interface</span></span></a> for details).</p><p class="- topic/p p">The "DSN" parameter is used in the HSM flow to create a device-specific update programming file,
+            see <a class="- topic/xref xref" href="GUID-AC75F06B-DF1E-4A82-B3BF-C36BE474B68A.html#GUID-A3591582-3511-4E1E-87B7-6D446C3BDD18__LINK1">UEK1/UEK2/UEK3 Update Bitstream</a>. Actual bit stream is generated
+            while exporting the programming job, see <a class="- topic/xref xref" href="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html#GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A___BOOKMARK23">HSM Task Export</a>.</p><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Adding a Microchip Device for Programming by Existing Bitstream File</span></p><p class="- topic/p p">A Microchip device can be programmed using the existing bit stream file generated outside the Job
+            Manager.</p>
+        <div class="- topic/note note important note_important" id="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-63132847-93EA-45C7-A29D-2543F9A2200A" data-ofbid="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F__GUID-63132847-93EA-45C7-A29D-2543F9A2200A"><span class="note__title">Important:</span> If an external bit stream file has been
+            loaded in the device, it cannot be programmed using HSM, and tickets cannot be
+            created.</div><p class="- topic/p p">Use the <code class="+ topic/ph pr-d/codeph ph codeph">add_microsemi_prog_device</code> Tcl command pointing to the target bit stream
+            file on disk specifying the path to the file with the "bitstream_file" parameter.</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Adding a Microchip Bypass Device</strong></p><p class="- topic/p p">A Microchip bypass device can be added by specifying the device name or pointing to the device
+            programming file.</p><p class="- topic/p p">Refer to the <code class="+ topic/ph pr-d/codeph ph codeph">add_microsemi_bypass_device</code> Tcl command for more information.</p><p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Adding a Non-Microchip Bypass Device</strong></p><p class="- topic/p p">A non-Microchip device can be added to the JTAG chain with the
+                <code class="+ topic/ph pr-d/codeph ph codeph">add_non_microsemi_bypass_device</code> Tcl command.</p><p class="- topic/p p">JTAG bypass parameters can be specified either by pointing to the BSDL file accepted by the
+            command or by explicit parameter specification. Refer to the
+                <code class="+ topic/ph pr-d/codeph ph codeph">add_non_microsemi_bypass_device</code> Tcl command for more
+            information.</p></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0__GUID-02600229-C430-459C-A250-7A53BF4182AB" xml:lang="en-US" lang="en-US" id="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0"><h2 class="- topic/title title topictitle2" id="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0__GUID-02600229-C430-459C-A250-7A53BF4182AB" style="display:inline-block">13.4.5.2.2 Export of Non-HSM Programming Job</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Export%20of%20Non-HSM%20Programming%20Job">(Ask a Question)</a><div class="- topic/body body"><div class="- topic/p p">A non-HSM Programming Job is exported from the Job Manager with the
+                <code class="+ topic/ph pr-d/codeph ph codeph">export_prog_job</code> Tcl command. All bitstreams generated from
+            Programming Data entries are created during command execution.<div class="- topic/note note important note_important" id="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0__GUID-AF7C2158-B796-48C8-9EF3-BE85621C52D7" data-ofbid="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0__GUID-AF7C2158-B796-48C8-9EF3-BE85621C52D7"><span class="note__title">Important:</span> A Programming Job
+                that has one or more HSM tasks is considered to be HSM type and cannot be exported
+                using the <code class="+ topic/ph pr-d/codeph ph codeph">export_prog_job</code> command. For more information, see the
+                    <a class="- topic/xref xref" href="GUID-A4CAEB4B-478D-4219-964C-9D68780F14EC.html#GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A"><span><span>13.4.5.2.3 </span><span>HSM Tasks</span></span></a> section.</div></div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-DC315202-1833-4F56-AAAB-4936D3E4EA42" xml:lang="en-US" lang="en-US" id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A"><h2 class="- topic/title title topictitle2" id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-DC315202-1833-4F56-AAAB-4936D3E4EA42" style="display:inline-block">13.4.5.2.3 HSM Tasks</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=HSM%20Tasks">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The HSM task in the HSM flow allows flexibility in organizing the manufacturing process. It is possible to utilize multiple Contract Manufacturers simultaneously, or the entire manufacturing volume can be split onto smaller chunks for overbuild protection. For example, after creating a Programming Job, the OE can create and export an HSM Task for each manufacturer in production.</p><p class="- topic/p p">HSM tasks add HSM data to the Programming Job. For each HSM task, the user creates job tickets
+            and specifies programming actions for each ticket. Overbuild protection and other
+            protocol-specific information is specified during ticket creation.</p><p class="- topic/p p">For more information about the HSM use model and flow description, refer to the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://coredocs.s3.amazonaws.com/Libero/2023_1/Tool/spps_ug.pdf" target="_blank" rel="external noopener">Secure Production Programming Solution (SPPS) User Guide</a>
+      </span>.</p><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Job Tickets</span></p><p class="- topic/p p">The HSM Task Ticket (Job Ticket in this document) is used to enforce security policies on the manufacturing side and encrypt sensitive information used by device security protocols.</p><p class="- topic/p p">A Job Ticket is created per device in the Programming Job. Each device can have one or more
+            ticket. The Job Ticket is created per the user-selected programming action.</p><p class="- topic/p p">A new Job Ticket is created with the <code class="+ topic/ph pr-d/codeph ph codeph">new_hsmtask_ticket</code> Tcl command. The
+                <code class="+ topic/ph pr-d/codeph ph codeph">max_device</code> parameter is used to limit the number of devices a
+            programming action can be executed on.</p><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Job Request</span></p><p class="- topic/p p">A Job Request is exported from the Job Manager Project after creation of all tickets within the HSM Task. The Job Request is then sent to and processed by FlashPro Express or IHP using its M-HSM.</p><p class="- topic/p p">A Job Request is created with the <code class="+ topic/ph pr-d/codeph ph codeph">hsmtask_m_request</code> Tcl command.</p><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Job Reply</span></p><p class="- topic/p p">A Job Reply returns ticket generation information created by the FlashPro Express/IHP. This information is cryptographically bound to the physical M-HSM/U-HSM module that processed the Job Request. After performing this handshake protocol, the HSM Job exported from this HSM Task can only be used with that particular module. This prevents HSM Task replication on the manufacturing side.</p><p class="- topic/p p">A Job Reply is generated by FlashPro Express or IHP and can be imported into the requesting U-HSM
+            Task with the <code class="+ topic/ph pr-d/codeph ph codeph">hsmtask_m_reply</code> Tcl command.</p><p class="- topic/p p" id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A___BOOKMARK23" data-ofbid="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A___BOOKMARK23"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">HSM Task Export</span></p><p class="- topic/p p">An HSM Task (HSM Job in this document) can be exported with the <code class="+ topic/ph pr-d/codeph ph codeph">export_hsmtask</code>
+            Tcl command. This command executes the part of export done during the non-HSM job export
+            and adds HSM-specific information to the job export container. This data includes job
+            tickets, encryption keys, protocol data, and other HSM-specific information. The HSM job
+            can only be exported after importing the Job Reply.</p><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Job Status</span></p><p class="- topic/p p">Job Status can be generated by FlashPro Express or IHP during job execution or after ending the job. A Job Status file is generated and sent to the customer.</p><p class="- topic/p p">An HSM Programing Job being executed on the manufacturing side can be ended when all target devices are programmed, or the job can be terminated at any time.</p><p class="- topic/p p">The Job Manager uses Job Status to:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-2D1884C9-3726-4901-8145-084DF94220BE" data-ofbid="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-2D1884C9-3726-4901-8145-084DF94220BE">Validate job end status, which is cryptographically protected proof that the job has ended and can no longer execute programming actions controlled by its tickets</li><li class="- topic/li li" id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-6E01A577-C72A-4D76-A5DC-FC94D6A54ADD" data-ofbid="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-6E01A577-C72A-4D76-A5DC-FC94D6A54ADD">Display the number of devices that can be handled by each ticket</li><li class="- topic/li li" id="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-300BAE4E-F3D8-48C8-BC09-AF3851A0D92F" data-ofbid="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A__GUID-300BAE4E-F3D8-48C8-BC09-AF3851A0D92F">Ensure that the correct bit stream is programmed
+                into each device by validating the CoCs.</li></ul></div></article></article></article></main></div>
+                        
+                        
+                        <div class=" wh_related_links d-print-none "><nav aria-label="Related Links" role="navigation" class="- topic/related-links related-links"><div class="- topic/linklist linklist relinfo" xml:lang="en-US" lang="en-US"><strong>Related Links</strong><ul class="linklist related_link"><li class="linklist"><a class="navheader_parent_path" href="GUID-D714154A-98E8-4B0D-BD6F-7BB114CB63A6.html" title="HSM Programming or Debug Job"><span><span>13.4.5.1 </span><span>HSM Programming or Debug Job</span></span></a></li></ul></div></nav></div>
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F" data-tocid="GUID-2C7700A2-D208-4DBB-B4F3-7E66D7D72E6F">13.4.5.2.1 Configuring a JTAG Chain</a></li><li class="topic-item"><a href="#GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0" data-tocid="GUID-F6BD1F20-7F2F-4ACD-9502-A1D566F385B0">13.4.5.2.2 Export of Non-HSM Programming Job</a></li><li class="topic-item"><a href="#GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A" data-tocid="GUID-20D15AEE-8D8F-4ED8-91BC-50545020B65A">13.4.5.2.3 HSM Tasks</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

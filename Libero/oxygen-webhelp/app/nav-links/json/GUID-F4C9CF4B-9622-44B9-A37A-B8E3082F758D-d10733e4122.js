@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>3.13.2.1<\/ph>\nBus Interfaces","href":"GUID-DD5BFD75-BB76-49D8-99EA-EC328F43A5FD.html#GUID-A9877C6E-D2FD-4485-BB7C-E9D71E7A7552","attributes":{"data-id":"GUID-A9877C6E-D2FD-4485-BB7C-E9D71E7A7552"},"menu":{"hasChildren":false},"tocID":"GUID-A9877C6E-D2FD-4485-BB7C-E9D71E7A7552-d10733e4130","topics":[]}]});

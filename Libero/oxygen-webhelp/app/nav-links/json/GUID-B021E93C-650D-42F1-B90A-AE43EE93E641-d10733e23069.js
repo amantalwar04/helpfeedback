@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.10.1<\/ph>\nProgramming and Configuration Tcl Commands","href":"Chunk1060129181.html#Chunk1060129181","attributes":{"data-id":"Chunk1060129181"},"menu":{"hasChildren":false},"tocID":"Chunk1060129181-d10733e23077","next":"Chunk1060129181-d10733e23077"}]});

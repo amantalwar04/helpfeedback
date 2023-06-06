@@ -1,0 +1,544 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Buffer, driven by the FCO pin of the last macro in the Carry-Chain. Figure 14-151.  FCEND_BUFF Table 14-324.  FCEND_BUFF I/O Input Output A Y Table 14-325.  FCEND_BUFF Truth Table A Y 0 0 1 1 Buffer, ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title> Special</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e16814"/><meta name="wh-source-relpath" content="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782.xml"/><meta name="wh-out-relpath" content="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2</ph>
+SmartFusion2 and IGLOO2 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2 and IGLOO2</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782"><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5</ph>
+Special</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15009" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15009-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15009-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.1</ph>
+PolarFire Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e16127" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e16127-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B.html" id="tocId-d10733e16127-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2</ph>
+SmartFusion2 and IGLOO2 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2 and IGLOO2</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B-d10733e16131" class="topicref introduction" data-id="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B.html" id="GUID-F5A1B855-E988-48B2-A29C-ADA050A6A95B-d10733e16131-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e16140" class="topicref" data-id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e16140-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F_2.html#GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F" id="GUID-1D0D9C94-1491-44E1-8B8C-0CC865E2A81F-d10733e16140-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.1</ph>
+Combinatorial Logic</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e16383" class="topicref" data-id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e16383-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D_2.html#GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D" id="GUID-385D2758-AD2F-4D6B-AA94-F811A52ADE0D-d10733e16383-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.2</ph>
+Sequential Logic</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e16464" class="topicref" data-id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e16464-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA_2.html#GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA" id="GUID-BDCE3593-B363-4CD1-AE90-83EE394C6BBA-d10733e16464-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.3</ph>
+I/O</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e16659" class="topicref" data-id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e16659-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A_2.html#GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A" id="GUID-8682A3E4-724C-4E03-8693-2FFA44D6545A-d10733e16659-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.4</ph>
+Clocking</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e16814" class="topicref" data-id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e16814-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782" id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782-d10733e16814-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5</ph>
+Special</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC-d10733e16822" class="topicref" data-id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC-d10733e16822-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.1</ph>
+FCEND_BUFF</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EB64CB8F-B517-4021-BF99-C187001E960E-d10733e16830" class="topicref" data-id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-EB64CB8F-B517-4021-BF99-C187001E960E" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E-d10733e16830-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.2</ph>
+FCINIT_BUFF</a></div></div></li><li role="treeitem"><div data-tocid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87-d10733e16838" class="topicref" data-id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-538BC340-9F91-4E1A-8ADE-532D65383E87" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87-d10733e16838-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.3</ph>
+FLASH_FREEZE</a></div></div></li><li role="treeitem"><div data-tocid="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3-d10733e16846" class="topicref" data-id="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-14ED415B-1D16-4DA6-8129-6544316C16C3" id="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3-d10733e16846-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.4</ph>
+LIVE_PROBE_FB</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018-d10733e16854" class="topicref" data-id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-6256FF30-876C-469A-A642-6D5DEE7E4018" id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018-d10733e16854-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.5</ph>
+RCOSC_1MHZ</a></div></div></li><li role="treeitem"><div data-tocid="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B-d10733e16862" class="topicref" data-id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B" id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B-d10733e16862-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.6</ph>
+RCOSC_1MHZ_FAB</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133-d10733e16870" class="topicref" data-id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133" id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133-d10733e16870-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.7</ph>
+RCOSC_25_50MHZ</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B-d10733e16878" class="topicref" data-id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B" id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B-d10733e16878-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.8</ph>
+RCOSC_25_50 MHZ_FAB</a></div></div></li><li role="treeitem"><div data-tocid="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38-d10733e16886" class="topicref" data-id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38" id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38-d10733e16886-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.9</ph>
+SYSCTRL_RESET_STATUS</a></div></div></li><li role="treeitem"><div data-tocid="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B-d10733e16894" class="topicref" data-id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B-d10733e16894-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.10</ph>
+SYSRESET</a></div></div></li><li role="treeitem"><div data-tocid="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90-d10733e16903" class="topicref" data-id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-917FE294-2C97-42BD-B038-AC4CD1059A90" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90-d10733e16903-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.11</ph>
+XTLOSC</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC-d10733e16911" class="topicref" data-id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782_2.html#GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC" id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC-d10733e16911-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.5.12</ph>
+XTLOSC_FAB</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="GUID-22FD238C-64BA-4DDC-9A77-2C535815FCAD-d10733e16919" class="topicref" data-id="GUID-22FD238C-64BA-4DDC-9A77-2C535815FCAD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-22FD238C-64BA-4DDC-9A77-2C535815FCAD.html" id="GUID-22FD238C-64BA-4DDC-9A77-2C535815FCAD-d10733e16919-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.6</ph>
+RAM1K18</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D4919C34-BFFC-4D49-9E83-2F028F32D5EF-d10733e16927" class="topicref" data-id="GUID-D4919C34-BFFC-4D49-9E83-2F028F32D5EF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D4919C34-BFFC-4D49-9E83-2F028F32D5EF.html" id="GUID-D4919C34-BFFC-4D49-9E83-2F028F32D5EF-d10733e16927-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.7</ph>
+MACC</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AB1F89D4-F5AF-4272-A428-E6E695735C2C-d10733e16935" class="topicref" data-id="GUID-AB1F89D4-F5AF-4272-A428-E6E695735C2C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AB1F89D4-F5AF-4272-A428-E6E695735C2C.html" id="GUID-AB1F89D4-F5AF-4272-A428-E6E695735C2C-d10733e16935-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.2.8</ph>
+Appendix-Accessing IP Core Documentation</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e16943" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e16943-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197.html#GUID-890346A8-405F-4C2B-A8AE-6FBA92D06197" id="tocId-d10733e16943-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14.3</ph>
+RTG4 Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for RTG4</p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782__GUID-428EA52D-0D61-462C-BBAB-88D9219E7364"><article class="nested0" aria-labelledby="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782__GUID-428EA52D-0D61-462C-BBAB-88D9219E7364" id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782">
+   <h1 class="- topic/title title topictitle1" id="GUID-BBA317CA-E45F-4E91-83E0-3ED930B2A782__GUID-428EA52D-0D61-462C-BBAB-88D9219E7364" style="display:inline-block">14.2.5 Special</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Special">(Ask a Question)</a>
+<article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__GUID-5566F77B-281C-4FEA-84CC-CB09FFB0C4E9" xml:lang="en-US" lang="en-US" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC">
+   <h2 class="- topic/title title topictitle2" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__GUID-5566F77B-281C-4FEA-84CC-CB09FFB0C4E9" style="display:inline-block">14.2.5.1 FCEND_BUFF</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=FCEND_BUFF">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016B1" data-ofbid="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016B1">Buffer, driven by the FCO pin of the last macro in the Carry-Chain.<figure class="- topic/fig fig fignone" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__FIG_RSP_3HJ_L4B" data-ofbid="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__FIG_RSP_3HJ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__FIG_D5K_JHJ_L4B" data-ofbid="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__FIG_D5K_JHJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-151. <span id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__GUID-D525437D-0839-42B4-A58C-88C6B03865DD" class="fig--title">FCEND_BUFF</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__IMAGE_E5K_JHJ_L4B" src="GUID-858B1624-E258-4C66-8EC8-C8099AF33CD5-low.png" height="140" width="375"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016B6" data-ofbid="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016B6" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-324. </span></span><span class="table--title" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016B8">FCEND_BUFF I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016BE">
+               <tr class="- topic/row" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016BF">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C0">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C2">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C4">
+               <tr class="- topic/row" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C5">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C6" headers="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C0">A</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C8" headers="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016C2">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016CA" data-ofbid="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016CA" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-325. </span></span><span class="table--title" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016CC">FCEND_BUFF Truth Table</span></caption><colgroup><col style="width:0.625in"/><col style="width:0.6875in"/></colgroup><thead class="- topic/thead thead" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D2">
+               <tr class="- topic/row" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D3">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D4">A</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D6">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D8">
+               <tr class="- topic/row" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D9">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016DA" headers="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D4">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016DC" headers="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D6">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016DE">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016DF" headers="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D4">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016E1" headers="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC__ID-000016D6">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__GUID-3AE1F7B0-5550-4EDB-A475-50F5694DAB7E" xml:lang="en-US" lang="en-US" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E">
+   <h2 class="- topic/title title topictitle2" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__GUID-3AE1F7B0-5550-4EDB-A475-50F5694DAB7E" style="display:inline-block">14.2.5.2 FCINIT_BUFF</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=FCINIT_BUFF">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016E5" data-ofbid="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016E5">Buffer, used to initialize the FCI pin of the first macro in the
+            Carry-Chain.<figure class="- topic/fig fig fignone" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__FIG_HXY_4HJ_L4B" data-ofbid="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__FIG_HXY_4HJ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__FIG_N3B_QHJ_L4B" data-ofbid="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__FIG_N3B_QHJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-152. <span id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__GUID-FDB0B4CF-41EF-48B2-85F2-F430C0EC4E72" class="fig--title">FCINIT_BUFF</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__IMAGE_O3B_QHJ_L4B" src="GUID-2BBA5B75-4B8A-4C92-99E9-1C8E08D5B84E-low.png" height="148" width="406"/>
+               </figure>
+            </div>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016EA" data-ofbid="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016EA" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-326. </span></span><span class="table--title" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016EC">FCINIT_BUFF I/O</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.20221in"/></colgroup><thead class="- topic/thead thead" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F2">
+               <tr class="- topic/row" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F3">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F4">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F6">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F8">
+               <tr class="- topic/row" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F9">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016FA" headers="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F4">A</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016FC" headers="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016F6">Y</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016FE" data-ofbid="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-000016FE" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-327. </span></span><span class="table--title" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001700">FCINIT_BUFF Truth Table</span></caption><colgroup><col style="width:0.625in"/><col style="width:0.6875in"/></colgroup><thead class="- topic/thead thead" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001706">
+               <tr class="- topic/row" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001707">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001708">A</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-0000170A">Y</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-0000170C">
+               <tr class="- topic/row" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-0000170D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-0000170E" headers="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001708">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001710" headers="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-0000170A">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001712">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001713" headers="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001708">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-00001715" headers="GUID-EB64CB8F-B517-4021-BF99-C187001E960E__ID-0000170A">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__GUID-FE6B8C15-75E5-427E-8C83-3B051731E5D5" xml:lang="en-US" lang="en-US" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87">
+    <h2 class="- topic/title title topictitle2" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__GUID-FE6B8C15-75E5-427E-8C83-3B051731E5D5" style="display:inline-block">14.2.5.3 FLASH_FREEZE</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=FLASH_FREEZE">(Ask a Question)</a>
+    <div class="- topic/body concept/conbody body conbody">
+        <p class="- topic/p p" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-00001719" data-ofbid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-00001719">The Flash_Freeze macro is a special-purpose macro that provides
+            information on when the chip is about to go into Flash* Freeze mode to allow the user to
+            perform any housekeeping needed before the device enters into Flash*Freeze mode. The
+            macro has two outputs:</p>
+        <ul class="- topic/ul ul">
+            <li class="- topic/li li" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-0000171A" data-ofbid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-0000171A">FF_TO_START—This signal goes high when the FPGA is about to go into
+                Flash*Freeze mode.</li>
+            <li class="- topic/li li" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-0000171C" data-ofbid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-0000171C">FF_DONE—This signal goes high when the FPGA has successfully
+                entered Flash*Freeze mode.</li>
+        </ul>
+        <figure class="- topic/fig fig fignone" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__FIG_ICX_SHJ_L4B" data-ofbid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__FIG_ICX_SHJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-153. <span id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__GUID-362859BB-766B-4D12-854A-0DE895CCB373" class="fig--title">FLASH_FREEZE</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__IMAGE_ODD_CQF_YPB" src="GUID-251A2C4F-CCA7-4D41-8D39-765FD71C439A-low.png"/>
+        </figure>
+        <p class="- topic/p p" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-00001722" data-ofbid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-00001722">For more information about this macro, see the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/SoC/microsemi_smartfusion2_igloo2_system_controller_user_guide.pdf" target="_blank" rel="external noopener">UG0450: SmartFusion2 and IGLOO2 System Controller User Guide</a>
+      </span> and the <span class="- topic/ph ph">
+        <a class="- topic/xref xref" href="https://ww1.microchip.com/downloads/aemDocuments/documents/FPGA/ProductDocuments/SoC/microsemi_smartfusion2_igloo2_fpga_low_power_design_user_guide_ug0444_v5.pdf" target="_blank" rel="external noopener">SmartFusion2 and IGLOO2 FPGA Low-Power Design User Guide </a>
+      </span>.</p>
+        <p class="- topic/p p" id="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-00001725" data-ofbid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87__ID-00001725">There is no simulation model for this macro. The two outputs remain low
+            during simulation because Flash-Freeze is not supported during simulation.</p>
+    </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3__GUID-1D783EA6-C311-4242-AF18-C5EA0FD6FEB8" xml:lang="en-US" lang="en-US" id="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3"><h2 class="- topic/title title topictitle2" id="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3__GUID-1D783EA6-C311-4242-AF18-C5EA0FD6FEB8" style="display:inline-block">14.2.5.4 LIVE_PROBE_FB</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=LIVE_PROBE_FB">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><p class="- topic/p p" id="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3__ID-000017B1" data-ofbid="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3__ID-000017B1">This is a special-purpose macro that feeds the live probe signals back to the fabric. You can connect the PROBE_A/PROBE_B signals to any unused I/O during design generation. This is useful if PROBE_A/PROBE_B cannot be brought out for debugging due to board limitations. PROBE_A and PROBE_B pins must be reserved, if LIVE_PROBE_FB macro is used. This macro is not supported in simulation.</p><div class="- topic/p p"><figure class="- topic/fig fig fignone" id="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3__FIG_HP3_RJJ_L4B" data-ofbid="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3__FIG_HP3_RJJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-154. <span id="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3__GUID-55F29C38-FF5E-43AB-9BF5-345DC5111773" class="fig--title">LIVE_PROBE_FB</span></span></figcaption><img class="- topic/image image break" src="GUID-0C83E129-5DD3-47B5-896B-E4C25A71141C-low.png"/></figure></div></div></article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__GUID-28D31A38-33CD-49EF-AE85-85B245E77351" xml:lang="en-US" lang="en-US" id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018">
+   <h2 class="- topic/title title topictitle2" id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__GUID-28D31A38-33CD-49EF-AE85-85B245E77351" style="display:inline-block">14.2.5.5 RCOSC_1MHZ</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=RCOSC_1MHZ">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__ID-00001759" data-ofbid="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__ID-00001759">The RCOSC_1 MHZ oscillator is an RC oscillator that provides a free
+         running clock of 1 MHz frequency.<figure class="- topic/fig fig fignone" id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__FIG_UKC_K3J_L4B" data-ofbid="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__FIG_UKC_K3J_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__FIG_KV1_L3J_L4B" data-ofbid="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__FIG_KV1_L3J_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-155. <span id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__GUID-8CB085A6-6737-445E-AECD-F4F7F8F38279" class="fig--title">RCOSC_1 MHZ</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018__IMAGE_LV1_L3J_L4B" src="GUID-0D9ADBB4-19C2-43BC-8466-937F9428B4B2-low.png" height="297" width="420"/>
+               </figure>
+            </div>
+         </figure></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__GUID-2BBA0ACB-2118-453D-8CA2-234EE937BEE3" xml:lang="en-US" lang="en-US" id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B">
+   <h2 class="- topic/title title topictitle2" id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__GUID-2BBA0ACB-2118-453D-8CA2-234EE937BEE3" style="display:inline-block">14.2.5.6 RCOSC_1MHZ_FAB</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=RCOSC_1MHZ_FAB">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__ID-00001760" data-ofbid="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__ID-00001760">The RCOSC_1 MHZ_FAB macro provides an interface from the RCOSC_1 MHZ
+         oscillator to fabric logic.<figure class="- topic/fig fig fignone" id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__FIG_ZX3_43J_L4B" data-ofbid="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__FIG_ZX3_43J_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__FIG_SPT_P3J_L4B" data-ofbid="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__FIG_SPT_P3J_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-156. <span id="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B__GUID-CEF32302-7B81-47BE-AB9F-FB3FEE2452BE" class="fig--title">RCOSC_1 MHZ_FAB</span></span></figcaption>
+                  
+                  <img class="- topic/image image" src="GUID-61DBCE2E-4466-4460-AC64-BA1DE00A1BE2-low.png" height="150" width="415"/>
+               </figure>
+            </div>
+         </figure></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__GUID-5F85BE64-A6D2-4D00-9D14-A67709012066" xml:lang="en-US" lang="en-US" id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133">
+   <h2 class="- topic/title title topictitle2" id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__GUID-5F85BE64-A6D2-4D00-9D14-A67709012066" style="display:inline-block">14.2.5.7 RCOSC_25_50MHZ</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=RCOSC_25_50MHZ">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__ID-00001767" data-ofbid="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__ID-00001767">The RCOSC_25_50 MHZ oscillator is an RC oscillator that provides a free
+      running clock of 25 MHz (at 1.0V supply voltage) or 50 MHz (at 1.2V supply voltage).<figure class="- topic/fig fig fignone" id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__FIG_R25_S3J_L4B" data-ofbid="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__FIG_R25_S3J_L4B">
+        <div class="- topic/p p">
+          <figure class="- topic/fig fig fignone" id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__GUID-DDA74F0D-02CD-49A6-9B2B-470825A90A07" data-ofbid="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__GUID-DDA74F0D-02CD-49A6-9B2B-470825A90A07"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-157. <span id="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133__GUID-725BBEDC-E221-4433-BCB7-9034612EDDBB" class="fig--title">RCOSC_25_50MHZ</span></span></figcaption>
+            
+            <img class="- topic/image image" src="GUID-7C8EA019-9821-4B9C-B5C7-4E20343A8E3B-low.png" height="297" width="420"/>
+          </figure>
+        </div>
+      </figure></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__GUID-7AC66C29-8D9F-4075-AF4C-970B012A048F" xml:lang="en-US" lang="en-US" id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B">
+   <h2 class="- topic/title title topictitle2" id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__GUID-7AC66C29-8D9F-4075-AF4C-970B012A048F" style="display:inline-block">14.2.5.8 RCOSC_25_50 MHZ_FAB</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=RCOSC_25_50%20MHZ_FAB">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__ID-0000176E" data-ofbid="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__ID-0000176E">The RCOSC_25_50MHZ_FAB macro provides an interface from the RCOSC_25_50MHZ
+         oscillator to fabric logic.<figure class="- topic/fig fig fignone" id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__FIG_BRD_2JJ_L4B" data-ofbid="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__FIG_BRD_2JJ_L4B">
+            <div class="- topic/p p">
+               <figure class="- topic/fig fig fignone" id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__FIG_GBH_FJJ_L4B" data-ofbid="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__FIG_GBH_FJJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-158. <span id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__GUID-FA5DF671-55A1-4697-B722-E5637D13877A" class="fig--title">RCOSC_25_50 MHZ_FAB</span></span></figcaption>
+                  
+                  <img class="- topic/image image" id="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B__IMAGE_HBH_FJJ_L4B" src="GUID-2C73A30E-1958-454C-B23D-33EB1A929D6E-low.png" height="150" width="392"/>
+               </figure>
+            </div>
+         </figure></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__GUID-0DBC0CA1-0209-4D87-8D02-A0CD57A74E2A" xml:lang="en-US" lang="en-US" id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38">
+   <h2 class="- topic/title title topictitle2" id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__GUID-0DBC0CA1-0209-4D87-8D02-A0CD57A74E2A" style="display:inline-block">14.2.5.9 SYSCTRL_RESET_STATUS</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SYSCTRL_RESET_STATUS">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__ID-000017A9" data-ofbid="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__ID-000017A9">This is a special-purpose macro to check the status of the System
+         Controller. The output port RESET_STATUS goes high if the System Controller is in reset
+         (System Controller Suspend Mode option is checked in Device Settings under
+            Libero<sup class="+ topic/ph hi-d/sup ph sup">®</sup>'s Project Settings). This macro is not supported in simulation.<figure class="- topic/fig fig fignone" id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__GUID-7940CFCB-B2A9-476F-AC55-0E2D36C18CE7" data-ofbid="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__GUID-7940CFCB-B2A9-476F-AC55-0E2D36C18CE7"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-159. <span id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__GUID-DC463018-8DFE-4DA1-A987-90A9B248EF1A" class="fig--title">SYSCTRL_RESET_STATUS</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38__IMAGE_MCP_NQF_YPB" src="GUID-518EB9E5-AE64-4ACE-B192-4C85820B0E79-low.png"/>
+         </figure></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__GUID-D61CB50F-F3C4-46FC-9AE5-9A5B11D3F7A2" xml:lang="en-US" lang="en-US" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B">
+   <h2 class="- topic/title title topictitle2" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__GUID-D61CB50F-F3C4-46FC-9AE5-9A5B11D3F7A2" style="display:inline-block">14.2.5.10 SYSRESET</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=SYSRESET">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001775" data-ofbid="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001775">SYSRESET is a special-purpose macro. The Output POWER_ON_RESET_N goes low
+         at power-up and when DEVRST_N goes low.<figure class="- topic/fig fig fignone" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__FIG_OWY_HJJ_L4B" data-ofbid="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__FIG_OWY_HJJ_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-160. <span id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__GUID-660384EA-867A-4142-BEF3-B31B47EFFFB9" class="fig--title">SYSRESET</span></span></figcaption>
+            
+            <img class="- topic/image image break" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__IMAGE_YJJ_5QF_YPB" src="GUID-A1519C3E-2C18-40B1-B034-EDF46BA212BD-low.png"/>
+         </figure></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000177A" data-ofbid="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000177A" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-328. </span></span><span class="table--title" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000177C">SYSRESET I/O</span></caption><colgroup><col style="width:1.33242in"/><col style="width:1.77513in"/></colgroup><thead class="- topic/thead thead" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001782">
+               <tr class="- topic/row" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001783">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001784">Input</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001786">Output</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001788">
+               <tr class="- topic/row" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001789">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000178A" headers="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001784">DEVRST_N</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000178C" headers="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001786">POWER_ON_RESET_N</td>
+               </tr>
+            </tbody></table></div>
+      <div class="table-container"><table class="- topic/table table" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000178E" data-ofbid="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000178E" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-329. </span></span><span class="table--title" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001790">SYSRESET TRUTH TABLE</span></caption><colgroup><col style="width:1.20221in"/><col style="width:1.93138in"/></colgroup><thead class="- topic/thead thead" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001796">
+               <tr class="- topic/row" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001797">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001798">DEVRST_N</th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000179A">POWER_ON_RESET_N</th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000179C">
+               <tr class="- topic/row" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000179D">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000179E" headers="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001798">0</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-000017A0" headers="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000179A">0</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-000017A2">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-000017A3" headers="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-00001798">1</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-000017A5" headers="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B__ID-0000179A">1</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__GUID-4ED3ADD8-3B6D-4B0E-8AC1-33FE232CD665" xml:lang="en-US" lang="en-US" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90"><h2 class="- topic/title title topictitle2" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__GUID-4ED3ADD8-3B6D-4B0E-8AC1-33FE232CD665" style="display:inline-block">14.2.5.11 XTLOSC</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=XTLOSC">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><p class="- topic/p p" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001728" data-ofbid="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001728">The crystal oscillator provides up to a 20 MHz clock signal. Physically, it requires connection to an external crystal. However, for simulation purposes the XTL pin provides a clock signal running at the desired input frequency. MODE is a two-bit configuration parameter that specifies the frequency range, as shown in the following table.</p><div class="table-container"><table class="- topic/table table" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001729" data-ofbid="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001729" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 14-330. </span></span><span class="table--title" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-0000172B">OPERATING MODES</span></caption><colgroup><col style="width:1.20221in"/><col style="width:2.12236in"/></colgroup><thead class="- topic/thead thead" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001731"><tr class="- topic/row" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001732"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001733">MODE[1:0]</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001735">Frequency Range (MHz)</th></tr></thead><tbody class="- topic/tbody tbody" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001737"><tr class="- topic/row" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001738"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001739" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001733">00</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-0000173B" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001735">N/A</td></tr><tr class="- topic/row" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-0000173D"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-0000173E" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001733">01</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001740" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001735">0.032 – 0.075</td></tr><tr class="- topic/row" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001742"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001743" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001733">10</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001745" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001735">0.075 – 2.0</td></tr><tr class="- topic/row" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001747"><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001748" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001733">11</td><td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-0000174A" headers="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__ID-00001735">2.0 – 20.0</td></tr></tbody></table></div>
+        <figure class="- topic/fig fig fignone" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__FIG_JHX_F3J_L4B" data-ofbid="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__FIG_JHX_F3J_L4B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-161. <span id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__GUID-F97F12E3-809D-41FE-8226-5ACC640A9B21" class="fig--title">XTLOSC</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90__IMAGE_KHX_F3J_L4B" src="GUID-615FD02A-B58C-4FB3-96DE-1DE34D2D0E5C-low.png" height="297" width="420"/>
+        </figure></div></article><article class="- topic/topic concept/concept topic concept nested1" aria-labelledby="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__GUID-41FFF5B9-3E15-4CC4-886C-69CF34C5C82B" xml:lang="en-US" lang="en-US" id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC">
+   <h2 class="- topic/title title topictitle2" id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__GUID-41FFF5B9-3E15-4CC4-886C-69CF34C5C82B" style="display:inline-block">14.2.5.12 XTLOSC_FAB</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=XTLOSC_FAB">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <div class="- topic/p p" id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__ID-00001752" data-ofbid="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__ID-00001752">The XTL_OSC_FAB macro provides an interface from the crystal oscillator
+      (XTLOSC) to fabric logic.<figure class="- topic/fig fig fignone" id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__FIG_VFM_H3J_L4B" data-ofbid="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__FIG_VFM_H3J_L4B">
+        <div class="- topic/p p">
+          <figure class="- topic/fig fig fignone" id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__GUID-C77E71F4-F5A6-486E-8174-DF475D6C0DDD" data-ofbid="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__GUID-C77E71F4-F5A6-486E-8174-DF475D6C0DDD"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 14-162. <span id="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC__GUID-923C3E67-8EB0-4D6C-8DEA-F606D5A15BFA" class="fig--title">XTLOSC_FAB</span></span></figcaption>
+            
+            <img class="- topic/image image" src="GUID-49341920-4001-4101-A8FB-064B7096C276-low.png" height="150" width="408"/>
+          </figure>
+        </div>
+      </figure></div>
+   </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC" data-tocid="GUID-323CC0C1-B4D8-411F-9051-83876DDB4BEC">14.2.5.1 FCEND_BUFF</a></li><li class="topic-item"><a href="#GUID-EB64CB8F-B517-4021-BF99-C187001E960E" data-tocid="GUID-EB64CB8F-B517-4021-BF99-C187001E960E">14.2.5.2 FCINIT_BUFF</a></li><li class="topic-item"><a href="#GUID-538BC340-9F91-4E1A-8ADE-532D65383E87" data-tocid="GUID-538BC340-9F91-4E1A-8ADE-532D65383E87">14.2.5.3 FLASH_FREEZE</a></li><li class="topic-item"><a href="#GUID-14ED415B-1D16-4DA6-8129-6544316C16C3" data-tocid="GUID-14ED415B-1D16-4DA6-8129-6544316C16C3">14.2.5.4 LIVE_PROBE_FB</a></li><li class="topic-item"><a href="#GUID-6256FF30-876C-469A-A642-6D5DEE7E4018" data-tocid="GUID-6256FF30-876C-469A-A642-6D5DEE7E4018">14.2.5.5 RCOSC_1MHZ</a></li><li class="topic-item"><a href="#GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B" data-tocid="GUID-BF4B9D19-D70C-4AEB-9BD4-6EFBB51BEF6B">14.2.5.6 RCOSC_1MHZ_FAB</a></li><li class="topic-item"><a href="#GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133" data-tocid="GUID-D336BA17-9D8D-4B94-A187-8E8E9EA18133">14.2.5.7 RCOSC_25_50MHZ</a></li><li class="topic-item"><a href="#GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B" data-tocid="GUID-4FDA4685-5606-4AAC-8D76-7268DAC4BF1B">14.2.5.8 RCOSC_25_50 MHZ_FAB</a></li><li class="topic-item"><a href="#GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38" data-tocid="GUID-95C098B2-D2A6-4857-95DD-78C1FFB87E38">14.2.5.9 SYSCTRL_RESET_STATUS</a></li><li class="topic-item"><a href="#GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B" data-tocid="GUID-7864B68A-B97F-4E8F-9BA1-90406842AF6B">14.2.5.10 SYSRESET</a></li><li class="topic-item"><a href="#GUID-917FE294-2C97-42BD-B038-AC4CD1059A90" data-tocid="GUID-917FE294-2C97-42BD-B038-AC4CD1059A90">14.2.5.11 XTLOSC</a></li><li class="topic-item"><a href="#GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC" data-tocid="GUID-DB2E7C29-7836-40E9-8952-14E86A6606FC">14.2.5.12 XTLOSC_FAB</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

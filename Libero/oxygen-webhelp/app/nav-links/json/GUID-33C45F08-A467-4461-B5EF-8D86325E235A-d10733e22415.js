@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>19.9.1<\/ph>\nSmart Power Tcl Commands","href":"Chunk1802283719.html#Chunk1802283719","attributes":{"data-id":"Chunk1802283719"},"menu":{"hasChildren":false},"tocID":"Chunk1802283719-d10733e22423","next":"Chunk1802283719-d10733e22423"}]});

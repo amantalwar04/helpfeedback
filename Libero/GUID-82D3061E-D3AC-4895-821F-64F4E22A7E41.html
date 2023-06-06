@@ -1,0 +1,660 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="After placing the components in your SmartDesign canvas, you now need to create pins and ports to connect the various instances to complete your design. Each pin or port has a direction and a type. ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>5.4 Creating Pins and Ports for Connecting Instances in the SmartDesign</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41-d10733e4944"/><meta name="wh-source-relpath" content="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.xml"/><meta name="wh-out-relpath" content="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li class="active"><div class="topicref" data-id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41"><div class="title"><a href="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html#GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.4</ph>
+Creating Pins and Ports for Connecting Instances in the SmartDesign</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE-d10733e4800" class="topicref introduction" data-id="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE-d10733e4800-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E48BA831-BEA8-47DF-B870-F1238C6F566E-d10733e4808" class="topicref" data-id="GUID-E48BA831-BEA8-47DF-B870-F1238C6F566E" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E48BA831-BEA8-47DF-B870-F1238C6F566E-d10733e4808-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E48BA831-BEA8-47DF-B870-F1238C6F566E.html#GUID-E48BA831-BEA8-47DF-B870-F1238C6F566E" id="GUID-E48BA831-BEA8-47DF-B870-F1238C6F566E-d10733e4808-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.1</ph>
+Understanding the SmartDesign Canvas</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-2EA66641-4C77-4A0B-A0CE-4719C0388C24-d10733e4832" class="topicref" data-id="GUID-2EA66641-4C77-4A0B-A0CE-4719C0388C24" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-2EA66641-4C77-4A0B-A0CE-4719C0388C24-d10733e4832-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-2EA66641-4C77-4A0B-A0CE-4719C0388C24.html#GUID-2EA66641-4C77-4A0B-A0CE-4719C0388C24" id="GUID-2EA66641-4C77-4A0B-A0CE-4719C0388C24-d10733e4832-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.2</ph>
+Creating a Synthesizable SmartDesign</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-EF51B2CB-5B5C-4E27-8DC3-530800E1CA42-d10733e4864" class="topicref" data-id="GUID-EF51B2CB-5B5C-4E27-8DC3-530800E1CA42" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-EF51B2CB-5B5C-4E27-8DC3-530800E1CA42-d10733e4864-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EF51B2CB-5B5C-4E27-8DC3-530800E1CA42.html#GUID-EF51B2CB-5B5C-4E27-8DC3-530800E1CA42" id="GUID-EF51B2CB-5B5C-4E27-8DC3-530800E1CA42-d10733e4864-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.3</ph>
+Instantiating User HDL Modules, IP Cores, and Components in SmartDesign</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41-d10733e4944" class="topicref" data-id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41-d10733e4944-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html#GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41" id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41-d10733e4944-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.4</ph>
+Creating Pins and Ports for Connecting Instances in the SmartDesign</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-5431F79B-8200-4C47-B639-ABB15340864A-d10733e4952" class="topicref" data-id="GUID-5431F79B-8200-4C47-B639-ABB15340864A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html#GUID-5431F79B-8200-4C47-B639-ABB15340864A" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A-d10733e4952-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.4.1</ph>
+Creating Pins and Ports for your Design</a></div></div></li><li role="treeitem"><div data-tocid="GUID-1441245B-F7B8-4333-8671-86DA5075F215-d10733e4960" class="topicref" data-id="GUID-1441245B-F7B8-4333-8671-86DA5075F215" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html#GUID-1441245B-F7B8-4333-8671-86DA5075F215" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215-d10733e4960-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.4.2</ph>
+Modifying the Pin Order</a></div></div></li><li role="treeitem"><div data-tocid="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC-d10733e4968" class="topicref" data-id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html#GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC-d10733e4968-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.4.3</ph>
+Performing Operations on Pins or Ports</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B-d10733e4976" class="topicref" data-id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html#GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B-d10733e4976-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.4.4</ph>
+Working with Bus and Slice</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-9FB0BBF1-2BB6-4984-A6A0-61CDD9E05082-d10733e4984" class="topicref" data-id="GUID-9FB0BBF1-2BB6-4984-A6A0-61CDD9E05082" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-9FB0BBF1-2BB6-4984-A6A0-61CDD9E05082-d10733e4984-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9FB0BBF1-2BB6-4984-A6A0-61CDD9E05082.html#GUID-9FB0BBF1-2BB6-4984-A6A0-61CDD9E05082" id="GUID-9FB0BBF1-2BB6-4984-A6A0-61CDD9E05082-d10733e4984-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.5</ph>
+Connecting Instances in your SmartDesign</a></div></div></li><li role="treeitem"><div data-tocid="GUID-87A69FA9-A577-4D05-93BA-F7FEB6BD4F02-d10733e5024" class="topicref" data-id="GUID-87A69FA9-A577-4D05-93BA-F7FEB6BD4F02" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-87A69FA9-A577-4D05-93BA-F7FEB6BD4F02.html" id="GUID-87A69FA9-A577-4D05-93BA-F7FEB6BD4F02-d10733e5024-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.6</ph>
+Finding Objects in Your Project</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-BE3A51A7-79FF-4D0A-AB78-3B8C926B7870-d10733e5032" class="topicref" data-id="GUID-BE3A51A7-79FF-4D0A-AB78-3B8C926B7870" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-BE3A51A7-79FF-4D0A-AB78-3B8C926B7870-d10733e5032-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BE3A51A7-79FF-4D0A-AB78-3B8C926B7870.html#GUID-BE3A51A7-79FF-4D0A-AB78-3B8C926B7870" id="GUID-BE3A51A7-79FF-4D0A-AB78-3B8C926B7870-d10733e5032-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.7</ph>
+Using the Smart Search and Connect Tool</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0DDA135A-303B-4849-960A-68C04FF7F210-d10733e5072" class="topicref" data-id="GUID-0DDA135A-303B-4849-960A-68C04FF7F210" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0DDA135A-303B-4849-960A-68C04FF7F210-d10733e5072-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0DDA135A-303B-4849-960A-68C04FF7F210.html#GUID-0DDA135A-303B-4849-960A-68C04FF7F210" id="GUID-0DDA135A-303B-4849-960A-68C04FF7F210-d10733e5072-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.8</ph>
+Working with Hierarchical SmartDesigns</a></div></div></li><li role="treeitem"><div data-tocid="GUID-41F42E8E-109E-4C70-BC0C-48E04BD1048E-d10733e5104" class="topicref" data-id="GUID-41F42E8E-109E-4C70-BC0C-48E04BD1048E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-41F42E8E-109E-4C70-BC0C-48E04BD1048E.html" id="GUID-41F42E8E-109E-4C70-BC0C-48E04BD1048E-d10733e5104-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.9</ph>
+Validating the SmartDesign Using the DRC</a></div></div></li><li role="treeitem"><div data-tocid="GUID-8646A4B3-60FF-4338-991B-AAE423E2BF6A-d10733e5113" class="topicref" data-id="GUID-8646A4B3-60FF-4338-991B-AAE423E2BF6A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8646A4B3-60FF-4338-991B-AAE423E2BF6A.html" id="GUID-8646A4B3-60FF-4338-991B-AAE423E2BF6A-d10733e5113-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.10</ph>
+Managing Synthesis Attributes</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-67C3CBAE-121C-4E0B-BCD3-AD0850AC8D95-d10733e5121" class="topicref" data-id="GUID-67C3CBAE-121C-4E0B-BCD3-AD0850AC8D95" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-67C3CBAE-121C-4E0B-BCD3-AD0850AC8D95-d10733e5121-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-67C3CBAE-121C-4E0B-BCD3-AD0850AC8D95.html#GUID-67C3CBAE-121C-4E0B-BCD3-AD0850AC8D95" id="GUID-67C3CBAE-121C-4E0B-BCD3-AD0850AC8D95-d10733e5121-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.11</ph>
+Generating the SmartDesign Component</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-66DBD625-56AB-4BA9-AC72-A33C7C085BDE-d10733e5145" class="topicref" data-id="GUID-66DBD625-56AB-4BA9-AC72-A33C7C085BDE" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-66DBD625-56AB-4BA9-AC72-A33C7C085BDE-d10733e5145-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-66DBD625-56AB-4BA9-AC72-A33C7C085BDE.html#GUID-66DBD625-56AB-4BA9-AC72-A33C7C085BDE" id="GUID-66DBD625-56AB-4BA9-AC72-A33C7C085BDE-d10733e5145-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.12</ph>
+Creating a SmartDesign Testbench</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0FECE76C-AF5E-461A-A9AF-969F95712EFB-d10733e5169" class="topicref" data-id="GUID-0FECE76C-AF5E-461A-A9AF-969F95712EFB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FECE76C-AF5E-461A-A9AF-969F95712EFB.html" id="GUID-0FECE76C-AF5E-461A-A9AF-969F95712EFB-d10733e5169-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.13</ph>
+Viewing the Design Memory Map</a></div></div></li><li role="treeitem"><div data-tocid="GUID-606CD591-7BE7-44CF-B95E-6BD32D3B80BE-d10733e5177" class="topicref" data-id="GUID-606CD591-7BE7-44CF-B95E-6BD32D3B80BE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-606CD591-7BE7-44CF-B95E-6BD32D3B80BE.html" id="GUID-606CD591-7BE7-44CF-B95E-6BD32D3B80BE-d10733e5177-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.14</ph>
+Exporting Memory Map Report</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0139BF2A-2019-4BA0-A570-A44E0EB0AD38-d10733e5185" class="topicref" data-id="GUID-0139BF2A-2019-4BA0-A570-A44E0EB0AD38" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0139BF2A-2019-4BA0-A570-A44E0EB0AD38.html" id="GUID-0139BF2A-2019-4BA0-A570-A44E0EB0AD38-d10733e5185-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.15</ph>
+Exporting Interrupt Map Report</a></div></div></li><li role="treeitem"><div data-tocid="GUID-205AAF34-75E7-43DC-A2D1-BE5254BED04F-d10733e5193" class="topicref" data-id="GUID-205AAF34-75E7-43DC-A2D1-BE5254BED04F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-205AAF34-75E7-43DC-A2D1-BE5254BED04F.html" id="GUID-205AAF34-75E7-43DC-A2D1-BE5254BED04F-d10733e5193-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.16</ph>
+Appendix A - Glossary</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6A6F29CD-9F66-4E9E-8C92-FD96D1391E55-d10733e5201" class="topicref" data-id="GUID-6A6F29CD-9F66-4E9E-8C92-FD96D1391E55" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A6F29CD-9F66-4E9E-8C92-FD96D1391E55.html" id="GUID-6A6F29CD-9F66-4E9E-8C92-FD96D1391E55-d10733e5201-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.17</ph>
+Appendix B - Available Cores in Libero SoC Catalog</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D4761CB8-F54C-487B-AFAE-2E7020B90114-d10733e5209" class="topicref" data-id="GUID-D4761CB8-F54C-487B-AFAE-2E7020B90114" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D4761CB8-F54C-487B-AFAE-2E7020B90114.html" id="GUID-D4761CB8-F54C-487B-AFAE-2E7020B90114-d10733e5209-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.18</ph>
+Appendix C - Keyboard Shortcuts</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E6ED604B-36DA-4285-89F9-3AA0E053FB0A-d10733e5217" class="topicref" data-id="GUID-E6ED604B-36DA-4285-89F9-3AA0E053FB0A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E6ED604B-36DA-4285-89F9-3AA0E053FB0A.html" id="GUID-E6ED604B-36DA-4285-89F9-3AA0E053FB0A-d10733e5217-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.19</ph>
+Appendix D – Component Types</a></div></div></li><li role="treeitem"><div data-tocid="GUID-ACCC7936-E363-4D15-AB44-F35207FF4B5A-d10733e5225" class="topicref" data-id="GUID-ACCC7936-E363-4D15-AB44-F35207FF4B5A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACCC7936-E363-4D15-AB44-F35207FF4B5A.html" id="GUID-ACCC7936-E363-4D15-AB44-F35207FF4B5A-d10733e5225-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5.20</ph>
+Appendix E – Operations Native to SmartDesign</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-A987C3D7-4EB7-4DDA-A3C6-0C03EBCB4CAC"><article class="nested0" aria-labelledby="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-A987C3D7-4EB7-4DDA-A3C6-0C03EBCB4CAC" id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41"><h1 class="- topic/title title topictitle1" id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-A987C3D7-4EB7-4DDA-A3C6-0C03EBCB4CAC" style="display:inline-block">5.4 Creating Pins and Ports for Connecting Instances in the SmartDesign</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20Pins%20and%20Ports%20for%20Connecting%20Instances%20in%20the%20SmartDesign">(Ask a Question)</a>
+  <div class="- topic/body body"><p class="- topic/p p">After placing the components in your SmartDesign canvas, you now need to create pins and ports to connect the various instances to complete your design.</p><p class="- topic/p p">Each pin or port has a direction and a type. Direction of the regular ports (non-Bus Interface ports) can be input, output, and bidirectional (inout).</p><p class="- topic/p p">The following is a list of types of pins or ports:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-A61FDEFC-6765-484F-A868-194B3005CBE2" data-ofbid="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-A61FDEFC-6765-484F-A868-194B3005CBE2"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Scalar</span>: Single unit-level
+        signal</li><li class="- topic/li li" id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-A8ACDDA4-8B3A-445D-8681-186DF0F2FEAA" data-ofbid="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-A8ACDDA4-8B3A-445D-8681-186DF0F2FEAA"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Bus</span>: Array of scalar
+        ports. The range of the bus ports are indicated by square brackets
+          <code class="+ topic/ph pr-d/codeph ph codeph">[nFirst:nLast]</code>. For Example, <code class="+ topic/ph pr-d/codeph ph codeph">busName[3:0]</code>.</li><li class="- topic/li li" id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-F6955734-9E4C-437D-92B7-0EA7A3565057" data-ofbid="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-F6955734-9E4C-437D-92B7-0EA7A3565057"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Slice</span>: Slice is a part of
+        a bus port. A bus slice is of any range size within the bus range. For example,
+          <code class="+ topic/ph pr-d/codeph ph codeph">sliceName[0]</code>, <code class="+ topic/ph pr-d/codeph ph codeph">sliceName[2:0]</code>.</li><li class="- topic/li li" id="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-C6BAFD78-FCD3-4A1A-800F-A7B8472302CD" data-ofbid="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41__GUID-C6BAFD78-FCD3-4A1A-800F-A7B8472302CD"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Bus Interface (BIF)</span>: A Bus
+        Interface is a bundle of scalar or bus ports that has functional meaning to it. BIF ports
+        have characteristics such as functional types and roles that define how two Bus Interfaces
+        can connect to one another. SmartDesign provides a rich set of AMBA Bus
+          Interfaces–<code class="+ topic/ph pr-d/codeph ph codeph">AXI</code>, <code class="+ topic/ph pr-d/codeph ph codeph">AXI4</code>, <code class="+ topic/ph pr-d/codeph ph codeph">AXI4Stream</code>,
+          <code class="+ topic/ph pr-d/codeph ph codeph">AHB</code>, <code class="+ topic/ph pr-d/codeph ph codeph">AHBLite</code>, and <code class="+ topic/ph pr-d/codeph ph codeph">APB3</code> – to help create
+        easily AMBA sub-systems. It also provides Microchip specific Bus Interface types for easy
+        connectivity between Microchip hardware components.</li></ul><p class="- topic/p p">Scalar ports or pins in SmartDesign may have a PAD characteristic property. A pin or port with a
+      PAD property must be connected to a top-level port of the design. PAD ports eventually assign
+      to a package pin. In SmartDesign, these ports are automatically promoted to the top-level and
+      can be modified, if needed.</p><p class="- topic/p p">For better organization of the instance pins, you can create groups. Groups are displayed on an instance with a Group pin that is just a visual representation and cannot be connected. Any pin can be added or removed from the group. Groups can be collapsed to hide member pins.</p></div><article class="- topic/topic topic nested1" aria-labelledby="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-850BB2D5-BACF-4F4F-9D08-91169304C4BE" xml:lang="en-US" lang="en-US" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A"><h2 class="- topic/title title topictitle2" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-850BB2D5-BACF-4F4F-9D08-91169304C4BE" style="display:inline-block">5.4.1 Creating Pins and Ports for your Design</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Creating%20Pins%20and%20Ports%20for%20your%20Design">(Ask a Question)</a>
+  <div class="- topic/body body">
+    <p class="- topic/p p">After placing the components in your SmartDesign canvas, you now need to create pins and
+      ports to connect the various instances to complete your design.</p>
+    <p class="- topic/p p">Each pin or port has a direction and a type. Direction of the regular ports (non-Bus
+      Interface ports) can be input, output, and bidirectional (inout).</p><ol class="- topic/ol ol" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-32F94A95-1A47-4642-8F63-8DF67DADBB28" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-32F94A95-1A47-4642-8F63-8DF67DADBB28"><li class="- topic/li li" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-4E0BC110-ED3E-4BF0-A451-A35CA7802A75" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-4E0BC110-ED3E-4BF0-A451-A35CA7802A75">You can create a pin or port in either of the
+        following ways:<ul class="- topic/ul ul">
+          <li class="- topic/li li" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-221A88BB-8DA6-41E5-A00B-5C99F5334048" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-221A88BB-8DA6-41E5-A00B-5C99F5334048">On the menu, click <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">SmartDesign</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Port</span></span></li>
+          <li class="- topic/li li" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-2F287035-EA62-4375-A068-B0A066E9106E" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-2F287035-EA62-4375-A068-B0A066E9106E">On the SmartDesign toolbar, click
+              <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Port</span></li>
+        </ul><p class="- topic/p p"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Result:</span> The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Port</span> dialog box
+          appears.</p><figure class="- topic/fig fig fignone" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-768CCD5E-3DC5-4552-B48F-D3103EAED07B" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-768CCD5E-3DC5-4552-B48F-D3103EAED07B"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 5-10. <span id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-A107565F-F3D9-4205-A458-900C9EEB441A" class="fig--title">Add Port dialog box</span></span></figcaption>
+          
+          <img class="- topic/image image" height="210" src="GUID-AA0DCAA0-7D4E-4500-AE65-6AAF280A05C9-low.png" width="235" alt="Graphical user interface, text, application Description automatically generated"/>
+        </figure></li><li class="- topic/li li" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-1E97F627-B817-4F70-8B1F-42F99F922C05" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-1E97F627-B817-4F70-8B1F-42F99F922C05">Enter an appropriate and unique name for the port
+        in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Name</span> box. You can specify a bus port by indicating the bus
+        range directly into the name using brackets [ ]. For example, <span class="+ topic/ph hi-d/tt ph tt">mybus[3:0]</span>. <div class="- topic/note note important note_important" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-DB59B32F-7A28-4225-A780-A5F1D7720C80" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-DB59B32F-7A28-4225-A780-A5F1D7720C80"><span class="note__title">Important:</span> If the port name violates
+          HDL naming rules, an error message is printed in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Log</span> window,
+          and the new port is not created.</div></li><li class="- topic/li li" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-ED02630A-4869-4B7A-B389-67BB2D7D166F" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-ED02630A-4869-4B7A-B389-67BB2D7D166F">Choose the pin or port type that you want to
+        create as per the following table and then click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>. The chosen port
+        type is created in the SmartDesign canvas.<div class="table-container"><table class="- topic/table table frame-all" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B" data-cols="3"><caption></caption><colgroup><col style="width:24%"/><col style="width:23%"/><col style="width:53%"/></colgroup><thead class="- topic/thead thead">
+              <tr class="- topic/row">
+                <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__1">Pin or Port Type</th>
+                <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__2">Representation</th>
+                <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__3">Purpose</th>
+              </tr>
+            </thead><tbody class="- topic/tbody tbody valign-top">
+              <tr class="- topic/row">
+                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Input</span></td>
+                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__2">
+                  <p class="- topic/p p">
+                    <img class="- topic/image image" height="14" src="GUID-8796D2DF-BC76-4BD7-A246-C4D493574BEB-low.png" width="20" alt="Unconnected input pin"/> -
+                    Unconnected</p>
+                  <p class="- topic/p p"><img class="- topic/image image" height="16" src="GUID-8602619E-A70C-460C-BAB8-9D45596EB795-low.png" width="24" alt="Connected input pin"/> - Connected</p>
+                </td>
+                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__3">Input port for operating with inputs. By default, the input pins and ports
+                  are placed on the left side of the canvas.</td>
+              </tr>
+              <tr class="- topic/row">
+                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Output</span></td>
+                <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__2">
+                  <p class="- topic/p p"><img class="- topic/image image" height="14" src="GUID-8796D2DF-BC76-4BD7-A246-C4D493574BEB-low.png" width="20" alt="Unconnected output pin"/> -
+                    Unconnected</p>
+                  <p class="- topic/p p"><img class="- topic/image image" height="16" src="GUID-8602619E-A70C-460C-BAB8-9D45596EB795-low.png" width="24" alt="Connected output pin"/> - Connected</p>
+                </td>
+                <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__3">
+                  <p class="- topic/p p">Output port for operating with outputs. By default, the output pins and ports
+                    are placed on the right side of the canvas.</p>
+                </td>
+              </tr>
+              <tr class="- topic/row">
+                <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Bi-directional (inout)</span></td>
+                <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__2">
+                  <p class="- topic/p p"><img class="- topic/image image" height="18" src="GUID-F54BFAF3-6AD6-4526-9D5D-7817F3C41B73-low.png" width="32" alt="Unconnected bi-directional pin"/> -
+                    Unconnected</p>
+                  <p class="- topic/p p"><img class="- topic/image image" height="19" src="GUID-F460ABB3-393D-4AD7-BC9E-86023E5DCD63-low.png" width="25" alt="Connected bi-directional pin"/> - Connected</p>
+                </td>
+                <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-C204F10C-AAD2-4EC7-8FA0-3BC23638917B__entry__3">Bi-directional port for operating as an input or an output pin or port. By
+                  default, the bi-directional pins and ports are placed on the right side of the
+                  canvas.</td>
+              </tr>
+            </tbody></table></div></li></ol>
+    <div class="- topic/note note important note_important" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-6F677FA9-C27C-46F8-99BD-D59B1293459F" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-6F677FA9-C27C-46F8-99BD-D59B1293459F"><span class="note__title">Important:</span> You can choose to move the
+      ports to any location of your choice in the SmartDesign canvas.</div>
+    <div class="- topic/note note tip note_tip" id="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-121E5E71-96B9-40D6-8960-4457501984BB" data-ofbid="GUID-5431F79B-8200-4C47-B639-ABB15340864A__GUID-121E5E71-96B9-40D6-8960-4457501984BB"><span class="note__title">Tip:</span> To remove a port from the
+      top-level, right-click the port, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete</span> from the right-click
+      menu or select the port and press the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete</span> key.</div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-C28B8FFC-2DA1-4F76-9D24-4A3D8D46FF2A" xml:lang="en-US" lang="en-US" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215"><h2 class="- topic/title title topictitle2" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-C28B8FFC-2DA1-4F76-9D24-4A3D8D46FF2A" style="display:inline-block">5.4.2 Modifying the Pin Order</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Modifying%20the%20Pin%20Order">(Ask a Question)</a>
+  <div class="- topic/body body"><p class="- topic/p p">If the outputs of one component (instance A) communicate with the inputs of another component
+      (instance B) and otherwise, nets may intersect with each other and the view may be cluttered.
+      To prevent this, the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Pin Order</span> functionality allows you to
+      modify the default pin placement of the instance.</p>
+    <p class="- topic/p p">To modify the default pin placement of the instance:</p>
+    <ol class="- topic/ol ol" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-0148FCDF-632E-44DD-BCEA-9F8AD8DF0DED" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-0148FCDF-632E-44DD-BCEA-9F8AD8DF0DED">
+      <li class="- topic/li li" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-A4AAFBBF-07BB-42BB-8D0C-C8F888C2DEEC" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-A4AAFBBF-07BB-42BB-8D0C-C8F888C2DEEC">
+        <p class="- topic/p p">Right-click the component and select <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Pin Order</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Pin Order</span></span> from the right-click menu. The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Pin Order Help</span>
+          dialog box appears.</p>
+        <figure class="- topic/fig fig fignone" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-DE63F163-699C-4CBE-AA58-9502B8581CB7" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-DE63F163-699C-4CBE-AA58-9502B8581CB7"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 5-11. <span id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-39085604-37BF-481F-802D-703329555CEB" class="fig--title">Modify Pin Order Help Dialog
+            Box</span></span></figcaption>
+          
+          <div class="imagecenter break"><img class="- topic/image image imagecenter break" src="GUID-CDA42A52-33E7-479C-9D9F-37D449F1246E-low.png"/></div>
+        </figure>
+      </li>
+      <li class="- topic/li li" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-38CEB3FE-02D2-4996-9492-CDF6A40ADF0E" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-38CEB3FE-02D2-4996-9492-CDF6A40ADF0E">Follow the instructions in <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Pin Order Help</span> dialog box to move
+        the pin.<div class="- topic/p p">A pin that has been moved away from default locations is identified by a bold
+          arrowhead. An inward-pointing arrowhead indicates an input pin and an outward-pointing
+          arrowhead indicates an output pin. Inout pins do not have an arrowhead when they are moved
+          away from the default locations (right side of instance).<figure class="- topic/fig fig fignone" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-EE1DA78A-7B64-4755-B22F-7B8BF041A6E6" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-EE1DA78A-7B64-4755-B22F-7B8BF041A6E6"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 5-12. <span id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__TITLE_ZK4_D2N_MWB" class="fig--title">Connections Between Two Instances with Regular Pin
+              Order</span></span></figcaption>
+            
+            <img class="- topic/image image" height="144" src="GUID-2F094F03-D269-440C-BDB3-A182A85C5E85-low.jpg" width="405"/>
+          </figure><figure class="- topic/fig fig fignone" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-1B095A4C-25B9-47E1-A52D-ED4DF346E5D5" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-1B095A4C-25B9-47E1-A52D-ED4DF346E5D5"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 5-13. <span id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__TITLE_ZKM_22N_MWB" class="fig--title">Connections Between Two Instances with Modified Pin
+              Order</span></span></figcaption>
+            
+            <img class="- topic/image image" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__IMAGE_E45_XDN_MWB" height="133" src="GUID-A6B005F0-1342-4D31-BE2D-5EC03B6F2B50-low.jpg" width="328"/>
+          </figure></div></li>
+      <li class="- topic/li li" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-4737AA9F-61F8-4D0E-8E51-ACCEF711E68B" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-4737AA9F-61F8-4D0E-8E51-ACCEF711E68B">To reset the instance pin order to its
+        default order, right-click the instance, and select <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Pin Order </span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Reset Pin Order</span></span> from the right-click menu.</li>
+    </ol>
+    <div class="- topic/note note important note_important" id="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-1F0F48AC-DF74-470A-8A99-1D61E778E24F" data-ofbid="GUID-1441245B-F7B8-4333-8671-86DA5075F215__GUID-1F0F48AC-DF74-470A-8A99-1D61E778E24F"><span class="note__title">Important:</span> The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Pin
+        Order</span> operation is unavailable when the instance is expanded in place. The
+      modified pin order might not be preserved when an instance is expanded but retains the set
+      order when folded.</div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-31E90418-0F5B-4BE2-9376-4E0279AE9A28" xml:lang="en-US" lang="en-US" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC"><h2 class="- topic/title title topictitle2" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-31E90418-0F5B-4BE2-9376-4E0279AE9A28" style="display:inline-block">5.4.3 Performing Operations on Pins or Ports</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Performing%20Operations%20on%20Pins%20or%20Ports">(Ask a Question)</a>
+  <div class="- topic/body body"><p class="- topic/p p">When one or more pins or ports are selected, you can use the right-click menu to perform the
+      following operations on the ports and pins.</p><div class="table-container"><table class="- topic/table table frame-all" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A" data-ofbid="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+          <tr class="- topic/row">
+            <th class="- topic/entry entry colsep-1 rowsep-1" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1">Operation</th>
+            <th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">Action</th>
+          </tr>
+        </thead><tbody class="- topic/tbody tbody valign-top">
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Connect</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Connect</span> command connects the selected pins and ports
+              with a net. If there is a net selected, it is used to make the connection. This is the
+              only pin or port action that takes selected nets into account. If the connection is
+              not possible, an error message is printed in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Log</span> window. A
+              connection is established only if all the selected objects can be connected.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Disconnect</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Disconnect</span> command disconnects all the selected
+              non-pad pins or ports from their attached net.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Promote to Top-Level</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Promote to Top-Level</span> command is available to all
+              non-PAD pins. It creates a port and a net connecting the port to the pins or slices.
+              If a port with the same name already exists, a new unique port name is created.<p class="- topic/p p">For
+                example, if a BIF (<code class="+ topic/ph pr-d/codeph ph codeph">myBIF</code>) pin contains a pin
+                  (<code class="+ topic/ph pr-d/codeph ph codeph">myPort</code>), then the top-level <code class="+ topic/ph pr-d/codeph ph codeph">myPort</code> is named
+                  <code class="+ topic/ph pr-d/codeph ph codeph">myBIF_myPort</code> after the <code class="+ topic/ph pr-d/codeph ph codeph">myBIF</code> pin is promoted to
+                the top level.</p></td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Go to Driver</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Go to Driver</span> command zooms onto the driver of the
+              selected pin or port. The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Go to Driver</span> command is not available
+              for output pins and input ports. The driver cannot be an inout.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Magnify Pin</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">Double-click a pin/port or right-click and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Magnify
+                Pin</span> to zoom into the pin/port connection. The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Magnify
+                Pin</span> window shows the specified pin/port connections.<p class="- topic/p p">If the pin has a
+                fanout of more than one, the number beside the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">+</span> sign on the
+                right shows the total fanout count.</p><p class="- topic/p p">Click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">+</span> sign to
+                see all the fanouts of the pin. You can double-click the net, pin, port, or instance
+                inside the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Magnify</span> window to zoom and select the
+              item.</p></td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify/Rename</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify</span> or <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Rename</span> command opens
+              a <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Modify Port</span> dialog box. You can change the port name and the
+              range of the port.<div class="- topic/note note important note_important" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-59FA9748-923F-41C6-8C59-BED9DBC5CC00" data-ofbid="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-59FA9748-923F-41C6-8C59-BED9DBC5CC00"><span class="note__title">Important:</span> 
+                <ul class="- topic/ul ul">
+                  <li class="- topic/li li" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D2517870-2DE2-4EC4-8D41-80546A1EFF22" data-ofbid="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D2517870-2DE2-4EC4-8D41-80546A1EFF22">All slices of the bus are
+                    deleted if the range is changed.</li>
+                  <li class="- topic/li li" id="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-CF89718A-CCD7-4781-90B6-5B49C5C59E0A" data-ofbid="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-CF89718A-CCD7-4781-90B6-5B49C5C59E0A">When renaming BIF port, all the
+                    member ports that have BIF name prefix are renamed.</li>
+                </ul>
+              </div></td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete</span> command deletes all the selected items that can
+              be deleted: slices, user created groups, group members, and ports.<p class="- topic/p p">The
+                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Delete</span> command deletes all the selected items, even if the
+                selected items are of different types. When a group member is deleted, the member is
+                deleted from the group only. The actual pin is not deleted.</p></td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Mark Unused</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">This option is available to the output pins (scalar, bus, and BIF) of an
+              instance. The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Mark Unused</span> command allows you to show the output
+              pins that are not being used in the design and must not be flagged as a warning when
+              generating the design or running the DRC operation.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Invert</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Invert</span> command inverts the input or output scalar pin
+              and port. A bubble is added to indicate inversion.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tie High</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tie High</span> command connects the pin (scalar and bus) to
+              a logical 1. For a bus pin, this action deletes all slices. For a group, this action
+              is applied to all non-output member pins in the group.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tie Low</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tie Low</span> command connects the pin (scalar and bus) to a
+              logical 0. For a bus pin, this action deletes all slices. For a group, this action is
+              applied to all non-output member pins in the group.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tie Constant</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Tie Constant</span> command is available only to bus pins and
+              slices (except single-bit slice). It opens the Tie to Constant dialog box for a
+              constant value in HEX to be entered for the bus pins and slices.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clear Attributes</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Clear Attributes</span> command clears the pin attributes
+              (Tie to High, Low, Constant, Inversion, or Marked Unused).</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Highlight</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Highlight </span>option opens a menu with multiple highlight
+              color selections. Select a color to highlight the selected items. If any items are
+              already highlighted, then choosing a different color highlight changes from the
+              previous highlight color. This option is available when a single or multiple
+              instances, nets, and ports are selected.<p class="- topic/p p">If you highlight an instance, it
+                automatically highlights the non-highlighted pins of the instance. Click the
+                  <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Unhighlight all </span> icon (<img class="- topic/image image" height="25" src="GUID-8956C359-9DB4-4ACE-B265-40CC6E756689-low.jpg" width="29" alt="???"/>) in the
+                toolbar to remove the highlight color of all highlighted design objects, including
+                highlighted nets. The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Highlight</span> option is also available in
+                the right-click menu of the low-level instances in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Expanded Inplace
+                </span> view.</p></td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Bus and Slice</span> operations</td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">When a bus, slice pins, or ports are selected, the right-click menu in addition
+              to regular pin actions have additional commands. For more information, see <a class="- topic/xref xref" href="GUID-82D3061E-D3AC-4895-821F-64F4E22A7E41.html#GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B"><span><span>5.4.4 </span><span>Working with Bus and Slice</span></span></a>.</td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Pin to New Group</span> and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Pin to
+                Group</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">This menu item is available to instance pins. When a group is selected,
+              right-click a pin and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Pin to Group</span> to add the pin to
+              the selected group. If no group is selected, the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Pin to New
+                Group</span> command is available and creates a new group with the default
+              group name, such as <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Group</span>, <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Group_1</span>,
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Group_2</span>, <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Group_3</span>, and all the selected
+              pins are added to the newly created group.<p class="- topic/p p">A pin group is expanded to display the
+                member pins or is collapsed to hide the member pins. If a group is collapsed, pins
+                that are not connected to nets or have attributes (tied low or high, tied to
+                constant, and marked unused) are hidden.</p></td>
+          </tr>
+          <tr class="- topic/row">
+            <td class="- topic/entry entry colsep-1 rowsep-0" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Rename (Group)</span></td>
+            <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC__GUID-D7698C38-0C89-46D3-8B92-6D9471E6415A__entry__2">Group pins, unlike other instance pins, can also be renamed. Right-click
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Group</span> and choose <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Rename</span>. The
+                <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Rename Group</span> dialog box appears. You can choose to change the
+              name of the group in this dialog box and click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span> to apply the
+                changes.<p class="- topic/p p">If an invalid name is entered or a pin with that name already exists,
+                then an error message is printed in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Log</span>
+              window.</p></td>
+          </tr>
+        </tbody></table></div></div></article><article class="- topic/topic topic nested1" aria-labelledby="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-AD721665-3134-431C-B2EB-B5F4A4E30044" xml:lang="en-US" lang="en-US" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B">
+<h2 class="- topic/title title topictitle2" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-AD721665-3134-431C-B2EB-B5F4A4E30044" style="display:inline-block">5.4.4 Working with Bus and Slice</h2><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=Working%20with%20Bus%20and%20Slice">(Ask a Question)</a>
+    
+<div class="- topic/body body">
+        <p class="- topic/p p">You can perform the following operations on a Bus or Slice using the right-click menu
+            options: </p>
+        <ul class="- topic/ul ul" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__UL_T3P_VQM_MWB" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__UL_T3P_VQM_MWB">
+            <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-F75F64CF-7650-4E0A-BE66-96E4BBB633AE" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-F75F64CF-7650-4E0A-BE66-96E4BBB633AE"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Flip Bit
+                Order</span>: This command is available only for slices. This option allows you
+                to flip the slice range. For example, <code class="+ topic/ph pr-d/codeph ph codeph">mySlice[10:0]</code> is flipped to
+                    <code class="+ topic/ph pr-d/codeph ph codeph">mySlice[0:10]</code> of the slice. All connection or tieoff
+                information and presentation information is retained.</li>
+            <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-81700948-2367-49D8-A2DC-B8C79F04428E" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-81700948-2367-49D8-A2DC-B8C79F04428E"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create Slice</span>:
+                This command opens a menu of slice options that can be created from the bus pin or
+                ports. The custom slice(s) option can be used to create any slice or bit combination
+                of your choice. For example, using a 32-bit bus with the Custom Slices option allows
+                you to create any slice or bit combinations (For example, a slice of 10 bits and
+                another slice of 22 bits). To make it convenient to create slices, common slice
+                ranges for the selected bus are listed in the list. For example,<ul class="- topic/ul ul" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__UL_U3P_VQM_MWB" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__UL_U3P_VQM_MWB">
+                    <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-418396D4-6CD6-49D0-A5D4-B99714E1AD02" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-418396D4-6CD6-49D0-A5D4-B99714E1AD02">32 slices of width 1</li>
+                    <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-1EB0F196-B018-4626-B22D-318C903273BB" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-1EB0F196-B018-4626-B22D-318C903273BB">16 slices of width 2</li>
+                    <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-D921B1DD-8712-4101-A597-B25864469C59" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-D921B1DD-8712-4101-A597-B25864469C59">8 slices of width 4</li>
+                    <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-46703F87-70C1-40D5-9FCD-90D9BC5BB1C4" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-46703F87-70C1-40D5-9FCD-90D9BC5BB1C4">4 slices of width 8</li>
+                    <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-E61B8318-C134-4103-BFF7-A4A1898C75C6" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-E61B8318-C134-4103-BFF7-A4A1898C75C6">2 slices of width 16</li>
+                </ul><figure class="- topic/fig fig fignone" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__FIG_Z1X_BVM_MWB" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__FIG_Z1X_BVM_MWB"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 5-14. <span id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-3FD0E81F-EBC1-402A-B3EF-C788850BDAF5" class="fig--title">Slice Creation for a
+                        32-Bit Bus</span></span></figcaption>
+                    
+                    <div class="imagecenter break"><img class="- topic/image image imagecenter break" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__IMAGE_L2J_DVM_MWB" src="GUID-A4AF6C19-B8FB-4E7F-B20B-6F6F9EDDB641-low.png"/></div>
+                </figure><p class="- topic/p p">The directions of the slices (input or output) are indicated by an
+                    arrowhead and match the bus pin or port direction. On a bus port, the slices are
+                    placed in a column behind the bus port.</p><div class="- topic/note note important note_important" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-677563C6-BB3B-4652-B3FE-0B4A9D3FD954" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-677563C6-BB3B-4652-B3FE-0B4A9D3FD954"><span class="note__title">Important:</span>  If slices
+                    existed before, the predefined slices are created and the existing slices are
+                    deleted before creating the new ones.</div></li>
+            <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-5A3D92F2-9D62-4973-8FB4-7C7A0AB7A89A" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-5A3D92F2-9D62-4973-8FB4-7C7A0AB7A89A"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom Slices:</span>
+                This command opens the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Add Slice(s)</span> dialog box for entering a
+                list of slices.<figure class="- topic/fig fig fignone" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-75F1CF9F-D6E8-4963-8DA6-91349C1B89B3" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-75F1CF9F-D6E8-4963-8DA6-91349C1B89B3"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 5-15. <span id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-64BE7DBE-9257-43DF-B993-4DAEF5416D62" class="fig--title">Add Slices Dialog Box</span></span></figcaption>
+                    
+                    <div class="imagecenter break"><img class="- topic/image image imagecenter break" src="GUID-53B702FA-AFCC-44DA-916B-8A3BE63D618B-low.png"/></div>
+                </figure> If these slices are all valid, they are added to the bus. If the slices are
+                not valid (For example, out-of-range slices, overlapping slices for input pins
+                (output ports), or existing slices), the error is printed in the
+                    <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Log</span> window. The dialog box supports any separator
+                character except colon because the colon is used to specify a range. No characters
+                other than the colon are allowed to be adjacent to the two-range indices.<div class="- topic/note note tip note_tip" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__NOTE_P5J_3SM_MWB" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__NOTE_P5J_3SM_MWB"><span class="note__title">Tip:</span> Creating a <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Custom Slice</span>
+                    does not delete any pre-existing slices.</div></li>
+            <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-78A2DC7E-69F2-4325-9E2C-04FA1C133561" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-78A2DC7E-69F2-4325-9E2C-04FA1C133561"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Slice</span>:
+                This command opens the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Slices</span> dialog box. You can choose
+                to delete, modify, and create a new slice, if required.<figure class="- topic/fig fig fignone" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-953E561A-2946-4E7D-8C6A-0D473E1CAE57" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-953E561A-2946-4E7D-8C6A-0D473E1CAE57"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 5-16. <span id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-95E73E8C-41AB-4A71-A4A7-8F24C4CBAE2A" class="fig--title">Edit Slices Dialog Box</span></span></figcaption>
+                    
+                    <div class="imagecenter break"><img class="- topic/image image imagecenter break" src="GUID-0B9A6362-5A23-4354-B153-BBB0A972ECB1-low.png"/></div>
+                </figure><div class="- topic/p p">Use the dialog box to change the range of the bits, add a slice, or delete
+                    a slice. If you specify invalid range values, an error icon appears in the
+                        <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Edit Slices</span> dialog box. Hover your cursor over the
+                    error icon to display the error message.<figure class="- topic/fig fig fignone" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-AC86B32F-AF0E-4AAB-A99F-580DD0E0455A" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-AC86B32F-AF0E-4AAB-A99F-580DD0E0455A"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 5-17. <span id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-F8B5FF5D-A6AD-40F0-A47F-D7F59CBBA1C3" class="fig--title">Edit Slices - Tooltip and Error Message</span></span></figcaption>
+                        
+                        <div class="imagecenter break"><img class="- topic/image image imagecenter break" src="GUID-B2BA1EC3-FB85-4E99-875A-B6C03C845B5A-low.png"/></div>
+                    </figure></div></li>
+            <li class="- topic/li li" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-51F4EF03-A9C6-4DBF-AE6D-E17894C47193" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-51F4EF03-A9C6-4DBF-AE6D-E17894C47193"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Pins to
+                    Expose:</span> This command opens the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Pins to Expose</span>
+                dialog box displaying all the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Bus Interface</span> pins that can be
+                exposed or hidden. <figure class="- topic/fig fig fignone" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-EDE2F4B2-9A72-440E-AA52-72482473CE3A" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-EDE2F4B2-9A72-440E-AA52-72482473CE3A"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 5-18. <span id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-321EA693-9074-4E54-B42D-66C417550E7E" class="fig--title">Pins to Expose Dialog
+                        Box</span></span></figcaption>
+                    
+                    <div class="imagecenter break"><img class="- topic/image image imagecenter break" src="GUID-75AC7709-D407-4D64-B5F3-E4CE14A5FABD-low.png"/></div>
+                </figure><p class="- topic/p p">In the dialog box, you can check the pins in the BIF that you want to
+                    expose and deselect the ones that you want to be hidden. Hidden BIF pins are not
+                    visible in the SmartDesign canvas. </p><div class="- topic/note note important note_important" id="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-CDED09F2-EF8B-4DB0-BBA7-27B05E1A8CA6" data-ofbid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B__GUID-CDED09F2-EF8B-4DB0-BBA7-27B05E1A8CA6"><span class="note__title">Important:</span> Not all pins can
+                    be exposed. If a BIF pin is already connected, none of the input pins can be
+                    exposed. If a BIF pin is not connected, every item in the menu can be
+                    exposed.</div></li>
+        </ul>
+    </div>
+</article></article></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="topic-item"><a href="#GUID-5431F79B-8200-4C47-B639-ABB15340864A" data-tocid="GUID-5431F79B-8200-4C47-B639-ABB15340864A">5.4.1 Creating Pins and Ports for your Design</a></li><li class="topic-item"><a href="#GUID-1441245B-F7B8-4333-8671-86DA5075F215" data-tocid="GUID-1441245B-F7B8-4333-8671-86DA5075F215">5.4.2 Modifying the Pin Order</a></li><li class="topic-item"><a href="#GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC" data-tocid="GUID-67B80A0F-AD8D-4143-881A-EB893A9974CC">5.4.3 Performing Operations on Pins or Ports</a></li><li class="topic-item"><a href="#GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B" data-tocid="GUID-DC530590-BC55-43C4-AE1B-FCDEE308902B">5.4.4 Working with Bus and Slice</a></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

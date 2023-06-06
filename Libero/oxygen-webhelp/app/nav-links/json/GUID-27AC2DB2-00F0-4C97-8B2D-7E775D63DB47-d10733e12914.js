@@ -1,0 +1,1 @@
+define({"topics":[{"title":"<ph>13.3.3.2.2.3.1<\/ph>\nSmartBERT IP","href":"GUID-AFCD4A75-089E-4BD6-AFD4-FC526F201B3D.html#GUID-17B5C70A-1DFD-499F-BFDB-7935A2405638","attributes":{"data-id":"GUID-17B5C70A-1DFD-499F-BFDB-7935A2405638"},"menu":{"hasChildren":false},"tocID":"GUID-17B5C70A-1DFD-499F-BFDB-7935A2405638-d10733e12922","topics":[]}]});

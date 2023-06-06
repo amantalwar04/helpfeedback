@@ -1,0 +1,352 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="On-die termination (ODT) is the technology where the termination resistor for impedance matching in transmission lines is located inside a semiconductor chip instead of on a printed circuit board. ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>7.2.17 ODT Static</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD-d10733e5900"/><meta name="wh-source-relpath" content="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD.xml"/><meta name="wh-out-relpath" content="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="./oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic-page.css?buildId=2022062014"/>
+    
+    
+    <script src="./oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="./oxygen-webhelp/app/topic-page.js" src="./oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/microchip.css?buildId=2022062014"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/notes.css?buildId=2022062014"/>
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+</head>
+
+    <body id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Design Suite Help Documentation v2023.1"/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Design Suite Help Documentation v2023.1</a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref"><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div></li><li><div class="topicref" data-id="GUID-BE73F42C-362C-4EB2-890D-D55CE5F53A88"><div class="title"><a href="GUID-BE73F42C-362C-4EB2-890D-D55CE5F53A88.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2</ph>
+Port View</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD"><div class="title"><a href="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.17</ph>
+ODT Static</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark">v2023.1</h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e11" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-46C62B2B-C0F5-4745-A239-30359ACE975F.html#GUID-46C62B2B-C0F5-4745-A239-30359ACE975F" id="tocId-d10733e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+What's New in Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information about what is new in Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e32" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e32-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F4DA9B8C-A57C-4789-9E76-B9414C7CF2BD.html" id="tocId-d10733e32-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Getting Started with Libero SoC Design Suite</a><div class="wh-tooltip"><p class="shortdesc">Information to get you started with Libero SoC Design Suite</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e980" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e980-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D3BE74A4-8846-442A-9F67-834757001FE2.html#GUID-D3BE74A4-8846-442A-9F67-834757001FE2" id="tocId-d10733e980-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Design Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4478" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4478-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F4D2E9B-B8E9-4C1D-A95F-38595DAAC69F.html" id="tocId-d10733e4478-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Block Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Block Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e4796" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e4796-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D6C8FB9D-ADD4-4049-80BA-384419E2D7BE.html" id="tocId-d10733e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+SmartDesign</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartDesign</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e5234" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e5234-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D94007C1-0B6E-4334-ADEB-CFEBF4720193.html" id="tocId-d10733e5234-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Netlist Viewer</a><div class="wh-tooltip"><p class="shortdesc">Information about Netlist Viewer </p></div></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d10733e5743" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d10733e5743-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="tocId-d10733e5743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+I/O Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about I/O Editor </p></div></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05-d10733e5747" class="topicref introduction" data-id="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05.html" id="GUID-E78D5FFC-5EE9-4357-B323-0C2542D77E05-d10733e5747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+Introduction</a></div></div></li><li role="treeitem"><div data-tocid="GUID-09F515F2-3655-4492-A60A-9CFA9E4AE65B-d10733e5755" class="topicref" data-id="GUID-09F515F2-3655-4492-A60A-9CFA9E4AE65B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-09F515F2-3655-4492-A60A-9CFA9E4AE65B.html" id="GUID-09F515F2-3655-4492-A60A-9CFA9E4AE65B-d10733e5755-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.1</ph>
+Invoking the I/O Editor</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-BE73F42C-362C-4EB2-890D-D55CE5F53A88-d10733e5763" class="topicref" data-id="GUID-BE73F42C-362C-4EB2-890D-D55CE5F53A88" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-BE73F42C-362C-4EB2-890D-D55CE5F53A88-d10733e5763-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-BE73F42C-362C-4EB2-890D-D55CE5F53A88.html" id="GUID-BE73F42C-362C-4EB2-890D-D55CE5F53A88-d10733e5763-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2</ph>
+Port View</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-D2E50431-3A23-4D52-B540-0F1E7F9CA939-d10733e5771" class="topicref" data-id="GUID-D2E50431-3A23-4D52-B540-0F1E7F9CA939" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D2E50431-3A23-4D52-B540-0F1E7F9CA939.html" id="GUID-D2E50431-3A23-4D52-B540-0F1E7F9CA939-d10733e5771-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.1</ph>
+Port Name</a></div></div></li><li role="treeitem"><div data-tocid="GUID-58DD1DCC-6A7A-46D3-B7EE-626B083B3432-d10733e5779" class="topicref" data-id="GUID-58DD1DCC-6A7A-46D3-B7EE-626B083B3432" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-58DD1DCC-6A7A-46D3-B7EE-626B083B3432.html" id="GUID-58DD1DCC-6A7A-46D3-B7EE-626B083B3432-d10733e5779-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.2</ph>
+Direction</a></div></div></li><li role="treeitem"><div data-tocid="GUID-58E913BB-28E8-45C0-8069-0E024A65C687-d10733e5787" class="topicref" data-id="GUID-58E913BB-28E8-45C0-8069-0E024A65C687" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-58E913BB-28E8-45C0-8069-0E024A65C687.html" id="GUID-58E913BB-28E8-45C0-8069-0E024A65C687-d10733e5787-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.3</ph>
+I/O Standard</a></div></div></li><li role="treeitem"><div data-tocid="GUID-263EA4B6-B1C0-4A20-9684-B36EAD9FA5CE-d10733e5795" class="topicref" data-id="GUID-263EA4B6-B1C0-4A20-9684-B36EAD9FA5CE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-263EA4B6-B1C0-4A20-9684-B36EAD9FA5CE.html" id="GUID-263EA4B6-B1C0-4A20-9684-B36EAD9FA5CE-d10733e5795-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.4</ph>
+Pin Number</a></div></div></li><li role="treeitem"><div data-tocid="GUID-BC869B5C-E3C7-4F1B-B8B8-833A605863D7-d10733e5803" class="topicref" data-id="GUID-BC869B5C-E3C7-4F1B-B8B8-833A605863D7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BC869B5C-E3C7-4F1B-B8B8-833A605863D7.html" id="GUID-BC869B5C-E3C7-4F1B-B8B8-833A605863D7-d10733e5803-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.5</ph>
+Locked</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AC7E9501-9FE9-4745-A3E4-0DCEADE66C66-d10733e5811" class="topicref" data-id="GUID-AC7E9501-9FE9-4745-A3E4-0DCEADE66C66" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AC7E9501-9FE9-4745-A3E4-0DCEADE66C66.html" id="GUID-AC7E9501-9FE9-4745-A3E4-0DCEADE66C66-d10733e5811-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.6</ph>
+Macro Cell</a></div></div></li><li role="treeitem"><div data-tocid="GUID-457F0C99-3599-41F1-A4F2-B9E1301C8CF9-d10733e5819" class="topicref" data-id="GUID-457F0C99-3599-41F1-A4F2-B9E1301C8CF9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-457F0C99-3599-41F1-A4F2-B9E1301C8CF9.html" id="GUID-457F0C99-3599-41F1-A4F2-B9E1301C8CF9-d10733e5819-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.7</ph>
+Bank Name</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A2E7B305-578E-4B11-AD5E-6407F72C7BB8-d10733e5827" class="topicref" data-id="GUID-A2E7B305-578E-4B11-AD5E-6407F72C7BB8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A2E7B305-578E-4B11-AD5E-6407F72C7BB8.html" id="GUID-A2E7B305-578E-4B11-AD5E-6407F72C7BB8-d10733e5827-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.8</ph>
+User I/O Lock Down</a></div></div></li><li role="treeitem"><div data-tocid="GUID-80A40382-38CF-4473-A5A3-7ECE17E3A975-d10733e5835" class="topicref" data-id="GUID-80A40382-38CF-4473-A5A3-7ECE17E3A975" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-80A40382-38CF-4473-A5A3-7ECE17E3A975.html" id="GUID-80A40382-38CF-4473-A5A3-7ECE17E3A975-d10733e5835-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.9</ph>
+I/O State in Flash*Freeze Mode</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2C2B08DA-B2E1-4409-B07D-D253D201E260-d10733e5843" class="topicref" data-id="GUID-2C2B08DA-B2E1-4409-B07D-D253D201E260" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2C2B08DA-B2E1-4409-B07D-D253D201E260.html" id="GUID-2C2B08DA-B2E1-4409-B07D-D253D201E260-d10733e5843-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.10</ph>
+Clamp Diode</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A4598C13-4708-471D-8D7A-9DD7ACC71B0F-d10733e5852" class="topicref" data-id="GUID-A4598C13-4708-471D-8D7A-9DD7ACC71B0F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A4598C13-4708-471D-8D7A-9DD7ACC71B0F.html" id="GUID-A4598C13-4708-471D-8D7A-9DD7ACC71B0F-d10733e5852-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.11</ph>
+Resistor Pull</a></div></div></li><li role="treeitem"><div data-tocid="GUID-AC8D1E5D-CA30-4519-BB19-0B966FE17536-d10733e5860" class="topicref" data-id="GUID-AC8D1E5D-CA30-4519-BB19-0B966FE17536" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AC8D1E5D-CA30-4519-BB19-0B966FE17536.html" id="GUID-AC8D1E5D-CA30-4519-BB19-0B966FE17536-d10733e5860-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.12</ph>
+I/O Available in Flash*Freeze Mode</a></div></div></li><li role="treeitem"><div data-tocid="GUID-58E30566-9D46-4FF0-B3E8-67B3E76B61AD-d10733e5868" class="topicref" data-id="GUID-58E30566-9D46-4FF0-B3E8-67B3E76B61AD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-58E30566-9D46-4FF0-B3E8-67B3E76B61AD.html" id="GUID-58E30566-9D46-4FF0-B3E8-67B3E76B61AD-d10733e5868-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.13</ph>
+Use I/O Calibration from the Lane</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F215C692-D2D1-4486-8A0C-912B223F39DD-d10733e5876" class="topicref" data-id="GUID-F215C692-D2D1-4486-8A0C-912B223F39DD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F215C692-D2D1-4486-8A0C-912B223F39DD.html" id="GUID-F215C692-D2D1-4486-8A0C-912B223F39DD-d10733e5876-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.14</ph>
+Schmitt Trigger</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E818C316-3EAA-4C88-87FC-286E4CE4521B-d10733e5884" class="topicref" data-id="GUID-E818C316-3EAA-4C88-87FC-286E4CE4521B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E818C316-3EAA-4C88-87FC-286E4CE4521B.html" id="GUID-E818C316-3EAA-4C88-87FC-286E4CE4521B-d10733e5884-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.15</ph>
+Vcm Input Range</a></div></div></li><li role="treeitem"><div data-tocid="GUID-CFB42E4A-CBE8-4970-926D-5D77B1317F2F-d10733e5892" class="topicref" data-id="GUID-CFB42E4A-CBE8-4970-926D-5D77B1317F2F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CFB42E4A-CBE8-4970-926D-5D77B1317F2F.html" id="GUID-CFB42E4A-CBE8-4970-926D-5D77B1317F2F-d10733e5892-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.16</ph>
+On-Die Termination</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD-d10733e5900" class="topicref" data-id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD.html" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD-d10733e5900-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.17</ph>
+ODT Static</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F9850BF9-1110-46D7-8DD8-71456276D087-d10733e5908" class="topicref" data-id="GUID-F9850BF9-1110-46D7-8DD8-71456276D087" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F9850BF9-1110-46D7-8DD8-71456276D087.html" id="GUID-F9850BF9-1110-46D7-8DD8-71456276D087-d10733e5908-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.18</ph>
+ODT Dynamic</a></div></div></li><li role="treeitem"><div data-tocid="GUID-13349EAD-4BA8-4CD5-97D2-0C9B9BBA46AC-d10733e5916" class="topicref" data-id="GUID-13349EAD-4BA8-4CD5-97D2-0C9B9BBA46AC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-13349EAD-4BA8-4CD5-97D2-0C9B9BBA46AC.html" id="GUID-13349EAD-4BA8-4CD5-97D2-0C9B9BBA46AC-d10733e5916-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.19</ph>
+ODT Value</a></div></div></li><li role="treeitem"><div data-tocid="GUID-12442457-E9A5-447E-89D7-1613DC9F5017-d10733e5924" class="topicref" data-id="GUID-12442457-E9A5-447E-89D7-1613DC9F5017" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-12442457-E9A5-447E-89D7-1613DC9F5017.html" id="GUID-12442457-E9A5-447E-89D7-1613DC9F5017-d10733e5924-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.20</ph>
+ODT Imp (Ohm)</a></div></div></li><li role="treeitem"><div data-tocid="GUID-E87586AB-E397-4E12-8D2B-D1B592BED3B0-d10733e5932" class="topicref" data-id="GUID-E87586AB-E397-4E12-8D2B-D1B592BED3B0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E87586AB-E397-4E12-8D2B-D1B592BED3B0.html" id="GUID-E87586AB-E397-4E12-8D2B-D1B592BED3B0-d10733e5932-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.21</ph>
+Low Power Exit</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EF55599B-A16C-4220-A24C-53B4E9EDD3F6-d10733e5941" class="topicref" data-id="GUID-EF55599B-A16C-4220-A24C-53B4E9EDD3F6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EF55599B-A16C-4220-A24C-53B4E9EDD3F6.html" id="GUID-EF55599B-A16C-4220-A24C-53B4E9EDD3F6-d10733e5941-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.22</ph>
+Input Delay</a></div></div></li><li role="treeitem"><div data-tocid="GUID-832368DE-A6EF-475B-B1B0-EC5B735FEE8D-d10733e5949" class="topicref" data-id="GUID-832368DE-A6EF-475B-B1B0-EC5B735FEE8D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-832368DE-A6EF-475B-B1B0-EC5B735FEE8D.html" id="GUID-832368DE-A6EF-475B-B1B0-EC5B735FEE8D-d10733e5949-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.23</ph>
+Slew</a></div></div></li><li role="treeitem"><div data-tocid="GUID-730F3AED-4B9F-41D7-9F91-512071B17579-d10733e5957" class="topicref" data-id="GUID-730F3AED-4B9F-41D7-9F91-512071B17579" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-730F3AED-4B9F-41D7-9F91-512071B17579.html" id="GUID-730F3AED-4B9F-41D7-9F91-512071B17579-d10733e5957-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.24</ph>
+Pre-Emphasis</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9907257D-1B09-44C8-B919-4BC79CE1F6DF-d10733e5965" class="topicref" data-id="GUID-9907257D-1B09-44C8-B919-4BC79CE1F6DF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9907257D-1B09-44C8-B919-4BC79CE1F6DF.html" id="GUID-9907257D-1B09-44C8-B919-4BC79CE1F6DF-d10733e5965-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.25</ph>
+Output Drive</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F43851B4-CE82-41B6-B3A7-D6106A626D1C-d10733e5973" class="topicref" data-id="GUID-F43851B4-CE82-41B6-B3A7-D6106A626D1C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F43851B4-CE82-41B6-B3A7-D6106A626D1C.html" id="GUID-F43851B4-CE82-41B6-B3A7-D6106A626D1C-d10733e5973-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.26</ph>
+Impedance</a></div></div></li><li role="treeitem"><div data-tocid="GUID-01893D19-78A8-4177-8988-93225D73FB3F-d10733e5981" class="topicref" data-id="GUID-01893D19-78A8-4177-8988-93225D73FB3F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-01893D19-78A8-4177-8988-93225D73FB3F.html" id="GUID-01893D19-78A8-4177-8988-93225D73FB3F-d10733e5981-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.27</ph>
+Output Load</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FCDCF986-28CB-4AE8-AAB4-DA9E24E4C89F-d10733e5989" class="topicref" data-id="GUID-FCDCF986-28CB-4AE8-AAB4-DA9E24E4C89F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCDCF986-28CB-4AE8-AAB4-DA9E24E4C89F.html" id="GUID-FCDCF986-28CB-4AE8-AAB4-DA9E24E4C89F-d10733e5989-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.28</ph>
+Source Termination</a></div></div></li><li role="treeitem"><div data-tocid="GUID-654E74E8-2939-444D-9FD1-16BFD8DE5690-d10733e5997" class="topicref" data-id="GUID-654E74E8-2939-444D-9FD1-16BFD8DE5690" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-654E74E8-2939-444D-9FD1-16BFD8DE5690.html" id="GUID-654E74E8-2939-444D-9FD1-16BFD8DE5690-d10733e5997-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.2.29</ph>
+Output Delay</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-8023B5BE-3C02-45BA-843F-F1212520AA65-d10733e6005" class="topicref" data-id="GUID-8023B5BE-3C02-45BA-843F-F1212520AA65" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-8023B5BE-3C02-45BA-843F-F1212520AA65-d10733e6005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-8023B5BE-3C02-45BA-843F-F1212520AA65.html" id="GUID-8023B5BE-3C02-45BA-843F-F1212520AA65-d10733e6005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.3</ph>
+Pin View</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F0E8C3D1-0D4E-4287-8801-DFE2C0A4C29F-d10733e6271" class="topicref" data-id="GUID-F0E8C3D1-0D4E-4287-8801-DFE2C0A4C29F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F0E8C3D1-0D4E-4287-8801-DFE2C0A4C29F.html" id="GUID-F0E8C3D1-0D4E-4287-8801-DFE2C0A4C29F-d10733e6271-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.4</ph>
+Package View</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-535B44C3-032E-4658-9968-5753B7474A2B-d10733e6279" class="topicref" data-id="GUID-535B44C3-032E-4658-9968-5753B7474A2B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-535B44C3-032E-4658-9968-5753B7474A2B-d10733e6279-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-535B44C3-032E-4658-9968-5753B7474A2B.html" id="GUID-535B44C3-032E-4658-9968-5753B7474A2B-d10733e6279-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.5</ph>
+Interface—Specific I/Os and Views</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-04C2F3E6-C9E6-4210-AF6D-16C492A0BAAA-d10733e6295" class="topicref" data-id="GUID-04C2F3E6-C9E6-4210-AF6D-16C492A0BAAA" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-04C2F3E6-C9E6-4210-AF6D-16C492A0BAAA-d10733e6295-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-04C2F3E6-C9E6-4210-AF6D-16C492A0BAAA.html" id="GUID-04C2F3E6-C9E6-4210-AF6D-16C492A0BAAA-d10733e6295-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.6</ph>
+Memory Interface View</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-7C12202D-E802-4F24-9D43-D82DA41A819B-d10733e6351" class="topicref" data-id="GUID-7C12202D-E802-4F24-9D43-D82DA41A819B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-7C12202D-E802-4F24-9D43-D82DA41A819B-d10733e6351-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7C12202D-E802-4F24-9D43-D82DA41A819B.html" id="GUID-7C12202D-E802-4F24-9D43-D82DA41A819B-d10733e6351-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.7</ph>
+XCVR View</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-907AFDD7-7269-496E-B1FB-AEEFA9123941-d10733e6432" class="topicref" data-id="GUID-907AFDD7-7269-496E-B1FB-AEEFA9123941" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-907AFDD7-7269-496E-B1FB-AEEFA9123941-d10733e6432-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-907AFDD7-7269-496E-B1FB-AEEFA9123941.html" id="GUID-907AFDD7-7269-496E-B1FB-AEEFA9123941-d10733e6432-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.8</ph>
+IOD View</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E250C72B-7D05-4B72-B214-1ADD12D1E4CD-d10733e6456" class="topicref" data-id="GUID-E250C72B-7D05-4B72-B214-1ADD12D1E4CD" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E250C72B-7D05-4B72-B214-1ADD12D1E4CD-d10733e6456-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E250C72B-7D05-4B72-B214-1ADD12D1E4CD.html" id="GUID-E250C72B-7D05-4B72-B214-1ADD12D1E4CD-d10733e6456-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.9</ph>
+Floorplanner View</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-A5B625D0-E38D-4817-90D7-344E263F7AA6-d10733e6576" class="topicref" data-id="GUID-A5B625D0-E38D-4817-90D7-344E263F7AA6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-A5B625D0-E38D-4817-90D7-344E263F7AA6-d10733e6576-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A5B625D0-E38D-4817-90D7-344E263F7AA6.html" id="GUID-A5B625D0-E38D-4817-90D7-344E263F7AA6-d10733e6576-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.10</ph>
+Other I/O Editor Windows</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EC1C8CB5-71A6-46C3-834B-BE548EF4E8F7-d10733e6624" class="topicref" data-id="GUID-EC1C8CB5-71A6-46C3-834B-BE548EF4E8F7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC1C8CB5-71A6-46C3-834B-BE548EF4E8F7.html" id="GUID-EC1C8CB5-71A6-46C3-834B-BE548EF4E8F7-d10733e6624-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.11</ph>
+Export Physical Constraints (PDC)</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-382B237D-CB25-4415-8DD3-3D9A73ABA9E4-d10733e6632" class="topicref" data-id="GUID-382B237D-CB25-4415-8DD3-3D9A73ABA9E4" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-382B237D-CB25-4415-8DD3-3D9A73ABA9E4-d10733e6632-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-382B237D-CB25-4415-8DD3-3D9A73ABA9E4.html" id="GUID-382B237D-CB25-4415-8DD3-3D9A73ABA9E4-d10733e6632-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7.12</ph>
+Appendix</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e6741" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e6741-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE.html#GUID-6A5B14AF-39E9-4253-BF83-0C1A6025FBCE" id="tocId-d10733e6741-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+PDC Commands</a><div class="wh-tooltip"><p class="shortdesc">Information about PDC commands for all families</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e7290" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e7290-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F.html#GUID-CB6776E3-CA38-4648-8851-E8AA02A71A5F" id="tocId-d10733e7290-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Chip Planner</a><div class="wh-tooltip"><p class="shortdesc">Information about Chip Planner </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8143-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015.html#GUID-0762AE7A-5D6B-420E-9D05-1D0EE8C92015" id="tocId-d10733e8143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Timing Constraints Editor</a><div class="wh-tooltip"><p class="shortdesc">Information about Timing Constraints Editor </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e8501" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e8501-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3.html#GUID-7F57BCC7-CF46-4183-A20E-A841B92323C3" id="tocId-d10733e8501-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+SmartTime Static Timing Analyzer</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartTime Static Timing Analyzer </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e9939" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e9939-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-9A0E67E1-13F5-4140-92B6-4829C11F6991.html" id="tocId-d10733e9939-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+SmartPower</a><div class="wh-tooltip"><p class="shortdesc">Information about SmartPower</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e10983" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e10983-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E29B8E54-4CD2-4854-A63B-1B18D4B17A0D.html" id="tocId-d10733e10983-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+Programming and Debugging</a><div class="wh-tooltip"><p class="shortdesc">Information about Programming and Debugging </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e15005" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e15005-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCAAF92F-8261-4ED7-B44E-A8742CEA0859.html" id="tocId-d10733e15005-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+Macro Library</a><div class="wh-tooltip"><p class="shortdesc">Information about Macro Library for SmartFusion2, IGLOO2 and
+				PolarFire</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e17747" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e17747-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D89143-7721-417B-9A7C-FE911F855C5E.html" id="tocId-d10733e17747-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Custom Flow</a><div class="wh-tooltip"><p class="shortdesc">Information about Custom Flow </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18292" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18292-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D.html#GUID-131B6EA5-C4CE-4B56-9546-7B6F0DEA140D" id="tocId-d10733e18292-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+Design Separation Methodology</a><div class="wh-tooltip"><p class="shortdesc">Information about Design Separation Methodology</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18550" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18550-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-06F3E474-1157-44B5-ACBB-4A9562D2DF70.html" id="tocId-d10733e18550-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Microchip Separation Verification Tool</a><div class="wh-tooltip"><p class="shortdesc">Information about Microchip Separation Verification Tool </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e18729" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e18729-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A3BE55C2-E7D7-4BA1-868F-50D40539557F.html" id="tocId-d10733e18729-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+PolarFire SoC Microcontroller Subsystem (MSS)</a><div class="wh-tooltip"><p class="shortdesc">Information about PolarFire SoC Microcontroller Subsystem (MSS) </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e19158" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e19158-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="tocId-d10733e19158-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">19</ph>
+Tcl Command Reference</a><div class="wh-tooltip"><p class="shortdesc">Information about Tcl Command Reference </p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25143" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25143-link" class="wh-expand-btn"></span><div class="title"><a href="Chunk1489019750.html#Chunk1489019750" id="tocId-d10733e25143-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">20</ph>
+Download the Libero SoC Design Suite documentation</a><div class="wh-tooltip"><p class="shortdesc">Information to help you download the Libero SoC Design Suite
+				documentation</p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25203" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25203-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B0F8792A-2285-4431-ADB6-3EB1A9E39744.html" id="tocId-d10733e25203-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">21</ph>
+More Information</a><div class="wh-tooltip"><p class="shortdesc">Additional information about other Microchip products</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272" class="topicref" data-id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B.html" id="GUID-0B2DB328-9CF8-4727-9E22-E588F9FBE52B-d10733e25272-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">22</ph>
+Technical Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="tocId-d10733e25282" class="topicref" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action tocId-d10733e25282-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="tocId-d10733e25282-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">23</ph>
+About Microchip</a><div class="wh-tooltip"><p class="shortdesc">More information about Microchip</p></div></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__GUID-2ED00841-553E-4719-AE0B-D3B28236E7E4">
+   <h1 class="- topic/title title topictitle1" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__GUID-2ED00841-553E-4719-AE0B-D3B28236E7E4" style="display:inline-block">7.2.17 ODT Static</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-AFCB5DCC-964F-4BE7-AA46-C756FA87ED7B&amp;pub_lang=en-US&amp;pub_ver=7&amp;pub_type=Online%20Reference&amp;bu=fpga&amp;tpc_guid=GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD&amp;cover_title=Libero%20SoC%20Design%20Suite%20Help%20Documentation&amp;tech_support_link=NA&amp;revision_letter=2023.1&amp;source=Webhelp%20Responsive&amp;title=ODT%20Static">(Ask a Question)</a>
+   <div class="- topic/body concept/conbody body conbody">
+      <p class="- topic/p p" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000315" data-ofbid="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000315">On-die termination (ODT) is the technology where the termination resistor
+         for impedance matching in transmission lines is located inside a semiconductor chip instead
+         of on a printed circuit board. Possible values are listed in the following table.</p>
+      <div class="table-container"><table class="- topic/table table frame-all" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000317" data-ofbid="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000317" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 7-1. </span></span><span class="table--title" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__GUID-4EF5F360-4EE3-4647-BA37-4966658E1F7B">ODT Static Values and Descriptions</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000A33">
+               <tr class="- topic/row" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000031C">
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000031D"><strong class="+ topic/ph hi-d/b ph b" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000031F">Value</strong></th>
+                  <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000320"><strong class="+ topic/ph hi-d/b ph b" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000322">Description</strong></th>
+               </tr>
+            </thead><tbody class="- topic/tbody tbody" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000031B">
+               <tr class="- topic/row" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000323">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000324" headers="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000031D">on</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000327" headers="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000320">Yes, the termination resistor for impedance matching is located inside the chip.</td>
+               </tr>
+               <tr class="- topic/row" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000032A">
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000032B" headers="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000031D">off</td>
+                  <td class="- topic/entry entry colsep-0 rowsep-0" id="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-0000032E" headers="GUID-4C06CFFA-0322-49C8-BDC0-80B7FA8947DD__ID-00000320">No, the termination resistor is on the printed circuit board.</td>
+               </tr>
+            </tbody></table></div>
+   </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="footer">
+  <div class="mchp-wh-footer">
+    <div class="mchp-footer">
+      <div class="mchp-footer-tier1">
+        <div class="spacer"></div>
+        <div class="mchp-footer-container">
+          <div class="mchp-footer-links mchp-social-media-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.facebook.com/pages/Microchip-Technology-Inc/20320981741" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/201016-corp-facebook.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/201016-corp-linkedin.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://twitter.com/MicrochipTech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/201016-corp-twitter.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip YouTube" src="oxygen-webhelp/template/resources/images/201016-corp-youtube.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/201016-corp-instagram.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/201016-corp-weibo.png"/>
+                </a>
+              </div>
+              <div class="mchp-component-item">
+                <a class="cmp-image__link" href="https://www.microchip.com/en-us/about/blog" target="_blank">
+                  <img class="cmp-image__image" alt="Microchip Blog" src="oxygen-webhelp/template/resources/images/201016-corp-blog.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-links">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://www.microchip.com/about-us/contact-us" class="mchp-link__link">Contact</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link">Legal</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-policy" class="mchp-link__link">Privacy Policy</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item ">
+                <div class="link">
+                  <a href="https://www.microchip.com/en-us/about/legal-information/microchip-cookie-statement" class="mchp-link__link">Cookies</a>
+                  <span class="mchp-link__separator">|</span>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="link">
+                  <a href="https://careers.microchip.com/" class="mchp-link__link">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mchp-footer-newsletter">
+            <div class="cmp-text">
+              <p>Stay on the leading edge with our blog</p>
+            </div>
+            <div class="mchp-button-wrapper">
+              <a role="button" href="https://www.microchip.com/en-us/about/blog" class="mchp-button mchp-button-regular solid">
+                <span class="mchp-button__span">MicroSolutions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="graphic">
+          <img src="oxygen-webhelp/template/resources/images/footer-graphic.png"/>
+        </div>
+      </div>
+      <div class="mchp-footer-tier2">
+        <p class="mchp-copyright">© Copyright 1998-2022 Microchip Technology Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="true" src="https://www.googletagmanager.com/gtag/js?id=UA-2724382-19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];  
+    function gtag(){dataLayer.push(arguments);}  
+    gtag('js', new Date());   
+    gtag('config', 'UA-2724382-19');
+  </script>
+</div>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

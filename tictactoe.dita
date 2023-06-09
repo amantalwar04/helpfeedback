@@ -1,0 +1,17 @@
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_how_to_play_tic_tac_toe">
+  <title>How to Play Tic-Tac-Toe</title>
+  <body>
+    <p>Tic-Tac-Toe is a simple game that can be played by two players. The game is played on a 3x3 grid and the objective is to get three of your symbols in a row, either horizontally, vertically, or diagonally.</p>
+    <p>Here are the steps to play Tic-Tac-Toe:</p>
+    <ol>
+      <li>Draw the 3x3 grid on a piece of paper or use a pre-made board.</li>
+      <li>Decide who will go first. This can be done by flipping a coin or any other method agreed upon by both players.</li>
+      <li>The first player places their symbol (usually an "X") in any empty square on the grid.</li>
+      <li>The second player then places their symbol (usually an "O") in any empty square on the grid.</li>
+      <li>Players take turns placing their symbols on the grid until one player gets three in a row or all squares are filled.</li>
+      <li>If a player gets three in a row, they win the game. If all squares are filled and no player has three in a row, the game is a tie.</li>
+    </ol>
+    <p>That's it! Tic-Tac-Toe is a fun and easy game to play with friends and family.</p>
+  </body>
+</topic>

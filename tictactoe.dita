@@ -3,7 +3,7 @@
   <title>How to Play Tic-Tac-Toe</title>
   <body>
     <p>Tic-Tac-Toe is a simple game that can be played by two players. The game is played on a 3x3 grid and the objective is to get three of your symbols in a row, either horizontally, vertically, or diagonally.</p>
-    <p>Here are the steps to play Tic-Tac-Toe:</p>
+    <p>Here are the steps to play Tic-Tac-Toe:<note type="tip" id="note_hn2_wzy_sxb">default_value</note></p>
     <ol>
       <li>Draw the 3x3 grid on a piece of paper or use a pre-made board.</li>
       <li>Decide who will go first. This can be done by flipping a coin or any other method agreed upon by both players.</li>
